@@ -16,7 +16,7 @@ h1{font-size:28px;margin:8px 0 2px;letter-spacing:-.02em}
 .chip{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 14px;font-size:15px;cursor:pointer}
 .chip[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:#fff}
 label{display:block;font-size:13px;color:var(--mute);margin:10px 0 4px}
-textarea,input[type=number]{width:100%;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:10px 12px;font:inherit}
+textarea,select,input[type=number]{width:100%;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:10px 12px;font:inherit}
 textarea{resize:vertical;min-height:64px}
 input[type=number]{width:90px}
 .btns{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
@@ -49,6 +49,8 @@ ol li{margin-bottom:10px}
 
 <div class="chips" id="chips" role="group" aria-label="Meal type"></div>
 
+<label for="cuisine">Cuisine (for Build from fridge, lunch and dinner)</label>
+<select id="cuisine"></select>
 <label for="fridge">What's in your fridge? (comma separated, optional)</label>
 <textarea id="fridge" placeholder="e.g. chicken, rice, broccoli, eggs, spinach"></textarea>
 <label for="people">People</label>
@@ -64,6 +66,7 @@ ol li{margin-bottom:10px}
 </main>
 
 <script src="recipes.js"></script>
+<script src="engine.js"></script>
 <script>
 const D=window.MEAL_DATA,R=D.rules;
 const TYPES=["Breakfast","Snack","Lunch","Dinner","Dessert"];
@@ -108,6 +111,7 @@ function hit(grp,it){return Object.keys(grp).filter(k=>grp[k].re&&it.some(x=>new
 function matchTxt(re,it){return it.find(x=>new RegExp(re).test(x))}
 function build(){
   const it=items(),n=people(),meal=sel;let ing=[],steps=[],title,min=30;
+  if((meal==="Lunch"||meal==="Dinner")&&window.GEN){const g=GEN.make(it,n,$("cuisine").value);show({title:g.title,desc:g.desc,min:g.min,n,ing:g.ing,steps:g.steps,flag:it.length>0},"");return}
   const add=(name,amt,u,have)=>ing.push({name,txt:fmt(amt,u),have});
   const staples=()=>R.staples.forEach(s=>add(s[3],s[1]*n,s[2],true));
   if(meal==="Breakfast"){
@@ -170,7 +174,8 @@ function chips(){
   $("chips").innerHTML=TYPES.map(t=>`<button class="chip" aria-pressed="${t===sel}" data-t="${t}">${t}</button>`).join("");
   $("chips").querySelectorAll("button").forEach(b=>b.onclick=()=>{sel=b.dataset.t;seen=[];chips()});
 }
-$("spin").onclick=spin;$("build").onclick=build;chips();favs();
+$("spin").onclick=spin;$("build").onclick=build;if(window.GEN)$("cuisine").innerHTML='<option value="">Surprise me</option>'+Object.keys(GEN.cuisines).map(c=>`<option>${c}</option>`).join("");
+chips();favs();
 </script>
 </body>
 </html>
