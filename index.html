@@ -12,16 +12,30 @@
 @media (prefers-color-scheme:dark){:root{--bg:#171411;--card:#231f1b;--ink:#f3ece3;--mute:#a79b8d;--acc:#ff7a52;--acc2:#5fc79a;--line:#383129;--soft:#33241d;color-scheme:dark}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
-main{max-width:680px;margin:0 auto;padding:18px 16px 70px}
+main{max-width:1240px;margin:0 auto;padding:18px 16px 60px}
 .i{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.22em;flex:none}
-header{display:flex;gap:12px;align-items:center;margin-bottom:18px}
-.logo{width:46px;height:46px;border-radius:14px;background:var(--acc);color:#fff;display:grid;place-items:center;font-size:26px}
-h1{margin:0;font-size:26px;letter-spacing:-.02em;line-height:1.1}header p{margin:2px 0 0;color:var(--mute);font-size:14px}
+
+/* ---- top bar ---- */
+.bar{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:1px solid var(--line);box-shadow:0 2px 12px rgba(0,0,0,.05)}
+@supports (backdrop-filter:blur(8px)){.bar{background:color-mix(in srgb,var(--card) 86%,transparent);backdrop-filter:blur(12px)}}
+.bar-in{max-width:1240px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:11px;margin-right:auto;color:inherit}
+.logo{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--acc),#f2994a);color:#fff;display:grid;place-items:center;font-size:24px;box-shadow:0 3px 10px rgba(228,87,46,.35)}
+.brand b{display:block;font-size:20px;letter-spacing:-.02em;line-height:1.1}
+.brand small{display:block;color:var(--mute);font-size:12.5px;line-height:1.3}
+.tabs{display:flex;gap:4px;width:100%;order:3;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:3px}
+.tabs button{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;border:0;background:none;color:var(--mute);border-radius:11px;padding:9px 6px;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.tabs button:hover{color:var(--ink)}
+.tabs button[aria-selected=true]{background:var(--acc);color:#fff}
+
+/* ---- layout ---- */
 .tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
 .tile{display:flex;flex-direction:column;align-items:center;gap:4px;padding:12px 4px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:14px;font-size:13px;cursor:pointer}
 .tile .i{font-size:24px}
+.tile:hover{border-color:var(--acc)}
 .tile[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:#fff}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin-top:14px}
+.tiles+.panel{margin-top:14px}
 .lab{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--mute);margin:0 0 8px}
 .lab:not(:first-child){margin-top:16px}
 .tags{display:flex;flex-wrap:wrap;gap:6px;border:1.5px solid var(--line);border-radius:12px;padding:6px;background:var(--bg)}
@@ -30,6 +44,7 @@ h1{margin:0;font-size:26px;letter-spacing:-.02em;line-height:1.1}header p{margin
 .tag button,.q button{border:0;background:none;color:inherit;cursor:pointer;display:grid;place-items:center;padding:0}
 .quick{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .quick button{border:1px dashed var(--line);background:none;color:var(--mute);border-radius:999px;padding:3px 10px;font-size:13px;cursor:pointer}
+.quick button:hover{color:var(--ink);border-color:var(--mute)}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .step,select{width:100%;height:44px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit}
 select{padding:0 10px}
@@ -41,10 +56,11 @@ select{padding:0 10px}
 .tg button[aria-pressed=true]{background:var(--acc2);border-color:var(--acc2);color:#fff}
 .btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
 .btns button{display:flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:14px;font-size:16px;font-weight:700;padding:15px 8px;color:#fff;cursor:pointer}
+.btns button:hover:not(:disabled){filter:brightness(1.06)}
 #spin{background:var(--acc)}#build{background:var(--acc2)}
 button:disabled{opacity:.6}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
 .note{color:var(--mute);font-size:14px;margin-top:12px}
-.reel{display:none;text-align:center;margin:48px 0;min-height:120px;font-size:22px;font-weight:700;color:var(--acc)}.reel small{display:block;color:var(--mute);font-weight:400;font-size:14px;margin-top:6px}#rt,#prt{display:block;min-height:1.4em}.card{scroll-margin-top:72px}
+.reel{display:none;text-align:center;margin:48px 0;min-height:120px;font-size:22px;font-weight:700;color:var(--acc)}.reel small{display:block;color:var(--mute);font-weight:400;font-size:14px;margin-top:6px}#rt,#prt{display:block;min-height:1.4em}.card{scroll-margin-top:130px}
 .reel.on{display:block}.reel .i{font-size:44px;display:block;margin:0 auto 6px;animation:sp .5s linear infinite}
 @keyframes sp{to{transform:rotate(360deg)}}
 @keyframes pop{from{opacity:0;transform:translateY(12px) scale(.98)}}
@@ -67,20 +83,46 @@ ol li{counter-increment:s;display:flex;gap:12px;margin-bottom:12px}
 ol li:before{content:counter(s);flex:none;width:26px;height:26px;border-radius:50%;background:var(--soft);color:var(--acc);font-weight:700;display:grid;place-items:center;font-size:14px}
 .row{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
 .row button{flex:1;min-width:110px;display:flex;align-items:center;justify-content:center;gap:6px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:11px 8px;font-size:14px;cursor:pointer}
+.row button:hover{border-color:var(--acc)}
 .call{display:flex;gap:8px;align-items:flex-start;border-radius:12px;padding:10px 12px;margin-top:14px;font-size:14px}.call .i{margin-top:3px}.buy2{background:var(--soft);color:var(--acc)}.ok2{background:var(--bg);color:var(--acc2);border:1px solid var(--line)}
 details{border:1px solid var(--line);border-radius:14px;background:var(--bg);margin-top:10px;padding:0 14px}summary{cursor:pointer;padding:12px 0;font-weight:600}details[open] summary{border-bottom:1px dashed var(--line);margin-bottom:6px}
 .tag.urg{background:var(--acc)}.tag button.u{opacity:.6}.tag button.u[aria-pressed=true]{opacity:1}
 .fav .prow{display:flex;gap:8px}.fav .prow button{width:auto;margin-bottom:8px}.fav .prow [data-o]{flex:1}.fav .prow .d{justify-content:center;width:46px}
 .fav{margin-top:26px}
 .fav button{display:flex;align-items:center;gap:8px;width:100%;text-align:left;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:11px 13px;margin-bottom:8px;font-size:15px;cursor:pointer}
-.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:4px;position:sticky;top:8px;z-index:5;box-shadow:0 4px 14px rgba(0,0,0,.06)}
-.tabs button{display:flex;align-items:center;justify-content:center;gap:7px;border:0;background:none;color:var(--mute);border-radius:12px;padding:10px 4px;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
-.tabs button[aria-selected=true]{background:var(--acc);color:#fff}
-.tab{margin-top:14px}.tab>.panel:first-child{margin-top:0}
+.fav button:hover{border-color:var(--acc)}
 .sum{margin:12px 0 0;font-size:13px;color:var(--mute)}.hint{margin:0 0 10px;font-size:14px;color:var(--mute)}
 .lnk{border:0;background:none;color:var(--acc);font:inherit;text-decoration:underline;cursor:pointer;padding:0}
-footer{margin-top:44px;text-align:center;font-size:13px;color:var(--mute)}
-@media (max-width:420px){.tile{font-size:11px}.grid{grid-template-columns:1fr}.tabs button{font-size:13px;gap:5px}}
+.pt{margin:4px 0 4px;font-size:24px;letter-spacing:-.02em}
+.kgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px;align-items:start;margin-top:12px}
+.kgrid .panel{margin-top:0}
+.ph{display:none;text-align:center;color:var(--mute);border:2px dashed var(--line);border-radius:22px;padding:72px 24px}
+.ph .i{font-size:46px;display:block;margin:0 auto 10px;color:var(--acc)}
+.ph b{display:block;color:var(--ink);font-size:18px;margin-bottom:4px}
+.reel.on~.ph{display:none!important}
+footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);text-align:center;font-size:13px;color:var(--mute)}
+.split>div>h3:first-child{margin-top:20px}
+@media (min-width:760px){
+ .bar-in{padding:12px 24px}
+ .tabs{width:auto;order:0;background:none;border:0;padding:0;gap:6px}
+ .tabs button{flex:none;padding:10px 18px;font-size:15px}
+ .tabs button:hover:not([aria-selected=true]){background:var(--soft)}
+}
+@media (min-width:960px){
+ main{padding:30px 24px 60px}
+ .cols{display:grid;grid-template-columns:400px minmax(0,1fr);gap:30px;align-items:start}
+ .side{position:sticky;top:90px;max-height:calc(100vh - 106px);overflow-y:auto;padding:2px}
+ .res>.note:first-child{margin-top:0}
+ .res .card:first-of-type{margin-top:0}
+ #out:empty+.ph,#pout:empty+.ph{display:block}
+ .hero{padding:24px 28px}.hero h2{font-size:27px}.hero .ic{width:60px;height:60px;font-size:32px}
+ .body{padding:6px 28px 28px}
+ .card{scroll-margin-top:100px}
+}
+@media (min-width:1100px){
+ .split{display:grid;grid-template-columns:5fr 7fr;gap:36px}
+}
+@media (max-width:420px){.tile{font-size:11px}.grid{grid-template-columns:1fr}.tabs button{font-size:13px;gap:5px}.brand small{display:none}}
 </style>
 </head>
 <body>
@@ -108,88 +150,141 @@ footer{margin-top:44px;text-align:center;font-size:13px;color:var(--mute)}
 <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></symbol>
 <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
 <symbol id="i-jar" viewBox="0 0 24 24"><path d="M8 3h8M7 6h10v14a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1zM7 11h10"/></symbol>
+<symbol id="i-ruler" viewBox="0 0 24 24"><path d="M3 17 17 3l4 4L7 21z"/><path d="m7 13 2 2M10 10l2 2M13 7l2 2"/></symbol>
 <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></symbol>
 </defs></svg>
-<main>
-<header><div class="logo"><svg class="i"><use href="#i-dice"/></svg></div><div><h1>Meal Roulette</h1><p>Spin for a recipe, build from your fridge, or plan your week. All metric.</p></div></header>
-<nav class="tabs" id="tabs" role="tablist" aria-label="Sections">
- <button role="tab" data-t="cook" aria-selected="true"><svg class="i"><use href="#i-dice"/></svg>Cook</button>
- <button role="tab" data-t="plan" aria-selected="false"><svg class="i"><use href="#i-cal"/></svg>Plan</button>
- <button role="tab" data-t="kit" aria-selected="false"><svg class="i"><use href="#i-jar"/></svg>Kitchen</button>
-</nav>
-<div id="tab-cook" class="tab" role="tabpanel">
-<nav class="tiles" id="meals" aria-label="Meal type"></nav>
-<section class="panel">
- <div class="lab"><svg class="i"><use href="#i-fridge"/></svg>What's in your fridge? <small style="font-weight:400">Tap the clock on items to use them first.</small></div>
- <div class="tags" id="tags"><input id="add" placeholder="Type an ingredient, press Enter" aria-label="Add ingredient" enterkeyhint="done"></div>
- <div class="quick" id="quick"></div>
- <div class="grid">
-  <div><div class="lab"><svg class="i"><use href="#i-users"/></svg>People</div><div class="step"><button id="minus" aria-label="Fewer people"><svg class="i"><use href="#i-minus"/></svg></button><b id="pn">2</b><button id="plus" aria-label="More people"><svg class="i"><use href="#i-plus"/></svg></button></div></div>
-  <div><div class="lab"><svg class="i"><use href="#i-globe"/></svg>Cuisine (lunch, dinner)</div><select id="cuisine" aria-label="Cuisine"></select></div>
- </div>
- <div class="lab"><svg class="i"><use href="#i-fridge"/></svg>Cooking mode</div><div class="tg" id="mode"></div>
- <p class="sum" id="sum1"></p>
-</section>
-<div class="btns"><button id="spin"><svg class="i"><use href="#i-dice"/></svg>Spin a recipe</button><button id="build"><svg class="i"><use href="#i-chef"/></svg>Build from fridge</button></div>
-<div class="note" id="note" role="status"></div>
-<div class="reel" id="reel" aria-hidden="true"><svg class="i"><use href="#i-dice"/></svg><span id="rt"></span><small>Picking something tasty…</small></div>
-<div id="out"></div><div class="fav" id="fav"></div>
-</div>
 
-<div id="tab-plan" class="tab" role="tabpanel" hidden>
-<section class="panel"><div class="lab"><svg class="i"><use href="#i-cal"/></svg>Plan ahead</div>
- <p class="hint" style="margin:0">Builds meals day by day from your fridge and staples, rotates proteins, and puts everything else on one shopping list.</p>
- <p class="sum" id="sum2" style="margin:8px 0 0"></p>
- <div class="grid" style="margin-top:14px">
-  <div><div class="lab"><svg class="i"><use href="#i-cal"/></svg>Days</div><div class="step"><button id="dminus" aria-label="Fewer days"><svg class="i"><use href="#i-minus"/></svg></button><b id="dn">5 days</b><button id="dplus" aria-label="More days"><svg class="i"><use href="#i-plus"/></svg></button></div></div>
-  <div><div class="lab"><svg class="i"><use href="#i-users"/></svg>People</div><div class="step"><button id="minus2" aria-label="Fewer people"><svg class="i"><use href="#i-minus"/></svg></button><b id="pn2">2</b><button id="plus2" aria-label="More people"><svg class="i"><use href="#i-plus"/></svg></button></div></div>
- </div>
- <div class="lab"><svg class="i"><use href="#i-chef"/></svg>Meals to plan</div><div class="tg" id="pm"></div>
- <div class="lab"><svg class="i"><use href="#i-globe"/></svg>Cuisine (lunch, dinner)</div><select id="cuisine2" aria-label="Cuisine for plan"></select>
- <div class="btns" style="grid-template-columns:1fr"><button id="plan" style="background:var(--acc2)"><svg class="i"><use href="#i-cal"/></svg>Plan my days + shopping list</button></div>
-</section>
-<div class="note" id="pnote" role="status"></div>
-<div class="reel" id="preel" aria-hidden="true"><svg class="i"><use href="#i-cal"/></svg><span id="prt"></span><small>Planning your days…</small></div>
-<div id="pout"></div><div class="fav" id="plans"></div>
-</div>
+<header class="bar"><div class="bar-in">
+ <div class="brand"><div class="logo"><svg class="i"><use href="#i-dice"/></svg></div><div><b>Meal Roulette</b><small>Spin a recipe, cook from your fridge, plan your week</small></div></div>
+ <nav class="tabs" id="tabs" role="tablist" aria-label="Sections">
+  <button role="tab" data-t="cook" aria-selected="true"><svg class="i"><use href="#i-dice"/></svg>Cook</button>
+  <button role="tab" data-t="plan" aria-selected="false"><svg class="i"><use href="#i-cal"/></svg>Plan</button>
+  <button role="tab" data-t="kit" aria-selected="false"><svg class="i"><use href="#i-jar"/></svg>Kitchen</button>
+ </nav>
+</div></header>
+
+<main>
+<div id="tab-cook" class="tab" role="tabpanel"><div class="cols">
+ <aside class="side">
+  <nav class="tiles" id="meals" aria-label="Meal type"></nav>
+  <section class="panel">
+   <div class="lab"><svg class="i"><use href="#i-fridge"/></svg>What's in your fridge? <small style="font-weight:400;flex-basis:100%">Tap the clock on an item to use it first.</small></div>
+   <div class="tags" id="tags"><input id="add" placeholder="Type an ingredient, press Enter" aria-label="Add ingredient" enterkeyhint="done"></div>
+   <div class="quick" id="quick"></div>
+   <div class="grid" style="margin-top:16px">
+    <div><div class="lab"><svg class="i"><use href="#i-users"/></svg>People</div><div class="step"><button id="minus" aria-label="Fewer people"><svg class="i"><use href="#i-minus"/></svg></button><b id="pn">2</b><button id="plus" aria-label="More people"><svg class="i"><use href="#i-plus"/></svg></button></div></div>
+    <div><div class="lab"><svg class="i"><use href="#i-globe"/></svg>Cuisine</div><select id="cuisine" aria-label="Cuisine"></select></div>
+   </div>
+   <div class="lab"><svg class="i"><use href="#i-fridge"/></svg>Cooking mode</div><div class="tg" id="mode"></div>
+   <p class="sum" id="sum1"></p>
+  </section>
+  <div class="btns"><button id="spin"><svg class="i"><use href="#i-dice"/></svg>Spin a recipe</button><button id="build"><svg class="i"><use href="#i-chef"/></svg>Build from fridge</button></div>
+ </aside>
+ <section class="res">
+  <div class="note" id="note" role="status"></div>
+  <div class="reel" id="reel" aria-hidden="true"><svg class="i"><use href="#i-dice"/></svg><span id="rt"></span><small>Picking something tasty…</small></div>
+  <div id="out"></div>
+  <div class="ph"><svg class="i"><use href="#i-dice"/></svg><b>Your recipe shows up here</b>Pick a meal, then spin or build one from your fridge.</div>
+  <div class="fav" id="fav"></div>
+ </section>
+</div></div>
+
+<div id="tab-plan" class="tab" role="tabpanel" hidden><div class="cols">
+ <aside class="side">
+  <section class="panel" style="margin-top:0"><div class="lab"><svg class="i"><use href="#i-cal"/></svg>Plan ahead</div>
+   <p class="hint" style="margin:0">Builds meals day by day from your fridge and staples, rotates proteins, and puts everything else on one shopping list.</p>
+   <p class="sum" id="sum2" style="margin:8px 0 0"></p>
+   <div class="grid" style="margin-top:14px">
+    <div><div class="lab"><svg class="i"><use href="#i-cal"/></svg>Days</div><div class="step"><button id="dminus" aria-label="Fewer days"><svg class="i"><use href="#i-minus"/></svg></button><b id="dn">5 days</b><button id="dplus" aria-label="More days"><svg class="i"><use href="#i-plus"/></svg></button></div></div>
+    <div><div class="lab"><svg class="i"><use href="#i-users"/></svg>People</div><div class="step"><button id="minus2" aria-label="Fewer people"><svg class="i"><use href="#i-minus"/></svg></button><b id="pn2">2</b><button id="plus2" aria-label="More people"><svg class="i"><use href="#i-plus"/></svg></button></div></div>
+   </div>
+   <div class="lab"><svg class="i"><use href="#i-chef"/></svg>Meals to plan</div><div class="tg" id="pm"></div>
+   <div class="lab"><svg class="i"><use href="#i-globe"/></svg>Cuisine (lunch, dinner)</div><select id="cuisine2" aria-label="Cuisine for plan"></select>
+   <div class="btns" style="grid-template-columns:1fr"><button id="plan" style="background:var(--acc2)"><svg class="i"><use href="#i-cal"/></svg>Plan my days + shopping list</button></div>
+  </section>
+ </aside>
+ <section class="res">
+  <div class="note" id="pnote" role="status"></div>
+  <div class="reel" id="preel" aria-hidden="true"><svg class="i"><use href="#i-cal"/></svg><span id="prt"></span><small>Planning your days…</small></div>
+  <div id="pout"></div>
+  <div class="ph"><svg class="i"><use href="#i-cal"/></svg><b>Your plan shows up here</b>Choose how many days and meals, then plan. You get every recipe and one shopping list.</div>
+  <div class="fav" id="plans"></div>
+ </section>
+</div></div>
 
 <div id="tab-kit" class="tab" role="tabpanel" hidden>
-<section class="panel"><div class="lab"><svg class="i"><use href="#i-jar"/></svg>Always have at home</div>
- <p class="hint">Staples you keep stocked, like rice, eggs, flour or canned tomatoes. They count as "in stock" for every recipe, build and plan, so they never end up on your shopping list.</p>
- <div class="tags" id="stags"><input id="sadd" placeholder="Add a staple, press Enter" aria-label="Add staple" enterkeyhint="done"></div>
- <div class="quick" id="squick"></div>
-</section>
-<section class="panel"><div class="lab"><svg class="i"><use href="#i-leaf"/></svg>Diet</div>
- <p class="hint">Applies to spins, builds and plans. Halal skips pork and alcohol; kosher skips pork and shellfish and keeps meat and dairy apart. These filter the recipes only. They can't check how your ingredients were sourced or prepared.</p><div class="tg" id="diet"></div>
-</section>
+ <h2 class="pt">Kitchen &amp; settings</h2>
+ <p class="hint" style="margin:0">Saved on this device. Everything here applies to spins, builds and plans.</p>
+ <div class="kgrid">
+  <section class="panel"><div class="lab"><svg class="i"><use href="#i-jar"/></svg>Always have at home</div>
+   <p class="hint">Staples you keep stocked, like rice, eggs, flour or canned tomatoes. They count as "in stock" for every recipe, build and plan, so they never end up on your shopping list.</p>
+   <div class="tags" id="stags"><input id="sadd" placeholder="Add a staple, press Enter" aria-label="Add staple" enterkeyhint="done"></div>
+   <div class="quick" id="squick"></div>
+  </section>
+  <section class="panel"><div class="lab"><svg class="i"><use href="#i-leaf"/></svg>Diet</div>
+   <p class="hint">Halal skips pork and alcohol; kosher skips pork and shellfish and keeps meat and dairy apart. These filter the recipes only. They can't check how your ingredients were sourced or prepared.</p><div class="tg" id="diet"></div>
+  </section>
+  <section class="panel"><div class="lab"><svg class="i"><use href="#i-ruler"/></svg>Units</div>
+   <p class="hint">Metric is the default. US shows cups, tablespoons, ounces and pounds. Conversions are approximate, so weigh baking ingredients when you can.</p>
+   <div class="lab" style="margin-top:0">Measures</div><div class="tg" id="u1"></div>
+   <div class="lab">Oven and meat temperature</div><div class="tg" id="u2"></div>
+  </section>
+ </div>
 </div>
 <footer>© <span id="yr">2026</span> Strahinja Drazic. All rights reserved.</footer>
 </main>
 <script src="recipes.js"></script>
+<script src="recipes-extra.js"></script>
 <script src="engine.js"></script>
 <script>
 const D=window.MEAL_DATA,R=D.rules,$=id=>document.getElementById(id);
 const MEALS=[["Breakfast","sunrise"],["Snack","cookie"],["Lunch","sun"],["Dinner","moon"],["Dessert","ice"]];
 const DIETS=[["veg","Vegetarian","leaf"],["vegan","Vegan","leaf"],["gf","Gluten-free","wheat"],["dairy","Dairy-free","ban"],["nuts","Nut-free","ban"],["noegg","Egg-free","ban"],["nofish","Fish-free","ban"],["nosoy","Soy-free","ban"],["halal","Halal","check"],["kosher","Kosher","check"],["pesc","Pescatarian","leaf"],["nopork","Pork-free","ban"],["noshell","Shellfish-free","ban"]];
-const kmix=r=>{const t=r.ing.map(g=>g[2]).join("|");return /chicken|beef|lamb|duck|mince|thigh|steak/.test(t)&&/(?<!coconut )milk|yogurt|(?<!peanut )butter|feta|parmesan|cream|cheese|cheddar|mozzarella|paneer|halloumi/.test(t)};
+const kmix=r=>{const t=r.ing.map(g=>g[2]).join("|").replace(/coconut milk|peanut butter/g,"");return /chicken|beef|lamb|duck|mince|thigh|steak/.test(t)&&/milk|yogurt|butter|feta|parmesan|cream|cheese|cheddar|mozzarella|paneer|halloumi/.test(t)};
 const QUICK=["chicken","eggs","rice","tomato","spinach","salmon","potato","mushroom","tofu","pasta"];
 const I=n=>`<svg class="i"><use href="#i-${n}"/></svg>`;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const rnd=a=>a[Math.floor(Math.random()*a.length)],cap=s=>s[0].toUpperCase()+s.slice(1);
 const store=(k,v)=>{try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||"null");localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}};
-const S=Object.assign({meal:"Dinner",n:2,pantry:[],diet:{},cuisine:"",strict:true,basic:true,days:5,pm:{Dinner:true},urgent:[],quick:false,staples:[]},store("mr2")||{});
+const S=Object.assign({meal:"Dinner",n:2,pantry:[],diet:{},cuisine:"",strict:true,basic:true,days:5,pm:{Dinner:true},urgent:[],quick:false,staples:[],units:"metric",temp:"C"},store("mr2")||{});
 if(!Array.isArray(S.staples))S.staples=[];
 const SQUICK=["rice","pasta","eggs","flour","canned tomatoes","milk","butter","onion","potatoes","olive oil","sugar","bread"];
 const save=()=>store("mr2",S),dietP=x=>({...S.diet,urgent:S.urgent,...x});
+
+/* ---------- units ----------
+   The engine and recipes always write metric (fmt). cv() converts that text for display, so
+   switching units re-renders everything, including saved recipes and plans. */
 function fmt(v,u){
   if(u==="pcs")return Math.max(0.5,Math.round(v*2)/2)+" pcs";
   v=v<10?Math.round(v*2)/2:v<50?Math.round(v):Math.round(v/5)*5;
   if(u==="g"&&v>=1000)return v/1000+" kg";if(u==="ml"&&v>=1000)return v/1000+" l";return v+" "+u;
 }
+const FRS=[[0,""],[1/8,"⅛"],[1/4,"¼"],[1/3,"⅓"],[1/2,"½"],[2/3,"⅔"],[3/4,"¾"],[1,""]];
+function frac(x){let w=Math.floor(x),f=x-w,b=FRS.reduce((a,c)=>Math.abs(c[0]-f)<Math.abs(a[0]-f)?c:a);if(b[0]===1){w++;b=FRS[0]}if(!w&&!b[0])return"⅛";return(w||"")+(w&&b[1]?" ":"")+b[1]}
+function fmtUS(v,u){
+  if(u==="g"){
+    if(v>=454)return frac(Math.round(v/453.6*4)/4)+" lb";
+    if(v>=28)return frac(Math.round(v/28.35*2)/2)+" oz";
+    if(v>=15)return frac(Math.round(v/15*2)/2)+" tbsp";
+    return frac(v/5)+" tsp";
+  }
+  if(v<15)return frac(v/5)+" tsp";
+  if(v<60)return frac(Math.round(v/15*2)/2)+" tbsp";
+  const c=v/240;return frac(c)+(Math.round(c*8)/8>1?" cups":" cup");
+}
+function cv(t){
+  t=String(t);
+  if(S.units==="us"){
+    t=t.replace(/(\d+(?:\.\d+)?)\s?(kg|g|ml|l|cm)\b/g,(m,n,u)=>{n=+n;return u==="kg"?fmtUS(n*1000,"g"):u==="g"?fmtUS(n,"g"):u==="ml"?fmtUS(n,"ml"):u==="l"?fmtUS(n*1000,"ml"):frac(Math.round(n/2.54*4)/4)+" in"});
+    t=t.replace(/(\d+(?:\.\d+)?) litres?/g,(m,n)=>frac(Math.round(n*1.0567*4)/4)+" qt").replace(/per litre/g,"per quart");
+  }
+  if(S.temp==="F")t=t.replace(/(\d+)\s?°C/g,(m,c)=>Math.round((c*9/5+32)/5)*5+" °F");
+  return t;
+}
 const stem=x=>x.replace(/s$/,"");
 const stap=()=>S.staples.map(x=>x.toLowerCase());
 const items=()=>[...new Set([...S.pantry.map(x=>x.toLowerCase()),...stap()])];
-let tab="cook";
+let tab="cook",lastPlan=null;
 function setTab(t){tab=t;["cook","plan","kit"].forEach(k=>{$("tab-"+k).hidden=k!==t;document.querySelector(`#tabs [data-t="${k}"]`).setAttribute("aria-selected",k===t)});scrollTo({top:0})}
 document.querySelectorAll("#tabs button").forEach(b=>b.onclick=()=>setTab(b.dataset.t));
 
@@ -220,7 +315,12 @@ function draw(){
   $("pm").querySelectorAll("button").forEach(b=>b.onclick=()=>{S.pm[b.dataset.m]=!S.pm[b.dataset.m];save();draw()});
   $("diet").innerHTML=DIETS.map(d=>`<button data-d="${d[0]}" aria-pressed="${!!S.diet[d[0]]}">${I(d[2])}${d[1]}</button>`).join("");
   $("diet").querySelectorAll("button").forEach(b=>b.onclick=()=>{const k=b.dataset.d;S.diet[k]=!S.diet[k];if(k==="vegan"&&S.diet.vegan)S.diet.veg=true;save();draw()});
+  $("u1").innerHTML=[["metric","Metric (g, ml)"],["us","US (cups, oz, lb)"]].map(u=>`<button data-u="${u[0]}" aria-pressed="${S.units===u[0]}">${u[1]}</button>`).join("");
+  $("u1").querySelectorAll("button").forEach(b=>b.onclick=()=>{S.units=b.dataset.u;save();draw();rerender()});
+  $("u2").innerHTML=[["C","°C"],["F","°F"]].map(u=>`<button data-tp="${u[0]}" aria-pressed="${S.temp===u[0]}">${u[1]}</button>`).join("");
+  $("u2").querySelectorAll("button").forEach(b=>b.onclick=()=>{S.temp=b.dataset.tp;save();draw();rerender()});
 }
+function rerender(){if(current)show(current,$("note").textContent);if(lastPlan)renderPlan(...lastPlan)}
 function addItem(){const v=$("add").value.replace(/,/g,"").trim().toLowerCase();if(v&&!S.pantry.includes(v)){S.pantry.push(v);save()}$("add").value="";draw()}
 $("add").onkeydown=e=>{if(e.key==="Enter"||e.key===","){e.preventDefault();addItem()}else if(e.key==="Backspace"&&!$("add").value&&S.pantry.length){S.pantry.pop();save();draw()}};
 $("add").onblur=()=>{if($("add").value.trim())addItem()};
@@ -232,7 +332,7 @@ $("minus").onclick=$("minus2").onclick=dec;$("plus").onclick=$("plus2").onclick=
 $("cuisine").onchange=$("cuisine2").onchange=e=>{S.cuisine=e.target.value;$("cuisine").value=$("cuisine2").value=S.cuisine;save()};
 
 /* ---------- recipe roulette ---------- */
-const RECIPES=D.recipes.map((r,i)=>({id:i,title:r[0],meals:r[1],min:r[2],serv:r[3],ing:r[4],steps:r[5].split("|")}));
+const RECIPES=D.recipes.concat(window.MEAL_EXTRA||[]).map((r,i)=>({id:i,title:r[0],meals:r[1],min:r[2],serv:r[3],ing:r[4],steps:r[5].split("|")}));
 let seen=[],current=null,kind="spin";
 const score=(r,it)=>it.filter(x=>x.length>2&&r.ing.some(g=>g[2].toLowerCase().includes(stem(x)))).length;
 function banRe(){const d=S.diet;return new RegExp([d.veg||d.vegan?"chicken|beef|pork|salmon|sausage|prawn|fish|mince|lamb|duck|bacon|tuna|cod|ham|thigh":"",d.vegan?"egg|milk|yogurt|butter|feta|parmesan|honey|cheese|cheddar|cream|paneer|halloumi|mozzarella":"",d.gf?"pasta|spaghetti|bread|tortilla|couscous|noodle|soy sauce|flatbread|flour|oats|bulgur|barley|gnocchi|orzo|macaroni":"",d.dairy?"milk|yogurt|butter|feta|parmesan|cream|halloumi|cheese|cheddar|paneer|mozzarella":"",d.nuts?"walnut|almond|peanut|cashew":"",d.noegg?"\\beggs?\\b":"",d.nofish?"salmon|fish|prawn|cod|tuna":"",d.nosoy?"soy|tofu|tempeh":"",d.halal?"pork|\\bham\\b|bacon|sausage|chorizo|\\bwine\\b|\\bbeer\\b|mirin":"",d.kosher?"pork|\\bham\\b|bacon|sausage|chorizo|prawn|shrimp":"",d.nopork?"pork|\\bham\\b|bacon|sausage|chorizo":"",d.noshell?"prawn|shrimp":"",d.pesc?"chicken|beef|pork|sausage|mince|lamb|duck|bacon|\\bham\\b|thigh|steak":""].filter(Boolean).join("|")||"$^")}
@@ -265,17 +365,17 @@ function build(){
 function show(r,msg){
   current=r;$("note").textContent=msg||"";
   if(!r){$("out").innerHTML="";return}
-  const it=items().length>0,ic=(MEALS.find(m=>m[0]===S.meal)||[])[1]||"dice";
+  const ic=(MEALS.find(m=>m[0]===S.meal)||[])[1]||"dice";
   $("out").innerHTML=`<article class="card"><div class="hero"><div class="ic">${I(ic)}</div><h2>${esc(r.title)}</h2></div><div class="body">
   <div class="meta"><span>${I("clock")}${r.min} min</span><span>${I("users")}${r.n} ${r.n>1?"people":"person"}</span><span>${I(ic)}${S.meal}</span>${(()=>{const x=GEN.nutri(r.ing,r.n);return x.kcal?`<span title="Rough estimate">${I("flame")}≈${x.kcal} kcal · ${x.p} g protein each</span>`:""})()}</div>
-  ${r.desc?`<p class="desc">${esc(r.desc)}</p>`:""}${callout(r)}
-  <h3>${I("list")}Ingredients <small style="text-transform:none;letter-spacing:0;color:var(--mute)">(tap to tick off)</small></h3>
-  <ul class="ing">${r.ing.map(i=>`<li><span>${esc(i.name)}${missing(i)?'<span class="buy">to buy</span>':""}</span><span class="q">${esc(i.txt)}</span></li>`).join("")}</ul>
-  <h3>${I("chef")}Method</h3><ol>${r.steps.map(s=>`<li><span>${esc(s)}</span></li>`).join("")}</ol>
+  ${r.desc?`<p class="desc">${esc(cv(r.desc))}</p>`:""}${callout(r)}
+  <div class="split"><div><h3>${I("list")}Ingredients <small style="text-transform:none;letter-spacing:0;color:var(--mute)">(tap to tick off)</small></h3>
+  <ul class="ing">${r.ing.map(i=>`<li><span>${esc(i.name)}${missing(i)?'<span class="buy">to buy</span>':""}</span><span class="q">${esc(cv(i.txt))}</span></li>`).join("")}</ul></div>
+  <div><h3>${I("chef")}Method</h3><ol>${r.steps.map(s=>`<li><span>${esc(cv(s))}</span></li>`).join("")}</ol></div></div>
   <div class="row"><button id="save">${I("heart")}Save</button><button id="shop">${I("cart")}Copy list</button><button id="again">${I(r.built?"chef":"dice")}Again</button></div></div></article>`;
   $("out").querySelectorAll(".ing li").forEach(li=>li.onclick=()=>li.classList.toggle("done"));
   $("save").onclick=()=>{const f=store("favs2")||[];if(!f.some(x=>x.title===r.title)){f.unshift({...r,meal:S.meal});store("favs2",f.slice(0,40))}favs();$("save").innerHTML=I("heart")+"Saved"};
-  $("shop").onclick=async()=>{const mm=r.ing.filter(missing),l=(mm.length?mm:r.ing).map(i=>"• "+i.name+" – "+i.txt).join("\n");try{await navigator.clipboard.writeText(l);$("shop").innerHTML=I("cart")+"Copied"}catch(e){$("note").textContent=l}};
+  $("shop").onclick=async()=>{const mm=r.ing.filter(missing),l=(mm.length?mm:r.ing).map(i=>"• "+i.name+" – "+cv(i.txt)).join("\n");try{await navigator.clipboard.writeText(l);$("shop").innerHTML=I("cart")+"Copied"}catch(e){$("note").textContent=l}};
   $("again").onclick=()=>run(r.built?"build":"spin");
 }
 function favs(){
@@ -310,10 +410,11 @@ function plan(){
   renderPlan(days,Object.values(tot).sort((a,b)=>a.name.localeCompare(b.name)).map(i=>({name:i.name,txt:fmt(i.a,i.u)})),{title:S.days+"-day plan",n:S.n},false);
 }
 function renderPlan(days,list,meta,saved){
+  lastPlan=[days,list,meta,saved];
   $("pnote").textContent=saved?"":"Priority (clock) items go first, fridge items are used up day by day, proteins rotate, and anything else lands on the shopping list.";
-  $("pout").innerHTML=`<article class="card"><div class="hero"><div class="ic">${I("cal")}</div><h2>${esc(meta.title)} for ${meta.n} ${meta.n>1?"people":"person"}</h2></div><div class="body">`+days.map(x=>`<details><summary>Day ${x.d} · ${x.m}: ${esc(x.g.title)}</summary><h3>${I("list")}Ingredients</h3><ul class="ing">${x.g.ing.map(i=>`<li><span>${esc(i.name)}</span><span class="q">${esc(i.txt)}</span></li>`).join("")}</ul><h3>${I("chef")}Method</h3><ol>${x.g.steps.map(s=>`<li><span>${esc(s)}</span></li>`).join("")}</ol></details>`).join("")+
-   `<h3>${I("cart")}Shopping list</h3><ul class="ing">${list.map(i=>`<li><span>${esc(i.name)}</span><span class="q">${esc(i.txt)}</span></li>`).join("")||"<li>Nothing to buy.</li>"}</ul><div class="row"><button id="sp">${I("heart")}${saved?"Saved":"Save plan"}</button><button id="cp">${I("cart")}Copy list</button></div></div></article>`;
-  $("cp").onclick=async()=>{try{await navigator.clipboard.writeText(list.map(i=>"• "+i.name+" – "+i.txt).join("\n"));$("cp").innerHTML=I("cart")+"Copied"}catch(e){}};
+  $("pout").innerHTML=`<article class="card"><div class="hero"><div class="ic">${I("cal")}</div><h2>${esc(meta.title)} for ${meta.n} ${meta.n>1?"people":"person"}</h2></div><div class="body">`+days.map(x=>`<details><summary>Day ${x.d} · ${x.m}: ${esc(x.g.title)}</summary><h3>${I("list")}Ingredients</h3><ul class="ing">${x.g.ing.map(i=>`<li><span>${esc(i.name)}</span><span class="q">${esc(cv(i.txt))}</span></li>`).join("")}</ul><h3>${I("chef")}Method</h3><ol>${x.g.steps.map(s=>`<li><span>${esc(cv(s))}</span></li>`).join("")}</ol></details>`).join("")+
+   `<h3>${I("cart")}Shopping list</h3><ul class="ing">${list.map(i=>`<li><span>${esc(i.name)}</span><span class="q">${esc(cv(i.txt))}</span></li>`).join("")||"<li>Nothing to buy.</li>"}</ul><div class="row"><button id="sp">${I("heart")}${saved?"Saved":"Save plan"}</button><button id="cp">${I("cart")}Copy list</button></div></div></article>`;
+  $("cp").onclick=async()=>{try{await navigator.clipboard.writeText(list.map(i=>"• "+i.name+" – "+cv(i.txt)).join("\n"));$("cp").innerHTML=I("cart")+"Copied"}catch(e){}};
   $("sp").onclick=()=>{if(saved)return;const f=store("plans2")||[];f.unshift({...meta,days,list,date:new Date().toLocaleDateString()});store("plans2",f.slice(0,15));plansUI();$("sp").innerHTML=I("heart")+"Saved"};
 }
 function plansUI(){

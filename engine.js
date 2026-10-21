@@ -145,7 +145,7 @@ G.nutri=function(ing,n){let k=0,p=0;ing.forEach(i=>{const e=NUT.find(x=>new RegE
 
 // ---- "Only what I have": builds from fridge items + optional pantry basics, never invents ingredients ----
 G.pantry=/^salt$|black pepper|white pepper|oil|butter|garlic|^onions?$|^water|sugar|honey|maple|flour|vinegar|soy sauce|tamari|aminos|cinnamon|cumin|paprika|oregano|thyme|turmeric|garam|curry powder|chilli|allspice|caraway|marjoram|bay leaf|ground|dried|baking powder|sumac|vanilla|stock|mustard|cocoa/;
-const EX=[["feta|cheese|parmesan|cheddar|mozzarella","cheese",25,"g","Crumble or grate the cheese over the top.","dairy"],["olive","olives",20,"g","Scatter the olives over the top.",""],["walnut|almond|peanut|cashew|seeds?","nuts or seeds",15,"g","Sprinkle with the nuts or seeds.","nuts"],["avocado","avocado",.5,"pcs","Slice the avocado on top.",""],["yogurt|sour cream","yogurt",50,"g","Serve with a spoon of yogurt.","dairy"],["lemon|lime","lemon juice",10,"ml","Finish with a squeeze of lemon.",""]];
+const EX=[["feta|cheese|parmesan|cheddar|mozzarella","cheese",25,"g","Crumble or grate the cheese over the top.","dairy"],["\\bolives?\\b(?! oil)","olives",20,"g","Scatter the olives over the top.",""],["walnut|almond|peanut|cashew|seeds?","nuts or seeds",15,"g","Sprinkle with the nuts or seeds.","nuts"],["avocado","avocado",.5,"pcs","Slice the avocado on top.",""],["yogurt|sour cream","yogurt",50,"g","Serve with a spoon of yogurt.","dairy"],["lemon|lime","lemon juice",10,"ml","Finish with a squeeze of lemon.",""]];
 
 // ---- taste rules (researched: USDA safe temperatures; spice blooming; veg cooked together need similar times) ----
 G.MEAT=["chicken","chickenthigh","pork","beef","lamb","duck","salmon","cod","prawns","tuna","sausage","bacon"];
@@ -170,15 +170,16 @@ const DEL={salmon:6,cod:6,prawns:3,tuna:2};
 const ASIAN=["Chinese","Japanese","Korean","Thai","Vietnamese","Indonesian"],BAKEOK=["Italian","Greek","French","Spanish","Portuguese","Balkan","Hungarian","German","Polish","Mexican","Turkish"]; // delicate proteins go in late
 
 G.cook=function(it,n,cuName,diet,o){
- diet=diet||{};o=o||{};const strict=!!o.strict,basic=!!o.basic,nd=diet.vegan||diet.dairy;
- const bp=new Set([...(diet.veg||diet.vegan?G.MEAT:[]),...(diet.vegan||diet.noegg?["egg"]:[]),...(nd?["halloumi","paneer"]:[]),...(diet.nofish?["salmon","cod","prawns","tuna"]:[]),...(diet.nosoy?["tofu","tempeh"]:[]),...(diet.avoidP||[])]),bc=new Set([...(diet.gf?["pasta","noodles","couscous","bulgur","bread","barley","gnocchi"]:[]),...(diet.avoidC||[])]);
+ diet=diet||{};o=o||{};const strict=!!o.strict,basic=!!o.basic;let nd=diet.vegan||diet.dairy;
+ const bp=new Set([...(diet.veg||diet.vegan?G.MEAT:[]),...(diet.vegan||diet.noegg?["egg"]:[]),...(nd?["halloumi","paneer"]:[]),...(diet.nofish?["salmon","cod","prawns","tuna"]:[]),...(diet.nosoy?["tofu","tempeh"]:[]),...(diet.halal||diet.kosher||diet.nopork?["pork","bacon","sausage"]:[]),...(diet.kosher||diet.noshell?["prawns"]:[]),...(diet.pesc?["chicken","chickenthigh","pork","beef","lamb","duck","sausage","bacon"]:[]),...(diet.avoidP||[])]),bc=new Set([...(diet.gf?["pasta","noodles","couscous","bulgur","bread","barley","gnocchi"]:[]),...(diet.avoidC||[])]);
  const PA=P.filter(x=>!bp.has(x[0])),CA=C.filter(x=>!bc.has(x[0]));
  const inL=(s,k)=>(" "+s+" ").includes(" "+k+" "),inP=(s,k)=>("|"+s+"|").includes("|"+k+"|");
  const okP=(cu,x)=>!inL(G.R[cu][0],x[0]),okC=(cu,x)=>!inL(G.R[cu][1],x[0]),okV=(cu,v)=>(!G.VR[v[0]]||inP(G.VR[v[0]],cu))&&!(G.VX[v[0]]&&inP(G.VX[v[0]],cu));
  let hp=find(PA,it),hc=find(CA,it),hv=find(V,it);
  const ug=(diet.urgent||[]).map(x=>x.toLowerCase()),isU=r=>ug.some(w=>new RegExp(r[2]).test(w)),rndU=l=>{const u=l.filter(isU);return rnd(u.length?u:l)};
  const av=nm=>{nm=nm.toLowerCase();return(basic&&G.pantry.test(nm))||it.some(w=>nm.includes(w)||w.includes(nm.split(" ")[0]))};
- const mapN=a=>[diet.nosoy?a[0].replace("soy sauce","coconut aminos"):diet.gf?a[0].replace("soy sauce","tamari"):a[0],a[1],a[2]];
+ const mapN=a=>{let n=a[0];if(diet.nosoy)n=n.replace("soy sauce","coconut aminos");else if(diet.gf)n=n.replace("soy sauce","tamari");
+  if(diet.halal&&n==="mirin")return["sugar",5,"g"];if(diet.halal&&n==="sherry vinegar")return["apple cider vinegar",5,"ml"];return[n,a[1],a[2]]};
  const garOf=k=>(G.gar[k]||"").split("|").filter(Boolean).map(x=>{const m=x.match(/^(.*) ([\d.]+) (g|ml)$/);return[m[1],+m[2],m[3]]}).filter(a=>!(nd&&/parmesan|feta|yogurt|cream|butter|cheese/.test(a[0])));
  const cuOf=k=>{const c0=G.cuisines[k],f=a=>!strict||av(a[0]),sa=c0.sauce.filter(a=>!((nd&&/yogurt|cream/.test(a[0]))||diet.vegan&&/honey/.test(a[0]))).map(mapN).filter(f);
   return{...c0,sauce:sa,ar:c0.ar.filter(f),sp:c0.sp.filter(f),gar:garOf(k).filter(f),fat:nd&&c0.fat==="butter"?"oil":c0.fat}};
@@ -186,9 +187,11 @@ G.cook=function(it,n,cuName,diet,o){
  const p0=hp.length?rndU(hp):null,c0=hc.length?rndU(hc):null;let cuN=G.cuisines[cuName]?cuName:null;
  if(!cuN){const names=Object.keys(G.cuisines),good=names.filter(k=>(!p0||okP(k,p0))&&(!c0||okC(k,c0))),pool=good.length?good:names;
   cuN=strict?pool.map(k=>{const x=cuOf(k);return[k,x.sauce.length+x.ar.length+x.sp.length+Math.random()*1.5]}).sort((a,b)=>b[1]-a[1])[0][0]:rnd(pool)}
- const cu=cuOf(cuN);hp=hp.filter(x=>okP(cuN,x));hc=hc.filter(x=>okC(cuN,x));hv=hv.filter(v=>okV(cuN,v));
+ let cu=cuOf(cuN);hp=hp.filter(x=>okP(cuN,x));hc=hc.filter(x=>okC(cuN,x));hv=hv.filter(v=>okV(cuN,v));
  const rp=PA.filter(x=>x[0]!=="egg"&&okP(cuN,x)),rc=CA.filter(x=>x[0]!=="bread"&&okC(cuN,x));
  const p=hp.length?rndU(hp):strict?null:rnd(rp.length?rp:PA.filter(x=>x[0]!=="egg"));let c=hc.length?rndU(hc):strict?null:rnd(rc.length?rc:CA.filter(x=>x[0]!=="bread"));
+ // kosher: never mix meat and dairy, so a meat dish drops dairy sauces, garnishes and toppings
+ if(diet.kosher&&!nd&&p&&["chicken","chickenthigh","beef","lamb","duck"].includes(p[0])){nd=true;cu=cuOf(cuN)}
  let vs=shuf(hv).sort((a,b)=>isU(b)-isU(a)).slice(0,strict?3:2);
  if(!vs.length&&!strict)vs=shuf(V.filter(v=>v[5]&&okV(cuN,v))).slice(0,2);
  // clash rules: one strong brassica per dish; beetroot stains and dominates, so only onion or carrot alongside
