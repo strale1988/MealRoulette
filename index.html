@@ -44,7 +44,7 @@ select{padding:0 10px}
 #spin{background:var(--acc)}#build{background:var(--acc2)}
 button:disabled{opacity:.6}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
 .note{color:var(--mute);font-size:14px;margin-top:12px}
-.reel{display:none;text-align:center;margin:48px 0;min-height:120px;font-size:22px;font-weight:700;color:var(--acc)}.reel small{display:block;color:var(--mute);font-weight:400;font-size:14px;margin-top:6px}#rt{display:block;min-height:1.4em}.card{scroll-margin-top:12px}
+.reel{display:none;text-align:center;margin:48px 0;min-height:120px;font-size:22px;font-weight:700;color:var(--acc)}.reel small{display:block;color:var(--mute);font-weight:400;font-size:14px;margin-top:6px}#rt,#prt{display:block;min-height:1.4em}.card{scroll-margin-top:72px}
 .reel.on{display:block}.reel .i{font-size:44px;display:block;margin:0 auto 6px;animation:sp .5s linear infinite}
 @keyframes sp{to{transform:rotate(360deg)}}
 @keyframes pop{from{opacity:0;transform:translateY(12px) scale(.98)}}
@@ -73,7 +73,14 @@ details{border:1px solid var(--line);border-radius:14px;background:var(--bg);mar
 .fav .prow{display:flex;gap:8px}.fav .prow button{width:auto;margin-bottom:8px}.fav .prow [data-o]{flex:1}.fav .prow .d{justify-content:center;width:46px}
 .fav{margin-top:26px}
 .fav button{display:flex;align-items:center;gap:8px;width:100%;text-align:left;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:11px 13px;margin-bottom:8px;font-size:15px;cursor:pointer}
-@media (max-width:420px){.tile{font-size:11px}.grid{grid-template-columns:1fr}}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:4px;position:sticky;top:8px;z-index:5;box-shadow:0 4px 14px rgba(0,0,0,.06)}
+.tabs button{display:flex;align-items:center;justify-content:center;gap:7px;border:0;background:none;color:var(--mute);border-radius:12px;padding:10px 4px;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--acc);color:#fff}
+.tab{margin-top:14px}.tab>.panel:first-child{margin-top:0}
+.sum{margin:12px 0 0;font-size:13px;color:var(--mute)}.hint{margin:0 0 10px;font-size:14px;color:var(--mute)}
+.lnk{border:0;background:none;color:var(--acc);font:inherit;text-decoration:underline;cursor:pointer;padding:0}
+footer{margin-top:44px;text-align:center;font-size:13px;color:var(--mute)}
+@media (max-width:420px){.tile{font-size:11px}.grid{grid-template-columns:1fr}.tabs button{font-size:13px;gap:5px}}
 </style>
 </head>
 <body>
@@ -100,10 +107,17 @@ details{border:1px solid var(--line);border-radius:14px;background:var(--bg);mar
 <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 22c4 0 7-3 7-7 0-4-3-6-4-10-3 2-4 5-4 7-2-1-3-3-3-5-2 2-3 4-3 7 0 4 3 8 7 8z"/></symbol>
 <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></symbol>
 <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+<symbol id="i-jar" viewBox="0 0 24 24"><path d="M8 3h8M7 6h10v14a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1zM7 11h10"/></symbol>
 <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></symbol>
 </defs></svg>
 <main>
-<header><div class="logo"><svg class="i"><use href="#i-dice"/></svg></div><div><h1>Meal Roulette</h1><p>Spin for a recipe or build a meal from your fridge. All metric.</p></div></header>
+<header><div class="logo"><svg class="i"><use href="#i-dice"/></svg></div><div><h1>Meal Roulette</h1><p>Spin for a recipe, build from your fridge, or plan your week. All metric.</p></div></header>
+<nav class="tabs" id="tabs" role="tablist" aria-label="Sections">
+ <button role="tab" data-t="cook" aria-selected="true"><svg class="i"><use href="#i-dice"/></svg>Cook</button>
+ <button role="tab" data-t="plan" aria-selected="false"><svg class="i"><use href="#i-cal"/></svg>Plan</button>
+ <button role="tab" data-t="kit" aria-selected="false"><svg class="i"><use href="#i-jar"/></svg>Kitchen</button>
+</nav>
+<div id="tab-cook" class="tab" role="tabpanel">
 <nav class="tiles" id="meals" aria-label="Meal type"></nav>
 <section class="panel">
  <div class="lab"><svg class="i"><use href="#i-fridge"/></svg>What's in your fridge? <small style="font-weight:400">Tap the clock on items to use them first.</small></div>
@@ -114,28 +128,58 @@ details{border:1px solid var(--line);border-radius:14px;background:var(--bg);mar
   <div><div class="lab"><svg class="i"><use href="#i-globe"/></svg>Cuisine (lunch, dinner)</div><select id="cuisine" aria-label="Cuisine"></select></div>
  </div>
  <div class="lab"><svg class="i"><use href="#i-fridge"/></svg>Cooking mode</div><div class="tg" id="mode"></div>
- <div class="lab"><svg class="i"><use href="#i-leaf"/></svg>Diet</div><div class="tg" id="diet"></div>
+ <p class="sum" id="sum1"></p>
 </section>
 <div class="btns"><button id="spin"><svg class="i"><use href="#i-dice"/></svg>Spin a recipe</button><button id="build"><svg class="i"><use href="#i-chef"/></svg>Build from fridge</button></div>
-<section class="panel"><div class="lab"><svg class="i"><use href="#i-cal"/></svg>Plan ahead (uses your fridge, diet and people)</div>
- <div class="grid"><div class="step"><button id="dminus" aria-label="Fewer days"><svg class="i"><use href="#i-minus"/></svg></button><b id="dn">5 days</b><button id="dplus" aria-label="More days"><svg class="i"><use href="#i-plus"/></svg></button></div><div class="tg" id="pm"></div></div>
- <div class="btns" style="grid-template-columns:1fr"><button id="plan" style="background:var(--acc2)"><svg class="i"><use href="#i-cal"/></svg>Plan my days + shopping list</button></div></section>
 <div class="note" id="note" role="status"></div>
 <div class="reel" id="reel" aria-hidden="true"><svg class="i"><use href="#i-dice"/></svg><span id="rt"></span><small>Picking something tasty…</small></div>
-<div id="out"></div><div class="fav" id="plans"></div><div class="fav" id="fav"></div>
+<div id="out"></div><div class="fav" id="fav"></div>
+</div>
+
+<div id="tab-plan" class="tab" role="tabpanel" hidden>
+<section class="panel"><div class="lab"><svg class="i"><use href="#i-cal"/></svg>Plan ahead</div>
+ <p class="hint" style="margin:0">Builds meals day by day from your fridge and staples, rotates proteins, and puts everything else on one shopping list.</p>
+ <p class="sum" id="sum2" style="margin:8px 0 0"></p>
+ <div class="grid" style="margin-top:14px">
+  <div><div class="lab"><svg class="i"><use href="#i-cal"/></svg>Days</div><div class="step"><button id="dminus" aria-label="Fewer days"><svg class="i"><use href="#i-minus"/></svg></button><b id="dn">5 days</b><button id="dplus" aria-label="More days"><svg class="i"><use href="#i-plus"/></svg></button></div></div>
+  <div><div class="lab"><svg class="i"><use href="#i-users"/></svg>People</div><div class="step"><button id="minus2" aria-label="Fewer people"><svg class="i"><use href="#i-minus"/></svg></button><b id="pn2">2</b><button id="plus2" aria-label="More people"><svg class="i"><use href="#i-plus"/></svg></button></div></div>
+ </div>
+ <div class="lab"><svg class="i"><use href="#i-chef"/></svg>Meals to plan</div><div class="tg" id="pm"></div>
+ <div class="lab"><svg class="i"><use href="#i-globe"/></svg>Cuisine (lunch, dinner)</div><select id="cuisine2" aria-label="Cuisine for plan"></select>
+ <div class="btns" style="grid-template-columns:1fr"><button id="plan" style="background:var(--acc2)"><svg class="i"><use href="#i-cal"/></svg>Plan my days + shopping list</button></div>
+</section>
+<div class="note" id="pnote" role="status"></div>
+<div class="reel" id="preel" aria-hidden="true"><svg class="i"><use href="#i-cal"/></svg><span id="prt"></span><small>Planning your days…</small></div>
+<div id="pout"></div><div class="fav" id="plans"></div>
+</div>
+
+<div id="tab-kit" class="tab" role="tabpanel" hidden>
+<section class="panel"><div class="lab"><svg class="i"><use href="#i-jar"/></svg>Always have at home</div>
+ <p class="hint">Staples you keep stocked, like rice, eggs, flour or canned tomatoes. They count as "in stock" for every recipe, build and plan, so they never end up on your shopping list.</p>
+ <div class="tags" id="stags"><input id="sadd" placeholder="Add a staple, press Enter" aria-label="Add staple" enterkeyhint="done"></div>
+ <div class="quick" id="squick"></div>
+</section>
+<section class="panel"><div class="lab"><svg class="i"><use href="#i-leaf"/></svg>Diet</div>
+ <p class="hint">Applies to spins, builds and plans. Halal skips pork and alcohol; kosher skips pork and shellfish and keeps meat and dairy apart. These filter the recipes only. They can't check how your ingredients were sourced or prepared.</p><div class="tg" id="diet"></div>
+</section>
+</div>
+<footer>© <span id="yr">2026</span> Strahinja Drazic. All rights reserved.</footer>
 </main>
 <script src="recipes.js"></script>
 <script src="engine.js"></script>
 <script>
 const D=window.MEAL_DATA,R=D.rules,$=id=>document.getElementById(id);
 const MEALS=[["Breakfast","sunrise"],["Snack","cookie"],["Lunch","sun"],["Dinner","moon"],["Dessert","ice"]];
-const DIETS=[["veg","Vegetarian","leaf"],["vegan","Vegan","leaf"],["gf","Gluten-free","wheat"],["dairy","Dairy-free","ban"],["nuts","Nut-free","ban"],["noegg","Egg-free","ban"],["nofish","Fish-free","ban"],["nosoy","Soy-free","ban"]];
+const DIETS=[["veg","Vegetarian","leaf"],["vegan","Vegan","leaf"],["gf","Gluten-free","wheat"],["dairy","Dairy-free","ban"],["nuts","Nut-free","ban"],["noegg","Egg-free","ban"],["nofish","Fish-free","ban"],["nosoy","Soy-free","ban"],["halal","Halal","check"],["kosher","Kosher","check"],["pesc","Pescatarian","leaf"],["nopork","Pork-free","ban"],["noshell","Shellfish-free","ban"]];
+const kmix=r=>{const t=r.ing.map(g=>g[2]).join("|");return /chicken|beef|lamb|duck|mince|thigh|steak/.test(t)&&/(?<!coconut )milk|yogurt|(?<!peanut )butter|feta|parmesan|cream|cheese|cheddar|mozzarella|paneer|halloumi/.test(t)};
 const QUICK=["chicken","eggs","rice","tomato","spinach","salmon","potato","mushroom","tofu","pasta"];
 const I=n=>`<svg class="i"><use href="#i-${n}"/></svg>`;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const rnd=a=>a[Math.floor(Math.random()*a.length)],cap=s=>s[0].toUpperCase()+s.slice(1);
 const store=(k,v)=>{try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||"null");localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}};
-const S=Object.assign({meal:"Dinner",n:2,pantry:[],diet:{},cuisine:"",strict:true,basic:true,days:5,pm:{Dinner:true},urgent:[],quick:false},store("mr2")||{});
+const S=Object.assign({meal:"Dinner",n:2,pantry:[],diet:{},cuisine:"",strict:true,basic:true,days:5,pm:{Dinner:true},urgent:[],quick:false,staples:[]},store("mr2")||{});
+if(!Array.isArray(S.staples))S.staples=[];
+const SQUICK=["rice","pasta","eggs","flour","canned tomatoes","milk","butter","onion","potatoes","olive oil","sugar","bread"];
 const save=()=>store("mr2",S),dietP=x=>({...S.diet,urgent:S.urgent,...x});
 function fmt(v,u){
   if(u==="pcs")return Math.max(0.5,Math.round(v*2)/2)+" pcs";
@@ -143,7 +187,11 @@ function fmt(v,u){
   if(u==="g"&&v>=1000)return v/1000+" kg";if(u==="ml"&&v>=1000)return v/1000+" l";return v+" "+u;
 }
 const stem=x=>x.replace(/s$/,"");
-const items=()=>S.pantry.map(x=>x.toLowerCase());
+const stap=()=>S.staples.map(x=>x.toLowerCase());
+const items=()=>[...new Set([...S.pantry.map(x=>x.toLowerCase()),...stap()])];
+let tab="cook";
+function setTab(t){tab=t;["cook","plan","kit"].forEach(k=>{$("tab-"+k).hidden=k!==t;document.querySelector(`#tabs [data-t="${k}"]`).setAttribute("aria-selected",k===t)});scrollTo({top:0})}
+document.querySelectorAll("#tabs button").forEach(b=>b.onclick=()=>setTab(b.dataset.t));
 
 /* ---------- controls ---------- */
 function draw(){
@@ -155,7 +203,16 @@ function draw(){
   $("tags").querySelectorAll(".tag button.u").forEach(b=>b.onclick=()=>{const p=S.pantry[S.pantry.indexOf(b.dataset.p)];S.urgent=S.urgent.includes(p)?S.urgent.filter(x=>x!==p):[...S.urgent,p];save();draw()});
   $("quick").innerHTML=QUICK.filter(q=>!S.pantry.includes(q)).map(q=>`<button data-q="${q}">+ ${q}</button>`).join("");
   $("quick").querySelectorAll("button").forEach(b=>b.onclick=()=>{S.pantry.push(b.dataset.q);save();draw()});
-  $("pn").textContent=S.n;
+  $("pn").textContent=S.n;$("pn2").textContent=S.n;
+  $("stags").querySelectorAll(".tag").forEach(t=>t.remove());
+  S.staples.forEach((p,i)=>$("stags").insertBefore(Object.assign(document.createElement("span"),{className:"tag",innerHTML:`${esc(p)}<button class="r" aria-label="Remove ${esc(p)}" data-i="${i}">${I("x")}</button>`}),$("sadd")));
+  $("stags").querySelectorAll(".tag button.r").forEach(b=>b.onclick=()=>{S.staples.splice(+b.dataset.i,1);save();draw()});
+  $("squick").innerHTML=SQUICK.filter(q=>!S.staples.includes(q)).map(q=>`<button data-q="${q}">+ ${q}</button>`).join("");
+  $("squick").querySelectorAll("button").forEach(b=>b.onclick=()=>{S.staples.push(b.dataset.q);save();draw()});
+  const dn=DIETS.filter(d=>S.diet[d[0]]).map(d=>d[1]),dtxt="Diet: "+(dn.length?dn.join(", "):"none");
+  $("sum1").innerHTML=`${esc(dtxt)} · Staples: ${S.staples.length} <button class="lnk" data-go="kit">Edit</button>`;
+  $("sum2").innerHTML=`Using ${S.pantry.length} fridge item${S.pantry.length===1?"":"s"} <button class="lnk" data-go="cook">edit</button> · ${S.staples.length} staple${S.staples.length===1?"":"s"} · ${esc(dtxt)} <button class="lnk" data-go="kit">edit</button>`;
+  document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>setTab(b.dataset.go));
   $("mode").innerHTML=[["strict","Only what I have","fridge"],["basic","Assume basic pantry","check"],["quick","Quick (30 min or less)","clock"]].map(d=>`<button data-k="${d[0]}" aria-pressed="${!!S[d[0]]}">${I(d[2])}${d[1]}</button>`).join("");
   $("mode").querySelectorAll("button").forEach(b=>b.onclick=()=>{S[b.dataset.k]=!S[b.dataset.k];save();draw()});
   $("dn").textContent=S.days+(S.days>1?" days":" day");
@@ -167,22 +224,26 @@ function draw(){
 function addItem(){const v=$("add").value.replace(/,/g,"").trim().toLowerCase();if(v&&!S.pantry.includes(v)){S.pantry.push(v);save()}$("add").value="";draw()}
 $("add").onkeydown=e=>{if(e.key==="Enter"||e.key===","){e.preventDefault();addItem()}else if(e.key==="Backspace"&&!$("add").value&&S.pantry.length){S.pantry.pop();save();draw()}};
 $("add").onblur=()=>{if($("add").value.trim())addItem()};
-$("minus").onclick=()=>{S.n=Math.max(1,S.n-1);save();draw()};$("plus").onclick=()=>{S.n=Math.min(12,S.n+1);save();draw()};
-$("cuisine").onchange=e=>{S.cuisine=e.target.value;save()};
+function addStaple(){const v=$("sadd").value.replace(/,/g,"").trim().toLowerCase();if(v&&!S.staples.includes(v)){S.staples.push(v);save()}$("sadd").value="";draw()}
+$("sadd").onkeydown=e=>{if(e.key==="Enter"||e.key===","){e.preventDefault();addStaple()}else if(e.key==="Backspace"&&!$("sadd").value&&S.staples.length){S.staples.pop();save();draw()}};
+$("sadd").onblur=()=>{if($("sadd").value.trim())addStaple()};
+const dec=()=>{S.n=Math.max(1,S.n-1);save();draw()},inc=()=>{S.n=Math.min(12,S.n+1);save();draw()};
+$("minus").onclick=$("minus2").onclick=dec;$("plus").onclick=$("plus2").onclick=inc;
+$("cuisine").onchange=$("cuisine2").onchange=e=>{S.cuisine=e.target.value;$("cuisine").value=$("cuisine2").value=S.cuisine;save()};
 
 /* ---------- recipe roulette ---------- */
 const RECIPES=D.recipes.map((r,i)=>({id:i,title:r[0],meals:r[1],min:r[2],serv:r[3],ing:r[4],steps:r[5].split("|")}));
 let seen=[],current=null,kind="spin";
 const score=(r,it)=>it.filter(x=>x.length>2&&r.ing.some(g=>g[2].toLowerCase().includes(stem(x)))).length;
-function banRe(){const d=S.diet;return new RegExp([d.veg||d.vegan?"chicken|beef|pork|salmon|sausage|prawn|fish|mince|lamb|duck|bacon|tuna|cod|ham|thigh":"",d.vegan?"egg|milk|yogurt|butter|feta|parmesan|honey|cheese|cheddar|cream|paneer|halloumi|mozzarella":"",d.gf?"pasta|spaghetti|bread|tortilla|couscous|noodle|soy sauce|flatbread|flour|oats|bulgur|barley|gnocchi|orzo|macaroni":"",d.dairy?"milk|yogurt|butter|feta|parmesan|cream|halloumi|cheese|cheddar|paneer|mozzarella":"",d.nuts?"walnut|almond|peanut|cashew":"",d.noegg?"\\beggs?\\b":"",d.nofish?"salmon|fish|prawn|cod|tuna":"",d.nosoy?"soy|tofu|tempeh":""].filter(Boolean).join("|")||"$^")}
+function banRe(){const d=S.diet;return new RegExp([d.veg||d.vegan?"chicken|beef|pork|salmon|sausage|prawn|fish|mince|lamb|duck|bacon|tuna|cod|ham|thigh":"",d.vegan?"egg|milk|yogurt|butter|feta|parmesan|honey|cheese|cheddar|cream|paneer|halloumi|mozzarella":"",d.gf?"pasta|spaghetti|bread|tortilla|couscous|noodle|soy sauce|flatbread|flour|oats|bulgur|barley|gnocchi|orzo|macaroni":"",d.dairy?"milk|yogurt|butter|feta|parmesan|cream|halloumi|cheese|cheddar|paneer|mozzarella":"",d.nuts?"walnut|almond|peanut|cashew":"",d.noegg?"\\beggs?\\b":"",d.nofish?"salmon|fish|prawn|cod|tuna":"",d.nosoy?"soy|tofu|tempeh":"",d.halal?"pork|\\bham\\b|bacon|sausage|chorizo|\\bwine\\b|\\bbeer\\b|mirin":"",d.kosher?"pork|\\bham\\b|bacon|sausage|chorizo|prawn|shrimp":"",d.nopork?"pork|\\bham\\b|bacon|sausage|chorizo":"",d.noshell?"prawn|shrimp":"",d.pesc?"chicken|beef|pork|sausage|mince|lamb|duck|bacon|\\bham\\b|thigh|steak":""].filter(Boolean).join("|")||"$^")}
 const missing=i=>items().length>0&&!i.have&&!(S.basic&&GEN.pantry.test(i.name.toLowerCase()));
 function bestOf(fn,k){let best=null,bm=1e9;for(let j=0;j<k;j++){const g=fn(),m=g.ing.filter(missing).length+(S.quick&&g.min>30?100:0);if(m<bm){best=g;bm=m;if(!m)break}}return best}
 function callout(r){
-  if(!items().length)return"";const m=r.ing.filter(missing),un=r.unused&&r.unused.length?` Not used this time: ${esc(r.unused.join(", "))}.`:"";
+  if(!items().length)return"";const m=r.ing.filter(missing),uu=(r.unused||[]).filter(x=>!stap().includes(x)),un=uu.length?` Not used this time: ${esc(uu.join(", "))}.`:"";
   return m.length?`<div class="call buy2">${I("cart")}<span>To buy (${m.length}): ${m.map(i=>esc(i.name)).join(", ")}.${un}</span></div>`:`<div class="call ok2">${I("check")}<span>You already have everything.${un}</span></div>`;
 }
 function spin(){
-  const it=items(),re=banRe();let pool=RECIPES.filter(r=>r.meals.includes(S.meal)&&!r.ing.some(g=>re.test(g[2])));const qk=pool.filter(r=>r.min<=30);if(S.quick&&qk.length)pool=qk;
+  const it=items(),re=banRe();let pool=RECIPES.filter(r=>r.meals.includes(S.meal)&&!r.ing.some(g=>re.test(g[2]))&&!(S.diet.kosher&&kmix(r)));const qk=pool.filter(r=>r.min<=30);if(S.quick&&qk.length)pool=qk;
   if(!pool.length)return show(null,"No recipe fits that diet for "+S.meal.toLowerCase()+" yet. Try “Build from fridge”.");
   const info=r=>{const k=S.n/r.serv,ing=r.ing.map(g=>({name:g[2],a:g[0]*k,u:g[1],txt:fmt(g[0]*k,g[1]),have:it.some(x=>x.length>2&&g[2].toLowerCase().includes(stem(x)))}));return{r,ing,miss:ing.filter(missing).length,hit:ing.filter(i=>i.have).length,urg:ing.filter(i=>i.have&&S.urgent.some(u=>i.name.toLowerCase().includes(stem(u)))).length}};
   let L=pool.map(info),msg="";
@@ -223,33 +284,34 @@ function favs(){
   $("fav").querySelectorAll("button").forEach(b=>b.onclick=()=>{const r=f[+b.dataset.i];S.meal=r.meal||S.meal;draw();show(r,"");scrollTo({top:0,behavior:"smooth"})});
 }
 function run(what){
+  const pl=what==="plan",rl=$(pl?"preel":"reel"),rt=$(pl?"prt":"rt"),o=$(pl?"pout":"out"),nt=$(pl?"pnote":"note");
   const btns=document.querySelectorAll(".btns button"),rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
-  btns.forEach(b=>b.disabled=true);$("out").innerHTML="";$("note").textContent="Picking something tasty…";
+  btns.forEach(b=>b.disabled=true);o.innerHTML="";nt.textContent=pl?"Planning your days…":"Picking something tasty…";
   const names=RECIPES.map(r=>r.title).concat(Object.keys(GEN.cuisines).map(c=>c+" "+rnd(["chicken bowl","stir-fry","curry","traybake","stew"])));
-  const done=()=>{$("reel").classList.remove("on");btns.forEach(b=>b.disabled=false);what==="plan"?plan():what==="build"?build():spin();
-    const c=$("out").firstElementChild||$("out");c.scrollIntoView({behavior:"smooth",block:"start"})};
+  const done=()=>{rl.classList.remove("on");btns.forEach(b=>b.disabled=false);pl?plan():what==="build"?build():spin();
+    const c=o.firstElementChild||o;c.scrollIntoView({behavior:"smooth",block:"start"})};
   if(rm)return done();
-  $("reel").classList.add("on");$("reel").scrollIntoView({behavior:"smooth",block:"center"});
-  let d=70,el=0;const tick=()=>{$("rt").textContent=rnd(names);el+=d;if(el>=1500)return setTimeout(done,350);d=Math.round(d*1.15);setTimeout(tick,d)};tick();
+  rl.classList.add("on");rl.scrollIntoView({behavior:"smooth",block:"center"});
+  let d=70,el=0;const tick=()=>{rt.textContent=rnd(names);el+=d;if(el>=1500)return setTimeout(done,350);d=Math.round(d*1.15);setTimeout(tick,d)};tick();
 }
 $("dminus").onclick=()=>{S.days=Math.max(1,S.days-1);save();draw()};$("dplus").onclick=()=>{S.days=Math.min(7,S.days+1);save();draw()};
 function plan(){
-  const meals=["Breakfast","Lunch","Dinner"].filter(m=>S.pm[m]);if(!meals.length)return show(null,"Pick at least one meal to plan.");
+  const meals=["Breakfast","Lunch","Dinner"].filter(m=>S.pm[m]);if(!meals.length){$("pout").innerHTML="";$("pnote").textContent="Pick at least one meal to plan.";return}
   let it=items(),ug=S.urgent.slice();const cus=Object.keys(GEN.cuisines).sort(()=>Math.random()-.5),days=[],tot={},rp=[],rc=[];let ci=0;
   const pm=i=>!i.have&&!(S.basic&&GEN.pantry.test(i.name.toLowerCase()));
   for(let d=1;d<=S.days;d++)for(const m of meals){
     const main=m!=="Breakfast",cu=S.cuisine||cus[ci++%cus.length];let best=null,bm=1e9;
     for(let j=0;j<25;j++){const dd=dietP({avoidP:rp.slice(-3),avoidC:rc.slice(-2),urgent:ug}),g=main?GEN.make(it,S.n,cu,dd):GEN.makeSmall(m,it,S.n,dd),k=g.ing.filter(pm).length+(S.quick&&g.min>30?100:0);if(k<bm){best=g;bm=k;if(!k)break}}
     if(main){if(best.pk)rp.push(best.pk);if(best.ck)rc.push(best.ck)}
-    const used=best.ing.filter(i=>i.have).map(i=>i.name.toLowerCase());it=it.filter(w=>!used.some(u=>u.includes(w)||w.includes(u.split(" ")[0])));ug=ug.filter(u=>it.includes(u.toLowerCase()));
+    const used=best.ing.filter(i=>i.have).map(i=>i.name.toLowerCase());it=it.filter(w=>!used.some(u=>u.includes(w)||w.includes(u.split(" ")[0])));it=[...it,...stap().filter(s=>!it.includes(s))];ug=ug.filter(u=>it.includes(u.toLowerCase()));
     best.ing.filter(pm).forEach(i=>{const k=i.name+"|"+i.u;tot[k]=tot[k]||{name:i.name,u:i.u,a:0};tot[k].a+=i.a});
     days.push({d,m,g:{title:best.title,min:best.min,ing:best.ing.map(i=>({name:i.name,txt:i.txt})),steps:best.steps}});
   }
   renderPlan(days,Object.values(tot).sort((a,b)=>a.name.localeCompare(b.name)).map(i=>({name:i.name,txt:fmt(i.a,i.u)})),{title:S.days+"-day plan",n:S.n},false);
 }
 function renderPlan(days,list,meta,saved){
-  $("note").textContent=saved?"":"Priority (clock) items go first, fridge items are used up day by day, proteins rotate, and anything else lands on the shopping list.";
-  $("out").innerHTML=`<article class="card"><div class="hero"><div class="ic">${I("cal")}</div><h2>${esc(meta.title)} for ${meta.n} ${meta.n>1?"people":"person"}</h2></div><div class="body">`+days.map(x=>`<details><summary>Day ${x.d} · ${x.m}: ${esc(x.g.title)}</summary><h3>${I("list")}Ingredients</h3><ul class="ing">${x.g.ing.map(i=>`<li><span>${esc(i.name)}</span><span class="q">${esc(i.txt)}</span></li>`).join("")}</ul><h3>${I("chef")}Method</h3><ol>${x.g.steps.map(s=>`<li><span>${esc(s)}</span></li>`).join("")}</ol></details>`).join("")+
+  $("pnote").textContent=saved?"":"Priority (clock) items go first, fridge items are used up day by day, proteins rotate, and anything else lands on the shopping list.";
+  $("pout").innerHTML=`<article class="card"><div class="hero"><div class="ic">${I("cal")}</div><h2>${esc(meta.title)} for ${meta.n} ${meta.n>1?"people":"person"}</h2></div><div class="body">`+days.map(x=>`<details><summary>Day ${x.d} · ${x.m}: ${esc(x.g.title)}</summary><h3>${I("list")}Ingredients</h3><ul class="ing">${x.g.ing.map(i=>`<li><span>${esc(i.name)}</span><span class="q">${esc(i.txt)}</span></li>`).join("")}</ul><h3>${I("chef")}Method</h3><ol>${x.g.steps.map(s=>`<li><span>${esc(s)}</span></li>`).join("")}</ol></details>`).join("")+
    `<h3>${I("cart")}Shopping list</h3><ul class="ing">${list.map(i=>`<li><span>${esc(i.name)}</span><span class="q">${esc(i.txt)}</span></li>`).join("")||"<li>Nothing to buy.</li>"}</ul><div class="row"><button id="sp">${I("heart")}${saved?"Saved":"Save plan"}</button><button id="cp">${I("cart")}Copy list</button></div></div></article>`;
   $("cp").onclick=async()=>{try{await navigator.clipboard.writeText(list.map(i=>"• "+i.name+" – "+i.txt).join("\n"));$("cp").innerHTML=I("cart")+"Copied"}catch(e){}};
   $("sp").onclick=()=>{if(saved)return;const f=store("plans2")||[];f.unshift({...meta,days,list,date:new Date().toLocaleDateString()});store("plans2",f.slice(0,15));plansUI();$("sp").innerHTML=I("heart")+"Saved"};
@@ -261,7 +323,8 @@ function plansUI(){
 }
 $("plan").onclick=()=>run("plan");
 $("spin").onclick=()=>run("spin");$("build").onclick=()=>run("build");
-$("cuisine").innerHTML='<option value="">Surprise me</option>'+Object.keys(GEN.cuisines).map(c=>`<option${c===S.cuisine?" selected":""}>${c}</option>`).join("");
+$("cuisine").innerHTML=$("cuisine2").innerHTML='<option value="">Surprise me</option>'+Object.keys(GEN.cuisines).map(c=>`<option${c===S.cuisine?" selected":""}>${c}</option>`).join("");
+$("yr").textContent=new Date().getFullYear();
 draw();favs();plansUI();
 if("serviceWorker" in navigator&&location.protocol.startsWith("http"))navigator.serviceWorker.register("sw.js").catch(()=>{});
 </script>
