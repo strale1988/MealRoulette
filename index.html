@@ -44,7 +44,7 @@ select{padding:0 10px}
 #spin{background:var(--acc)}#build{background:var(--acc2)}
 button:disabled{opacity:.6}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
 .note{color:var(--mute);font-size:14px;margin-top:12px}
-.reel{display:none;text-align:center;margin:26px 0;font-size:22px;font-weight:700;color:var(--acc)}
+.reel{display:none;text-align:center;margin:48px 0;min-height:120px;font-size:22px;font-weight:700;color:var(--acc)}.reel small{display:block;color:var(--mute);font-weight:400;font-size:14px;margin-top:6px}#rt{display:block;min-height:1.4em}.card{scroll-margin-top:12px}
 .reel.on{display:block}.reel .i{font-size:44px;display:block;margin:0 auto 6px;animation:sp .5s linear infinite}
 @keyframes sp{to{transform:rotate(360deg)}}
 @keyframes pop{from{opacity:0;transform:translateY(12px) scale(.98)}}
@@ -68,6 +68,9 @@ ol li:before{content:counter(s);flex:none;width:26px;height:26px;border-radius:5
 .row{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
 .row button{flex:1;min-width:110px;display:flex;align-items:center;justify-content:center;gap:6px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:11px 8px;font-size:14px;cursor:pointer}
 .call{display:flex;gap:8px;align-items:flex-start;border-radius:12px;padding:10px 12px;margin-top:14px;font-size:14px}.call .i{margin-top:3px}.buy2{background:var(--soft);color:var(--acc)}.ok2{background:var(--bg);color:var(--acc2);border:1px solid var(--line)}
+details{border:1px solid var(--line);border-radius:14px;background:var(--bg);margin-top:10px;padding:0 14px}summary{cursor:pointer;padding:12px 0;font-weight:600}details[open] summary{border-bottom:1px dashed var(--line);margin-bottom:6px}
+.tag.urg{background:var(--acc)}.tag button.u{opacity:.6}.tag button.u[aria-pressed=true]{opacity:1}
+.fav .prow{display:flex;gap:8px}.fav .prow button{width:auto;margin-bottom:8px}.fav .prow [data-o]{flex:1}.fav .prow .d{justify-content:center;width:46px}
 .fav{margin-top:26px}
 .fav button{display:flex;align-items:center;gap:8px;width:100%;text-align:left;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:11px 13px;margin-bottom:8px;font-size:15px;cursor:pointer}
 @media (max-width:420px){.tile{font-size:11px}.grid{grid-template-columns:1fr}}
@@ -96,13 +99,14 @@ ol li:before{content:counter(s);flex:none;width:26px;height:26px;border-radius:5
 <symbol id="i-ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></symbol>
 <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 22c4 0 7-3 7-7 0-4-3-6-4-10-3 2-4 5-4 7-2-1-3-3-3-5-2 2-3 4-3 7 0 4 3 8 7 8z"/></symbol>
 <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
 <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></symbol>
 </defs></svg>
 <main>
 <header><div class="logo"><svg class="i"><use href="#i-dice"/></svg></div><div><h1>Meal Roulette</h1><p>Spin for a recipe or build a meal from your fridge. All metric.</p></div></header>
 <nav class="tiles" id="meals" aria-label="Meal type"></nav>
 <section class="panel">
- <div class="lab"><svg class="i"><use href="#i-fridge"/></svg>What's in your fridge?</div>
+ <div class="lab"><svg class="i"><use href="#i-fridge"/></svg>What's in your fridge? <small style="font-weight:400">Tap the clock on items to use them first.</small></div>
  <div class="tags" id="tags"><input id="add" placeholder="Type an ingredient, press Enter" aria-label="Add ingredient" enterkeyhint="done"></div>
  <div class="quick" id="quick"></div>
  <div class="grid">
@@ -113,9 +117,12 @@ ol li:before{content:counter(s);flex:none;width:26px;height:26px;border-radius:5
  <div class="lab"><svg class="i"><use href="#i-leaf"/></svg>Diet</div><div class="tg" id="diet"></div>
 </section>
 <div class="btns"><button id="spin"><svg class="i"><use href="#i-dice"/></svg>Spin a recipe</button><button id="build"><svg class="i"><use href="#i-chef"/></svg>Build from fridge</button></div>
+<section class="panel"><div class="lab"><svg class="i"><use href="#i-cal"/></svg>Plan ahead (uses your fridge, diet and people)</div>
+ <div class="grid"><div class="step"><button id="dminus" aria-label="Fewer days"><svg class="i"><use href="#i-minus"/></svg></button><b id="dn">5 days</b><button id="dplus" aria-label="More days"><svg class="i"><use href="#i-plus"/></svg></button></div><div class="tg" id="pm"></div></div>
+ <div class="btns" style="grid-template-columns:1fr"><button id="plan" style="background:var(--acc2)"><svg class="i"><use href="#i-cal"/></svg>Plan my days + shopping list</button></div></section>
 <div class="note" id="note" role="status"></div>
-<div class="reel" id="reel" aria-hidden="true"><svg class="i"><use href="#i-dice"/></svg><span id="rt"></span></div>
-<div id="out"></div><div class="fav" id="fav"></div>
+<div class="reel" id="reel" aria-hidden="true"><svg class="i"><use href="#i-dice"/></svg><span id="rt"></span><small>Picking something tasty…</small></div>
+<div id="out"></div><div class="fav" id="plans"></div><div class="fav" id="fav"></div>
 </main>
 <script src="recipes.js"></script>
 <script src="engine.js"></script>
@@ -128,8 +135,8 @@ const I=n=>`<svg class="i"><use href="#i-${n}"/></svg>`;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const rnd=a=>a[Math.floor(Math.random()*a.length)],cap=s=>s[0].toUpperCase()+s.slice(1);
 const store=(k,v)=>{try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||"null");localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}};
-const S=Object.assign({meal:"Dinner",n:2,pantry:[],diet:{},cuisine:"",strict:true,basic:true},store("mr2")||{});
-const save=()=>store("mr2",S);
+const S=Object.assign({meal:"Dinner",n:2,pantry:[],diet:{},cuisine:"",strict:true,basic:true,days:5,pm:{Dinner:true},urgent:[],quick:false},store("mr2")||{});
+const save=()=>store("mr2",S),dietP=x=>({...S.diet,urgent:S.urgent,...x});
 function fmt(v,u){
   if(u==="pcs")return Math.max(0.5,Math.round(v*2)/2)+" pcs";
   v=v<10?Math.round(v*2)/2:v<50?Math.round(v):Math.round(v/5)*5;
@@ -143,13 +150,17 @@ function draw(){
   $("meals").innerHTML=MEALS.map(m=>`<button class="tile" data-m="${m[0]}" aria-pressed="${S.meal===m[0]}">${I(m[1])}${m[0]}</button>`).join("");
   $("meals").querySelectorAll("button").forEach(b=>b.onclick=()=>{S.meal=b.dataset.m;seen=[];save();draw()});
   $("tags").querySelectorAll(".tag").forEach(t=>t.remove());
-  S.pantry.forEach((p,i)=>$("tags").insertBefore(Object.assign(document.createElement("span"),{className:"tag",innerHTML:`${esc(p)}<button aria-label="Remove ${esc(p)}" data-i="${i}">${I("x")}</button>`}),$("add")));
-  $("tags").querySelectorAll(".tag button").forEach(b=>b.onclick=()=>{S.pantry.splice(+b.dataset.i,1);save();draw()});
+  S.pantry.forEach((p,i)=>$("tags").insertBefore(Object.assign(document.createElement("span"),{className:"tag"+(S.urgent.includes(p)?" urg":""),innerHTML:`${esc(p)}<button class="u" aria-label="Use ${esc(p)} first" aria-pressed="${S.urgent.includes(p)}" data-p="${esc(p)}">${I("clock")}</button><button class="r" aria-label="Remove ${esc(p)}" data-i="${i}">${I("x")}</button>`}),$("add")));
+  $("tags").querySelectorAll(".tag button.r").forEach(b=>b.onclick=()=>{const p=S.pantry.splice(+b.dataset.i,1)[0];S.urgent=S.urgent.filter(x=>x!==p);save();draw()});
+  $("tags").querySelectorAll(".tag button.u").forEach(b=>b.onclick=()=>{const p=S.pantry[S.pantry.indexOf(b.dataset.p)];S.urgent=S.urgent.includes(p)?S.urgent.filter(x=>x!==p):[...S.urgent,p];save();draw()});
   $("quick").innerHTML=QUICK.filter(q=>!S.pantry.includes(q)).map(q=>`<button data-q="${q}">+ ${q}</button>`).join("");
   $("quick").querySelectorAll("button").forEach(b=>b.onclick=()=>{S.pantry.push(b.dataset.q);save();draw()});
   $("pn").textContent=S.n;
-  $("mode").innerHTML=[["strict","Only what I have","fridge"],["basic","Assume basic pantry","check"]].map(d=>`<button data-k="${d[0]}" aria-pressed="${!!S[d[0]]}">${I(d[2])}${d[1]}</button>`).join("");
+  $("mode").innerHTML=[["strict","Only what I have","fridge"],["basic","Assume basic pantry","check"],["quick","Quick (30 min or less)","clock"]].map(d=>`<button data-k="${d[0]}" aria-pressed="${!!S[d[0]]}">${I(d[2])}${d[1]}</button>`).join("");
   $("mode").querySelectorAll("button").forEach(b=>b.onclick=()=>{S[b.dataset.k]=!S[b.dataset.k];save();draw()});
+  $("dn").textContent=S.days+(S.days>1?" days":" day");
+  $("pm").innerHTML=["Breakfast","Lunch","Dinner"].map(m=>`<button data-m="${m}" aria-pressed="${!!S.pm[m]}">${m}</button>`).join("");
+  $("pm").querySelectorAll("button").forEach(b=>b.onclick=()=>{S.pm[b.dataset.m]=!S.pm[b.dataset.m];save();draw()});
   $("diet").innerHTML=DIETS.map(d=>`<button data-d="${d[0]}" aria-pressed="${!!S.diet[d[0]]}">${I(d[2])}${d[1]}</button>`).join("");
   $("diet").querySelectorAll("button").forEach(b=>b.onclick=()=>{const k=b.dataset.d;S.diet[k]=!S.diet[k];if(k==="vegan"&&S.diet.vegan)S.diet.veg=true;save();draw()});
 }
@@ -163,28 +174,29 @@ $("cuisine").onchange=e=>{S.cuisine=e.target.value;save()};
 const RECIPES=D.recipes.map((r,i)=>({id:i,title:r[0],meals:r[1],min:r[2],serv:r[3],ing:r[4],steps:r[5].split("|")}));
 let seen=[],current=null,kind="spin";
 const score=(r,it)=>it.filter(x=>x.length>2&&r.ing.some(g=>g[2].toLowerCase().includes(stem(x)))).length;
-function banRe(){const d=S.diet;return new RegExp([d.veg||d.vegan?"chicken|beef|pork|salmon|sausage|prawn|fish|mince|lamb|duck|bacon|tuna|cod|ham|thigh":"",d.vegan?"egg|milk|yogurt|butter|feta|parmesan|honey|cheese|cheddar|cream|paneer|halloumi":"",d.gf?"pasta|spaghetti|bread|tortilla|couscous|noodle|soy sauce|flatbread|flour|oats|bulgur|barley|gnocchi|orzo|macaroni":"",d.dairy?"milk|yogurt|butter|feta|parmesan|cream|halloumi|cheese|cheddar|paneer":"",d.nuts?"walnut|almond|peanut|cashew":"",d.noegg?"\\beggs?\\b":"",d.nofish?"salmon|fish|prawn|cod|tuna":"",d.nosoy?"soy|tofu|tempeh":""].filter(Boolean).join("|")||"$^")}
+function banRe(){const d=S.diet;return new RegExp([d.veg||d.vegan?"chicken|beef|pork|salmon|sausage|prawn|fish|mince|lamb|duck|bacon|tuna|cod|ham|thigh":"",d.vegan?"egg|milk|yogurt|butter|feta|parmesan|honey|cheese|cheddar|cream|paneer|halloumi|mozzarella":"",d.gf?"pasta|spaghetti|bread|tortilla|couscous|noodle|soy sauce|flatbread|flour|oats|bulgur|barley|gnocchi|orzo|macaroni":"",d.dairy?"milk|yogurt|butter|feta|parmesan|cream|halloumi|cheese|cheddar|paneer|mozzarella":"",d.nuts?"walnut|almond|peanut|cashew":"",d.noegg?"\\beggs?\\b":"",d.nofish?"salmon|fish|prawn|cod|tuna":"",d.nosoy?"soy|tofu|tempeh":""].filter(Boolean).join("|")||"$^")}
 const missing=i=>items().length>0&&!i.have&&!(S.basic&&GEN.pantry.test(i.name.toLowerCase()));
-function bestOf(fn,k){let best=null,bm=1e9;for(let j=0;j<k;j++){const g=fn(),m=g.ing.filter(missing).length;if(m<bm){best=g;bm=m;if(!m)break}}return best}
+function bestOf(fn,k){let best=null,bm=1e9;for(let j=0;j<k;j++){const g=fn(),m=g.ing.filter(missing).length+(S.quick&&g.min>30?100:0);if(m<bm){best=g;bm=m;if(!m)break}}return best}
 function callout(r){
   if(!items().length)return"";const m=r.ing.filter(missing),un=r.unused&&r.unused.length?` Not used this time: ${esc(r.unused.join(", "))}.`:"";
   return m.length?`<div class="call buy2">${I("cart")}<span>To buy (${m.length}): ${m.map(i=>esc(i.name)).join(", ")}.${un}</span></div>`:`<div class="call ok2">${I("check")}<span>You already have everything.${un}</span></div>`;
 }
 function spin(){
-  const it=items(),re=banRe();const pool=RECIPES.filter(r=>r.meals.includes(S.meal)&&!r.ing.some(g=>re.test(g[2])));
+  const it=items(),re=banRe();let pool=RECIPES.filter(r=>r.meals.includes(S.meal)&&!r.ing.some(g=>re.test(g[2])));const qk=pool.filter(r=>r.min<=30);if(S.quick&&qk.length)pool=qk;
   if(!pool.length)return show(null,"No recipe fits that diet for "+S.meal.toLowerCase()+" yet. Try “Build from fridge”.");
-  const info=r=>{const k=S.n/r.serv,ing=r.ing.map(g=>({name:g[2],a:g[0]*k,u:g[1],txt:fmt(g[0]*k,g[1]),have:it.some(x=>x.length>2&&g[2].toLowerCase().includes(stem(x)))}));return{r,ing,miss:ing.filter(missing).length,hit:ing.filter(i=>i.have).length}};
+  const info=r=>{const k=S.n/r.serv,ing=r.ing.map(g=>({name:g[2],a:g[0]*k,u:g[1],txt:fmt(g[0]*k,g[1]),have:it.some(x=>x.length>2&&g[2].toLowerCase().includes(stem(x)))}));return{r,ing,miss:ing.filter(missing).length,hit:ing.filter(i=>i.have).length,urg:ing.filter(i=>i.have&&S.urgent.some(u=>i.name.toLowerCase().includes(stem(u)))).length}};
   let L=pool.map(info),msg="";
-  if(it.length){const lo=Math.min(...L.map(x=>x.miss));if(S.strict&&lo>0)msg="Nothing fits using only your fridge, so this is the closest match. See what to buy below.";L=L.filter(x=>x.miss===lo);const mh=Math.max(...L.map(x=>x.hit));L=L.filter(x=>x.hit===mh)}
+  if(it.length){const lo=Math.min(...L.map(x=>x.miss));if(S.strict&&lo>0)msg="Nothing fits using only your fridge, so this is the closest match. See what to buy below.";L=L.filter(x=>x.miss===lo);const mu=Math.max(...L.map(x=>x.urg));L=L.filter(x=>x.urg===mu);const mh=Math.max(...L.map(x=>x.hit));L=L.filter(x=>x.hit===mh)}
   let fresh=L.filter(x=>!seen.includes(x.r.id));if(!fresh.length){seen=[];fresh=L}
   const x=rnd(fresh);seen.push(x.r.id);show({title:x.r.title,min:x.r.min,n:S.n,steps:x.r.steps,ing:x.ing},msg);
 }
+function fridgeTry(it){let g=null;for(let j=0;j<30;j++){const x=GEN.makeFridge(it,S.n,S.cuisine,dietP(),S.basic);if(!x)return null;g=x;if(!S.quick||x.min<=30)break}return g}
 function build(){
   const it=items(),m=S.meal,main=m==="Lunch"||m==="Dinner";let g;
   if(S.strict&&it.length){
-    g=main?GEN.makeFridge(it,S.n,S.cuisine,S.diet,S.basic):bestOf(()=>GEN.makeSmall(m,it,S.n,S.diet),80);
+    g=main?fridgeTry(it):bestOf(()=>GEN.makeSmall(m,it,S.n,dietP()),80);
     if(!g)return show(null,"Add at least two ingredients (a protein, a carb or some veg) that fit your diet to build from your fridge.");
-  }else g=bestOf(()=>main?GEN.make(it,S.n,S.cuisine,S.diet):GEN.makeSmall(m,it,S.n,S.diet),it.length?40:1);
+  }else g=bestOf(()=>main?GEN.make(it,S.n,S.cuisine,dietP()):GEN.makeSmall(m,it,S.n,dietP()),it.length||S.quick?40:1);
   show({...g,n:S.n,built:true},"");
 }
 
@@ -211,16 +223,46 @@ function favs(){
   $("fav").querySelectorAll("button").forEach(b=>b.onclick=()=>{const r=f[+b.dataset.i];S.meal=r.meal||S.meal;draw();show(r,"");scrollTo({top:0,behavior:"smooth"})});
 }
 function run(what){
-  const btns=document.querySelectorAll(".btns button");btns.forEach(b=>b.disabled=true);
-  $("out").innerHTML="";$("note").textContent="";$("reel").classList.add("on");
+  const btns=document.querySelectorAll(".btns button"),rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+  btns.forEach(b=>b.disabled=true);$("out").innerHTML="";$("note").textContent="Picking something tasty…";
   const names=RECIPES.map(r=>r.title).concat(Object.keys(GEN.cuisines).map(c=>c+" "+rnd(["chicken bowl","stir-fry","curry","traybake","stew"])));
-  let t=0;const iv=setInterval(()=>{$("rt").textContent=rnd(names)},90);
-  setTimeout(()=>{clearInterval(iv);$("reel").classList.remove("on");btns.forEach(b=>b.disabled=false);what==="build"?build():spin();
-    $("out").scrollIntoView({behavior:"smooth",block:"nearest"})},matchMedia("(prefers-reduced-motion:reduce)").matches?0:1000);
+  const done=()=>{$("reel").classList.remove("on");btns.forEach(b=>b.disabled=false);what==="plan"?plan():what==="build"?build():spin();
+    const c=$("out").firstElementChild||$("out");c.scrollIntoView({behavior:"smooth",block:"start"})};
+  if(rm)return done();
+  $("reel").classList.add("on");$("reel").scrollIntoView({behavior:"smooth",block:"center"});
+  let d=70,el=0;const tick=()=>{$("rt").textContent=rnd(names);el+=d;if(el>=1500)return setTimeout(done,350);d=Math.round(d*1.15);setTimeout(tick,d)};tick();
 }
+$("dminus").onclick=()=>{S.days=Math.max(1,S.days-1);save();draw()};$("dplus").onclick=()=>{S.days=Math.min(7,S.days+1);save();draw()};
+function plan(){
+  const meals=["Breakfast","Lunch","Dinner"].filter(m=>S.pm[m]);if(!meals.length)return show(null,"Pick at least one meal to plan.");
+  let it=items(),ug=S.urgent.slice();const cus=Object.keys(GEN.cuisines).sort(()=>Math.random()-.5),days=[],tot={},rp=[],rc=[];let ci=0;
+  const pm=i=>!i.have&&!(S.basic&&GEN.pantry.test(i.name.toLowerCase()));
+  for(let d=1;d<=S.days;d++)for(const m of meals){
+    const main=m!=="Breakfast",cu=S.cuisine||cus[ci++%cus.length];let best=null,bm=1e9;
+    for(let j=0;j<25;j++){const dd=dietP({avoidP:rp.slice(-3),avoidC:rc.slice(-2),urgent:ug}),g=main?GEN.make(it,S.n,cu,dd):GEN.makeSmall(m,it,S.n,dd),k=g.ing.filter(pm).length+(S.quick&&g.min>30?100:0);if(k<bm){best=g;bm=k;if(!k)break}}
+    if(main){if(best.pk)rp.push(best.pk);if(best.ck)rc.push(best.ck)}
+    const used=best.ing.filter(i=>i.have).map(i=>i.name.toLowerCase());it=it.filter(w=>!used.some(u=>u.includes(w)||w.includes(u.split(" ")[0])));ug=ug.filter(u=>it.includes(u.toLowerCase()));
+    best.ing.filter(pm).forEach(i=>{const k=i.name+"|"+i.u;tot[k]=tot[k]||{name:i.name,u:i.u,a:0};tot[k].a+=i.a});
+    days.push({d,m,g:{title:best.title,min:best.min,ing:best.ing.map(i=>({name:i.name,txt:i.txt})),steps:best.steps}});
+  }
+  renderPlan(days,Object.values(tot).sort((a,b)=>a.name.localeCompare(b.name)).map(i=>({name:i.name,txt:fmt(i.a,i.u)})),{title:S.days+"-day plan",n:S.n},false);
+}
+function renderPlan(days,list,meta,saved){
+  $("note").textContent=saved?"":"Priority (clock) items go first, fridge items are used up day by day, proteins rotate, and anything else lands on the shopping list.";
+  $("out").innerHTML=`<article class="card"><div class="hero"><div class="ic">${I("cal")}</div><h2>${esc(meta.title)} for ${meta.n} ${meta.n>1?"people":"person"}</h2></div><div class="body">`+days.map(x=>`<details><summary>Day ${x.d} · ${x.m}: ${esc(x.g.title)}</summary><h3>${I("list")}Ingredients</h3><ul class="ing">${x.g.ing.map(i=>`<li><span>${esc(i.name)}</span><span class="q">${esc(i.txt)}</span></li>`).join("")}</ul><h3>${I("chef")}Method</h3><ol>${x.g.steps.map(s=>`<li><span>${esc(s)}</span></li>`).join("")}</ol></details>`).join("")+
+   `<h3>${I("cart")}Shopping list</h3><ul class="ing">${list.map(i=>`<li><span>${esc(i.name)}</span><span class="q">${esc(i.txt)}</span></li>`).join("")||"<li>Nothing to buy.</li>"}</ul><div class="row"><button id="sp">${I("heart")}${saved?"Saved":"Save plan"}</button><button id="cp">${I("cart")}Copy list</button></div></div></article>`;
+  $("cp").onclick=async()=>{try{await navigator.clipboard.writeText(list.map(i=>"• "+i.name+" – "+i.txt).join("\n"));$("cp").innerHTML=I("cart")+"Copied"}catch(e){}};
+  $("sp").onclick=()=>{if(saved)return;const f=store("plans2")||[];f.unshift({...meta,days,list,date:new Date().toLocaleDateString()});store("plans2",f.slice(0,15));plansUI();$("sp").innerHTML=I("heart")+"Saved"};
+}
+function plansUI(){
+  const f=store("plans2")||[];$("plans").innerHTML=f.length?`<h3>${I("cal")}Saved plans</h3>`+f.map((p,i)=>`<div class="prow"><button data-o="${i}">${I("cal")}${esc(p.title)} · ${esc(p.date)}</button><button class="d" data-x="${i}" aria-label="Delete plan">${I("x")}</button></div>`).join(""):"";
+  $("plans").querySelectorAll("[data-o]").forEach(b=>b.onclick=()=>{const p=f[+b.dataset.o];renderPlan(p.days,p.list,p,true);scrollTo({top:0,behavior:"smooth"})});
+  $("plans").querySelectorAll("[data-x]").forEach(b=>b.onclick=()=>{f.splice(+b.dataset.x,1);store("plans2",f);plansUI()});
+}
+$("plan").onclick=()=>run("plan");
 $("spin").onclick=()=>run("spin");$("build").onclick=()=>run("build");
 $("cuisine").innerHTML='<option value="">Surprise me</option>'+Object.keys(GEN.cuisines).map(c=>`<option${c===S.cuisine?" selected":""}>${c}</option>`).join("");
-draw();favs();
+draw();favs();plansUI();
 if("serviceWorker" in navigator&&location.protocol.startsWith("http"))navigator.serviceWorker.register("sw.js").catch(()=>{});
 </script>
 </body>
