@@ -175,7 +175,7 @@ G.cook=function(it,n,cuName,diet,o){
  const PA=P.filter(x=>!bp.has(x[0])),CA=C.filter(x=>!bc.has(x[0]));
  const inL=(s,k)=>(" "+s+" ").includes(" "+k+" "),inP=(s,k)=>("|"+s+"|").includes("|"+k+"|");
  const okP=(cu,x)=>!inL(G.R[cu][0],x[0]),okC=(cu,x)=>!inL(G.R[cu][1],x[0]),okV=(cu,v)=>(!G.VR[v[0]]||inP(G.VR[v[0]],cu))&&!(G.VX[v[0]]&&inP(G.VX[v[0]],cu));
- let hp=find(PA,it),hc=find(CA,it),hv=find(V,it);
+ const fx=o.fixed;let hp=fx?PA.filter(x=>fx.p.includes(x[0])):find(PA,it),hc=fx?CA.filter(x=>fx.c.includes(x[0])):find(CA,it),hv=fx?V.filter(v=>fx.v.includes(v[0])):find(V,it);
  const ug=(diet.urgent||[]).map(x=>x.toLowerCase()),isU=r=>ug.some(w=>new RegExp(r[2]).test(w)),rndU=l=>{const u=l.filter(isU);return rnd(u.length?u:l)};
  const av=nm=>{nm=nm.toLowerCase();return(basic&&G.pantry.test(nm))||it.some(w=>nm.includes(w)||w.includes(nm.split(" ")[0]))};
  const mapN=a=>{let n=a[0];if(diet.nosoy)n=n.replace("soy sauce","coconut aminos");else if(diet.gf)n=n.replace("soy sauce","tamari");
@@ -189,23 +189,23 @@ G.cook=function(it,n,cuName,diet,o){
   cuN=strict?pool.map(k=>{const x=cuOf(k);return[k,x.sauce.length+x.ar.length+x.sp.length+Math.random()*1.5]}).sort((a,b)=>b[1]-a[1])[0][0]:rnd(pool)}
  let cu=cuOf(cuN);hp=hp.filter(x=>okP(cuN,x));hc=hc.filter(x=>okC(cuN,x));hv=hv.filter(v=>okV(cuN,v));
  const rp=PA.filter(x=>x[0]!=="egg"&&okP(cuN,x)),rc=CA.filter(x=>x[0]!=="bread"&&okC(cuN,x));
- const p=hp.length?rndU(hp):strict?null:rnd(rp.length?rp:PA.filter(x=>x[0]!=="egg"));let c=hc.length?rndU(hc):strict?null:rnd(rc.length?rc:CA.filter(x=>x[0]!=="bread"));
+ const p=hp.length?rndU(hp):strict||fx?null:rnd(rp.length?rp:PA.filter(x=>x[0]!=="egg"));let c=hc.length?rndU(hc):strict||fx?null:rnd(rc.length?rc:CA.filter(x=>x[0]!=="bread"));
  // kosher: never mix meat and dairy, so a meat dish drops dairy sauces, garnishes and toppings
  if(diet.kosher&&!nd&&p&&["chicken","chickenthigh","beef","lamb","duck"].includes(p[0])){nd=true;cu=cuOf(cuN)}
  let vs=shuf(hv).sort((a,b)=>isU(b)-isU(a)).slice(0,strict?3:2);
- if(!vs.length&&!strict)vs=shuf(V.filter(v=>v[5]&&okV(cuN,v))).slice(0,2);
+ if(!vs.length&&!strict&&!fx)vs=shuf(V.filter(v=>v[5]&&okV(cuN,v))).slice(0,2);
  // clash rules: one strong brassica per dish; beetroot stains and dominates, so only onion or carrot alongside
  const BRA=["broccoli","cauliflower","cabbage","brussels","kale"];let sb=false;vs=vs.filter(v=>{if(BRA.includes(v[0])){if(sb)return false;sb=true}return true});
  if(vs.some(v=>v[0]==="beetroot"))vs=vs.filter(v=>["beetroot","onion","carrot"].includes(v[0]));
- if(!vs.length&&!strict)vs=[rnd(V.filter(v=>v[5]&&!BRA.includes(v[0])&&v[0]!=="beetroot"&&okV(cuN,v)))];
- if(strict&&(p?1:0)+(c?1:0)+vs.length<2)return null;
+ if(!vs.length&&!strict&&!fx)vs=[rnd(V.filter(v=>v[5]&&!BRA.includes(v[0])&&v[0]!=="beetroot"&&okV(cuN,v)))];
+ if((strict||fx)&&(p?1:0)+(c?1:0)+vs.length<2)return null;
  // which cooking styles make sense for these ingredients
  let root=c&&(c[0]==="potato"||c[0]==="sweet");const pk=p?p[0]:"",cookV=vs.filter(v=>v[4]),sideV=vs.filter(v=>!v[4]),vR=cookV.filter(v=>v[5]),legume=pk==="lentils"||pk==="beans";
  const pool=["bowl"];if(!legume)pool.push("pan");
  if(pk!=="tuna"&&pk!=="halloumi"&&(pk!=="egg"||EGGSIM.includes(cuN)))pool.push("pot");
  if((vR.length||root)&&!["egg","lentils","beans","tuna"].includes(pk))pool.push("tray");
  const BR=C.find(x=>x[0]==="bread");
- if(!ASIAN.includes(cuN)&&((c&&c[0]==="bread")||(!strict&&!bc.has("bread")&&okC(cuN,BR))))pool.push("wrap");
+ if(!ASIAN.includes(cuN)&&((c&&c[0]==="bread")||(!strict&&!fx&&!bc.has("bread")&&okC(cuN,BR))))pool.push("wrap");
  if(cookV.length&&!(c&&["couscous","polenta","gnocchi"].includes(c[0])))pool.push("soup");
  if(BAKEOK.includes(cuN)&&c&&["pasta","potato","sweet","gnocchi","rice"].includes(c[0])&&!DEL[pk]&&pk!=="egg"&&pk!=="halloumi")pool.push("bake");
  const tpl=rnd(pool);if(tpl==="wrap"&&(!c||c[0]!=="bread")){c=BR;root=false}
@@ -270,6 +270,36 @@ G.cook=function(it,n,cuName,diet,o){
  const used=ing.map(i=>i.name.toLowerCase()),unused=strict?it.filter(w=>!used.some(u=>u.includes(w)||w.includes(u.split(" ")[0]))):[];
  return{title:`${cuN} ${label} with ${list}`,desc:strict?`Made only from your fridge${basic?" plus pantry basics":""}. ${cuN} flavours.`:`Generated: ${cuN} flavours, ${label}. Quantities are for ${n} ${n>1?"people":"person"}.`,min:Math.round(min),ing,steps:S.filter(Boolean),unused,pk,ck:c?c[0]:""};
 };
+// ---- Remix: a new dish built from two existing recipes' ingredients, cooked by the same taste rules ----
+// Parents lend the protein / carb / veg and the cuisine flavour; G.cook then applies the cuisine, clash, timing and diet rules.
+const NOT=/stock|broth|bouillon|sauce|paste|puree|passata|powder|vinegar|wine|flour|starch|milk|cream|yogh?urt|butter(?! bean)|juice|crumb|seasoning/,NOTV=/canned|tinned|chopped|dried|seeds?|black pepper|white pepper|chilli|flakes|peppercorn|onion|shallot/,STOP=/^(ground|dried|fresh|smoked|sweet|canned|clove|powder|juice|milk|sauce|white|black|plain|seeds|flakes|paste|garlic|onion|pepper|vinegar|cream|lemon|lime|yogurt|honey|sugar)$/;
+const slotOf=name=>{const w=name.toLowerCase(),m=l=>l.filter(x=>new RegExp(x[2]).test(w));
+ if(NOT.test(w)&&!/tofu|tempeh|halloumi|paneer/.test(w))return null;
+ if(/green bean/.test(w))return["v","beans"];
+ let a=m(P);if(a.length)return["p",a[a.length-1][0]];a=m(C);if(a.length)return["c",a[0][0]];
+ if(NOTV.test(w))return null;a=m(V);return a.length?["v",a[0][0]]:null};
+const inl=(s,k)=>(" "+s+" ").includes(" "+k+" ");
+const kP=(cu,k)=>!inl(G.R[cu][0],k),kC=(cu,k)=>!inl(G.R[cu][1],k);
+// parents: [{title,names:[ingredient names]}, ...]; o: {cuisine, fridge:[items], strict, basic, small:"Breakfast"|"Snack"|"Dessert"}
+G.remix=function(parents,it,n,diet,o){
+ o=o||{};const fr=o.fridge||[],names=parents.flatMap(r=>r.names),from=parents.map(r=>"\u201c"+r.title+"\u201d").join(" and ");
+ const desc=c=>`A new dish remixed from ${from}${c?`, cooked with ${c} flavours`:""}. Quantities are for ${n} ${n>1?"people":"person"}.`;
+ if(o.small){const g=G.makeSmall(o.small,[...names.map(x=>x.toLowerCase()),...fr],n,diet);g.desc=desc();g.remix=1;g.from=from;return g}
+ const nm={},cand={p:[],c:[],v:[]},fc={p:[],c:[],v:[]},add=(L,x)=>{const s=slotOf(x);if(!s)return;if(!L[s[0]].includes(s[1]))L[s[0]].push(s[1]);if(!nm[s[0]+s[1]])nm[s[0]+s[1]]=x.toLowerCase()};
+ fr.forEach(x=>add(fc,x));names.forEach(x=>add(cand,x));
+ const use={},K=["p","c","v"];
+ K.forEach(k=>use[k]=fc[k].length&&Math.random()<.6?fc[k]:[...new Set([...fc[k],...cand[k]])]);
+ // "only what I have": slots come from the fridge; parents only fill in when the fridge covers fewer than two slots
+ if(o.strict){const cov=K.filter(k=>fc[k].length).length;K.forEach(k=>use[k]=fc[k].length?fc[k]:cov<2?cand[k]:[])}
+ const all=Object.keys(G.cuisines),good=all.filter(k=>(!use.p.length||use.p.some(x=>kP(k,x)))&&(!use.c.length||use.c.some(x=>kC(k,x)))),pool=good.length?good:all;
+ // cuisine = the one whose spices/sauces best match the parents (rare tokens count more), plus a little luck
+ const T={},cnt={};all.forEach(k=>{const c=G.cuisines[k];T[k]=[...new Set([...c.ar,...c.sp,...c.sauce].flatMap(a=>a[0].toLowerCase().split(/[ ()]+/)).filter(t=>t.length>3&&!STOP.test(t)))];T[k].forEach(t=>cnt[t]=(cnt[t]||0)+1)});
+ const txt=" "+parents.map(r=>r.title+" "+r.names.join(" ")).join(" ").toLowerCase().replace(/[^a-z]+/g," ")+" ";
+ const sc=k=>T[k].reduce((s,t)=>s+(txt.includes(" "+t.replace(/(es|s)$/,""))?1/cnt[t]:0),0)+(parents.some(r=>r.title.toLowerCase().includes(k.toLowerCase()))?3:0)+Math.random()*1.2;
+ const cu=G.cuisines[o.cuisine]?o.cuisine:pool.map(k=>[k,sc(k)]).sort((a,b)=>b[1]-a[1])[0][0];
+ const g=G.cook([...Object.values(nm),...fr],n,cu,diet,{fixed:use,strict:o.strict,basic:o.basic});
+ if(!g)return null;
+ g.title=g.title.replace(/ \((dry|drained)\)/g,"").replace(/canned /g,"");g.desc=desc(cu);g.remix=1;g.from=from;g.unused=(g.unused||[]).filter(x=>fr.includes(x));return g};
 G.make=(it,n,cu,d)=>G.cook(it,n,cu,d,{});
 G.makeFridge=(it,n,cu,d,basic)=>G.cook(it,n,cu,d,{strict:1,basic});
 })();
