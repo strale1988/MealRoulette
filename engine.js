@@ -47,7 +47,7 @@ const P=[
 ["egg","eggs","\\beggs?\\b",2,3,"until just set","pcs",0],
 ["chickpeas","canned chickpeas (drained)","chickpea",120,5,"until lightly crisp","g",20],
 ["lentils","canned lentils (drained)","lentil",120,5,"until heated through","g",20],
-["beans","canned beans (drained)","bean",120,5,"until heated through","g",20],
+["beans","canned beans (drained)","^(?!.*green bean).*bean",120,5,"until heated through","g",20],
 ["sausage","sausages","sausage|chorizo",120,10,"until browned and cooked through (71 °C)","g",30],
 ["chickenthigh","chicken thighs","thigh|drumstick",180,9,"until golden and 74 °C inside","g",35],
 ["duck","duck breast","duck",140,8,"until golden (74 °C inside)","g",25],
@@ -72,7 +72,7 @@ const V=[
 ["zucchini","zucchini","zucchini|courgette",150,5,20,0],["aubergine","aubergine","aubergine|eggplant",150,8,25,0],
 ["carrot","carrots","carrot",150,8,30,1],["mushroom","mushrooms","mushroom",150,6,20,0],
 ["onion","onions","onion",100,6,25,0],["cabbage","cabbage","cabbage",150,6,0,1],
-["peas","peas","peas",100,3,0,0],["beans","green beans","green bean",120,6,20,0],
+["peas","peas","^(?!.*chick).*peas",100,3,0,0],["beans","green beans","green bean",120,6,20,0],
 ["asparagus","asparagus","asparagus",120,4,12,0],["corn","sweetcorn","corn",100,4,0,0],
 ["pumpkin","pumpkin","pumpkin|squash|butternut",200,10,30,0],["leek","leek","leek",100,6,0,0],
 ["cucumber","cucumber","cucumber",150,0,0,1],["lettuce","lettuce","lettuce|salad",80,0,0,1],
@@ -144,7 +144,7 @@ const NUT=[["oat milk|plant milk",45,1],["vinegar|mirin|soy|tamari|aminos|stock|
 G.nutri=function(ing,n){let k=0,p=0;ing.forEach(i=>{const e=NUT.find(x=>new RegExp(x[0]).test(i.name.toLowerCase()));if(!e||i.a==null)return;const g=i.u==="pcs"?i.a*(e[3]||80):i.a;k+=g*e[1]/100;p+=g*e[2]/100});return{kcal:Math.round(k/n/10)*10,p:Math.round(p/n)}};
 
 // ---- "Only what I have": builds from fridge items + optional pantry basics, never invents ingredients ----
-G.pantry=/^salt$|black pepper|white pepper|oil|butter|garlic|^onions?$|^water|sugar|honey|maple|flour|vinegar|soy sauce|tamari|aminos|cinnamon|cumin|paprika|oregano|thyme|turmeric|garam|curry powder|chilli|allspice|caraway|marjoram|bay leaf|ground|dried|baking powder|sumac|vanilla|stock|mustard|cocoa/;
+G.pantry=/^salt$|black pepper|white pepper|oil|butter|garlic|^onions?$|^water|sugar|honey|maple|flour|vinegar|soy sauce|tamari|aminos|cinnamon|cumin|paprika|oregano|thyme|turmeric|garam|curry powder|chilli|allspice|caraway|marjoram|bay leaf|ground|dried|baking (powder|soda)|bicarb|sumac|vanilla|stock|mustard|cocoa/;
 const EX=[["feta|cheese|parmesan|cheddar|mozzarella","cheese",25,"g","Crumble or grate the cheese over the top.","dairy"],["\\bolives?\\b(?! oil)","olives",20,"g","Scatter the olives over the top.",""],["walnut|almond|peanut|cashew|seeds?","nuts or seeds",15,"g","Sprinkle with the nuts or seeds.","nuts"],["avocado","avocado",.5,"pcs","Slice the avocado on top.",""],["yogurt|sour cream","yogurt",50,"g","Serve with a spoon of yogurt.","dairy"],["lemon|lime","lemon juice",10,"ml","Finish with a squeeze of lemon.",""]];
 
 // ---- taste rules (researched: USDA safe temperatures; spice blooming; veg cooked together need similar times) ----
@@ -201,7 +201,7 @@ G.cook=function(it,n,cuName,diet,o){
  if((strict||fx)&&(p?1:0)+(c?1:0)+vs.length<2)return null;
  // which cooking styles make sense for these ingredients
  let root=c&&(c[0]==="potato"||c[0]==="sweet");const pk=p?p[0]:"",cookV=vs.filter(v=>v[4]),sideV=vs.filter(v=>!v[4]),vR=cookV.filter(v=>v[5]),legume=pk==="lentils"||pk==="beans";
- const pool=["bowl"];if(!legume)pool.push("pan");
+ const isL=["chickpeas","lentils","beans"].includes(pk);const pool=["bowl"];if(!legume)pool.push("pan");
  if(pk!=="tuna"&&pk!=="halloumi"&&(pk!=="egg"||EGGSIM.includes(cuN)))pool.push("pot");
  if((vR.length||root)&&!["egg","lentils","beans","tuna"].includes(pk))pool.push("tray");
  const BR=C.find(x=>x[0]==="bread");
@@ -209,7 +209,7 @@ G.cook=function(it,n,cuName,diet,o){
  if(cookV.length&&!(c&&["couscous","polenta","gnocchi"].includes(c[0])))pool.push("soup");
  if(BAKEOK.includes(cuN)&&c&&["pasta","potato","sweet","gnocchi","rice"].includes(c[0])&&!DEL[pk]&&pk!=="egg"&&pk!=="halloumi")pool.push("bake");
  const tpl=rnd(pool);if(tpl==="wrap"&&(!c||c[0]!=="bread")){c=BR;root=false}
- const tn=(x,d)=>it.find(w=>new RegExp(x).test(w))||d,pn=p&&tn(p[2],p[1]),cb=c&&tn(c[2],c[1]),vn=vs.map(v=>tn(v[2],v[1])),vnOf=v=>vn[vs.indexOf(v)];
+ const tn=(x,d)=>it.find(w=>new RegExp(x).test(w))||d,pn=p&&(["chickpeas","lentils","beans","tuna"].includes(pk)?(tn(p[2],"")?(/canned|tinned|cooked/.test(tn(p[2],""))?tn(p[2],""):"canned "+tn(p[2],"")):p[1].replace(/ \(drained\)/,"")):tn(p[2],p[1])),cb=c&&tn(c[2],c[1]),vn=vs.map(v=>tn(v[2],v[1])),vnOf=v=>vn[vs.indexOf(v)];
  const sauc=tpl==="bowl"?cu.sauce.filter(a=>!/tomato/.test(a[0])):tpl==="tray"?cu.sauce.filter(a=>/yogurt|cream|lemon|lime|mustard|vinegar/.test(a[0])):tpl==="wrap"?cu.sauce.filter(a=>/yogurt|cream|lemon|lime|mustard|vinegar|ajvar/.test(a[0])):tpl==="bake"?cu.sauce.filter(a=>!/lemon|lime|vinegar|soy|tamari|aminos|mirin|sugar|honey/.test(a[0])):cu.sauce;
  const ex=strict?EX.filter(e=>it.some(w=>new RegExp(e[0]).test(w))&&!(e[5]==="dairy"&&nd)&&!(e[5]==="nuts"&&diet.nuts)):[];
  const ing=[],A=(name,a,u,h)=>{if(!ing.some(i=>i.name===name))ing.push({name,a,u,txt:fmt(a,u),have:strict||h!==false})};
@@ -225,48 +225,48 @@ G.cook=function(it,n,cuName,diet,o){
  if(tpl==="pan"){label=asian?"stir-fry":"skillet";
   const bloom=[ar&&ar+" (finely chopped)",sp&&"the "+sp].filter(Boolean).join(" with "),oil=`Heat ${o2} ${cu.fat} in a wide pan over medium-high heat${bloom?` and fry the ${bloom} for 1 minute${sp?" to bloom the spices":""}`:""}.`;
   const vsteps=cookV.slice().sort((a,b)=>b[4]-a[4]).map(v=>`Add the ${vnOf(v)} (sliced) and cook ${v[4]} minutes${asian?", stirring":""}.`);
-  const pc=!p?null:pk==="egg"?(cookV.length?"Push the vegetables aside, pour in the beaten eggs (with a pinch of salt) and scramble 2–3 minutes, then mix together.":"Beat the eggs with a pinch of salt and scramble over medium heat for 2–3 minutes."):del&&cookV.length?`Push the vegetables aside, add the ${pn} and cook ${p[4]} minutes, turning gently, ${p[5]}.`:`Pat the ${pn} dry and add it in bite-size pieces to the hot pan in a single layer (in batches if needed). Cook ${p[4]} minutes, turning, ${p[5]}.`;
+  const pc=!p?null:pk==="egg"?(cookV.length?"Push the vegetables aside, pour in the beaten eggs (with a pinch of salt) and scramble 2–3 minutes, then mix together.":"Beat the eggs with a pinch of salt and scramble over medium heat for 2–3 minutes."):del&&cookV.length?`Push the vegetables aside, add the ${pn} and cook ${p[4]} minutes, turning gently, ${p[5]}.`:isL?`Drain, rinse and pat the ${pn} dry, then add to the hot pan in a single layer. Cook ${p[4]} minutes, turning, ${p[5]}.`:`Pat the ${pn} dry and add it in bite-size pieces to the hot pan in a single layer (in batches if needed). Cook ${p[4]} minutes, turning, ${p[5]}.`;
   S.push(c&&carbCook(c,n),oil,...(late?[...vsteps,pc]:[pc,...vsteps]),sau&&`Add the ${sau} and toss for 1–2 minutes until glossy.`,"Season with salt and pepper.",...fin,serve,...side);
   min=10+Math.max(c?c[5]:0,(p?p[4]:0)+cookV.reduce((t,v)=>t+v[4],0));
  }else if(tpl==="tray"){label="traybake";const items=[];p&&p[7]&&items.push({name:pn,m:p[7]});cookV.forEach(v=>items.push({name:vnOf(v),m:v[5]||5}));
   if(root)items.push({name:cb,m:c[0]==="potato"?35:30});else if(c)S.push(carbCook(c,n));
   items.sort((a,b)=>b.m-a.m);const T=items[0].m;min=T+15;
-  S.push(`Heat the oven to 200 °C. Chop everything into similar-sized pieces and toss with ${o2} ${cu.fat}${sp?`, the ${sp}`:""}${ar?`, the ${ar}`:""} and salt. Use a large tray so nothing is crowded.`,
+  S.push(isL&&`Drain, rinse and pat the ${pn} dry.`,`Heat the oven to 200 °C. Chop everything into similar-sized pieces and toss with ${o2} ${cu.fat}${sp?`, the ${sp}`:""}${ar?`, the ${ar}`:""} and salt. Use a large tray so nothing is crowded.`,
    `Spread the ${items.filter(x=>x.m===T).map(x=>x.name).join(" and ")} on the tray and roast for ${T} minutes.`);
   items.filter(x=>x.m<T).forEach(x=>S.push(`After ${T-x.m} minutes, add the ${x.name} to the tray.`));
   S.push(p&&`Check the ${pn} is cooked ${p[5]}.`,p&&["pork","lamb","duck","chicken","chickenthigh","beef"].includes(pk)&&"Rest the meat for 3–5 minutes before serving.",sau&&`Drizzle with the ${sau}.`,...fin,c&&!root?serve:"Serve hot.",...side);
  }else if(tpl==="pot"){label=["Indian","Thai","Indonesian","Caribbean"].includes(cuN)?"curry":"stew";A("water",200*n,"ml",true);min=40;
   const hard=cookV.filter(v=>v[4]>3),soft=cookV.filter(v=>v[4]<=3);
   S.push(c&&carbCook(c,n),`Heat ${o2} ${cu.fat} in a wide pot over medium heat${ar?` and fry the ${ar} (finely chopped) for 5 minutes until soft`:""}.`,sp&&`Stir in the ${sp} for 1 minute.`,
-   p&&!late&&`Add the ${pn}, cut into chunks, and brown for ${Math.min(p[4],5)} minutes.`,
-   `Add ${sau?`the ${sau}, `:""}${fmt(200*n,"ml")} water (or stock)${hard.length?` and the ${hard.map(vnOf).join(" and ")}`:""}. Bring to the boil, then simmer gently for ${del?15:20} minutes.`,
+   p&&!late&&!isL&&`Add the ${pn}, cut into chunks, and brown for ${Math.min(p[4],5)} minutes.`,
+   `Add ${sau?`the ${sau}, `:""}${fmt(200*n,"ml")} water (or stock)${hard.length?` and the ${hard.map(vnOf).join(" and ")}`:""}${isL?` and the drained, rinsed ${pn}`:""}. Bring to the boil, then simmer gently for ${del?15:20} minutes.`,
    soft.length&&`Stir in the ${soft.map(vnOf).join(" and ")} and cook 3 more minutes.`,
-   p&&(pk==="egg"?"Make wells, crack in the eggs, cover and cook 6–8 minutes until set.":del?`Add the ${pn} and simmer ${del} more minutes ${p[5]}.`:`Check the ${pn} is cooked ${p[5]}.`),"Season with salt and pepper.",...fin,serve,...side);
+   p&&!isL&&(pk==="egg"?"Make wells, crack in the eggs, cover and cook 6–8 minutes until set.":del?`Add the ${pn} and simmer ${del} more minutes ${p[5]}.`:`Check the ${pn} is cooked ${p[5]}.`),"Season with salt and pepper.",...fin,serve,...side);
  }else if(tpl==="wrap"){label="wrap";const raw=vs.filter(v=>v[6]),hot=vs.filter(v=>!v[6]);min=15+(p?p[4]:0)+hot.reduce((t,v)=>t+v[4],0);
-  S.push(p&&(pk==="egg"?"Beat the eggs with a pinch of salt and scramble over medium heat for 2–3 minutes.":pk==="tuna"?`Drain and flake the ${pn}.`:`Cut the ${pn} into strips, toss with ${sp?`the ${sp}`:"a pinch of salt"}, then fry in ${o2} ${cu.fat} over medium-high heat for ${p[4]} minutes, turning, ${p[5]}.`),
+  S.push(p&&(pk==="egg"?"Beat the eggs with a pinch of salt and scramble over medium heat for 2–3 minutes.":pk==="tuna"?`Drain and flake the ${pn}.`:isL?`Drain and rinse the ${pn}, then warm in ${o2} ${cu.fat} with ${sp?`the ${sp}`:"a pinch of salt"} for ${p[4]} minutes.`:`Cut the ${pn} into strips, toss with ${sp?`the ${sp}`:"a pinch of salt"}, then fry in ${o2} ${cu.fat} over medium-high heat for ${p[4]} minutes, turning, ${p[5]}.`),
    ...hot.map(v=>`Fry the ${vnOf(v)} in the same pan for ${v[4]} minutes.`),raw.length&&`Slice the ${raw.map(vnOf).join(" and ")} thinly.`,sau&&`Stir the ${sau} together into a quick sauce.`,
    carbCook(c,n),`Fill the warm ${cb} with the ${[pn,...vn].filter(Boolean).join(", ")}${sau?" and the sauce":""}, then fold or roll.`,...fin,...side);
  }else if(tpl==="soup"){label="soup";A("water",300*n,"ml",true);min=40;
   const lateS=sauc.filter(a=>/yogurt|cream|lemon|lime|vinegar|mustard/.test(a[0])),earlyS=sauc.filter(a=>!lateS.includes(a)),inC=c&&["rice","pasta","noodles","potato","sweet","barley","bulgur","quinoa"].includes(c[0]);
   const hardS=cookV.filter(v=>v[4]>3),softS=cookV.filter(v=>v[4]<=3),inStart=inC&&(root||c[0]==="barley"),T=del?15:c&&c[0]==="barley"?25:20,blend=!p&&cookV.length>1;
   S.push(`Heat ${o2} ${cu.fat} in a large pot over medium heat${ar?` and fry the ${ar} (finely chopped) for 5 minutes until soft`:""}.`,sp&&`Stir in the ${sp} for 1 minute.`,
-   p&&!late&&!legume&&`Add the ${pn}, cut into chunks, and brown for ${Math.min(p[4],5)} minutes.`,
-   `Add ${earlyS.length?`the ${J(earlyS)}, `:""}${fmt(300*n,"ml")} water (or stock)${hardS.length?` and the ${hardS.map(vnOf).join(" and ")}`:""}${legume?` and the ${pn}`:""}${inStart?` and the ${cb}`:""}. Bring to the boil, then simmer gently for ${T} minutes.`,
+   p&&!late&&!isL&&`Add the ${pn}, cut into chunks, and brown for ${Math.min(p[4],5)} minutes.`,
+   `Add ${earlyS.length?`the ${J(earlyS)}, `:""}${fmt(300*n,"ml")} water (or stock)${hardS.length?` and the ${hardS.map(vnOf).join(" and ")}`:""}${isL?` and the drained, rinsed ${pn}`:""}${inStart?` and the ${cb}`:""}. Bring to the boil, then simmer gently for ${T} minutes.`,
    inC&&!inStart&&`For the last ${c[5]} minutes of simmering, add the ${cb}.`,softS.length&&`Stir in the ${softS.map(vnOf).join(" and ")} and cook 3 more minutes.`,
-   p&&!legume&&(pk==="egg"?"Beat the eggs and stream into the simmering soup, stirring, for 1–2 minutes.":del?`Add the ${pn} and simmer ${del} more minutes ${p[5]}.`:`Check the ${pn} is cooked ${p[5]}.`),
+   p&&!isL&&(pk==="egg"?"Beat the eggs and stream into the simmering soup, stirring, for 1–2 minutes.":del?`Add the ${pn} and simmer ${del} more minutes ${p[5]}.`:`Check the ${pn} is cooked ${p[5]}.`),
    blend&&"Blend the soup until smooth.",lateS.length&&`Stir in the ${J(lateS)} off the heat.`,"Season with salt and pepper.",c&&!inC&&carbCook(c,n),...fin,c&&!inC?`Serve with the ${cb} on the side.`:"Serve hot.",...side);
  }else if(tpl==="bake"){label=["pasta","gnocchi"].includes(c[0])?"pasta bake":c[0]==="rice"?"rice bake":"gratin";min=55;A("water",100*n,"ml",true);
   const topS=strict?(ex.some(e=>e[1]==="cheese")?"Scatter the cheese over the top.":""):(nd?"":(A("cheese",25*n,"g",false),"Scatter the cheese over the top."));
   const cookC=c[0]==="pasta"?`Boil the pasta in well-salted water for ${Math.max(c[5]-2,5)} minutes (it finishes cooking in the oven), then drain.`:root?"Slice the potatoes thinly and boil for 6 minutes until just tender, then drain.":carbCook(c,n);
   S.push("Heat the oven to 200 °C.",cookC,`Heat ${o2} ${cu.fat} in a wide pan over medium heat${ar?` and fry the ${ar} (finely chopped) for 5 minutes`:""}.`,sp&&`Stir in the ${sp} for 1 minute.`,
-   p&&`Add the ${pn}, cut into small pieces, and cook ${p[4]} minutes until browned.`,cookV.length&&`Add the ${cookV.map(vnOf).join(" and ")} and cook ${Math.max(...cookV.map(v=>v[4]))} minutes.`,
+   p&&(isL?`Drain and rinse the ${pn} and stir it in.`:`Add the ${pn}, cut into small pieces, and cook ${p[4]} minutes until browned.`),cookV.length&&`Add the ${cookV.map(vnOf).join(" and ")} and cook ${Math.max(...cookV.map(v=>v[4]))} minutes.`,
    `Stir in ${sau?`the ${sau} and `:""}${fmt(100*n,"ml")} water and simmer 5 minutes. Mix with the ${cb} and tip into a baking dish.`,topS,"Bake 20–25 minutes until bubbling and golden, then rest 5 minutes.",...fin.filter(x=>!/cheese/.test(x)),...side);
  }else{label="bowl";const raw=vs.filter(v=>v[6]),hot=vs.filter(v=>!v[6]);min=15+Math.max(c?c[5]:0,p?p[4]:0);
-  S.push(c&&carbCook(c,n),p&&(pk==="egg"?"Boil the eggs for 9 minutes until the yolks are firm, cool in cold water, peel and halve.":`Rub the ${pn} with ${sp?`the ${sp}`:"a pinch of salt"}, then fry in ${o2} ${cu.fat} over medium-high heat for ${p[4]} minutes, turning, ${p[5]}.`),
+  S.push(c&&carbCook(c,n),p&&(pk==="egg"?"Boil the eggs for 9 minutes until the yolks are firm, cool in cold water, peel and halve.":pk==="tuna"?`Drain and flake the ${pn}.`:isL?`Drain and rinse the ${pn}, then warm in ${o2} ${cu.fat} with ${sp?`the ${sp}`:"a pinch of salt"} for ${p[4]} minutes ${p[5]}.`:`Rub the ${pn} with ${sp?`the ${sp}`:"a pinch of salt"}, then fry in ${o2} ${cu.fat} over medium-high heat for ${p[4]} minutes, turning, ${p[5]}.`),
    ...hot.map(v=>`Cook the ${vnOf(v)} in a little oil in a pan for ${v[4]} minutes.`),raw.length&&`Slice the ${raw.map(vnOf).join(" and ")} thinly.`,
    `Whisk ${o2} ${cu.fat}${lem?", the lemon juice":""}${sau?`, the ${sau}`:""} and a pinch of salt into a dressing.`,
    `Build the bowl with ${[cb,pn,...vn].filter(Boolean).join(", ")} and pour over the dressing.`,...fin);}
- const parts=[pn,cb,...vn].filter(Boolean),list=parts.length>1?parts.slice(0,-1).join(", ")+" & "+parts[parts.length-1]:parts[0];
+ const parts=[pn,cb,...vn].filter(Boolean).map(x=>x.replace(/^canned /,"").replace(/ \((dry|drained)\)/g,"")),list=parts.length>1?parts.slice(0,-1).join(", ")+" & "+parts[parts.length-1]:parts[0];
  const used=ing.map(i=>i.name.toLowerCase()),unused=strict?it.filter(w=>!used.some(u=>u.includes(w)||w.includes(u.split(" ")[0]))):[];
  return{title:`${cuN} ${label} with ${list}`,desc:strict?`Made only from your fridge${basic?" plus pantry basics":""}. ${cuN} flavours.`:`Generated: ${cuN} flavours, ${label}. Quantities are for ${n} ${n>1?"people":"person"}.`,min:Math.round(min),ing,steps:S.filter(Boolean),unused,pk,ck:c?c[0]:""};
 };
@@ -286,7 +286,7 @@ G.remix=function(parents,it,n,diet,o){
  const desc=c=>`A new dish remixed from ${from}${c?`, cooked with ${c} flavours`:""}. Quantities are for ${n} ${n>1?"people":"person"}.`;
  if(o.small){const g=G.makeSmall(o.small,[...names.map(x=>x.toLowerCase()),...fr],n,diet);g.desc=desc();g.remix=1;g.from=from;return g}
  const nm={},cand={p:[],c:[],v:[]},fc={p:[],c:[],v:[]},add=(L,x)=>{const s=slotOf(x);if(!s)return;if(!L[s[0]].includes(s[1]))L[s[0]].push(s[1]);if(!nm[s[0]+s[1]])nm[s[0]+s[1]]=x.toLowerCase()};
- fr.forEach(x=>add(fc,x));names.forEach(x=>add(cand,x));
+ fr.forEach(x=>add(fc,x));parents.forEach(r=>r.slots?r.slots.forEach(s=>{if(!cand[s[0]].includes(s[1]))cand[s[0]].push(s[1])}):r.names.forEach(x=>add(cand,x)));
  const use={},K=["p","c","v"];
  K.forEach(k=>use[k]=fc[k].length&&Math.random()<.6?fc[k]:[...new Set([...fc[k],...cand[k]])]);
  // "only what I have": slots come from the fridge; parents only fill in when the fridge covers fewer than two slots
@@ -295,7 +295,7 @@ G.remix=function(parents,it,n,diet,o){
  // cuisine = the one whose spices/sauces best match the parents (rare tokens count more), plus a little luck
  const T={},cnt={};all.forEach(k=>{const c=G.cuisines[k];T[k]=[...new Set([...c.ar,...c.sp,...c.sauce].flatMap(a=>a[0].toLowerCase().split(/[ ()]+/)).filter(t=>t.length>3&&!STOP.test(t)))];T[k].forEach(t=>cnt[t]=(cnt[t]||0)+1)});
  const txt=" "+parents.map(r=>r.title+" "+r.names.join(" ")).join(" ").toLowerCase().replace(/[^a-z]+/g," ")+" ";
- const sc=k=>T[k].reduce((s,t)=>s+(txt.includes(" "+t.replace(/(es|s)$/,""))?1/cnt[t]:0),0)+(parents.some(r=>r.title.toLowerCase().includes(k.toLowerCase()))?3:0)+Math.random()*1.2;
+ const sc=k=>T[k].reduce((s,t)=>s+(txt.includes(" "+t.replace(/(es|s)$/,""))?1/cnt[t]:0),0)+(parents.some(r=>r.cuisine===k||r.title.toLowerCase().includes(k.toLowerCase()))?3:0)+Math.random()*1.2;
  const cu=G.cuisines[o.cuisine]?o.cuisine:pool.map(k=>[k,sc(k)]).sort((a,b)=>b[1]-a[1])[0][0];
  const g=G.cook([...Object.values(nm),...fr],n,cu,diet,{fixed:use,strict:o.strict,basic:o.basic});
  if(!g)return null;

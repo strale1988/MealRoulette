@@ -29,7 +29,7 @@ main{max-width:1240px;margin:0 auto;padding:18px 16px 60px}
 .tabs button[aria-selected=true]{background:var(--acc);color:#fff}
 
 /* ---- layout ---- */
-.tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .tile{display:flex;flex-direction:column;align-items:center;gap:4px;padding:12px 4px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:14px;font-size:13px;cursor:pointer}
 .tile .i{font-size:24px}
 .tile:hover{border-color:var(--acc)}
@@ -148,6 +148,7 @@ details .row button{flex:none}
 <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
 <symbol id="i-ice" viewBox="0 0 24 24"><path d="m7 11 5 11 5-11"/><path d="M5.5 11a3.5 3.5 0 1 1 3.1-5.1 4 4 0 0 1 6.8 0A3.5 3.5 0 1 1 18.5 11z"/></symbol>
 <symbol id="i-dice" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8.5 8.5h.01M15.5 8.5h.01M12 12h.01M8.5 15.5h.01M15.5 15.5h.01"/></symbol>
+<symbol id="i-cupcake" viewBox="0 0 24 24"><path d="M5.5 12h13l-1.4 8H6.9z"/><path d="M6 12a3.5 3.5 0 0 1 2.2-5.6 4 4 0 0 1 7.6 0A3.5 3.5 0 0 1 18 12"/></symbol>
 <symbol id="i-fridge" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M5 10h14M9 6v1M9 13v3"/></symbol>
 <symbol id="i-chef" viewBox="0 0 24 24"><path d="M6 13.9A4 4 0 0 1 7 6a5 5 0 0 1 9.5-1A4 4 0 0 1 18 13.9V21H6zM6 17h12"/></symbol>
 <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.8-8 11-8 11z"/></symbol>
@@ -218,7 +219,7 @@ details .row button{flex:none}
     <div><div class="lab"><svg class="i"><use href="#i-users"/></svg>People</div><div class="step"><button id="minus2" aria-label="Fewer people"><svg class="i"><use href="#i-minus"/></svg></button><b id="pn2">2</b><button id="plus2" aria-label="More people"><svg class="i"><use href="#i-plus"/></svg></button></div></div>
    </div>
    <div class="lab"><svg class="i"><use href="#i-chef"/></svg>Meals to plan</div><div class="tg" id="pm"></div>
-   <div class="lab"><svg class="i"><use href="#i-globe"/></svg>Cuisine (lunch, dinner)</div><select id="cuisine2" aria-label="Cuisine for plan"></select>
+   <div class="lab"><svg class="i"><use href="#i-globe"/></svg>Cuisine (big plates)</div><select id="cuisine2" aria-label="Cuisine for plan"></select>
    <div class="btns act"><button id="plan"><svg class="i"><use href="#i-cal"/></svg>Plan my days</button><button id="planremix"><svg class="i"><use href="#i-wand"/></svg>Remix plan</button></div>
    <p class="hint2">Plan uses generated meals. Remix plan builds every meal as a new remix of two saved recipes.</p>
   </section>
@@ -253,21 +254,28 @@ details .row button{flex:none}
 </div>
 <footer>© <span id="yr">2026</span> Strahinja Drazic. All rights reserved.</footer>
 </main>
-<script src="recipes.js"></script>
-<script src="recipes-extra.js"></script>
+<script src="kitchen.js"></script>
+<script src="ingredients.js"></script>
+<script src="cookbook-light.js"></script>
+<script src="cookbook-big.js"></script>
 <script src="engine.js"></script>
 <script>
-const D=window.MEAL_DATA,R=D.rules,$=id=>document.getElementById(id);
-const MEALS=[["Breakfast","sunrise"],["Snack","cookie"],["Lunch","sun"],["Dinner","moon"],["Dessert","ice"]];
+const K=window.KITCHEN,$=id=>document.getElementById(id);
+const MEALS=[["Breakfast","sunrise","Morning"],["Snack","cookie","Bite"],["Main","sun","Big plate"],["Dessert","cupcake","Treat"]];
+const normM=m=>m==="Lunch"||m==="Dinner"?"Main":m,isMain=m=>normM(m)==="Main",ML=m=>(MEALS.find(x=>x[0]===normM(m))||[])[2]||m;
+/* ---- grams everywhere: ml amounts become grams using a density for the ingredient ---- */
+const DENS=[[/\boil\b/,.92],[/honey|syrup|molasses/,1.4],[/flour|cornflour|starch/,.55],[/baking powder|baking soda|bicarb/,.9],[/sugar/,.85],[/cocoa/,.45],[/\bsalt\b/,1.2],[/\boats?\b/,.4],[/cumin|paprika|turmeric|cinnamon|garam|oregano|thyme|pepper|spice/,.45]];
+const dens=n=>(DENS.find(d=>d[0].test(String(n).toLowerCase()))||[0,1])[1];
+const Q=i=>(S.units!=="us"&&i.u==="ml"&&typeof i.a==="number")?fmt(i.a*dens(i.name),"g"):cv(i.txt);
 const DIETS=[["veg","Vegetarian","leaf"],["vegan","Vegan","leaf"],["gf","Gluten-free","wheat"],["dairy","Dairy-free","ban"],["nuts","Nut-free","ban"],["noegg","Egg-free","ban"],["nofish","Fish-free","ban"],["nosoy","Soy-free","ban"],["halal","Halal","check"],["kosher","Kosher","check"],["pesc","Pescatarian","leaf"],["nopork","Pork-free","ban"],["noshell","Shellfish-free","ban"]];
-const kmix=r=>{const t=r.ing.map(g=>g[2]).join("|").replace(/coconut milk|peanut butter/g,"");return /chicken|beef|lamb|duck|mince|thigh|steak/.test(t)&&/milk|yogurt|butter|feta|parmesan|cream|cheese|cheddar|mozzarella|paneer|halloumi/.test(t)};
 const QUICK=["chicken","eggs","rice","tomato","spinach","salmon","potato","mushroom","tofu","pasta"];
 const I=n=>`<svg class="i"><use href="#i-${n}"/></svg>`;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const rnd=a=>a[Math.floor(Math.random()*a.length)],cap=s=>s[0].toUpperCase()+s.slice(1);
 const store=(k,v)=>{try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||"null");localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}};
-const S=Object.assign({meal:"Dinner",n:2,pantry:[],diet:{},cuisine:"",strict:true,basic:true,days:5,pm:{Dinner:true},urgent:[],quick:false,staples:[],units:"metric",temp:"C"},store("mr2")||{});
+const S=Object.assign({meal:"Main",n:2,pantry:[],diet:{},cuisine:"",strict:true,basic:true,days:5,pm:{Main:true},urgent:[],quick:false,staples:[],units:"metric",temp:"C"},store("mr2")||{});
 if(!Array.isArray(S.staples))S.staples=[];
+S.meal=normM(S.meal)||"Main";S.pm=Object.assign({},S.pm);if(S.pm.Lunch||S.pm.Dinner)S.pm.Main=true;delete S.pm.Lunch;delete S.pm.Dinner;
 const SQUICK=["rice","pasta","eggs","flour","canned tomatoes","milk","butter","onion","potatoes","olive oil","sugar","bread"];
 const save=()=>store("mr2",S),dietP=x=>({...S.diet,urgent:S.urgent,...x});
 
@@ -298,6 +306,7 @@ function cv(t){
     t=t.replace(/(\d+(?:\.\d+)?)\s?(kg|g|ml|l|cm)\b/g,(m,n,u)=>{n=+n;return u==="kg"?fmtUS(n*1000,"g"):u==="g"?fmtUS(n,"g"):u==="ml"?fmtUS(n,"ml"):u==="l"?fmtUS(n*1000,"ml"):frac(Math.round(n/2.54*4)/4)+" in"});
     t=t.replace(/(\d+(?:\.\d+)?) litres?/g,(m,n)=>frac(Math.round(n*1.0567*4)/4)+" qt").replace(/per litre/g,"per quart");
   }
+  if(S.units!=="us")t=t.replace(/(\d+(?:\.\d+)?) ml\b/g,(m,n)=>fmt(+n,"g")).replace(/(\d+(?:\.\d+)?) l\b/g,(m,n)=>fmt(+n*1000,"g"));
   if(S.temp==="F")t=t.replace(/(\d+)\s?°C/g,(m,c)=>Math.round((c*9/5+32)/5)*5+" °F");
   return t;
 }
@@ -310,8 +319,8 @@ document.querySelectorAll("#tabs button").forEach(b=>b.onclick=()=>setTab(b.data
 
 /* ---------- controls ---------- */
 function draw(){
-  $("meals").innerHTML=MEALS.map(m=>`<button class="tile" data-m="${m[0]}" aria-pressed="${S.meal===m[0]}">${I(m[1])}${m[0]}</button>`).join("");
-  $("meals").querySelectorAll("button").forEach(b=>b.onclick=()=>{S.meal=b.dataset.m;seen=[];save();draw()});
+  $("meals").innerHTML=MEALS.map(m=>`<button class="tile" data-m="${m[0]}" aria-pressed="${S.meal===m[0]}">${I(m[1])}${m[2]||m[0]}</button>`).join("");
+  $("meals").querySelectorAll("button").forEach(b=>b.onclick=()=>{S.meal=b.dataset.m;save();draw()});
   $("tags").querySelectorAll(".tag").forEach(t=>t.remove());
   S.pantry.forEach((p,i)=>$("tags").insertBefore(Object.assign(document.createElement("span"),{className:"tag"+(S.urgent.includes(p)?" urg":""),innerHTML:`${esc(p)}<button class="u" aria-label="Use ${esc(p)} first" aria-pressed="${S.urgent.includes(p)}" data-p="${esc(p)}">${I("clock")}</button><button class="r" aria-label="Remove ${esc(p)}" data-i="${i}">${I("x")}</button>`}),$("add")));
   $("tags").querySelectorAll(".tag button.r").forEach(b=>b.onclick=()=>{const p=S.pantry.splice(+b.dataset.i,1)[0];S.urgent=S.urgent.filter(x=>x!==p);save();draw()});
@@ -330,13 +339,13 @@ function draw(){
   document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>setTab(b.dataset.go));
   $("mode").innerHTML=[["strict","Only what I have","fridge"],["basic","Assume basic pantry","check"],["quick","Quick (30 min or less)","clock"]].map(d=>`<button data-k="${d[0]}" aria-pressed="${!!S[d[0]]}">${I(d[2])}${d[1]}</button>`).join("");
   $("mode").querySelectorAll("button").forEach(b=>b.onclick=()=>{S[b.dataset.k]=!S[b.dataset.k];save();draw()});
-  $("mh").textContent=S.strict?"Only what I have: you get a real recipe or a meal made up from your fridge and staples, with nothing extra to buy when possible.":"Closest real recipe to your fridge. Anything missing goes on the to-buy list.";
+  $("mh").textContent=S.strict?"Only what I have: you only get meals your fridge and staples cover. If nothing fits, you see what to add.":"Closest real recipe to your fridge. Anything missing goes on the to-buy list.";
   $("dn").textContent=S.days+(S.days>1?" days":" day");
-  $("pm").innerHTML=["Breakfast","Lunch","Dinner"].map(m=>`<button data-m="${m}" aria-pressed="${!!S.pm[m]}">${m}</button>`).join("");
+  $("pm").innerHTML=["Breakfast","Main"].map(m=>`<button data-m="${m}" aria-pressed="${!!S.pm[m]}">${ML(m)}</button>`).join("");
   $("pm").querySelectorAll("button").forEach(b=>b.onclick=()=>{S.pm[b.dataset.m]=!S.pm[b.dataset.m];save();draw()});
   $("diet").innerHTML=DIETS.map(d=>`<button data-d="${d[0]}" aria-pressed="${!!S.diet[d[0]]}">${I(d[2])}${d[1]}</button>`).join("");
   $("diet").querySelectorAll("button").forEach(b=>b.onclick=()=>{const k=b.dataset.d;S.diet[k]=!S.diet[k];if(k==="vegan"&&S.diet.vegan)S.diet.veg=true;save();draw()});
-  $("u1").innerHTML=[["metric","Metric (g, ml)"],["us","US (cups, oz, lb)"]].map(u=>`<button data-u="${u[0]}" aria-pressed="${S.units===u[0]}">${u[1]}</button>`).join("");
+  $("u1").innerHTML=[["metric","Metric (grams)"],["us","US (cups, oz, lb)"]].map(u=>`<button data-u="${u[0]}" aria-pressed="${S.units===u[0]}">${u[1]}</button>`).join("");
   $("u1").querySelectorAll("button").forEach(b=>b.onclick=()=>{S.units=b.dataset.u;save();draw();rerender()});
   $("u2").innerHTML=[["C","°C"],["F","°F"]].map(u=>`<button data-tp="${u[0]}" aria-pressed="${S.temp===u[0]}">${u[1]}</button>`).join("");
   $("u2").querySelectorAll("button").forEach(b=>b.onclick=()=>{S.temp=b.dataset.tp;save();draw();rerender()});
@@ -353,45 +362,72 @@ $("minus").onclick=$("minus2").onclick=dec;$("plus").onclick=$("plus2").onclick=
 $("cuisine").onchange=$("cuisine2").onchange=e=>{S.cuisine=e.target.value;$("cuisine").value=$("cuisine2").value=S.cuisine;save()};
 
 /* ---------- recipe roulette ---------- */
-const RECIPES=D.recipes.concat(window.MEAL_EXTRA||[]).map((r,i)=>({id:i,title:r[0],meals:r[1],min:r[2],serv:r[3],ing:r[4],steps:r[5].split("|")}));
-let seen=[],current=null,kind="spin";
-const score=(r,it)=>it.filter(x=>x.length>2&&r.ing.some(g=>g[2].toLowerCase().includes(stem(x)))).length;
-function banRe(){const d=S.diet;return new RegExp([d.veg||d.vegan?"chicken|beef|pork|salmon|sausage|prawn|fish|mince|lamb|duck|bacon|tuna|cod|ham|thigh":"",d.vegan?"egg|milk|yogurt|butter|feta|parmesan|honey|cheese|cheddar|cream|paneer|halloumi|mozzarella":"",d.gf?"pasta|spaghetti|bread|tortilla|couscous|noodle|soy sauce|flatbread|flour|oats|bulgur|barley|gnocchi|orzo|macaroni":"",d.dairy?"milk|yogurt|butter|feta|parmesan|cream|halloumi|cheese|cheddar|paneer|mozzarella":"",d.nuts?"walnut|almond|peanut|cashew":"",d.noegg?"\\beggs?\\b":"",d.nofish?"salmon|fish|prawn|cod|tuna":"",d.nosoy?"soy|tofu|tempeh":"",d.halal?"pork|\\bham\\b|bacon|sausage|chorizo|\\bwine\\b|\\bbeer\\b|mirin":"",d.kosher?"pork|\\bham\\b|bacon|sausage|chorizo|prawn|shrimp":"",d.nopork?"pork|\\bham\\b|bacon|sausage|chorizo":"",d.noshell?"prawn|shrimp":"",d.pesc?"chicken|beef|pork|sausage|mince|lamb|duck|bacon|\\bham\\b|thigh|steak":""].filter(Boolean).join("|")||"$^")}
-const missing=i=>items().length>0&&!i.have&&!(S.basic&&GEN.pantry.test(i.name.toLowerCase()));
-function bestOf(fn,k){let best=null,bm=1e9;for(let j=0;j<k;j++){const g=fn(),m=g.ing.filter(missing).length+(S.quick&&g.min>30?100:0);if(m<bm){best=g;bm=m;if(!m)break}}return best}
+const RECIPES=K.recipes; // built by kitchen.js from ingredients.js + cookbook-*.js
+let current=null,kind="spin";
+/* history survives reloads: recipes are not repeated until the whole pool for that meal has been used */
+const HK="hist3",hist=()=>store(HK)||{},seenOf=()=>(hist().r||{})[S.meal]||[],recentG=()=>hist().g||[];
+function markSeen(id){const h=hist();h.r=h.r||{};h.r[S.meal]=(h.r[S.meal]||[]).filter(x=>x!==id).concat(id).slice(-80);store(HK,h)}
+function clearSeen(){const h=hist();h.r=h.r||{};h.r[S.meal]=[];store(HK,h)}
+function markGen(t){const h=hist();h.g=(h.g||[]).filter(x=>x!==t).concat(t).slice(-40);store(HK,h)}
+const recent=t=>recentG().includes(t);
+const fridgeIds=(()=>{let key="",set=new Set();return()=>{const it=items(),k=it.join("|");if(k!==key){key=k;set=new Set(it.flatMap(x=>K.match(x)))}return set}})();
+const missing=i=>items().length>0&&!i.have&&!(S.basic&&(i.pantry||GEN.pantry.test(i.name.toLowerCase())));
+function bestOf(fn,k){let best=null,bm=1e9;for(let j=0;j<k;j++){const g=fn(),m=g.ing.filter(missing).length+(S.quick&&g.min>30?100:0)+(recent(g.title)?50:0);if(m<bm){best=g;bm=m;if(!m)break}}return best}
 function callout(r){
   if(!items().length)return"";const m=r.ing.filter(missing),uu=(r.unused||[]).filter(x=>!stap().includes(x)),un=uu.length?` Not used this time: ${esc(uu.join(", "))}.`:"";
   return m.length?`<div class="call buy2">${I("cart")}<span>To buy (${m.length}): ${m.map(i=>esc(i.name)).join(", ")}.${un}</span></div>`:`<div class="call ok2">${I("check")}<span>You already have everything.${un}</span></div>`;
 }
-function recipeInfos(){
-  const it=items(),re=banRe();let pool=RECIPES.filter(r=>r.meals.includes(S.meal)&&!r.ing.some(g=>re.test(g[2]))&&!(S.diet.kosher&&kmix(r)));const qk=pool.filter(r=>r.min<=30);if(S.quick&&qk.length)pool=qk;
-  if(!pool.length)return [];
-  const info=r=>{const k=S.n/r.serv,ing=r.ing.map(g=>({name:g[2],a:g[0]*k,u:g[1],txt:fmt(g[0]*k,g[1]),have:it.some(x=>x.length>2&&g[2].toLowerCase().includes(stem(x)))}));return{r,ing,miss:ing.filter(missing).length,hit:ing.filter(i=>i.have).length,urg:ing.filter(i=>i.have&&S.urgent.some(u=>i.name.toLowerCase().includes(stem(u)))).length}};
-  return pool.map(info);
+function recipeInfos(meal){
+  meal=meal||S.meal;const F=fridgeIds(),U=new Set(S.urgent.flatMap(x=>K.match(x)));
+  let pool=RECIPES.filter(r=>r.meals.includes(meal)&&K.allowed(r,S.diet));const qk=pool.filter(r=>r.min<=30);if(S.quick&&qk.length)pool=qk;
+  return pool.map(r=>{const x=K.resolve(r,S.n,{fridge:F,basic:S.basic,urgent:U});
+    return{r,ing:x.ing,steps:x.steps,miss:x.ing.filter(missing).length,hit:x.hit,urg:x.urg,cu:S.cuisine&&isMain(meal)&&r.cuisine===S.cuisine?1:0}});
 }
 function spin(){
   const it=items();let L=recipeInfos(),msg="";if(!L.length)return build(); // no stored recipe fits the diet: make one up instead
-  if(it.length){const lo=Math.min(...L.map(x=>x.miss));if(S.strict&&lo>0)msg="Nothing fits using only your fridge, so this is the closest match. See what to buy below.";L=L.filter(x=>x.miss===lo);const mu=Math.max(...L.map(x=>x.urg));L=L.filter(x=>x.urg===mu);const mh=Math.max(...L.map(x=>x.hit));L=L.filter(x=>x.hit===mh)}
   pickRecipe(L,msg);
 }
 function pickRecipe(L,msg){
-  let fresh=L.filter(x=>!seen.includes(x.r.id));if(!fresh.length){seen=[];fresh=L}
-  const x=rnd(fresh);seen.push(x.r.id);show({title:x.r.title,min:x.r.min,n:S.n,steps:x.r.steps,ing:x.ing},msg);
+  // best tier first (fewest to buy, then priority items, then most fridge items); only move to a worse tier when every recipe in the better ones was already shown
+  const sn=seenOf(),tiers=[];
+  L.slice().sort((a,b)=>a.miss-b.miss||b.cu-a.cu||b.urg-a.urg||b.hit-a.hit).forEach(x=>{const t=tiers[tiers.length-1];if(t&&t[0].miss===x.miss&&t[0].cu===x.cu&&t[0].urg===x.urg&&t[0].hit===x.hit)t.push(x);else tiers.push([x])});
+  let pool=null;for(const t of tiers){const f=t.filter(x=>!sn.includes(x.r.id));if(f.length){pool=f;break}}
+  if(!pool){const last=sn[sn.length-1];clearSeen();pool=tiers[0].filter(x=>x.r.id!==last);if(!pool.length)pool=tiers[0]}
+  const x=rnd(pool);markSeen(x.r.id);
+  if(S.strict&&items().length&&x.miss>0)msg="Nothing fits using only your fridge, so this is the closest match. See what to buy below.";
+  show({title:x.r.title,min:x.r.min,n:S.n,steps:x.steps,ing:x.ing,desc:x.r.note},msg);
 }
 /* One button. With "Only what I have" on, it picks between real recipes that need nothing extra and a meal
    made up from your fridge and staples. With it off, it picks the recipe closest to your fridge. */
-function genFridge(){const it=items(),m=S.meal,main=m==="Lunch"||m==="Dinner";return main?fridgeTry(it):bestOf(()=>GEN.makeSmall(m,it,S.n,dietP()),80)}
+function genFridge(){const it=items(),m=S.meal,main=isMain(m);return main?fridgeTry(it):bestOf(()=>GEN.makeSmall(m,it,S.n,dietP()),80)}
 function go(){
   if(S.strict&&items().length){
-    const ex=recipeInfos().filter(x=>x.miss===0),g=genFridge(),gOk=g&&!g.ing.some(missing);
+    const all=recipeInfos().filter(x=>x.miss===0),sn0=seenOf(),ex=all.filter(x=>!sn0.includes(x.r.id)),g=genFridge(),gOk=g&&!g.ing.some(missing);
     if(gOk&&(!ex.length||Math.random()<.5))return show({...g,n:S.n,built:true},"");
     if(ex.length)return pickRecipe(ex,"");
+    if(all.length){clearSeen();return pickRecipe(all,"")}
+    return nothing();
   }
   spin();
 }
-function fridgeTry(it){let g=null;for(let j=0;j<30;j++){const x=GEN.makeFridge(it,S.n,S.cuisine,dietP(),S.basic);if(!x)return null;g=x;if(!S.quick||x.min<=30)break}return g}
+// "Only what I have" never shows a recipe that needs shopping. If nothing fits, say what would unlock something.
+function canMake(m){const o=S.meal;S.meal=m;try{if(recipeInfos(m).some(x=>x.miss===0))return true;const it=items(),g=isMain(m)?fridgeTry(it):bestOf(()=>GEN.makeSmall(m,it,S.n,dietP()),30);return !!(g&&!g.ing.some(missing))}catch(e){return false}finally{S.meal=o}}
+function nothing(){
+  current=null;$("note").textContent="";
+  const others=MEALS.filter(m=>m[0]!==S.meal&&canMake(m[0])),near={};
+  recipeInfos().filter(x=>x.miss===1).forEach(x=>{const i=x.ing.find(missing);if(i)near[i.name]=(near[i.name]||0)+1});
+  const add=Object.entries(near).sort((a,b)=>b[1]-a[1]).slice(0,4);
+  $("out").innerHTML=`<article class="card"><div class="body"><div class="ph">${I("fridge")}<b>Nothing for ${esc(ML(S.meal).toLowerCase())} from only your fridge</b>${others.length||add.length?"Here is what would work:":"Add a few more ingredients and try again."}</div>
+  ${others.length?`<h3>${I("dice")}Works right now</h3><div class="row">${others.map(m=>`<button data-meal="${m[0]}">${I(m[1])}${m[2]}</button>`).join("")}</div>`:""}
+  ${add.length?`<h3>${I("cart")}One ingredient away</h3><div class="row">${add.map(a=>`<button data-add="${esc(a[0])}">+ ${esc(a[0])} <small>(${a[1]} recipe${a[1]>1?"s":""})</small></button>`).join("")}</div>`:""}
+  <div class="row"><button data-closest="1">${I("list")}Show the closest recipe anyway</button></div></div></article>`;
+  $("out").querySelectorAll("[data-meal]").forEach(b=>b.onclick=()=>{S.meal=b.dataset.meal;save();draw();go()});
+  $("out").querySelectorAll("[data-add]").forEach(b=>b.onclick=()=>{S.pantry.push(b.dataset.add.toLowerCase());save();draw();go()});
+  $("out").querySelectorAll("[data-closest]").forEach(b=>b.onclick=()=>spin());
+}
+function fridgeTry(it){let g=null;for(let j=0;j<30;j++){const x=GEN.makeFridge(it,S.n,S.cuisine,dietP(),S.basic);if(!x)return null;g=x;if((!S.quick||x.min<=30)&&!recent(x.title))break}return g}
 function build(){
-  const it=items(),m=S.meal,main=m==="Lunch"||m==="Dinner";let g;
+  const it=items(),m=S.meal,main=isMain(m);let g;
   if(S.strict&&it.length){
     g=main?fridgeTry(it):bestOf(()=>GEN.makeSmall(m,it,S.n,dietP()),80);
     if(!g)return show(null,"Add at least two ingredients (a protein, a carb or some veg) that fit your diet to build from your fridge.");
@@ -401,43 +437,44 @@ function build(){
 
 /* Remix: pick two real recipes (biased to your fridge), borrow their protein / carb / veg and flavour, and let the
    engine cook them under the same taste, timing and diet rules. Falls back to the plain builder if too few recipes fit. */
-function remixPool(meal){const re=banRe(),p=RECIPES.filter(r=>r.meals.includes(meal)&&!r.ing.some(g=>re.test(g[2]))&&!(S.diet.kosher&&kmix(r))),q=p.filter(r=>r.min<=30);return S.quick&&q.length>=2?q:p}
+function remixPool(meal){meal=normM(meal);const p=RECIPES.filter(r=>r.meals.includes(meal)&&K.allowed(r,S.diet)),q=p.filter(r=>r.min<=30);return S.quick&&q.length>=2?q:p}
 function remixOnce(meal,it,dd,pool,strict){
-  const w=r=>1+2*r.ing.filter(g=>it.some(x=>x.length>2&&g[2].toLowerCase().includes(stem(x)))).length,
+  const F=fridgeIds(),w=r=>1+2*r.ids.filter(id=>F.has(id)).length,
     pick=l=>{let t=Math.random()*l.reduce((s,r)=>s+w(r),0);return l.find(r=>(t-=w(r))<0)||l[0]},
     a=pick(pool),b=pick(pool.filter(r=>r!==a)),
-    g=GEN.remix([a,b].map(r=>({title:r.title,names:r.ing.map(i=>i[2])})),it,S.n,dd,{cuisine:S.cuisine,fridge:it,strict,basic:S.basic,small:meal==="Lunch"||meal==="Dinner"?null:meal});
-  if(g)g.ing.forEach(i=>{i.have=/^(salt|water)$/.test(i.name)||it.some(x=>x.length>2&&i.name.toLowerCase().includes(stem(x)))});
+    g=GEN.remix([a,b].map(r=>({title:r.title,names:r.ids.map(K.name),slots:r.slots,cuisine:r.cuisine})),it,S.n,dd,{cuisine:S.cuisine,fridge:it,strict,basic:S.basic,small:isMain(meal)?null:meal});
+  if(g)g.ing.forEach(i=>{const id=K.match(i.name)[0];i.have=/^(salt|water)$/.test(i.name)||(id&&F.has(id))||it.some(x=>x.length>2&&i.name.toLowerCase().includes(x.toLowerCase()));if(id&&K.ING[id].f.has("pantry"))i.pantry=true});
   return g;
 }
 function invent(){
   const it=items(),pool=remixPool(S.meal),st=S.strict&&it.length>0;if(pool.length<2)return build();
   let best=null,bm=1e9;
-  for(let j=0;j<40;j++){const g=remixOnce(S.meal,it,dietP(),pool,st);if(!g)continue;const m=g.ing.filter(missing).length+(S.quick&&g.min>30?100:0);if(m<bm){best=g;bm=m;if(!m)break}}
+  for(let j=0;j<40;j++){const g=remixOnce(S.meal,it,dietP(),pool,st);if(!g)continue;const m=g.ing.filter(missing).length+(S.quick&&g.min>30?100:0)+(recent(g.title)?50:0);if(m<bm){best=g;bm=m;if(!m)break}}
   if(!best)return build();
-  show({...best,n:S.n,built:true},st&&bm>0?"Nothing fits using only your fridge, so this is the closest remix. See what to buy below.":"");
+  if(st&&bm>0)return nothing();
+  show({...best,n:S.n,built:true},"");
 }
 /* ---------- display ---------- */
 function show(r,msg){
-  current=r;$("note").textContent=msg||"";
+  current=r;$("note").textContent=msg||"";if(r&&r.built)markGen(r.title);
   if(!r){$("out").innerHTML="";return}
   const ic=(MEALS.find(m=>m[0]===S.meal)||[])[1]||"dice";
   $("out").innerHTML=`<article class="card"><div class="hero"><div class="ic">${I(ic)}</div><h2>${esc(r.title)}</h2></div><div class="body">
-  <div class="meta"><span>${I("clock")}${r.min} min</span><span>${I("users")}${r.n} ${r.n>1?"people":"person"}</span><span>${I(ic)}${S.meal}</span>${r.remix?`<span>${I("wand")}Remix</span>`:""}${(()=>{const x=GEN.nutri(r.ing,r.n);return x.kcal?`<span title="Rough estimate">${I("flame")}≈${x.kcal} kcal · ${x.p} g protein each</span>`:""})()}</div>
+  <div class="meta"><span>${I("clock")}${r.min} min</span><span>${I("users")}${r.n} ${r.n>1?"people":"person"}</span><span>${I(ic)}${ML(S.meal)}</span>${r.remix?`<span>${I("wand")}Remix</span>`:""}${(()=>{const x=r.ing.length&&r.ing.every(i=>i.id)?K.nutri(r.ing,r.n):GEN.nutri(r.ing,r.n);return x.kcal?`<span title="Rough estimate">${I("flame")}≈${x.kcal} kcal · ${x.p} g protein each</span>`:""})()}</div>
   ${r.desc?`<p class="desc">${esc(cv(r.desc))}</p>`:""}${callout(r)}
   <div class="split"><div><h3>${I("list")}Ingredients <small style="text-transform:none;letter-spacing:0;color:var(--mute)">(tap to tick off)</small></h3>
-  <ul class="ing">${r.ing.map(i=>`<li><span>${esc(i.name)}${missing(i)?'<span class="buy">to buy</span>':""}</span><span class="q">${esc(cv(i.txt))}</span></li>`).join("")}</ul></div>
+  <ul class="ing">${r.ing.map(i=>`<li><span>${esc(i.name)}${missing(i)?'<span class="buy">to buy</span>':""}</span><span class="q">${esc(Q(i))}</span></li>`).join("")}</ul></div>
   <div><h3>${I("chef")}Method</h3><ol>${r.steps.map(s=>`<li><span>${esc(cv(s))}</span></li>`).join("")}</ol></div></div>
   <div class="row"><button id="save">${I("heart")}Save</button><button id="shop">${I("cart")}Copy list</button><button id="again">${I(r.remix?"wand":r.built?"chef":"dice")}Again</button></div></div></article>`;
   $("out").querySelectorAll(".ing li").forEach(li=>li.onclick=()=>li.classList.toggle("done"));
   $("save").onclick=()=>{const f=store("favs2")||[];if(!f.some(x=>x.title===r.title)){f.unshift({...r,meal:S.meal});store("favs2",f.slice(0,40))}favs();$("save").innerHTML=I("heart")+"Saved"};
-  $("shop").onclick=async()=>{const mm=r.ing.filter(missing),l=(mm.length?mm:r.ing).map(i=>"• "+i.name+" – "+cv(i.txt)).join("\n");try{await navigator.clipboard.writeText(l);$("shop").innerHTML=I("cart")+"Copied"}catch(e){$("note").textContent=l}};
+  $("shop").onclick=async()=>{const mm=r.ing.filter(missing),l=(mm.length?mm:r.ing).map(i=>"• "+i.name+" – "+Q(i)).join("\n");try{await navigator.clipboard.writeText(l);$("shop").innerHTML=I("cart")+"Copied"}catch(e){$("note").textContent=l}};
   $("again").onclick=()=>run(r.remix?"remix":"spin");
 }
 function favs(){
   const f=store("favs2")||[];
   $("fav").innerHTML=f.length?`<h3>${I("heart")}Saved</h3>`+f.map((r,i)=>`<button data-i="${i}">${I("heart")}${esc(r.title)}</button>`).join(""):"";
-  $("fav").querySelectorAll("button").forEach(b=>b.onclick=()=>{const r=f[+b.dataset.i];S.meal=r.meal||S.meal;draw();show(r,"");scrollTo({top:0,behavior:"smooth"})});
+  $("fav").querySelectorAll("button").forEach(b=>b.onclick=()=>{const r=f[+b.dataset.i];S.meal=normM(r.meal)||S.meal;draw();show(r,"");scrollTo({top:0,behavior:"smooth"})});
 }
 function run(what){
   const pl=what==="plan"||what==="planremix",rl=$(pl?"preel":"reel"),rt=$(pl?"prt":"rt"),o=$(pl?"pout":"out"),nt=$(pl?"pnote":"note");
@@ -461,8 +498,8 @@ const CATS=[["Sauces & oils",/stock|sauce|\boil\b|vinegar|juice|paste|mustard|ho
 ["Spices & dried herbs",/\bground |dried|powder|flakes|cumin|garam|turmeric|cinnamon|sumac|paprika|allspice|caraway|bay leaf|black pepper|white pepper|oregano|marjoram|vanilla|gochugaru|\bsalt\b/],
 ["Grains, pasta & bread",/\brice\b|pasta|spaghetti|noodle|couscous|bulgur|quinoa|barley|polenta|gnocchi|bread|pita|tortilla|naan|flatbread|\boats?\b|flour|orzo|macaroni|penne|fusilli|tagliatelle|linguine/],
 ["Fruit & veg",/tomato|potato|onion|garlic|ginger|shallot|leek|carrot|broccoli|cauliflower|spinach|kale|chard|cabbage|cucumber|lettuce|salad|zucchini|courgette|aubergine|eggplant|pepper|mushroom|\bpeas?\b|beans?\b|corn|pumpkin|squash|celery|fennel|beet|choi|brussels|rocket|arugula|asparagus|avocado|banana|apple|pear|berr|peach|plum|mango|orange|lemon|lime|basil|parsley|coriander|mint|dill|thyme|chive/]];
-const CORD=["Fruit & veg","Meat, fish & tofu","Dairy & eggs","Grains, pasta & bread","Canned & jarred","Sauces & oils","Nuts & seeds","Spices & dried herbs","Other"];
-const catOf=n=>{n=n.toLowerCase();return(CATS.find(c=>c[1].test(n))||["Other"])[0]};
+const CORD=["Fruit & veg","Meat, fish & tofu","Dairy & eggs","Grains, pasta & bread","Canned & jarred","Sauces & oils","Nuts & seeds","Spices & dried herbs","Baking","Other"];
+const catOf=n=>K.aisleOf(n)||(CATS.find(c=>c[1].test(n.toLowerCase()))||["Other"])[0];
 // each stored ingredient carries st: "buy" (not at home), "have" (fridge/staples) or "pantry" (assumed basic)
 const planG=b=>({title:b.title,min:b.min,pk:b.pk,ck:b.ck,steps:b.steps,ing:b.ing.map(i=>({name:i.name,txt:i.txt,a:i.a,u:i.u,st:i.have?"have":(S.basic&&GEN.pantry.test(i.name.toLowerCase())?"pantry":"buy")}))});
 const useUp=(it,g)=>{const used=g.ing.filter(i=>i.st==="have").map(i=>i.name.toLowerCase());it=it.filter(w=>!used.some(u=>u.includes(w)||w.includes(u.split(" ")[0])));return[...it,...stap().filter(s=>!it.includes(s))]};
@@ -470,9 +507,10 @@ function mealGen(m,it,cu,dd,mode,pc){
   if(mode==="remix"){const p=pc[m]||(pc[m]=remixPool(m));if(p.length>=2){const g=remixOnce(m,it,dd,p,false);if(g&&(g.pk||m==="Breakfast"))return g}}
   return m!=="Breakfast"?GEN.make(it,S.n,cu,dd):GEN.makeSmall(m,it,S.n,dd);
 }
-function bestMeal(m,it,cu,dd,mode,pc,not){
+let PT=new Set();
+function bestMeal(m,it,cu,dd,mode,pc,not){m=normM(m);
   let best=null,bm=1e9;
-  for(let j=0;j<25;j++){const g=mealGen(m,it,cu,dd,mode,pc);if(!g||g.title===not)continue;
+  for(let j=0;j<25;j++){const g=mealGen(m,it,cu,dd,mode,pc);if(!g||g.title===not||PT.has(g.title))continue;
     const k=g.ing.filter(i=>!i.have&&!(S.basic&&GEN.pantry.test(i.name.toLowerCase()))).length+(S.quick&&g.min>30?100:0);if(k<bm){best=g;bm=k;if(!k)break}}
   return best||mealGen(m,it,cu,dd,mode,pc);
 }
@@ -481,21 +519,21 @@ function bestMeal(m,it,cu,dd,mode,pc,not){
 function buildList(days){
   const t={};
   days.forEach(x=>x.g.ing.forEach(i=>{if(i.name==="water")return;const k=i.name.toLowerCase()+"|"+i.u,e=t[k]=t[k]||{name:i.name,u:i.u,buy:0,all:0,have:0};e.all+=i.a;if(i.st==="buy")e.buy+=i.a;else if(i.st==="have")e.have++}));
-  return Object.values(t).map(e=>e.buy?{name:e.name,txt:fmt(e.buy,e.u),st:"buy"}:{name:e.name,txt:fmt(e.all,e.u),st:e.have?"have":"pantry"}).sort((a,b)=>a.name.localeCompare(b.name));
+  return Object.values(t).map(e=>e.buy?{name:e.name,u:e.u,a:e.buy,txt:fmt(e.buy,e.u),st:"buy"}:{name:e.name,u:e.u,a:e.all,txt:fmt(e.all,e.u),st:e.have?"have":"pantry"}).sort((a,b)=>a.name.localeCompare(b.name));
 }
 function plan(mode){
-  const meals=["Breakfast","Lunch","Dinner"].filter(m=>S.pm[m]);if(!meals.length){$("pout").innerHTML="";$("pnote").textContent="Pick at least one meal to plan.";return}
+  const meals=["Breakfast","Main"].filter(m=>S.pm[m]);PT=new Set();if(!meals.length){$("pout").innerHTML="";$("pnote").textContent="Pick at least one meal to plan.";return}
   let it=items(),ug=S.urgent.slice();const cus=Object.keys(GEN.cuisines).sort(()=>Math.random()-.5),days=[],pc={},rp=[],rc=[];let ci=0;
   for(let d=1;d<=S.days;d++)for(const m of meals){
     const cu=S.cuisine||cus[ci++%cus.length],g=planG(bestMeal(m,it,cu,dietP({avoidP:rp.slice(-3),avoidC:rc.slice(-2),urgent:ug}),mode,pc));
     if(m!=="Breakfast"){if(g.pk)rp.push(g.pk);if(g.ck)rc.push(g.ck)}
-    it=useUp(it,g);ug=ug.filter(u=>it.includes(u.toLowerCase()));days.push({d,m,g});
+    it=useUp(it,g);ug=ug.filter(u=>it.includes(u.toLowerCase()));PT.add(g.title);days.push({d,m,g});
   }
   renderPlan(days,buildList(days),{title:S.days+(mode==="remix"?"-day remix plan":"-day plan"),n:S.n,mode},false);
 }
 // swap one meal for a new one: same slot, different protein, rest of the plan untouched, list rebuilt from all days
 function swap(i){
-  const[days,,m0]=lastPlan,x=days[i],meta={title:m0.title,n:m0.n,mode:m0.mode},others=days.filter((_,j)=>j!==i);
+  const[days,,m0]=lastPlan,x=days[i],meta={title:m0.title,n:m0.n,mode:m0.mode},others=days.filter((_,j)=>j!==i);PT=new Set(others.map(o=>o.g.title));
   let it=items();others.forEach(o=>{it=useUp(it,o.g)});
   const mains=others.filter(o=>o.m!=="Breakfast").map(o=>o.g),rp=mains.map(g=>g.pk).filter(Boolean).slice(-3),rc=mains.map(g=>g.ck).filter(Boolean).slice(-2);
   if(x.g.pk)rp.push(x.g.pk);if(x.g.ck)rc.push(x.g.ck);
@@ -506,16 +544,16 @@ function swap(i){
 function renderPlan(days,list,meta,saved,open){
   lastPlan=[days,list,meta,saved];
   const can=days.every(x=>x.g.ing.every(i=>typeof i.a==="number")),st=i=>i.st||"buy",buy=list.filter(i=>st(i)==="buy"),rest=list.filter(i=>st(i)!=="buy"),
-    groups=CORD.map(c=>[c,buy.filter(i=>catOf(i.name)===c)]).filter(g=>g[1].length),li=i=>`<li><span>${esc(i.name)}</span><span class="q">${esc(cv(i.txt))}</span></li>`;
+    groups=CORD.map(c=>[c,buy.filter(i=>catOf(i.name)===c)]).filter(g=>g[1].length),li=i=>`<li><span>${esc(i.name)}</span><span class="q">${esc(Q(i))}</span></li>`;
   $("pnote").textContent=saved?"":(meta.mode==="remix"?"Every meal is a new remix of two saved recipes. ":"")+"Priority (clock) items go first, fridge items are used up day by day and proteins rotate.";
-  $("pout").innerHTML=`<article class="card"><div class="hero"><div class="ic">${I("cal")}</div><h2>${esc(meta.title)} for ${meta.n} ${meta.n>1?"people":"person"}</h2></div><div class="body">`+days.map((x,i)=>`<details${i===open?" open":""}><summary>Day ${x.d} · ${x.m}: ${esc(x.g.title)}</summary><h3>${I("list")}Ingredients</h3><ul class="ing">${x.g.ing.map(i=>`<li><span>${esc(i.name)}</span><span class="q">${esc(cv(i.txt))}</span></li>`).join("")}</ul><h3>${I("chef")}Method</h3><ol>${x.g.steps.map(s=>`<li><span>${esc(cv(s))}</span></li>`).join("")}</ol>${can?`<div class="row"><button data-sw="${i}">${I("dice")}Try another ${x.m.toLowerCase()}</button></div>`:""}</details>`).join("")+
+  $("pout").innerHTML=`<article class="card"><div class="hero"><div class="ic">${I("cal")}</div><h2>${esc(meta.title)} for ${meta.n} ${meta.n>1?"people":"person"}</h2></div><div class="body">`+days.map((x,i)=>`<details${i===open?" open":""}><summary>Day ${x.d} · ${ML(x.m)}: ${esc(x.g.title)}</summary><h3>${I("list")}Ingredients</h3><ul class="ing">${x.g.ing.map(i=>`<li><span>${esc(i.name)}</span><span class="q">${esc(Q(i))}</span></li>`).join("")}</ul><h3>${I("chef")}Method</h3><ol>${x.g.steps.map(s=>`<li><span>${esc(cv(s))}</span></li>`).join("")}</ol>${can?`<div class="row"><button data-sw="${i}">${I("dice")}Try another ${ML(x.m).toLowerCase()}</button></div>`:""}</details>`).join("")+
    `<h3>${I("cart")}Shopping list <small style="text-transform:none;letter-spacing:0;color:var(--mute)">(${buy.length} to buy, tap to tick off)</small></h3>`+
    (groups.length?groups.map(g=>`<h4 class="cat">${g[0]}</h4><ul class="ing tick">${g[1].map(li).join("")}</ul>`).join(""):"<p class=\"hint\">Nothing to buy.</p>")+
    (rest.length?`<details><summary>Already have or assumed at home (${rest.length})</summary><ul class="ing">${rest.map(li).join("")}</ul></details>`:"")+
    `<div class="row"><button id="sp">${I("heart")}${saved?"Saved":"Save plan"}</button><button id="cp">${I("cart")}Copy list</button></div></div></article>`;
   $("pout").querySelectorAll("[data-sw]").forEach(b=>b.onclick=()=>swap(+b.dataset.sw));
   $("pout").querySelectorAll("ul.tick li").forEach(l=>l.onclick=()=>l.classList.toggle("done"));
-  $("cp").onclick=async()=>{try{await navigator.clipboard.writeText(groups.map(g=>g[0]+"\n"+g[1].map(i=>"• "+i.name+" – "+cv(i.txt)).join("\n")).join("\n\n")||"Nothing to buy.");$("cp").innerHTML=I("cart")+"Copied"}catch(e){}};
+  $("cp").onclick=async()=>{try{await navigator.clipboard.writeText(groups.map(g=>g[0]+"\n"+g[1].map(i=>"• "+i.name+" – "+Q(i)).join("\n")).join("\n\n")||"Nothing to buy.");$("cp").innerHTML=I("cart")+"Copied"}catch(e){}};
   $("sp").onclick=()=>{if(saved)return;const f=store("plans2")||[];f.unshift({title:meta.title,n:meta.n,mode:meta.mode,days,list,date:new Date().toLocaleDateString()});store("plans2",f.slice(0,15));plansUI();$("sp").innerHTML=I("heart")+"Saved"};
 }
 function plansUI(){
