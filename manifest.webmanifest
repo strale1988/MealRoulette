@@ -1,1 +1,13 @@
-{"name":"Meal Roulette","short_name":"Roulette","start_url":"./index.html","display":"standalone","background_color":"#faf6ef","theme_color":"#e4572e","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
+{
+  "name": "Meal Roulette",
+  "short_name": "Meal Roulette",
+  "description": "Plan meals, explore recipes and build a shopping list.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#faf6ef",
+  "theme_color": "#e4572e",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

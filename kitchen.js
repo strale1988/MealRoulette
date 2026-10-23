@@ -8,7 +8,7 @@
 "use strict";
 const K=window.KITCHEN={ING:{},recipes:[],problems:[]};
 
-K.AISLE={veg:"Fruit & veg",meat:"Meat, fish & tofu",dairy:"Dairy & eggs",grain:"Grains, pasta & bread",can:"Canned & jarred",sauce:"Sauces & oils",nut:"Nuts & seeds",spice:"Spices & dried herbs",bake:"Baking",other:"Other"};
+K.AISLE={veg:"Fruit & veg",meat:"Meat, fish & tofu",dairy:"Dairy & eggs",grain:"Grains, pasta & bread",can:"Canned & jarred",sauce:"Sauces & oils",nut:"Nuts & seeds",spice:"Spices & dried herbs",bake:"Baking",left:"Leftovers",other:"Other"};
 K.ROLES=["protein","carb","veg","fruit","dairy","fat","flavour","herb","sauce","baking","nut","liquid"];
 // names the generator (engine.js) has flavours for; a recipe's cuisine should be one of these
 K.CUISINES=["Italian","Mexican","Indian","Thai","Chinese","Japanese","Korean","Greek","Middle Eastern","French","Spanish","Balkan","Moroccan","Vietnamese","Caribbean","Turkish","Hungarian","Indonesian","Peruvian","Cajun","Persian","German","Polish","Ethiopian","Portuguese"];
@@ -17,6 +17,8 @@ K.MEAL={morning:"Breakfast",wake:"Breakfast",breakfast:"Breakfast",bite:"Snack",
 // flags: meat fish shell dairy egg gluten nuts soy pork alcohol honey (diets) · pantry (assumed at home) · canned (ready to eat) · dried:N (needs N+ minutes) · sub:group (swappable)
 const FLAGS=new Set("meat fish shell dairy egg gluten nuts soy pork alcohol honey pantry canned".split(" "));
 const SWEET=["sugar","cocoa","vanilla","baking-powder","maple-syrup","honey"];
+// Approximate cooked yields used only when a recipe explicitly opts in and the user selected that cooked leftover.
+K.LEFTOVER_SWAPS={rice:{id:"left-rice",factor:3},pasta:{id:"left-pasta",factor:2.3},potatoes:{id:"left-potatoes",factor:1}};
 
 const E=(who,msg)=>K.problems.push({lvl:"error",who,msg}),W=(who,msg)=>K.problems.push({lvl:"warn",who,msg});
 
@@ -73,19 +75,45 @@ K.allowed=(r,d)=>{
 /* ---------- scaling, fridge matching, substitutions, step text ---------- */
 // ctx: {fridge:Set(ids), basic:bool (pantry basics count as owned), urgent:Set(ids)}
 K.resolve=(r,n,ctx)=>{
-  ctx=ctx||{};const F=ctx.fridge||new Set(),U=ctx.urgent||new Set(),k=n/r.serv,sw={},taken=new Set(r.ing.map(i=>i.id));
+  ctx=ctx||{};const F=ctx.fridge||new Set(),U=ctx.urgent||new Set(),k=n/r.serv,sw={},taken=new Set(r.ing.map(i=>i.id)),cooked={};
+  (r.leftoverSwaps||[]).forEach(raw=>{const rule=K.LEFTOVER_SWAPS[raw];if(rule&&F.has(rule.id))cooked[raw]={id:rule.id,factor:rule.factor}});
   const ing=r.ing.map(i=>{
-    let id=i.id,e=K.ING[id];const pan=e.f.has("pantry");
+    let id=cooked[i.id]?cooked[i.id].id:i.id,e=K.ING[id];const pan=e.f.has("pantry");
     let have=F.has(id)||id==="water"||!!(ctx.basic&&pan);
-    if(!have&&e.sub){const alt=[...F].find(x=>x!==id&&K.ING[x].sub===e.sub&&!taken.has(x));if(alt){sw[i.id]=alt;taken.add(alt);id=alt;e=K.ING[id];have=true}}
-    const a=i.a*k;
-    return{id,name:e.name,a,u:i.u,txt:fmt(a,i.u),have,pantry:pan,was:i.id};
+    if(!cooked[i.id]&&!have&&e.sub){const alt=[...F].find(x=>x!==id&&K.ING[x].sub===e.sub&&!taken.has(x));if(alt){sw[i.id]=alt;taken.add(alt);id=alt;e=K.ING[id];have=true}}
+    const a=i.a*k*(cooked[i.id]?cooked[i.id].factor:1);
+    return{id,name:e.name,a,u:i.u,txt:fmt(a,i.u),have,pantry:pan,was:i.id,leftoverSwap:!!cooked[i.id]};
   });
-  const nm=id=>K.name(sw[id]||id),
-    steps=r.steps.map(s=>s.replace(/\{([a-z0-9-]+)(#?)\}/g,(m,id,h)=>{
-      const q=r.ing.find(x=>x.id===id),name=nm(id);if(!h||!q)return name;
-      return(q.u==="pcs"?fmt(q.a*k,"pcs").replace(" pcs",""):fmt(q.a*k,"g"))+" "+name}));
-  return{ing,steps,hit:ing.filter(i=>i.have&&!i.pantry).length,urg:ing.filter(i=>i.have&&U.has(i.id)).length};
+  const nm=id=>K.name(sw[id]||id);
+  const steps=r.steps.map(rawStep=>{
+    // Keep clauses about other ingredients when a step also tells the cook how to prepare dry rice/pasta/potatoes.
+    const parts=rawStep.split(/([;.]\s*)/);
+    for(let pi=0;pi<parts.length;pi+=2){
+      let part=parts[pi];
+      for(const [raw,rule] of Object.entries(cooked)){
+        const token=new RegExp("\\{"+raw+"#?\\}");
+        if(!token.test(part))continue;
+        const cooking=/\b(cook|boil|simmer|drain|rinse|steam)\b|bring.{0,30}to the boil/i.test(part);
+        if(cooking){
+          if(raw==="pasta")part="Use the selected cooked pasta instead of dry pasta and reheat it in hot water until steaming hot";
+          else if(raw==="rice")part="Use the selected cooked rice instead of dry rice and reheat it until steaming hot";
+          else part="Use the selected cooked potatoes instead of raw potatoes and reheat them until hot";
+        }else{
+          part=part.replace(new RegExp("\\{"+raw+"(#?)\\}","g"),(_,h)=>"{"+rule.id+h+"}");
+        }
+      }
+      parts[pi]=part;
+    }
+    return parts.join("").replace(/\{([a-z0-9-]+)(#?)\}/g,(m,id,h)=>{
+      const reverse=Object.entries(cooked).find(([raw,rule])=>rule.id===id),q=r.ing.find(x=>x.id===id)||(reverse&&r.ing.find(x=>x.id===reverse[0]));
+      const name=nm(id);if(!h||!q)return name;
+      const amount=q.a*k*(cooked[q.id]?cooked[q.id].factor:1);
+      return(q.u==="pcs"?fmt(amount,"pcs").replace(" pcs",""):fmt(amount,"g"))+" "+name;
+    });
+  });
+  const usedSwaps=Object.entries(cooked).map(([raw,rule])=>{const q=r.ing.find(i=>i.id===raw);return{raw,id:rule.id,factor:rule.factor,amount:(q?.a||0)*k*rule.factor,original:(q?.a||0)*k}});
+  const leftoverNote=usedSwaps.length?usedSwaps.map(x=>"Use about "+fmt(x.amount,"g")+" "+K.name(x.id)+" instead of "+fmt(x.original,"g")+" "+(x.raw==="potatoes"?"raw potatoes":"dry "+x.raw)+". The conversion is approximate; reheat until steaming hot.").join(" "):"";
+  return{ing,steps,hit:ing.filter(i=>i.have&&!i.pantry).length,urg:ing.filter(i=>i.have&&U.has(i.id)).length,leftoverNote,usedSwaps};
 };
 K.nutri=(ing,n)=>{let kc=0,p=0;ing.forEach(i=>{const e=K.ING[i.id];if(!e)return;const g=i.u==="pcs"?i.a*(e.gpp||80):i.a;kc+=g*e.kcal/100;p+=g*e.p/100});return{kcal:Math.round(kc/n/10)*10,p:Math.round(p/n)}};
 
@@ -137,7 +165,10 @@ K.add=list=>list.forEach(r=>{
   if(/vegetarian/i.test(r.name)&&!K.allowed({flags},{veg:1}))P("named vegetarian but contains meat or fish");
   if(K.problems.slice(bad0).some(p=>p.lvl==="error"))return; // broken recipes never reach the app
   const slots=[];ing.forEach(i=>K.ING[i.id].gen.forEach(g=>{if(!slots.some(s=>s[0]===g[0]&&s[1]===g[1]))slots.push(g)}));
-  K.recipes.push({id:r.id,title:r.name,meals,min:r.time,serv:r.serves,cuisine:r.cuisine||"",note:r.note||"",ing,steps,flags,slots,ids:ing.map(i=>i.id)});
+  const leftoverSwaps=[...new Set(Array.isArray(r.leftoverSwaps)?r.leftoverSwaps:[])];
+  leftoverSwaps.forEach(raw=>{if(!K.LEFTOVER_SWAPS[raw])P("unknown leftover substitution for '"+raw+"'");else if(!seen.has(raw))P("leftover substitution '"+raw+"' is not a recipe ingredient");});
+  if(K.problems.slice(bad0).some(p=>p.lvl==="error"))return;
+  K.recipes.push({id:r.id,title:r.name,meals,min:r.time,serv:r.serves,cuisine:r.cuisine||"",note:r.note||"",leftoverSwaps,ing,steps,flags,slots,ids:ing.map(i=>i.id)});
 });
 
 K.report=()=>{const e=K.problems.filter(p=>p.lvl==="error"),w=K.problems.filter(p=>p.lvl==="warn");

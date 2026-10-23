@@ -1,13 +1,13 @@
-// node tools/convert-old.js recipes.js [recipes-extra.js] > cookbook-old.js
+// node convert-old.js recipes.js [recipes-extra.js] > cookbook/cookbook-old.js
 // Turns the old format  [title, meals, minutes, serves, [[amount, unit, name], ...], "step|step|step"]
 // into new cookbook entries: ingredient names are matched to the catalog, ml becomes grams,
 // canned legumes are named canned, sweet/savoury meals are re-tagged, ready-made dishes are dropped.
 // Anything it cannot match is written as ["?name", amount] so check.js points at exactly what to add to ingredients.js.
 const vm=require('vm'),fs=require('fs'),path=require('path');
-const root=path.join(__dirname,'..'),ctx={console};ctx.window=ctx;vm.createContext(ctx);
+const root=__dirname,ctx={console};ctx.window=ctx;vm.createContext(ctx);
 for(const f of ['kitchen.js','ingredients.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),ctx,{filename:f});
 const K=ctx.KITCHEN;
-const files=process.argv.slice(2);if(!files.length){console.error('usage: node tools/convert-old.js recipes.js [recipes-extra.js] > cookbook-old.js');process.exit(1)}
+const files=process.argv.slice(2);if(!files.length){console.error('usage: node tools/convert-old.js recipes.js [recipes-extra.js] > cookbook/cookbook-old.js');process.exit(1)}
 for(const f of files)vm.runInContext(fs.readFileSync(f,'utf8'),ctx,{filename:f});
 const old=[...((ctx.MEAL_DATA||{}).recipes||[]),...(ctx.MEAL_EXTRA||[])];
 

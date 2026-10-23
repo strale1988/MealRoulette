@@ -2,6 +2,9 @@
 (function(){
 const rnd=a=>a[Math.floor(Math.random()*a.length)], shuf=a=>a.slice().sort(()=>Math.random()-.5);
 const G=window.GEN={};
+// cooked leftovers are only for cookbook recipes written for them; the generator would cook them as raw food
+G.LO=/\b(leftover|cooked|stale|roast|pulled|boiled|mashed|day old|cold)\b/i;G.bakeOnly=false;
+const BK={Breakfast:["muffins","scones"],Snack:["scones","flatbread","oatbars","cookies"],Dessert:["cookies","muffins","oatbars"]};
 
 // cuisine: ar=aromatics, sp=spices, sauce, fat, fin=finish. [name, amount per person, unit]
 G.cuisines={
@@ -78,6 +81,7 @@ const V=[
 ["cucumber","cucumber","cucumber",150,0,0,1],["lettuce","lettuce","lettuce|salad",80,0,0,1],
 ["celery","celery","celery",80,6,0,1],["fennel","fennel","fennel",120,8,25,1],["beetroot","beetroot","beetroot|beet",150,10,35,0],["pakchoi","pak choi","bok choy|pak choi|pakchoi",120,3,12,0],["brussels","brussels sprouts","brussels",150,8,25,0],["rocket","rocket","rocket|arugula",60,1,0,1]];
 
+const rndT=l=>rnd(l);
 const find=(l,it)=>l.filter(x=>it.some(w=>new RegExp(x[2]).test(w)));
 const hasW=(it,name)=>it.some(w=>w.includes(name.split(" ")[0].toLowerCase()));
 
@@ -97,16 +101,17 @@ const pcook=(p,pn)=>p[0]==="egg"?"Beat the eggs with a pinch of salt and scrambl
 const FRUIT="banana|apple|pear|berr|peach|plum|mango|orange",FR=["banana","apple","pear","berries","peach","plum","mango","orange"];
 const cap=s=>s[0].toUpperCase()+s.slice(1);
 G.makeSmall=function(meal,it,n,diet){
- diet=diet||{};const vg=diet.vegan,nd=vg||diet.dairy,ne=vg||diet.noegg,nn=diet.nuts,gf=diet.gf;
+ it=it.filter(w=>!G.LO.test(w));diet=diet||{};const vg=diet.vegan,nd=vg||diet.dairy,ne=vg||diet.noegg,nn=diet.nuts,gf=diet.gf;
  const has=re=>it.some(w=>re.test(w)),fr=it.find(w=>new RegExp(FRUIT).test(w)),f=fr||rnd(FR),ing=[];
  const A=(name,a,u,h)=>ing.push({name,a,u,txt:fmt(a,u),have:h!==false});
- const milk=nd?"oat milk":"milk",yog=nd?"plant yogurt":"yogurt",sw=vg?"maple syrup":"honey",fat=nd?"coconut oil":"butter",nut=nn?"pumpkin seeds":"walnuts",oats=gf?"gluten-free oats":"oats";
- const cuN=rnd(Object.keys(G.cuisines)),cu=G.cuisines[cuN],o={};
+ const milk=nd?"oat milk":"milk",yog=nd?"plant yogurt":"yogurt",sw=vg?"maple syrup":"honey",fat=nd?"coconut oil":"butter",nut=nn?"pumpkin seeds":rnd(["almonds","walnuts"]),oats=gf?"gluten-free oats":"oats";
+ const cuN=rnd(Object.keys(G.cuisines)),cu=G.cuisines[cuN],o={},fl=gf?"gluten-free flour":"flour",fn=x=>/berr/.test(x)?"berries":x.replace(/s$/,"");
  const vrow=pool=>{const k=rnd(pool);return find(V,it).find(v=>pool.includes(v[0]))||V.find(v=>v[0]===k)},vnm=v=>it.find(w=>new RegExp(v[2]).test(w))||v[1];
  let t;
- if(meal==="Breakfast"){t=has(/\beggs?\b/)&&!ne?"eggs":has(/oat/)?"porridge":rnd(["porridge","parfait","pancakes"].concat(ne?[]:["eggs"]))}
- else if(meal==="Snack"){t=has(/chickpea/)?"chickpeas":rnd(["dippers","chickpeas","fruitnuts"].concat(gf?[]:["bruschetta"]))}
- else t=has(/banana/)?"icecream":rnd(["crumble","icecream","chia"]);
+ if(G.bakeOnly&&BK[meal])t=rndT(BK[meal]);
+ else if(meal==="Breakfast"){t=has(/\beggs?\b/)&&!ne?"eggs":has(/oat/)?"porridge":rndT(["porridge","parfait","pancakes"].concat(ne?[]:["eggs"]))}
+ else if(meal==="Snack"){t=has(/chickpea/)?"chickpeas":rndT(["dippers","chickpeas","fruitnuts"].concat(gf?[]:["bruschetta"]))}
+ else t=has(/banana/)?"icecream":rndT(["crumble","icecream","chia"]);
  if(t==="porridge"){A(oats,50*n,"g",has(/oat/));A(milk,250*n,"ml",has(/milk/));A(f,80*n,"g",!!fr);A(sw,10*n,"g",false);A("cinnamon",n,"g",false);
   o.title=cap(f)+" porridge";o.min=10;o.steps=[`Simmer the ${oats} with the ${milk} and a pinch of salt for 5 minutes, stirring, until creamy.`,`Top with sliced ${f}, ${sw} and cinnamon.`]}
  else if(t==="parfait"){A(yog,150*n,"g",has(/yogh?urt/));A(f,80*n,"g",!!fr);A(nut,15*n,"g",false);A(sw,10*n,"g",false);
@@ -129,6 +134,18 @@ G.makeSmall=function(meal,it,n,diet){
   o.title="Baked "+b+" crumble";o.min=35;o.steps=["Heat the oven to 180 °C.",`Slice the ${b} into a dish and toss with cinnamon.`,`Rub the ${oats} with the ${fat} and ${sw}, scatter on top and bake 25 minutes.`]}
  else if(t==="icecream"){A("frozen banana",150*n,"g",has(/banana/));A(milk,15*n,"ml",has(/milk/));nn?A("cocoa",5*n,"g",false):A("peanut butter",10*n,"g",false);
   o.title="Banana ice cream";o.min=5;o.steps=["Blend the frozen banana chunks with the "+milk+" for 2–3 minutes, scraping down the sides.","Blend in the "+(nn?"cocoa":"peanut butter")+" and serve immediately."]}
+ else if(t==="muffins"){const bf=fn(fr&&/banana|apple|pear|berr/.test(fr)?fr:rnd(["apple","banana","berries","pear"])),bb=/berr/.test(bf);
+  A(fl,60*n,"g",false);A("baking powder",2.5*n,"g",false);A("sugar",15*n,"g",false);A("cinnamon",n,"g",false);A("salt",1,"g");A(bf,60*n,"g",has(new RegExp(bf.slice(0,4))));ne?A(yog,60*n,"g",has(/yogh?urt/)):A("eggs",Math.ceil(n/2),"pcs",has(/\beggs?\b/));A(milk,40*n,"ml",has(/milk/));A("oil",15*n,"ml",false);
+  o.title=cap(bf)+" muffins";o.min=35;o.steps=["Heat the oven to 190 °C and line a muffin tin.",`Mix the ${fl}, baking powder, sugar, cinnamon and salt.`,`Whisk the ${ne?yog:"eggs"}, ${milk} and oil.`,/banana/.test(bf)?`Mash the ${bf} into the wet mix.`:bb?"":`Grate the ${bf} into the wet mix.`,`Fold the wet mix into the dry until just combined${bb?`, then gently fold in the ${bf}`:""}, and divide between about ${2*n} cases.`,"Bake 18–20 minutes until risen and a skewer comes out clean."].filter(Boolean)}
+ else if(t==="cookies"){const oc=has(/oat/);A(fl,(oc?30:45)*n,"g",false);oc&&A(oats,20*n,"g",true);A("baking soda",Math.max(1,n/2),"g",false);A(fat,25*n,"g",false);A("sugar",25*n,"g",false);A("salt",1,"g");ne?A(milk,15*n,"ml",false):A("eggs",Math.ceil(n/2),"pcs",has(/\beggs?\b/));A("dark chocolate",25*n,"g",has(/chocolate/));
+  o.title=oc?"Oat and chocolate cookies":"Chocolate chip cookies";o.min=30;o.steps=["Heat the oven to 180 °C and line a tray.",`Cream the soft ${fat} with the sugar for 3 minutes until pale.`,ne?`Beat in the ${milk}.`:"Beat in the eggs.",`Fold in the ${fl}${oc?`, ${oats}`:""}, baking soda and salt, then the chopped dark chocolate.`,`Scoop ${3*n} mounds onto the tray with space between them. Bake 10–12 minutes until the edges are golden and the middles still soft.`,"Cool 5 minutes on the tray."]}
+ else if(t==="scones"){const ch=!nd&&has(/cheese|cheddar|feta|parmesan/);A(fl,80*n,"g",false);A("baking powder",4*n,"g",false);A(fat,20*n,"g",false);A("salt",1,"g");A(milk,40*n,"ml",has(/milk/));
+  if(ch)A("cheese",25*n,"g",true);else{A("sugar",10*n,"g",false);A("raisins",20*n,"g",has(/raisin|sultana/))}
+  o.title=ch?"Cheese scones":"Raisin scones";o.min=30;o.steps=["Heat the oven to 220 °C.",`Mix the ${fl}, baking powder and salt, then rub in the cold ${fat} until it looks like crumbs.`,ch?"Stir in most of the grated cheese.":"Stir in the sugar and raisins.",`Stir in the ${milk} to make a soft dough.`,`Pat out 3 cm thick, cut rounds and place on a tray${ch?", topped with the rest of the cheese":""}.`,"Bake 12–14 minutes until risen and golden."]}
+ else if(t==="flatbread"){A(fl,80*n,"g",false);A(yog,70*n,"g",has(/yogh?urt/));A("baking powder",2*n,"g",false);A("salt",1,"g");A("oil",5*n,"ml",false);
+  o.title="Yogurt flatbreads";o.min=25;o.steps=[`Mix the ${fl}, baking powder and salt, then stir in the ${yog} and knead 2 minutes into a soft dough. Rest 10 minutes.`,`Divide into ${2*n} pieces and roll each thin.`,"Cook in a dry hot pan 1–2 minutes per side until puffed with brown spots, then brush with oil."]}
+ else if(t==="oatbars"){A(oats,60*n,"g",has(/oat/));A("ripe banana",n,"pcs",has(/banana/));A(fat,20*n,"g",false);A(sw,10*n,"g",false);A("cinnamon",n,"g",false);A(nut,15*n,"g",false);A("salt",.5,"g");
+  o.title="Banana oat bars";o.min=35;o.steps=["Heat the oven to 180 °C and line a small tin.",`Mash the banana and stir in the melted ${fat} and ${sw}.`,`Mix in the ${oats}, cinnamon, chopped ${nut} and salt.`,"Press 2 cm thick into the tin and bake 20 minutes until golden.","Cool completely before cutting into bars."]}
  else{A("chia seeds",25*n,"g",has(/chia/));A(milk,150*n,"ml",has(/milk/));A(sw,10*n,"g",false);A(f,60*n,"g",!!fr);
   o.title=cap(f)+" chia pudding";o.min=5;o.steps=["Stir the chia, "+milk+" and "+sw+" together; rest 10 minutes and stir again.","Refrigerate at least 4 hours or overnight.","Top with "+f+"."]}
  return{title:o.title,desc:`Quantities are for ${n} ${n>1?"people":"person"}.${t==="chia"?" Plus 4 hours chilling.":""}`,min:o.min,ing,steps:o.steps};
@@ -170,6 +187,7 @@ const DEL={salmon:6,cod:6,prawns:3,tuna:2};
 const ASIAN=["Chinese","Japanese","Korean","Thai","Vietnamese","Indonesian"],BAKEOK=["Italian","Greek","French","Spanish","Portuguese","Balkan","Hungarian","German","Polish","Mexican","Turkish"]; // delicate proteins go in late
 
 G.cook=function(it,n,cuName,diet,o){
+ it=it.filter(w=>!G.LO.test(w));
  diet=diet||{};o=o||{};const strict=!!o.strict,basic=!!o.basic;let nd=diet.vegan||diet.dairy;
  const bp=new Set([...(diet.veg||diet.vegan?G.MEAT:[]),...(diet.vegan||diet.noegg?["egg"]:[]),...(nd?["halloumi","paneer"]:[]),...(diet.nofish?["salmon","cod","prawns","tuna"]:[]),...(diet.nosoy?["tofu","tempeh"]:[]),...(diet.halal||diet.kosher||diet.nopork?["pork","bacon","sausage"]:[]),...(diet.kosher||diet.noshell?["prawns"]:[]),...(diet.pesc?["chicken","chickenthigh","pork","beef","lamb","duck","sausage","bacon"]:[]),...(diet.avoidP||[])]),bc=new Set([...(diet.gf?["pasta","noodles","couscous","bulgur","bread","barley","gnocchi"]:[]),...(diet.avoidC||[])]);
  const PA=P.filter(x=>!bp.has(x[0])),CA=C.filter(x=>!bc.has(x[0]));
@@ -282,7 +300,7 @@ const inl=(s,k)=>(" "+s+" ").includes(" "+k+" ");
 const kP=(cu,k)=>!inl(G.R[cu][0],k),kC=(cu,k)=>!inl(G.R[cu][1],k);
 // parents: [{title,names:[ingredient names]}, ...]; o: {cuisine, fridge:[items], strict, basic, small:"Breakfast"|"Snack"|"Dessert"}
 G.remix=function(parents,it,n,diet,o){
- o=o||{};const fr=o.fridge||[],names=parents.flatMap(r=>r.names),from=parents.map(r=>"\u201c"+r.title+"\u201d").join(" and ");
+ o=o||{};const fr=(o.fridge||[]).filter(w=>!G.LO.test(w)),names=parents.flatMap(r=>r.names),from=parents.map(r=>"\u201c"+r.title+"\u201d").join(" and ");
  const desc=c=>`A new dish remixed from ${from}${c?`, cooked with ${c} flavours`:""}. Quantities are for ${n} ${n>1?"people":"person"}.`;
  if(o.small){const g=G.makeSmall(o.small,[...names.map(x=>x.toLowerCase()),...fr],n,diet);g.desc=desc();g.remix=1;g.from=from;return g}
  const nm={},cand={p:[],c:[],v:[]},fc={p:[],c:[],v:[]},add=(L,x)=>{const s=slotOf(x);if(!s)return;if(!L[s[0]].includes(s[1]))L[s[0]].push(s[1]);if(!nm[s[0]+s[1]])nm[s[0]+s[1]]=x.toLowerCase()};
