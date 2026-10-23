@@ -91,7 +91,9 @@ KITCHEN.add(
   },
   {
     "id": "pasta-arrabbiata",
-    "leftoverSwaps": ["pasta"],
+    "leftoverSwaps": [
+      "pasta"
+    ],
     "name": "Pasta arrabbiata",
     "meal": "big",
     "cuisine": "Italian",
@@ -141,7 +143,9 @@ KITCHEN.add(
   },
   {
     "id": "spaghetti-aglio-e-olio",
-    "leftoverSwaps": ["pasta"],
+    "leftoverSwaps": [
+      "pasta"
+    ],
     "name": "Spaghetti aglio e olio",
     "meal": "big",
     "cuisine": "Italian",
@@ -182,7 +186,9 @@ KITCHEN.add(
   },
   {
     "id": "creamy-mushroom-pasta",
-    "leftoverSwaps": ["pasta"],
+    "leftoverSwaps": [
+      "pasta"
+    ],
     "name": "Creamy mushroom pasta",
     "meal": "big",
     "cuisine": "Italian",
@@ -291,7 +297,9 @@ KITCHEN.add(
   },
   {
     "id": "garlic-prawn-pasta",
-    "leftoverSwaps": ["pasta"],
+    "leftoverSwaps": [
+      "pasta"
+    ],
     "name": "Garlic prawn pasta",
     "meal": "big",
     "cuisine": "Italian",
@@ -454,7 +462,9 @@ KITCHEN.add(
   },
   {
     "id": "fancy-prawn-linguine-lemon-cream",
-    "leftoverSwaps": ["pasta"],
+    "leftoverSwaps": [
+      "pasta"
+    ],
     "name": "Prawn linguine with lemon cream",
     "meal": "big",
     "cuisine": "Italian",
@@ -503,7 +513,9 @@ KITCHEN.add(
   },
   {
     "id": "left-creamy-chicken-mushroom-pasta",
-    "leftoverSwaps": ["pasta"],
+    "leftoverSwaps": [
+      "pasta"
+    ],
     "name": "Creamy chicken and mushroom pasta",
     "meal": "big",
     "cuisine": "Italian",
@@ -708,7 +720,9 @@ KITCHEN.add(
   },
   {
     "id": "world-puttanesca",
-    "leftoverSwaps": ["pasta"],
+    "leftoverSwaps": [
+      "pasta"
+    ],
     "name": "Spaghetti alla puttanesca",
     "meal": "big",
     "cuisine": "Italian",
@@ -760,68 +774,10 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-mushroom-risotto",
-    "name": "Risotto ai funghi (mushroom risotto)",
-    "meal": "big",
-    "cuisine": "Italian",
-    "time": 40,
-    "serves": 2,
-    "ing": [
-      [
-        "rice",
-        180
-      ],
-      [
-        "mushrooms",
-        280
-      ],
-      [
-        "onion",
-        90
-      ],
-      [
-        "garlic",
-        8
-      ],
-      [
-        "vegetable-stock",
-        650
-      ],
-      [
-        "white-wine",
-        70
-      ],
-      [
-        "butter",
-        25
-      ],
-      [
-        "parmesan",
-        45
-      ],
-      [
-        "olive-oil",
-        12
-      ],
-      [
-        "thyme",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Bring {vegetable-stock} to a gentle simmer in a saucepan.",
-      "Cook {onion} and {garlic} in {olive-oil} with half the {butter}; add {mushrooms} and {thyme} and sauté until browned.",
-      "Stir in {rice}, pour in {white-wine} and let it reduce. Add warm stock a ladle at a time, stirring often, for 18–20 minutes.",
-      "When the grains are creamy and just tender, stir in remaining {butter}, {parmesan} and {black-pepper}."
-    ]
-  },
-  {
     "id": "world-pasta-alla-norma",
-    "leftoverSwaps": ["pasta"],
+    "leftoverSwaps": [
+      "pasta"
+    ],
     "name": "Pasta alla Norma",
     "meal": "big",
     "cuisine": "Italian",
@@ -870,7 +826,9 @@ KITCHEN.add(
   },
   {
     "id": "world-pasta-amatriciana",
-    "leftoverSwaps": ["pasta"],
+    "leftoverSwaps": [
+      "pasta"
+    ],
     "name": "Pasta all’amatriciana",
     "meal": "big",
     "cuisine": "Italian",
@@ -1050,97 +1008,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-eggplant-parm",
-    "name": "Melanzane alla Parmigiana",
-    "meal": "big",
-    "cuisine": "Italian",
-    "time": 65,
-    "serves": 2,
-    "ing": [
-      [
-        "aubergine",
-        500
-      ],
-      [
-        "canned-tomatoes",
-        350
-      ],
-      [
-        "garlic",
-        8
-      ],
-      [
-        "olive-oil",
-        25
-      ],
-      [
-        "mozzarella",
-        150
-      ],
-      [
-        "parmesan",
-        45
-      ],
-      [
-        "basil",
-        10
-      ],
-      [
-        "salt",
-        4
-      ]
-    ],
-    "steps": [
-      "Slice {aubergine}, salt lightly and leave 15 minutes; pat dry, brush with some {olive-oil} and roast at 220°C until browned.",
-      "Gently cook {garlic} in the remaining {olive-oil}; add {canned-tomatoes} and simmer 15 minutes.",
-      "Layer tomato sauce, {aubergine}, torn {mozzarella}, {parmesan} and {basil} in a small baking dish.",
-      "Bake at 190°C for 25–30 minutes until bubbling, then rest 10 minutes before serving."
-    ]
-  },
-  {
-    "id": "world-caprese",
-    "name": "Insalata Caprese",
-    "meal": "bite",
-    "cuisine": "Italian",
-    "time": 10,
-    "serves": 2,
-    "ing": [
-      [
-        "tomato",
-        300
-      ],
-      [
-        "mozzarella",
-        180
-      ],
-      [
-        "basil",
-        12
-      ],
-      [
-        "olive-oil",
-        18
-      ],
-      [
-        "vinegar",
-        6
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "salt",
-        2
-      ]
-    ],
-    "steps": [
-      "Slice {tomato} and {mozzarella} into even rounds.",
-      "Arrange with leaves of {basil}, alternating the slices on a platter.",
-      "Drizzle with {olive-oil} and a little {vinegar}; season with {salt} and {black-pepper}."
-    ]
-  },
-  {
     "id": "world-potato-gnocchi",
     "name": "Homemade potato gnocchi with tomato basil sauce",
     "meal": "big",
@@ -1250,7 +1117,9 @@ KITCHEN.add(
   },
   {
     "id": "world-pasta-limone",
-    "leftoverSwaps": ["pasta"],
+    "leftoverSwaps": [
+      "pasta"
+    ],
     "name": "Pasta al limone",
     "meal": "big",
     "cuisine": "Italian",
@@ -1299,7 +1168,9 @@ KITCHEN.add(
   },
   {
     "id": "italian-puttanesca",
-    "leftoverSwaps": ["pasta"],
+    "leftoverSwaps": [
+      "pasta"
+    ],
     "name": "Pasta alla puttanesca",
     "meal": "big",
     "cuisine": "Italian",

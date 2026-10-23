@@ -412,58 +412,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-mujaddara",
-    "name": "Mujaddara (lentils and rice with onions)",
-    "meal": "big",
-    "cuisine": "Middle Eastern",
-    "time": 50,
-    "serves": 2,
-    "ing": [
-      [
-        "green-lentils",
-        160
-      ],
-      [
-        "rice",
-        130
-      ],
-      [
-        "onion",
-        300
-      ],
-      [
-        "olive-oil",
-        35
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "ground-coriander",
-        2
-      ],
-      [
-        "yogurt",
-        100
-      ],
-      [
-        "salt",
-        4
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Rinse {green-lentils}; simmer in water for 25–30 minutes until nearly tender, then drain if needed.",
-      "Slice {onion} thinly and cook slowly in {olive-oil} for 20–25 minutes until deeply caramelized, reserving some for the topping.",
-      "Add {rice}, {cumin}, {ground-coriander}, {salt}, {black-pepper}, the cooked lentils and enough water to finish cooking the rice.",
-      "Cover and cook on low until the rice is tender and liquid absorbed. Rest 5 minutes and serve with the reserved onions and {yogurt}."
-    ]
-  },
-  {
     "id": "world-palestinian-musakhan",
     "name": "Musakhan-style sumac chicken and onions",
     "meal": "big",
@@ -525,7 +473,7 @@ KITCHEN.add(
   },
   {
     "id": "world-egyptian-koshari",
-"name": "Egyptian koshari-style rice, lentils and pasta",
+    "name": "Egyptian koshari-style rice, lentils and pasta",
     "meal": "big",
     "cuisine": "Middle Eastern",
     "time": 50,

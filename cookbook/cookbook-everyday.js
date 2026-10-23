@@ -931,49 +931,6 @@ KITCHEN.add([
     ]
   },
   {
-    "id": "world-basque-cheesecake",
-    "name": "Basque burnt cheesecake",
-    "meal": "treat",
-    "time": 60,
-    "serves": 8,
-    "ing": [
-      [
-        "cream-cheese",
-        500
-      ],
-      [
-        "sugar",
-        160
-      ],
-      [
-        "eggs",
-        "4pc"
-      ],
-      [
-        "cream",
-        250
-      ],
-      [
-        "flour",
-        25
-      ],
-      [
-        "vanilla",
-        4
-      ],
-      [
-        "salt",
-        2
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 220°C and line a springform tin with crumpled baking paper extending above the rim.",
-      "Beat {cream-cheese} with {sugar} until smooth. Add {eggs} one at a time, then mix in {cream}, {flour}, {vanilla} and {salt}.",
-      "Pour into the tin and bake 35–45 minutes until the top is very dark brown and the centre still wobbles.",
-      "Cool completely in the tin; chill for a firmer slice or serve at room temperature for a softer centre."
-    ]
-  },
-  {
     "id": "world-pear-almond-tart",
     "name": "Pear and almond tart",
     "meal": "treat",
@@ -1135,7 +1092,9 @@ KITCHEN.add([
   },
   {
     "id": "world-british-fish-pie",
-    "leftoverSwaps": ["potatoes"],
+    "leftoverSwaps": [
+      "potatoes"
+    ],
     "name": "Creamy fish pie with potato topping",
     "meal": "big",
     "time": 65,
@@ -1199,7 +1158,9 @@ KITCHEN.add([
   },
   {
     "id": "world-shepherds-pie",
-    "leftoverSwaps": ["potatoes"],
+    "leftoverSwaps": [
+      "potatoes"
+    ],
     "name": "Shepherd’s pie with mashed potato",
     "meal": "big",
     "time": 70,
@@ -1334,7 +1295,9 @@ KITCHEN.add([
   },
   {
     "id": "world-macaroni-cheese",
-    "leftoverSwaps": ["pasta"],
+    "leftoverSwaps": [
+      "pasta"
+    ],
     "name": "Baked macaroni and cheese",
     "meal": "big",
     "time": 40,
@@ -1495,7 +1458,9 @@ KITCHEN.add([
   },
   {
     "id": "world-irish-colcannon",
-    "leftoverSwaps": ["potatoes"],
+    "leftoverSwaps": [
+      "potatoes"
+    ],
     "name": "Irish colcannon",
     "meal": "big",
     "time": 30,

@@ -3,7 +3,9 @@ KITCHEN.add(
 [
   {
     "id": "greek-chicken-rice-bowl",
-    "leftoverSwaps": ["rice"],
+    "leftoverSwaps": [
+      "rice"
+    ],
     "name": "Greek chicken rice bowl",
     "meal": "big",
     "cuisine": "Greek",
@@ -353,140 +355,8 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-greek-spanakopita",
-    "name": "Spanakopita (spinach and feta pie)",
-    "meal": "big",
-    "cuisine": "Greek",
-    "time": 55,
-    "serves": 4,
-    "ing": [
-      [
-        "phyllo-pastry",
-        250
-      ],
-      [
-        "spinach",
-        400
-      ],
-      [
-        "feta",
-        180
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "onion",
-        100
-      ],
-      [
-        "dill",
-        12
-      ],
-      [
-        "olive-oil",
-        40
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "nutmeg",
-        1
-      ]
-    ],
-    "steps": [
-      "Cook {onion} in a little {olive-oil}; add {spinach} and cook until wilted. Drain and squeeze out excess liquid, then cool.",
-      "Mix the spinach with crumbled {feta}, {eggs}, chopped {dill}, {black-pepper} and {nutmeg}.",
-      "Brush a baking dish with {olive-oil}. Layer half the {phyllo-pastry} sheets, brushing lightly between layers; add the filling and cover with the remaining sheets.",
-      "Score the top and bake at 190°C for 35–40 minutes until crisp and golden. Rest 10 minutes before slicing."
-    ]
-  },
-  {
-    "id": "world-greek-moussaka",
-    "name": "Greek moussaka",
-    "meal": "big",
-    "cuisine": "Greek",
-    "time": 90,
-    "serves": 4,
-    "ing": [
-      [
-        "aubergine",
-        500
-      ],
-      [
-        "beef-mince",
-        400
-      ],
-      [
-        "potatoes",
-        250
-      ],
-      [
-        "onion",
-        120
-      ],
-      [
-        "garlic",
-        10
-      ],
-      [
-        "canned-tomatoes",
-        300
-      ],
-      [
-        "cinnamon",
-        1
-      ],
-      [
-        "oregano",
-        3
-      ],
-      [
-        "olive-oil",
-        25
-      ],
-      [
-        "milk",
-        350
-      ],
-      [
-        "butter",
-        30
-      ],
-      [
-        "flour",
-        30
-      ],
-      [
-        "parmesan",
-        50
-      ],
-      [
-        "eggs",
-        "1pc"
-      ],
-      [
-        "salt",
-        5
-      ],
-      [
-        "black-pepper",
-        2
-      ]
-    ],
-    "steps": [
-      "Slice {aubergine} and {potatoes}; brush with some {olive-oil} and roast at 220°C until lightly browned and tender.",
-      "Cook {onion} and {garlic} in a pan, add {beef-mince} and brown. Stir in {canned-tomatoes}, {cinnamon}, {oregano}, {salt} and {black-pepper}; simmer 20 minutes.",
-      "Melt {butter}, stir in {flour}, then gradually whisk in {milk} until thick. Cool slightly and mix in {eggs} and half the {parmesan}.",
-      "Layer potatoes, aubergine and meat sauce in a dish, top with the white sauce and remaining {parmesan}; bake at 180°C for 35–40 minutes. Rest 15 minutes before cutting."
-    ]
-  },
-  {
     "id": "world-greek-lemon-potatoes",
-"name": "Greek lemon-roasted potatoes",
+    "name": "Greek lemon-roasted potatoes",
     "meal": "big",
     "cuisine": "Greek",
     "time": 55,

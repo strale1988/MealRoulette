@@ -124,6 +124,7 @@ K.add=list=>list.forEach(r=>{
   const P=m=>E(who,m),Wn=m=>W(who,m);
   if(!/^[a-z0-9-]+$/.test(who))P("id must be a lowercase slug");
   if(K.recipes.some(x=>x.id===r.id))P("duplicate recipe id");
+  if(r.name&&K.recipes.some(x=>x.title.toLowerCase()===String(r.name).toLowerCase()))P("duplicate recipe name (same dish already in the cookbook)");
   if(!r.name)P("missing name");else if(/'S\b/.test(r.name))Wn("odd capital after apostrophe in name");
   const meals=[...new Set(String(r.meal||"").split(/[ ,]+/).filter(Boolean).map(m=>{if(!K.MEAL[m])P("unknown meal '"+m+"'");return K.MEAL[m]}).filter(Boolean))];
   if(!meals.length)P("no meal given");

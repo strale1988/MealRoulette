@@ -199,7 +199,7 @@ G.cook=function(it,n,cuName,diet,o){
  const mapN=a=>{let n=a[0];if(diet.nosoy)n=n.replace("soy sauce","coconut aminos");else if(diet.gf)n=n.replace("soy sauce","tamari");
   if(diet.halal&&n==="mirin")return["sugar",5,"g"];if(diet.halal&&n==="sherry vinegar")return["apple cider vinegar",5,"ml"];return[n,a[1],a[2]]};
  const garOf=k=>(G.gar[k]||"").split("|").filter(Boolean).map(x=>{const m=x.match(/^(.*) ([\d.]+) (g|ml)$/);return[m[1],+m[2],m[3]]}).filter(a=>!(nd&&/parmesan|feta|yogurt|cream|butter|cheese/.test(a[0])));
- const cuOf=k=>{const c0=G.cuisines[k],f=a=>!strict||av(a[0]),sa=c0.sauce.filter(a=>!((nd&&/yogurt|cream/.test(a[0]))||diet.vegan&&/honey/.test(a[0]))).map(mapN).filter(f);
+ const cuOf=k=>{const c0=G.cuisines[k],f=a=>!strict||av(a[0]),sa=c0.sauce.filter(a=>!((nd&&/yogurt|cream/.test(a[0]))||diet.vegan&&/honey/.test(a[0])||(diet.nosoy||diet.gf)&&/gochujang/.test(a[0]))).map(mapN).filter(f);
   return{...c0,sauce:sa,ar:c0.ar.filter(f),sp:c0.sp.filter(f),gar:garOf(k).filter(f),fat:nd&&c0.fat==="butter"?"oil":c0.fat}};
  // choose the cuisine so that protein and carb actually suit it
  const p0=hp.length?rndU(hp):null,c0=hc.length?rndU(hc):null;let cuN=G.cuisines[cuName]?cuName:null;

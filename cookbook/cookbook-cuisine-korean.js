@@ -62,58 +62,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-kimchi-fried-rice",
-    "name": "Kimchi fried rice",
-    "meal": "big",
-    "cuisine": "Korean",
-    "time": 20,
-    "serves": 2,
-    "ing": [
-      [
-        "left-rice",
-        350
-      ],
-      [
-        "kimchi",
-        150
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "sesame-oil",
-        12
-      ],
-      [
-        "soy-sauce",
-        12
-      ],
-      [
-        "gochujang",
-        10
-      ],
-      [
-        "spring-onion",
-        40
-      ],
-      [
-        "sesame-seeds",
-        8
-      ],
-      [
-        "nori",
-        2
-      ]
-    ],
-    "steps": [
-      "Break up cold {left-rice} with a fork and chop {kimchi} into bite-sized pieces.",
-      "Heat {sesame-oil} in a skillet; fry {kimchi} for 3 minutes, then stir in {gochujang} and {soy-sauce}.",
-      "Add {left-rice} and stir-fry over high heat until piping hot and the grains are separate.",
-      "Fry {eggs} to your liking in a separate pan and serve on the rice, topped with {spring-onion}, {sesame-seeds} and crumbled {nori}."
-    ]
-  },
-  {
     "id": "world-bulgogi",
     "name": "Korean bulgogi beef",
     "meal": "big",

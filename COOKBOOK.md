@@ -1,6 +1,6 @@
 # Meal Roulette cookbook
 
-The curated world-cookbook expansion is documented in `RECIPE-EXPANSION.md`. The current collection contains 445 validated recipes across 281 catalog ingredients.
+The curated world-cookbook expansion is documented in `RECIPE-EXPANSION.md`. The current collection contains 431 validated recipes across 281 catalog ingredients.
 
 Three layers, each with one job:
 
@@ -25,7 +25,7 @@ Everything else (shopping aisles, nutrition, diets, "only what I have", remix) i
 - `meal`: `morning` · `bite` · `big` · `treat` (combine with commas).
 - Amounts are **grams** for `serves` people. Pieces are strings: `"2pc"`, `"0.5pc"`. No ml, ever.
 - Mention ingredients in steps as `{id}`. The app prints the catalog name, so the list and the method can never disagree. `{id#}` prints amount and name ("240 g canned chickpeas").
-- Put cuisine-tagged recipes in `cookbook/cookbook-cuisine-<slug>.js`. For a new cuisine, create its own file. Add every new cookbook script to `index.html` and its `cookbook/...` path to `sw.js`, then bump the service-worker cache version.
+- Put cuisine-tagged recipes in `cookbook/cookbook-cuisine-<slug>.js`. For a new cuisine, create its own file. Add every new cookbook file to the `FILES` list in the loader near the end of `index.html` and to `sw.js`, then bump the service-worker cache version (`node tools/check.js` fails if either list is out of sync).
 
 
 ## Cooked-leftover substitutions

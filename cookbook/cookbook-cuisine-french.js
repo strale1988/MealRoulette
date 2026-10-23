@@ -471,50 +471,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-quiche-lorraine",
-    "name": "Quiche Lorraine",
-    "meal": "big",
-    "cuisine": "French",
-    "time": 65,
-    "serves": 4,
-    "ing": [
-      [
-        "puff-pastry",
-        250
-      ],
-      [
-        "bacon",
-        150
-      ],
-      [
-        "eggs",
-        "3pc"
-      ],
-      [
-        "cream",
-        220
-      ],
-      [
-        "gruyere",
-        100
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "nutmeg",
-        1
-      ]
-    ],
-    "steps": [
-      "Line a tart tin with {puff-pastry}, prick the base and blind-bake at 190°C for 12 minutes.",
-      "Cook {bacon} in a skillet until lightly golden; scatter it over the pastry shell with grated {gruyere}.",
-      "Whisk {eggs}, {cream}, {black-pepper} and {nutmeg}; pour into the shell.",
-      "Bake at 180°C for 30–35 minutes until just set and golden. Rest 10 minutes before cutting."
-    ]
-  },
-  {
     "id": "world-mustard-chicken",
     "name": "French mustard cream chicken",
     "meal": "big",
@@ -640,71 +596,6 @@ KITCHEN.add(
       "Add {canned-tomatoes}, {vegetable-stock}, cubed {potatoes} and {salt}; simmer 15 minutes until the potatoes are nearly tender.",
       "Add chunks of {white-fish} and {prawns}; simmer gently 5–7 minutes until the fish flakes and the prawns are opaque. Season with {fish-sauce} if needed.",
       "Finish with {parsley} and serve with toasted {bread} to dip into the broth."
-    ]
-  },
-  {
-    "id": "world-salade-nicoise",
-    "leftoverSwaps": ["potatoes"],
-    "name": "Salade niçoise",
-    "meal": "big",
-    "cuisine": "French",
-    "time": 30,
-    "serves": 2,
-    "ing": [
-      [
-        "tuna",
-        150
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "potatoes",
-        250
-      ],
-      [
-        "green-beans",
-        160
-      ],
-      [
-        "lettuce",
-        120
-      ],
-      [
-        "tomato",
-        180
-      ],
-      [
-        "black-olives",
-        40
-      ],
-      [
-        "olive-oil",
-        25
-      ],
-      [
-        "vinegar",
-        12
-      ],
-      [
-        "mustard",
-        8
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Boil {eggs} for 8–9 minutes; cool and peel. Boil {potatoes} until just tender, then slice.",
-      "Cook {green-beans} in boiling water until crisp-tender; cool under cold water and drain.",
-      "Whisk {olive-oil}, {vinegar}, {mustard}, {salt} and {black-pepper} into a dressing.",
-      "Arrange {lettuce}, {tomato}, potatoes, green beans, drained {tuna}, halved eggs and {black-olives} on a platter. Drizzle with dressing."
     ]
   },
   {
@@ -854,7 +745,9 @@ KITCHEN.add(
   },
   {
     "id": "french-salade-nicoise",
-    "leftoverSwaps": ["potatoes"],
+    "leftoverSwaps": [
+      "potatoes"
+    ],
     "name": "Salade niçoise",
     "meal": "big",
     "cuisine": "French",

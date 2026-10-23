@@ -270,40 +270,9 @@ details .row button{flex:none}
 </div>
 <footer>© <span id="yr">2026</span> Strahinja Drazic. All rights reserved.</footer>
 </main>
-<script src="kitchen.js"></script>
-<script src="ingredients.js"></script>
-<script src="cookbook/cookbook-bake.js"></script>
-<script src="cookbook/cookbook-cuisine-balkan.js"></script>
-<script src="cookbook/cookbook-cuisine-cajun.js"></script>
-<script src="cookbook/cookbook-cuisine-caribbean.js"></script>
-<script src="cookbook/cookbook-cuisine-chinese.js"></script>
-<script src="cookbook/cookbook-cuisine-ethiopian.js"></script>
-<script src="cookbook/cookbook-cuisine-french.js"></script>
-<script src="cookbook/cookbook-cuisine-german.js"></script>
-<script src="cookbook/cookbook-cuisine-greek.js"></script>
-<script src="cookbook/cookbook-cuisine-hungarian.js"></script>
-<script src="cookbook/cookbook-cuisine-indian.js"></script>
-<script src="cookbook/cookbook-cuisine-indonesian.js"></script>
-<script src="cookbook/cookbook-cuisine-italian.js"></script>
-<script src="cookbook/cookbook-cuisine-japanese.js"></script>
-<script src="cookbook/cookbook-cuisine-korean.js"></script>
-<script src="cookbook/cookbook-cuisine-mexican.js"></script>
-<script src="cookbook/cookbook-cuisine-middle-eastern.js"></script>
-<script src="cookbook/cookbook-cuisine-moroccan.js"></script>
-<script src="cookbook/cookbook-cuisine-persian.js"></script>
-<script src="cookbook/cookbook-cuisine-peruvian.js"></script>
-<script src="cookbook/cookbook-cuisine-polish.js"></script>
-<script src="cookbook/cookbook-cuisine-portuguese.js"></script>
-<script src="cookbook/cookbook-cuisine-spanish.js"></script>
-<script src="cookbook/cookbook-cuisine-thai.js"></script>
-<script src="cookbook/cookbook-cuisine-turkish.js"></script>
-<script src="cookbook/cookbook-cuisine-vietnamese.js"></script>
-<script src="cookbook/cookbook-everyday.js"></script>
-<script src="cookbook/cookbook-fancy.js"></script>
-<script src="cookbook/cookbook-leftovers.js"></script>
-<script src="cookbook/cookbook-light.js"></script>
-<script src="engine.js"></script>
-<script>
+<div id="boot" role="alert" hidden style="margin:24px 16px;padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--card);text-align:center"><b>Meal Roulette could not finish loading.</b><p class="hint" style="margin:8px 0 12px">Some files did not download (usually a weak connection). Your saved settings are safe.</p><button class="lnk" id="bootbtn">Reload</button></div>
+<noscript><p style="padding:16px">Meal Roulette needs JavaScript.</p></noscript>
+<script type="text/plain" id="main">
 const K=window.KITCHEN,$=id=>document.getElementById(id);
 const MEALS=[["Breakfast","sunrise","Morning"],["Snack","cookie","Bite"],["Main","sun","Big plate"],["Dessert","cupcake","Treat"]];
 const normM=m=>m==="Lunch"||m==="Dinner"?"Main":m,isMain=m=>normM(m)==="Main",ML=m=>(MEALS.find(x=>x[0]===normM(m))||[])[2]||m;
@@ -443,7 +412,7 @@ function addLeftover(value){const raw=(value===undefined?$("ladd").value:value).
   if(!alreadyHas(S.leftovers,v))S.leftovers.push(v);$("ladd").value="";hideSuggest("ladd-suggest");save();clearCurrentForInventoryChange();draw()}
 function hideSuggest(id){const box=$(id);if(box){box.hidden=true;box.innerHTML=""}}
 function attachAutocomplete(inputId,boxId,kind,onPick,onFree){
-  const input=$(inputId),box=$(boxId);let options=[],active=0;
+  const input=$(inputId),box=$(boxId);let options=[],active=0,picking=false;
   const allowed=e=>kind==="left"?isLeftId(e.id):!isLeftId(e.id);
   function render(){const q=K.norm(input.value);if(!q){hideSuggest(boxId);options=[];return;}
     const ranked=[];
@@ -453,7 +422,7 @@ function attachAutocomplete(inputId,boxId,kind,onPick,onFree){
     options=ranked.sort((a,b)=>a.score-b.score||a.e.name.localeCompare(b.e.name,"en",{sensitivity:"base"})).slice(0,8).map(x=>x.e);active=0;
     if(!options.length){hideSuggest(boxId);return;}
     box.innerHTML=options.map((e,i)=>`<button type="button" role="option" data-id="${esc(e.id)}" aria-selected="${i===active}"><span>${esc(e.name)}</span><small>${esc(K.AISLE[e.aisle]||e.aisle)}</small></button>`).join("");box.hidden=false;
-    box.querySelectorAll("button").forEach((b,i)=>{b.onpointerdown=e=>e.preventDefault();b.onclick=()=>choose(i)});
+    box.querySelectorAll("button").forEach((b,i)=>{b.onpointerdown=e=>{e.preventDefault();picking=true;setTimeout(()=>picking=false,600)};b.onmousedown=b.ontouchstart=e=>{picking=true;setTimeout(()=>picking=false,600)};b.onclick=()=>choose(i)});
   }
   function choose(i){const e=options[i];if(!e)return;hideSuggest(boxId);onPick(e.name);}
   input.addEventListener("input",render);
@@ -465,7 +434,9 @@ function attachAutocomplete(inputId,boxId,kind,onPick,onFree){
     else if(e.key==="Enter"||e.key===","){e.preventDefault();onFree();}
     else if(e.key==="Backspace"&&!input.value){if(kind==="fridge"&&S.pantry.length){S.pantry.pop();S.urgent=S.urgent.filter(x=>S.pantry.includes(x));save();draw();}else if(kind==="staple"&&S.staples.length){S.staples.pop();save();draw();}else if(kind==="left"&&S.leftovers.length){S.leftovers.pop();save();clearCurrentForInventoryChange();draw();}}
   });
-  input.addEventListener("blur",()=>{if(input.value.trim())onFree();hideSuggest(boxId);});
+  /* The commit is delayed a moment: re-drawing the lists on blur would replace the button being tapped and swallow its tap on phones,
+     and tapping a suggestion blurs the field first on some of them. */
+  input.addEventListener("blur",()=>setTimeout(()=>{if(picking)return;if(input.value.trim())onFree();hideSuggest(boxId)},250));
   function updateActive(){box.querySelectorAll("button").forEach((b,i)=>b.setAttribute("aria-selected",String(i===active)));const b=box.querySelectorAll("button")[active];if(b)b.scrollIntoView({block:"nearest"});}
   document.addEventListener("pointerdown",e=>{if(!box.contains(e.target)&&e.target!==input)hideSuggest(boxId)});
 }
@@ -602,6 +573,7 @@ function favs(){
   $("fav").querySelectorAll("button").forEach(b=>b.onclick=()=>{const r=f[+b.dataset.i];S.meal=normM(r.meal)||S.meal;S.pm[S.meal]=true;save();draw();show(r,"");scrollTo({top:0,behavior:"smooth"})});
 }
 function run(what,single){
+  [["add",addItem],["sadd",addStaple],["ladd",addLeftover]].forEach(([id,fn])=>{if($(id).value.trim())fn()}); // text typed but not yet confirmed still counts
   const pl=!!S.plan&&!single,rl=$("reel"),rt=$("rt"),o=$("out"),nt=$("note");rl.querySelector("small").textContent=pl?"Planning your days…":"Picking something tasty…";
   const btns=document.querySelectorAll(".btns button"),rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
   btns.forEach(b=>b.disabled=true);o.innerHTML="";nt.textContent=pl?"Planning your days…":what==="remix"?"Remixing a new recipe…":"Picking something tasty…";
@@ -722,7 +694,27 @@ const cuisineOptions=Object.keys(GEN.cuisines).sort((a,b)=>a.localeCompare(b,"en
 $("cuisine").innerHTML='<option value="">Surprise me</option>'+cuisineOptions.map(c=>`<option${c===S.cuisine?" selected":""}>${c}</option>`).join("");
 $("yr").textContent=new Date().getFullYear();
 draw();favs();plansUI();
-if("serviceWorker" in navigator&&location.protocol.startsWith("http"))navigator.serviceWorker.register("sw.js").catch(()=>{});
+if("serviceWorker" in navigator&&location.protocol.startsWith("http")){
+  const had=!!navigator.serviceWorker.controller;let reloaded=false;
+  navigator.serviceWorker.addEventListener("controllerchange",()=>{if(had&&!reloaded){reloaded=true;location.reload()}}); // a new version took over: load it once
+  navigator.serviceWorker.register("sw.js",{updateViaCache:"none"}).then(r=>r.update&&r.update()).catch(()=>{});
+}
+</script>
+<script>
+/* Loader: downloads every file in parallel (fast on phones), runs them in order, retries a failed file once,
+   and shows a Reload button instead of a blank page if something still fails. */
+(function(){
+var FILES=["kitchen.js","ingredients.js","cookbook/cookbook-bake.js","cookbook/cookbook-cuisine-balkan.js","cookbook/cookbook-cuisine-cajun.js","cookbook/cookbook-cuisine-caribbean.js","cookbook/cookbook-cuisine-chinese.js","cookbook/cookbook-cuisine-ethiopian.js","cookbook/cookbook-cuisine-french.js","cookbook/cookbook-cuisine-german.js","cookbook/cookbook-cuisine-greek.js","cookbook/cookbook-cuisine-hungarian.js","cookbook/cookbook-cuisine-indian.js","cookbook/cookbook-cuisine-indonesian.js","cookbook/cookbook-cuisine-italian.js","cookbook/cookbook-cuisine-japanese.js","cookbook/cookbook-cuisine-korean.js","cookbook/cookbook-cuisine-mexican.js","cookbook/cookbook-cuisine-middle-eastern.js","cookbook/cookbook-cuisine-moroccan.js","cookbook/cookbook-cuisine-persian.js","cookbook/cookbook-cuisine-peruvian.js","cookbook/cookbook-cuisine-polish.js","cookbook/cookbook-cuisine-portuguese.js","cookbook/cookbook-cuisine-spanish.js","cookbook/cookbook-cuisine-thai.js","cookbook/cookbook-cuisine-turkish.js","cookbook/cookbook-cuisine-vietnamese.js","cookbook/cookbook-everyday.js","cookbook/cookbook-fancy.js","cookbook/cookbook-leftovers.js","cookbook/cookbook-light.js","engine.js"];
+var boot=document.getElementById("boot");
+function fail(){boot.hidden=false;document.getElementById("bootbtn").onclick=function(){
+  var go=function(){location.reload()};
+  if(window.caches&&caches.keys)caches.keys().then(function(k){return Promise.all(k.map(function(x){return caches.delete(x)}))}).then(go,go);else go()}}
+function load(src,retry){return new Promise(function(ok,no){var s=document.createElement("script");s.async=false;s.src=src+(retry?"?r="+Date.now():"");s.onload=ok;s.onerror=function(){s.remove();retry?no(src):load(src,1).then(ok,no)};document.head.appendChild(s)})}
+Promise.all(FILES.map(function(f){return load(f)})).then(function(){
+  if(!window.KITCHEN||!window.GEN)throw new Error("catalog missing");
+  var s=document.createElement("script");s.textContent=document.getElementById("main").textContent;document.body.appendChild(s);
+}).catch(function(e){console.error(e);fail()});
+})();
 </script>
 </body>
 </html>
