@@ -72,47 +72,97 @@ K.allowed=(r,d)=>{
   return true;
 };
 
+/* ---------- cooked-leftover swaps ----------
+   A recipe can use a cooked leftover instead of the raw ingredient: the raw item is replaced, the amount is adjusted for
+   cooking yield, and the cooking clause is replaced by "warm it through". Explicit opt-ins (leftoverSwaps:["rice"]) cover
+   grains and potatoes; proteins and roast veg are derived automatically from the catalog below. */
+K.AUTO_SWAPS={"chicken-breast":["left-chicken",.75],"chicken-thigh":["left-chicken",.75],"beef-strips":["left-beef",.75],"beef-mince":["left-beef",.75],"pork":["left-pork",.75],"salmon":["left-fish",.8],"white-fish":["left-fish",.8]};
+K.AUTO_WORD={"chicken-breast":/chicken|turkey/i,"chicken-thigh":/chicken|turkey/i,"beef-strips":/beef|steak|mince/i,"beef-mince":/beef|steak|mince/i,"pork":/\bpork\b/i,"salmon":/salmon|trout/i,"white-fish":/\bcod\b|\bfish\b|haddock|hake/i};
+K.AUTO_VEG=["zucchini","aubergine","red-pepper","carrot","broccoli","cauliflower","pumpkin","mushrooms"];
+const NO_AUTO=/marina[td]|brine|\bcure\b|poach|carcass|whole chicken|batter|dredge|bread(ed)?\b|crisp|bone/i;
+const PCOOK=/\b(cook|fry|brown|sear|roast|grill|bake|simmer|poach|boil|saut[eé]|braise|steam|char|griddle|heat|until|minutes?)\b/i;
+// {raw: {id, factor, auto}} for the leftovers in F (a Set of catalog ids) that this recipe can use
+K.swapsFor=(r,F)=>{
+  const out={};F=F||new Set();
+  (r.leftoverSwaps||[]).forEach(raw=>{const rule=K.LEFTOVER_SWAPS[raw];if(rule&&F.has(rule.id))out[raw]={id:rule.id,factor:rule.factor,auto:false}});
+  const taken=new Set(r.ids||r.ing.map(i=>i.id));
+  // "clean": the cooking clause can be replaced outright. "note": the recipe is not safe to rewrite clause by clause, so the leftover
+  // is renamed and a first step tells the cook to skip the cooking and just warm it through. Recipes that cook the meat by
+  // marinating or roasting it are never swapped.
+  const clauses=s=>s.split(/[;.]\s*/),strip=c=>c.replace(/\{[^}]*\}/g,"").replace(/\b(chicken|beef|pork|fish|vegetable) (stock|broth|bouillon|cube)/ig,"");
+  const chk=(raw,clean)=>{
+    if(r.steps.some(s=>NO_AUTO.test(s)&&(s.includes("{"+raw)||/marina[td]/i.test(s))))return false;
+    if(!r.steps.some(s=>s.includes("{"+raw)))return false;
+    const W=K.AUTO_WORD[raw];
+    for(const s of r.steps){let seen=false;
+      for(const c of clauses(s)){const t=c.includes("{"+raw),p=!!(W&&W.test(strip(c))),m=t||p;
+        if(clean){
+          if(!t&&p&&PCOOK.test(c))return false;
+          if(t&&PCOOK.test(c)){const oth=[...c.matchAll(/\{([a-z0-9-]+)#?\}/g)].map(x=>x[1]).filter(x=>x!==raw);if(oth.some(x=>K.ING[x]&&["veg","protein","carb"].includes(K.ING[x].role)))return false}
+          if(seen&&!m&&/\b(brown|cook|fry|sear|roast|grill|simmer)\b[^.;]*\b(them|it|everything)\b/i.test(c))return false;
+          seen=t&&!PCOOK.test(c)}
+        if(!m&&/\b(cooked through|fully cooked|until (golden|browned|charred)|until the (chicken|meat|fish|beef|pork))\b/i.test(c))return false}}
+    return true};
+  const modeOf=raw=>chk(raw,true)?"clean":chk(raw,false)?"note":null;
+  const order=r.ing.slice().sort((x,y)=>y.a-x.a);
+  for(const i of order){const A=K.AUTO_SWAPS[i.id];if(!A||!F.has(A[0])||taken.has(A[0]))continue;const mode=modeOf(i.id);if(!mode)continue;out[i.id]={id:A[0],factor:A[1],auto:true,mode};taken.add(A[0])}
+  if(F.has("left-veg")&&!taken.has("left-veg")){const v=order.find(i=>K.AUTO_VEG.includes(i.id)&&modeOf(i.id));if(v)out[v.id]={id:"left-veg",factor:.9,auto:true,mode:modeOf(v.id)}}
+  return out;
+};
+
 /* ---------- scaling, fridge matching, substitutions, step text ---------- */
 // ctx: {fridge:Set(ids), basic:bool (pantry basics count as owned), urgent:Set(ids)}
 K.resolve=(r,n,ctx)=>{
-  ctx=ctx||{};const F=ctx.fridge||new Set(),U=ctx.urgent||new Set(),k=n/r.serv,sw={},taken=new Set(r.ing.map(i=>i.id)),cooked={};
-  (r.leftoverSwaps||[]).forEach(raw=>{const rule=K.LEFTOVER_SWAPS[raw];if(rule&&F.has(rule.id))cooked[raw]={id:rule.id,factor:rule.factor}});
+  ctx=ctx||{};const F=ctx.fridge||new Set(),U=ctx.urgent||new Set(),k=n/r.serv,sw={},taken=new Set(r.ing.map(i=>i.id)),cooked=K.swapsFor(r,F);
+  // scaled amounts of what is replaced and what replaces it (pieces become grams when a cooked protein replaces a raw one)
+  const sq={};Object.entries(cooked).forEach(([raw,rule])=>{const q=r.ing.find(x=>x.id===raw),orig=q.a*k,og=q.u==="pcs"&&rule.auto?orig*(K.ING[raw].gpp||150):orig;sq[raw]={orig,ou:q.u,a:og*rule.factor,u:q.u==="pcs"&&rule.auto?"g":q.u}});
   const ing=r.ing.map(i=>{
     let id=cooked[i.id]?cooked[i.id].id:i.id,e=K.ING[id];const pan=e.f.has("pantry");
     let have=F.has(id)||id==="water"||!!(ctx.basic&&pan);
     if(!cooked[i.id]&&!have&&e.sub){const alt=[...F].find(x=>x!==id&&K.ING[x].sub===e.sub&&!taken.has(x));if(alt){sw[i.id]=alt;taken.add(alt);id=alt;e=K.ING[id];have=true}}
-    const a=i.a*k*(cooked[i.id]?cooked[i.id].factor:1);
-    return{id,name:e.name,a,u:i.u,txt:fmt(a,i.u),have,pantry:pan,was:i.id,leftoverSwap:!!cooked[i.id]};
+    const s=sq[i.id],a=s?s.a:i.a*k,u=s?s.u:i.u;
+    return{id,name:e.name,a,u,txt:fmt(a,u),have,pantry:pan,was:i.id,leftoverSwap:!!cooked[i.id]};
   });
   const nm=id=>K.name(sw[id]||id);
   const steps=r.steps.map(rawStep=>{
-    // Keep clauses about other ingredients when a step also tells the cook how to prepare dry rice/pasta/potatoes.
-    const parts=rawStep.split(/([;.]\s*)/);
+    // Work clause by clause so a step that also prepares other ingredients keeps those parts.
+    const parts=rawStep.split(/([;.]\s*)/);let prevRepl=false;
     for(let pi=0;pi<parts.length;pi+=2){
-      let part=parts[pi];
+      let part=parts[pi],repl=false;
       for(const [raw,rule] of Object.entries(cooked)){
-        const token=new RegExp("\\{"+raw+"#?\\}");
-        if(!token.test(part))continue;
-        const cooking=/\b(cook|boil|simmer|drain|rinse|steam)\b|bring.{0,30}to the boil/i.test(part);
-        if(cooking){
-          if(raw==="pasta")part="Use the selected cooked pasta instead of dry pasta and reheat it in hot water until steaming hot";
-          else if(raw==="rice")part="Use the selected cooked rice instead of dry rice and reheat it until steaming hot";
-          else part="Use the selected cooked potatoes instead of raw potatoes and reheat them until hot";
-        }else{
-          part=part.replace(new RegExp("\\{"+raw+"(#?)\\}","g"),(_,h)=>"{"+rule.id+h+"}");
-        }
+        const hasTok=new RegExp("\\{"+raw+"#?\\}").test(part);
+        if(!hasTok)continue;
+        const cooking=PCOOK.test(part);
+        if(!rule.auto){
+          if(cooking){
+            if(raw==="pasta")part="Use the selected cooked pasta instead of dry pasta and reheat it in hot water until steaming hot";
+            else if(raw==="rice")part="Use the selected cooked rice instead of dry rice and reheat it until steaming hot";
+            else part="Use the selected cooked potatoes instead of raw potatoes and reheat them until hot";
+          }else part=part.replace(new RegExp("\\{"+raw+"(#?)\\}","g"),(_,h)=>"{"+rule.id+h+"}");
+        }else if(rule.mode==='note'){part=part.replace(new RegExp("\\{"+raw+"(#?)\\}","g"),(_,h)=>"{"+rule.id+h+"}")
+        }else if(cooking){
+          if(rule.done){part="";if(parts[pi+1]!==undefined)parts[pi+1]="";repl=true}
+          else{rule.done=true;repl=true;
+            const toks=[...part.matchAll(/\{([a-z0-9-]+)#?\}/g)].map(m=>m[1]).filter(x=>x!==raw),fat=toks.find(x=>K.ING[x]&&K.ING[x].role==="fat"),others=toks.filter(x=>x!==fat);
+            const what="{"+rule.id+"}"+(rule.id==="left-veg"?"":" (shredded or sliced)");
+            part=(fat?"Warm the "+what+" in the {"+fat+"}":"Add the "+what)+(others.length?" with the "+others.map(x=>"{"+x+"}").join(", "):"")+(fat?"":" and heat through")+" for 2–3 minutes, it is already cooked";
+            if(pi>0&&/^;/.test(parts[pi-1]))part=part[0].toLowerCase()+part.slice(1)}
+        }else if(hasTok)part=part.replace(new RegExp("\\{"+raw+"(#?)\\}","g"),(_,h)=>"{"+rule.id+h+"}");
       }
+      if(!repl&&prevRepl&&/^\s*(remove|set aside|transfer|keep warm)\b/i.test(part)){part="";if(parts[pi+1]!==undefined)parts[pi+1]=""}
+      prevRepl=repl;
       parts[pi]=part;
     }
     return parts.join("").replace(/\{([a-z0-9-]+)(#?)\}/g,(m,id,h)=>{
       const reverse=Object.entries(cooked).find(([raw,rule])=>rule.id===id),q=r.ing.find(x=>x.id===id)||(reverse&&r.ing.find(x=>x.id===reverse[0]));
       const name=nm(id);if(!h||!q)return name;
-      const amount=q.a*k*(cooked[q.id]?cooked[q.id].factor:1);
-      return(q.u==="pcs"?fmt(amount,"pcs").replace(" pcs",""):fmt(amount,"g"))+" "+name;
-    });
-  });
-  const usedSwaps=Object.entries(cooked).map(([raw,rule])=>{const q=r.ing.find(i=>i.id===raw);return{raw,id:rule.id,factor:rule.factor,amount:(q?.a||0)*k*rule.factor,original:(q?.a||0)*k}});
-  const leftoverNote=usedSwaps.length?usedSwaps.map(x=>"Use about "+fmt(x.amount,"g")+" "+K.name(x.id)+" instead of "+fmt(x.original,"g")+" "+(x.raw==="potatoes"?"raw potatoes":"dry "+x.raw)+". The conversion is approximate; reheat until steaming hot.").join(" "):"";
+      const s=reverse&&sq[reverse[0]],amount=s?s.a:q.a*k,u=s?s.u:q.u;
+      return(u==="pcs"?fmt(amount,"pcs").replace(" pcs",""):fmt(amount,"g"))+" "+name;
+    }).replace(/\s+([.,;])/g,"$1").trim();
+  }).filter(s=>s&&!/^[.;,\s]*$/.test(s));
+  Object.entries(cooked).filter(([,x])=>x.mode==="note").forEach(([raw,x])=>steps.unshift("Your "+K.name(x.id).toLowerCase()+" is already cooked: wherever the method cooks the "+K.name(raw).toLowerCase()+", skip that and stir it in for the last 3–5 minutes so it only warms through."));
+  const usedSwaps=Object.entries(cooked).map(([raw,rule])=>{const s=sq[raw];return{raw,id:rule.id,factor:rule.factor,auto:rule.auto,amount:s.a,original:s.orig,ou:s.ou}});
+  const leftoverNote=usedSwaps.length?usedSwaps.map(x=>"Use about "+fmt(x.amount,"g")+" "+K.name(x.id).toLowerCase()+" instead of "+fmt(x.ou==="pcs"&&!x.auto?x.original:x.original*(x.ou==="pcs"?(K.ING[x.raw].gpp||150):1),"g")+" "+(x.raw==="potatoes"?"raw potatoes":x.raw==="rice"||x.raw==="pasta"?"dry "+x.raw:"raw "+K.name(x.raw).toLowerCase())+". "+(x.auto?"It is already cooked, so it only needs warming through; add it near the end if the dish simmers for long.":"The conversion is approximate; reheat until steaming hot.")).join(" "):"";
   return{ing,steps,hit:ing.filter(i=>i.have&&!i.pantry).length,urg:ing.filter(i=>i.have&&U.has(i.id)).length,leftoverNote,usedSwaps};
 };
 K.nutri=(ing,n)=>{let kc=0,p=0;ing.forEach(i=>{const e=K.ING[i.id];if(!e)return;const g=i.u==="pcs"?i.a*(e.gpp||80):i.a;kc+=g*e.kcal/100;p+=g*e.p/100});return{kcal:Math.round(kc/n/10)*10,p:Math.round(p/n)}};
