@@ -71,7 +71,7 @@ The converter matches names to the catalog, turns ml into grams, names canned le
 Pizza is generated from data, not stored as 57 separate step lists:
 
 - **Dough styles** (`mk("id",{...})`): the formula only (baker's percentages `flours`, `hyd`, `salt`, `oil`, `sugar`, `extra`), a ball or pan weight, oven temperature and the shaping and baking text. Add a new style with one `mk(...)` block and it appears in the Dough lab.
-- **Fermentation modes** (`MODES`): quick 3 h, same day 8 h, overnight 16 h, cold 24/48/72 h, each with its own instant-yeast percentage, plus an optional poolish (30% of the flour). Any style can use any mode (`modes:[...]` restricts it), and all weights are computed from the percentages (`doughPlan`).
+- **Fermentation modes** (`MODES`): quick 3 h, same day 8 h, overnight 16 h, cold 24/48/72 h, each with its own instant-yeast percentage, plus an optional poolish (30% of the flour) or biga (all the flour with water at half its weight, rest of the water at the final mix). Yeast is fresh by default (3× the instant-dried weight) with a switch to dried. Any style can use any mode (`modes:[...]` restricts it), and all weights are computed from the percentages (`doughPlan`).
 - **Sauces** (`SAUCES`) and a **topping table** (`P(id, when, grams, prep)`). `when` is `cheese`, `on` (before baking), `late` (last minutes), or `after` (when it comes out). Cooked leftovers (`left-*`) are only warmed.
 - **Classics** (`R(...)`): id, name, origin, category, dough style, sauce, toppings. `lock:1` keeps the dough style fixed; `fmt` makes calzone, stromboli or fried calzone.
 - **Remix** (`PZ.remix`) builds a new pizza from a theme, your fridge, urgent items and leftovers; **`PZ.dough`** gives just the dough.

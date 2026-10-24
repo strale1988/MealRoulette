@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#e4572e">
+<meta name="theme-color" content="#fff3da">
+<link rel="preload" href="fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <title>Meal Roulette</title>
@@ -42,7 +43,7 @@ main{max-width:2400px;margin:0 auto;padding:18px 16px 60px}
 .tags input{flex:1;min-width:140px;border:0;outline:0;background:transparent;color:var(--ink);font:inherit;padding:4px 6px}
 .ac-wrap{position:relative;min-width:0}
 .suggest{position:absolute;z-index:30;top:calc(100% + 4px);left:0;right:0;max-height:240px;overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.16);padding:4px}
-.suggest[hidden]{display:none!important}
+.suggest[hidden],.cols[hidden],.tab[hidden]{display:none!important}
 .suggest button{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;border:0;border-radius:8px;background:transparent;color:var(--ink);padding:9px 10px;text-align:left;cursor:pointer}
 .suggest button:hover,.suggest button[aria-selected=true]{background:var(--acc);color:#fff}
 .suggest button small{font-size:11px;opacity:.8;white-space:nowrap}
@@ -161,6 +162,164 @@ details .row button{flex:none}
 .pzmeta{display:flex;flex-wrap:wrap;gap:8px}.pzgrp{margin:12px 0 2px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute)}.pzsec{margin:14px 0 4px;font-size:14px;font-weight:700}.pzideas{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}.pzideas span{border:1px solid var(--line);border-radius:999px;padding:4px 11px;font-size:13px}
 .pzseg{display:flex;gap:6px;margin:0 0 16px;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:3px;max-width:520px}.pzseg button{flex:1;border:0;background:none;color:var(--mute);border-radius:11px;padding:10px 8px;font:inherit;font-size:14px;font-weight:700;cursor:pointer}.pzseg button[aria-pressed=true]{background:var(--acc);color:#fff}
 .pzg{margin:10px 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute)}.pzg:first-child{margin-top:0}.pztab{width:100%;border-collapse:collapse;font-size:14px;margin:6px 0 2px}.pztab td{padding:7px 0;border-bottom:1px dashed var(--line)}.pztab td+td{text-align:right;white-space:nowrap}.pztab td+td+td{color:var(--mute);width:64px}.pztips{margin:10px 0 0;padding:10px 12px;border-radius:12px;background:var(--soft);font-size:13px;color:var(--mute)}.pztips p{margin:0 0 6px}.pztips p:last-child{margin:0}
+/* ===== Makeover: neo-brutalist theme (overrides only; markup hooks and IDs unchanged) ===== */
+@font-face{font-family:"Bricolage";src:url(fonts/bricolage-grotesque-latin-wght-normal.woff2) format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"DM Sans";src:url(fonts/dm-sans-latin-wght-normal.woff2) format("woff2");font-weight:100 1000;font-display:swap}
+:root{--bg:#fff3da;--card:#fffaee;--ink:#2a1a13;--mute:#6b5a4d;--acc:#d63a22;--acc2:#1f7d50;--line:#2a1a13;--soft:#ffe3a1;--sun:#ffc63d;--mint:#d3ebdc;--sand:#f3dcb4;--bw:2.5px;--sh:3px 3px 0 var(--ink)}
+@media (prefers-color-scheme:dark){:root{--bg:#1d140f;--card:#2a1d16;--ink:#fff3da;--mute:#c4b29c;--acc:#f0553b;--acc2:#3fb27c;--line:#fff3da;--soft:#4a3513;--sun:#ffc63d;--mint:#1f3a2c;--sand:#3d2d1f;--sh:3px 3px 0 #000}}
+body{font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg)}
+h1,h2,h3,.brand b,.pt,.hero h2,.btns button,.pzbtns button{font-family:Bricolage,"DM Sans",system-ui,sans-serif}
+main{padding-bottom:130px}
+.bar{background:var(--bg);border:0;box-shadow:none}@supports (backdrop-filter:blur(8px)){.bar{background:var(--bg);backdrop-filter:none}}
+.logo{background:var(--acc);border:var(--bw) solid var(--ink);box-shadow:var(--sh);border-radius:12px}
+.brand b{font-size:24px;font-weight:800;letter-spacing:-.03em}.brand small{display:none}
+.hl{font:800 clamp(38px,9vw,64px)/.98 Bricolage,sans-serif;letter-spacing:-.04em;margin:6px 0 6px}.hl+p{margin:0 0 16px;color:var(--mute);font-size:18px}
+/* nav: floating bottom bar on phones, pill tabs on desktop */
+.tabs{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:40;width:auto;background:var(--card);border:var(--bw) solid var(--ink);border-radius:26px;padding:6px;box-shadow:var(--sh)}
+.tabs button{flex-direction:column;gap:3px;color:var(--ink);font-weight:700;font-size:13px;border-radius:20px;padding:10px 6px}
+.tabs button[aria-selected=true]{background:var(--acc);color:#fff}.tabs .i{font-size:22px}
+@media (min-width:760px){.tabs{position:static;width:auto;background:none;border:0;box-shadow:none;padding:0}.tabs button{flex-direction:row;gap:8px;font-size:15px;border:var(--bw) solid transparent;padding:8px 18px;border-radius:999px}.tabs button[aria-selected=true]{border-color:var(--ink);box-shadow:var(--sh)}.tabs button:hover:not([aria-selected=true]){background:var(--soft)}main{padding-bottom:60px}}
+/* chips, panels, cards */
+.tiles{display:flex;flex-wrap:wrap;gap:10px}
+.tile{flex-direction:row;gap:6px;padding:9px 16px;font:700 16px "DM Sans",sans-serif;border:var(--bw) solid var(--ink);border-radius:999px;background:var(--card)}
+.tile .i{font-size:18px}.tile:hover{border-color:var(--ink);background:var(--soft)}
+.tile[aria-pressed=true]{background:var(--acc);border-color:var(--ink);color:#fff;box-shadow:var(--sh)}
+.panel,.card,details,.leftover-box,.recipe-caution{border:var(--bw) solid var(--ink);box-shadow:var(--sh);background:var(--card)}
+.panel{border-radius:22px}.card{border-radius:26px;box-shadow:5px 5px 0 var(--ink)}
+.leftover-box{background:var(--mint);border-style:dashed;box-shadow:none;border-color:var(--acc2)}
+.recipe-caution{box-shadow:none;border-style:dashed;background:transparent}
+.lab,h3,.pzgrp,.pzg{font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:12.5px;color:var(--mute)}
+.tags,.step,select{border:var(--bw) solid var(--ink);background:var(--card);border-radius:16px}
+.step button{border:var(--bw) solid var(--ink);background:var(--sun);color:#2a1a13;border-radius:11px}
+.tag{background:var(--sun);color:#2a1a13;border:2px solid var(--ink);font-weight:700}.tag.urg{background:var(--acc);color:#fff}
+.left-tag{background:var(--acc2)!important;color:#fff!important}
+.quick button{border:2px dashed var(--ink);color:var(--ink);font-weight:700;border-radius:999px}.quick button:hover{background:var(--soft)}
+.tg button,.row button,.fav button,.pzseg{border:var(--bw) solid var(--ink);background:var(--card);font-weight:700}
+.tg button[aria-pressed=true],.pzseg button[aria-pressed=true]{background:var(--sun);color:#2a1a13;border-color:var(--ink);box-shadow:2px 2px 0 var(--ink)}
+.pzseg{border-radius:999px}.pzseg button{border-radius:999px;color:var(--ink)}
+.row button:hover,.fav button:hover{border-color:var(--ink);background:var(--soft)}
+.suggest{border:var(--bw) solid var(--ink);box-shadow:var(--sh)}.suggest button:hover,.suggest button[aria-selected=true]{background:var(--sun);color:#2a1a13}
+.left-toggle input{accent-color:var(--acc2)}
+/* buttons */
+.btns button,.pzbtns button{border:var(--bw) solid var(--ink);border-radius:20px;box-shadow:var(--sh);font-weight:800;font-size:20px;letter-spacing:-.01em;transition:transform .08s,box-shadow .08s}
+.btns button:active:not(:disabled),.pzbtns button:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--ink)}
+#spin{background:var(--acc);grid-column:1/-1;margin-top:14px;padding:18px 8px;font-size:26px}
+#remix,#build{background:var(--card);color:var(--ink);font-size:16px;padding:13px 8px}
+.pzbtns button+button{background:var(--card);color:var(--ink)}.pzbtns button.alt{border:var(--bw) solid var(--ink)}
+@media (max-width:959px){.act{bottom:94px;background:transparent;border:0;box-shadow:none;padding:0}}
+/* recipe card */
+.hero{background:var(--acc2);color:#fff;border-bottom:var(--bw) solid var(--ink);padding:22px}
+.hero h2{font-weight:800;letter-spacing:-.03em;font-size:clamp(26px,5vw,38px);line-height:1.02;color:#fff}
+.hero .ic{background:var(--sun);color:#2a1a13;border:var(--bw) solid var(--ink);box-shadow:var(--sh)}
+.meta span{border:2px solid var(--ink);background:var(--card);font-weight:700;color:var(--ink)}
+.call{border:var(--bw) solid var(--ink)}.buy2{background:#ffd2c7;color:var(--ink)}.ok2{background:var(--mint);color:var(--ink)}
+.buy{border:2px solid var(--acc);font-weight:800;border-radius:8px}
+ul.ing li,.split ul.ing li{border:2px solid var(--ink);border-radius:16px;padding:11px 14px;margin-bottom:8px;background:var(--card)}
+.split ul.ing li:before,ul.ing.tick li:before{border:2.5px solid var(--ink);border-radius:7px;width:22px;height:22px}
+.split ul.ing li.done:before,ul.ing.tick li.done:before{background:var(--acc2);border-color:var(--ink)}
+ol li:before{background:var(--sun);color:#2a1a13;border:2px solid var(--ink);font-family:Bricolage,sans-serif;font-weight:800}
+.reel{color:var(--ink);font-family:Bricolage,sans-serif;font-weight:800}
+.ph{border:var(--bw) dashed var(--ink);border-radius:26px}
+footer{border-top:var(--bw) solid var(--ink)}
+.pt{font-size:clamp(34px,8vw,52px);font-weight:800;letter-spacing:-.04em}
+.pantry[hidden]{display:none}.pantry{border:var(--bw) solid var(--ink);box-shadow:var(--sh);border-radius:20px;padding:14px 16px;margin-top:14px;background:var(--card)}
+.pantry div{display:flex;justify-content:space-between;gap:10px;font:800 18px Bricolage,sans-serif}.pantry span{font:800 14px "DM Sans",sans-serif;color:var(--acc2)}
+.pantry i{display:block;height:14px;margin-top:10px;border:var(--bw) solid var(--ink);border-radius:99px;background:var(--sand);overflow:hidden}.pantry u{display:block;height:100%;background:var(--acc2);text-decoration:none}
+.row .go{flex-basis:100%;background:var(--acc);color:#fff;border:var(--bw) solid var(--ink);box-shadow:var(--sh);font:800 20px Bricolage,sans-serif;padding:15px 8px;border-radius:18px}.row .go:hover{background:var(--acc);border-color:var(--ink)}
+ol li,ul.ing li{-webkit-tap-highlight-color:transparent}ol li{cursor:pointer}ol li.done{opacity:.45;text-decoration:line-through}
+.cookov{position:fixed;inset:0;z-index:100;background:var(--bg);display:flex;flex-direction:column;padding:max(16px,env(safe-area-inset-top)) 18px max(18px,env(safe-area-inset-bottom));overflow:auto}
+.ck-top{display:flex;align-items:center;justify-content:space-between;gap:12px;font:800 18px Bricolage,sans-serif}.ck-x{width:44px;height:44px;border:var(--bw) solid var(--ink);background:var(--card);color:var(--ink);border-radius:14px;cursor:pointer;display:grid;place-items:center;flex:none}
+.ck-bar{display:block;height:12px;margin:14px 0;border:var(--bw) solid var(--ink);border-radius:99px;background:var(--sand);overflow:hidden}.ck-bar u{display:block;height:100%;background:var(--acc);transition:width .25s}
+.ck-step{flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px;max-width:760px;width:100%;margin:0 auto}.ck-step small{font:800 13px "DM Sans";letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.ck-step p{margin:0;font:700 clamp(26px,6vw,44px)/1.15 Bricolage,sans-serif;letter-spacing:-.02em}
+.ck-t{align-self:flex-start;display:flex;gap:8px;align-items:center;border:var(--bw) solid var(--ink);background:var(--sun);color:#2a1a13;border-radius:16px;padding:13px 18px;font:800 18px "DM Sans";box-shadow:var(--sh);cursor:pointer}.ck-t.ring{background:var(--acc);color:#fff}
+.ck-nav{display:grid;grid-template-columns:1fr 2fr;gap:12px;max-width:760px;width:100%;margin:18px auto 0}.ck-nav button{border:var(--bw) solid var(--ink);border-radius:20px;padding:18px;font:800 22px Bricolage,sans-serif;box-shadow:var(--sh);cursor:pointer;background:var(--card);color:var(--ink)}.ck-n{background:var(--acc)!important;color:#fff!important}.ck-nav button:disabled{opacity:.4;box-shadow:none}
+.btns{grid-template-columns:2fr 1fr;gap:12px}#spin{grid-column:auto;margin-top:14px;line-height:1.1}
+#remix{font-size:15px;margin-top:14px;padding:10px 6px;flex-direction:column;gap:4px;line-height:1.1}
+.pzbtns:has(#pzspin){grid-template-columns:2fr 1fr}.pzbtns:has(#pzspin) #pzremix{font-size:15px;padding:10px 6px;flex-direction:column;gap:4px;line-height:1.1}
+#pzferm{display:none}
+.sl{margin:10px 0 4px}.sl[hidden]{display:none}
+.sl input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:34px;background:transparent;margin:0;cursor:pointer;--p:50%}
+.sl input[type=range]::-webkit-slider-runnable-track{height:14px;border:var(--bw) solid var(--ink);border-radius:99px;background:linear-gradient(90deg,var(--acc) var(--p),var(--sand) var(--p))}
+.sl input[type=range]::-moz-range-track{height:10px;border:var(--bw) solid var(--ink);border-radius:99px;background:linear-gradient(90deg,var(--acc) var(--p),var(--sand) var(--p))}
+.sl input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;margin-top:-10px;border-radius:50%;background:var(--sun);border:3px solid var(--ink);box-shadow:2px 2px 0 var(--ink)}
+.sl input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:var(--sun);border:3px solid var(--ink);box-shadow:2px 2px 0 var(--ink)}
+.sl input[type=range]:disabled{opacity:.4}
+.ticks{display:flex;justify-content:space-between;gap:4px;font:700 12px "DM Sans",sans-serif;color:var(--mute);margin-top:2px}.ticks .on{color:var(--acc);font-weight:800}.ticks .off{opacity:.35}
+.hbig{display:flex;align-items:center;justify-content:space-between;gap:10px}.hbig b{font:800 52px/1 Bricolage,sans-serif;letter-spacing:-.04em}
+.badge{background:var(--mint);color:#2a1a13;border:2px solid var(--ink);border-radius:99px;padding:6px 14px;font:800 14px "DM Sans",sans-serif}
+/* ---- readability + adaptability pass ---- */
+:root{--pink:#ffd2c7;--acct:#c0301b;--hero:#1f7d50}
+@media (prefers-color-scheme:dark){:root{--acc:#e0432a;--acct:#ff8f74;--pink:#5a2a22;--mint:#1f3a2c}}
+.buy2{background:var(--pink);color:var(--ink)}.ok2{background:var(--mint);color:var(--ink)}
+.badge{background:var(--mint);color:var(--ink)}
+.buy,.lnk,.ticks .on{color:var(--acct)}.buy{border-color:var(--acct)}
+.left-tag,.hero{background:#1f7d50!important;color:#fff!important}.hero h2{color:#fff}
+.tabs button[aria-selected=true],#spin,.row .go,.ck-n,.tile[aria-pressed=true],.tag.urg{background:#d63a22!important;color:#fff!important}
+.step button{width:42px;height:42px}.tag button,.suggest button{min-height:34px}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+main,.bar-in{max-width:1280px}
+@media (min-width:1280px){.cols{grid-template-columns:minmax(420px,520px) minmax(0,1fr)}}
+@media (max-width:380px){.hl{font-size:34px}.btns,.pzbtns:has(#pzspin){gap:8px}#spin{font-size:21px}.tile{padding:8px 12px;font-size:15px}}
+@media (prefers-contrast:more){:root{--mute:var(--ink)}}
+a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
+/* ---- fun spinners: one shared whirl (rotating ring, pieces pop out and in) ---- */
+.reel .spinwrap{position:relative;width:170px;height:170px;margin:0 auto 12px}
+.spinwrap .rot{position:absolute;inset:0;animation:sp 5s linear infinite}
+.spinwrap .sc{position:absolute;inset:0;transform:rotate(var(--r))}
+.spinwrap .pop{position:absolute;inset:0;animation:sout 1.6s ease-in-out infinite;animation-delay:calc(var(--k)*.2s)}
+.spinwrap .wg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.spinwrap .em{position:absolute;left:50%;top:50%;width:0;height:0}
+.spinwrap .em b{position:absolute;left:-19px;top:-72px;display:block;transform:rotate(calc(var(--r)*-1))}
+.spinwrap .em i{display:block;font-style:normal;font-size:34px;line-height:38px;width:38px;text-align:center;animation:sp 5s linear infinite reverse}
+@keyframes sout{0%,60%,100%{transform:translateY(0) scale(1)}30%{transform:translateY(-24px) scale(1.12)}}
+#remix,.pzbtns:has(#pzspin) #pzremix{flex-direction:row;gap:7px;font-size:17px;padding:10px 6px}#remix .i,#pzremix .i{width:1.6em;height:1.6em}
+#save[aria-pressed=true] .i{fill:var(--acc)}
+.ck-done{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center}.ck-done h2{margin:0;font:800 clamp(40px,10vw,72px)/1 Bricolage,sans-serif;letter-spacing:-.04em}.ck-done p{margin:0;color:var(--mute);font-size:20px}.ck-done .ck-n{margin-top:12px;min-width:200px;border:var(--bw) solid var(--ink);border-radius:20px;padding:16px;font:800 22px Bricolage,sans-serif;box-shadow:var(--sh);cursor:pointer}
+.conf{display:flex;gap:10px;font-size:44px}.conf span{display:block;animation:cf 1.2s ease-in-out infinite}.conf span:nth-child(2){animation-delay:.15s}.conf span:nth-child(3){animation-delay:.3s}.conf span:nth-child(4){animation-delay:.45s}.conf span:nth-child(5){animation-delay:.6s}
+@keyframes cf{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-18px) rotate(8deg) scale(1.15)}}
+.agehint{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px;padding:10px 12px;border:2px dashed var(--ink);border-radius:14px;background:var(--soft);font-size:14px}.agehint[hidden]{display:none}.agehint button{flex:none;border:var(--bw) solid var(--ink);background:var(--sun);color:#2a1a13;border-radius:99px;padding:6px 14px;font:800 14px "DM Sans",sans-serif;cursor:pointer;box-shadow:2px 2px 0 var(--ink)}
+.toss{position:relative;width:240px;height:190px;margin:0 auto 6px}
+.toss .potsvg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.toss .swirl{position:absolute;left:55px;top:30px;width:130px;height:130px;animation:sp 9s linear infinite}
+.toss .swirl svg{width:100%;height:100%;display:block}
+.toss .ring{position:absolute;left:120px;top:95px;width:0;height:0;animation:sp var(--T) linear infinite}
+.toss .ing{position:absolute;left:0;top:0;width:0;height:0;transform:rotate(var(--r))}
+.toss .ing u{position:absolute;left:-18px;top:-18px;width:36px;height:36px;text-decoration:none;transform:translateY(calc(var(--R)*-1)) rotate(calc(var(--r)*-1));animation:bobr 1.4s ease-in-out infinite;animation-delay:calc(var(--k)*-.25s)}
+.toss .ing i{display:block;font-style:normal;font-size:30px;line-height:36px;text-align:center;animation:sp var(--T) linear infinite reverse}
+.toss .bub{position:absolute;width:8px;height:8px;border-radius:50%;border:2px solid var(--ink);background:rgba(255,255,255,.5);opacity:0;animation:bub 1.8s ease-out infinite;animation-delay:calc(var(--k)*-.6s)}
+.toss .steam{position:absolute;left:120px;top:95px;width:0;height:0}
+.toss .steam s{position:absolute;left:-16px;top:-16px;width:32px;height:32px;border-radius:50%;background:var(--mute);opacity:0;animation:puff 2.4s ease-out infinite;animation-delay:calc(var(--k)*.8s)}
+@keyframes bobr{0%,100%{transform:translateY(calc(var(--R)*-1)) rotate(calc(var(--r)*-1)) scale(.95)}50%{transform:translateY(calc(var(--R)*-1)) rotate(calc(var(--r)*-1)) scale(1.15)}}
+@keyframes bub{0%{opacity:0;transform:scale(.3)}30%{opacity:.9}70%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(1.5)}}
+@keyframes puff{0%{opacity:0;transform:translate(0,0) scale(.4)}30%{opacity:.22}100%{opacity:0;transform:translate(var(--sx),-8px) scale(2.6)}}
+
+/* ---- Fermentation station + tab bar with four tabs ---- */
+.tabs .sm{display:inline}.tabs .lg{display:none}
+@media (min-width:1100px){.tabs .lg{display:inline}.tabs .sm{display:none}}
+@media (max-width:480px){.tabs button{font-size:12px!important;white-space:nowrap;padding-left:2px!important;padding-right:2px!important}}
+.tg.fm button span{font-size:16px;line-height:1}
+.fmtl{list-style:none;margin:8px 0 0;padding:0}.fmtl li{display:flex;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line)}.fmtl li:last-child{border:0}.fmtl b{flex:none;min-width:92px}.fmtl span{color:var(--mute)}
+.fmb ul{list-style:none;margin:0;padding:0}.fmb li{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line)}.fmb li:last-child{border:0}.fmb li.none{color:var(--mute);font-size:14px}
+.fmb li small{display:block;color:var(--mute);font-size:13px;margin-top:2px}
+.fmb li button{flex:none;width:34px;height:34px;display:grid;place-items:center;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:10px;cursor:pointer}
+#tab-ferm .res>.panel{margin-top:16px}
+#tab-ferm .step b{flex:1;text-align:center}
+.tabs button.dot{position:relative}.tabs button.dot::after{content:"";position:absolute;top:6px;right:8px;width:10px;height:10px;border-radius:50%;background:#1f9d5f;border:2px solid var(--ink)}
+.fmb li.rdy{background:var(--soft);border-radius:12px;padding-left:10px;padding-right:10px}.rdytag{display:inline-block;margin-left:6px;padding:1px 9px;border-radius:99px;background:#1f9d5f;color:#fff;font-size:12px;font-weight:700;vertical-align:1px}
+.fmspin{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:14px;padding:16px 8px;background:var(--acc);color:#fff;border:var(--bw,2px) solid var(--ink);border-radius:22px;box-shadow:var(--sh,3px 3px 0 var(--ink));font:800 24px Bricolage,sans-serif;cursor:pointer}.fmspin .i{font-size:1.1em}.fmspin:active{transform:translate(2px,2px);box-shadow:none}
+.fmreel{text-align:center;margin:40px 0;font:800 22px Bricolage,sans-serif;color:var(--ink)}.fmreel small{display:block;color:var(--mute);font:400 14px "DM Sans",sans-serif;margin-top:6px}.fmrt{display:block;min-height:1.4em}
+.fmjar{position:relative;width:240px;height:190px;margin:0 auto 6px}.fmjar svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;animation:fmjig .8s ease-in-out infinite}
+.fmjar .fi{position:absolute;left:102px;top:92px;width:36px;height:36px;animation:fmx 2.4s cubic-bezier(.37,0,.63,1) infinite alternate;animation-delay:calc(var(--k)*-.4s)}
+.fmjar .fi u{display:block;text-decoration:none;animation:fmy 3.1s cubic-bezier(.37,0,.63,1) infinite alternate;animation-delay:calc(var(--k)*-.52s)}
+.fmjar .fi i{display:block;font-style:normal;font-size:26px;line-height:36px;text-align:center;animation:fmw 1s ease-in-out infinite alternate;animation-delay:calc(var(--k)*-.3s)}
+.fmjar .fb{position:absolute;bottom:34px;width:9px;height:9px;border-radius:50%;border:2px solid var(--ink);background:rgba(255,255,255,.6);opacity:0;animation:fmrise 2s ease-in infinite;animation-delay:calc(var(--k)*-.33s)}
+@keyframes fmx{from{transform:translateX(-26px)}to{transform:translateX(26px)}}
+@keyframes fmy{from{transform:translateY(-34px) scale(.85)}to{transform:translateY(34px) scale(1.1)}}
+@keyframes fmw{from{transform:rotate(-25deg)}to{transform:rotate(25deg)}}
+@keyframes fmrise{0%{opacity:0;transform:translateY(0) scale(.5)}15%{opacity:.9}85%{opacity:.9}100%{opacity:0;transform:translateY(-100px) scale(1.2)}}
+@keyframes fmjig{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(1.5deg)}}
+
 </style>
 </head>
 <body>
@@ -181,6 +340,7 @@ details .row button{flex:none}
 <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 4 13c0-6 6-9 16-9 0 10-3 16-9 16zM4 21c3-6 6-9 11-12"/></symbol>
 <symbol id="i-wheat" viewBox="0 0 24 24"><path d="M12 22V8M12 8c-3 0-4-2-4-4 3 0 4 2 4 4zM12 8c3 0 4-2 4-4-3 0-4 2-4 4zM12 14c-3 0-4-2-4-4 3 0 4 2 4 4zM12 14c3 0 4-2 4-4-3 0-4 2-4 4z"/></symbol>
 <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.5 12h11L21 7H6"/></symbol>
+<symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V3M8 7l4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></symbol>
 <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
 <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
 <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
@@ -191,8 +351,9 @@ details .row button{flex:none}
 <symbol id="i-jar" viewBox="0 0 24 24"><path d="M8 3h8M7 6h10v14a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1zM7 11h10"/></symbol>
 <symbol id="i-ruler" viewBox="0 0 24 24"><path d="M3 17 17 3l4 4L7 21z"/><path d="m7 13 2 2M10 10l2 2M13 7l2 2"/></symbol>
 <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></symbol>
-<symbol id="i-wand" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></symbol>
+<symbol id="i-wand" viewBox="0 0 24 24"><g transform="rotate(45 12 12)"><path d="M12 15C6.5 13 6.5 5.5 12 2.5C17.5 5.5 17.5 13 12 15Z"/><path d="M12 15C9.6 11.5 9.6 6.5 12 2.5M12 15C14.4 11.5 14.4 6.5 12 2.5"/><path d="M9.6 15.2h4.8M12 15.2V22"/></g></symbol>
 <symbol id="i-pizza" viewBox="0 0 24 24"><path d="M12 22 3.5 6.2A18 18 0 0 1 20.5 6.2zM5.8 10.4A13 13 0 0 1 18.2 10.4"/><path d="M10 10.5h.01M14 11.5h.01M12 15.5h.01"/></symbol>
+<symbol id="i-ferm" viewBox="0 0 24 24"><path d="M8 3h8M7.5 6h9A1.5 1.5 0 0 1 18 7.5V19a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V7.5A1.5 1.5 0 0 1 7.5 6z"/><circle cx="10" cy="15" r="1.2"/><circle cx="14" cy="12.5" r="1"/><circle cx="14.5" cy="17" r="1.3"/></symbol>
 </defs></svg>
 
 <header class="bar"><div class="bar-in">
@@ -200,14 +361,15 @@ details .row button{flex:none}
  <nav class="tabs" id="tabs" role="tablist" aria-label="Sections">
   <button role="tab" data-t="cook" aria-selected="true"><svg class="i"><use href="#i-dice"/></svg>Cook</button>
   <button role="tab" data-t="pizza" aria-selected="false"><svg class="i"><use href="#i-pizza"/></svg>Pizza night</button>
+  <button role="tab" data-t="ferm" aria-selected="false"><svg class="i"><use href="#i-ferm"/></svg><span class="lg">Fermentation station</span><span class="sm">Ferment</span></button>
   <button role="tab" data-t="kit" aria-selected="false"><svg class="i"><use href="#i-jar"/></svg>My kitchen</button>
  </nav>
 </div></header>
 
 <main>
-<div id="tab-cook" class="tab" role="tabpanel"><div class="cols">
+<div id="tab-cook" class="tab" role="tabpanel"><h1 class="hl">What are we eating tonight?</h1><p>Pick a mood, then spin.</p><div class="cols">
  <aside class="side">
-  <p class="hint2" style="margin:0 0 8px">Choose one or more meal types. Spin picks from your selection; plans use every selected type.</p><nav class="tiles" id="meals" aria-label="Choose one or more meal types"></nav>
+  <p class="hint2" style="margin:0 0 8px">Pick a meal type. Spin and Plan ahead both use it.</p><nav class="tiles" id="meals" aria-label="Choose a meal type"></nav>
   <section class="panel">
    <div class="lab"><svg class="i"><use href="#i-fridge"/></svg>What's in your fridge?</div>
    <p class="hint2">Tap the clock on an item to use it first.</p>
@@ -236,17 +398,28 @@ details .row button{flex:none}
     <p class="hint" style="margin:10px 0 0">Builds meals day by day from your fridge and staples, rotates proteins, and gives you one shopping list sorted by aisle. Use “Try another” on any meal to swap it.</p>
     <div class="grid" style="margin-top:12px">
      <div><div class="lab"><svg class="i"><use href="#i-cal"/></svg>Days</div><div class="step"><button id="dminus" aria-label="Fewer days"><svg class="i"><use href="#i-minus"/></svg></button><b id="dn">5 days</b><button id="dplus" aria-label="More days"><svg class="i"><use href="#i-plus"/></svg></button></div></div>
-     <div><p class="hint2" style="margin:24px 0 0">Tap the meals above to pick what to plan each day.</p></div>
+     <div><p class="hint2" style="margin:24px 0 0">Plans use the meal type selected above.</p></div>
     </div>
    </div>
   </section>
-  <div class="btns act"><button id="spin"><svg class="i"><use href="#i-dice"/></svg>Spin a recipe</button><button id="remix"><svg class="i"><use href="#i-wand"/></svg>Remix new</button></div>
+  <div class="btns act"><button id="spin"><svg class="i"><use href="#i-dice"/></svg>Spin it!</button><button id="remix"><svg class="i"><use href="#i-wand"/></svg>Whisk</button></div>
   <p class="hint2" id="ah"></p>
-  <p class="recipe-caution"><strong>Recipe note:</strong> Some recipes—especially remixes and generated meals—may need tweaking or may not turn out perfectly. Use your judgment, double-check ingredients and quantities, cook food safely, and adjust to your ingredients, equipment, and taste.</p>
+  <p class="recipe-caution"><strong>Recipe note:</strong> Some recipes—especially whisked and generated meals—may need tweaking or may not turn out perfectly. Use your judgment, double-check ingredients and quantities, cook food safely, and adjust to your ingredients, equipment, and taste.</p>
  </aside>
  <section class="res">
   <div class="note" id="note" role="status"></div>
-  <div class="reel" id="reel" aria-hidden="true"><svg class="i"><use href="#i-dice"/></svg><span id="rt"></span><small>Picking something tasty…</small></div>
+  <div class="reel" id="reel" aria-hidden="true"><div class="toss"><svg class="potsvg" viewBox="0 0 240 190" aria-hidden="true">
+<rect x="14" y="85" width="34" height="20" rx="8" fill="#9c2a17" style="stroke:var(--ink)" stroke-width="3"/>
+<rect x="192" y="85" width="34" height="20" rx="8" fill="#9c2a17" style="stroke:var(--ink)" stroke-width="3"/>
+<circle cx="120" cy="95" r="84" fill="#d63a22" style="stroke:var(--ink)" stroke-width="3"/>
+<circle cx="120" cy="95" r="76" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="3"/>
+<circle cx="120" cy="95" r="70" fill="#7d2112" style="stroke:var(--ink)" stroke-width="3"/>
+<circle cx="120" cy="95" r="64" fill="#f0a03c" style="stroke:var(--ink)" stroke-width="2.5"/>
+</svg>
+<div class="swirl"><svg viewBox="-65 -65 130 130" aria-hidden="true"><path d="M0 0a4 4 0 0 1 8 0a8 8 0 0 1-16 0a12 12 0 0 1 24 0a16 16 0 0 1-32 0a20 20 0 0 1 40 0a24 24 0 0 1-48 0" fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="5" stroke-linecap="round"/><path d="M34-30C50-14 52 12 36 30S-6 52-30 40" fill="none" stroke="#c9741a" stroke-opacity=".5" stroke-width="5" stroke-linecap="round"/></svg></div>
+<span class="bub" style="--k:0;left:82px;top:70px"></span><span class="bub" style="--k:1;left:152px;top:118px"></span><span class="bub" style="--k:2;left:136px;top:56px"></span>
+<div class="steam"><s style="--k:0;--sx:-6px"></s><s style="--k:1;--sx:8px"></s><s style="--k:2;--sx:0px"></s></div>
+<div class="ring" style="--T:7s"><div class="ing" style="--k:0;--r:0deg;--R:46px"><u><i>🍅</i></u></div><div class="ing" style="--k:1;--r:120deg;--R:46px"><u><i>🥕</i></u></div><div class="ing" style="--k:2;--r:240deg;--R:46px"><u><i>🧄</i></u></div></div><div class="ring" style="--T:4.5s"><div class="ing" style="--k:3;--r:60deg;--R:22px"><u><i>🍋</i></u></div><div class="ing" style="--k:4;--r:180deg;--R:22px"><u><i>🧀</i></u></div><div class="ing" style="--k:5;--r:300deg;--R:22px"><u><i>🍄</i></u></div></div></div><span id="rt"></span><small>Picking something tasty…</small></div>
   <div id="out"></div>
   <div class="ph"><svg class="i"><use href="#i-dice"/></svg><b>Your recipe shows up here</b>Pick a meal, then spin or remix.</div>
   <div class="fav" id="fav"></div>
@@ -266,7 +439,14 @@ details .row button{flex:none}
     <div class="lab" style="margin-top:16px"><svg class="i"><use href="#i-clock"/></svg>Fermentation</div>
     <div class="tg" id="pzferm"></div>
     <p class="sum" id="pzfinfo" style="margin:10px 0 0"></p>
-    <label class="left-toggle" for="pzpool" style="margin-top:12px"><input type="checkbox" id="pzpool"><span><strong>Use a poolish</strong><small id="pzph2">Pre-ferment 30% of the flour overnight for a sweeter, more open crumb.</small></span></label>
+    <div class="lab" style="margin-top:16px"><svg class="i"><use href="#i-jar"/></svg>Preferment</div>
+    <div class="tg" id="pzpre"></div>
+    <p class="sum" id="pzpinfo" style="margin:10px 0 0"></p>
+    <label class="left-toggle" for="pzfresh" style="margin-top:12px"><input type="checkbox" id="pzfresh"><span><strong>Use fresh yeast</strong><small id="pzfy">Fresh (cake) yeast. Untick to use instant dried yeast instead, which is one third of the weight.</small></span></label>
+    <div class="lab" style="margin-top:16px"><svg class="i"><use href="#i-ruler"/></svg>Hydration (water to flour)</div>
+    <div class="step"><button id="pzhminus" aria-label="Lower hydration"><svg class="i"><use href="#i-minus"/></svg></button><b id="pzhyd">62%</b><button id="pzhplus" aria-label="Higher hydration"><svg class="i"><use href="#i-plus"/></svg></button></div>
+    <div class="tg" id="pzhpre" style="margin-top:8px"></div>
+    <p class="sum" id="pzhinfo" style="margin:8px 0 0"></p>
     <div class="grid" style="margin-top:16px">
      <div><div class="lab"><svg class="i"><use href="#i-users"/></svg>Pizzas</div><div class="step"><button id="pzminus" aria-label="Fewer pizzas"><svg class="i"><use href="#i-minus"/></svg></button><b id="pzn">2</b><button id="pzplus" aria-label="More pizzas"><svg class="i"><use href="#i-plus"/></svg></button></div></div>
      <div><div class="lab"><svg class="i"><use href="#i-ruler"/></svg><span id="pzbl">Dough per ball</span></div><div class="step"><button id="pzbminus" aria-label="Lighter dough balls"><svg class="i"><use href="#i-minus"/></svg></button><b id="pzball">250 g</b><button id="pzbplus" aria-label="Heavier dough balls"><svg class="i"><use href="#i-plus"/></svg></button></div></div>
@@ -289,8 +469,8 @@ details .row button{flex:none}
     <label class="left-toggle" for="pzfridge" style="margin-top:14px"><input type="checkbox" id="pzfridge"><span><strong>Use my fridge and leftovers</strong><small id="pzfh">Uses what you added on the Cook tab, including cooked leftovers (they are only warmed, never cooked again).</small></span></label>
     <p class="sum" id="pzsum" style="margin:10px 0 0"></p>
    </section>
-   <div class="pzbtns"><button id="pzspin"><svg class="i"><use href="#i-dice"/></svg>Spin a classic</button><button id="pzremix"><svg class="i"><use href="#i-wand"/></svg>Remix new</button></div>
-   <p class="recipe-caution"><strong>Recipe note:</strong> Ovens and flours vary. Use the times as a guide, judge by colour, and cook meat and eggs until safely done. Remixes may need tweaking to taste.</p>
+   <div class="pzbtns"><button id="pzspin"><svg class="i"><use href="#i-dice"/></svg>Spin a classic</button><button id="pzremix"><svg class="i"><use href="#i-wand"/></svg>Whisk</button></div>
+   <p class="recipe-caution"><strong>Recipe note:</strong> Ovens and flours vary. Use the times as a guide, judge by colour, and cook meat and eggs until safely done. Whisked pizzas may need tweaking to taste.</p>
   </aside>
   <section class="res">
    <div class="note" id="pznote" role="status"></div>
@@ -300,6 +480,8 @@ details .row button{flex:none}
   </section>
  </div>
 </div>
+
+<div id="tab-ferm" class="tab" role="tabpanel" hidden></div>
 
 <div id="tab-kit" class="tab" role="tabpanel" hidden>
  <h2 class="pt">My kitchen</h2>
@@ -327,7 +509,7 @@ details .row button{flex:none}
 <noscript><p style="padding:16px">Meal Roulette needs JavaScript.</p></noscript>
 <script type="text/plain" id="main">
 const K=window.KITCHEN,$=id=>document.getElementById(id);
-const MEALS=[["Breakfast","sunrise","Morning"],["Snack","cookie","Bite"],["Main","sun","Big plate"],["Dessert","cupcake","Treat"]];
+const MEALS=[["Breakfast","sunrise","Morning"],["Snack","cookie","Bite"],["Main","chef","Big plate"],["Dessert","cupcake","Treat"]];
 const normM=m=>m==="Lunch"||m==="Dinner"?"Main":m,isMain=m=>normM(m)==="Main",ML=m=>(MEALS.find(x=>x[0]===normM(m))||[])[2]||m;
 /* ---- grams everywhere: ml amounts become grams using a density for the ingredient ---- */
 const DENS=[[/\boil\b/,.92],[/honey|syrup|molasses/,1.4],[/flour|cornflour|starch/,.55],[/baking powder|baking soda|bicarb/,.9],[/sugar/,.85],[/cocoa/,.45],[/\bsalt\b/,1.2],[/\boats?\b/,.4],[/cumin|paprika|turmeric|cinnamon|garam|oregano|thyme|pepper|spice/,.45]];
@@ -387,24 +569,20 @@ function cv(t){
 const stem=x=>x.replace(/s$/,"");
 const stap=()=>S.staples.map(x=>x.toLowerCase());
 const items=()=>[...new Set([...S.pantry.map(x=>x.toLowerCase()),...stap(),...(S.useLeftovers?S.leftovers.map(x=>x.toLowerCase()):[])])];
-const selectedMeals=()=>MEALS.map(m=>m[0]).filter(m=>S.pm[m]);
+const selectedMeals=()=>[S.meal];
 const isLeftId=id=>!!(K.ING[id]&&K.ING[id].aisle==="left");
 const isLeftIng=i=>!!(i&&(isLeftId(i.id)||K.match(i.name||"").some(isLeftId)));
 function clearCurrentForInventoryChange(){current=null;lastPlan=null;$("out").innerHTML="";$("note").textContent="";}
 let tab="cook",lastPlan=null;
-function setTab(t){tab=t;["cook","pizza","kit"].forEach(k=>{$("tab-"+k).hidden=k!==t;document.querySelector(`#tabs [data-t="${k}"]`).setAttribute("aria-selected",k===t)});if(t==="pizza"&&typeof pzUI==="function")pzSection(S.pz.sec||"dough");scrollTo({top:0})}
+function setTab(t){tab=t;["cook","pizza","ferm","kit"].forEach(k=>{$("tab-"+k).hidden=k!==t;document.querySelector(`#tabs [data-t="${k}"]`).setAttribute("aria-selected",k===t)});if(t==="pizza"&&typeof pzUI==="function")pzSection(S.pz.sec||"dough");scrollTo({top:0})}
 document.querySelectorAll("#tabs button").forEach(b=>b.onclick=()=>setTab(b.dataset.t));
+{const _st=setTab;setTab=function(t){_st(t);try{localStorage.setItem("mr-tab",t)}catch(e){}};try{const t0=localStorage.getItem("mr-tab");if(["pizza","ferm","kit"].includes(t0))_st(t0)}catch(e){}} // reopen on the last tab
 
 /* ---------- controls ---------- */
 function draw(){
+  S.pm={[S.meal]:true}; // one meal type at a time, planning included
   $("meals").innerHTML=MEALS.map(m=>`<button class="tile" data-m="${m[0]}" aria-pressed="${!!S.pm[m[0]]}">${I(m[1])}${m[2]||m[0]}</button>`).join("");
-  $("meals").querySelectorAll("button").forEach(b=>b.onclick=()=>{
-    const m=b.dataset.m,was=!!S.pm[m],chosen=selectedMeals();
-    if(was&&chosen.length===1){$("note").textContent="Keep at least one meal type selected.";return;}
-    S.pm[m]=!was;
-    if(!was)S.meal=m;else if(S.meal===m)S.meal=selectedMeals()[0]||"Main";
-    save();draw();
-  });
+  $("meals").querySelectorAll("button").forEach(b=>b.onclick=()=>{const m=b.dataset.m;S.meal=m;S.pm={[m]:true};$("note").textContent="";save();draw()});
   $("tags").querySelectorAll(".tag").forEach(t=>t.remove());
   S.pantry.forEach((p,i)=>$("tags").insertBefore(Object.assign(document.createElement("span"),{className:"tag"+(S.urgent.includes(p)?" urg":""),innerHTML:`${esc(p)}<button class="u" aria-label="Use ${esc(p)} first" aria-pressed="${S.urgent.includes(p)}" data-p="${esc(p)}">${I("clock")}</button><button class="r" aria-label="Remove ${esc(p)}" data-i="${i}">${I("x")}</button>`}),$("add")));
   $("tags").querySelectorAll(".tag button.r").forEach(b=>b.onclick=()=>{const p=S.pantry.splice(+b.dataset.i,1)[0];S.urgent=S.urgent.filter(x=>x!==p);save();draw()});
@@ -435,7 +613,7 @@ function draw(){
   $("planmode").innerHTML=`<button aria-pressed="${!!S.plan}" id="plt">${I("cal")}Plan several days</button>`;
   $("plt").onclick=()=>{S.plan=!S.plan;save();draw()};
   $("planx").hidden=!S.plan;GEN.bakeOnly=!!S.bake;
-  $("ah").textContent=S.plan?"Spin plans your days with generated meals. Remix builds every meal as a new remix of two saved recipes.":"Spin picks a saved recipe. Remix invents a new one from two of them.";
+  $("ah").textContent=S.plan?"Spin plans your days with generated meals. Whisk builds every meal as a new mix of two saved recipes.":"Spin picks a saved recipe. Whisk invents a new one from two of them.";
   $("dn").textContent=S.days+(S.days>1?" days":" day");
   $("diet").innerHTML=DIETS.map(d=>`<button data-d="${d[0]}" aria-pressed="${!!S.diet[d[0]]}">${I(d[2])}${d[1]}</button>`).join("");
   $("diet").querySelectorAll("button").forEach(b=>b.onclick=()=>{const k=b.dataset.d;S.diet[k]=!S.diet[k];if(k==="vegan"&&S.diet.vegan)S.diet.veg=true;save();draw()});
@@ -609,7 +787,7 @@ function show(r,msg){
   if(!r){$("out").innerHTML="";return}
   const ic=(MEALS.find(m=>m[0]===S.meal)||[])[1]||"dice";
   $("out").innerHTML=`<article class="card"><div class="hero"><div class="ic">${I(ic)}</div><h2>${esc(r.title)}</h2></div><div class="body">
-  <div class="meta"><span>${I("clock")}${r.min} min</span><span>${I("users")}${r.n} ${r.n>1?"people":"person"}</span><span>${I(ic)}${ML(S.meal)}</span>${r.remix?`<span>${I("wand")}Remix</span>`:""}${(()=>{const x=r.ing.length&&r.ing.every(i=>i.id)?K.nutri(r.ing,r.n):GEN.nutri(r.ing,r.n);return x.kcal?`<span title="Rough estimate">${I("flame")}≈${x.kcal} kcal · ${x.p} g protein each</span>`:""})()}</div>
+  <div class="meta"><span>${I("clock")}${r.min} min</span><span>${I("users")}${r.n} ${r.n>1?"people":"person"}</span><span>${I(ic)}${ML(S.meal)}</span>${r.remix?`<span>${I("wand")}Whisked</span>`:""}${(()=>{const x=r.ing.length&&r.ing.every(i=>i.id)?K.nutri(r.ing,r.n):GEN.nutri(r.ing,r.n);return x.kcal?`<span title="Rough estimate">${I("flame")}≈${x.kcal} kcal · ${x.p} g protein each</span>`:""})()}</div>
   ${r.desc?`<p class="desc">${esc(cv(r.desc))}</p>`:""}${callout(r)}
   <div class="split"><div><h3>${I("list")}Ingredients <small style="text-transform:none;letter-spacing:0;color:var(--mute)">(tap to tick off)</small></h3>
   <ul class="ing">${r.ing.map(i=>`<li><span>${esc(i.name)}${missing(i)?'<span class="buy">to buy</span>':""}</span><span class="q">${esc(Q(i))}</span></li>`).join("")}</ul></div>
@@ -629,7 +807,7 @@ function run(what,single){
   [["add",addItem],["sadd",addStaple],["ladd",addLeftover]].forEach(([id,fn])=>{if($(id).value.trim())fn()}); // text typed but not yet confirmed still counts
   const pl=!!S.plan&&!single,rl=$("reel"),rt=$("rt"),o=$("out"),nt=$("note");rl.querySelector("small").textContent=pl?"Planning your days…":"Picking something tasty…";
   const btns=document.querySelectorAll(".btns button"),rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
-  btns.forEach(b=>b.disabled=true);o.innerHTML="";nt.textContent=pl?"Planning your days…":what==="remix"?"Remixing a new recipe…":"Picking something tasty…";
+  btns.forEach(b=>b.disabled=true);o.innerHTML="";nt.textContent=pl?"Planning your days…":what==="remix"?"Whisking up a new recipe…":"Picking something tasty…";
   const names=RECIPES.map(r=>r.title).concat(Object.keys(GEN.cuisines).map(c=>c+" "+rnd(["chicken bowl","stir-fry","curry","traybake","stew"])));
   const done=()=>{rl.classList.remove("on");btns.forEach(b=>b.disabled=false);if(!pl&&!single){const active=selectedMeals();if(active.length)S.meal=rnd(active);save();}pl?plan(what==="remix"?"remix":""):what==="remix"?invent():go();
     const c=o.firstElementChild||o;c.scrollIntoView({behavior:"smooth",block:"start"})};
@@ -702,7 +880,7 @@ function buildList(days){
   return Object.values(t).map(e=>e.buy?{name:e.name,u:e.u,a:e.buy,txt:fmt(e.buy,e.u),st:"buy"}:{name:e.name,u:e.u,a:e.all,txt:fmt(e.all,e.u),st:e.have?"have":"pantry"}).sort((a,b)=>a.name.localeCompare(b.name));
 }
 function plan(mode){
-  const meals=MEALS.map(m=>m[0]).filter(m=>S.pm[m]);PT=new Set();if(!meals.length){$("out").innerHTML="";$("note").textContent="Tap at least one meal above to plan.";return}
+  const meals=MEALS.map(m=>m[0]).filter(m=>S.pm[m]);PT=new Set();if(!meals.length){$("out").innerHTML="";$("note").textContent="Pick a meal type above to plan.";return}
   let it=items(),ug=S.urgent.slice();const cus=Object.keys(GEN.cuisines).sort(()=>Math.random()-.5),days=[],pc={},rp=[],rc=[];let ci=0;
   for(let d=1;d<=S.days;d++)for(const m of meals){
     const cu=S.cuisine||cus[ci++%cus.length],g=planG(bestMeal(m,it,cu,dietP({avoidP:rp.slice(-3),avoidC:rc.slice(-2),urgent:ug}),mode,pc));
@@ -743,29 +921,40 @@ function plansUI(){
 }
 /* ---------- pizza night ---------- */
 const PZ=window.PIZZA;
-S.pz=Object.assign({n:2,cat:"",style:"neapolitan",ferm:"",pool:false,ball:0,classic:"",fridge:true,auto:false,sec:"dough"},S.pz||{});
+S.pz=Object.assign({n:2,cat:"",style:"neapolitan",ferm:"",pre:"",fresh:true,ball:0,hyd:0,classic:"",fridge:true,auto:false,sec:"dough"},S.pz||{});
+if(S.pz.pool&&!S.pz.pre)S.pz.pre="poolish";delete S.pz.pool;
 if(!PZ.styles[S.pz.style])S.pz.style="neapolitan";
 let pzCur=null;const pzRecent=[];
 const pzSt=()=>PZ.styles[S.pz.style],pzShort=n=>n.replace(/ \(.*\)/,""),pzIsPan=st=>st.kind==="pan";
 const pzFerm=()=>{const ok=PZ.modesFor(S.pz.style);return ok.includes(S.pz.ferm)?S.pz.ferm:PZ.defMode(S.pz.style)};
-const pzCan=st=>!!st.y&&!st.nopool&&!st.liq&&st.hyd>=45;
+const pzHyd=st=>st.liq?0:(S.pz.hyd||(st.sd?st.hydTot:st.hyd));
+const pzCan=(st,k)=>!!st.y&&!st.nopool&&!st.liq&&(k==="biga"?pzHyd(st)>=56&&!st.extra.length:pzHyd(st)>=45&&st.flours[0][1]>=30);
+const pzPre=()=>pzCan(pzSt(),S.pz.pre)?S.pz.pre:"";
 const pzOpts=()=>{const F=S.pz.fridge?new Set(fridgeIds()):new Set(),U=new Set(S.pz.fridge?S.urgent.flatMap(x=>K.match(x)):[]);
-  return{diet:{...S.diet},fridge:F,urgent:U,count:S.pz.n,style:S.pz.auto?undefined:S.pz.style,ferm:S.pz.auto?undefined:pzFerm(),pool:S.pz.auto?false:S.pz.pool&&pzCan(pzSt()),ball:S.pz.auto||!S.pz.ball?undefined:S.pz.ball,hasItems:S.pz.fridge&&items().length>0,basic:S.basic,cat:S.pz.cat}};
+  return{diet:{...S.diet},fridge:F,urgent:U,count:S.pz.n,style:S.pz.auto?undefined:S.pz.style,ferm:S.pz.auto?undefined:pzFerm(),pre:S.pz.auto?"":pzPre(),fresh:S.pz.fresh,hyd:S.pz.auto?undefined:S.pz.hyd||undefined,ball:S.pz.auto||!S.pz.ball?undefined:S.pz.ball,hasItems:S.pz.fridge&&items().length>0,basic:S.basic,cat:S.pz.cat}};
 function pzSection(sec){S.pz.sec=sec;save();$("pz-dough").hidden=sec!=="dough";$("pz-build").hidden=sec!=="build";$("pzseg").querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.s===sec));pzUI();if(sec==="dough")pzDoughRun()}
 function pzUI(){
   const st=pzSt(),fm=pzFerm();
   // dough lab
   $("pzstyles").innerHTML=PZ.groups.map(g=>`<div class="pzg">${g}</div><div class="tg">`+Object.values(PZ.styles).filter(x=>x.grp===g).map(x=>`<button data-s="${x.id}" aria-pressed="${x.id===S.pz.style}">${esc(pzShort(x.name))}</button>`).join("")+"</div>").join("");
-  $("pzstyles").querySelectorAll("button").forEach(b=>b.onclick=()=>{S.pz.style=b.dataset.s;S.pz.ball=0;save();pzUI();pzDoughRun()});
+  $("pzstyles").querySelectorAll("button").forEach(b=>b.onclick=()=>{S.pz.style=b.dataset.s;S.pz.ball=0;S.pz.hyd=0;save();pzUI();pzDoughRun()});
   $("pzsinfo").textContent=cv(`${st.from} · ${st.fixed?"no yeast":(st.liq?"milk and yogurt dough":(st.sd?st.hydTot:st.hyd)+"% hydration")} · ${st.ball} g per ${pzIsPan(st)?"pan":"ball"} · ${st.t}, ${st.bt}`);
   $("pzferm").innerHTML=PZ.modeOrder.map(m=>{const ok=PZ.modesFor(S.pz.style).includes(m);return`<button data-m="${m}" aria-pressed="${m===fm}"${ok?"":" disabled"}>${PZ.modes[m].short}</button>`}).join("");
   $("pzferm").querySelectorAll("button").forEach(b=>b.onclick=()=>{S.pz.ferm=b.dataset.m;save();pzUI();pzDoughRun()});
   $("pzfinfo").textContent=st.fixed?"No yeast, so no fermentation: it is ready in about 45 minutes.":PZ.modes[fm].info+(st.sd?" Sourdough needs an active starter; the starter share scales with the time.":"");
-  const can=pzCan(st);$("pzpool").disabled=!can;$("pzpool").checked=can&&!!S.pz.pool;
-  $("pzph2").textContent=can?"Pre-ferment 30% of the flour overnight for a sweeter, more open crumb.":"A poolish isn't used with this dough.";
+  const pk=pzPre();
+  $("pzpre").innerHTML=[["","None"],["poolish","Poolish"],["biga","Biga"]].map(([k,l])=>`<button data-k="${k}" aria-pressed="${k===pk}"${k&&!pzCan(st,k)?" disabled":""}>${l}</button>`).join("");
+  $("pzpre").querySelectorAll("button").forEach(b=>b.onclick=()=>{S.pz.pre=b.dataset.k;save();pzUI();pzDoughRun()});
+  $("pzpinfo").textContent=pk==="poolish"?"Poolish: 30% of the flour with an equal weight of water, made 12–16 hours before. Sweeter, more open crumb.":pk==="biga"?"Biga: all of the flour with water at half its weight, made 16–18 hours before; the rest of the water goes in at the final mix. Nutty and chewy.":(st.y?"":"No commercial yeast in this dough, so no preferment.")||"Direct dough. Add a poolish or biga for more flavour.";
+  $("pzfresh").checked=!!S.pz.fresh;$("pzfresh").disabled=!st.y;
+  const hy=pzHyd(st),hr=PZ.hrange[st.id]||[st.hyd-4,st.hyd+4],defH=st.sd?st.hydTot:st.hyd;
+  $("pzhyd").textContent=st.liq?"set by recipe":hy+"%";$("pzhminus").disabled=$("pzhplus").disabled=!!st.liq;
+  $("pzhpre").innerHTML=st.liq?"":[60,65,70,75,80].map(v=>`<button data-h="${v}" aria-pressed="${hy===v}">${v}%</button>`).join("")+`<button data-h="0" aria-pressed="${!S.pz.hyd}">Default ${defH}%</button>`;
+  $("pzhpre").querySelectorAll("button").forEach(b=>b.onclick=()=>{S.pz.hyd=+b.dataset.h;save();pzUI();pzDoughRun()});
+  $("pzhinfo").textContent=st.liq?"This dough is made with milk and yogurt, so the liquid is fixed.":`Usual for ${pzShort(st.name)}: ${hr[0]}–${hr[1]}%.${hy>hr[1]?" Wetter than usual: sticky, open and tender.":hy<hr[0]?" Drier than usual: stiffer and tighter.":""} Home doughs are mostly 60–70%; 75–80% is a wet, airy dough.`;
   $("pzn").textContent=S.pz.n;$("pzbl").textContent="Dough per "+(pzIsPan(st)?"pan":"ball");$("pzball").textContent=cv((S.pz.ball||st.ball)+" g");
   // build
-  const bits=[pzShort(st.name),PZ.modes[fm].short,can&&S.pz.pool?"poolish":"",`${S.pz.n} × ${S.pz.ball||st.ball} g`].filter(Boolean).join(" · ");
+  const bits=[pzShort(st.name),PZ.modes[fm].short,st.liq?"":hy+"% hydration",pk,st.y?(S.pz.fresh?"fresh yeast":"dried yeast"):"",`${S.pz.n} × ${S.pz.ball||st.ball} g`].filter(Boolean).join(" · ");
   $("pzsel").textContent=S.pz.auto?"The dough is picked to suit each pizza. Pick it yourself in the Dough lab.":bits;
   $("pzauto").setAttribute("aria-pressed",!!S.pz.auto);
   $("pzcat").innerHTML=PZ.cats.map(c=>`<button data-c="${c[0]}" aria-pressed="${S.pz.cat===c[0]}">${c[1]}</button>`).join("");
@@ -779,8 +968,9 @@ function pzUI(){
 }
 const pzStep=(id,fn)=>$(id).onclick=()=>{fn();save();pzUI();if(S.pz.sec==="dough")pzDoughRun()};
 pzStep("pzminus",()=>S.pz.n=Math.max(1,S.pz.n-1));pzStep("pzplus",()=>S.pz.n=Math.min(12,S.pz.n+1));
+pzStep("pzhminus",()=>S.pz.hyd=Math.max(45,pzHyd(pzSt())-1));pzStep("pzhplus",()=>S.pz.hyd=Math.min(95,pzHyd(pzSt())+1));
 pzStep("pzbminus",()=>S.pz.ball=Math.max(60,(S.pz.ball||pzSt().ball)-10));pzStep("pzbplus",()=>S.pz.ball=Math.min(1200,(S.pz.ball||pzSt().ball)+10));
-$("pzpool").onchange=e=>{S.pz.pool=e.target.checked;save();pzUI();pzDoughRun()};
+$("pzfresh").onchange=e=>{S.pz.fresh=e.target.checked;save();pzUI();pzDoughRun()};
 $("pzfridge").onchange=e=>{S.pz.fridge=e.target.checked;save();pzUI()};
 $("pzclassic").onchange=e=>{S.pz.classic=e.target.value;save();pzUI()};
 $("pzauto").onclick=()=>{S.pz.auto=!S.pz.auto;save();pzUI()};
@@ -789,26 +979,26 @@ $("pzuse").onclick=()=>{S.pz.auto=false;save();pzSection("build");scrollTo({top:
 $("pzseg").querySelectorAll("button").forEach(b=>b.onclick=()=>pzSection(b.dataset.s));
 function pzCard(r,target,msg){
   const buy=i=>!r.dough&&S.pz.fridge&&items().length>0&&!i.have&&!i.left&&!(S.basic&&i.pantry),grp=[...new Set(r.ing.map(i=>i.grp))];
-  const ord=["Poolish","Dough","Sauce","Cheese","Toppings","To finish"];grp.sort((a,b)=>ord.indexOf(a)-ord.indexOf(b));
+  const ord=["Poolish","Biga","Dough","Sauce","Cheese","Toppings","To finish"];grp.sort((a,b)=>ord.indexOf(a)-ord.indexOf(b));
   const row=i=>`<li><span>${esc(i.name)}${buy(i)?'<span class="buy">to buy</span>':""}</span><span class="q">${esc(cv(i.txt))}${i.pct!=null&&r.dough!==undefined?` <small style="color:var(--mute)">${i.pct>=10?Math.round(i.pct):Math.round(i.pct*100)/100}%</small>`:""}</span></li>`;
   const html=`<article class="card"><div class="hero"><div class="ic">${I("pizza")}</div><h2>${esc(r.title)}</h2></div><div class="body">
-  <div class="pzmeta meta"><span>${I("chef")}${esc(r.styleName)}</span><span>${I("clock")}${esc(r.fermName?r.fermName.replace(/ \(.*\)/,""):"")}</span><span>${I("clock")}Plan ahead: ${esc(r.ahead)}</span><span>${I("flame")}${esc(cv(r.bake))}</span><span>${I("users")}Feeds about ${r.feeds}</span>${r.remix?`<span>${I("wand")}Remix</span>`:""}${r.kcal?`<span title="Rough estimate">≈${r.kcal} kcal · ${r.p} g protein each</span>`:""}</div>
+  <div class="pzmeta meta"><span>${I("chef")}${esc(r.styleName)}</span><span>${I("clock")}${esc(r.fermName?r.fermName.replace(/ \(.*\)/,""):"")}</span><span>${I("clock")}Plan ahead: ${esc(r.ahead)}</span><span>${I("flame")}${esc(cv(r.bake))}</span><span>${I("users")}Feeds about ${r.feeds}</span>${r.remix?`<span>${I("wand")}Whisked</span>`:""}${r.kcal?`<span title="Rough estimate">≈${r.kcal} kcal · ${r.p} g protein each</span>`:""}</div>
   ${r.desc?`<p class="desc">${esc(cv(r.desc))}</p>`:""}${r.sum?`<p class="desc"><strong>Dough:</strong> ${esc(cv(r.sum))}. Total dough ${esc(cv(r.doughG+" g"))}, flour ${esc(cv(r.flourG+" g"))}.</p>`:""}
   ${(r.notes||[]).map(n=>`<p class="desc">${esc(n)}</p>`).join("")}${r.leftN?`<p class="desc"><strong>Uses your leftovers.</strong> They are already cooked, so they are only warmed on the pizza.</p>`:""}
   <div class="split"><div><h3>${I("list")}Ingredients <small style="text-transform:none;letter-spacing:0;color:var(--mute)">(tap to tick off${r.dough?"; % = baker's percentage":""})</small></h3>
-  ${grp.map(g=>`<div class="pzgrp">${g==="Poolish"?"Poolish (evening before)":g==="Dough"&&grp.includes("Poolish")?"Final dough":g}</div><ul class="ing">${r.ing.filter(i=>i.grp===g).map(row).join("")}</ul>`).join("")}</div>
+  ${grp.map(g=>`<div class="pzgrp">${g==="Poolish"||g==="Biga"?g+" (evening before)":g==="Dough"&&(grp.includes("Poolish")||grp.includes("Biga"))?"Final dough":g}</div><ul class="ing">${r.ing.filter(i=>i.grp===g).map(row).join("")}</ul>`).join("")}</div>
   <div><h3>${I("chef")}Method</h3>${r.sections.map(sec=>`<div class="pzsec">${esc(sec.h)}</div><ol>${sec.steps.map(t=>`<li><span>${esc(cv(t))}</span></li>`).join("")}</ol>${sec.tips&&sec.tips.length?`<div class="pztips">${sec.tips.map(t=>`<p>${esc(cv(t))}</p>`).join("")}</div>`:""}`).join("")}
   ${r.ideas&&r.ideas.length?`<div class="pzsec">Try it with</div><div class="pzideas">${r.ideas.map(x=>`<span>${esc(x)}</span>`).join("")}</div>`:""}</div></div>
   <div class="row"><button class="pzsave">${I("heart")}Save</button><button class="pzshop">${I("cart")}Copy list</button>${r.dough?`<button class="pzgo">${I("pizza")}Build a pizza</button>`:`<button class="pzagain">${I(r.remix?"wand":"dice")}Again</button>`}</div></div></article>`;
   target.innerHTML=html;
   target.querySelectorAll(".ing li").forEach(li=>li.onclick=()=>li.classList.toggle("done"));
-  const sv=target.querySelector(".pzsave");sv.onclick=()=>{const f=store("pzfavs")||[];if(!f.some(x=>x.title===r.title&&x.count===r.count&&x.ferm===r.ferm&&x.pool===r.pool)){f.unshift(r);store("pzfavs",f.slice(0,30))}pzFavs();sv.innerHTML=I("heart")+"Saved"};
+  const sv=target.querySelector(".pzsave");sv.onclick=()=>{const f=store("pzfavs")||[];if(!f.some(x=>x.title===r.title&&x.count===r.count&&x.ferm===r.ferm&&x.pre===r.pre&&x.fresh===r.fresh)){f.unshift(r);store("pzfavs",f.slice(0,30))}pzFavs();sv.innerHTML=I("heart")+"Saved"};
   const sh=target.querySelector(".pzshop");sh.onclick=async()=>{const mm=r.dough?r.ing:r.ing.filter(buy),l=(mm.length?mm:r.ing).map(i=>"• "+i.name+" – "+cv(i.txt)).join("\n");try{await navigator.clipboard.writeText(l);sh.innerHTML=I("cart")+"Copied"}catch(e){$("pznote").textContent=l}};
   const ag=target.querySelector(".pzagain");if(ag)ag.onclick=()=>pzRun(r.remix?"remix":"spin");
   const go=target.querySelector(".pzgo");if(go)go.onclick=()=>{S.pz.auto=false;save();pzSection("build");scrollTo({top:0})};
 }
 function pzDoughRun(){
-  const o=pzOpts();let r=null;try{r=PZ.dough(S.pz.style,o.count,{diet:o.diet,ferm:pzFerm(),pool:S.pz.pool&&pzCan(pzSt()),ball:S.pz.ball||undefined,fridge:o.fridge})}catch(e){console.error(e)}
+  const o=pzOpts();let r=null;try{r=PZ.dough(S.pz.style,o.count,{diet:o.diet,ferm:pzFerm(),pre:pzPre(),fresh:S.pz.fresh,hyd:S.pz.hyd||undefined,ball:S.pz.ball||undefined,fridge:o.fridge})}catch(e){console.error(e)}
   if(!r){$("pzdout").innerHTML='<div class="ph" style="display:block"><b>That dough doesn\'t fit your diet.</b>Try the gluten-free dough, or change your diet in My kitchen.</div>';return}
   pzCard(r,$("pzdout"));
 }
@@ -831,9 +1021,9 @@ function pzRun(what){
       const spec=PZ.recipes.find(x=>x.id===S.pz.classic);r=spec&&PZ.resolve(spec,o);if(!r)msg="That classic doesn't fit your diet or this dough. Try another, or change the dough.";
     }else{
       const pool=PZ.recipes.filter(x=>!o.cat||x.cat===o.cat||(o.cat==="folded"&&x.fmt)||(o.cat==="pan"&&PZ.styles[x.style].kind==="pan")).map(x=>PZ.resolve(x,o)).filter(Boolean);
-      if(!pool.length)msg="No classic matches that diet, dough and kind. Try Remix new, or change the dough.";
+      if(!pool.length)msg="No classic matches that diet, dough and kind. Try Whisk, or change the dough.";
       else{
-        const sc=x=>(o.hasItems?x.urg*4+x.leftN*6+x.hit*1.5-(x.ing.filter(i=>i.grp!=="Dough"&&i.grp!=="Poolish"&&!i.have&&!i.left&&!(S.basic&&i.pantry)).length)*1.2:0)+Math.random()*3-(pzRecent.includes(x.title)?8:0);
+        const sc=x=>(o.hasItems?x.urg*4+x.leftN*6+x.hit*1.5-(x.ing.filter(i=>i.grp!=="Dough"&&i.grp!=="Poolish"&&i.grp!=="Biga"&&!i.have&&!i.left&&!(S.basic&&i.pantry)).length)*1.2:0)+Math.random()*3-(pzRecent.includes(x.title)?8:0);
         pool.sort((a,b)=>sc(b)-sc(a));r=pool[0];
       }
     }
@@ -848,6 +1038,141 @@ const cuisineOptions=Object.keys(GEN.cuisines).sort((a,b)=>a.localeCompare(b,"en
 $("cuisine").innerHTML='<option value="">Surprise me</option>'+cuisineOptions.map(c=>`<option${c===S.cuisine?" selected":""}>${c}</option>`).join("");
 $("yr").textContent=new Date().getFullYear();
 draw();favs();plansUI();pzFavs();pzSection(S.pz.sec==="build"?"build":"dough");
+
+/* ---- improvements: pantry progress, tap-through steps, cooking mode (big steps, timers, screen stays on) ---- */
+(function(){
+window.__cookReady=1;const _show=show;
+show=function(r,m){_show(r,m);if(!r)return;try{enhance(r)}catch(e){console.error(e)}};
+function enhance(r){
+  const card=$("out").querySelector(".card");if(!card)return;
+  const tot=r.ing.length,have=r.ing.filter(i=>!missing(i)).length,pct=tot?Math.round(have/tot*100):0;
+  const pg=document.createElement("div");pg.className="pantry";pg.hidden=!items().length;
+  pg.innerHTML=`<div><b>You already have ${have} of ${tot}</b><span class="${have===tot?"all":""}">${have===tot?"Nothing to buy":tot-have+" to buy"}</span></div><i role="progressbar" aria-valuemin="0" aria-valuemax="${tot}" aria-valuenow="${have}"><u style="width:${pct}%"></u></i>`;
+  const body=card.querySelector(".body"),meta=body.querySelector(".meta");meta.after(pg);
+  card.querySelectorAll("ol li").forEach(li=>{li.tabIndex=0;li.onclick=()=>li.classList.toggle("done");li.onkeydown=e=>{if(e.key===" "||e.key==="Enter"){e.preventDefault();li.click()}}});
+  card.querySelectorAll("ul.ing li").forEach(li=>{li.tabIndex=0;li.onkeydown=e=>{if(e.key===" "||e.key==="Enter"){e.preventDefault();li.click()}}});
+  const b=document.createElement("button");b.id="cookgo";b.className="go";b.innerHTML=I("flame")+"Start cooking";
+  card.querySelector(".row").prepend(b);b.onclick=()=>cookMode(r);
+  const sv=$("save");if(sv){const o=sv.onclick;sv.onclick=()=>{o();navigator.vibrate&&navigator.vibrate(15)}}
+}
+let wl=null;window.__cook=(r)=>cookMode(r);
+const mins=t=>{const m=String(t).match(/(\d+)(?:\s?[–-]\s?(\d+))?\s*(hours?|hrs?|minutes?|mins?|seconds?|secs?)\b/i);if(!m)return 0;const n=+(m[2]||m[1]),u=m[3][0].toLowerCase();return u==="h"?n*3600:u==="s"?n:n*60};
+function beep(){try{const a=new(window.AudioContext||window.webkitAudioContext)(),o=a.createOscillator();o.connect(a.destination);o.frequency.value=880;o.start();setTimeout(()=>{o.stop();a.close()},700)}catch(e){}navigator.vibrate&&navigator.vibrate([300,150,300])}
+function cookMode(r){
+  const steps=r.steps.map(s=>cv(s)),ov=document.createElement("div");let i=0,tm=null;
+  ov.className="cookov";ov.setAttribute("role","dialog");ov.setAttribute("aria-modal","true");ov.setAttribute("aria-label","Cooking mode");
+  const close=()=>{clearInterval(tm);ov.remove();document.body.style.overflow="";document.removeEventListener("keydown",key);document.removeEventListener("visibilitychange",vis);if(wl){wl.release().catch(()=>{});wl=null}};
+  const key=e=>{if(e.key==="Escape")close();else if(e.key==="ArrowRight")go(1);else if(e.key==="ArrowLeft")go(-1)};
+  const vis=()=>{if(document.visibilityState==="visible"&&navigator.wakeLock&&ov.isConnected)navigator.wakeLock.request("screen").then(x=>wl=x).catch(()=>{})};document.addEventListener("visibilitychange",vis);
+  function finish(){clearInterval(tm);ov.innerHTML=`<div class="ck-done"><div class="conf" aria-hidden="true"><span>🎉</span><span>🍽️</span><span>✨</span><span>🥂</span><span>🎊</span></div><h2>Bon appétit!</h2><p>${esc(r.title)}</p><button class="ck-n">Close</button></div>`;ov.querySelector(".ck-n").onclick=close;ov.querySelector(".ck-n").focus();navigator.vibrate&&navigator.vibrate([80,60,80,60,200])}
+  function go(d){i=Math.max(0,Math.min(steps.length-1,i+d));paint()}
+  function paint(){
+    clearInterval(tm);const s=steps[i],sec=mins(s),last=i===steps.length-1;
+    ov.innerHTML=`<div class="ck-top"><b>${esc(r.title)}</b><button class="ck-x" aria-label="Close cooking mode">${I("x")}</button></div><i class="ck-bar"><u style="width:${(i+1)/steps.length*100}%"></u></i><div class="ck-step"><small>Step ${i+1} of ${steps.length}</small><p>${esc(s)}</p>${sec?`<button class="ck-t" data-s="${sec}">${I("clock")}<span>Start ${Math.round(sec/60*10)/10>=1?Math.round(sec/60)+" min":sec+" s"} timer</span></button>`:""}</div><div class="ck-nav"><button class="ck-p" ${i?"":"disabled"}>Back</button><button class="ck-n">${last?"Done!":"Next"}</button></div>`;
+    ov.querySelector(".ck-x").onclick=close;ov.querySelector(".ck-p").onclick=()=>go(-1);ov.querySelector(".ck-n").onclick=()=>last?finish():go(1);
+    const t=ov.querySelector(".ck-t");if(t)t.onclick=()=>{let left=+t.dataset.s;const lab=t.querySelector("span"),show=()=>lab.textContent=Math.floor(left/60)+":"+String(left%60).padStart(2,"0")+" left";show();t.onclick=null;tm=setInterval(()=>{left--;if(left<=0){clearInterval(tm);lab.textContent="Time's up!";t.classList.add("ring");beep()}else show()},1000)};
+    ov.querySelector(".ck-n").focus();
+  }
+  document.body.appendChild(ov);document.body.style.overflow="hidden";document.addEventListener("keydown",key);paint();
+  if(navigator.wakeLock)navigator.wakeLock.request("screen").then(x=>wl=x).catch(()=>{});
+}
+})();
+/* ---- pizza spinner, start-cooking for pizza, dynamic spin label ---- */
+(function(){
+const o=$("pzout");if(o){const rl=document.createElement("div");rl.className="reel pzreel";rl.id="pzreel";rl.setAttribute("aria-hidden","true");
+ rl.innerHTML=`<div class="spinwrap"><div class="rot"><div class="sc" style="--r:0deg;--k:0"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-40" r="7.5" fill="#d63a22" style="stroke:var(--ink)" stroke-width="2"/><circle cx="-5" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:45deg;--k:1"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-38" r="6" fill="#1f9d5f" style="stroke:var(--ink)" stroke-width="2"/><circle cx="6" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:90deg;--k:2"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-40" r="7.5" fill="#d63a22" style="stroke:var(--ink)" stroke-width="2"/><circle cx="-5" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:135deg;--k:3"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-38" r="6" fill="#1f9d5f" style="stroke:var(--ink)" stroke-width="2"/><circle cx="6" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:180deg;--k:4"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-40" r="7.5" fill="#d63a22" style="stroke:var(--ink)" stroke-width="2"/><circle cx="-5" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:225deg;--k:5"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-38" r="6" fill="#1f9d5f" style="stroke:var(--ink)" stroke-width="2"/><circle cx="6" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:270deg;--k:6"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-40" r="7.5" fill="#d63a22" style="stroke:var(--ink)" stroke-width="2"/><circle cx="-5" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:315deg;--k:7"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-38" r="6" fill="#1f9d5f" style="stroke:var(--ink)" stroke-width="2"/><circle cx="6" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div></div></div><span id="pzrt"></span><small>Firing up the oven…</small>`;o.before(rl)}
+const _pz=pzRun;let busy=false;
+pzRun=function(what){
+  if(busy)return;const rl=$("pzreel");
+  if(!rl||matchMedia("(prefers-reduced-motion:reduce)").matches)return _pz(what);
+  busy=true;const bs=[...document.querySelectorAll(".pzbtns button")],rt=$("pzrt");
+  let names=((window.PZ&&PZ.recipes)||[]).map(x=>x.title||x.name).filter(Boolean);if(!names.length)names=["Margherita","Pepperoni","Diavola","Quattro formaggi","Funghi"];
+  bs.forEach(b=>b.disabled=true);o.innerHTML="";$("pzph").style.display="none";$("pznote").textContent="";rl.classList.add("on");rl.scrollIntoView({behavior:"smooth",block:"center"});
+  let d=70,el=0;const tick=()=>{rt.textContent=rnd(names);el+=d;if(el>=1400){return setTimeout(()=>{rl.classList.remove("on");bs.forEach(b=>b.disabled=false);busy=false;_pz(what)},300)}d=Math.round(d*1.15);setTimeout(tick,d)};tick();
+};
+const _ps=pzShow;
+pzShow=function(r,m){_ps(r,m);try{const sv=o.querySelector(".pzsave");if(!r||!sv||o.querySelector("#pzcook"))return;
+  const steps=[...o.querySelectorAll("ol li")].map(l=>l.textContent.trim()).filter(Boolean);if(!steps.length)return;
+  const b=document.createElement("button");b.id="pzcook";b.className="go";b.innerHTML=I("flame")+"Start cooking";sv.parentNode.prepend(b);
+  b.onclick=()=>window.__cook({title:r.title||"Pizza",steps})}catch(e){console.error(e)}};
+const _d=draw;
+draw=function(){_d();const n=S.strict?S.pantry.length+(S.useLeftovers?S.leftovers.length:0):0,b=$("spin");if(b&&!b.disabled){b.innerHTML=I("dice")+(n?"Spin with "+n+(n===1?" thing":" things"):"Spin it!")}};
+draw();
+})();
+/* ---- pizza dough sliders (fermentation + hydration), layered on the existing state; the old buttons still work ---- */
+(function(){
+if(!$("pzferm")||!$("pzhyd"))return;
+const mk=(h)=>{const d=document.createElement("div");d.className="sl";d.innerHTML=h;return d};
+const fs=mk(`<input type="range" id="pzfsl" min="0" max="${PZ.modeOrder.length-1}" step="1" aria-label="How long to ferment"><div class="ticks" id="pzftk"></div>`);
+$("pzferm").after(fs);
+const hs=mk(`<div class="hbig"><b id="pzhbig"></b><span class="badge" id="pzhbadge"></span></div><input type="range" id="pzhsl" min="50" max="90" step="1" aria-label="Hydration, water to flour"><div class="ticks"><span>50 stiff</span><span>65</span><span>75</span><span>90 soupy</span></div>`);
+$("pzhpre").before(hs);
+const fsl=$("pzfsl"),hsl=$("pzhsl"),fill=(el)=>el.style.setProperty("--p",((el.value-el.min)/(el.max-el.min)*100)+"%");
+const badge=v=>v<=58?"stiff":v<=67?"classic":v<=73?"soft":v<=80?"wet & airy":"very wet";
+function sync(){
+  const fm=pzFerm(),i=PZ.modeOrder.indexOf(fm),st=pzSt(),ok=m=>PZ.modesFor(S.pz.style).includes(m)&&!st.fixed;
+  fsl.value=i;fill(fsl);fsl.disabled=!!st.fixed;fsl.setAttribute("aria-valuetext",PZ.modes[fm].short);
+  $("pzftk").innerHTML=PZ.modeOrder.map((m,k)=>`<span class="${k===i?"on":""}${ok(m)?"":" off"}">${esc(PZ.modes[m].short)}</span>`).join("");
+  const h=parseInt($("pzhyd").textContent),has=!isNaN(h);hs.hidden=!has;
+  if(has){hsl.value=Math.min(90,Math.max(50,h));fill(hsl);$("pzhbig").textContent=h+"%";$("pzhbadge").textContent=badge(h)}
+}
+let raf=0;const later=f=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(f)};
+fsl.oninput=()=>{const m=PZ.modeOrder[+fsl.value];if(!PZ.modesFor(S.pz.style).includes(m)){sync();return}S.pz.ferm=m;save();later(()=>{pzUI();pzDoughRun()})};
+hsl.oninput=()=>{S.pz.hyd=+hsl.value;$("pzhbig").textContent=hsl.value+"%";$("pzhbadge").textContent=badge(+hsl.value);fill(hsl);save();later(()=>{pzUI();pzDoughRun()})};
+const _u=pzUI;pzUI=function(){_u();try{sync()}catch(e){console.error(e)}};
+sync();
+})();
+/* ---- more polish: share, save toggle, clear fridge ---- */
+(function(){
+const _s2=show;
+show=function(r,m){_s2(r,m);if(!r)return;try{
+  const card=$("out").querySelector(".card"),row=card&&card.querySelector(".row"),sv=$("save");if(!row||!sv)return;
+  const has=()=>(store("favs2")||[]).some(x=>x.title===r.title);
+  const paint=()=>{sv.setAttribute("aria-pressed",has());sv.innerHTML=I("heart")+(has()?"Saved":"Save")};
+  sv.onclick=()=>{let f=store("favs2")||[];if(has())f=f.filter(x=>x.title!==r.title);else f.unshift({...r,meal:S.meal});store("favs2",f.slice(0,40));favs();paint();navigator.vibrate&&navigator.vibrate(15)};paint();
+  const b=document.createElement("button");b.id="sharer";b.innerHTML=I("share")+"Share";
+  const text=()=>r.title+"\n"+r.min+" min · serves "+r.n+"\n\nIngredients\n"+r.ing.map(i=>"• "+i.name+" – "+Q(i)).join("\n")+"\n\nMethod\n"+r.steps.map((x,k)=>(k+1)+". "+cv(x)).join("\n")+"\n\nMade with Meal Roulette";
+  b.onclick=async()=>{const t=text();try{if(navigator.share){await navigator.share({title:r.title,text:t})}else{await navigator.clipboard.writeText(t);b.innerHTML=I("share")+"Copied"}}catch(e){if(e&&e.name!=="AbortError"){try{await navigator.clipboard.writeText(t);b.innerHTML=I("share")+"Copied"}catch(_){$("note").textContent=t}}}};
+  const shop=$("shop");shop?shop.after(b):row.append(b);
+}catch(e){console.error(e)}};
+const cf=document.createElement("button");cf.id="clearfridge";cf.className="lnk";cf.hidden=true;cf.textContent="Clear fridge";cf.style.cssText="display:block;margin:8px 2px 0;font-size:13px";
+$("quick").after(cf);
+cf.onclick=()=>{if(!S.pantry.length)return;S.pantry=[];S.urgent=[];save();clearCurrentForInventoryChange();draw()};
+const _d2=draw;draw=function(){_d2();cf.hidden=S.pantry.length<2};cf.hidden=S.pantry.length<2;
+})();
+/* ---- smarter: time-of-day meal, "use it first" nudges for ageing food, quick-add chips that learn ---- */
+(function(){
+const DAY=864e5,LIM={meat:3,veg:5,dairy:7},today=new Date().toDateString();
+let ages=store("mr_ages")||{},freq=store("mr_freq")||{};
+// 1) meal type follows the time of day until you pick one yourself today
+$("meals").addEventListener("click",e=>{if(e.target.closest(".tile"))store("mr_pick",today)},true);
+if(store("mr_pick")!==today){const h=new Date().getHours(),m=h>=5&&h<11?"Breakfast":h>=11&&h<15?"Main":h>=15&&h<17?"Snack":h>=17&&h<22?"Main":"Snack";
+  if(m!==S.meal){S.meal=m;S.pm={[m]:true};save();$("note").textContent="It's "+(h<11?"morning":h<15?"midday":h<17?"afternoon":h<22?"evening":"late")+", so "+({Breakfast:"breakfast",Main:"a main meal",Snack:"a snack"}[m]||m)+" is preselected. Tap another to change it."}}
+// 2) remember when items went in, and offer to prioritise the perishable ones that have waited
+const hint=document.createElement("div");hint.id="agehint";hint.className="agehint";hint.hidden=true;$("clearfridge").after(hint);
+const track=()=>{let ch=false;S.pantry.forEach(p=>{if(!ages[p]){ages[p]=Date.now();freq[p]=(freq[p]||0)+1;ch=true}});Object.keys(ages).forEach(k=>{if(!S.pantry.includes(k)){delete ages[k];ch=true}});if(ch){store("mr_ages",ages);store("mr_freq",freq)}};
+const waiting=()=>S.pantry.filter(p=>{if(S.urgent.includes(p)||!ages[p])return false;const e=K.match(p).map(i=>K.ING[i]).find(x=>x&&LIM[x.aisle]);return !!e&&(Date.now()-ages[p])/DAY>=LIM[e.aisle]});
+function nudge(){const w=waiting();hint.hidden=!w.length;if(!w.length)return;
+  const names=w.slice(0,3).map(x=>"<b>"+esc(x)+"</b>").join(w.length>2?", ":" and ");
+  hint.innerHTML="<span>💡 "+names+(w.length>3?" and "+(w.length-3)+" more":"")+(w.length>1?" have":" has")+" been in your fridge a while.</span><button type=\"button\">Use first</button>";
+  hint.querySelector("button").onclick=()=>{S.urgent=[...new Set([...S.urgent,...w])];save();draw()}}
+// 3) quick-add chips: your own most-added items first, then the usual suspects
+function chips(){const mine=Object.keys(freq).filter(k=>freq[k]>=2&&!S.pantry.includes(k)).sort((a,b)=>freq[b]-freq[a]).slice(0,6),
+  list=[...mine,...QUICK.filter(q=>!S.pantry.includes(q)&&!mine.includes(q))].slice(0,10);
+  $("quick").innerHTML=list.map(q=>`<button data-q="${esc(q)}">+ ${esc(q)}</button>`).join("");
+  $("quick").querySelectorAll("button").forEach(b=>b.onclick=()=>{S.pantry.push(b.dataset.q);save();draw()})}
+const _d3=draw;draw=function(){_d3();try{track();nudge();chips()}catch(e){console.error(e)}};
+draw();
+})();
+/* cook spinner tosses what is actually in your fridge */
+(function(){
+const EM=[[/chicken|poultry|turkey/,"🍗"],[/beef|steak|mince|pork|ham|bacon|sausage|lamb/,"🥩"],[/salmon|fish|tuna|cod|prawn|shrimp/,"🐟"],[/egg/,"🥚"],[/rice/,"🍚"],[/pasta|spaghetti|noodle|macaroni|orzo/,"🍝"],[/tomato/,"🍅"],[/spinach|lettuce|kale|cabbage|salad|herb|basil|parsley/,"🥬"],[/potato/,"🥔"],[/mushroom/,"🍄"],[/cheese|cheddar|feta|parmesan|mozzarella/,"🧀"],[/onion|leek/,"🧅"],[/garlic/,"🧄"],[/carrot/,"🥕"],[/lemon|lime/,"🍋"],[/pepper|chilli|chili|paprika/,"🌶️"],[/bread|toast|bun/,"🍞"],[/milk|cream|yogurt|yoghurt/,"🥛"],[/butter/,"🧈"],[/corn/,"🌽"],[/avocado/,"🥑"],[/broccoli|cauliflower/,"🥦"],[/banana/,"🍌"],[/apple|pear/,"🍎"],[/bean|lentil|chickpea/,"🫘"],[/cucumber|courgette|zucchini/,"🥒"],[/aubergine|eggplant/,"🍆"]];
+const DEF=["🍅","🥕","🧄","🍋","🧀","🍄"];
+function fill(){const mine=[];[...S.pantry,...(S.useLeftovers?S.leftovers:[])].forEach(p=>{const e=(EM.find(x=>x[0].test(p.toLowerCase()))||[])[1];if(e&&!mine.includes(e))mine.push(e)});
+  const list=[...mine.sort(()=>Math.random()-.5).slice(0,6)];DEF.forEach(e=>{if(list.length<6&&!list.includes(e))list.push(e)});
+  document.querySelectorAll("#reel .ing i").forEach((el,k)=>el.textContent=list[k]||DEF[k])}
+const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,arguments)};
+})();
 if("serviceWorker" in navigator&&location.protocol.startsWith("http")){
   const had=!!navigator.serviceWorker.controller;let reloaded=false;
   navigator.serviceWorker.addEventListener("controllerchange",()=>{if(had&&!reloaded){reloaded=true;location.reload()}}); // a new version took over: load it once
@@ -858,7 +1183,7 @@ if("serviceWorker" in navigator&&location.protocol.startsWith("http")){
 /* Loader: downloads every file in parallel (fast on phones), runs them in order, retries a failed file once,
    and shows a Reload button instead of a blank page if something still fails. */
 (function(){
-var FILES=["kitchen.js","ingredients.js","cookbook/cookbook-bake.js","cookbook/cookbook-cuisine-balkan.js","cookbook/cookbook-cuisine-cajun.js","cookbook/cookbook-cuisine-caribbean.js","cookbook/cookbook-cuisine-chinese.js","cookbook/cookbook-cuisine-ethiopian.js","cookbook/cookbook-cuisine-french.js","cookbook/cookbook-cuisine-german.js","cookbook/cookbook-cuisine-greek.js","cookbook/cookbook-cuisine-hungarian.js","cookbook/cookbook-cuisine-indian.js","cookbook/cookbook-cuisine-indonesian.js","cookbook/cookbook-cuisine-italian.js","cookbook/cookbook-cuisine-japanese.js","cookbook/cookbook-cuisine-korean.js","cookbook/cookbook-cuisine-mexican.js","cookbook/cookbook-cuisine-middle-eastern.js","cookbook/cookbook-cuisine-moroccan.js","cookbook/cookbook-cuisine-persian.js","cookbook/cookbook-cuisine-peruvian.js","cookbook/cookbook-cuisine-polish.js","cookbook/cookbook-cuisine-portuguese.js","cookbook/cookbook-cuisine-spanish.js","cookbook/cookbook-cuisine-thai.js","cookbook/cookbook-cuisine-turkish.js","cookbook/cookbook-cuisine-vietnamese.js","cookbook/cookbook-everyday.js","cookbook/cookbook-fancy.js","cookbook/cookbook-leftovers.js","cookbook/cookbook-light.js","pizza.js","engine.js"];
+var FILES=["kitchen.js","ingredients.js","cookbook/cookbook-bake.js","cookbook/cookbook-cuisine-balkan.js","cookbook/cookbook-cuisine-cajun.js","cookbook/cookbook-cuisine-caribbean.js","cookbook/cookbook-cuisine-chinese.js","cookbook/cookbook-cuisine-ethiopian.js","cookbook/cookbook-cuisine-french.js","cookbook/cookbook-cuisine-german.js","cookbook/cookbook-cuisine-greek.js","cookbook/cookbook-cuisine-hungarian.js","cookbook/cookbook-cuisine-indian.js","cookbook/cookbook-cuisine-indonesian.js","cookbook/cookbook-cuisine-italian.js","cookbook/cookbook-cuisine-japanese.js","cookbook/cookbook-cuisine-korean.js","cookbook/cookbook-cuisine-mexican.js","cookbook/cookbook-cuisine-middle-eastern.js","cookbook/cookbook-cuisine-moroccan.js","cookbook/cookbook-cuisine-persian.js","cookbook/cookbook-cuisine-peruvian.js","cookbook/cookbook-cuisine-polish.js","cookbook/cookbook-cuisine-portuguese.js","cookbook/cookbook-cuisine-spanish.js","cookbook/cookbook-cuisine-thai.js","cookbook/cookbook-cuisine-turkish.js","cookbook/cookbook-cuisine-vietnamese.js","cookbook/cookbook-everyday.js","cookbook/cookbook-fancy.js","cookbook/cookbook-leftovers.js","cookbook/cookbook-light.js","pizza.js","ferment.js","engine.js"];
 var boot=document.getElementById("boot");
 function fail(){boot.hidden=false;document.getElementById("bootbtn").onclick=function(){
   var go=function(){location.reload()};

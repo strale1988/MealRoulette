@@ -149,6 +149,7 @@ KITCHEN.ingredients([
 ["stale-bread","stale bread","left","carb",265,9,"gluten","old bread,day old bread,leftover bread,bread crust",40,""],
 // ---- more for baking
 ["yeast","dried yeast","bake","baking",325,40,"pantry","yeast,instant yeast,active dry yeast",0,""],
+["fresh-yeast","fresh yeast","bake","baking",105,17,"","fresh yeast,cake yeast,compressed yeast",0,""],
 ["dark-chocolate","dark chocolate","bake","baking",540,6,"","chocolate,chocolate chips,chocolate chunk",0,""],
 ["cornstarch","cornstarch","bake","baking",360,0,"pantry","cornflour,corn starch,corn flour",0,""],
 ["raisins","raisins","bake","fruit",300,3,"","raisin,sultana,dried fruit",0,""],

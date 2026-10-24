@@ -148,6 +148,8 @@ mk("coca",{name:"Coca (Catalan flatbread)",grp:"Flatbreads",from:"Catalonia / Pr
  shape:"Dimple the dough with your fingertips.",
  bake:"Bake 20–25 minutes until the base is golden and the topping is soft and lightly caramelised."});
 PZ.groups=["Round","Tray and pan","Fried","Flatbreads"];
+PZ.hrange={"neapolitan":[58,65],"roman-tonda":[55,62],"roman-teglia":[70,85],"pinsa":[72,85],"ny":[60,67],"detroit":[68,78],"chicago":[45,55],"sicilian":[65,75],"grandma":[60,68],"tavern":[42,50],"pan":[62,70],"sameday":[58,68],"noknead":[65,78],"sourdough":[60,75],"wholemeal":[65,75],"gluten-free":[80,95],"montanara":[58,66],"flammkuchen":[45,55],"lahmacun":[52,60],"manakish":[55,62],"coca":[48,55]};
+
 
 /* ------------------------------------------------------------------ fermentation modes
    idy: instant dried yeast, % of the flour weight (x3 = fresh yeast, x1.33 = active dry). Values follow common home-baker yeast-by-time tables:
@@ -344,19 +346,23 @@ function doughPlan(st,o){
   let mid=o.mode&&MODES[o.mode]?o.mode:st.def;
   if(st.modes&&!st.modes.includes(mid)){const was=MODES[mid].short;mid=st.modes.includes(st.def)?st.def:st.modes[0];notes.push(`${st.name} dough doesn't suit the ${was.toLowerCase()} schedule, so it uses ${MODES[mid].short.toLowerCase()} instead.`)}
   const M=MODES[mid],yeasted=!!st.y,sd=!!st.sd,pan=st.kind==="pan";
-  const pool=!!o.pool&&yeasted&&!st.nopool&&!st.liq&&st.flours[0][1]>=30&&st.hyd>=45;
-  if(o.pool&&!pool)notes.push(st.y?`A poolish isn't used with ${st.name}.`:`A poolish isn't used with ${st.name} (there is no commercial yeast).`);
+  const H=o.hyd&&!st.liq?Math.max(40,Math.min(100,o.hyd)):0,eh=H||(sd?st.hydTot:st.hyd);
+  const want=o.pre||(o.pool?"poolish":""),okPre=yeasted&&!st.nopool&&!st.liq,
+    pre=want==="poolish"&&okPre&&st.flours[0][1]>=30&&eh>=45?"poolish":want==="biga"&&okPre&&eh>=56&&!st.extra.length?"biga":"",pool=!!pre,biga=pre==="biga",PG=biga?"Biga":"Poolish";
+  if(want&&!pre)notes.push(yeasted?`A ${want} isn't used with ${st.name}${want==="biga"&&eh<56?" (the dough is too dry to hold back half the flour's water for it)":""}.`:`A ${want} isn't used with ${st.name} (there is no commercial yeast).`);
+  const fresh=o.fresh!==false,YID=fresh?"fresh-yeast":"yeast",YM=fresh?3:1,yname=fresh?"fresh yeast":"dried yeast";
   const fat=st.fat==="butter"&&!(diet.dairy||diet.vegan)?"butter":"olive-oil";
   const ballG=o.ball||st.ball,total=ballG*count*foldx;
-  let flours=st.flours.map(f=>[f[0],f[1]]),extra=st.extra.map(e=>[e[0],e[1]]),hyd=st.hyd,starter=0;
-  if(sd){starter={same:25,over:8,cold24:15,cold48:10,cold72:6}[mid]||15;flours=[[flours[0][0],100-starter/2]];extra=[["sourdough-starter",starter]];hyd=st.hydTot-starter/2}
-  const yP=yeasted?M.idy*(st.yf||1):0,poolFl=pool?30:0,P=[];
-  if(pool)P.push({id:flours[0][0],p:poolFl,grp:"Poolish"},{id:"water",p:poolFl,grp:"Poolish"},{id:"yeast",p:.03,grp:"Poolish"});
-  flours.forEach((f,i)=>P.push({id:f[0],p:f[1]-(i===0?poolFl:0),grp:"Dough"}));
-  (st.liq||[["water",hyd]]).forEach(l=>P.push({id:l[0],p:l[0]==="water"?l[1]-poolFl:l[1],grp:"Dough"}));
+  let flours=st.flours.map(f=>[f[0],f[1]]),extra=st.extra.map(e=>[e[0],e[1]]),hyd=H||st.hyd,starter=0;
+  if(sd){starter={same:25,over:8,cold24:15,cold48:10,cold72:6}[mid]||15;flours=[[flours[0][0],100-starter/2]];extra=[["sourdough-starter",starter]];hyd=eh-starter/2}
+  const yP=yeasted?M.idy*(st.yf||1):0,poolFl=pre==="poolish"?30:0,P=[];
+  if(pre==="poolish")P.push({id:flours[0][0],p:poolFl,grp:PG},{id:"water",p:poolFl,grp:PG},{id:YID,p:.03*YM,grp:PG});
+  if(biga){flours.forEach(f=>P.push({id:f[0],p:f[1],grp:PG}));P.push({id:"water",p:50,grp:PG},{id:YID,p:.15*YM,grp:PG})}
+  else flours.forEach((f,i)=>P.push({id:f[0],p:f[1]-(i===0?poolFl:0),grp:"Dough"}));
+  (st.liq||[["water",hyd]]).forEach(l=>P.push({id:l[0],p:l[0]==="water"?l[1]-poolFl-(biga?50:0):l[1],grp:"Dough"}));
   extra.forEach(e=>P.push({id:e[0],p:e[1],grp:"Dough"}));
   P.push({id:"salt",p:st.salt,grp:"Dough"});
-  if(yeasted)P.push({id:"yeast",p:pool?yP*.5:yP,grp:"Dough"});
+  if(yeasted)P.push({id:YID,p:(biga?yP*.4:pool?yP*.5:yP)*YM,grp:"Dough"});
   if(st.oil)P.push({id:fat,p:st.oil,grp:"Dough"});
   if(st.sugar)P.push({id:"sugar",p:st.sugar,grp:"Dough"});
   const f=total/P.reduce((t,x)=>t+x.p,0),items=P.map(x=>{const e=K.ING[x.id];return{id:x.id,a:x.p*f,u:"g",grp:x.grp,pct:x.p,name:e.name,txt:dg(x.p*f)+" g"}});
@@ -364,18 +370,18 @@ function doughPlan(st,o){
   const s=[],tot=Math.round(total/5)*5,nb=Math.max(1,count);
   const flourGrams=items.filter(x=>/flour/.test(x.id)||x.id==="cornmeal").reduce((t,x)=>t+x.a,0);
   // --- mix
-  const yD=it("yeast","Dough"),yPo=it("yeast","Poolish"),w=it("water","Dough");
-  if(pool){
-    s.push(`The evening before (12–16 hours ahead) make the poolish: stir ${qq("yeast","Poolish")} into ${qq("water","Poolish")} (about 20 °C), add ${qq(flours[0][0],"Poolish")} and stir to a thick batter. Cover and leave at 18–20 °C until domed, bubbly and just starting to sink in the middle.`);
-  }
+  const yD=it(YID,"Dough"),yPo=it(YID,PG),w=it("water","Dough"),yv=fresh?"Crumble":"Stir";
+  if(pre==="poolish")s.push(`The evening before (12–16 hours ahead) make the poolish: ${yv.toLowerCase()} ${qq(YID,PG)} into ${qq("water",PG)} (about 20 °C), add ${qq(flours[0][0],PG)} and stir to a thick batter. Cover and leave at 18–20 °C until domed, bubbly and just starting to sink in the middle.`);
+  if(biga)s.push(`The evening before (16–18 hours ahead) make the biga: ${yv.toLowerCase()} ${qq(YID,PG)} into ${qq("water",PG)} (16–18 °C), add ${list(items.filter(x=>x.grp===PG&&/flour/.test(x.id)).map(x=>qq(x.id,PG)))} and mix just until there is no dry flour. It stays a stiff, shaggy dough, so don't knead it. Cover and leave at 16–18 °C for 16–18 hours until about tripled, domed and full of bubbles, with a slightly sweet smell.`);
   if(!yeasted&&!sd){
     s.push(`Put the ${list((st.liq||[["water"]]).map(l=>qq(l[0],"Dough")))} in a large bowl. Add the ${list(items.filter(x=>x.grp==="Dough"&&(K.ING[x.id].role==="carb"||x.id==="psyllium")).map(x=>qq(x.id,"Dough")))} and the ${qq("salt","Dough")}${it(fat,"Dough")?`, ${qq(fat,"Dough")}`:""}.`);
     s.push(st.fixed||st.knead);
   }else{
     const liqP=list((st.liq||[["water"]]).map(l=>qq(l[0],"Dough")));
-    const yt=!yeasted?"":qq("yeast","Dough");
+    const yt=!yeasted?"":qq(YID,"Dough");
     const flList=list(items.filter(x=>x.grp==="Dough"&&(/flour/.test(x.id)||x.id==="cornmeal"||x.id==="psyllium")).map(x=>qq(x.id,"Dough")));
-    s.push((pool?"Break up the ripe poolish in a large bowl with ":sd?`Whisk the ${qq("sourdough-starter","Dough")} into `:"")+(yeasted?(pool?`${liqP} and ${yt}`:`Stir ${yt} into ${liqP}`):liqP)+` (${M.temp}).`+` Add the ${flList} and mix until no dry flour is left. Cover and rest 20–30 minutes.`);
+    if(biga)s.push(`Tear the ripe biga into small pieces in a large bowl. Add ${liqP} and ${yt} (${M.temp}) and squeeze and mix with your hands or a mixer for about 5 minutes until the biga has broken down and the dough comes together. Cover and rest 20 minutes.`);
+    else s.push((pre==="poolish"?"Break up the ripe poolish in a large bowl with ":sd?`Whisk the ${qq("sourdough-starter","Dough")} into `:"")+(yeasted?(pool?`${liqP} and ${yt}`:`${yv} ${yt} into ${liqP}`):liqP)+` (${M.temp}).`+` Add the ${flList} and mix until no dry flour is left. Cover and rest 20–30 minutes.`);
     s.push(`Add the ${qq("salt","Dough")}${it(fat,"Dough")?`, ${qq(fat,"Dough")}`:""}${it("sugar","Dough")?` and ${qq("sugar","Dough")}`:""}. ${st.knead}`);
   }
   // --- fermentation schedule
@@ -396,24 +402,27 @@ function doughPlan(st,o){
     s.push(tt+" "+(cold?"Take the dough out of the fridge and ":"")+st.pan.replace(/^./,c=>cold?c.toLowerCase():c),`Cover and proof ${st.panProof} at room temperature until puffy.`);
   }
   // --- summary line and tips
-  const yTot=yeasted?(pool?.03+yP*.5:yP):0,hydShow=st.liq?st.liq.reduce((t,l)=>t+l[1],0):sd?st.hydTot:st.hyd;
-  const sum=[`Hydration ${pp(hydShow)}%`,`salt ${pp(st.salt)}%`].concat(yeasted?[`dried yeast ${pp(yTot)}%`]:sd?[`starter ${starter}%`]:[]).concat(st.oil?[`${fat==="butter"?"butter":"oil"} ${pp(st.oil)}%`]:[]).concat([`${ballG} g per ${pan?"pan":"ball"}`]).join(" · ");
+  const yTot=yeasted?((biga?.15+yP*.4:pool?.03+yP*.5:yP)*YM):0,hydShow=st.liq?st.liq.reduce((t,l)=>t+l[1],0):eh;
+  const sum=[`Hydration ${pp(hydShow)}%`,`salt ${pp(st.salt)}%`].concat(yeasted?[`${yname} ${pp(yTot)}%`]:sd?[`starter ${starter}%`]:[]).concat(st.oil?[`${fat==="butter"?"butter":"oil"} ${pp(st.oil)}%`]:[]).concat([`${ballG} g per ${pan?"pan":"ball"}`]).join(" · ");
   const tips=[];
-  if(yeasted){const ys=[yD,yPo].filter(y=>y&&y.a<1);if(ys.length)tips.push("If your scale can't weigh yeast this finely, stir 1 g dried yeast into 100 g water and use "+ys.map(y=>`${Math.max(1,Math.round(y.a*101))} g of that mix for the ${y.grp==="Poolish"?"poolish":"dough"}`).join(" and ")+", taking the same weight off the water.")}
-  if(yeasted)tips.push(`Yeast is instant dried yeast. For fresh yeast use 3×, for active dry 1⅓×; dissolve it in the water first.`);
+  if(yeasted){const ys=[yD,yPo].filter(y=>y&&y.a<1);if(ys.length)tips.push(`If your scale can't weigh yeast this finely, stir 1 g ${yname} into 100 g water and use `+ys.map(y=>`${Math.max(1,Math.round(y.a*101))} g of that mix for the ${y.grp==="Dough"?"dough":pre}`).join(" and ")+", taking the same weight off the water.")}
+  if(yeasted)tips.push(fresh?"Yeast is fresh (cake) yeast: crumble it into the water. If you only have dried yeast, use one third of the weight in instant dried yeast.":"Yeast is instant dried yeast. For fresh yeast use 3×, for active dry 1⅓×; dissolve it in the water first.");
   if(cold)tips.push("Judge long ferments by the dough, not the clock: it should grow by about 1½–2× and feel airy and slightly domed. A cold fridge slows it down; a warm one speeds it up.");
   if(mid==="cold72"||mid==="over")tips.push("Long ferments brown faster: bake slightly cooler or a minute shorter if the crust darkens too quickly.");
-  if(pool)tips.push("The poolish is made from 30% of the flour and an equal weight of water, and gives a sweeter, more open crumb.");
-  if(st.hyd>=75)tips.push("This is a wet dough: use wet hands or a scraper, and flour or oil the surface rather than adding flour to the dough.");
-  const ah=st.fixed?"45 minutes":M.ahead+(pool?" (poolish the evening before)":"");
-  return{items,steps:s,sum,tips,notes,ahead:ah,mode:mid,modeName:M.name,pool,total:tot,ball:ballG,flour:Math.round(flourGrams),yeastPct:yTot};
+  if(pre==="poolish")tips.push("The poolish is made from 30% of the flour and an equal weight of water, and gives a sweeter, more open crumb.");
+  if(biga)tips.push("The biga uses all of the flour with water at half the flour's weight (50% hydration) and a little yeast. The rest of the water goes in at the final mix, so there is no extra flour. It gives a nutty flavour and a strong, chewy crumb.");
+  const hr=PZ.hrange[st.id];if(H&&hr&&(H<hr[0]||H>hr[1]))tips.push(`${H}% is outside the usual ${hr[0]}–${hr[1]}% for ${st.name}, so expect a ${H>hr[1]?"wetter, slacker":"stiffer, tighter"} dough than the traditional one.`);
+  if(eh>=75)tips.push("This is a wet dough: use wet hands or a scraper, and flour or oil the surface rather than adding flour to the dough. High hydration needs a good-protein flour and a gentle hand.");
+  if(eh<55&&!st.fixed)tips.push("This is a stiff dough: knead a little longer and rest the balls well before rolling.");
+  const ah=st.fixed?"45 minutes":M.ahead+(pre?` (${pre} the evening before)`:"");
+  return{items,steps:s,sum,tips,notes,ahead:ah,mode:mid,modeName:M.name,pool,pre,fresh,total:tot,ball:ballG,flour:Math.round(flourGrams),yeastPct:yTot};
 }
 
 PZ.resolve=function(spec,o){
   o=o||{};const diet=o.diet||{},F=o.fridge||new Set(),U=o.urgent||new Set(),count=Math.max(1,o.count||2);
   const fmtKind=spec.fmt||"";
   let sid=o.style||spec.style,st=S[sid];if(!st)return null;
-  if(FOLD[fmtKind]&&st.kind!=="round"&&st.kind!=="flat")return null;
+  if((FOLD[fmtKind]||fmtKind==="khachapuri")&&st.kind!=="round"&&st.kind!=="flat")return null;
   if(diet.gf){ // swap in the gluten-free dough but keep the shape and the oven of the chosen style
     if(FOLD[fmtKind])return null;
     const g=S["gluten-free"];if(sid!=="gluten-free")st=Object.assign({},st,{flours:g.flours,extra:g.extra,hyd:g.hyd,hydTot:undefined,sd:0,liq:undefined,salt:g.salt,oil:g.oil,sugar:g.sugar,y:1,modes:g.modes,def:g.def,fixed:undefined,nopool:1,knead:g.knead,rest:g.rest,name:st.name+" (gluten-free dough)",
@@ -422,7 +431,7 @@ PZ.resolve=function(spec,o){
   let foldx=1;if(fk==="stromboli")foldx=1.3;if(fk==="calzone"||fk==="fried-calzone")foldx=.9;
   const sz=(fk==="calzone"||fk==="fried-calzone")?.75:fk==="stromboli"?1.5:st.size;
   const dough=Object.assign({},st,{foldx});
-  const plan=doughPlan(dough,{mode:o.ferm,pool:o.pool,count,diet,ball:o.ball,foldx}),ing=[],add=(id,a,u,grp)=>{const e=ing.find(x=>x.id===id&&x.grp===grp);if(e){e.a+=a;return}ing.push({id,a,u,grp})};
+  const plan=doughPlan(dough,{mode:o.ferm,pool:o.pool,pre:o.pre,fresh:o.fresh,hyd:o.hyd,count,diet,ball:o.ball,foldx}),ing=[],add=(id,a,u,grp)=>{const e=ing.find(x=>x.id===id&&x.grp===grp);if(e){e.a+=a;return}ing.push({id,a,u,grp})};
   plan.items.forEach(x=>ing.push({id:x.id,a:x.a,u:"g",grp:x.grp,txt:x.txt,pct:x.pct}));
   // sauce
   const sc=SAUCES[spec.sauce||"none"],sauceTot={};
@@ -503,21 +512,21 @@ PZ.resolve=function(spec,o){
   const sections=[{h:"Dough (start "+plan.ahead.replace(/ \(.*/,"")+" ahead)",steps:steps.dough,tips:plan.tips}];
   if(steps.prep.length)sections.push({h:"Sauce and toppings",steps:steps.prep});
   sections.push({h:"Shape, top and bake",steps:steps.make});
-  const hit=ing.filter(x=>x.grp!=="Dough"&&x.grp!=="Poolish"&&x.have&&!x.pantry).length,urg=ing.filter(x=>x.have&&U.has(x.id)).length,leftN=ing.filter(x=>x.left).length;
+  const hit=ing.filter(x=>x.grp!=="Dough"&&x.grp!=="Poolish"&&x.grp!=="Biga"&&x.have&&!x.pantry).length,urg=ing.filter(x=>x.have&&U.has(x.id)).length,leftN=ing.filter(x=>x.left).length;
   return{kind:"pizza",title:spec.name,desc:[spec.desc,dough.desc].filter(Boolean).join(" "),from:spec.from||"",style:sid,styleName:dough.name,cat:spec.cat,count,feeds:ppl,
-    ahead:plan.ahead,ferm:plan.mode,fermName:plan.modeName,pool:plan.pool,sum:plan.sum,notes:plan.notes,doughG:plan.total,ballG:plan.ball,flourG:plan.flour,bake:`${T}, ${bt}`,ing,sections,kcal:kc.kcal,p:kc.p,hit,urg,leftN,spec:{id:spec.id,name:spec.name,remix:!!spec.remix},remix:!!spec.remix,built:!!spec.remix};
+    ahead:plan.ahead,ferm:plan.mode,fermName:plan.modeName,pool:plan.pool,pre:plan.pre,fresh:plan.fresh,sum:plan.sum,notes:plan.notes,doughG:plan.total,ballG:plan.ball,flourG:plan.flour,bake:`${T}, ${bt}`,ing,sections,kcal:kc.kcal,p:kc.p,hit,urg,leftN,spec:{id:spec.id,name:spec.name,remix:!!spec.remix},remix:!!spec.remix,built:!!spec.remix};
 };
 
 /* ------------------------------------------------------------------ dough only */
 PZ.dough=function(sid,count,o){
   o=o||{};const diet=o.diet||{},F=o.fridge||new Set();let st=S[sid];if(!st)return null;
   if(diet.gf&&sid!=="gluten-free"){sid="gluten-free";st=S[sid]}
-  const plan=doughPlan(st,{mode:o.ferm,pool:o.pool,count,diet,ball:o.ball}),ing=plan.items.map(x=>{const e=K.ING[x.id];return Object.assign({},x,{pantry:e.f.has("pantry"),have:F.has(x.id)||x.id==="water"})});
+  const plan=doughPlan(st,{mode:o.ferm,pool:o.pool,pre:o.pre,fresh:o.fresh,hyd:o.hyd,count,diet,ball:o.ball}),ing=plan.items.map(x=>{const e=K.ING[x.id];return Object.assign({},x,{pantry:e.f.has("pantry"),have:F.has(x.id)||x.id==="water"})});
   const flags=new Set();ing.forEach(x=>K.ING[x.id].f.forEach(f=>flags.add(f)));if(!K.allowed({flags},diet))return null;
   const ideas=PZ.recipes.filter(r=>r.style===sid||(r.cat!=="sweet"&&r.cat!=="folded"&&S[r.style].kind===st.kind)).slice(0,60);
   const pick=shuf(ideas).slice(0,4).map(r=>r.name);
   const make=[st.heat,st.shape,"Sauce and top the dough with whatever you like, keeping toppings light so the base can crisp. "+st.bake];
-  return{kind:"pizza",dough:true,title:/dough/i.test(st.name)?st.name:st.name+" dough",desc:st.desc,from:st.from,style:sid,styleName:st.name,count,feeds:Math.round(count*st.feeds),ahead:plan.ahead,ferm:plan.mode,fermName:plan.modeName,pool:plan.pool,sum:plan.sum,notes:plan.notes,doughG:plan.total,ballG:plan.ball,flourG:plan.flour,bake:`${st.t}, ${st.bt}`,ing,
+  return{kind:"pizza",dough:true,title:/dough/i.test(st.name)?st.name:st.name+" dough",desc:st.desc,from:st.from,style:sid,styleName:st.name,count,feeds:Math.round(count*st.feeds),ahead:plan.ahead,ferm:plan.mode,fermName:plan.modeName,pool:plan.pool,pre:plan.pre,fresh:plan.fresh,sum:plan.sum,notes:plan.notes,doughG:plan.total,ballG:plan.ball,flourG:plan.flour,bake:`${st.t}, ${st.bt}`,ing,
     sections:[{h:"Dough (start "+plan.ahead.replace(/ \(.*/,"")+" ahead)",steps:plan.steps,tips:plan.tips},{h:"Bake day",steps:make}],ideas:pick,hit:0,urg:0,spec:{id:"dough-"+sid,name:st.name}};
 };
 
