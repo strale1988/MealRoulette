@@ -1,6 +1,6 @@
 # Meal Roulette cookbook
 
-The curated world-cookbook expansion is documented in `RECIPE-EXPANSION.md`. The current collection contains 431 validated recipes across 281 catalog ingredients.
+The curated world-cookbook expansion is documented in `RECIPE-EXPANSION.md`. The current collection contains 587 validated recipes across 281 catalog ingredients.
 
 Three layers, each with one job:
 

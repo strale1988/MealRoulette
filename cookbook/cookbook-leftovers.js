@@ -1451,7 +1451,7 @@ KITCHEN.add([
   "steps": [
     "Dice the {potatoes} and finely chop the {onion} and {celery}.",
     "Melt the {butter} in a saucepan and cook the onion and celery until soft.",
-    "Stir in the {flour}, then gradually add the {milk} and 250 ml water, stirring until smooth.",
+    "Stir in the {flour}, then gradually add the {milk} and 250 g water, stirring until smooth.",
     "Add the potatoes and simmer until tender, about 12–15 minutes.",
     "Flake in the {left-fish} and heat gently until piping hot; avoid stirring too hard so the fish stays in pieces."
   ]

@@ -117,7 +117,7 @@ KITCHEN.add(
     "steps": [
       "Cut the {lamb} into 3 cm chunks, season, and brown in {olive-oil} in a heavy pot. Remove.",
       "Fry the sliced {onion} for 8 minutes, then add the {garlic}, {cumin}, {cinnamon} and {paprika} for 1 minute.",
-      "Return the {lamb}, add the {canned-tomatoes}, 200 ml water and half the {honey}. Cover and simmer very gently for 1 hour 30 minutes until the lamb is tender.",
+      "Return the {lamb}, add the {canned-tomatoes}, 200 g water and half the {honey}. Cover and simmer very gently for 1 hour 30 minutes until the lamb is tender.",
       "Drain and rinse the {chickpeas} and stir in for the last 15 minutes.",
       "Toast the {almonds} in a dry pan for 2 minutes. Cover the {couscous} with the same weight of boiling water for 5 minutes, fluff, and stir in the remaining {honey}.",
       "Serve the tagine over the {couscous}, topped with the {almonds} and {coriander}."

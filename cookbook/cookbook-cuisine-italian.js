@@ -630,7 +630,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Warm {olive-oil} in a pot with the sliced {garlic} for 1 minute without browning.",
-      "Add the {canned-tomatoes}, 300 ml water and a pinch of salt and simmer 10 minutes.",
+      "Add the {canned-tomatoes}, 300 g water and a pinch of salt and simmer 10 minutes.",
       "Tear in the {stale-bread} and simmer 10 minutes, stirring and crushing until thick and porridge-like.",
       "Stir in torn {basil} and a splash of oil to serve."
     ]

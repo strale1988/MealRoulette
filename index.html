@@ -151,7 +151,7 @@ footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);text-al
 .split ul.ing li:before{content:"";flex:none;width:18px;height:18px;border:1.5px solid var(--line);border-radius:50%}
 .split ul.ing li.done:before{background:var(--acc2);border-color:var(--acc2)}
 .btns+.hint2{margin:10px 4px 0;text-align:center}
-@media (max-width:959px){.act{position:sticky;bottom:10px;z-index:6;padding:8px;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 6px 22px rgba(0,0,0,.16)}}
+
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 h4.cat{margin:16px 0 2px;font-size:13px;font-weight:600;color:var(--mute)}
 ul.ing.tick li{align-items:center}ul.ing.tick li>span:first-child{flex:1}
@@ -206,7 +206,7 @@ main{padding-bottom:130px}
 #spin{background:var(--acc);grid-column:1/-1;margin-top:14px;padding:18px 8px;font-size:26px}
 #remix,#build{background:var(--card);color:var(--ink);font-size:16px;padding:13px 8px}
 .pzbtns button+button{background:var(--card);color:var(--ink)}.pzbtns button.alt{border:var(--bw) solid var(--ink)}
-@media (max-width:959px){.act{bottom:94px;background:transparent;border:0;box-shadow:none;padding:0}}
+@media (max-width:959px){.act{position:static;padding:0;background:transparent;border:0;box-shadow:none}}
 /* recipe card */
 .hero{background:var(--acc2);color:#fff;border-bottom:var(--bw) solid var(--ink);padding:22px}
 .hero h2{font-weight:800;letter-spacing:-.03em;font-size:clamp(26px,5vw,38px);line-height:1.02;color:#fff}
@@ -238,6 +238,8 @@ ol li,ul.ing li{-webkit-tap-highlight-color:transparent}ol li{cursor:pointer}ol 
 #remix{font-size:15px;margin-top:14px;padding:10px 6px;flex-direction:column;gap:4px;line-height:1.1}
 .pzbtns:has(#pzspin){grid-template-columns:2fr 1fr}.pzbtns:has(#pzspin) #pzremix{font-size:15px;padding:10px 6px;flex-direction:column;gap:4px;line-height:1.1}
 #pzferm{display:none}
+.step:has(#pzhyd){display:none}
+.tags{border-radius:28px;padding:6px 10px}.tags input:focus,.tags input:focus-visible{outline:0;box-shadow:none}.tags:focus-within{outline:3px solid var(--acc);outline-offset:2px}
 .sl{margin:10px 0 4px}.sl[hidden]{display:none}
 .sl input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:34px;background:transparent;margin:0;cursor:pointer;--p:50%}
 .sl input[type=range]::-webkit-slider-runnable-track{height:14px;border:var(--bw) solid var(--ink);border-radius:99px;background:linear-gradient(90deg,var(--acc) var(--p),var(--sand) var(--p))}
@@ -374,14 +376,14 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
    <div class="lab"><svg class="i"><use href="#i-fridge"/></svg>What's in your fridge?</div>
    <p class="hint2">Tap the clock on an item to use it first.</p>
    <div class="ac-wrap"><div class="tags" id="tags"><input id="add" placeholder="Type an ingredient…" aria-label="Add ingredient" enterkeyhint="done" autocomplete="off" aria-autocomplete="list" aria-controls="add-suggest"></div><div class="suggest" id="add-suggest" role="listbox" aria-label="Ingredient suggestions" hidden></div></div>
-   <div class="ac-help">Suggestions appear as you type. Choose one, or press Enter to add a custom item.</div>
+   <div class="ac-help">Pick a suggestion, or press Enter to add your own.</div>
    <div class="quick" id="quick"></div>
    <section class="leftover-box" aria-label="Leftover ingredients">
-    <label class="left-toggle" for="useleft"><input type="checkbox" id="useleft"><span><strong>Use leftovers</strong><small>Turn this on, then select cooked food you already have. Leftovers are never treated as shopping items.</small></span></label>
+    <label class="left-toggle" for="useleft"><input type="checkbox" id="useleft"><span><strong>Use leftovers</strong><small>Pick cooked food you already have. It never goes on the shopping list.</small></span></label>
     <div id="leftpanel" hidden>
      <p class="hint2" style="margin:10px 0 4px">Which leftovers do you have?</p>
      <div class="ac-wrap"><div class="tags" id="lefttags"><input id="ladd" placeholder="Type a cooked leftover…" aria-label="Add cooked leftover" enterkeyhint="done" autocomplete="off" aria-autocomplete="list" aria-controls="ladd-suggest"></div><div class="suggest" id="ladd-suggest" role="listbox" aria-label="Cooked leftover suggestions" hidden></div></div>
-     <div class="ac-help">Choose cooked rice, cooked pasta, leftover chicken, or another cooked item; custom names are also allowed.</div>
+     <div class="ac-help">Cooked rice, pasta, chicken… or type your own.</div>
      <div class="quick" id="lquick"></div>
      <p class="hint2" style="margin:8px 0 0">Recipes that need a leftover will only be offered when you have selected that leftover.</p>
     </div>
@@ -402,7 +404,7 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
     </div>
    </div>
   </section>
-  <div class="btns act"><button id="spin"><svg class="i"><use href="#i-dice"/></svg>Spin it!</button><button id="remix"><svg class="i"><use href="#i-wand"/></svg>Whisk</button></div>
+  <div class="btns act"><button id="spin"><svg class="i"><use href="#i-dice"/></svg>Spin</button><button id="remix"><svg class="i"><use href="#i-wand"/></svg>Whisk</button></div>
   <p class="hint2" id="ah"></p>
   <p class="recipe-caution"><strong>Recipe note:</strong> Some recipes—especially whisked and generated meals—may need tweaking or may not turn out perfectly. Use your judgment, double-check ingredients and quantities, cook food safely, and adjust to your ingredients, equipment, and taste.</p>
  </aside>
@@ -490,7 +492,7 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
   <section class="panel"><div class="lab"><svg class="i"><use href="#i-jar"/></svg>Always have at home</div>
    <p class="hint">Staples you keep stocked, like rice, eggs, flour or canned tomatoes. They count as "in stock" for every recipe, build and plan, so they never end up on your shopping list.</p>
    <div class="ac-wrap"><div class="tags" id="stags"><input id="sadd" placeholder="Type a staple…" aria-label="Add staple" enterkeyhint="done" autocomplete="off" aria-autocomplete="list" aria-controls="sadd-suggest"></div><div class="suggest" id="sadd-suggest" role="listbox" aria-label="Staple ingredient suggestions" hidden></div></div>
-   <div class="ac-help">Suggestions appear as you type. Choose one, or press Enter to add a custom item.</div>
+   <div class="ac-help">Pick a suggestion, or press Enter to add your own.</div>
    <div class="quick" id="squick"></div>
   </section>
   <section class="panel"><div class="lab"><svg class="i"><use href="#i-leaf"/></svg>Diet</div>
@@ -1096,7 +1098,7 @@ pzShow=function(r,m){_ps(r,m);try{const sv=o.querySelector(".pzsave");if(!r||!sv
   const b=document.createElement("button");b.id="pzcook";b.className="go";b.innerHTML=I("flame")+"Start cooking";sv.parentNode.prepend(b);
   b.onclick=()=>window.__cook({title:r.title||"Pizza",steps})}catch(e){console.error(e)}};
 const _d=draw;
-draw=function(){_d();const n=S.strict?S.pantry.length+(S.useLeftovers?S.leftovers.length:0):0,b=$("spin");if(b&&!b.disabled){b.innerHTML=I("dice")+(n?"Spin with "+n+(n===1?" thing":" things"):"Spin it!")}};
+draw=function(){_d();const b=$("spin");if(b&&!b.disabled){b.innerHTML=I("dice")+"Spin"}};
 draw();
 })();
 /* ---- pizza dough sliders (fermentation + hydration), layered on the existing state; the old buttons still work ---- */
@@ -1183,7 +1185,7 @@ if("serviceWorker" in navigator&&location.protocol.startsWith("http")){
 /* Loader: downloads every file in parallel (fast on phones), runs them in order, retries a failed file once,
    and shows a Reload button instead of a blank page if something still fails. */
 (function(){
-var FILES=["kitchen.js","ingredients.js","cookbook/cookbook-bake.js","cookbook/cookbook-cuisine-balkan.js","cookbook/cookbook-cuisine-cajun.js","cookbook/cookbook-cuisine-caribbean.js","cookbook/cookbook-cuisine-chinese.js","cookbook/cookbook-cuisine-ethiopian.js","cookbook/cookbook-cuisine-french.js","cookbook/cookbook-cuisine-german.js","cookbook/cookbook-cuisine-greek.js","cookbook/cookbook-cuisine-hungarian.js","cookbook/cookbook-cuisine-indian.js","cookbook/cookbook-cuisine-indonesian.js","cookbook/cookbook-cuisine-italian.js","cookbook/cookbook-cuisine-japanese.js","cookbook/cookbook-cuisine-korean.js","cookbook/cookbook-cuisine-mexican.js","cookbook/cookbook-cuisine-middle-eastern.js","cookbook/cookbook-cuisine-moroccan.js","cookbook/cookbook-cuisine-persian.js","cookbook/cookbook-cuisine-peruvian.js","cookbook/cookbook-cuisine-polish.js","cookbook/cookbook-cuisine-portuguese.js","cookbook/cookbook-cuisine-spanish.js","cookbook/cookbook-cuisine-thai.js","cookbook/cookbook-cuisine-turkish.js","cookbook/cookbook-cuisine-vietnamese.js","cookbook/cookbook-everyday.js","cookbook/cookbook-fancy.js","cookbook/cookbook-leftovers.js","cookbook/cookbook-light.js","pizza.js","ferment.js","engine.js"];
+var FILES=["kitchen.js","ingredients.js","cookbook/cookbook-bake.js","cookbook/cookbook-cuisine-balkan.js","cookbook/cookbook-cuisine-cajun.js","cookbook/cookbook-cuisine-caribbean.js","cookbook/cookbook-cuisine-chinese.js","cookbook/cookbook-cuisine-ethiopian.js","cookbook/cookbook-cuisine-french.js","cookbook/cookbook-cuisine-german.js","cookbook/cookbook-cuisine-greek.js","cookbook/cookbook-cuisine-hungarian.js","cookbook/cookbook-cuisine-indian.js","cookbook/cookbook-cuisine-indonesian.js","cookbook/cookbook-cuisine-italian.js","cookbook/cookbook-cuisine-japanese.js","cookbook/cookbook-cuisine-korean.js","cookbook/cookbook-cuisine-mexican.js","cookbook/cookbook-cuisine-middle-eastern.js","cookbook/cookbook-cuisine-moroccan.js","cookbook/cookbook-cuisine-persian.js","cookbook/cookbook-cuisine-peruvian.js","cookbook/cookbook-cuisine-polish.js","cookbook/cookbook-cuisine-portuguese.js","cookbook/cookbook-cuisine-spanish.js","cookbook/cookbook-cuisine-thai.js","cookbook/cookbook-cuisine-turkish.js","cookbook/cookbook-cuisine-vietnamese.js","cookbook/cookbook-everyday.js","cookbook/cookbook-fancy.js","cookbook/cookbook-leftovers.js","cookbook/cookbook-light.js","cookbook/cookbook-more-light-b.js","cookbook/cookbook-more-mains-b.js","cookbook/cookbook-more-light.js","cookbook/cookbook-more-mains-a.js","cookbook/cookbook-quick.js","pizza.js","ferment.js","engine.js"];
 var boot=document.getElementById("boot");
 function fail(){boot.hidden=false;document.getElementById("bootbtn").onclick=function(){
   var go=function(){location.reload()};

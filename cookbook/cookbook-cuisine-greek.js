@@ -217,7 +217,7 @@ KITCHEN.add(
     "steps": [
       "Cut the {lamb} into 2 cm pieces, season with salt and brown in {olive-oil} over high heat for 5 minutes. Remove.",
       "In the same pan, fry the sliced {garlic} and {oregano} for 30 seconds, then add the chopped {tomato} and cook 8 minutes until jammy.",
-      "Stir in the {pasta} (orzo works best) and 400 ml hot water. Simmer 10 minutes, stirring, until the pasta is tender and the sauce is thick.",
+      "Stir in the {pasta} (orzo works best) and 400 g hot water. Simmer 10 minutes, stirring, until the pasta is tender and the sauce is thick.",
       "Return the {lamb}, warm through 2 minutes, then crumble over the {feta} and finish with a squeeze of {lemon}."
     ]
   },

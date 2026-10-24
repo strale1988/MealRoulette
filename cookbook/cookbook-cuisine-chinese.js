@@ -876,7 +876,7 @@ KITCHEN.add(
     "steps": [
       "Cook the {rice}. Cut the {tofu} into cubes; mince the {ginger} and {garlic}, and slice the {spring-onion}.",
       "Heat the {oil} in a pan and brown the {beef-mince}. Stir in the {doubanjiang}, ginger and garlic and cook for 1 minute.",
-      "Add 250 ml water and the {soy-sauce}, then carefully slide in the tofu and simmer 5–7 minutes. Mix the {cornstarch} with a little cold water, stir it in to thicken, and finish with spring onion."
+      "Add 250 g water and the {soy-sauce}, then carefully slide in the tofu and simmer 5–7 minutes. Mix the {cornstarch} with a little cold water, stir it in to thicken, and finish with spring onion."
     ]
   }
 ]
