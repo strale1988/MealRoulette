@@ -75,6 +75,11 @@ select{padding:0 10px}
 .btns button:hover:not(:disabled){filter:brightness(1.06)}
 #spin{background:var(--acc)}#build,#remix{background:var(--acc2)}
 button:disabled{opacity:.6}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+/* no blue tap flash or stray selection box when tapping buttons; keyboard focus rings stay */
+button,summary,label,[role=button],[role=tab],[role=option],.tile,.logo,.sp-pizza,.ing li,ol li{-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none}
+button,summary,[role=tab],.tile,.sp-pizza,.ing li{-webkit-user-select:none;user-select:none;touch-action:manipulation}
+button:focus:not(:focus-visible),summary:focus:not(:focus-visible),[role=tab]:focus:not(:focus-visible),.tile:focus:not(:focus-visible),.ing li:focus:not(:focus-visible),ol li:focus:not(:focus-visible),.logo:focus:not(:focus-visible){outline:none;box-shadow:none}
+button::selection,button *::selection{background:transparent}
 .note{color:var(--mute);font-size:14px;margin-top:12px}
 .recipe-caution{color:var(--mute);font-size:13px;line-height:1.45;margin:10px 0 0;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--soft)}.recipe-caution strong{color:var(--ink)}
 .reel{display:none;text-align:center;margin:48px 0;min-height:120px;font-size:22px;font-weight:700;color:var(--acc)}.reel small{display:block;color:var(--mute);font-weight:400;font-size:14px;margin-top:6px}#rt,#prt{display:block;min-height:1.4em}.card{scroll-margin-top:130px}
@@ -472,6 +477,17 @@ footer{margin-top:28px;padding-top:12px}
 .tabs{padding:4px}.tabs button{padding:7px 4px;gap:2px;font-size:12.5px}.tabs .i{font-size:20px}
 @media (min-width:760px){.tabs{padding:0}.tabs button{padding:6px 16px;gap:8px;font-size:14.5px}}
 .splash{gap:10px}.sp-wheel{width:min(66vw,40vh,290px);margin-top:14px}.sp-t{font-size:clamp(30px,7vw,46px)}.sp-h{font-size:16px}.sp-open{padding:11px 26px;font-size:17px}
+
+/* ---- phone/tablet: filters and results are separate screens; desktop keeps filters left, recipe right ---- */
+.backbar{display:none}
+@media (max-width:959px){
+ #tab-cook:not(.resmode) .res{display:none}
+ #tab-cook.resmode .side,#tab-cook.resmode>.hl,#tab-cook.resmode>.hl+p{display:none}
+ #tab-cook.resmode .backbar{display:block;margin:0 0 12px}
+ #resback{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:9px 16px 9px 12px;font:inherit;font-weight:700;font-size:15px;cursor:pointer}
+ #resback:hover{border-color:var(--acc)}
+}
+@media (min-width:960px){.backrow{display:none!important}}
 </style>
 </head>
 <body>
@@ -560,11 +576,12 @@ footer{margin-top:28px;padding-top:12px}
     </div>
    </div>
   </section>
-  <div class="btns act"><button id="spin"><svg class="i"><use href="#i-dice"/></svg>Spin</button><button id="remix"><svg class="i"><use href="#i-wand"/></svg>Whisk</button></div>
+  <div class="btns act"><button id="spin">Spin</button><button id="remix">Whisk</button></div>
   <p class="hint2" id="ah"></p><p class="kbd">Press <kbd>S</kbd> to spin, <kbd>W</kbd> to whisk, <kbd>1</kbd>–<kbd>4</kbd> to switch pages</p>
   <p class="recipe-caution"><strong>Note:</strong> whisked and generated meals may need tweaking. Check quantities and cook food safely.</p>
  </aside>
  <section class="res">
+  <div class="backbar"><button type="button" id="resback"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Back</button></div>
   <div class="note" id="note" role="status"></div>
   <div class="reel" id="reel" aria-hidden="true"><div class="toss"><svg class="potsvg" viewBox="0 0 240 190" aria-hidden="true">
 <rect x="14" y="85" width="34" height="20" rx="8" fill="#9c2a17" style="stroke:var(--ink)" stroke-width="3"/>
@@ -788,13 +805,13 @@ function canonicalItem(v,allowLeft=false){
 }
 function tidy(v){const ids=K.match(v),id=ids.find(x=>K.ING[x]&&!isLeftId(x));const t=String(v).trim().toLowerCase();return id&&K.norm(K.label(id))===K.norm(t)?K.label(id).toLowerCase():t}
 function alreadyHas(list,v){const ids=K.match(v);return list.some(x=>{const old=K.match(x);return ids.length&&old.some(id=>ids.includes(id))||K.norm(x)===K.norm(v)});}
-function addItem(value){const raw=(value===undefined?$("add").value:value).replace(/,/g,"").trim().toLowerCase();
+function addItem(value){const raw=(value===undefined?$("add").value:value).replace(/[^\p{L}\s'’-]/gu,"").replace(/\s+/g," ").trim().toLowerCase();
   if(raw&&K.match(raw).some(isLeftId)){$("note").textContent="Add cooked leftovers under “Use leftovers” instead of the regular fridge list; they are available for matching recipes but never treated as groceries.";$("add").value="";return;}
   const v=canonicalItem(raw,false);if(v&&!alreadyHas(S.pantry,v))S.pantry.push(v);$("add").value="";hideSuggest("add-suggest");save();draw()}
-function addStaple(value){const raw=(value===undefined?$("sadd").value:value).replace(/,/g,"").trim().toLowerCase();
+function addStaple(value){const raw=(value===undefined?$("sadd").value:value).replace(/[^\p{L}\s'’-]/gu,"").replace(/\s+/g," ").trim().toLowerCase();
   if(raw&&K.match(raw).some(isLeftId)){$("note").textContent="Cooked leftovers belong under “Use leftovers”, not in kitchen staples.";$("sadd").value="";return;}
   const v=canonicalItem(raw,false);if(v&&!alreadyHas(S.staples,v))S.staples.push(v);$("sadd").value="";hideSuggest("sadd-suggest");save();draw()}
-function addLeftover(value){const raw=(value===undefined?$("ladd").value:value).replace(/,/g,"").trim().toLowerCase();if(!raw)return;
+function addLeftover(value){const raw=(value===undefined?$("ladd").value:value).replace(/[^\p{L}\s'’-]/gu,"").replace(/\s+/g," ").trim().toLowerCase();if(!raw)return;
   const ids=K.match(raw),direct=ids.find(isLeftId),q=K.norm(raw);let left=direct?K.ING[direct]:null,best=Infinity;
   // If a typed shorthand like "rice" maps to raw rice first, prefer the matching cooked-leftover catalog entry here.
   if(!left&&q.length>=2)Object.values(K.ING).filter(isLeftId).forEach(e=>[K.norm(e.name),...e.al.map(K.norm)].forEach(a=>{let score=Infinity;if(a===q)score=0;else if(a.startsWith(q))score=10+a.length-q.length;else if(q.length>=3&&a.includes(q))score=30+a.indexOf(q)+a.length-q.length;if(score<best){best=score;left=e}}));
@@ -1220,9 +1237,8 @@ $("pzspin").onclick=()=>pzRun("spin");$("pzremix").onclick=()=>pzRun("remix");
 $("spin").onclick=()=>run("spin");
 $("logo").onclick=()=>{ // the logo is a shortcut: spin a random recipe from anywhere
   if(document.querySelector(".cookov,.splash")||$("spin").disabled)return;
-  const lg=$("logo"),go=()=>{setTab("cook");scrollTo({top:0});run("spin",true,true)};
-  if(matchMedia("(prefers-reduced-motion:reduce)").matches||!lg.animate)return go();
-  lg.animate([{transform:"rotate(0)"},{transform:"rotate(720deg)"}],{duration:900,easing:"cubic-bezier(.15,.7,.2,1)"}).finished.then(go,go)};
+  const lg=$("logo");setTab("cook");run("spin",true); // same spinner as the Spin button
+  if(!matchMedia("(prefers-reduced-motion:reduce)").matches&&lg.animate)lg.animate([{transform:"rotate(0)"},{transform:"rotate(720deg)"}],{duration:900,easing:"cubic-bezier(.15,.7,.2,1)"})};
 $("remix").onclick=()=>run("remix");
 const cuisineOptions=Object.keys(GEN.cuisines).sort((a,b)=>a.localeCompare(b,"en",{sensitivity:"base"}));
 $("cuisine").innerHTML='<option value="">Surprise me</option>'+cuisineOptions.map(c=>`<option${c===S.cuisine?" selected":""}>${c}</option>`).join("");
@@ -1286,7 +1302,7 @@ pzShow=function(r,m){_ps(r,m);try{const sv=o.querySelector(".pzsave");if(!r||!sv
   const b=document.createElement("button");b.id="pzcook";b.className="go";b.innerHTML=I("flame")+"Start cooking";sv.parentNode.prepend(b);
   b.onclick=()=>window.__cook({title:r.title||"Pizza",steps})}catch(e){console.error(e)}};
 const _d=draw;
-draw=function(){_d();const b=$("spin");if(b&&!b.disabled){b.innerHTML=I("dice")+"Spin"}};
+draw=function(){_d();const b=$("spin");if(b&&!b.disabled){b.textContent="Spin"}};
 draw();
 })();
 /* ---- pizza dough sliders (fermentation + hydration), layered on the existing state; the old buttons still work ---- */
@@ -1462,20 +1478,30 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
     };
   }
 })();
-/* ---- on every cookbook recipe: change the servings, and rate it (thumbs steer future spins) ---- */
+/* servings for made-up (generated / whisked) recipes: scale every amount from the original, so repeated +/- never drifts */
+function scaleMade(r,n){
+  const b=r.base||{n:r.n,ing:r.ing,steps:r.steps,desc:r.desc},k=n/b.n;
+  const ing=b.ing.map(i=>typeof i.a==="number"?{...i,a:i.a*k,txt:fmt(i.a*k,i.u||"g")}:{...i});
+  const steps=b.steps.map(t=>t.replace(/(\d+(?:[.,]\d+)?)(\s?)(kg|ml|g|l)\b/g,(m,v,sp,u)=>{const x=parseFloat(v.replace(",","."))*(u==="kg"||u==="l"?1000:1)*k;return fmt(x,u==="kg"||u==="g"?"g":"ml")}));
+  const desc=typeof b.desc==="string"?b.desc.replace(/for \d+ (people|person)/,"for "+n+(n>1?" people":" person")):b.desc;
+  const o={...r,n,ing,steps};if(desc!==undefined)o.desc=desc;
+  Object.defineProperty(o,"base",{value:b,enumerable:false,writable:true,configurable:true});return o;
+}
+/* ---- on every recipe: change the servings, and rate it (thumbs steer future spins) ---- */
 (function(){
 const _sh=show;
 show=function(r,m){_sh(r,m);if(!r)return;try{
   const card=$("out").querySelector(".card"),row=card&&card.querySelector(".row");if(!row||card.classList.contains("plan"))return;
   // servings
   const rec=r.rid&&K.recipes.find(x=>x.id===r.rid),meta=card.querySelector(".meta");
-  if(rec&&meta){
+  if(meta){
     const box=document.createElement("div");box.className="scl";box.style.cssText="display:flex;align-items:center;gap:10px;margin:2px 0 10px;color:var(--mute);font-size:14px";
     box.innerHTML=`<span>Servings</span><span class="step" style="display:inline-flex;width:auto;min-width:130px;gap:6px"><button type="button" data-d="-1" aria-label="Fewer servings">${I("minus")}</button><b aria-live="polite">${r.n}</b><button type="button" data-d="1" aria-label="More servings">${I("plus")}</button></span>`;
     meta.after(box);
     box.querySelectorAll("button").forEach(b=>b.onclick=()=>{const n=Math.min(24,Math.max(1,r.n+ +b.dataset.d));if(n===r.n)return;
-      const F=fridgeIds(),U=new Set([...S.urgent.flatMap(x=>K.match(x)),...[...F].filter(isLeftId)]),x=K.resolve(rec,n,{fridge:F,basic:S.basic,urgent:U});
-      show({...r,n,ing:x.ing,steps:x.steps},$("note").textContent)})}
+      if(rec){const F=fridgeIds(),U=new Set([...S.urgent.flatMap(x=>K.match(x)),...[...F].filter(isLeftId)]),x=K.resolve(rec,n,{fridge:F,basic:S.basic,urgent:U});
+        return show({...r,n,ing:x.ing,steps:x.steps},$("note").textContent)}
+      show(scaleMade(r,n),$("note").textContent)})}
   // thumbs
   const cur=ratings()[r.title],mk=(v,ic,lbl)=>{const b=document.createElement("button");b.type="button";b.className="thumb";b.setAttribute("aria-pressed",String(!!cur&&cur.v===v));b.innerHTML=ic+lbl;b.title=v>0?"Show me more like this":"Show me this less";return b};
   const up=mk(1,"👍 ","Love it"),dn=mk(-1,"👎 ","Not for me");row.append(up,dn);
@@ -1485,6 +1511,45 @@ show=function(r,m){_sh(r,m);if(!r)return;try{
     if(on&&v<0&&$("again")){setTimeout(()=>{if(document.body.contains(dn)&&dn.getAttribute("aria-pressed")==="true")$("again").click()},900)}};
   up.onclick=()=>rate(1,up);dn.onclick=()=>rate(-1,dn);
 }catch(e){console.error(e)}};
+})();
+/* ingredient boxes take words only: letters (any language), spaces, hyphens and apostrophes. No digits or symbols. */
+(function(){
+const IDS=["add","sadd","ladd"],BAD=/[^\p{L}\s'’-]/gu,isBox=t=>t&&t.id&&IDS.includes(t.id);
+IDS.forEach(id=>{const el=$(id);if(el){el.maxLength=40;el.setAttribute("inputmode","text");el.setAttribute("autocapitalize","none");el.setAttribute("spellcheck","false")}});
+document.addEventListener("beforeinput",e=>{if(isBox(e.target)&&typeof e.data==="string"&&e.data.search(BAD)>=0&&e.inputType==="insertText")e.preventDefault()},true);
+document.addEventListener("input",e=>{const t=e.target;if(!isBox(t))return;const v=t.value;if(v.search(BAD)<0)return;const pos=t.selectionStart||0,keep=v.slice(0,pos).replace(BAD,"").length;t.value=v.replace(BAD,"");try{t.setSelectionRange(keep,keep)}catch(_){}},true); // paste and autofill
+})();
+/* ---- result screen (phones/tablets): spinning or opening a recipe replaces the filters; Back returns ---- */
+(function(){
+const cook=$("tab-cook"),small=()=>matchMedia("(max-width:959px)").matches;let origin=null;
+const inRes=()=>cook.classList.contains("resmode");
+function enter(){
+  if(!inRes()){cook.classList.add("resmode");if(small()){try{history.pushState({mrres:1},"")}catch(e){}}scrollTo({top:0})}
+  if(tab!=="cook"){origin=origin||tab;setTab("cook")}
+}
+function leave(){
+  if(!inRes())return;cook.classList.remove("resmode");const to=origin;origin=null;
+  if(to&&to!=="cook")setTab(to);scrollTo({top:0});
+}
+function back(){if(history.state&&history.state.mrres){history.back()}else leave()}
+$("resback").onclick=back;
+addEventListener("popstate",()=>{if(inRes())leave()});
+const _run=run;run=function(){enter();return _run.apply(this,arguments)};
+const _sw=show;show=function(r,m){if(r)enter();return _sw(r,m)};
+const _rp2=renderPlan;renderPlan=function(){enter();return _rp2.apply(this,arguments)};
+// the Cook tab itself is "home": tapping it while a result is open goes back
+document.querySelector('#tabs [data-t="cook"]').addEventListener("click",()=>{if(inRes()&&tab==="cook")back()});
+// a Back button at the end of every recipe card (phones/tablets)
+const _sh2=show;show=function(r,m){_sh2(r,m);if(!r)return;try{const row=$("out").querySelector(".card .row");if(row&&!row.querySelector(".backrow")){const b=document.createElement("button");b.type="button";b.className="backrow";b.textContent="Back";b.onclick=back;row.append(b)}}catch(e){console.error(e)}};
+/* saved recipes and plans live in My kitchen */
+const grid=document.querySelector("#tab-kit .kgrid");
+if(grid&&$("fav")&&$("plans")){
+  const sec=document.createElement("section");sec.className="panel";sec.id="savedpanel";
+  sec.innerHTML=`<div class="lab"><svg class="i"><use href="#i-heart"/></svg>Saved recipes and plans</div><p class="hint" id="savedempty">Nothing saved yet. Tap Save on a recipe or plan and it shows up here.</p>`;
+  sec.append($("fav"),$("plans"));grid.prepend(sec);
+  const upd=()=>{$("savedempty").hidden=!!($("fav").children.length||$("plans").children.length)};
+  const _f=favs;favs=function(){_f();upd()};const _p=plansUI;plansUI=function(){_p();upd()};upd();
+}
 })();
 /* ---- share links: the whole recipe, pizza, plan or ferment travels inside the link (#s=...), so opening it shows exactly that ---- */
 (function(){
