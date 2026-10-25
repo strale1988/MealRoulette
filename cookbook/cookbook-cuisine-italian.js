@@ -1499,3 +1499,56 @@ KITCHEN.add([
     ]
   }
 ]);
+
+/* ---- additions: flatbreads, wraps and new pantry ingredients ---- */
+KITCHEN.add([
+  {id:"gnocchi-tomato-mozzarella-bake", name:"Gnocchi tomato and mozzarella bake", meal:"big", cuisine:"Italian", time:30, serves:2,
+   ing:[["gnocchi",400],["passata",300],["mozzarella",125],["basil",5],["garlic","2pc"],["olive-oil",15],["parmesan",20],["salt",2]],
+   steps:[
+    "Heat the oven to 210 °C. Soften crushed {garlic} in {olive-oil} for 1 minute, then add {passata} and {salt}; simmer 5 minutes.",
+    "Stir in {gnocchi} (no need to boil) and pour into a baking dish.",
+    "Top with torn {mozzarella} and grated {parmesan}.",
+    "Bake 18 minutes until bubbling and golden; finish with {basil}."]},
+  {id:"pesto-pea-gnocchi", name:"Pan-fried gnocchi with pesto, peas and parmesan", meal:"big", cuisine:"Italian", time:15, serves:2,
+   ing:[["gnocchi",400],["pesto",60],["peas",120],["parmesan",25],["olive-oil",15],["lemon","0.5pc"]],
+   steps:[
+    "Boil {gnocchi} for 2 minutes until they float; drain.",
+    "Fry in {olive-oil} over medium-high heat for 4 minutes until golden.",
+    "Add {peas} and cook 2 minutes, then stir through {pesto} and a squeeze of {lemon}.",
+    "Serve topped with grated {parmesan}."]},
+  {id:"sausage-kale-gnocchi-skillet", name:"Sausage, kale and gnocchi skillet", meal:"big", cuisine:"Italian", time:30, serves:2,
+   ing:[["sausage",250],["gnocchi",400],["kale",100],["onion","1pc"],["garlic","2pc"],["cream",80],["chicken-stock",100],["parmesan",25],["olive-oil",10]],
+   steps:[
+    "Squeeze {sausage} from its skins and brown in {olive-oil} for 6 minutes, breaking it up. Add diced {onion} and cook 5 minutes, then {garlic}.",
+    "Add {gnocchi} and fry for 3 minutes.",
+    "Pour in {chicken-stock} and {cream}; simmer 3 minutes, then add shredded {kale} until wilted.",
+    "Top with grated {parmesan}."]},
+  {id:"brown-butter-sage-gnocchi", name:"Brown butter sage gnocchi with walnuts", meal:"big", cuisine:"Italian", time:20, serves:2,
+   ing:[["gnocchi",400],["butter",50],["sage",6],["walnuts",30],["parmesan",25],["lemon","0.5pc"],["black-pepper",1]],
+   steps:[
+    "Boil {gnocchi} for 2 minutes until they float; drain.",
+    "Melt {butter} over medium heat until foaming and nutty brown, about 4 minutes, adding {sage} for the last minute.",
+    "Toss in the gnocchi and chopped {walnuts} and cook 3 minutes until crisp-edged.",
+    "Finish with {parmesan}, a squeeze of {lemon} and {black-pepper}."]},
+  {id:"tortellini-tomato-soup", name:"Tortellini in tomato basil soup", meal:"big", cuisine:"Italian", time:25, serves:2,
+   ing:[["tortellini",250],["passata",400],["onion","1pc"],["garlic","2pc"],["vegetable-stock",300],["basil",6],["cream",50],["olive-oil",10],["parmesan",20]],
+   steps:[
+    "Soften diced {onion} in {olive-oil} for 6 minutes; add crushed {garlic} for 1 minute.",
+    "Pour in {passata} and {vegetable-stock}; simmer 10 minutes.",
+    "Add {tortellini} and cook 3 minutes until tender. Stir in {cream} and torn {basil}.",
+    "Serve topped with {parmesan}."]},
+  {id:"lemon-cream-spinach-tortellini", name:"Tortellini with lemon cream and spinach", meal:"big", cuisine:"Italian", time:15, serves:2,
+   ing:[["tortellini",300],["spinach",100],["cream",120],["lemon","1pc"],["parmesan",25],["peas",80],["black-pepper",1]],
+   steps:[
+    "Boil {tortellini} for 3 minutes, adding {peas} for the last minute; drain.",
+    "Warm {cream} with the zest and juice of {lemon} in a wide pan for 2 minutes.",
+    "Add {spinach} until wilted, then toss in the tortellini and peas.",
+    "Top with {parmesan} and {black-pepper}."]},
+  {id:"baked-tortellini-tomato", name:"Baked tortellini with tomato and mozzarella", meal:"big", cuisine:"Italian", time:35, serves:3,
+   ing:[["tortellini",300],["passata",300],["mozzarella",125],["basil",5],["garlic","2pc"],["italian-seasoning",2],["olive-oil",10],["parmesan",20]],
+   steps:[
+    "Heat the oven to 200 °C. Warm {olive-oil} with crushed {garlic}, add {passata} and {italian-seasoning}, and simmer 5 minutes.",
+    "Boil {tortellini} for 2 minutes; drain and toss with the sauce.",
+    "Tip into a dish, top with torn {mozzarella} and {parmesan}, and bake 18 minutes.",
+    "Scatter over {basil} to serve."]}
+]);

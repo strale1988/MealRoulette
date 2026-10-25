@@ -806,3 +806,20 @@ KITCHEN.add([
     ]
   }
 ]);
+
+/* ---- additions: flatbreads, wraps and new pantry ingredients ---- */
+KITCHEN.add([
+  {id:"pljeskavica-burgers-ajvar", name:"Pljeskavica burgers with ajvar", meal:"big", cuisine:"Balkan", time:30, serves:2,
+   ing:[["beef-mince",200],["pork-mince",150],["onion","0.5pc"],["garlic","1pc"],["paprika",2],["burger-buns","2pc"],["ajvar",40],["lettuce",30],["oil",10],["salt",2]],
+   steps:[
+    "Mix {beef-mince} and {pork-mince} with grated {onion}, crushed {garlic}, {paprika} and {salt}; knead well and form two wide patties.",
+    "Cook in {oil} for 5 minutes per side until cooked through (72 °C).",
+    "Toast the {burger-buns} and spread with {ajvar}.",
+    "Fill with the patties and {lettuce}."]},
+  {id:"cevapi-flatbread-ajvar", name:"Ćevapi in flatbread with ajvar", meal:"big", cuisine:"Balkan", time:30, serves:2,
+   ing:[["beef-mince",250],["lamb",100],["onion","0.5pc"],["garlic","2pc"],["paprika",2],["pita-bread","2pc"],["ajvar",40],["red-onion","0.5pc"],["oil",10],["salt",2]],
+   steps:[
+    "Mix {beef-mince} and {lamb} with {garlic}, {paprika} and {salt}; knead 3 minutes and shape into small fingers.",
+    "Cook in {oil} for 8 minutes, turning, until browned and cooked through (72 °C).",
+    "Warm the {pita-bread}, spread with {ajvar} and fill with the ćevapi, diced {onion} and sliced {red-onion}."]}
+]);

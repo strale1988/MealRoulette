@@ -599,3 +599,20 @@ KITCHEN.add([
     ]
   }
 ]);
+
+/* ---- additions: flatbreads, wraps and new pantry ingredients ---- */
+KITCHEN.add([
+  {id:"smoked-mackerel-horseradish-rye", name:"Smoked mackerel, horseradish and cucumber on rye", meal:"bite", cuisine:"German", time:10, serves:2,
+   ing:[["smoked-mackerel",150],["horseradish",15],["cream-cheese",60],["rye-bread","4pc"],["cucumber",100],["dill",3],["lemon","0.5pc"]],
+   steps:[
+    "Mix {cream-cheese} with {horseradish} and spread over the {rye-bread}.",
+    "Top with flaked {smoked-mackerel} and sliced {cucumber}.",
+    "Finish with {dill} and a squeeze of {lemon}."]},
+  {id:"currywurst-oven-fries", name:"Currywurst with oven fries", meal:"big", cuisine:"German", time:45, serves:2,
+   ing:[["sausage",300],["potatoes",400],["ketchup",80],["curry-powder",6],["tomato-paste",10],["onion","0.5pc"],["vinegar",8],["oil",30],["salt",2]],
+   steps:[
+    "Heat the oven to 220 °C. Cut {potatoes} into chips, toss with half the {oil} and {salt}, and roast 30 minutes, turning once.",
+    "Soften diced {onion} in the remaining {oil}; add {curry-powder} and {tomato-paste} for 1 minute, then {ketchup}, {vinegar} and a splash of water. Simmer 8 minutes.",
+    "Fry or grill the {sausage} for 8 minutes until browned; slice.",
+    "Pour the sauce over the sausage, dust with extra curry powder and serve with the fries."]}
+]);

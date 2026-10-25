@@ -1214,3 +1214,61 @@ KITCHEN.add([
     ]
   }
 ]);
+
+/* ---- additions: flatbreads, wraps and new pantry ingredients ---- */
+KITCHEN.add([
+  {id:"chicken-tikka-naan-wraps", name:"Chicken tikka naan wraps", meal:"big", cuisine:"Indian", time:35, serves:2,
+   ing:[["chicken-thigh",300],["tikka-paste",40],["yogurt",80],["naan","2pc"],["red-onion","0.5pc"],["cucumber",100],["lettuce",40],["mango-chutney",20],["coriander",5],["oil",10]],
+   steps:[
+    "Mix {tikka-paste} with half the {yogurt} and coat the {chicken-thigh}. Marinate 15 minutes if you have time.",
+    "Cook the chicken in {oil} for 10 minutes, turning, until charred and cooked through (74 °C). Slice.",
+    "Stir {mango-chutney} into the remaining {yogurt}. Slice {red-onion} and {cucumber}.",
+    "Warm the {naan}, then fill with chicken, {lettuce}, onion, cucumber and the chutney yogurt. Finish with {coriander} and fold over."]},
+  {id:"chicken-kathi-rolls", name:"Chicken kathi rolls", meal:"big", cuisine:"Indian", time:35, serves:2,
+   ing:[["chicken-thigh",300],["tikka-paste",30],["roti","4pc"],["eggs","2pc"],["onion","1pc"],["lime","1pc"],["yogurt",60],["mint",5],["oil",20]],
+   steps:[
+    "Coat {chicken-thigh} in {tikka-paste} and cook in half the {oil} for 10 minutes until cooked through (74 °C). Slice.",
+    "Slice {onion} and toss with the juice of {lime}. Stir chopped {mint} into {yogurt}.",
+    "Beat {eggs} and pour a thin layer over a warmed pan; lay a {roti} on top, flip after 1 minute, and repeat for the others.",
+    "Fill each egg-coated roti with chicken, onion and mint yogurt, and roll up tightly."]},
+  {id:"paneer-tikka-wraps", name:"Paneer tikka wraps", meal:"big", cuisine:"Indian", time:30, serves:2,
+   ing:[["paneer",250],["tikka-paste",40],["yogurt",60],["red-pepper",100],["red-onion","0.5pc"],["roti","4pc"],["lettuce",40],["lime","0.5pc"],["oil",15]],
+   steps:[
+    "Cube {paneer}, {red-pepper} and {red-onion}. Toss with {tikka-paste} and half the {yogurt}.",
+    "Fry in {oil} over medium-high heat for 8 minutes, turning, until charred at the edges.",
+    "Warm the {roti} and fill with {lettuce}, the paneer mixture, the remaining {yogurt} and a squeeze of {lime}."]},
+  {id:"tikka-chicken-naan-pizzas", name:"Tikka chicken naan pizzas", meal:"big", cuisine:"Indian", time:25, serves:2,
+   ing:[["naan","2pc"],["tikka-paste",20],["chicken-breast",150],["mozzarella",100],["red-onion","0.5pc"],["coriander",5],["yogurt",30],["oil",10]],
+   steps:[
+    "Heat the oven to 220 °C. Dice {chicken-breast}, mix with {tikka-paste} and cook in {oil} for 6 minutes.",
+    "Place the {naan} on a tray; top with the chicken, sliced {red-onion} and {mozzarella}.",
+    "Bake 8 minutes until bubbling. Drizzle with {yogurt} and scatter with {coriander}."]},
+  {id:"tarka-dal-with-naan", name:"Tarka dal with naan", meal:"big", cuisine:"Indian", time:40, serves:3,
+   ing:[["red-lentils",150],["onion","1pc"],["garlic","3pc"],["ginger",10],["turmeric",3],["cumin-seeds",3],["tomato","2pc"],["ghee",15],["naan","2pc"],["coriander",8],["salt",3],["water",600]],
+   steps:[
+    "Simmer {red-lentils} with {water}, {turmeric}, grated {ginger} and {salt} for 20 minutes until soft and creamy, stirring now and then.",
+    "Dice {tomato} and stir in for the last 5 minutes.",
+    "Heat {ghee} in a small pan; fry {cumin-seeds}, sliced {onion} and {garlic} for 6 minutes until golden.",
+    "Pour the tarka over the dal, scatter with {coriander} and serve with warmed {naan}."]},
+  {id:"chickpea-spinach-curry-roti", name:"Chickpea and spinach curry with roti", meal:"big", cuisine:"Indian", time:30, serves:2,
+   ing:[["chickpeas",240],["spinach",100],["onion","1pc"],["garlic","2pc"],["ginger",10],["canned-tomatoes",200],["garam-masala",4],["cumin-seeds",3],["roti","4pc"],["oil",20],["salt",2]],
+   steps:[
+    "Fry {cumin-seeds} in {oil} for 30 seconds. Add diced {onion} and cook 6 minutes, then {garlic} and grated {ginger} for 1 minute.",
+    "Add {canned-tomatoes}, {garam-masala} and {salt}; simmer 8 minutes.",
+    "Stir in {chickpeas} and cook 5 minutes, then fold through {spinach} until wilted.",
+    "Warm the {roti} and serve alongside."]},
+  {id:"egg-bhurji-roti-wraps", name:"Egg bhurji roti wraps", meal:"morning", cuisine:"Indian", time:15, serves:2,
+   ing:[["eggs","4pc"],["onion","0.5pc"],["tomato","1pc"],["fresh-chilli","1pc"],["turmeric",1],["cumin-seeds",2],["roti","2pc"],["coriander",5],["oil",10],["salt",1]],
+   steps:[
+    "Fry {cumin-seeds} in {oil} for 30 seconds, then add finely diced {onion} and {fresh-chilli}; cook 4 minutes.",
+    "Add diced {tomato} and {turmeric}; cook 3 minutes until soft.",
+    "Pour in beaten {eggs} with {salt} and scramble gently until just set. Stir in {coriander}.",
+    "Warm the {roti}, fill with the bhurji and roll up."]},
+  {id:"lamb-keema-peas-roti", name:"Lamb keema with peas and roti", meal:"big", cuisine:"Indian", time:40, serves:2,
+   ing:[["lamb",300],["peas",100],["onion","1pc"],["garlic","2pc"],["ginger",10],["tomato-paste",15],["garam-masala",4],["cumin-seeds",3],["turmeric",2],["roti","4pc"],["yogurt",60],["oil",20],["salt",2]],
+   steps:[
+    "Fry {cumin-seeds} in {oil} for 30 seconds; add diced {onion} and cook 8 minutes until golden.",
+    "Add {garlic}, grated {ginger}, {turmeric} and {tomato-paste}; cook 2 minutes.",
+    "Brown {lamb} in the pan for 8 minutes, then add {garam-masala}, {salt} and a splash of water; simmer 10 minutes. Stir in {peas} for the last 3.",
+    "Serve with warmed {roti} and {yogurt}."]}
+]);

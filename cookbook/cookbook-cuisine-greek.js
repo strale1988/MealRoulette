@@ -904,3 +904,27 @@ KITCHEN.add([
     ]
   }
 ]);
+
+/* ---- additions: flatbreads, wraps and new pantry ingredients ---- */
+KITCHEN.add([
+  {id:"chicken-gyros-tzatziki", name:"Chicken gyros with tzatziki", meal:"big", cuisine:"Greek", time:35, serves:2,
+   ing:[["chicken-thigh",350],["pita-bread","2pc"],["yogurt",100],["cucumber",150],["garlic","2pc"],["oregano",3],["lemon","1pc"],["tomato","1pc"],["red-onion","0.5pc"],["olive-oil",20],["salt",2]],
+   steps:[
+    "Marinate the {chicken-thigh} in {olive-oil}, {oregano}, the juice of half the {lemon}, one crushed {garlic} clove and {salt} for 15 minutes or more.",
+    "Grate {cucumber}, squeeze out the water and mix with {yogurt}, the other crushed garlic clove and a squeeze of lemon.",
+    "Cook the chicken for 12 minutes, turning, until charred and cooked through (74 °C). Slice.",
+    "Warm the {pita-bread}. Fill with chicken, sliced {tomato}, {red-onion} and plenty of tzatziki."]},
+  {id:"pork-souvlaki-pita-wraps", name:"Pork souvlaki pita wraps", meal:"big", cuisine:"Greek", time:35, serves:2,
+   ing:[["pork",300],["pita-bread","2pc"],["yogurt",80],["lemon","1pc"],["oregano",3],["garlic","2pc"],["tomato","1pc"],["red-onion","0.5pc"],["olive-oil",20],["salt",2]],
+   steps:[
+    "Cube {pork} and marinate with {olive-oil}, {oregano}, crushed {garlic}, the juice of half the {lemon} and {salt} for 20 minutes or more.",
+    "Thread onto skewers and cook in a hot pan for 10 minutes, turning, until cooked through (70 °C).",
+    "Stir the rest of the lemon juice into {yogurt}.",
+    "Warm the {pita-bread}; fill with pork, sliced {tomato}, {red-onion} and the lemon yogurt."]},
+  {id:"greek-salad-lavash-wraps", name:"Greek salad lavash wraps", meal:"bite", cuisine:"Greek", time:10, serves:2,
+   ing:[["lavash","2pc"],["feta",80],["cucumber",100],["tomato","1pc"],["black-olives",30],["red-onion","0.5pc"],["lettuce",40],["olive-oil",10],["oregano",1]],
+   steps:[
+    "Dice {cucumber} and {tomato}; slice {red-onion}. Toss with {black-olives}, {olive-oil} and {oregano}.",
+    "Warm the {lavash}, cover with {lettuce} and the salad, and crumble over {feta}.",
+    "Roll up tightly and halve."]}
+]);

@@ -293,6 +293,7 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
 @keyframes sout{0%,60%,100%{transform:translateY(0) scale(1)}30%{transform:translateY(-24px) scale(1.12)}}
 #remix,.pzbtns:has(#pzspin) #pzremix{flex-direction:row;gap:7px;font-size:17px;padding:10px 6px}#remix .i,#pzremix .i{width:1.6em;height:1.6em}
 #save[aria-pressed=true] .i{fill:var(--acc)}
+.thumb[aria-pressed=true] .i{fill:var(--acc)}
 .ck-done{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center}.ck-done h2{margin:0;font:800 clamp(40px,10vw,72px)/1 Bricolage,sans-serif;letter-spacing:-.04em}.ck-done p{margin:0;color:var(--mute);font-size:20px}.ck-done .ck-n{margin-top:12px;min-width:200px;border:var(--bw) solid var(--ink);border-radius:20px;padding:16px;font:800 22px Bricolage,sans-serif;box-shadow:var(--sh);cursor:pointer}
 .agehint{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px;padding:10px 12px;border:2px dashed var(--ink);border-radius:14px;background:var(--soft);font-size:14px}.agehint[hidden]{display:none}.agehint button{flex:none;border:var(--bw) solid var(--ink);background:var(--sun);color:#2a1a13;border-radius:99px;padding:6px 14px;font:800 14px "DM Sans",sans-serif;cursor:pointer;box-shadow:2px 2px 0 var(--ink)}
 .toss{position:relative;width:240px;height:190px;margin:0 auto 6px}
@@ -567,6 +568,8 @@ footer{margin-top:28px;padding-top:12px}
 <symbol id="i-wand" viewBox="0 0 24 24"><g transform="rotate(45 12 12)"><path d="M12 15C6.5 13 6.5 5.5 12 2.5C17.5 5.5 17.5 13 12 15Z"/><path d="M12 15C9.6 11.5 9.6 6.5 12 2.5M12 15C14.4 11.5 14.4 6.5 12 2.5"/><path d="M9.6 15.2h4.8M12 15.2V22"/></g></symbol>
 <symbol id="i-pizza" viewBox="0 0 24 24"><path d="M12 22 3.5 6.2A18 18 0 0 1 20.5 6.2zM5.8 10.4A13 13 0 0 1 18.2 10.4"/><path d="M10 10.5h.01M14 11.5h.01M12 15.5h.01"/></symbol>
 <symbol id="i-ferm" viewBox="0 0 24 24"><path d="M8 3h8M7.5 6h9A1.5 1.5 0 0 1 18 7.5V19a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V7.5A1.5 1.5 0 0 1 7.5 6z"/><circle cx="10" cy="15" r="1.2"/><circle cx="14" cy="12.5" r="1"/><circle cx="14.5" cy="17" r="1.3"/></symbol>
+<symbol id="i-thumbup" viewBox="0 0 24 24"><path d="M7 10v12M15 5.9 14 10h5.8a2 2 0 0 1 1.9 2.6l-2.3 8a2 2 0 0 1-1.9 1.4H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.8a2 2 0 0 0 1.8-1.1L12 2a3.1 3.1 0 0 1 3 3.9z"/></symbol>
+<symbol id="i-thumbdown" viewBox="0 0 24 24"><path d="M17 14V2M9 18.1 10 14H4.2a2 2 0 0 1-1.9-2.6l2.3-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.8a2 2 0 0 0-1.8 1.1L12 22a3.1 3.1 0 0 1-3-3.9z"/></symbol>
 </defs></svg>
 <div class="splash" id="splash" role="status" aria-label="Loading Meal Roulette">
  <div class="sp-wheel"><div class="sp-pizza"><svg viewBox="0 0 128 128" aria-hidden="true"><use href="#logo-pizza"/></svg></div></div>
@@ -1579,7 +1582,7 @@ show=function(r,m){_sh(r,m);if(!r)return;try{
       show(scaleMade(r,n),$("note").textContent)})}
   // thumbs
   const cur=ratings()[r.title],mk=(v,ic,lbl)=>{const b=document.createElement("button");b.type="button";b.className="thumb";b.dataset.v=v;b.setAttribute("aria-pressed",String(!!cur&&cur.v===v));b.innerHTML=ic+lbl;b.title=v>0?"Show me more like this":"Show me this less";return b};
-  const up=mk(1,"👍 ","Like"),dn=mk(-1,"👎 ","Dislike");row.append(up,dn);
+  const up=mk(1,I("thumbup"),"Like"),dn=mk(-1,I("thumbdown"),"Not for me");row.append(up,dn);
   const rate=(v,b)=>{const o=ratings(),on=!(o[r.title]&&o[r.title].v===v);if(on)o[r.title]={v,t:Date.now()};else delete o[r.title];store("rate",o);
     up.setAttribute("aria-pressed",String(on&&v>0));dn.setAttribute("aria-pressed",String(on&&v<0));navigator.vibrate&&navigator.vibrate(12);
     $("note").textContent=!on?"Rating removed.":v>0?"Noted. You'll see more like this.":"Noted. You'll see this one less.";
@@ -1775,8 +1778,8 @@ if(kx){const row=document.createElement("div");row.className="xtra-row";row.inne
   $("seastg").onclick=()=>{S.seasonal=!S.seasonal;save();$("seastg").setAttribute("aria-pressed",String(!!S.seasonal));$("seastg").textContent=S.seasonal?"On":"Off"};
   const rr=document.createElement("div");rr.className="xtra-row";const nr=()=>Object.keys(ratings()).length;
   rr.innerHTML=`<p><b>Recipe ratings</b><span id="ratecount"></span></p><div class="tg"><button type="button" id="ratereset">Reset</button></div>`;kx.insertBefore(rr,row);
-  const pr=()=>{$("ratecount").textContent=nr()?nr()+" rated with 👍 or 👎. They steer what you get when you spin.":"Tap 👍 or 👎 on a recipe to steer what you get when you spin.";$("ratereset").disabled=!nr()};pr();
-  $("ratereset").onclick=()=>{if(nr()&&confirm("Forget all your 👍 and 👎?")){store("rate",{});pr()}};
+  const pr=()=>{$("ratecount").textContent=nr()?nr()+" rated with Like or Not for me. They steer what you get when you spin.":"Tap Like or Not for me on a recipe to steer what you get when you spin.";$("ratereset").disabled=!nr()};pr();
+  $("ratereset").onclick=()=>{if(nr()&&confirm("Forget all your Like and Not for me ratings?")){store("rate",{});pr()}};
   document.addEventListener("click",e=>{if(e.target.closest&&e.target.closest(".thumb"))setTimeout(pr,0)});
   $("appsh").onclick=()=>window.__shareOut("app",null,"Meal Roulette","Meal Roulette: spin for a recipe, plan your week and build a shopping list.",$("appsh"))}
 })();
@@ -1790,7 +1793,7 @@ if("serviceWorker" in navigator&&location.protocol.startsWith("http")){
 /* Loader: downloads every file in parallel (fast on phones), runs them in order, retries a failed file once,
    and shows a Reload button instead of a blank page if something still fails. */
 (function(){
-var FILES=["kitchen.js","ingredients.js","cookbook/cookbook-bake.js","cookbook/cookbook-cuisine-balkan.js","cookbook/cookbook-cuisine-cajun.js","cookbook/cookbook-cuisine-caribbean.js","cookbook/cookbook-cuisine-chinese.js","cookbook/cookbook-cuisine-ethiopian.js","cookbook/cookbook-cuisine-french.js","cookbook/cookbook-cuisine-german.js","cookbook/cookbook-cuisine-greek.js","cookbook/cookbook-cuisine-hungarian.js","cookbook/cookbook-cuisine-indian.js","cookbook/cookbook-cuisine-indonesian.js","cookbook/cookbook-cuisine-italian.js","cookbook/cookbook-cuisine-japanese.js","cookbook/cookbook-cuisine-korean.js","cookbook/cookbook-cuisine-mexican.js","cookbook/cookbook-cuisine-middle-eastern.js","cookbook/cookbook-cuisine-moroccan.js","cookbook/cookbook-cuisine-persian.js","cookbook/cookbook-cuisine-peruvian.js","cookbook/cookbook-cuisine-polish.js","cookbook/cookbook-cuisine-portuguese.js","cookbook/cookbook-cuisine-spanish.js","cookbook/cookbook-cuisine-thai.js","cookbook/cookbook-cuisine-turkish.js","cookbook/cookbook-cuisine-vietnamese.js","cookbook/cookbook-everyday.js","cookbook/cookbook-fancy.js","cookbook/cookbook-leftovers.js","cookbook/cookbook-light.js","cookbook/cookbook-more-light-b.js","cookbook/cookbook-more-mains-b.js","cookbook/cookbook-more-light.js","cookbook/cookbook-more-mains-a.js","cookbook/cookbook-quick.js","pizza.js","ferment.js","engine.js"];
+var FILES=["kitchen.js","ingredients.js","cookbook/cookbook-bake.js","cookbook/cookbook-cuisine-balkan.js","cookbook/cookbook-cuisine-cajun.js","cookbook/cookbook-cuisine-caribbean.js","cookbook/cookbook-cuisine-chinese.js","cookbook/cookbook-cuisine-ethiopian.js","cookbook/cookbook-cuisine-french.js","cookbook/cookbook-cuisine-german.js","cookbook/cookbook-cuisine-greek.js","cookbook/cookbook-cuisine-hungarian.js","cookbook/cookbook-cuisine-indian.js","cookbook/cookbook-cuisine-indonesian.js","cookbook/cookbook-cuisine-italian.js","cookbook/cookbook-cuisine-japanese.js","cookbook/cookbook-cuisine-korean.js","cookbook/cookbook-cuisine-mexican.js","cookbook/cookbook-cuisine-middle-eastern.js","cookbook/cookbook-cuisine-moroccan.js","cookbook/cookbook-cuisine-persian.js","cookbook/cookbook-cuisine-peruvian.js","cookbook/cookbook-cuisine-polish.js","cookbook/cookbook-cuisine-portuguese.js","cookbook/cookbook-cuisine-spanish.js","cookbook/cookbook-cuisine-thai.js","cookbook/cookbook-cuisine-turkish.js","cookbook/cookbook-cuisine-vietnamese.js","cookbook/cookbook-everyday.js","cookbook/cookbook-fancy.js","cookbook/cookbook-leftovers.js","cookbook/cookbook-light.js","cookbook/cookbook-more-light-b.js","cookbook/cookbook-more-mains-b.js","cookbook/cookbook-more-light.js","cookbook/cookbook-more-mains-a.js","cookbook/cookbook-quick.js","cookbook/cookbook-wraps-sandwiches.js","pizza.js","ferment.js","engine.js"];
 var boot=document.getElementById("boot");
 function fail(){var sp=document.getElementById("splash");if(sp)sp.remove();boot.hidden=false;document.getElementById("bootbtn").onclick=function(){
   var go=function(){location.reload()};

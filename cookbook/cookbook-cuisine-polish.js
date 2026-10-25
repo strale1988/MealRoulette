@@ -355,3 +355,14 @@ KITCHEN.add([
     ]
   }
 ]);
+
+/* ---- additions: flatbreads, wraps and new pantry ingredients ---- */
+KITCHEN.add([
+  {id:"zapiekanka-baguette-pizza", name:"Zapiekanka (Polish baguette pizza)", meal:"big", cuisine:"Polish", time:20, serves:2,
+   ing:[["baguette",160],["mushrooms",150],["cheddar",100],["ketchup",30],["chives",5],["butter",10]],
+   steps:[
+    "Heat the grill. Halve the {baguette} lengthways and toast cut sides lightly.",
+    "Fry sliced {mushrooms} in {butter} for 6 minutes until golden.",
+    "Pile onto the bread, cover with grated {cheddar} and grill 3 minutes until bubbling.",
+    "Zigzag with {ketchup} and scatter over {chives}."]}
+]);

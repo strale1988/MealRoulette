@@ -569,3 +569,20 @@ KITCHEN.add(
   }
 ]
 );
+
+/* ---- additions: flatbreads, wraps and new pantry ingredients ---- */
+KITCHEN.add([
+  {id:"chicken-doner-lavash-wraps", name:"Chicken döner-style wraps", meal:"big", cuisine:"Turkish", time:35, serves:2,
+   ing:[["chicken-thigh",350],["yogurt",100],["paprika",3],["cumin",2],["garlic","2pc"],["tomato-paste",10],["lavash","2pc"],["tomato","1pc"],["red-onion","0.5pc"],["lettuce",40],["olive-oil",15]],
+   steps:[
+    "Mix 40 g {yogurt}, {paprika}, {cumin}, crushed {garlic}, {tomato-paste} and {olive-oil}. Coat the {chicken-thigh} and marinate 15 minutes or more.",
+    "Cook the chicken for 12 minutes, turning, until charred and cooked through (74 °C). Slice thinly.",
+    "Warm the {lavash}; fill with chicken, {lettuce}, sliced {tomato} and {red-onion}, and drizzle with the remaining {yogurt}."]},
+  {id:"lahmacun-style-flatbreads", name:"Lahmacun-style flatbreads", meal:"big", cuisine:"Turkish", time:30, serves:2,
+   ing:[["lavash","2pc"],["lamb",200],["tomato","1pc"],["onion","0.5pc"],["red-pepper",60],["parsley",10],["paprika",3],["tomato-paste",15],["lemon","1pc"],["olive-oil",10],["salt",1]],
+   steps:[
+    "Heat the oven to 230 °C. Finely chop {tomato}, {onion} and {red-pepper}; mix with {lamb}, {tomato-paste}, {paprika}, {olive-oil} and {salt}.",
+    "Spread thinly over the {lavash} on a tray.",
+    "Bake 8 minutes until the edges are crisp and the lamb is cooked.",
+    "Top with chopped {parsley} and squeeze over {lemon}."]}
+]);

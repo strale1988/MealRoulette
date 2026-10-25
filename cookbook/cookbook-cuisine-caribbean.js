@@ -495,3 +495,14 @@ KITCHEN.add([
     ]
   }
 ]);
+
+/* ---- additions: flatbreads, wraps and new pantry ingredients ---- */
+KITCHEN.add([
+  {id:"jerk-chicken-mango-slaw-wraps", name:"Jerk-spiced chicken wraps with mango slaw", meal:"big", cuisine:"Caribbean", time:35, serves:2,
+   ing:[["chicken-thigh",350],["allspice",3],["thyme",2],["fresh-chilli","1pc"],["garlic","2pc"],["lime","1pc"],["soy-sauce",15],["brown-sugar",8],["flour-tortillas","4pc"],["mango","0.5pc"],["cabbage",100],["coriander",5],["oil",15]],
+   steps:[
+    "Blend or chop {allspice}, {thyme}, {fresh-chilli}, {garlic}, {soy-sauce}, {brown-sugar} and half the juice of {lime}. Coat the {chicken-thigh}.",
+    "Cook in {oil} for 12 minutes, turning, until charred and cooked through (74 °C). Slice.",
+    "Shred {cabbage}, dice {mango} and toss with {coriander} and the remaining lime juice.",
+    "Warm the {flour-tortillas} and fill with chicken and slaw."]}
+]);

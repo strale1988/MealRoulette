@@ -233,17 +233,17 @@ K.report=()=>{const e=K.problems.filter(p=>p.lvl==="error"),w=K.problems.filter(
 })();
 
 /* ---- shared recipe-card buttons: the same names and order on Cook, Pizza night and Ferment ----
-   Save · Copy list · Share · Like · Dislike · Spin again (always last, pinned to the right, with the section's icon) */
+   Save · Copy list · Share · Like · Not for me · Spin again (always last, pinned to the right, with the section's icon) */
 (function(){
 const ic=n=>`<svg class="i"><use href="#i-${n}"/></svg>`;
 const rd=()=>{try{return JSON.parse(localStorage.getItem("rate")||"null")||{}}catch(e){return{}}};
 const wr=o=>{try{localStorage.setItem("rate",JSON.stringify(o))}catch(e){}};
 window.__ratings=rd;
-// Like / Dislike for a card that has none yet. meta is stored with the rating (e.g. the ferment method), again() runs after a Dislike.
+// Like / Not for me for a card that has none yet. meta is stored with the rating (e.g. the ferment method), again() runs after Not for me.
 window.__thumbs=function(row,key,meta,again){
   if(!row||row.querySelector(".thumb"))return;
-  const cur=rd()[key],mk=(v,e,l)=>{const b=document.createElement("button");b.type="button";b.className="thumb";b.dataset.v=v;b.setAttribute("aria-pressed",String(!!cur&&cur.v===v));b.innerHTML=e+" "+l;b.title=v>0?"Show me more like this":"Show me this less";return b};
-  const up=mk(1,"👍","Like"),dn=mk(-1,"👎","Dislike");row.append(up,dn);
+  const cur=rd()[key],mk=(v,e,l)=>{const b=document.createElement("button");b.type="button";b.className="thumb";b.dataset.v=v;b.setAttribute("aria-pressed",String(!!cur&&cur.v===v));b.innerHTML=e+l;b.title=v>0?"Show me more like this":"Show me this less";return b};
+  const up=mk(1,ic("thumbup"),"Like"),dn=mk(-1,ic("thumbdown"),"Not for me");row.append(up,dn);
   const rate=v=>{const o=rd(),on=!(o[key]&&o[key].v===v);if(on)o[key]=Object.assign({v,t:Date.now()},meta||{});else delete o[key];wr(o);
     up.setAttribute("aria-pressed",String(on&&v>0));dn.setAttribute("aria-pressed",String(on&&v<0));navigator.vibrate&&navigator.vibrate(12);
     if(on&&v<0&&again)setTimeout(()=>{if(document.body.contains(dn)&&dn.getAttribute("aria-pressed")==="true")again()},900)};

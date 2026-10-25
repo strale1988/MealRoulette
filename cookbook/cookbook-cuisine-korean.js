@@ -559,3 +559,20 @@ KITCHEN.add([
     ]
   }
 ]);
+
+/* ---- additions: flatbreads, wraps and new pantry ingredients ---- */
+KITCHEN.add([
+  {id:"beef-bulgogi-lettuce-wraps", name:"Beef bulgogi lettuce wraps", meal:"big", cuisine:"Korean", time:30, serves:2,
+   ing:[["beef-strips",300],["soy-sauce",30],["sesame-oil",10],["brown-sugar",15],["garlic","3pc"],["pear","0.5pc"],["gochujang",20],["lettuce",120],["rice",150],["spring-onion",20],["water",300]],
+   steps:[
+    "Grate {pear} and mix with {soy-sauce}, {sesame-oil}, {brown-sugar} and crushed {garlic}. Coat the {beef-strips} and marinate 15 minutes or more.",
+    "Cook {rice} in {water} in a covered pan on low heat for 12 minutes.",
+    "Sear the beef in a very hot pan for 4 minutes.",
+    "Serve in leaves of {lettuce} with rice, {gochujang} and sliced {spring-onion}."]},
+  {id:"kimchi-cheese-quesadillas", name:"Kimchi cheese quesadillas", meal:"bite", cuisine:"Korean", time:15, serves:2,
+   ing:[["flour-tortillas","4pc"],["kimchi",150],["mozzarella",120],["spring-onion",15],["sesame-oil",5],["gochujang",10]],
+   steps:[
+    "Squeeze excess liquid from {kimchi} and chop. Mix with {gochujang}.",
+    "Cover half of each of the {flour-tortillas} with {mozzarella}, kimchi and {spring-onion}; fold.",
+    "Brush the pan with {sesame-oil} and cook 2 minutes per side until crisp and gooey."]}
+]);

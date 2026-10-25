@@ -577,3 +577,13 @@ KITCHEN.add([
     ]
   }
 ]);
+
+/* ---- additions: flatbreads, wraps and new pantry ingredients ---- */
+KITCHEN.add([
+  {id:"ras-el-hanout-carrots-chickpeas-yogurt", name:"Ras el hanout carrots with chickpeas and yogurt", meal:"big", cuisine:"Moroccan", time:40, serves:2,
+   ing:[["carrot",400],["chickpeas",240],["ras-el-hanout",5],["yogurt",100],["honey",10],["olive-oil",25],["almonds",20],["mint",5],["lemon","0.5pc"],["salt",2]],
+   steps:[
+    "Heat the oven to 220 °C. Cut {carrot} into batons and toss with {olive-oil}, {ras-el-hanout}, {honey} and {salt}.",
+    "Roast 20 minutes, add drained {chickpeas} and roast 10 minutes more.",
+    "Spoon {yogurt} onto plates, top with the roasted mixture, and finish with chopped {almonds}, {mint} and a squeeze of {lemon}."]}
+]);

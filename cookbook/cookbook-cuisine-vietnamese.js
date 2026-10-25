@@ -468,3 +468,27 @@ KITCHEN.add([
     ]
   }
 ]);
+
+/* ---- additions: flatbreads, wraps and new pantry ingredients ---- */
+KITCHEN.add([
+  {id:"pork-meatball-banh-mi", name:"Pork meatball bánh mì", meal:"big", cuisine:"Vietnamese", time:40, serves:2,
+   ing:[["baguette",160],["pork-mince",250],["garlic","2pc"],["fish-sauce",15],["carrot",80],["rice-vinegar",30],["sugar",10],["cucumber",100],["coriander",8],["mayonnaise",30],["fresh-chilli","1pc"],["oil",15]],
+   steps:[
+    "Quick-pickle grated {carrot} with {rice-vinegar} and {sugar} for 15 minutes.",
+    "Mix {pork-mince} with crushed {garlic} and half the {fish-sauce}; shape into small meatballs and cook in {oil} for 8 minutes until cooked through (70 °C).",
+    "Split the {baguette}, toast lightly and spread with {mayonnaise}.",
+    "Fill with the meatballs, drained pickled carrot, {cucumber}, {coriander}, sliced {fresh-chilli} and a dash of the remaining {fish-sauce}."]},
+  {id:"crispy-tofu-banh-mi", name:"Crispy tofu bánh mì", meal:"big", cuisine:"Vietnamese", time:35, serves:2,
+   ing:[["baguette",160],["tofu",250],["soy-sauce",20],["carrot",80],["rice-vinegar",30],["sugar",10],["cucumber",100],["coriander",8],["mayonnaise",30],["sriracha",10],["oil",20]],
+   steps:[
+    "Pickle grated {carrot} with {rice-vinegar} and {sugar} for 15 minutes.",
+    "Slice {tofu}, coat in {soy-sauce} and fry in {oil} for 10 minutes until crisp.",
+    "Split the {baguette} and spread with {mayonnaise} mixed with {sriracha}.",
+    "Fill with tofu, pickled carrot, {cucumber} and {coriander}."]},
+  {id:"egg-banh-mi-breakfast", name:"Fried egg bánh mì", meal:"morning", cuisine:"Vietnamese", time:15, serves:2,
+   ing:[["baguette",160],["eggs","2pc"],["mayonnaise",20],["cucumber",80],["coriander",5],["soy-sauce",10],["sriracha",5],["oil",10]],
+   steps:[
+    "Fry {eggs} in {oil} until the whites are crisp at the edges, 3 minutes.",
+    "Split the {baguette}, toast and spread with {mayonnaise} and {sriracha}.",
+    "Fill with eggs, sliced {cucumber} and {coriander}, and sprinkle with {soy-sauce}."]}
+]);

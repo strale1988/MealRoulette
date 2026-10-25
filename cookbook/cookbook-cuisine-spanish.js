@@ -671,3 +671,33 @@ KITCHEN.add(
   }
 ]
 );
+
+/* ---- additions: flatbreads, wraps and new pantry ingredients ---- */
+KITCHEN.add([
+  {id:"pan-con-tomate-jamon", name:"Pan con tomate with jamón", meal:"bite", cuisine:"Spanish", time:10, serves:2,
+   ing:[["baguette",120],["tomato","2pc"],["garlic","1pc"],["olive-oil",25],["prosciutto",50],["salt",2]],
+   steps:[
+    "Toast slices of {baguette} until crisp and rub with a halved {garlic} clove.",
+    "Grate {tomato} (discard the skin) and spread over the toast. Drizzle with {olive-oil} and sprinkle with {salt}.",
+    "Drape {prosciutto} on top."]},
+  {id:"chorizo-pepper-bocadillos", name:"Chorizo and roasted pepper bocadillos", meal:"big", cuisine:"Spanish", time:15, serves:2,
+   ing:[["baguette",160],["chorizo",100],["roasted-peppers",60],["rocket",20],["olive-oil",10]],
+   steps:[
+    "Slice {chorizo} and fry in a dry pan for 3 minutes until crisp at the edges.",
+    "Split the {baguette} and drizzle with {olive-oil}.",
+    "Fill with chorizo, {roasted-peppers} and {rocket}; press together and halve."]},
+  {id:"crispy-calamari-garlic-mayo", name:"Crispy calamari with garlic mayonnaise", meal:"big", cuisine:"Spanish", time:25, serves:2,
+   ing:[["squid",300],["flour",60],["paprika",3],["oil",150],["lemon","1pc"],["mayonnaise",40],["garlic","1pc"],["salt",2]],
+   steps:[
+    "Crush {garlic} into {mayonnaise} with a squeeze of {lemon}.",
+    "Pat {squid} dry. Toss in {flour}, {paprika} and {salt}.",
+    "Heat {oil} in a deep pan to 180 °C and fry in batches for 90 seconds until golden.",
+    "Drain on paper and serve with the garlic mayonnaise and lemon wedges."]},
+  {id:"squid-chorizo-chickpea-stew", name:"Squid, chorizo and chickpea stew", meal:"big", cuisine:"Spanish", time:35, serves:2,
+   ing:[["squid",300],["chorizo",80],["chickpeas",240],["passata",200],["smoked-paprika",3],["garlic","2pc"],["parsley",8],["olive-oil",15],["onion","1pc"]],
+   steps:[
+    "Fry diced {chorizo} and {onion} in {olive-oil} for 6 minutes. Add {garlic} and {smoked-paprika} for 1 minute.",
+    "Pour in {passata} and {chickpeas}; simmer 10 minutes.",
+    "Slice {squid} into rings and add; simmer 5 minutes more until just tender.",
+    "Scatter with {parsley} to serve."]}
+]);

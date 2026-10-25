@@ -851,3 +851,40 @@ KITCHEN.add([
     ]
   }
 ]);
+
+/* ---- additions: flatbreads, wraps and new pantry ingredients ---- */
+KITCHEN.add([
+  {id:"croque-monsieur", name:"Croque monsieur with béchamel", meal:"big", cuisine:"French", time:30, serves:2,
+   ing:[["bread","4pc"],["ham",80],["gruyere",80],["butter",35],["flour",15],["milk",150],["nutmeg",1],["dijon-mustard",10]],
+   steps:[
+    "Melt 15 g of the {butter}, stir in {flour} for 1 minute, then whisk in {milk} and simmer 3 minutes. Season with {nutmeg}.",
+    "Spread two slices of {bread} with {dijon-mustard}; add {ham} and half the grated {gruyere}; close with the remaining slices.",
+    "Fry the sandwiches in the rest of the {butter} for 3 minutes per side.",
+    "Top with the sauce and remaining {gruyere} and grill 3 minutes until bubbling and golden."]},
+  {id:"baked-brie-honey-walnuts", name:"Baked brie with honey and walnuts", meal:"bite", cuisine:"French", time:20, serves:3,
+   ing:[["brie",250],["honey",25],["walnuts",25],["thyme",1],["baguette",150]],
+   steps:[
+    "Heat the oven to 200 °C. Place the {brie} in a small dish and score the top.",
+    "Scatter with {thyme} and bake 12 minutes until soft.",
+    "Drizzle with {honey} and chopped {walnuts}; serve with torn {baguette}."]},
+  {id:"quiche-lorraine-shortcrust", name:"Classic bacon and Gruyère quiche", meal:"big", cuisine:"French", time:65, serves:4,
+   ing:[["shortcrust-pastry",250],["bacon",120],["eggs","3pc"],["cream",200],["milk",50],["gruyere",60],["nutmeg",1]],
+   steps:[
+    "Heat the oven to 200 °C. Line a tart tin with {shortcrust-pastry}, prick and bake blind for 12 minutes.",
+    "Fry {bacon} for 5 minutes and scatter over the base with grated {gruyere}.",
+    "Whisk {eggs}, {cream}, {milk} and {nutmeg}; pour into the case.",
+    "Bake at 180 °C for 30 minutes until just set with a slight wobble."]},
+  {id:"smoked-salmon-creme-fraiche-tartines", name:"Smoked salmon and crème fraîche tartines", meal:"bite", cuisine:"French", time:10, serves:2,
+   ing:[["rye-bread","4pc"],["creme-fraiche",80],["smoked-salmon",100],["cucumber",80],["dill",3],["capers",10],["lemon","0.5pc"]],
+   steps:[
+    "Toast the {rye-bread}.",
+    "Spread with {creme-fraiche} and top with {smoked-salmon} and thin slices of {cucumber}.",
+    "Finish with {capers}, {dill} and a squeeze of {lemon}."]},
+  {id:"scallops-pea-puree-bacon", name:"Seared scallops with pea purée and bacon", meal:"big", cuisine:"French", time:25, serves:2,
+   ing:[["scallops",250],["peas",200],["butter",25],["mint",5],["lemon","0.5pc"],["bacon",40],["salt",1]],
+   steps:[
+    "Cook {peas} in boiling water for 3 minutes; drain and blend with half the {butter}, {mint}, {salt} and a splash of cooking water until smooth.",
+    "Fry {bacon} until crisp and crumble.",
+    "Pat {scallops} dry and sear in the remaining {butter} for 90 seconds per side until golden.",
+    "Spoon the purée onto plates, add the scallops, bacon and a squeeze of {lemon}."]}
+]);

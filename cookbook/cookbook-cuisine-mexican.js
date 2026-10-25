@@ -1117,3 +1117,121 @@ KITCHEN.add([
     ]
   }
 ]);
+
+/* ---- additions: flatbreads, wraps and new pantry ingredients ---- */
+KITCHEN.add([
+  {id:"chicken-fajitas-flour-tortillas", name:"Chicken fajitas with flour tortillas", meal:"big", cuisine:"Mexican", time:30, serves:2,
+   ing:[["chicken-breast",300],["red-pepper",200],["onion","1pc"],["taco-seasoning",8],["flour-tortillas","4pc"],["oil",20],["lime","1pc"],["sour-cream",60],["salsa-tomato",60]],
+   steps:[
+    "Slice {chicken-breast}, {red-pepper} and {onion} into strips. Toss the chicken with {taco-seasoning} and half the {oil}.",
+    "Cook the chicken in a very hot pan for 6 minutes until browned and cooked through (74 °C); set aside.",
+    "Fry the pepper and onion in the remaining {oil} for 6 minutes until softened and charred in places. Return the chicken and squeeze over {lime}.",
+    "Warm the {flour-tortillas} and serve with the fajita mix, {sour-cream} and {salsa-tomato}."]},
+  {id:"beef-rice-burritos", name:"Beef and rice burritos", meal:"big", cuisine:"Mexican", time:40, serves:2,
+   ing:[["beef-mince",250],["rice",100],["black-beans",120],["onion","1pc"],["taco-seasoning",8],["flour-tortillas","4pc"],["monterey-jack",80],["salsa-tomato",80],["sour-cream",40],["oil",10],["water",200]],
+   steps:[
+    "Cook {rice} with {water} in a covered pan on low heat for 12 minutes; fluff and set aside.",
+    "Brown {beef-mince} with diced {onion} in {oil} for 8 minutes. Stir in {taco-seasoning} and {black-beans} and cook 3 minutes.",
+    "Warm the {flour-tortillas}. Fill with rice, the beef mixture, grated {monterey-jack} and {salsa-tomato}.",
+    "Fold in the sides, roll up tightly and serve with {sour-cream}."]},
+  {id:"bean-cheese-burritos", name:"Refried bean and cheese burritos", meal:"big", cuisine:"Mexican", time:25, serves:2,
+   ing:[["refried-beans",250],["monterey-jack",80],["rice",80],["flour-tortillas","4pc"],["salsa-tomato",60],["coriander",5],["avocado","1pc"],["water",160]],
+   steps:[
+    "Cook {rice} with {water} in a covered pan on low heat for 12 minutes.",
+    "Warm {refried-beans} in a small pan for 4 minutes, stirring.",
+    "Warm the {flour-tortillas}. Spread with beans, then add rice, grated {monterey-jack}, {salsa-tomato}, sliced {avocado} and {coriander}.",
+    "Roll up burrito-style, tucking in the ends. Toast seam-side down in a dry pan for 1 minute to seal."]},
+  {id:"cheese-quesadillas-salsa", name:"Cheese quesadillas with salsa", meal:"bite", cuisine:"Mexican", time:12, serves:2,
+   ing:[["flour-tortillas","4pc"],["monterey-jack",160],["pickled-jalapenos",20],["butter",10],["salsa-tomato",60],["sour-cream",40]],
+   steps:[
+    "Cover half of each of the {flour-tortillas} with grated {monterey-jack} and a few {pickled-jalapenos}; fold over.",
+    "Melt {butter} in a pan and cook the quesadillas 2 minutes per side, until crisp and the cheese melts.",
+    "Cut into wedges and serve with {salsa-tomato} and {sour-cream}."]},
+  {id:"chicken-quesadillas", name:"Chicken and pepper quesadillas", meal:"big", cuisine:"Mexican", time:25, serves:2,
+   ing:[["chicken-breast",200],["red-pepper",100],["monterey-jack",120],["flour-tortillas","4pc"],["taco-seasoning",5],["oil",15],["sour-cream",40],["lime","0.5pc"]],
+   steps:[
+    "Slice {chicken-breast} and {red-pepper} and cook in half the {oil} with {taco-seasoning} for 8 minutes, until the chicken is cooked through (74 °C).",
+    "Spread over half of each of the {flour-tortillas}, add grated {monterey-jack} and fold.",
+    "Cook in the remaining {oil} for 2 minutes per side until golden.",
+    "Serve in wedges with {sour-cream} and a squeeze of {lime}."]},
+  {id:"mushroom-spinach-quesadillas", name:"Mushroom and spinach quesadillas", meal:"big", cuisine:"Mexican", time:20, serves:2,
+   ing:[["mushrooms",200],["spinach",80],["monterey-jack",120],["flour-tortillas","4pc"],["garlic","2pc"],["oil",15],["chilli-flakes",1]],
+   steps:[
+    "Slice {mushrooms} and brown in half the {oil} for 6 minutes. Add crushed {garlic}, {chilli-flakes} and {spinach} and cook until wilted.",
+    "Spread over half of each of the {flour-tortillas}, top with grated {monterey-jack} and fold.",
+    "Cook in the remaining {oil} for 2 minutes per side until crisp and gooey."]},
+  {id:"chipotle-chicken-soft-tacos", name:"Chipotle chicken soft tacos", meal:"big", cuisine:"Mexican", time:30, serves:2,
+   ing:[["chicken-thigh",350],["chipotle-adobo",20],["lime","1pc"],["flour-tortillas","4pc"],["red-cabbage",80],["sour-cream",40],["coriander",5],["oil",15],["salt",2]],
+   steps:[
+    "Mash {chipotle-adobo} with the juice of half the {lime}, {salt} and a spoonful of {oil}. Coat the {chicken-thigh} in it.",
+    "Cook in the rest of the {oil} for 12 minutes, turning, until cooked through (74 °C). Slice.",
+    "Shred {red-cabbage} and dress with the remaining lime juice.",
+    "Warm the {flour-tortillas}; fill with chicken, cabbage, {sour-cream} and {coriander}."]},
+  {id:"pork-pineapple-tacos", name:"Pork and pineapple soft tacos", meal:"big", cuisine:"Mexican", time:30, serves:2,
+   ing:[["pork",300],["pineapple",120],["onion","0.5pc"],["chilli-powder",3],["cumin",2],["lime","1pc"],["flour-tortillas","4pc"],["coriander",5],["oil",15],["salt",2]],
+   steps:[
+    "Slice {pork} thinly and toss with {chilli-powder}, {cumin}, {salt} and the juice of half the {lime}.",
+    "Sear in {oil} over high heat for 5 minutes. Add chopped {pineapple} and {onion} and cook 3 minutes until caramelised.",
+    "Warm the {flour-tortillas} and fill with the pork mixture.",
+    "Finish with {coriander} and the remaining {lime}."]},
+  {id:"garlic-lime-prawn-tacos", name:"Garlic lime prawn tacos", meal:"big", cuisine:"Mexican", time:20, serves:2,
+   ing:[["prawns",250],["cabbage",100],["lime","1pc"],["chilli-powder",2],["garlic","2pc"],["flour-tortillas","4pc"],["avocado","1pc"],["sour-cream",40],["oil",15]],
+   steps:[
+    "Toss {prawns} with crushed {garlic}, {chilli-powder} and half the juice of {lime}.",
+    "Shred {cabbage} and dress with the rest of the lime juice.",
+    "Cook the prawns in {oil} over high heat for 3 minutes until pink.",
+    "Warm the {flour-tortillas}; fill with cabbage, prawns, sliced {avocado} and {sour-cream}."]},
+  {id:"baked-beef-bean-chimichangas", name:"Baked beef and bean chimichangas", meal:"big", cuisine:"Mexican", time:40, serves:2,
+   ing:[["beef-mince",200],["refried-beans",150],["monterey-jack",60],["flour-tortillas","4pc"],["taco-seasoning",6],["oil",20],["salsa-tomato",80],["sour-cream",40]],
+   steps:[
+    "Heat the oven to 220 °C. Brown {beef-mince} for 6 minutes with {taco-seasoning}; stir in {refried-beans}.",
+    "Divide over the {flour-tortillas} with grated {monterey-jack}. Fold in the sides and roll into tight parcels.",
+    "Brush all over with {oil} and bake seam-side down for 15 minutes, until golden and crisp.",
+    "Serve with {salsa-tomato} and {sour-cream}."]},
+  {id:"cheese-bean-enchiladas", name:"Cheese and bean enchiladas", meal:"big", cuisine:"Mexican", time:40, serves:2,
+   ing:[["enchilada-sauce",250],["flour-tortillas","4pc"],["black-beans",120],["monterey-jack",100],["onion","0.5pc"],["coriander",5],["oil",10]],
+   steps:[
+    "Heat the oven to 200 °C. Soften diced {onion} in {oil} for 5 minutes, then stir in {black-beans}.",
+    "Spread a little {enchilada-sauce} in a baking dish. Fill each of the {flour-tortillas} with the bean mixture and some {monterey-jack}, roll up and place seam-side down.",
+    "Pour over the remaining sauce and scatter with the rest of the cheese.",
+    "Bake 20 minutes until bubbling; finish with {coriander}."]},
+  {id:"beef-taco-salad-bowls", name:"Beef taco salad bowls", meal:"big", cuisine:"Mexican", time:25, serves:2,
+   ing:[["beef-mince",250],["taco-seasoning",8],["lettuce",120],["tomato","2pc"],["monterey-jack",60],["avocado","1pc"],["sour-cream",40],["sweetcorn",80],["tortilla-chips",50],["oil",10]],
+   steps:[
+    "Brown {beef-mince} in {oil} for 8 minutes; stir in {taco-seasoning} and a splash of water, and cook 2 minutes.",
+    "Shred {lettuce}, dice {tomato} and slice {avocado}.",
+    "Build bowls with lettuce, beef, tomato, {sweetcorn}, grated {monterey-jack} and avocado.",
+    "Top with {sour-cream} and crush {tortilla-chips} over."]},
+  {id:"chorizo-egg-breakfast-tacos", name:"Chorizo and egg breakfast tacos", meal:"morning", cuisine:"Mexican", time:20, serves:2,
+   ing:[["chorizo",80],["eggs","4pc"],["flour-tortillas","4pc"],["potatoes",150],["monterey-jack",40],["hot-sauce",5],["oil",10]],
+   steps:[
+    "Dice {potatoes} and fry in {oil} for 10 minutes until crisp and tender.",
+    "Add diced {chorizo} for the last 3 minutes. Push to the side and scramble the {eggs} in the same pan.",
+    "Warm the {flour-tortillas} and fill with the egg mixture and grated {monterey-jack}.",
+    "Finish with {hot-sauce}."]},
+  {id:"tex-mex-migas", name:"Tex-Mex migas", meal:"morning", cuisine:"Mexican", time:15, serves:2,
+   ing:[["tortilla-chips",60],["eggs","4pc"],["onion","0.5pc"],["tomato","1pc"],["jalapeno","1pc"],["monterey-jack",50],["butter",15]],
+   steps:[
+    "Finely dice {onion}, {tomato} and {jalapeno}. Soften the onion and jalapeño in {butter} for 3 minutes.",
+    "Add the tomato and broken {tortilla-chips}; stir for 1 minute.",
+    "Pour in beaten {eggs} and scramble gently until just set. Scatter over {monterey-jack} and cover for 1 minute to melt."]},
+  {id:"mexican-street-corn-cups", name:"Mexican street corn cups", meal:"bite", cuisine:"Mexican", time:15, serves:2,
+   ing:[["sweetcorn",300],["mayonnaise",30],["queso-fresco",40],["lime","1pc"],["chilli-powder",2],["coriander",5],["butter",10]],
+   steps:[
+    "Fry {sweetcorn} in {butter} over high heat for 6 minutes, until charred in places.",
+    "Stir through {mayonnaise}, the juice of {lime} and {chilli-powder}.",
+    "Spoon into cups and top with crumbled {queso-fresco} and {coriander}."]},
+  {id:"chicken-tortilla-soup", name:"Chicken tortilla soup", meal:"big", cuisine:"Mexican", time:40, serves:3,
+   ing:[["chicken-stock",600],["canned-tomatoes",200],["chicken-breast",200],["onion","1pc"],["garlic","2pc"],["cumin",3],["chipotle-adobo",10],["tortilla-chips",40],["avocado","1pc"],["lime","1pc"],["coriander",8],["monterey-jack",40],["oil",15]],
+   steps:[
+    "Soften diced {onion} in {oil} for 6 minutes. Add crushed {garlic}, {cumin} and {chipotle-adobo}; cook 1 minute.",
+    "Pour in {chicken-stock} and {canned-tomatoes}, add {chicken-breast} whole and simmer 15 minutes, until cooked through (74 °C).",
+    "Lift out the chicken, shred it and return it to the soup with the juice of {lime}.",
+    "Ladle into bowls and top with {tortilla-chips}, diced {avocado}, {coriander} and grated {monterey-jack}."]},
+  {id:"breakfast-quesadilla-bacon-egg", name:"Breakfast quesadilla with bacon and egg", meal:"morning", cuisine:"Mexican", time:15, serves:2,
+   ing:[["flour-tortillas","2pc"],["eggs","3pc"],["bacon",60],["monterey-jack",60],["butter",10]],
+   steps:[
+    "Fry {bacon} until crisp and chop. Scramble {eggs} in {butter} until barely set.",
+    "Scatter bacon, egg and grated {monterey-jack} over half of each of the {flour-tortillas} and fold.",
+    "Toast in a dry pan for 2 minutes per side until crisp and the cheese has melted."]}
+]);

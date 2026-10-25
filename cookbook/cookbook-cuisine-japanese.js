@@ -872,3 +872,35 @@ KITCHEN.add([
     ]
   }
 ]);
+
+/* ---- additions: flatbreads, wraps and new pantry ingredients ---- */
+KITCHEN.add([
+  {id:"pan-fried-pork-gyoza", name:"Pan-fried pork gyoza", meal:"big", cuisine:"Japanese", time:40, serves:2,
+   ing:[["wonton-wrappers",200],["pork-mince",200],["cabbage",150],["garlic","1pc"],["ginger",8],["soy-sauce",25],["sesame-oil",5],["rice-vinegar",15],["oil",20]],
+   steps:[
+    "Finely chop {cabbage}, salt lightly and squeeze dry. Mix with {pork-mince}, {garlic}, grated {ginger}, half the {soy-sauce} and {sesame-oil}.",
+    "Fill and pleat the {wonton-wrappers}, sealing the edges with water.",
+    "Fry in {oil} for 2 minutes until golden underneath, add a splash of water, cover and steam 5 minutes.",
+    "Mix the remaining {soy-sauce} with {rice-vinegar} for dipping."]},
+  {id:"teriyaki-chicken-rice-bowls", name:"Teriyaki chicken rice bowls", meal:"big", cuisine:"Japanese", time:30, serves:2,
+   ing:[["chicken-thigh",350],["teriyaki-sauce",60],["rice",150],["broccoli",150],["sesame-seeds",5],["oil",10],["water",300]],
+   steps:[
+    "Cook {rice} in {water} in a covered pan on low heat for 12 minutes.",
+    "Brown {chicken-thigh} in {oil} for 8 minutes, then pour in {teriyaki-sauce} and cook 4 minutes until glazed and cooked through (74 °C). Slice.",
+    "Steam {broccoli} for 4 minutes.",
+    "Serve over the rice with {sesame-seeds}."]},
+  {id:"teriyaki-salmon-rice", name:"Teriyaki salmon with rice and cucumber", meal:"big", cuisine:"Japanese", time:25, serves:2,
+   ing:[["salmon",300],["teriyaki-sauce",50],["rice",150],["cucumber",100],["spring-onion",15],["sesame-seeds",5],["oil",10],["water",300]],
+   steps:[
+    "Cook {rice} in {water} in a covered pan on low heat for 12 minutes.",
+    "Sear {salmon} in {oil} for 3 minutes skin-side down, flip, pour in {teriyaki-sauce} and cook 3 minutes, spooning the glaze over.",
+    "Slice {cucumber} and {spring-onion}.",
+    "Serve the salmon over rice with cucumber, spring onion and {sesame-seeds}."]},
+  {id:"teriyaki-tofu-rice-bowls", name:"Teriyaki tofu rice bowls", meal:"big", cuisine:"Japanese", time:30, serves:2,
+   ing:[["tofu",300],["teriyaki-sauce",50],["rice",150],["carrot",80],["cucumber",100],["edamame",100],["oil",15],["water",300]],
+   steps:[
+    "Cook {rice} in {water} in a covered pan on low heat for 12 minutes.",
+    "Cube {tofu} and fry in {oil} for 8 minutes until golden. Add {teriyaki-sauce} and cook 2 minutes until glazed.",
+    "Grate {carrot} and slice {cucumber}.",
+    "Serve over rice with the vegetables and {edamame}."]}
+]);

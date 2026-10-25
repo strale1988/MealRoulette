@@ -318,3 +318,14 @@ KITCHEN.add(
   }
 ]
 );
+
+/* ---- additions: flatbreads, wraps and new pantry ingredients ---- */
+KITCHEN.add([
+  {id:"langos-sour-cream-cheese", name:"Lángos with sour cream and cheese", meal:"big", cuisine:"Hungarian", time:60, serves:3,
+   ing:[["flour",250],["yeast",4],["potatoes",100],["milk",100],["oil",150],["sour-cream",100],["garlic","2pc"],["cheddar",60],["salt",3]],
+   steps:[
+    "Boil and mash {potatoes}. Mix with {flour}, {yeast}, {salt} and warm {milk} into a soft dough; knead 5 minutes and rest 30 minutes.",
+    "Divide into 3 and stretch into flat discs.",
+    "Fry in hot {oil} for 2 minutes per side until puffed and golden; drain.",
+    "Rub with crushed {garlic}, spread with {sour-cream} and sprinkle with grated {cheddar}."]}
+]);

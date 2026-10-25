@@ -1046,3 +1046,48 @@ KITCHEN.add([
     ]
   }
 ]);
+
+/* ---- additions: flatbreads, wraps and new pantry ingredients ---- */
+KITCHEN.add([
+  {id:"pork-wonton-soup", name:"Pork wonton soup", meal:"big", cuisine:"Chinese", time:40, serves:2,
+   ing:[["wonton-wrappers",150],["pork-mince",200],["ginger",10],["spring-onion",30],["soy-sauce",20],["sesame-oil",5],["chicken-stock",600],["pak-choi",150]],
+   steps:[
+    "Mix {pork-mince} with grated {ginger}, half the {spring-onion}, half the {soy-sauce} and {sesame-oil}.",
+    "Place a teaspoon of filling in each of the {wonton-wrappers}, wet the edges, fold and press to seal.",
+    "Simmer {chicken-stock} with the remaining {soy-sauce}; add {pak-choi} and the wontons and cook 4 minutes until they float.",
+    "Serve with the remaining {spring-onion}, sliced."]},
+  {id:"vegetable-tofu-potstickers", name:"Vegetable and tofu potstickers", meal:"big", cuisine:"Chinese", time:40, serves:2,
+   ing:[["wonton-wrappers",150],["tofu",200],["cabbage",120],["carrot",50],["ginger",8],["soy-sauce",25],["sesame-oil",5],["rice-vinegar",15],["oil",20]],
+   steps:[
+    "Crumble {tofu}; finely shred {cabbage} and grate {carrot}. Mix with grated {ginger}, half the {soy-sauce} and {sesame-oil}.",
+    "Fill and fold the {wonton-wrappers}, sealing the edges with water.",
+    "Fry in {oil} for 2 minutes until golden underneath, add a splash of water, cover and steam 4 minutes.",
+    "Mix the rest of the {soy-sauce} with {rice-vinegar} for dipping."]},
+  {id:"hoisin-duck-wraps", name:"Hoisin duck wraps", meal:"big", cuisine:"Chinese", time:35, serves:2,
+   ing:[["duck-breast",250],["hoisin-sauce",40],["cucumber",100],["spring-onion",40],["flour-tortillas","4pc"],["chinese-five-spice",2],["salt",1]],
+   steps:[
+    "Score the skin of the {duck-breast}, rub with {chinese-five-spice} and {salt}. Start skin-side down in a cold pan and cook over medium heat for 10 minutes to render the fat.",
+    "Flip and cook 5 minutes, then rest 5 minutes and slice thinly.",
+    "Cut {cucumber} and {spring-onion} into thin batons.",
+    "Warm the {flour-tortillas}, spread with {hoisin-sauce}, and fill with duck and vegetables."]},
+  {id:"pork-lettuce-cups", name:"Pork lettuce cups", meal:"big", cuisine:"Chinese", time:20, serves:2,
+   ing:[["pork-mince",300],["water-chestnuts",60],["garlic","2pc"],["ginger",10],["hoisin-sauce",30],["soy-sauce",15],["lettuce",100],["spring-onion",20],["sesame-oil",5],["peanuts",20],["oil",10]],
+   steps:[
+    "Brown {pork-mince} in {oil} for 6 minutes. Add {garlic} and grated {ginger}.",
+    "Stir in diced {water-chestnuts}, {hoisin-sauce} and {soy-sauce}; cook 3 minutes. Add {sesame-oil}.",
+    "Spoon into leaves of {lettuce} and top with {spring-onion} and crushed {peanuts}."]},
+  {id:"cashew-chicken-stir-fry", name:"Cashew chicken stir-fry", meal:"big", cuisine:"Chinese", time:25, serves:2,
+   ing:[["chicken-breast",300],["cashews",50],["red-pepper",100],["spring-onion",30],["garlic","2pc"],["ginger",8],["soy-sauce",20],["oyster-sauce",15],["cornstarch",8],["rice",150],["oil",20],["water",300]],
+   steps:[
+    "Cook {rice} in {water} in a covered pan on low heat for 12 minutes.",
+    "Slice {chicken-breast} and toss with {cornstarch} and half the {soy-sauce}.",
+    "Stir-fry in {oil} over high heat for 5 minutes; add {red-pepper}, {garlic}, grated {ginger} and {cashews} and cook 3 minutes.",
+    "Add {oyster-sauce}, the remaining {soy-sauce} and a splash of water; toss 1 minute. Top with {spring-onion} and serve over the rice."]},
+  {id:"five-spice-chicken-pak-choi", name:"Five-spice chicken thighs with pak choi", meal:"big", cuisine:"Chinese", time:40, serves:2,
+   ing:[["chicken-thigh",450],["chinese-five-spice",4],["soy-sauce",20],["honey",15],["ginger",8],["pak-choi",200],["rice",150],["oil",15],["water",300]],
+   steps:[
+    "Heat the oven to 220 °C. Toss {chicken-thigh} with {chinese-five-spice}, {soy-sauce}, {honey}, grated {ginger} and half the {oil}.",
+    "Roast 25 minutes until sticky and cooked through (74 °C).",
+    "Cook {rice} in {water} in a covered pan on low heat for 12 minutes.",
+    "Stir-fry {pak-choi} in the remaining {oil} for 3 minutes and serve with the chicken and rice."]}
+]);

@@ -515,3 +515,24 @@ KITCHEN.add([
     ]
   }
 ]);
+
+/* ---- additions: flatbreads, wraps and new pantry ingredients ---- */
+KITCHEN.add([
+  {id:"cajun-chicken-wraps", name:"Cajun chicken wraps", meal:"big", cuisine:"Cajun", time:25, serves:2,
+   ing:[["chicken-breast",300],["cajun-seasoning",8],["flour-tortillas","4pc"],["lettuce",60],["tomato","1pc"],["avocado","1pc"],["ranch-dressing",40],["oil",15]],
+   steps:[
+    "Slice {chicken-breast} and coat in {cajun-seasoning}.",
+    "Cook in {oil} for 7 minutes until blackened and cooked through (74 °C).",
+    "Warm the {flour-tortillas}; fill with {lettuce}, sliced {tomato} and {avocado}, the chicken and {ranch-dressing}. Roll up."]},
+  {id:"blackened-salmon-tacos", name:"Blackened salmon tacos with slaw", meal:"big", cuisine:"Cajun", time:25, serves:2,
+   ing:[["salmon",300],["cajun-seasoning",8],["flour-tortillas","4pc"],["cabbage",100],["lime","1pc"],["sour-cream",40],["oil",15]],
+   steps:[
+    "Rub {salmon} with {cajun-seasoning} and sear in {oil} for 4 minutes per side. Flake.",
+    "Shred {cabbage} and toss with the juice of half the {lime} and half the {sour-cream}.",
+    "Warm the {flour-tortillas}; fill with salmon and slaw and top with the remaining {sour-cream} and a squeeze of lime."]},
+  {id:"cajun-sausage-potato-traybake", name:"Cajun sausage and potato traybake", meal:"big", cuisine:"Cajun", time:50, serves:2,
+   ing:[["sausage",300],["potatoes",400],["red-pepper",150],["onion","1pc"],["cajun-seasoning",8],["oil",30]],
+   steps:[
+    "Heat the oven to 220 °C. Cut {potatoes}, {red-pepper} and {onion} into chunks and toss with {oil} and {cajun-seasoning} on a tray.",
+    "Roast 20 minutes, add the {sausage} and roast 25 minutes more, turning once, until browned and the potatoes are crisp."]}
+]);

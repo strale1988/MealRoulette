@@ -809,3 +809,21 @@ KITCHEN.add([
     ]
   }
 ]);
+
+/* ---- additions: flatbreads, wraps and new pantry ingredients ---- */
+KITCHEN.add([
+  {id:"thai-basil-pork-rice", name:"Thai basil pork with rice", meal:"big", cuisine:"Thai", time:25, serves:2,
+   ing:[["pork-mince",300],["basil",20],["fresh-chilli","2pc"],["garlic","3pc"],["fish-sauce",15],["oyster-sauce",15],["sugar",5],["rice",150],["eggs","2pc"],["oil",20],["water",300]],
+   steps:[
+    "Cook {rice} in {water} in a covered pan on low heat for 12 minutes.",
+    "Pound or finely chop {garlic} and {fresh-chilli}; fry in half the {oil} for 30 seconds.",
+    "Add {pork-mince} and stir-fry 6 minutes, then {fish-sauce}, {oyster-sauce} and {sugar}. Stir in {basil} until just wilted.",
+    "Fry {eggs} in the remaining {oil} with crisp edges and serve on the rice with the pork."]},
+  {id:"satay-chicken-wraps", name:"Satay chicken wraps", meal:"big", cuisine:"Thai", time:25, serves:2,
+   ing:[["chicken-breast",300],["peanut-butter",40],["soy-sauce",15],["lime","1pc"],["sweet-chilli-sauce",30],["cabbage",100],["carrot",80],["coriander",8],["flour-tortillas","4pc"],["oil",15]],
+   steps:[
+    "Whisk {peanut-butter}, {soy-sauce}, the juice of {lime}, {sweet-chilli-sauce} and a splash of water.",
+    "Slice {chicken-breast} and cook in {oil} for 7 minutes until cooked through (74 °C); toss with half the sauce.",
+    "Shred {cabbage} and {carrot}.",
+    "Warm the {flour-tortillas} and fill with chicken, vegetables and {coriander}; drizzle with the remaining sauce and roll up."]}
+]);

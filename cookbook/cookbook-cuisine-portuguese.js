@@ -451,3 +451,20 @@ KITCHEN.add([
     ]
   }
 ]);
+
+/* ---- additions: flatbreads, wraps and new pantry ingredients ---- */
+KITCHEN.add([
+  {id:"bifana-pork-sandwiches", name:"Bifana pork sandwiches", meal:"big", cuisine:"Portuguese", time:35, serves:2,
+   ing:[["pork",300],["garlic","3pc"],["white-wine",60],["paprika",3],["bay-leaf",1],["baguette",160],["mustard",10],["oil",15],["salt",2]],
+   steps:[
+    "Slice {pork} thinly and marinate with crushed {garlic}, {white-wine}, {paprika}, {bay-leaf} and {salt} for 20 minutes or more.",
+    "Fry the pork in {oil} for 5 minutes, then add the marinade and simmer 8 minutes until the sauce reduces.",
+    "Split the {baguette} and spread with {mustard}.",
+    "Pile in the pork with its juices."]},
+  {id:"sardine-toast-tomato-salad", name:"Sardine toast with tomato and onion salad", meal:"bite", cuisine:"Portuguese", time:10, serves:2,
+   ing:[["sardines",240],["bread","4pc"],["tomato","2pc"],["red-onion","0.5pc"],["parsley",5],["olive-oil",10],["white-wine-vinegar",5]],
+   steps:[
+    "Dice {tomato} and slice {red-onion} thinly; dress with {olive-oil}, {white-wine-vinegar} and {parsley}.",
+    "Toast the {bread}.",
+    "Top with the {sardines} and the salad."]}
+]);
