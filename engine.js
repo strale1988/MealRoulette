@@ -82,7 +82,7 @@ const V=[
 ["celery","celery","celery",80,6,0,1],["fennel","fennel","fennel",120,8,25,1],["beetroot","beetroot","beetroot|beet",150,10,35,0],["pakchoi","pak choi","bok choy|pak choi|pakchoi",120,3,12,0],["brussels","brussels sprouts","brussels",150,8,25,0],["rocket","rocket","rocket|arugula",60,1,0,1]];
 
 const rndT=l=>rnd(l);
-const NC=w=>!/\b(canned|tinned|passata|paste|puree|sauce|stock)\b/.test(w); // canned tomatoes are a sauce, never a sliceable vegetable
+const NC=w=>!/\b(canned|tinned|passata|paste|puree|sauce|stock|black pepper|white pepper|peppercorns?|pepper flakes|chil+i|gochugaru|paprika|cayenne|powder|seasoning|ground)\b/.test(w); // canned tomatoes are a sauce, never a sliceable vegetable
 const find=(l,it)=>l.filter(x=>it.some(w=>new RegExp(x[2]).test(w)));
 const hasW=(it,name)=>it.some(w=>w.includes(name.split(" ")[0].toLowerCase()));
 
@@ -267,7 +267,7 @@ G.cook=function(it,n,cuName,diet,o){
    soft.length&&`Stir in the ${soft.map(vnOf).join(" and ")} and cook 3 more minutes.`,
    p&&!isL&&(preP?stirP:pk==="egg"?"Make wells, crack in the eggs, cover and cook 6–8 minutes until set.":del?`Add the ${pn} and simmer ${del} more minutes ${p[5]}.`:`Check the ${pn} is cooked ${p[5]}.`),"Season with salt and pepper.",...fin,serve,...side);
  }else if(tpl==="wrap"){label="wrap";const raw=vs.filter(v=>v[6]),hot=vs.filter(v=>!v[6]);min=15+(p?p[4]:0)+hot.reduce((t,v)=>t+v[4],0);
-  S.push(p&&(preP?`Warm the ${pn} (shredded or sliced) in ${o2} ${cu.fat} with ${sp?`the ${sp}`:"a pinch of salt"} for 2–3 minutes.`:pk==="egg"?"Beat the eggs with a pinch of salt and scramble over medium heat for 2–3 minutes.":pk==="tuna"?`Drain and flake the ${pn}.`:isL?`Drain and rinse the ${pn}, then warm in ${o2} ${cu.fat} with ${sp?`the ${sp}`:"a pinch of salt"} for ${p[4]} minutes.`:`Cut the ${pn} into strips, toss with ${sp?`the ${sp}`:"a pinch of salt"}, then fry in ${o2} ${cu.fat} over medium-high heat for ${p[4]} minutes, turning, ${p[5]}.`),
+  S.push(p&&(preP?`Warm the ${pn} (shredded or sliced) in ${o2} ${cu.fat} with ${sp?`the ${sp}`:"a pinch of salt"} for 2–3 minutes.`:pk==="egg"?`Beat the eggs with a pinch of salt and scramble in ${o2} ${cu.fat} over medium heat for 2–3 minutes.`:pk==="tuna"?`Drain and flake the ${pn}.`:isL?`Drain and rinse the ${pn}, then warm in ${o2} ${cu.fat} with ${sp?`the ${sp}`:"a pinch of salt"} for ${p[4]} minutes.`:`Cut the ${pn} into strips, toss with ${sp?`the ${sp}`:"a pinch of salt"}, then fry in ${o2} ${cu.fat} over medium-high heat for ${p[4]} minutes, turning, ${p[5]}.`),
    ...hot.map(v=>`Fry the ${vnOf(v)} in the same pan for ${v[4]} minutes.`),raw.length&&`Slice the ${raw.map(vnOf).join(" and ")} thinly.`,sau&&`Stir the ${sau} together into a quick sauce.`,
    CC(),`Fill the warm ${cb} with the ${[pn,...vn].filter(Boolean).join(", ")}${sau?" and the sauce":""}, then fold or roll.`,...fin,...side);
  }else if(tpl==="soup"){label="soup";A("water",300*n,"ml",true);min=40;
@@ -290,6 +290,11 @@ G.cook=function(it,n,cuName,diet,o){
    ...hot.map(v=>`Cook the ${vnOf(v)} in a little oil in a pan for ${v[4]} minutes.`),raw.length&&`Slice the ${raw.map(vnOf).join(" and ")} thinly.`,
    `Whisk ${o2} ${cu.fat}${lem?", the lemon juice":""}${sau?`, the ${sau}`:""} and a pinch of salt into a dressing.`,
    `Build the bowl with ${[cb,pn,...vn].filter(Boolean).join(", ")} and pour over the dressing.`,...fin);}
+ // every aromatic, spice, sauce and garnish in the ingredient list must appear in the method; add a step for any the template skipped
+ {const low=()=>S.filter(Boolean).join(" ").toLowerCase(),seen=a=>{const w=a[0].toLowerCase().replace(/\(.*?\)/g,"").trim().split(/\s+/).pop().replace(/(es|s)$/,"");return w.length<3||low().includes(w)};
+  const mAr=cu.ar.filter(a=>!seen(a)),mSp=cu.sp.filter(a=>!seen(a)),mSa=sauc.filter(a=>!seen(a)),mGa=cu.gar.filter(a=>!seen(a));
+  const extra=[mAr.length&&`Finely chop the ${J(mAr)} and soften in a little ${cu.fat} for 3 minutes, then stir into the dish.`,mSp.length&&`Season with the ${J(mSp)}.`,mSa.length&&`Stir in the ${J(mSa)} just before serving.`,mGa.length&&`Finish with ${J(mGa)}.`].filter(Boolean);
+  if(extra.length){let at=S.length;for(let j=S.length-1;j>=0;j--)if(S[j]&&/^Serve\b/.test(S[j])){at=j;break}S.splice(at,0,...extra)}}
  const parts=[pn,cb,...vn].filter(Boolean).map(x=>x.replace(/^canned /,"").replace(/ \((dry|drained)\)/g,"")),list=parts.length>1?parts.slice(0,-1).join(", ")+" & "+parts[parts.length-1]:parts[0];
  const used=ing.map(i=>i.name.toLowerCase()),unused=strict?it.filter(w=>!used.some(u=>u.includes(w)||w.includes(u.split(" ")[0]))):[];
  return{title:`${cuN} ${label} with ${list}`,desc:strict?`Made only from your fridge${basic?" plus pantry basics":""}. ${cuN} flavours.`:`Generated: ${cuN} flavours, ${label}. Quantities are for ${n} ${n>1?"people":"person"}.`,min:Math.round(min),ing,steps:S.filter(Boolean),unused,pk,ck:c?c[0]:""};
@@ -324,6 +329,10 @@ G.remix=function(parents,it,n,diet,o){
  const g=G.cook([...Object.values(nm),...fr,...lfr],n,cu,diet,{fixed:use,strict:o.strict,basic:o.basic});
  if(!g)return null;
  g.title=g.title.replace(/ \((dry|drained)\)/g,"").replace(/canned /g,"");g.desc=desc(cu);g.remix=1;g.from=from;g.unused=(g.unused||[]).filter(x=>fr.includes(x));return g};
+// Safety net: a spice or seasoning is never more than a few grams per person, whatever a template or a parent recipe lent it.
+const SPICY=/\b(black pepper|white pepper|peppercorns?|chil+i flakes|chil+i powder|gochugaru|paprika|cayenne|cumin|turmeric|cinnamon|oregano|thyme|rosemary|coriander seeds?|garam masala|curry powder|five.spice|nutmeg|cardamom|allspice|salt)\b/;
+const sane=(g,n)=>{if(g&&g.ing)g.ing.forEach(i=>{if(typeof i.a==="number"&&(i.u==="g"||i.u==="ml")&&SPICY.test(String(i.name).toLowerCase())&&!/garlic|clove|stock|sauce/.test(String(i.name).toLowerCase())){const cap=3*Math.max(1,n);if(i.a>cap){i.a=cap;i.txt=fmt(i.a,i.u)}}});return g};
+["cook","makeSmall"].forEach(k=>{const f=G[k];if(typeof f==="function")G[k]=function(){const n=k==="cook"?arguments[1]:arguments[2];return sane(f.apply(this,arguments),n)}});
 G.make=(it,n,cu,d)=>G.cook(it,n,cu,d,{});
 G.makeFridge=(it,n,cu,d,basic)=>G.cook(it,n,cu,d,{strict:1,basic});
 })();

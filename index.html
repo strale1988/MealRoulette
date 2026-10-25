@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#fff3da">
-<script>try{var t=localStorage.getItem("mr-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);if(localStorage.getItem("mr-splash")==="off")document.documentElement.setAttribute("data-splash","off")}catch(e){}</script>
+<script>try{var t=localStorage.getItem("mr-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <link rel="preload" href="fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -90,6 +90,7 @@ button::selection,button *::selection{background:transparent}
 .hero{background:var(--soft);padding:18px 20px;display:flex;gap:14px;align-items:center}
 .hero .ic{width:52px;height:52px;border-radius:16px;background:var(--acc);color:#fff;display:grid;place-items:center;font-size:28px;flex:none}
 .hero h2{margin:0;font-size:21px;line-height:1.2;letter-spacing:-.01em}
+.hero .ht{min-width:0}.hero .orig{margin:5px 0 0;display:flex;align-items:center;gap:6px;font-size:14px;font-weight:700;opacity:.88}.hero .orig .i{width:15px;height:15px}
 .body{padding:4px 20px 20px}
 .meta{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 0}
 .meta span{display:flex;align-items:center;gap:5px;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:3px 11px;font-size:13px}
@@ -371,22 +372,18 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
  *{animation:none!important;transition:none!important}
 }
 
-/* tour + extras */
-.tour{position:fixed;z-index:90;left:12px;right:12px;bottom:calc(96px + env(safe-area-inset-bottom,0px));max-width:460px;margin:0 auto;background:var(--card);color:var(--ink);border:var(--bw) solid var(--ink);border-radius:22px;box-shadow:var(--sh);padding:16px 16px 14px;animation:ckup .3s ease-out both}
-@media (min-width:760px){.tour{bottom:28px}}
-.tour small{color:var(--mute);font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
-.tour h3{margin:2px 0 4px;font:800 22px/1.1 Bricolage,sans-serif;letter-spacing:-.02em}.tour p{margin:0 0 12px;color:var(--mute);font-size:15px;line-height:1.4}
-.tour-row{display:flex;align-items:center;justify-content:space-between;gap:12px}.tour-dots{display:flex;gap:6px}.tour-dots i{width:9px;height:9px;border-radius:50%;border:2px solid var(--ink);background:var(--card)}.tour-dots i.on{background:var(--acc)}
-.tour-b{display:flex;gap:10px;align-items:center}.tour-s{background:none;border:0;color:var(--mute);font:inherit;font-weight:700;cursor:pointer;padding:8px 4px;text-decoration:underline}
-.tour-n{border:var(--bw) solid var(--ink);border-radius:14px;padding:10px 18px;font:800 16px Bricolage,sans-serif;background:var(--acc);color:#fff;cursor:pointer;box-shadow:var(--sh)}
-.tour-hl{outline:4px solid var(--acc)!important;outline-offset:5px;border-radius:18px;transition:outline-color .2s}
+/* extras */
+.hrow{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:8px 0;font-weight:700}
+.hstep{display:inline-flex;width:auto;min-width:130px;gap:6px}
+.hstep button{border-radius:50%}
+.hages{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}.hages label{display:flex;align-items:center;gap:6px;font-size:14px;color:var(--mute)}
+.hages select{width:auto;height:38px;padding:0 10px;border-radius:999px}
 .xtra-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:8px 0}.xtra-row p{margin:0;font-size:14px;color:var(--mute)}.xtra-row b{display:block;color:var(--ink);font-size:15px}
-@media print{.tour{display:none!important}}
 
 /* ---- v53: pizza logo, capsule shapes, round +/- steppers ---- */
 .logo{width:48px;height:48px;padding:3px;border-radius:50%;background:var(--card);border:var(--bw,2.5px) solid var(--ink);box-shadow:var(--sh,3px 3px 0 var(--ink));transition:transform .6s cubic-bezier(.3,1.5,.5,1)}
 .logo svg{display:block;width:100%;height:100%;fill:none;stroke:none}
-.logo{cursor:pointer;color:inherit;font:inherit;-webkit-tap-highlight-color:transparent}.logo:hover{transform:rotate(45deg)}.logo:active{transform:scale(.92)}.logo:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.logo{cursor:pointer;color:inherit;font:inherit;-webkit-tap-highlight-color:transparent}.logo svg{transition:transform .6s cubic-bezier(.3,1.5,.5,1)}.logo:hover svg{transform:rotate(45deg)}.logo:active{transform:scale(.92)}.logo:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 @media (prefers-reduced-motion:reduce){.logo,.step button{transition:none}.logo:hover{transform:none}}
 /* steppers: a capsule track with two round buttons and the value in the middle */
 .step{height:54px;padding:0 6px;gap:6px;border-radius:999px;box-shadow:var(--sh,3px 3px 0 var(--ink))}
@@ -399,37 +396,39 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
 /* capsule everything we can */
 select{border-radius:999px;padding:0 18px}
 .suggest{border-radius:26px;padding:6px}.suggest button{border-radius:999px;padding:9px 14px}
-.row button,.fav button,.btns button,.pzbtns button,.row .go,.ck-t,.ck-nav button,.fmspin,.tour-n,.buy{border-radius:999px}
+.row button,.fav button,.btns button,.pzbtns button,.row .go,.ck-t,.ck-nav button,.fmspin,.buy{border-radius:999px}
 .fav button{padding:11px 18px}
 .tabs{border-radius:999px}.tabs button{border-radius:999px}
 .ck-x,.fmb li button{border-radius:50%}
 
 /* ---- v54: start screen: the pizza spins like it is loading, stops, then tap or shake for a random recipe ---- */
-html{scrollbar-gutter:stable}html:has(.splash){overflow:hidden}html[data-splash=off] #splash{display:none}html[data-splash=off]:has(.splash){overflow:auto}
-.splash{touch-action:none;overscroll-behavior:contain;position:fixed;inset:0;z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;padding-bottom:calc(24px + env(safe-area-inset-bottom,0px));background:var(--bg);color:var(--ink);text-align:center;transition:opacity .3s ease,transform .3s ease}
-.splash{transition:opacity .45s ease,transform .45s cubic-bezier(.3,.7,.2,1),filter .45s ease}
+/* the footer sits at the bottom of the screen on short pages, so it does not jump up and down as the content changes */
+body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
+main{flex:1 0 auto;width:100%;box-sizing:border-box;display:flex;flex-direction:column}
+main>footer{margin-top:auto!important;padding-top:12px;width:100%}
+main>footer{padding-bottom:10px}
+@media (min-width:760px){main{padding-bottom:6px!important}}
+main>.tab:not([hidden]){width:100%;box-sizing:border-box;padding-bottom:56px} /* room between long content and the footer */
+html{scrollbar-gutter:stable}html:has(.splash){overflow:hidden}
+.splash{pointer-events:none;touch-action:none;overscroll-behavior:contain;position:fixed;inset:0;z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;padding-bottom:calc(24px + env(safe-area-inset-bottom,0px));background:var(--bg);color:var(--ink);text-align:center;transition:opacity .3s ease,transform .3s ease}
+.splash{transition:opacity .3s ease,transform .3s cubic-bezier(.3,.7,.2,1),filter .3s ease}
 .splash.out{opacity:0;transform:scale(1.06);filter:blur(6px);pointer-events:none}
-.sp-wheel{position:relative;width:min(72vw,44vh,320px);aspect-ratio:1;margin-top:18px;transition:transform .25s cubic-bezier(.3,.7,.2,1);animation:spPop .7s cubic-bezier(.2,.9,.3,1.15) backwards}
+.sp-wheel{position:relative;width:min(72vw,44vh,320px);aspect-ratio:1;margin-top:18px;transition:transform .25s cubic-bezier(.3,.7,.2,1);animation:spPop .4s cubic-bezier(.2,.9,.3,1.15) backwards}
 .sp-wheel:before{content:"";position:absolute;left:50%;top:-20px;z-index:2;transform:translateX(-50%);border-left:14px solid transparent;border-right:14px solid transparent;border-top:26px solid var(--acc);filter:drop-shadow(0 2px 0 var(--ink))}
-.sp-pizza{will-change:transform;display:block;width:100%;height:100%;padding:0;border:0;border-radius:50%;background:none;cursor:default;filter:drop-shadow(0 9px 0 rgba(42,26,19,.2));animation:spLoad 2.4s cubic-bezier(.12,.7,.2,1) both;-webkit-tap-highlight-color:transparent}
+.sp-pizza{will-change:transform;display:block;width:100%;height:100%;padding:0;border:0;border-radius:50%;background:none;cursor:default;animation:spLoad 1.2s cubic-bezier(.2,.7,.2,1) both;-webkit-tap-highlight-color:transparent}
 .sp-pizza svg{display:block;width:100%;height:100%}
 .sp-pizza:focus-visible{outline:4px solid var(--acc);outline-offset:6px}
 .splash.ready .sp-pizza:not(:disabled){cursor:pointer}
 .splash.ready .sp-wheel:hover{transform:scale(1.03)}.splash.ready .sp-wheel:active{transform:scale(.97)}
 .sp-t{margin:8px 0 0;font:800 clamp(34px,8vw,56px)/1 Bricolage,"DM Sans",sans-serif;letter-spacing:-.04em;white-space:nowrap}
-.sp-t span{display:inline-block;animation:spLetter .7s cubic-bezier(.2,.9,.3,1.25) backwards;animation-delay:calc(.25s + var(--i)*45ms)}
-.sp-h{margin:0;min-height:2.7em;max-width:26ch;color:var(--mute);font-size:17px;line-height:1.35;transition:opacity .22s ease,transform .22s ease;animation:spIn .6s ease .7s backwards}
+.sp-t span{display:inline-block;animation:spLetter .45s cubic-bezier(.2,.9,.3,1.25) backwards;animation-delay:calc(.1s + var(--i)*25ms)}
+.sp-h{margin:0;min-height:2.7em;max-width:30ch;color:var(--mute);font-size:17px;line-height:1.35;transition:opacity .22s ease,transform .22s ease;animation:spIn .4s ease .3s backwards}
 .sp-h.fade{opacity:0;transform:translateY(-6px)}
 .sp-h .w{display:inline-block;animation:spWord .55s cubic-bezier(.2,.9,.3,1) backwards;animation-delay:calc(var(--w)*60ms)}
 .dots i{display:inline-block;width:.32em;height:.32em;margin-left:.28em;border-radius:50%;background:currentColor;animation:spDot 1.1s ease-in-out infinite}.dots i:nth-child(2){animation-delay:.15s}.dots i:nth-child(3){animation-delay:.3s}
 .sp-wheel:before{transform-origin:50% 0}
+.sp-wheel{isolation:isolate}.sp-wheel:after{content:"";position:absolute;inset:7.8%;border-radius:50%;background:rgba(42,26,19,.2);transform:translateY(9px);z-index:-1;pointer-events:none}
 .splash.ready .sp-wheel:before{animation:spTick .7s cubic-bezier(.3,1.6,.5,1)}
-.splash.ready .sp-wheel:after{content:"";position:absolute;inset:-6px;border-radius:50%;border:3px solid var(--acc);opacity:0;pointer-events:none;animation:spRing 2.6s ease-out 1.1s infinite}
-.sp-open.gone{opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .25s ease,transform .25s ease}
-.sp-open{border:var(--bw,2.5px) solid var(--ink);border-radius:999px;background:var(--card);color:var(--ink);font:800 18px Bricolage,"DM Sans",sans-serif;padding:14px 30px;box-shadow:var(--sh,3px 3px 0 var(--ink));cursor:pointer;transition:transform .14s ease,box-shadow .14s ease}
-.sp-open.wait{visibility:hidden}
-.sp-open:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}.sp-open:active{transform:translate(2px,2px);box-shadow:none}.sp-open:disabled{opacity:.5;pointer-events:none}
-.splash.ready .sp-open{animation:spIn .6s cubic-bezier(.2,.9,.3,1) .6s backwards}
 @keyframes spLoad{from{transform:rotate(0)}to{transform:rotate(1417.5deg)}}
 @keyframes spIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 @keyframes spPop{from{opacity:0;transform:scale(.7) rotate(-30deg)}to{opacity:1;transform:none}}
@@ -438,7 +437,7 @@ html{scrollbar-gutter:stable}html:has(.splash){overflow:hidden}html[data-splash=
 @keyframes spDot{0%,70%,100%{transform:translateY(0);opacity:.4}35%{transform:translateY(-.35em);opacity:1}}
 @keyframes spTick{0%{transform:translateX(-50%) rotate(0)}30%{transform:translateX(-50%) rotate(-22deg)}60%{transform:translateX(-50%) rotate(12deg)}100%{transform:translateX(-50%) rotate(0)}}
 @keyframes spRing{0%{opacity:.55;transform:scale(.96)}100%{opacity:0;transform:scale(1.18)}}
-@media (prefers-reduced-motion:reduce){.sp-pizza{animation:none;transform:rotate(1417.5deg)}.splash,.sp-wheel,.sp-h{transition:none}.sp-wheel,.sp-t span,.sp-h,.sp-h .w,.dots i,.splash.ready .sp-open,.splash.ready .sp-wheel:before,.splash.ready .sp-wheel:after{animation:none}.splash.out{filter:none}}
+@media (prefers-reduced-motion:reduce){.sp-pizza{animation:none;transform:rotate(1417.5deg)}.splash,.sp-wheel,.sp-h{transition:none}.sp-wheel,.sp-t span,.sp-h,.sp-h .w,.dots i,.splash.ready .sp-bar i,.splash.ready .sp-wheel:before{animation:none}.splash.out{filter:none}}
 
 /* ---- v58: compact: tighter spacing and slightly smaller type everywhere, same look ---- */
 main{padding-top:10px;padding-bottom:104px}
@@ -476,18 +475,63 @@ details{margin-top:8px}summary{padding:9px 0}
 footer{margin-top:28px;padding-top:12px}
 .tabs{padding:4px}.tabs button{padding:7px 4px;gap:2px;font-size:12.5px}.tabs .i{font-size:20px}
 @media (min-width:760px){.tabs{padding:0}.tabs button{padding:6px 16px;gap:8px;font-size:14.5px}}
-.splash{gap:10px}.sp-wheel{width:min(66vw,40vh,290px);margin-top:14px}.sp-t{font-size:clamp(30px,7vw,46px)}.sp-h{font-size:16px}.sp-open{padding:11px 26px;font-size:17px}
+.splash{gap:10px}.sp-wheel{width:min(66vw,40vh,290px);margin-top:14px}.sp-t{font-size:clamp(30px,7vw,46px)}.sp-h{font-size:16px}
 
 /* ---- phone/tablet: filters and results are separate screens; desktop keeps filters left, recipe right ---- */
-.backbar{display:none}
 @media (max-width:959px){
  #tab-cook:not(.resmode) .res{display:none}
  #tab-cook.resmode .side,#tab-cook.resmode>.hl,#tab-cook.resmode>.hl+p{display:none}
- #tab-cook.resmode .backbar{display:block;margin:0 0 12px}
- #resback{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:9px 16px 9px 12px;font:inherit;font-weight:700;font-size:15px;cursor:pointer}
- #resback:hover{border-color:var(--acc)}
 }
-@media (min-width:960px){.backrow{display:none!important}}
+.hero{position:relative}
+.heroback{position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;padding:0;cursor:pointer;background:var(--card);color:var(--ink);border:var(--bw,2px) solid var(--ink);box-shadow:2px 2px 0 var(--ink);transition:transform .14s ease,box-shadow .14s ease}
+.heroback .i{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round}
+.heroback:hover{transform:translate(-1px,-1px);box-shadow:3px 3px 0 var(--ink)}.heroback:active{transform:translate(2px,2px);box-shadow:none}
+.hero:has(.heroback) .ht,.hero:has(.heroback)>h2{padding-right:44px}
+@media (min-width:960px){.heroback{display:none!important}}
+/* ---- one look for the big action buttons everywhere: Spin, Spin a classic, Build a pizza, Spin a ferment, Start cooking (primary), Whisk (secondary) ---- */
+#spin,#pzspin,#pzuse,.fmspin,#remix,#pzremix{box-sizing:border-box;display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:64px;margin:0;padding:0 16px;border:var(--bw,2px) solid var(--ink);border-radius:999px;box-shadow:var(--sh,3px 3px 0 var(--ink));font-family:Bricolage,"DM Sans",system-ui,sans-serif;font-weight:800;line-height:1.1;text-align:center;flex-direction:row;cursor:pointer}
+#spin,#pzspin,#pzuse,.fmspin{background:var(--acc);color:#fff;font-size:24px}
+#remix,#pzremix,.pzbtns:has(#pzspin) #pzremix{background:var(--card);color:var(--ink);font-size:20px;padding:0 16px;flex-direction:row;gap:8px}
+.btns,.pzbtns:has(#pzspin){display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-top:14px}
+.pzbtns:has(#pzuse){grid-template-columns:1fr;margin-top:14px}
+.fmspin{margin-top:14px}
+.row .go{min-height:60px;font-size:22px;padding:0 16px}
+@media (max-width:380px){#spin,#pzspin,#pzuse,.fmspin{font-size:21px}#remix,#pzremix,.pzbtns:has(#pzspin) #pzremix{font-size:17px}}
+/* ---- v66: My kitchen zones, summary tiles, household faces; Pizza night follows the household ---- */
+.kbar{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0 4px}
+.ktile{--za:var(--sun);display:flex;flex-direction:column;align-items:flex-start;gap:1px;text-align:left;padding:11px 13px 12px;border:var(--bw) solid var(--ink);border-radius:20px;background:var(--card);color:var(--ink);box-shadow:var(--sh);cursor:pointer;font:inherit;transition:transform .14s ease,box-shadow .14s ease}
+.ktile:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}.ktile:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.ktile:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.ktile .kti{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--za);color:#2a1a13;border:2px solid var(--ink);margin-bottom:5px;font-size:17px}
+.ktile b{font-size:24px;line-height:1.05;letter-spacing:-.02em}.ktile>span:last-child{font-size:12.5px;line-height:1.3;color:var(--mute);font-weight:700}
+.kzones{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:30px 22px;align-items:start;margin-top:22px}
+.kzone,#kz-diet{scroll-margin-top:88px}
+.kzone{--za:var(--sun);min-width:0}
+.kzone[data-c="1"]{--za:#ff9b82}.kzone[data-c="2"]{--za:#7fd1a6}.kzone[data-c="3"]{--za:#b9a2f0}
+.kzh{display:flex;align-items:center;gap:13px;padding:0 2px 12px;border-bottom:var(--bw) dashed var(--ink)}
+.kzb{display:grid;place-items:center;flex:none;width:46px;height:46px;border-radius:50%;background:var(--za);color:#2a1a13;border:var(--bw) solid var(--ink);box-shadow:var(--sh);font-size:22px;transform:rotate(-6deg)}
+.kzone:nth-child(even) .kzb{transform:rotate(6deg)}
+.kzh h2{margin:0;font-size:23px;line-height:1.1;letter-spacing:-.02em}.kzh p{margin:3px 0 0;font-size:13.5px;line-height:1.35;color:var(--mute)}
+.kzone .kgrid{display:flex;flex-direction:column;gap:16px;margin-top:16px}
+.kzone .panel>.lab:first-child{gap:9px;font-size:14.5px;color:var(--ink);margin-bottom:10px}
+.kzone .panel>.lab:first-child>.i{width:28px;height:28px;padding:5.5px;border-radius:50%;background:var(--za);color:#2a1a13;border:2px solid var(--ink);stroke-width:2}
+.hfaces{display:flex;align-items:flex-end;flex-wrap:wrap;gap:5px 3px;min-height:56px;padding:9px 12px;margin:2px 0 6px;border:2px dashed var(--ink);border-radius:20px;background:var(--bg)}
+.hface{color:var(--ink);flex:none;transition:transform .18s ease}.hface:hover{transform:rotate(-9deg) scale(1.12)}
+@media (prefers-reduced-motion:no-preference){.hfaces .hface:last-child{animation:hpop .35s cubic-bezier(.3,1.6,.5,1)}}
+@keyframes hpop{from{transform:scale(.3)}to{transform:scale(1)}}
+.pzhh{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 14px;margin-top:16px;padding:10px 12px;border:2px dashed var(--ink);border-radius:16px;background:var(--bg);font-size:14px}
+.pzhht{flex:1 1 220px}.pzhht .i{margin-right:5px}.pzhhb{display:flex;gap:14px;flex-wrap:wrap}.pzhhb .lnk{font-size:13px;font-weight:700}
+@media (max-width:560px){.kbar{grid-template-columns:repeat(2,1fr);gap:10px}.kzh h2{font-size:21px}}
+@media print{.kbar{display:none!important}}
+.row .spinagain{flex:0 0 auto;margin-left:auto}
+/* result screens on phones/tablets: Pizza night and Fermentation work like Cook */
+@media (max-width:959px){
+ #tab-pizza.resmode>.hl,#tab-pizza.resmode>.hl+p,#tab-pizza.resmode>.pzseg,#tab-pizza.resmode #pz-build .side{display:none}
+ #tab-pizza:not(.resmode) #pzout{display:none}
+ #tab-ferm.resmode>.hl,#tab-ferm.resmode>.hl+p,#tab-ferm.resmode .side{display:none}
+ #tab-ferm:not(.resmode) .heroback{display:none}
+ #tab-ferm:not(.resmode) .hero:has(.heroback)>h2{padding-right:0}
+}
 </style>
 </head>
 <body>
@@ -524,11 +568,10 @@ footer{margin-top:28px;padding-top:12px}
 <symbol id="i-pizza" viewBox="0 0 24 24"><path d="M12 22 3.5 6.2A18 18 0 0 1 20.5 6.2zM5.8 10.4A13 13 0 0 1 18.2 10.4"/><path d="M10 10.5h.01M14 11.5h.01M12 15.5h.01"/></symbol>
 <symbol id="i-ferm" viewBox="0 0 24 24"><path d="M8 3h8M7.5 6h9A1.5 1.5 0 0 1 18 7.5V19a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V7.5A1.5 1.5 0 0 1 7.5 6z"/><circle cx="10" cy="15" r="1.2"/><circle cx="14" cy="12.5" r="1"/><circle cx="14.5" cy="17" r="1.3"/></symbol>
 </defs></svg>
-<div class="splash" id="splash" role="dialog" aria-label="Meal Roulette">
- <div class="sp-wheel"><button type="button" class="sp-pizza" aria-label="Spin for a random recipe" disabled><svg viewBox="0 0 128 128" aria-hidden="true"><use href="#logo-pizza"/></svg></button></div>
+<div class="splash" id="splash" role="status" aria-label="Loading Meal Roulette">
+ <div class="sp-wheel"><div class="sp-pizza"><svg viewBox="0 0 128 128" aria-hidden="true"><use href="#logo-pizza"/></svg></div></div>
  <h1 class="sp-t" aria-label="Meal Roulette"><span style="--i:0">M</span><span style="--i:1">e</span><span style="--i:2">a</span><span style="--i:3">l</span><span style="--i:4">&nbsp;</span><span style="--i:5">R</span><span style="--i:6">o</span><span style="--i:7">u</span><span style="--i:8">l</span><span style="--i:9">e</span><span style="--i:10">t</span><span style="--i:11">t</span><span style="--i:12">e</span></h1>
  <p class="sp-h" aria-live="polite">Loading<span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></p>
- <button type="button" class="sp-open wait" tabindex="-1">Open the app</button>
 </div>
 
 <header class="bar"><div class="bar-in">
@@ -581,7 +624,6 @@ footer{margin-top:28px;padding-top:12px}
   <p class="recipe-caution"><strong>Note:</strong> whisked and generated meals may need tweaking. Check quantities and cook food safely.</p>
  </aside>
  <section class="res">
-  <div class="backbar"><button type="button" id="resback"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Back</button></div>
   <div class="note" id="note" role="status"></div>
   <div class="reel" id="reel" aria-hidden="true"><div class="toss"><svg class="potsvg" viewBox="0 0 240 190" aria-hidden="true">
 <rect x="14" y="85" width="34" height="20" rx="8" fill="#9c2a17" style="stroke:var(--ink)" stroke-width="3"/>
@@ -623,12 +665,13 @@ footer{margin-top:28px;padding-top:12px}
     <div class="step"><button id="pzhminus" aria-label="Lower hydration"><svg class="i"><use href="#i-minus"/></svg></button><b id="pzhyd">62%</b><button id="pzhplus" aria-label="Higher hydration"><svg class="i"><use href="#i-plus"/></svg></button></div>
     <div class="tg" id="pzhpre" style="margin-top:8px"></div>
     <p class="sum" id="pzhinfo" style="margin:8px 0 0"></p>
-    <div class="grid" style="margin-top:16px">
+    <div class="pzhh" id="pzhh"><div class="pzhht" id="pzhhtxt"></div><div class="pzhhb"><button type="button" class="lnk" id="pzhhgo" hidden>Match my household</button><button type="button" class="lnk" id="pzhhkit">Change who is eating</button></div></div>
+    <div class="grid" style="margin-top:12px">
      <div><div class="lab"><svg class="i"><use href="#i-users"/></svg>Pizzas</div><div class="step"><button id="pzminus" aria-label="Fewer pizzas"><svg class="i"><use href="#i-minus"/></svg></button><b id="pzn">2</b><button id="pzplus" aria-label="More pizzas"><svg class="i"><use href="#i-plus"/></svg></button></div></div>
      <div><div class="lab"><svg class="i"><use href="#i-ruler"/></svg><span id="pzbl">Dough per ball</span></div><div class="step"><button id="pzbminus" aria-label="Lighter dough balls"><svg class="i"><use href="#i-minus"/></svg></button><b id="pzball">250 g</b><button id="pzbplus" aria-label="Heavier dough balls"><svg class="i"><use href="#i-plus"/></svg></button></div></div>
     </div>
    </section>
-   <div class="pzbtns"><button id="pzuse"><svg class="i"><use href="#i-pizza"/></svg>Use this dough: build a pizza</button></div>
+   <div class="pzbtns"><button id="pzuse">Build a pizza</button></div>
   </aside>
   <section class="res"><div id="pzdout"></div></section>
  </div>
@@ -645,7 +688,7 @@ footer{margin-top:28px;padding-top:12px}
     <label class="left-toggle" for="pzfridge" style="margin-top:14px"><input type="checkbox" id="pzfridge"><span><strong>Use my fridge and leftovers</strong><small id="pzfh">Uses what you added on the Cook tab, including cooked leftovers (they are only warmed, never cooked again).</small></span></label>
     <p class="sum" id="pzsum" style="margin:10px 0 0"></p>
    </section>
-   <div class="pzbtns"><button id="pzspin"><svg class="i"><use href="#i-dice"/></svg>Spin a classic</button><button id="pzremix"><svg class="i"><use href="#i-wand"/></svg>Whisk</button></div>
+   <div class="pzbtns"><button id="pzspin">Spin a classic</button><button id="pzremix">Whisk</button></div>
    <p class="recipe-caution"><strong>Recipe note:</strong> Ovens and flours vary. Use the times as a guide, judge by colour, and cook meat and eggs until safely done. Whisked pizzas may need tweaking to taste.</p>
   </aside>
   <section class="res">
@@ -661,22 +704,52 @@ footer{margin-top:28px;padding-top:12px}
 
 <div id="tab-kit" class="tab" role="tabpanel" hidden>
  <h1 class="hl">What's in your kitchen?</h1><p>Saved on this device. It applies to every spin, build and plan.</p>
- <div class="kgrid">
+ <nav class="kbar" id="kbar" aria-label="Jump to a section">
+  <button type="button" class="ktile" data-z="kz-table" data-c="1"><span class="kti"><svg class="i"><use href="#i-users"/></svg></span><b id="kt-table">2</b><span id="kl-table">portions at the table</span></button>
+  <button type="button" class="ktile" data-z="kz-pantry" data-c="0"><span class="kti"><svg class="i"><use href="#i-jar"/></svg></span><b id="kt-pantry">0</b><span id="kl-pantry">staples at home</span></button>
+  <button type="button" class="ktile" data-z="kz-diet" data-c="1"><span class="kti"><svg class="i"><use href="#i-leaf"/></svg></span><b id="kt-diet">0</b><span id="kl-diet">diet filters</span></button>
+  <button type="button" class="ktile" data-z="kz-saved" data-c="2"><span class="kti"><svg class="i"><use href="#i-heart"/></svg></span><b id="kt-saved">0</b><span id="kl-saved">saved</span></button>
+ </nav>
+ <div class="kzones">
+  <section class="kzone" id="kz-table" data-c="1"><header class="kzh"><span class="kzb"><svg class="i"><use href="#i-users"/></svg></span><div><h2>Around the table</h2><p>Who is eating, and what they can't or won't eat.</p></div></header>
+   <div class="kgrid">
+  <section class="panel" id="house"><div class="lab"><svg class="i"><use href="#i-users"/></svg>Who is eating</div>
+   <p class="hint">Your household. Kids eat less, so recipes are scaled by age instead of counting everyone as a full portion.</p>
+   <div class="hfaces" id="hfaces" aria-hidden="true"></div>
+   <div class="hrow"><span>Adults</span><span class="step hstep"><button type="button" id="ha-" aria-label="Fewer adults"><svg class="i"><use href="#i-minus"/></svg></button><b id="ha">2</b><button type="button" id="ha+" aria-label="More adults"><svg class="i"><use href="#i-plus"/></svg></button></span></div>
+   <div class="hrow"><span>Kids</span><span class="step hstep"><button type="button" id="hk-" aria-label="Fewer kids"><svg class="i"><use href="#i-minus"/></svg></button><b id="hk">0</b><button type="button" id="hk+" aria-label="More kids"><svg class="i"><use href="#i-plus"/></svg></button></span></div>
+   <div class="hages" id="hages"></div>
+   <p class="sum" id="hsum" style="margin:10px 0 0"></p>
+  </section>
+  <section class="panel" id="kz-diet"><div class="lab"><svg class="i"><use href="#i-leaf"/></svg>Diet</div>
+   <p class="hint">Halal skips pork and alcohol; kosher skips pork and shellfish and keeps meat and dairy apart. These filter the recipes only. They can't check how your ingredients were sourced or prepared.</p><div class="tg" id="diet"></div>
+  </section>
+   </div>
+  </section>
+  <section class="kzone" id="kz-pantry" data-c="0"><header class="kzh"><span class="kzb"><svg class="i"><use href="#i-jar"/></svg></span><div><h2>Stock the shelves</h2><p>What is always in the cupboard, so it never lands on your list.</p></div></header>
+   <div class="kgrid">
   <section class="panel"><div class="lab"><svg class="i"><use href="#i-jar"/></svg>Always have at home</div>
    <p class="hint">Staples you keep stocked, like rice, eggs, flour or canned tomatoes. They count as "in stock" for every recipe, build and plan, so they never end up on your shopping list.</p>
    <div class="ac-wrap"><div class="tags" id="stags"><input id="sadd" placeholder="Type a staple…" aria-label="Add staple" enterkeyhint="done" autocomplete="off" aria-autocomplete="list" aria-controls="sadd-suggest"></div><div class="suggest" id="sadd-suggest" role="listbox" aria-label="Staple ingredient suggestions" hidden></div></div>
    <div class="ac-help">Pick a suggestion, or press Enter to add your own.</div>
    <div class="quick" id="squick"></div>
   </section>
-  <section class="panel"><div class="lab"><svg class="i"><use href="#i-leaf"/></svg>Diet</div>
-   <p class="hint">Halal skips pork and alcohol; kosher skips pork and shellfish and keeps meat and dairy apart. These filter the recipes only. They can't check how your ingredients were sourced or prepared.</p><div class="tg" id="diet"></div>
+   </div>
   </section>
+  <section class="kzone" id="kz-saved" data-c="2"><header class="kzh"><span class="kzb"><svg class="i"><use href="#i-heart"/></svg></span><div><h2>Your scrapbook</h2><p>Recipes and plans you kept, and what you have cooked.</p></div></header>
+   <div class="kgrid">
+  <section class="panel" id="cooklog"><div class="lab"><svg class="i"><use href="#i-chef"/></svg>Your cooking log</div><div id="cooklogbody"></div></section>
+   </div>
+  </section>
+  <section class="kzone" id="kz-setup" data-c="3"><header class="kzh"><span class="kzb"><svg class="i"><use href="#i-ruler"/></svg></span><div><h2>Make it yours</h2><p>Units, theme and the little extras.</p></div></header>
+   <div class="kgrid">
   <section class="panel"><div class="lab"><svg class="i"><use href="#i-ruler"/></svg>Units</div>
    <p class="hint">Metric is the default. US shows cups, tablespoons, ounces and pounds. Conversions are approximate, so weigh baking ingredients when you can.</p>
    <div class="lab" style="margin-top:0">Measures</div><div class="tg" id="u1"></div>
    <div class="lab">Oven and meat temperature</div><div class="tg" id="u2"></div>
   </section>
-  <section class="panel" id="cooklog"><div class="lab"><svg class="i"><use href="#i-chef"/></svg>Your cooking log</div><div id="cooklogbody"></div></section>
+   </div>
+  </section>
  </div>
 </div>
 <footer>© <span id="yr">2026</span> Strahinja Drazic. All rights reserved.</footer>
@@ -684,7 +757,6 @@ footer{margin-top:28px;padding-top:12px}
 <div id="boot" role="alert" hidden style="margin:24px 16px;padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--card);text-align:center"><b>Meal Roulette could not finish loading.</b><p class="hint" style="margin:8px 0 12px">Some files did not download (usually a weak connection). Your saved settings are safe.</p><button class="lnk" id="bootbtn">Reload</button></div>
 <noscript><p style="padding:16px">Meal Roulette needs JavaScript.</p></noscript>
 <script type="text/plain" id="main">
-if(document.documentElement.getAttribute("data-splash")==="off"){const _sp=document.getElementById("splash");if(_sp)_sp.remove()} // start screen turned off in My kitchen
 const K=window.KITCHEN,$=id=>document.getElementById(id);
 const MEALS=[["Breakfast","sunrise","Morning"],["Snack","cookie","Bite"],["Main","chef","Big plate"],["Dessert","cupcake","Treat"]];
 const normM=m=>m==="Lunch"||m==="Dinner"?"Main":m,isMain=m=>normM(m)==="Main",ML=m=>(MEALS.find(x=>x[0]===normM(m))||[])[2]||m;
@@ -982,17 +1054,24 @@ function invent(){
   show({...best,n:S.n,built:true},"");
 }
 /* ---------- display ---------- */
+/* where a meal comes from: its cuisine, or "Mixed" when it has none or was whisked from several */
+const hasKids=()=>!!(S.house&&S.house.kids&&S.house.kids.length);
+function originOf(r){
+  if(r.remix)return"Mixed";
+  const rec=r.rid&&K.recipes.find(x=>x.id===r.rid),c=r.cuisine||(rec&&rec.cuisine)||(r.built&&Object.keys(GEN.cuisines).find(k=>r.title.startsWith(k+" ")))||"";
+  return c||"Mixed";
+}
 function show(r,msg){
   current=r;lastPlan=null;$("note").textContent=msg||"";if(r&&r.built)markGen(r.title);
   if(!r){$("out").innerHTML="";return}
   const ic=(MEALS.find(m=>m[0]===S.meal)||[])[1]||"dice";
-  $("out").innerHTML=`<article class="card"><div class="hero"><div class="ic">${I(ic)}</div><h2>${esc(r.title)}</h2></div><div class="body">
-  <div class="meta"><span>${I("clock")}${r.min} min</span><span>${I("users")}${r.n} ${r.n>1?"people":"person"}</span><span>${I(ic)}${ML(S.meal)}</span>${r.remix?`<span>${I("wand")}Whisked</span>`:""}${(()=>{const x=r.ing.length&&r.ing.every(i=>i.id)?K.nutri(r.ing,r.n):GEN.nutri(r.ing,r.n);return x.kcal?`<span title="Rough estimate">${I("flame")}≈${x.kcal} kcal · ${x.p} g protein each</span>`:""})()}</div>
+  $("out").innerHTML=`<article class="card"><div class="hero"><div class="ic">${I(ic)}</div><div class="ht"><h2>${esc(r.title)}</h2><p class="orig">${I("globe")}${esc(originOf(r))}</p></div></div><div class="body">
+  <div class="meta"><span>${I("clock")}${r.min} min</span><span>${I("users")}${r.n} ${hasKids()?(r.n>1?"portions":"portion"):(r.n>1?"people":"person")}</span><span>${I(ic)}${ML(S.meal)}</span>${r.remix?`<span>${I("wand")}Whisked</span>`:""}${(()=>{const x=r.ing.length&&r.ing.every(i=>i.id)?K.nutri(r.ing,r.n):GEN.nutri(r.ing,r.n);return x.kcal?`<span title="Rough estimate">${I("flame")}≈${x.kcal} kcal · ${x.p} g protein each</span>`:""})()}</div>
   ${r.desc?`<p class="desc">${esc(cv(r.desc))}</p>`:""}${callout(r)}
   <div class="split"><div><h3>${I("list")}Ingredients <small style="text-transform:none;letter-spacing:0;color:var(--mute)">(tap to tick off)</small></h3>
   <ul class="ing">${r.ing.map(i=>`<li><span>${esc(i.name)}${missing(i)?'<span class="buy">to buy</span>':""}</span><span class="q">${esc(Q(i))}</span></li>`).join("")}</ul></div>
   <div><h3>${I("chef")}Method</h3><ol>${r.steps.map(s=>`<li><span>${esc(cv(s))}</span></li>`).join("")}</ol></div></div>
-  <div class="row"><button id="save">${I("heart")}Save</button><button id="shop">${I("cart")}Copy list</button><button id="again">${I(r.remix?"wand":r.built?"chef":"dice")}Again</button></div></div></article>`;
+  <div class="row"><button id="save">${I("heart")}Save</button><button id="shop">${I("cart")}Copy list</button><button id="again">Again</button></div></div></article>`;
   $("out").querySelectorAll(".ing li").forEach(li=>li.onclick=()=>li.classList.toggle("done"));
   $("save").onclick=()=>{const f=store("favs2")||[];if(!f.some(x=>x.title===r.title)){f.unshift({...r,meal:S.meal});store("favs2",f.slice(0,40))}favs();$("save").innerHTML=I("heart")+"Saved"};
   $("shop").onclick=async()=>{const mm=r.ing.filter(missing),l=(mm.length?mm:r.ing).map(i=>"• "+i.name+" – "+Q(i)).join("\n");try{await navigator.clipboard.writeText(l);$("shop").innerHTML=I("cart")+"Copied"}catch(e){$("note").textContent=l}};
@@ -1121,20 +1200,30 @@ function plansUI(){
   $("plans").querySelectorAll("[data-o]").forEach(b=>b.onclick=()=>{const p=f[+b.dataset.o];renderPlan(p.days,p.list,p,true);toCard("out")});
   $("plans").querySelectorAll("[data-x]").forEach(b=>b.onclick=()=>{f.splice(+b.dataset.x,1);store("plans2",f);plansUI()});
 }
+/* ---- household helpers, shared by My kitchen and Pizza night ---- */
+function hhKid(a){return a<1?.15:a<3?.3:a<5?.45:a<8?.6:a<11?.75:a<14?.9:1} // share of an adult portion by age
+function hhPortions(){const h=S.house;if(!h||!Array.isArray(h.kids))return Math.min(12,Math.max(1,S.n||2));return Math.min(12,Math.max(1,Math.round(h.adults+h.kids.reduce((t,a)=>t+hhKid(a),0))))}
+function hhText(){const h=S.house;if(!h||!Array.isArray(h.kids))return (S.n||2)+" "+((S.n||2)===1?"person":"people");return h.adults+" "+(h.adults===1?"adult":"adults")+(h.kids.length?" + "+h.kids.length+" "+(h.kids.length===1?"kid":"kids"):"")}
 /* ---------- pizza night ---------- */
 const PZ=window.PIZZA;
-S.pz=Object.assign({n:2,cat:"",style:"neapolitan",ferm:"",pre:"",fresh:true,ball:0,hyd:0,classic:"",fridge:true,auto:false,sec:"dough"},S.pz||{});
+S.pz=Object.assign({n:2,manual:false,cat:"",style:"neapolitan",ferm:"",pre:"",fresh:true,ball:0,hyd:0,classic:"",fridge:true,auto:false,sec:"dough"},S.pz||{});
 if(S.pz.pool&&!S.pz.pre)S.pz.pre="poolish";delete S.pz.pool;
 if(!PZ.styles[S.pz.style])S.pz.style="neapolitan";
 let pzCur=null;const pzRecent=[];
-const pzSt=()=>PZ.styles[S.pz.style],pzShort=n=>n.replace(/ \(.*\)/,""),pzIsPan=st=>st.kind==="pan";
+const pzSt=()=>PZ.styles[S.pz.style],pzCount=()=>S.pz.manual?Math.min(12,Math.max(1,S.pz.n||1)):Math.min(12,Math.max(1,Math.ceil(hhPortions()/((S.pz.auto?1.5:PZ.styles[S.pz.style].feeds)||1.5)-.01))),pzShort=n=>n.replace(/ \(.*\)/,""),pzIsPan=st=>st.kind==="pan";
 const pzFerm=()=>{const ok=PZ.modesFor(S.pz.style);return ok.includes(S.pz.ferm)?S.pz.ferm:PZ.defMode(S.pz.style)};
 const pzHyd=st=>st.liq?0:(S.pz.hyd||(st.sd?st.hydTot:st.hyd));
 const pzCan=(st,k)=>!!st.y&&!st.nopool&&!st.liq&&(k==="biga"?pzHyd(st)>=56&&!st.extra.length:pzHyd(st)>=45&&st.flours[0][1]>=30);
 const pzPre=()=>pzCan(pzSt(),S.pz.pre)?S.pz.pre:"";
 const pzOpts=()=>{const F=S.pz.fridge?new Set(fridgeIds()):new Set(),U=new Set(S.pz.fridge?S.urgent.flatMap(x=>K.match(x)):[]);
-  return{diet:{...S.diet},fridge:F,urgent:U,count:S.pz.n,style:S.pz.auto?undefined:S.pz.style,ferm:S.pz.auto?undefined:pzFerm(),pre:S.pz.auto?"":pzPre(),fresh:S.pz.fresh,hyd:S.pz.auto?undefined:S.pz.hyd||undefined,ball:S.pz.auto||!S.pz.ball?undefined:S.pz.ball,hasItems:S.pz.fridge&&items().length>0,basic:S.basic,cat:S.pz.cat}};
+  return{diet:{...S.diet},fridge:F,urgent:U,count:pzCount(),style:S.pz.auto?undefined:S.pz.style,ferm:S.pz.auto?undefined:pzFerm(),pre:S.pz.auto?"":pzPre(),fresh:S.pz.fresh,hyd:S.pz.auto?undefined:S.pz.hyd||undefined,ball:S.pz.auto||!S.pz.ball?undefined:S.pz.ball,hasItems:S.pz.fridge&&items().length>0,basic:S.basic,cat:S.pz.cat}};
 function pzSection(sec){S.pz.sec=sec;save();$("pz-dough").hidden=sec!=="dough";$("pz-build").hidden=sec!=="build";$("pzseg").querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.s===sec));pzUI();if(sec==="dough")pzDoughRun()}
+function pzHH(){
+  const n=pzCount(),pz=n===1?"pizza":"pizzas",pan=pzIsPan(pzSt())?(n===1?"pan":"pans"):pz,por=hhPortions();
+  $("pzhhtxt").innerHTML=S.pz.manual?`Set by hand to ${n} ${pan}. Your kitchen is ${esc(hhText())}, about ${por} ${por===1?"portion":"portions"}.`:`${I("users")}<b>${esc(hhText())}</b> · about ${por} ${por===1?"portion":"portions"} · <b>${n} ${pan}</b>`;
+  $("pzhhgo").hidden=!S.pz.manual;
+  $("pzhhkit").textContent=S.pz.manual?"Edit household":"Change who is eating";
+}
 function pzUI(){
   const st=pzSt(),fm=pzFerm();
   // dough lab
@@ -1154,9 +1243,9 @@ function pzUI(){
   $("pzhpre").innerHTML=st.liq?"":[60,65,70,75,80].map(v=>`<button data-h="${v}" aria-pressed="${hy===v}">${v}%</button>`).join("")+`<button data-h="0" aria-pressed="${!S.pz.hyd}">Default ${defH}%</button>`;
   $("pzhpre").querySelectorAll("button").forEach(b=>b.onclick=()=>{S.pz.hyd=+b.dataset.h;save();pzUI();pzDoughRun()});
   $("pzhinfo").textContent=st.liq?"This dough is made with milk and yogurt, so the liquid is fixed.":`Usual for ${pzShort(st.name)}: ${hr[0]}–${hr[1]}%.${hy>hr[1]?" Wetter than usual: sticky, open and tender.":hy<hr[0]?" Drier than usual: stiffer and tighter.":""} Home doughs are mostly 60–70%; 75–80% is a wet, airy dough.`;
-  $("pzn").textContent=S.pz.n;$("pzbl").textContent="Dough per "+(pzIsPan(st)?"pan":"ball");$("pzball").textContent=cv((S.pz.ball||st.ball)+" g");
+  $("pzn").textContent=pzCount();pzHH();$("pzbl").textContent="Dough per "+(pzIsPan(st)?"pan":"ball");$("pzball").textContent=cv((S.pz.ball||st.ball)+" g");
   // build
-  const bits=[pzShort(st.name),PZ.modes[fm].short,st.liq?"":hy+"% hydration",pk,st.y?(S.pz.fresh?"fresh yeast":"dried yeast"):"",`${S.pz.n} × ${S.pz.ball||st.ball} g`].filter(Boolean).join(" · ");
+  const bits=[pzShort(st.name),PZ.modes[fm].short,st.liq?"":hy+"% hydration",pk,st.y?(S.pz.fresh?"fresh yeast":"dried yeast"):"",`${pzCount()} × ${S.pz.ball||st.ball} g`].filter(Boolean).join(" · ");
   $("pzsel").textContent=S.pz.auto?"The dough is picked to suit each pizza. Pick it yourself in the Dough lab.":bits;
   $("pzauto").setAttribute("aria-pressed",!!S.pz.auto);
   $("pzcat").innerHTML=PZ.cats.map(c=>`<button data-c="${c[0]}" aria-pressed="${S.pz.cat===c[0]}">${c[1]}</button>`).join("");
@@ -1165,11 +1254,13 @@ function pzUI(){
   $("pzclassic").innerHTML='<option value="">Surprise me</option>'+opts;$("pzclassic").value=S.pz.classic;
   $("pzfridge").checked=!!S.pz.fridge;
   const n=items().length,dn=DIETS.filter(d=>S.diet[d[0]]).map(d=>d[1]);
-  $("pzsum").textContent=(S.pz.fridge?(n?`Using ${n} item${n>1?"s":""} from your fridge${S.useLeftovers&&S.leftovers.length?" and leftovers":""}.`:"Your fridge is empty. Add items on the Cook tab to get pizzas made from them."):"Ignoring your fridge.")+(dn.length?" Diet: "+dn.join(", ")+".":"");
+  $("pzsum").textContent=`Feeding ${hhText()}. `+(S.pz.fridge?(n?`Using ${n} item${n>1?"s":""} from your fridge${S.useLeftovers&&S.leftovers.length?" and leftovers":""}.`:"Your fridge is empty. Add items on the Cook tab to get pizzas made from them."):"Ignoring your fridge.")+(dn.length?" Diet: "+dn.join(", ")+".":"");
   $("pzspin").lastChild.textContent=S.pz.classic?"Make this pizza":"Spin a classic";
 }
 const pzStep=(id,fn)=>$(id).onclick=()=>{fn();save();pzUI();if(S.pz.sec==="dough")pzDoughRun()};
-pzStep("pzminus",()=>S.pz.n=Math.max(1,S.pz.n-1));pzStep("pzplus",()=>S.pz.n=Math.min(12,S.pz.n+1));
+pzStep("pzminus",()=>{S.pz.n=Math.max(1,pzCount()-1);S.pz.manual=true});pzStep("pzplus",()=>{S.pz.n=Math.min(12,pzCount()+1);S.pz.manual=true});
+$("pzhhgo").onclick=()=>{S.pz.manual=false;save();pzUI();if(S.pz.sec==="dough")pzDoughRun()};
+$("pzhhkit").onclick=()=>setTab("kit");
 pzStep("pzhminus",()=>S.pz.hyd=Math.max(45,pzHyd(pzSt())-1));pzStep("pzhplus",()=>S.pz.hyd=Math.min(95,pzHyd(pzSt())+1));
 pzStep("pzbminus",()=>S.pz.ball=Math.max(60,(S.pz.ball||pzSt().ball)-10));pzStep("pzbplus",()=>S.pz.ball=Math.min(1200,(S.pz.ball||pzSt().ball)+10));
 $("pzfresh").onchange=e=>{S.pz.fresh=e.target.checked;save();pzUI();pzDoughRun()};
@@ -1225,7 +1316,7 @@ function pzRun(what){
       const pool=PZ.recipes.filter(x=>!o.cat||x.cat===o.cat||(o.cat==="folded"&&x.fmt)||(o.cat==="pan"&&PZ.styles[x.style].kind==="pan")).map(x=>PZ.resolve(x,o)).filter(Boolean);
       if(!pool.length)msg="No classic matches that diet, dough and kind. Try Whisk, or change the dough.";
       else{
-        const sc=x=>(o.hasItems?x.urg*4+x.leftN*6+x.hit*1.5-(x.ing.filter(i=>i.grp!=="Dough"&&i.grp!=="Poolish"&&i.grp!=="Biga"&&!i.have&&!i.left&&!(S.basic&&i.pantry)).length)*1.2:0)+Math.random()*3-(pzRecent.includes(x.title)?8:0);
+        const sc=x=>(o.hasItems?x.urg*4+x.leftN*6+x.hit*1.5-(x.ing.filter(i=>i.grp!=="Dough"&&i.grp!=="Poolish"&&i.grp!=="Biga"&&!i.have&&!i.left&&!(S.basic&&i.pantry)).length)*1.2:0)+Math.random()*3-(pzRecent.includes(x.title)?8:0)+(()=>{const t=ratings()[x.title];return t?(t.v>0?2.5:-(Date.now()-t.t<28*864e5?12:3)):0})();
         pool.sort((a,b)=>sc(b)-sc(a));r=pool[0];
       }
     }
@@ -1237,9 +1328,25 @@ $("pzspin").onclick=()=>pzRun("spin");$("pzremix").onclick=()=>pzRun("remix");
 $("spin").onclick=()=>run("spin");
 $("logo").onclick=()=>{ // the logo is a shortcut: spin a random recipe from anywhere
   if(document.querySelector(".cookov,.splash")||$("spin").disabled)return;
-  const lg=$("logo");setTab("cook");run("spin",true); // same spinner as the Spin button
+  const lg=$("logo").firstElementChild;setTab("cook");run("spin",true); // same spinner as the Spin button
   if(!matchMedia("(prefers-reduced-motion:reduce)").matches&&lg.animate)lg.animate([{transform:"rotate(0)"},{transform:"rotate(720deg)"}],{duration:900,easing:"cubic-bezier(.15,.7,.2,1)"})};
 $("remix").onclick=()=>run("remix");
+/* the logo does a small random trick every so often, so people notice they can tap it */
+(function(){
+  const lg=$("logo");if(!lg||!lg.animate||matchMedia("(prefers-reduced-motion:reduce)").matches)return;
+  const pz=lg.firstElementChild,
+  T=[ // [target, keyframes, options]: spins and wiggles turn only the pizza, so the shadow stays in place
+    [pz,[{transform:"rotate(0)"},{transform:"rotate(-18deg)"},{transform:"rotate(16deg)"},{transform:"rotate(-10deg)"},{transform:"rotate(6deg)"},{transform:"rotate(0)"}],{duration:700}],
+    [lg,[{transform:"translateY(0)"},{transform:"translateY(-9px) scale(1.06)"},{transform:"translateY(0)"},{transform:"translateY(-4px)"},{transform:"translateY(0)"}],{duration:650,easing:"ease-out"}],
+    [pz,[{transform:"rotate(0)"},{transform:"rotate(360deg)"}],{duration:900,easing:"cubic-bezier(.3,1.3,.5,1)"}],
+    [lg,[{transform:"scale(1)"},{transform:"scale(1.2)"},{transform:"scale(.94)"},{transform:"scale(1)"}],{duration:600}]
+  ];
+  let last=-1;
+  const go=()=>{
+    if(!document.hidden&&!document.querySelector(".splash,.cookov")){let k;do k=Math.floor(Math.random()*T.length);while(k===last);last=k;T[k][0].animate(T[k][1],T[k][2])}
+    setTimeout(go,5000+Math.random()*7000)};
+  setTimeout(go,2500+Math.random()*2000);
+})();
 const cuisineOptions=Object.keys(GEN.cuisines).sort((a,b)=>a.localeCompare(b,"en",{sensitivity:"base"}));
 $("cuisine").innerHTML='<option value="">Surprise me</option>'+cuisineOptions.map(c=>`<option${c===S.cuisine?" selected":""}>${c}</option>`).join("");
 $("yr").textContent=new Date().getFullYear();
@@ -1409,26 +1516,8 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
 })();
 
 
-/* ---- first-run tour + shake to spin ---- */
+/* ---- shake to spin ---- */
 (function(){
-  const STEPS=[["#meals","Pick a meal","Morning, Bite, Big plate or Treat. Spin and Plan ahead both use it."],["#tags","Add what you have","Type what is in your fridge, or skip it and spin anyway."],["#spin","Spin or Whisk","Spin picks a saved recipe. Whisk invents a new one from two of them."],["#tabs","More than dinner","Pizza night works out dough, Ferment covers jars and bakes, My kitchen keeps your staples and log."]];
-  let box=null,hl=null,idx=0;
-  function clear(){if(hl){hl.classList.remove("tour-hl");hl=null}}
-  function end(){clear();if(box){box.remove();box=null}store("tour",1);document.removeEventListener("keydown",esc)}
-  function esc(e){if(e.key==="Escape")end()}
-  function show(){
-    const st=STEPS[idx];clear();
-    if(idx<3){if(tab!=="cook")setTab("cook")}
-    const t=document.querySelector(st[0]);
-    if(t){hl=t;t.classList.add("tour-hl");const r=t.getBoundingClientRect(),fixed=getComputedStyle(t).position==="fixed";if(!fixed)window.scrollTo({top:Math.max(0,r.top+scrollY-innerHeight*.22),behavior:"smooth"})}
-    box.innerHTML=`<small>Quick tour · ${idx+1} of ${STEPS.length}</small><h3>${st[1]}</h3><p>${st[2]}</p><div class="tour-row"><div class="tour-dots" aria-hidden="true">${STEPS.map((_,i)=>`<i class="${i===idx?"on":""}"></i>`).join("")}</div><div class="tour-b"><button type="button" class="tour-s">${idx<STEPS.length-1?"Skip":""}</button><button type="button" class="tour-n">${idx<STEPS.length-1?"Next":"Got it"}</button></div></div>`;
-    box.querySelector(".tour-n").onclick=()=>{if(idx<STEPS.length-1){idx++;show()}else end()};
-    const sk=box.querySelector(".tour-s");sk.onclick=end;if(!sk.textContent)sk.remove();
-    box.querySelector(".tour-n").focus({preventScroll:true});
-  }
-  window.__startTour=function(){if(box)return;idx=0;box=document.createElement("div");box.className="tour";box.setAttribute("role","dialog");box.setAttribute("aria-label","Quick tour");document.body.appendChild(box);document.addEventListener("keydown",esc);show()};
-  const fresh=store("tour")===null&&!(store("cooklog")||[]).length&&!(store("favs2")||[]).length&&!S.pantry.length&&!(S.staples||[]).length;
-  if(fresh){const w=setInterval(()=>{if(document.getElementById("splash"))return;clearInterval(w);setTimeout(()=>{if(!document.querySelector(".cookov"))window.__startTour()},500)},300)} // the tour waits for the start screen
   /* shake */
   const canShake="DeviceMotionEvent" in window&&matchMedia("(hover:none)").matches;
   let hits=[],last=0;
@@ -1438,38 +1527,24 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
     if(Math.abs(m-9.8)>14){hits=hits.filter(h=>t-h<700);hits.push(t);
       if(hits.length>=3&&t-last>2500){hits=[];last=t;
         const ae=document.activeElement;if(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))return;
-        if(window.__splashShake){window.__splashShake();return}
-        if(tab==="cook"&&!document.querySelector(".cookov,.tour")){const b=$("spin");if(b&&!b.disabled){b.click();navigator.vibrate&&navigator.vibrate(30)}}}}
+        if(tab==="cook"&&!document.querySelector(".cookov")){const b=$("spin");if(b&&!b.disabled){b.click();navigator.vibrate&&navigator.vibrate(30)}}}}
   }
   const set=v=>{if(v){addEventListener("devicemotion",onMotion)}else removeEventListener("devicemotion",onMotion)};
   if(canShake&&store("shake")===1)set(true);
-  /* start screen: the pizza spins while the app loads, then stops. Tap it (or shake) for a random recipe, or open the app. */
+  /* loading screen: the pizza spins once, then the screen fades out by itself. Nothing to tap. */
   {const sp=document.getElementById("splash");
   if(sp){
-    const pz=sp.querySelector(".sp-pizza"),hint=sp.querySelector(".sp-h"),open=sp.querySelector(".sp-open"),rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
-    const tmp=canShake&&store("shake")!==1&&typeof DeviceMotionEvent.requestPermission!=="function"; // phones that need no permission can shake right here
-    if(tmp)set(true);
-    const shakes=canShake&&(store("shake")===1||tmp);
-    let angle=1417.5,busy=true;
-    const words=t=>t.split(" ").map((w,i)=>`<span class="w" style="--w:${i}">${w}</span>`).join(" ");
-    const setHint=t=>{if(rm){hint.textContent=t;return}hint.classList.add("fade");setTimeout(()=>{hint.innerHTML=words(t);hint.classList.remove("fade")},230)};
-    const finish=cb=>{window.__splashShake=null;if(tmp)set(false);sp.classList.add("out");setTimeout(()=>{sp.remove();if(cb)cb()},rm?0:450)};
-    const pick=()=>{if(busy)return;busy=true;pz.disabled=true;open.disabled=true;open.classList.add("gone");setHint("Spinning…");navigator.vibrate&&navigator.vibrate(25);
-      const go=()=>finish(()=>{setTab("cook");scrollTo({top:0});run("spin",true,true)});
-      if(rm)return go();
-      const to=angle+1080+45*Math.floor(Math.random()*8);
-      pz.animate([{transform:`rotate(${angle}deg)`},{transform:`rotate(${to}deg)`}],{duration:1600,easing:"cubic-bezier(.15,.7,.2,1)",fill:"forwards"}).finished.then(()=>{angle=to;setTimeout(go,350)},go)};
-    pz.onclick=pick;open.onclick=()=>{if(busy)return;busy=true;open.classList.add("gone");finish()};
-    const ready=()=>{busy=false;sp.classList.add("ready");setHint(shakes?"Tap the pizza or shake your phone for a random recipe":"Tap the pizza for a random recipe");open.classList.remove("wait");open.tabIndex=0;pz.disabled=false;window.__splashShake=pick};
+    const pz=sp.querySelector(".sp-pizza"),rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+    const done=()=>{sp.classList.add("out");setTimeout(()=>sp.remove(),rm?0:320)};
     const a=!rm&&pz.getAnimations?pz.getAnimations()[0]:null;
-    (a?a.finished.catch(()=>{}):Promise.resolve()).then(()=>setTimeout(ready,rm?0:150));
+    (a?a.finished.catch(()=>{}):Promise.resolve()).then(()=>setTimeout(done,rm?400:120));
+    setTimeout(()=>{if(sp.isConnected)done()},2500); // safety net
   }}
-  const grid=document.querySelector("#tab-kit .kgrid");
+  const grid=document.querySelector("#kz-setup .kgrid");
   if(grid){
     const sec=document.createElement("section");sec.className="panel";sec.id="kitextras";
-    sec.innerHTML=`<div class="lab">Extras</div>${canShake?`<div class="xtra-row"><p><b>Shake to spin</b>Shake your phone on the Cook page to spin.</p><div class="tg"><button type="button" id="shaketg" aria-pressed="${store("shake")===1}">${store("shake")===1?"On":"Off"}</button></div></div>`:""}<div class="xtra-row"><p><b>Quick tour</b>A 4-step walk through the app.</p><div class="tg"><button type="button" id="tourtg">Replay</button></div></div>`;
+    sec.innerHTML=`<div class="lab"><svg class="i"><use href="#i-wand"/></svg>Extras</div>${canShake?`<div class="xtra-row"><p><b>Shake to spin</b>Shake your phone on the Cook page to spin.</p><div class="tg"><button type="button" id="shaketg" aria-pressed="${store("shake")===1}">${store("shake")===1?"On":"Off"}</button></div></div>`:""}`;
     grid.appendChild(sec);
-    $("tourtg").onclick=()=>{setTab("cook");setTimeout(window.__startTour,250)};
     const sb=$("shaketg");
     if(sb)sb.onclick=()=>{
       const on=sb.getAttribute("aria-pressed")!=="true";
@@ -1503,8 +1578,8 @@ show=function(r,m){_sh(r,m);if(!r)return;try{
         return show({...r,n,ing:x.ing,steps:x.steps},$("note").textContent)}
       show(scaleMade(r,n),$("note").textContent)})}
   // thumbs
-  const cur=ratings()[r.title],mk=(v,ic,lbl)=>{const b=document.createElement("button");b.type="button";b.className="thumb";b.setAttribute("aria-pressed",String(!!cur&&cur.v===v));b.innerHTML=ic+lbl;b.title=v>0?"Show me more like this":"Show me this less";return b};
-  const up=mk(1,"👍 ","Love it"),dn=mk(-1,"👎 ","Not for me");row.append(up,dn);
+  const cur=ratings()[r.title],mk=(v,ic,lbl)=>{const b=document.createElement("button");b.type="button";b.className="thumb";b.dataset.v=v;b.setAttribute("aria-pressed",String(!!cur&&cur.v===v));b.innerHTML=ic+lbl;b.title=v>0?"Show me more like this":"Show me this less";return b};
+  const up=mk(1,"👍 ","Like"),dn=mk(-1,"👎 ","Dislike");row.append(up,dn);
   const rate=(v,b)=>{const o=ratings(),on=!(o[r.title]&&o[r.title].v===v);if(on)o[r.title]={v,t:Date.now()};else delete o[r.title];store("rate",o);
     up.setAttribute("aria-pressed",String(on&&v>0));dn.setAttribute("aria-pressed",String(on&&v<0));navigator.vibrate&&navigator.vibrate(12);
     $("note").textContent=!on?"Rating removed.":v>0?"Noted. You'll see more like this.":"Noted. You'll see this one less.";
@@ -1532,7 +1607,6 @@ function leave(){
   if(to&&to!=="cook")setTab(to);scrollTo({top:0});
 }
 function back(){if(history.state&&history.state.mrres){history.back()}else leave()}
-$("resback").onclick=back;
 addEventListener("popstate",()=>{if(inRes())leave()});
 const _run=run;run=function(){enter();return _run.apply(this,arguments)};
 const _sw=show;show=function(r,m){if(r)enter();return _sw(r,m)};
@@ -1540,9 +1614,33 @@ const _rp2=renderPlan;renderPlan=function(){enter();return _rp2.apply(this,argum
 // the Cook tab itself is "home": tapping it while a result is open goes back
 document.querySelector('#tabs [data-t="cook"]').addEventListener("click",()=>{if(inRes()&&tab==="cook")back()});
 // a Back button at the end of every recipe card (phones/tablets)
-const _sh2=show;show=function(r,m){_sh2(r,m);if(!r)return;try{const row=$("out").querySelector(".card .row");if(row&&!row.querySelector(".backrow")){const b=document.createElement("button");b.type="button";b.className="backrow";b.textContent="Back";b.onclick=back;row.append(b)}}catch(e){console.error(e)}};
+const XB='<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+const addX=c=>{const h=c&&c.querySelector(".hero");if(h&&!h.querySelector(".heroback")){const b=document.createElement("button");b.type="button";b.className="heroback";b.setAttribute("aria-label","Back");b.title="Back";b.innerHTML=XB;b.onclick=back;h.append(b)}};
+const _sh2=show;show=function(r,m){_sh2(r,m);if(!r)return;try{addX($("out").querySelector(".card"))}catch(e){console.error(e)}};
+const _rp3=renderPlan;renderPlan=function(){const o=_rp3.apply(this,arguments);try{addX($("out").querySelector(".card.plan"))}catch(e){console.error(e)}return o};
+/* ---- household: adults + kids (with ages) set how many portions the Cook page starts with ---- */
+const kidW=hhKid; // share of an adult portion by age (defined once near the top, also used by Pizza night)
+function houseRender(){
+  const h=S.house,w=h.adults+h.kids.reduce((t,a)=>t+kidW(a),0),por=Math.min(12,Math.max(1,Math.round(w)));
+  $("ha").textContent=h.adults;$("hk").textContent=h.kids.length;
+  {const cols=["#ffc63d","#ff9b82","#7fd1a6","#b9a2f0","#8ecae6","#f4a261"],face=(sz,c)=>`<svg class="hface" viewBox="0 0 40 40" style="width:${sz}px;height:${sz}px"><circle cx="20" cy="20" r="17" fill="${c}" stroke="currentColor" stroke-width="2.5"/><circle cx="14" cy="17.5" r="2.1" fill="currentColor"/><circle cx="26" cy="17.5" r="2.1" fill="currentColor"/><path d="M13 25q7 6 14 0" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>`;let k=0;
+  $("hfaces").innerHTML=Array.from({length:h.adults},()=>face(46,cols[k++%cols.length])).join("")+h.kids.map(a=>face(Math.round(22+24*hhKid(a)),cols[k++%cols.length])).join("");}
+  $("hages").innerHTML=h.kids.map((a,i)=>`<label>Kid ${i+1}<select data-k="${i}" aria-label="Age of kid ${i+1}">${Array.from({length:18},(_,y)=>`<option value="${y}"${y===a?" selected":""}>${y===0?"under 1":y+(y===1?" year":" years")}</option>`).join("")}</select></label>`).join("");
+  $("hages").querySelectorAll("select").forEach(el=>el.onchange=()=>{h.kids[+el.dataset.k]=+el.value;houseSet()});
+  $("hsum").textContent=`${h.adults} ${h.adults===1?"adult":"adults"}${h.kids.length?` + ${h.kids.length} ${h.kids.length===1?"kid":"kids"}`:""} cook for about ${por} ${por===1?"portion":"portions"}.`;
+  return por;
+}
+function houseSet(){const por=houseRender();S.n=por;save();draw()}
+{
+  S.house=S.house&&Array.isArray(S.house.kids)?S.house:{adults:Math.max(1,S.n||2),kids:[]};
+  const h=S.house;houseRender();
+  $("ha-").onclick=()=>{const min=h.kids.length?0:1;if(h.adults>min){h.adults--;houseSet()}};
+  $("ha+").onclick=()=>{if(h.adults+h.kids.length<12){h.adults++;houseSet()}};
+  $("hk-").onclick=()=>{if(h.kids.length){h.kids.pop();if(!h.adults&&!h.kids.length)h.adults=1;houseSet()}};
+  $("hk+").onclick=()=>{if(h.adults+h.kids.length<12){h.kids.push(8);houseSet()}};
+}
 /* saved recipes and plans live in My kitchen */
-const grid=document.querySelector("#tab-kit .kgrid");
+const grid=document.querySelector("#kz-saved .kgrid");
 if(grid&&$("fav")&&$("plans")){
   const sec=document.createElement("section");sec.className="panel";sec.id="savedpanel";
   sec.innerHTML=`<div class="lab"><svg class="i"><use href="#i-heart"/></svg>Saved recipes and plans</div><p class="hint" id="savedempty">Nothing saved yet. Tap Save on a recipe or plan and it shows up here.</p>`;
@@ -1550,6 +1648,45 @@ if(grid&&$("fav")&&$("plans")){
   const upd=()=>{$("savedempty").hidden=!!($("fav").children.length||$("plans").children.length)};
   const _f=favs;favs=function(){_f();upd()};const _p=plansUI;plansUI=function(){_p();upd()};upd();
 }
+})();
+/* ---- Cook recipe card: standard button order, Spin again with the chef icon on the right ---- */
+{const _sc=show;show=function(r,m){_sc(r,m);if(!r)return;try{const c=$("out").querySelector(".card"),row=c&&c.querySelector(".row");if(row&&$("again"))window.__tidyRow(row,"chef")}catch(e){console.error(e)}}}
+/* ---- result screen for Pizza night (Build a pizza), same rules as Cook on phones/tablets:
+   a pizza replaces the filters, the X on the green bar and the Back button return, Back never leaves the app ---- */
+(function(){
+const small=()=>matchMedia("(max-width:959px)").matches,tabEl=$("tab-pizza");let on=false;
+const XB='<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+function enter(){if(on)return;on=true;tabEl.classList.add("resmode");if(small()){try{history.pushState({mrres:1},"")}catch(e){}}scrollTo({top:0})}
+function leave(){if(!on)return;on=false;tabEl.classList.remove("resmode");pzShow(null);scrollTo({top:0})}
+function back(){if(history.state&&history.state.mrres)history.back();else leave()}
+addEventListener("popstate",()=>{if(on)leave()});
+const _pr=pzRun;pzRun=function(w){enter();return _pr(w)}; // the spinning reel already shows on the result screen, like Cook
+const _ps=pzShow;pzShow=function(r,m){
+  if(r)enter();
+  else if(m&&on){on=false;tabEl.classList.remove("resmode");if(small()&&history.state&&history.state.mrres)history.back()} // nothing to show: back to the filters, keep the message
+  _ps(r,m);if(!r)return;
+  try{const row=$("pzout").querySelector(".card .row");if(row&&!r.dough){window.__thumbs(row,r.title,{},()=>{const a=row.querySelector(".pzagain");if(a)a.click()});window.__tidyRow(row,"pizza")}}catch(e){console.error(e)}
+  try{const h=$("pzout").querySelector(".hero");if(h&&!h.querySelector(".heroback")){const b=document.createElement("button");b.type="button";b.className="heroback";b.setAttribute("aria-label","Back");b.title="Back";b.innerHTML=XB;b.onclick=back;h.append(b)}}catch(e){console.error(e)}};
+document.querySelector('#tabs [data-t="pizza"]').addEventListener("click",()=>{if(on&&small())back()});
+})();
+/* ---- My kitchen: live summary tiles that also jump to their section ---- */
+(function(){
+const kit=$("tab-kit");if(!kit)return;
+const pl=(n,one,many)=>n===1?one:many;
+function kitSum(){
+  try{
+    const por=hhPortions(),st=(S.staples||[]).length,dn=Object.values(S.diet||{}).filter(Boolean).length,sv=(store("favs2")||[]).length+(store("plans2")||[]).length;
+    $("kt-table").textContent=por;$("kl-table").textContent=pl(por,"portion at the table","portions at the table");
+    $("kt-pantry").textContent=st;$("kl-pantry").textContent=pl(st,"staple at home","staples at home");
+    $("kt-diet").textContent=dn||"None";$("kl-diet").textContent=dn?pl(dn,"diet filter on","diet filters on"):"filters on";
+    $("kt-saved").textContent=sv;$("kl-saved").textContent=pl(sv,"thing saved","things saved");
+  }catch(e){console.error(e)}
+}
+const rm=()=>matchMedia("(prefers-reduced-motion:reduce)").matches;
+kit.querySelectorAll(".ktile").forEach(b=>{b.style.setProperty("--za",["var(--sun)","#ff9b82","#7fd1a6","#b9a2f0"][+b.dataset.c]);b.onclick=()=>{const z=$(b.dataset.z);if(z)z.scrollIntoView({behavior:rm()?"auto":"smooth",block:"start"})}});
+["click","change","input","keyup"].forEach(ev=>kit.addEventListener(ev,()=>setTimeout(kitSum,0)));
+const _stk=setTab;setTab=function(t){const r=_stk.apply(this,arguments);if(t==="kit")kitSum();return r};
+kitSum();
 })();
 /* ---- share links: the whole recipe, pizza, plan or ferment travels inside the link (#s=...), so opening it shows exactly that ---- */
 (function(){
@@ -1604,7 +1741,7 @@ async function importShared(){
   try{
     const u8=unb64(m[1].slice(1)),o=JSON.parse(new TextDecoder().decode(m[1][0]==="z"?await pipe(u8,DecompressionStream,"deflate-raw"):u8)),k=m[2]==="legacy"?"r":o.k,d=m[2]==="legacy"?o:o.d;
     const sp=document.getElementById("splash");
-    const end=()=>{if(sp){window.__splashShake=null;sp.remove()}scrollTo({top:0});const st=window.__startTour;if(st){window.__startTour=function(){}; /* a shared link opens straight on the recipe, so the first-run tour stays out of the way */setTimeout(()=>{window.__startTour=st},3000)}};
+    const end=()=>{if(sp)sp.remove();scrollTo({top:0})};
     if(k==="r"){const r=cleanRecipe(d);if(!r)throw 0;end();S.meal=r.meal;S.pm={[r.meal]:true};setTab("cook");draw();show(r,"Shared with you. Tap Save to keep it.")}
     else if(k==="z"){const r=cleanPizza(d);if(!r)throw 0;end();setTab("pizza");pzSection("build");pzShow(r,"Shared with you. Tap Save to keep it.")}
     else if(k==="p"){const p=cleanPlan(d);if(!p)throw 0;end();setTab("cook");draw();renderPlan(p.days,p.list,p,false,0);const nt=$("note");if(nt)nt.textContent="Shared with you. Tap Save plan to keep it."}
@@ -1626,9 +1763,6 @@ pzCard=function(r,target,msg){_pc(r,target,msg);try{
 const kx=document.getElementById("kitextras");
 if(kx){const row=document.createElement("div");row.className="xtra-row";row.innerHTML='<p><b>Share Meal Roulette</b>Send a friend the link to the app.</p><div class="tg"><button type="button" id="appsh">Share</button></div>';kx.appendChild(row);
   const th=document.createElement("div");th.className="xtra-row";th.innerHTML=`<p><b>Theme</b>Light, dark, or follow your device.</p><div class="tg" id="themetg" role="group" aria-label="Theme"><button type="button" data-th="system">System</button><button type="button" data-th="light">Light</button><button type="button" data-th="dark">Dark</button></div>`;kx.insertBefore(th,kx.firstElementChild.nextSibling);
-  const ss=document.createElement("div");ss.className="xtra-row";const spOn=()=>{try{return localStorage.getItem("mr-splash")!=="off"}catch(e){return true}};
-  ss.innerHTML=`<p><b>Start screen</b>The spinning pizza when the app opens. Applies next time you open it.</p><div class="tg"><button type="button" id="splashtg" aria-pressed="${spOn()}">${spOn()?"On":"Off"}</button></div>`;th.after(ss);
-  $("splashtg").onclick=()=>{const on=!spOn();try{on?localStorage.removeItem("mr-splash"):localStorage.setItem("mr-splash","off")}catch(e){}$("splashtg").setAttribute("aria-pressed",String(on));$("splashtg").textContent=on?"On":"Off"};
   const themeMeta=document.querySelector('meta[name="theme-color"]'),mq=matchMedia("(prefers-color-scheme:dark)");
   const applyTheme=m=>{const root=document.documentElement;if(m==="light"||m==="dark")root.setAttribute("data-theme",m);else root.removeAttribute("data-theme");
     const dark=m==="dark"||(m!=="light"&&mq.matches);if(themeMeta)themeMeta.setAttribute("content",dark?"#1d140f":"#fff3da");

@@ -9,6 +9,14 @@ if(!root)return;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const I=n=>`<svg class="i"><use href="#i-${n}"/></svg>`;
 const KEY="mr-ferm";
+/* result screen on phones/tablets (same rules as Cook): a spun or shared ferment replaces the controls; the X on the green bar and Back return */
+const small=()=>matchMedia("(max-width:959px)").matches;let res=false;
+const XB='<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+function enter(){if(res)return;res=true;root.classList.add("resmode");if(small()){try{history.pushState({mrres:1},"")}catch(e){}}scrollTo({top:0})}
+function leave(){if(!res)return;res=false;root.classList.remove("resmode");scrollTo({top:0})}
+function back(){if(history.state&&history.state.mrres)history.back();else leave()}
+addEventListener("popstate",()=>{if(res)leave()});
+{const tb=document.querySelector('#tabs [data-t="ferm"]');if(tb)tb.addEventListener("click",()=>{if(res&&small())back()})}
 
 /* ---------- rounding: salt is exact to 0.5 g, everything else to a sensible kitchen step ---------- */
 const rg=a=>a<10?Math.round(a*2)/2:a<100?Math.round(a):a<500?Math.round(a/5)*5:Math.round(a/10)*10;
@@ -347,7 +355,7 @@ function build(){
   <div class="lab" style="margin-top:16px">${I("wand")}Flavour</div>
   <div class="tg fm">${ar}</div>
  </section>
- <button class="fmspin" data-a="rand">${I("dice")}Spin a ferment!</button>`;
+ <button class="fmspin" data-a="rand">Spin a ferment!</button>`;
 
  let out;
  if(!r)out=`<div class="ph">${I("jar")}<b>Pick something to ferment</b>Tick at least one ingredient.</div>`;
@@ -363,13 +371,15 @@ function build(){
   <h3 style="margin-top:22px">${I("clock")}What to expect</h3>
   <ol class="fmtl">${r.tl.map(t=>`<li><b>${esc(t[0])}</b><span>${esc(t[1])}</span></li>`).join("")}</ol>
   ${m.quick?"":`<h3 style="margin-top:22px">${I("check")}Keep it safe</h3>${SAFETY.map(s=>`<details><summary>${esc(s[0])}</summary><p class="desc" style="margin:0 0 12px">${esc(s[1])}</p></details>`).join("")}`}
-  <div class="row"><button data-a="start">${I("cal")}Start this batch today</button><button data-a="copy">${I("cart")}Copy list</button><button data-a="share">${I("share")}Share</button><button data-a="rand">${I("dice")}Spin again</button></div></div></article>`;
+  <div class="row"><button data-a="start">${I("cal")}Start this batch today</button><button data-a="copy">${I("cart")}Copy list</button><button data-a="share">${I("share")}Share</button><button data-a="rand">Spin again</button></div></div></article>`;
  }
  const bt=ST.batches.length?ST.batches.map((b,i)=>`<li class="${isReady(b)?"rdy":""}"><div><b>${esc(b.title)}</b>${isReady(b)?' <span class="rdytag">Ready</span>':""}<small>Started ${fmtDate(b.start+"T00:00:00")} · ${esc(status(b))}</small></div><button data-a="rm" data-id="${i}" aria-label="Remove ${esc(b.title)}">${I("x")}</button></li>`).join(""):`<li class="none">Nothing on the go. Start a batch and its tasting days show up here.</li>`;
  const batches=`<section class="panel fmb"><div class="lab">${I("cal")}My ferments</div><ul>${bt}</ul></section>`;
  root.innerHTML=`<h1 class="hl">What are we fermenting?</h1><p>Pick something to make, or spin for an idea.</p><div class="cols"><aside class="side">${side}</aside><section class="res"><div id="fmout">${out}</div>${batches}</section></div>`;
  root.querySelectorAll(".ing li").forEach(li=>li.onclick=()=>li.classList.toggle("done"));
  root._r=r;
+ {const row=root.querySelector("#fmout .card .row");if(row&&r&&window.__tidyRow){window.__thumbs(row,r.title,{m:m.id},()=>{const a=row.querySelector("[data-a=rand]");if(a)a.click()});window.__tidyRow(row,"ferm")}}
+ {const h=root.querySelector("#fmout .hero");if(h){const b=document.createElement("button");b.type="button";b.className="heroback";b.setAttribute("aria-label","Back");b.title="Back";b.innerHTML=XB;b.onclick=back;h.append(b)}}
  const nb=ST.batches.filter(isReady).length,tb=document.querySelector('#tabs [data-t="ferm"]');
  if(tb){tb.classList.toggle("dot",nb>0);tb.title=nb?nb+" ferment"+(nb>1?"s":"")+" ready to taste":""}
 }
@@ -379,7 +389,10 @@ function build(){
 const DEFE=["🥒","🥕","🧄","🌶️","🥬","🍋"];
 let busy=false;
 function pickRandom(){
- const mm=rnd(M);ST.m=mm.id;
+ let rt={};try{rt=JSON.parse(localStorage.getItem("rate")||"null")||{}}catch(e){}
+ const wt=x=>{let k=1;for(const t in rt){const e=rt[t];if(e&&e.m===x.id)k*=e.v>0?1.6:.5}return k}; // thumbs steer which kind of ferment comes up
+ let tot=0;const ws=M.map(x=>{const w=wt(x);tot+=w;return w});let pick=Math.random()*tot,mm=M[M.length-1];for(let i=0;i<M.length;i++){pick-=ws[i];if(pick<=0){mm=M[i];break}}
+ST.m=mm.id;
  ST.items[mm.id]=mm.multi?shuf(mm.items.map(i=>i.id)).slice(0,1+Math.floor(Math.random()*2)):[rnd(mm.items).id];
  const base=mm.arom.filter(x=>!x.only||ST.items[mm.id].includes(x.only));
  ST.arom[mm.id]=shuf(base.map(x=>x.id)).slice(0,2+Math.floor(Math.random()*3));
@@ -393,6 +406,7 @@ function jarHTML(em){
 }
 function spin(btn){
  if(busy)return;
+ enter();
  const out=root.querySelector("#fmout"),rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
  const finish=()=>{pickRandom();save();busy=false;build();const c=root.querySelector(".card");if(c)c.scrollIntoView({behavior:"smooth",block:"start"})};
  if(rm||!out)return finish();
@@ -454,7 +468,7 @@ function applyShare(d){ // a shared setup: validate every id against the real me
  ST.m=m.id;ST.items[m.id]=m.multi?its:its.slice(0,1);ST.arom[m.id]=ar;
  const g=Number(d.g);if(Number.isFinite(g)&&g>0)ST.g[m.id]=Math.min(Math.max(g,m.g[0]),m.g[1]);
  ST.sal=Math.min(2,Math.max(0,Number(d.sal)|0));ST.temp=["cool","mild","warm"].includes(d.temp)?d.temp:"mild";
- save();build();return true;
+ enter();save();build();return true;
 }
 window.FERMENT={rebuild:build,methods:M,applyShare};
 })();

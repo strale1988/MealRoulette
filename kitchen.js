@@ -162,7 +162,9 @@ K.resolve=(r,n,ctx)=>{
       const name=nm(id);if(!h||!q)return name;
       const s=reverse&&sq[reverse[0]],amount=s?s.a:q.a*k,u=s?s.u:q.u;
       return(u==="pcs"?fmt(amount,"pcs").replace(" pcs",""):fmt(amount,"g"))+" "+name;
-    }).replace(/\s+([.,;])/g,"$1").trim();
+    }).replace(/\s+([.,;])/g,"$1").trim()
+      // piece counts ("shape into 8 koftas", "make 4 wells") grow and shrink with the servings; times and sizes are left alone
+      .replace(/\b(into|Make|make|makes|form|shape)\s+(\d+)(?![\d.,–\-\/])(\s+)(?!(?:g|ml|kg|l|cm|mm|min|minutes?|hours?|seconds?|°|%)\b)(?=[a-z])/g,(m,w,c,sp)=>Math.abs(k-1)<.01?m:w+" "+Math.max(2,Math.round(+c*k))+sp);
   }).filter(s=>s&&!/^[.;,\s]*$/.test(s));
   Object.entries(cooked).filter(([,x])=>x.mode==="note").forEach(([raw,x])=>steps.unshift("Your "+K.name(x.id).toLowerCase()+" is already cooked: wherever the method cooks the "+K.name(raw).toLowerCase()+", skip that and stir it in for the last 3–5 minutes so it only warms through."));
   const usedSwaps=Object.entries(cooked).map(([raw,rule])=>{const s=sq[raw];return{raw,id:rule.id,factor:rule.factor,auto:rule.auto,amount:s.a,original:s.orig,ou:s.ou}});
@@ -228,4 +230,34 @@ K.add=list=>list.forEach(r=>{
 
 K.report=()=>{const e=K.problems.filter(p=>p.lvl==="error"),w=K.problems.filter(p=>p.lvl==="warn");
   return{ingredients:Object.keys(K.ING).length,recipes:K.recipes.length,errors:e,warnings:w}};
+})();
+
+/* ---- shared recipe-card buttons: the same names and order on Cook, Pizza night and Ferment ----
+   Save · Copy list · Share · Like · Dislike · Spin again (always last, pinned to the right, with the section's icon) */
+(function(){
+const ic=n=>`<svg class="i"><use href="#i-${n}"/></svg>`;
+const rd=()=>{try{return JSON.parse(localStorage.getItem("rate")||"null")||{}}catch(e){return{}}};
+const wr=o=>{try{localStorage.setItem("rate",JSON.stringify(o))}catch(e){}};
+window.__ratings=rd;
+// Like / Dislike for a card that has none yet. meta is stored with the rating (e.g. the ferment method), again() runs after a Dislike.
+window.__thumbs=function(row,key,meta,again){
+  if(!row||row.querySelector(".thumb"))return;
+  const cur=rd()[key],mk=(v,e,l)=>{const b=document.createElement("button");b.type="button";b.className="thumb";b.dataset.v=v;b.setAttribute("aria-pressed",String(!!cur&&cur.v===v));b.innerHTML=e+" "+l;b.title=v>0?"Show me more like this":"Show me this less";return b};
+  const up=mk(1,"👍","Like"),dn=mk(-1,"👎","Dislike");row.append(up,dn);
+  const rate=v=>{const o=rd(),on=!(o[key]&&o[key].v===v);if(on)o[key]=Object.assign({v,t:Date.now()},meta||{});else delete o[key];wr(o);
+    up.setAttribute("aria-pressed",String(on&&v>0));dn.setAttribute("aria-pressed",String(on&&v<0));navigator.vibrate&&navigator.vibrate(12);
+    if(on&&v<0&&again)setTimeout(()=>{if(document.body.contains(dn)&&dn.getAttribute("aria-pressed")==="true")again()},900)};
+  up.onclick=()=>rate(1);dn.onclick=()=>rate(-1);
+};
+// put the buttons of one card in the standard order; icon = the section icon for Spin again (chef, pizza, ferm)
+window.__tidyRow=function(row,icon){
+  if(!row)return;
+  const q=s=>row.querySelector(s),pick=[
+    q("#cookgo,#pzcook,.pzgo,[data-a=start]"),q("#save,.pzsave"),q("#shop,.pzshop,[data-a=copy]"),q("#sharer,.pzsh,[data-a=share]"),
+    q(".thumb[data-v='1'],.thumb:nth-of-type(1)"),q(".thumb[data-v='-1']")],
+    again=q("#again,.pzagain,[data-a=rand]");
+  const seen=new Set();[...pick].forEach(b=>{if(b&&!seen.has(b)){seen.add(b);row.append(b)}});
+  [...row.children].forEach(b=>{if(!seen.has(b)&&b!==again)row.append(b)});
+  if(again){again.innerHTML=ic(icon)+"Spin again";again.classList.add("spinagain");row.append(again)}
+};
 })();
