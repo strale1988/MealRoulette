@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#fff3da">
+<script>try{var t=localStorage.getItem("mr-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);if(localStorage.getItem("mr-splash")==="off")document.documentElement.setAttribute("data-splash","off")}catch(e){}</script>
 <link rel="preload" href="fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -16,7 +17,8 @@
 <meta name="twitter:card" content="summary">
 <style>
 :root{--bg:#faf6ef;--card:#fff;--ink:#2b2622;--mute:#7a6f65;--acc:#e4572e;--acc2:#2f7d5b;--line:#eadfce;--soft:#fff1e8;color-scheme:light}
-@media (prefers-color-scheme:dark){:root{--bg:#171411;--card:#231f1b;--ink:#f3ece3;--mute:#a79b8d;--acc:#ff7a52;--acc2:#5fc79a;--line:#383129;--soft:#33241d;color-scheme:dark}}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#171411;--card:#231f1b;--ink:#f3ece3;--mute:#a79b8d;--acc:#ff7a52;--acc2:#5fc79a;--line:#383129;--soft:#33241d;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#171411;--card:#231f1b;--ink:#f3ece3;--mute:#a79b8d;--acc:#ff7a52;--acc2:#5fc79a;--line:#383129;--soft:#33241d;color-scheme:dark}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
 main{max-width:2400px;margin:0 auto;padding:18px 16px 60px}
@@ -172,7 +174,8 @@ details .row button{flex:none}
 @font-face{font-family:"Bricolage";src:url(fonts/bricolage-grotesque-latin-wght-normal.woff2) format("woff2");font-weight:200 800;font-display:swap}
 @font-face{font-family:"DM Sans";src:url(fonts/dm-sans-latin-wght-normal.woff2) format("woff2");font-weight:100 1000;font-display:swap}
 :root{--bg:#fff3da;--card:#fffaee;--ink:#2a1a13;--mute:#6b5a4d;--acc:#d63a22;--acc2:#1f7d50;--line:#2a1a13;--soft:#ffe3a1;--sun:#ffc63d;--mint:#d3ebdc;--sand:#f3dcb4;--bw:2.5px;--sh:3px 3px 0 var(--ink)}
-@media (prefers-color-scheme:dark){:root{--bg:#1d140f;--card:#2a1d16;--ink:#fff3da;--mute:#c4b29c;--acc:#f0553b;--acc2:#3fb27c;--line:#fff3da;--soft:#4a3513;--sun:#ffc63d;--mint:#1f3a2c;--sand:#3d2d1f;--sh:3px 3px 0 #000}}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1d140f;--card:#2a1d16;--ink:#fff3da;--mute:#c4b29c;--acc:#f0553b;--acc2:#3fb27c;--line:#fff3da;--soft:#4a3513;--sun:#ffc63d;--mint:#1f3a2c;--sand:#3d2d1f;--sh:3px 3px 0 #000}}
+:root[data-theme=dark]{--bg:#1d140f;--card:#2a1d16;--ink:#fff3da;--mute:#c4b29c;--acc:#f0553b;--acc2:#3fb27c;--line:#fff3da;--soft:#4a3513;--sun:#ffc63d;--mint:#1f3a2c;--sand:#3d2d1f;--sh:3px 3px 0 #000}
 body{font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg)}
 h1,h2,h3,.brand b,.pt,.hero h2,.btns button,.pzbtns button{font-family:Bricolage,"DM Sans",system-ui,sans-serif}
 main{padding-bottom:130px}
@@ -258,7 +261,8 @@ ol li,ul.ing li{-webkit-tap-highlight-color:transparent}ol li{cursor:pointer}ol 
 .badge{background:var(--mint);color:#2a1a13;border:2px solid var(--ink);border-radius:99px;padding:6px 14px;font:800 14px "DM Sans",sans-serif}
 /* ---- readability + adaptability pass ---- */
 :root{--pink:#ffd2c7;--acct:#c0301b;--hero:#1f7d50}
-@media (prefers-color-scheme:dark){:root{--acc:#e0432a;--acct:#ff8f74;--pink:#5a2a22;--mint:#1f3a2c}}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--acc:#e0432a;--acct:#ff8f74;--pink:#5a2a22;--mint:#1f3a2c}}
+:root[data-theme=dark]{--acc:#e0432a;--acct:#ff8f74;--pink:#5a2a22;--mint:#1f3a2c}
 .buy2{background:var(--pink);color:var(--ink)}.ok2{background:var(--mint);color:var(--ink)}
 .badge{background:var(--mint);color:var(--ink)}
 .buy,.lnk,.ticks .on{color:var(--acct)}.buy{border-color:var(--acct)}
@@ -396,7 +400,7 @@ select{border-radius:999px;padding:0 18px}
 .ck-x,.fmb li button{border-radius:50%}
 
 /* ---- v54: start screen: the pizza spins like it is loading, stops, then tap or shake for a random recipe ---- */
-html{scrollbar-gutter:stable}html:has(.splash){overflow:hidden}
+html{scrollbar-gutter:stable}html:has(.splash){overflow:hidden}html[data-splash=off] #splash{display:none}html[data-splash=off]:has(.splash){overflow:auto}
 .splash{touch-action:none;overscroll-behavior:contain;position:fixed;inset:0;z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;padding-bottom:calc(24px + env(safe-area-inset-bottom,0px));background:var(--bg);color:var(--ink);text-align:center;transition:opacity .3s ease,transform .3s ease}
 .splash{transition:opacity .45s ease,transform .45s cubic-bezier(.3,.7,.2,1),filter .45s ease}
 .splash.out{opacity:0;transform:scale(1.06);filter:blur(6px);pointer-events:none}
@@ -663,6 +667,7 @@ footer{margin-top:28px;padding-top:12px}
 <div id="boot" role="alert" hidden style="margin:24px 16px;padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--card);text-align:center"><b>Meal Roulette could not finish loading.</b><p class="hint" style="margin:8px 0 12px">Some files did not download (usually a weak connection). Your saved settings are safe.</p><button class="lnk" id="bootbtn">Reload</button></div>
 <noscript><p style="padding:16px">Meal Roulette needs JavaScript.</p></noscript>
 <script type="text/plain" id="main">
+if(document.documentElement.getAttribute("data-splash")==="off"){const _sp=document.getElementById("splash");if(_sp)_sp.remove()} // start screen turned off in My kitchen
 const K=window.KITCHEN,$=id=>document.getElementById(id);
 const MEALS=[["Breakfast","sunrise","Morning"],["Snack","cookie","Bite"],["Main","chef","Big plate"],["Dessert","cupcake","Treat"]];
 const normM=m=>m==="Lunch"||m==="Dinner"?"Main":m,isMain=m=>normM(m)==="Main",ML=m=>(MEALS.find(x=>x[0]===normM(m))||[])[2]||m;
@@ -867,15 +872,37 @@ function spin(){
   const it=items();let L=recipeInfos(),msg="";if(!L.length)return S.bake?nothing():build(); // no stored recipe fits the diet: make one up instead
   pickRecipe(L,msg);
 }
+/* ratings (thumbs) and seasons */
+const ratings=()=>store("rate")||{};
+const WARMRX=/stew|soup|roast|casserole|\bbake[ds]?\b|curry|chil[il]i?|risotto|goulash|\bpie\b|braise|hotpot|porridge|\bdal\b|ramen|gratin|lasagn|dumpling|chowder|cassoulet|tagine|shakshuka|moussaka|stroganoff|\bpho\b|congee|cottage|mac(aroni)? and cheese|hot chocolate|crumble|pudding/i,COOLRX=/salad|gazpacho|\bcold\b|ceviche|poke|summer|grilled|\bbbq\b|barbecue|\bwraps?\b|slaw|chilled|tzatziki|sushi|iced|smoothie|ice cream|no-bake|bruschetta|caprese|ni[cç]oise|spring roll|tabbouleh|fattoush|sorbet|granita|overnight oats/i;
+const southern=(()=>{try{return/^(Australia|Pacific\/Auckland|Pacific\/Fiji|America\/(Argentina|Sao_Paulo|Santiago|Montevideo|Lima|La_Paz|Asuncion)|Africa\/(Johannesburg|Maputo|Harare|Windhoek))/.test(Intl.DateTimeFormat().resolvedOptions().timeZone)}catch(e){return false}})();
+function warmth(){const m=(new Date().getMonth()+(southern?6:0))%12;return[-1,-.8,-.4,0,.5,.9,1,1,.5,0,-.5,-.9][m]} // -1 deep winter .. +1 high summer
+function seasonK(r){const t=warmth(),txt=r.title||"";if(WARMRX.test(txt)&&!COOLRX.test(txt))return 1-.6*t;if(COOLRX.test(txt)&&!WARMRX.test(txt))return 1+.6*t;return 1}
+/* ---- smarter random: still random, but it leans away from what you just saw or cooked and toward what you saved ---- */
+const PFAM=g=>/^(salmon|cod|tuna|prawns)$/.test(g)?"fish":g==="chickenthigh"?"chicken":g;
+const proteinsOf=r=>[...new Set((r.ids||[]).map(id=>K.ING[id]).filter(e=>e&&e.role==="protein").flatMap(e=>e.gen.filter(g=>g[0]==="p").map(g=>PFAM(g[1]))))];
+function markShown(r){const h=hist();h.v=(h.v||[]).filter(x=>x.id!==r.id).concat({id:r.id,c:r.cuisine||"",p:proteinsOf(r)}).slice(-4);store(HK,h)}
+function pickWeighted(pool){
+  if(pool.length<2)return pool[0];
+  const v=(hist().v||[]).slice(-3),cooked=new Set((store("cooklog")||[]).filter(x=>Date.now()-x.d<10*864e5).map(x=>x.t)),fav=new Set((store("favs2")||[]).map(x=>x.title));
+  const w=x=>{let k=1;const r=x.r,ps=proteinsOf(r);
+    v.forEach((h,i)=>{const recency=i===v.length-1?1:.6; // the dish just before counts most
+      if(r.cuisine&&h.c===r.cuisine)k*=1-.6*recency;if(ps.some(p=>h.p.includes(p)))k*=1-.55*recency});
+    if(cooked.has(r.title))k*=.25;if(fav.has(r.title))k*=1.5;
+    const rt=ratings()[r.title];if(rt)k*=rt.v>0?1.7:(Date.now()-rt.t<28*864e5?.05:.3);
+    if(S.seasonal)k*=seasonK(r);return Math.max(k,.02)};
+  const ws=pool.map(w);let t=Math.random()*ws.reduce((a,b)=>a+b,0);
+  for(let i=0;i<pool.length;i++){if((t-=ws[i])<0)return pool[i]}return pool[pool.length-1];
+}
 function pickRecipe(L,msg){
   // best tier first (fewest to buy, cuisine match, priority items, then most fridge items); only move to a worse tier when every recipe in the better ones was already shown
   const sn=seenOf(),tiers=[];
   L.slice().sort((a,b)=>b.urg-a.urg||a.miss-b.miss||b.hit-a.hit||b.cu-a.cu).forEach(x=>{const t=tiers[tiers.length-1];if(t&&t[0].urg===x.urg&&t[0].miss===x.miss&&t[0].hit===x.hit&&t[0].cu===x.cu)t.push(x);else tiers.push([x])});
   let pool=null;for(const t of tiers){const f=t.filter(x=>!sn.includes(x.r.id));if(f.length){pool=f;break}}
   if(!pool){const last=sn[sn.length-1];clearSeen();pool=tiers[0].filter(x=>x.r.id!==last);if(!pool.length)pool=tiers[0]}
-  const x=rnd(pool);markSeen(x.r.id);
+  const x=pickWeighted(pool);markSeen(x.r.id);markShown(x.r);
   if(S.strict&&items().length&&x.miss>0)msg="Nothing fits using only your fridge, so this is the closest match. See what to buy below.";
-  show({title:x.r.title,min:x.r.min,n:S.n,steps:x.steps,ing:x.ing,desc:[x.r.note,x.leftoverNote].filter(Boolean).join(" ")},msg);
+  show({rid:x.r.id,title:x.r.title,min:x.r.min,n:S.n,steps:x.steps,ing:x.ing,desc:[x.r.note,x.leftoverNote].filter(Boolean).join(" ")},msg);
 }
 /* One button. With "Only what I have" on, it picks between real recipes that need nothing extra and a meal
    made up from your fridge and staples. With it off, it picks the recipe closest to your fridge. */
@@ -954,10 +981,12 @@ function show(r,msg){
   $("shop").onclick=async()=>{const mm=r.ing.filter(missing),l=(mm.length?mm:r.ing).map(i=>"• "+i.name+" – "+Q(i)).join("\n");try{await navigator.clipboard.writeText(l);$("shop").innerHTML=I("cart")+"Copied"}catch(e){$("note").textContent=l}};
   $("again").onclick=()=>run(r.remix?"remix":"spin",1);
 }
+/* open a saved item: scroll to where the card starts (below the sticky bar), not to the top of the page */
+function toCard(id){requestAnimationFrame(()=>{const el=document.getElementById(id);if(!el)return;const bar=document.querySelector(".bar"),y=el.getBoundingClientRect().top+scrollY-(bar?bar.offsetHeight:0)-12;scrollTo({top:Math.max(0,y),behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"})})}
 function favs(){
   const f=store("favs2")||[];
   $("fav").innerHTML=f.length?`<h3>${I("heart")}Saved</h3>`+f.map((r,i)=>`<button data-i="${i}">${I("heart")}${esc(r.title)}</button>`).join(""):"";
-  $("fav").querySelectorAll("button").forEach(b=>b.onclick=()=>{const r=f[+b.dataset.i];S.meal=normM(r.meal)||S.meal;S.pm[S.meal]=true;save();draw();show(r,"");scrollTo({top:0,behavior:"smooth"})});
+  $("fav").querySelectorAll("button").forEach(b=>b.onclick=()=>{const r=f[+b.dataset.i];S.meal=normM(r.meal)||S.meal;S.pm[S.meal]=true;save();draw();show(r,"");toCard("out")});
 }
 function run(what,single,instant){
   [["add",addItem],["sadd",addStaple],["ladd",addLeftover]].forEach(([id,fn])=>{if($(id).value.trim())fn()}); // text typed but not yet confirmed still counts
@@ -1072,7 +1101,7 @@ function renderPlan(days,list,meta,saved,open){
 }
 function plansUI(){
   const f=store("plans2")||[];$("plans").innerHTML=f.length?`<h3>${I("cal")}Saved plans</h3>`+f.map((p,i)=>`<div class="prow"><button data-o="${i}">${I("cal")}${esc(p.title)} · ${esc(p.date)}</button><button class="d" data-x="${i}" aria-label="Delete plan">${I("x")}</button></div>`).join(""):"";
-  $("plans").querySelectorAll("[data-o]").forEach(b=>b.onclick=()=>{const p=f[+b.dataset.o];renderPlan(p.days,p.list,p,true);scrollTo({top:0,behavior:"smooth"})});
+  $("plans").querySelectorAll("[data-o]").forEach(b=>b.onclick=()=>{const p=f[+b.dataset.o];renderPlan(p.days,p.list,p,true);toCard("out")});
   $("plans").querySelectorAll("[data-x]").forEach(b=>b.onclick=()=>{f.splice(+b.dataset.x,1);store("plans2",f);plansUI()});
 }
 /* ---------- pizza night ---------- */
@@ -1166,7 +1195,7 @@ function pzShow(r,msg){
 function pzFavs(){
   const f=store("pzfavs")||[];
   $("pzfav").innerHTML=f.length?`<h3>${I("heart")}Saved pizzas and doughs</h3>`+f.map((r,i)=>`<button data-i="${i}">${I("heart")}${esc(r.title)}${r.fermName?" · "+esc(r.fermName.replace(/ \(.*\)/,"").replace("Cold ferment, ","cold ")):""}</button>`).join(""):"";
-  $("pzfav").querySelectorAll("button").forEach(b=>b.onclick=()=>{const r=f[+b.dataset.i];pzSection("build");pzShow(r,"");scrollTo({top:0,behavior:"smooth"})});
+  $("pzfav").querySelectorAll("button").forEach(b=>b.onclick=()=>{const r=f[+b.dataset.i];pzSection("build");pzShow(r,"");toCard("pzout")});
 }
 function pzRun(what){
   const o=pzOpts();let r=null,msg="";
@@ -1433,6 +1462,30 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
     };
   }
 })();
+/* ---- on every cookbook recipe: change the servings, and rate it (thumbs steer future spins) ---- */
+(function(){
+const _sh=show;
+show=function(r,m){_sh(r,m);if(!r)return;try{
+  const card=$("out").querySelector(".card"),row=card&&card.querySelector(".row");if(!row||card.classList.contains("plan"))return;
+  // servings
+  const rec=r.rid&&K.recipes.find(x=>x.id===r.rid),meta=card.querySelector(".meta");
+  if(rec&&meta){
+    const box=document.createElement("div");box.className="scl";box.style.cssText="display:flex;align-items:center;gap:10px;margin:2px 0 10px;color:var(--mute);font-size:14px";
+    box.innerHTML=`<span>Servings</span><span class="step" style="display:inline-flex;width:auto;min-width:130px;gap:6px"><button type="button" data-d="-1" aria-label="Fewer servings">${I("minus")}</button><b aria-live="polite">${r.n}</b><button type="button" data-d="1" aria-label="More servings">${I("plus")}</button></span>`;
+    meta.after(box);
+    box.querySelectorAll("button").forEach(b=>b.onclick=()=>{const n=Math.min(24,Math.max(1,r.n+ +b.dataset.d));if(n===r.n)return;
+      const F=fridgeIds(),U=new Set([...S.urgent.flatMap(x=>K.match(x)),...[...F].filter(isLeftId)]),x=K.resolve(rec,n,{fridge:F,basic:S.basic,urgent:U});
+      show({...r,n,ing:x.ing,steps:x.steps},$("note").textContent)})}
+  // thumbs
+  const cur=ratings()[r.title],mk=(v,ic,lbl)=>{const b=document.createElement("button");b.type="button";b.className="thumb";b.setAttribute("aria-pressed",String(!!cur&&cur.v===v));b.innerHTML=ic+lbl;b.title=v>0?"Show me more like this":"Show me this less";return b};
+  const up=mk(1,"👍 ","Love it"),dn=mk(-1,"👎 ","Not for me");row.append(up,dn);
+  const rate=(v,b)=>{const o=ratings(),on=!(o[r.title]&&o[r.title].v===v);if(on)o[r.title]={v,t:Date.now()};else delete o[r.title];store("rate",o);
+    up.setAttribute("aria-pressed",String(on&&v>0));dn.setAttribute("aria-pressed",String(on&&v<0));navigator.vibrate&&navigator.vibrate(12);
+    $("note").textContent=!on?"Rating removed.":v>0?"Noted. You'll see more like this.":"Noted. You'll see this one less.";
+    if(on&&v<0&&$("again")){setTimeout(()=>{if(document.body.contains(dn)&&dn.getAttribute("aria-pressed")==="true")$("again").click()},900)}};
+  up.onclick=()=>rate(1,up);dn.onclick=()=>rate(-1,dn);
+}catch(e){console.error(e)}};
+})();
 /* ---- share links: the whole recipe, pizza, plan or ferment travels inside the link (#s=...), so opening it shows exactly that ---- */
 (function(){
 const b64=u8=>{let s="";for(let i=0;i<u8.length;i+=8192)s+=String.fromCharCode.apply(null,u8.subarray(i,i+8192));return btoa(s).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")};
@@ -1461,7 +1514,7 @@ const ings=a=>Array.isArray(a)?a.slice(0,80).filter(i=>i&&typeof i.name==="strin
 function cleanRecipe(o){
   if(!o||typeof o.title!=="string")return null;const ing=ings(o.ing),steps=strs(o.steps);if(!ing.length||!steps.length)return null;
   const m=normM(MEALS.some(x=>x[0]===normM(o.meal))?o.meal:"Main"),r={title:str(o.title,120),min:pos(o.min,30),n:Math.min(pos(o.n,2),24),ing,steps,meal:m};
-  if(typeof o.desc==="string")r.desc=str(o.desc,500);return r;
+  if(typeof o.desc==="string")r.desc=str(o.desc,500);if(typeof o.rid==="string"&&K.recipes.some(x=>x.id===o.rid))r.rid=o.rid;return r;
 }
 function cleanPizza(o){
   if(!o||typeof o.title!=="string"||!Array.isArray(o.sections))return null;const ing=ings(o.ing);if(!ing.length)return null;
@@ -1507,6 +1560,25 @@ pzCard=function(r,target,msg){_pc(r,target,msg);try{
   addBtn(target.querySelector(".row"),target.querySelector(".pzshop"),"pzsh",b=>window.__shareOut("z",r,r.title,r.title+(r.dough?" · dough recipe":"")+" · feeds about "+r.feeds,b))}catch(e){console.error(e)}};
 const kx=document.getElementById("kitextras");
 if(kx){const row=document.createElement("div");row.className="xtra-row";row.innerHTML='<p><b>Share Meal Roulette</b>Send a friend the link to the app.</p><div class="tg"><button type="button" id="appsh">Share</button></div>';kx.appendChild(row);
+  const th=document.createElement("div");th.className="xtra-row";th.innerHTML=`<p><b>Theme</b>Light, dark, or follow your device.</p><div class="tg" id="themetg" role="group" aria-label="Theme"><button type="button" data-th="system">System</button><button type="button" data-th="light">Light</button><button type="button" data-th="dark">Dark</button></div>`;kx.insertBefore(th,kx.firstElementChild.nextSibling);
+  const ss=document.createElement("div");ss.className="xtra-row";const spOn=()=>{try{return localStorage.getItem("mr-splash")!=="off"}catch(e){return true}};
+  ss.innerHTML=`<p><b>Start screen</b>The spinning pizza when the app opens. Applies next time you open it.</p><div class="tg"><button type="button" id="splashtg" aria-pressed="${spOn()}">${spOn()?"On":"Off"}</button></div>`;th.after(ss);
+  $("splashtg").onclick=()=>{const on=!spOn();try{on?localStorage.removeItem("mr-splash"):localStorage.setItem("mr-splash","off")}catch(e){}$("splashtg").setAttribute("aria-pressed",String(on));$("splashtg").textContent=on?"On":"Off"};
+  const themeMeta=document.querySelector('meta[name="theme-color"]'),mq=matchMedia("(prefers-color-scheme:dark)");
+  const applyTheme=m=>{const root=document.documentElement;if(m==="light"||m==="dark")root.setAttribute("data-theme",m);else root.removeAttribute("data-theme");
+    const dark=m==="dark"||(m!=="light"&&mq.matches);if(themeMeta)themeMeta.setAttribute("content",dark?"#1d140f":"#fff3da");
+    document.querySelectorAll("#themetg button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.th===(m==="light"||m==="dark"?m:"system"))))};
+  const curTheme=()=>{try{const t=localStorage.getItem("mr-theme");return t==="light"||t==="dark"?t:"system"}catch(e){return"system"}};
+  applyTheme(curTheme());
+  document.querySelectorAll("#themetg button").forEach(b=>b.onclick=()=>{const m=b.dataset.th;try{m==="system"?localStorage.removeItem("mr-theme"):localStorage.setItem("mr-theme",m)}catch(e){}applyTheme(m)});
+  (mq.addEventListener?mq.addEventListener.bind(mq,"change"):mq.addListener.bind(mq))(()=>applyTheme(curTheme()));
+  const so=document.createElement("div");so.className="xtra-row";so.innerHTML=`<p><b>Seasonal picks</b>Favour hearty dishes in the cold months and light ones when it's warm.</p><div class="tg"><button type="button" id="seastg" aria-pressed="${!!S.seasonal}">${S.seasonal?"On":"Off"}</button></div>`;kx.insertBefore(so,row);
+  $("seastg").onclick=()=>{S.seasonal=!S.seasonal;save();$("seastg").setAttribute("aria-pressed",String(!!S.seasonal));$("seastg").textContent=S.seasonal?"On":"Off"};
+  const rr=document.createElement("div");rr.className="xtra-row";const nr=()=>Object.keys(ratings()).length;
+  rr.innerHTML=`<p><b>Recipe ratings</b><span id="ratecount"></span></p><div class="tg"><button type="button" id="ratereset">Reset</button></div>`;kx.insertBefore(rr,row);
+  const pr=()=>{$("ratecount").textContent=nr()?nr()+" rated with 👍 or 👎. They steer what you get when you spin.":"Tap 👍 or 👎 on a recipe to steer what you get when you spin.";$("ratereset").disabled=!nr()};pr();
+  $("ratereset").onclick=()=>{if(nr()&&confirm("Forget all your 👍 and 👎?")){store("rate",{});pr()}};
+  document.addEventListener("click",e=>{if(e.target.closest&&e.target.closest(".thumb"))setTimeout(pr,0)});
   $("appsh").onclick=()=>window.__shareOut("app",null,"Meal Roulette","Meal Roulette: spin for a recipe, plan your week and build a shopping list.",$("appsh"))}
 })();
 if("serviceWorker" in navigator&&location.protocol.startsWith("http")){
