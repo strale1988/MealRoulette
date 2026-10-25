@@ -363,7 +363,7 @@ function build(){
   <h3 style="margin-top:22px">${I("clock")}What to expect</h3>
   <ol class="fmtl">${r.tl.map(t=>`<li><b>${esc(t[0])}</b><span>${esc(t[1])}</span></li>`).join("")}</ol>
   ${m.quick?"":`<h3 style="margin-top:22px">${I("check")}Keep it safe</h3>${SAFETY.map(s=>`<details><summary>${esc(s[0])}</summary><p class="desc" style="margin:0 0 12px">${esc(s[1])}</p></details>`).join("")}`}
-  <div class="row"><button data-a="start">${I("cal")}Start this batch today</button><button data-a="copy">${I("cart")}Copy list</button><button data-a="rand">${I("dice")}Spin again</button></div></div></article>`;
+  <div class="row"><button data-a="start">${I("cal")}Start this batch today</button><button data-a="copy">${I("cart")}Copy list</button><button data-a="share">${I("share")}Share</button><button data-a="rand">${I("dice")}Spin again</button></div></div></article>`;
  }
  const bt=ST.batches.length?ST.batches.map((b,i)=>`<li class="${isReady(b)?"rdy":""}"><div><b>${esc(b.title)}</b>${isReady(b)?' <span class="rdytag">Ready</span>':""}<small>Started ${fmtDate(b.start+"T00:00:00")} · ${esc(status(b))}</small></div><button data-a="rm" data-id="${i}" aria-label="Remove ${esc(b.title)}">${I("x")}</button></li>`).join(""):`<li class="none">Nothing on the go. Start a batch and its tasting days show up here.</li>`;
  const batches=`<section class="panel fmb"><div class="lab">${I("cal")}My ferments</div><ul>${bt}</ul></section>`;
@@ -427,6 +427,11 @@ root.addEventListener("click",e=>{
   ST.batches.unshift({title:r.title,m:r.m.id,start:todayStr(),min:r.ready[0],max:r.ready[1],taste:r.taste,quick:!!r.m.quick});
   ST.batches=ST.batches.slice(0,20);
  }
+ else if(a==="share"){
+  const r=root._r,m=cur();if(!r||!window.__shareOut)return;
+  window.__shareOut("f",{m:m.id,items:selItems(m),arom:selArom(m),g:amount(m),sal:ST.sal,temp:ST.temp},r.title,r.title+" · ready in about "+(r.ready[0]===r.ready[1]?r.ready[0]:r.ready[0]+" to "+r.ready[1])+" days",b,()=>r.title+"\n"+r.ing.map(i=>"• "+i.n+" – "+i.q).join("\n"));
+  return;
+ }
  else if(a==="rm"){ST.batches.splice(+id,1)}
  else if(a==="copy"){
   const r=root._r;if(!r)return;
@@ -442,5 +447,14 @@ root.addEventListener("click",e=>{
 });
 
 build();
-window.FERMENT={rebuild:build,methods:M};
+function applyShare(d){ // a shared setup: validate every id against the real method, then show it
+ const m=d&&MB[d.m];if(!m)return false;
+ const its=Array.isArray(d.items)?d.items.filter(id=>m.items.some(i=>i.id===id)):[],ar=Array.isArray(d.arom)?d.arom.filter(id=>m.arom.some(a=>a.id===id)):[];
+ if(!its.length)return false;
+ ST.m=m.id;ST.items[m.id]=m.multi?its:its.slice(0,1);ST.arom[m.id]=ar;
+ const g=Number(d.g);if(Number.isFinite(g)&&g>0)ST.g[m.id]=Math.min(Math.max(g,m.g[0]),m.g[1]);
+ ST.sal=Math.min(2,Math.max(0,Number(d.sal)|0));ST.temp=["cool","mild","warm"].includes(d.temp)?d.temp:"mild";
+ save();build();return true;
+}
+window.FERMENT={rebuild:build,methods:M,applyShare};
 })();

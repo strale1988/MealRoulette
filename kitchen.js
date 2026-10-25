@@ -36,6 +36,10 @@ K.match=text=>{
   cache.set(key,out);return out;
 };
 K.name=id=>K.ING[id]?K.ING[id].name:id;
+// Fridge, staples and suggestion labels: things you count are plural ("mushrooms", "onions"), things you measure stay singular ("rice", "spinach").
+// Recipes keep K.name (singular), because their method text says "the onion".
+K.PLURAL={onion:"onions",shallot:"shallots","spring-onion":"spring onions","red-onion":"red onions",leek:"leeks",carrot:"carrots","red-pepper":"bell peppers",aubergine:"aubergines",avocado:"avocados",beetroot:"beetroots",cucumber:"cucumbers",plantain:"plantains","sweet-potato":"sweet potatoes",banana:"bananas",apple:"apples",pear:"pears",lemon:"lemons",lime:"limes",orange:"oranges",mango:"mangoes","bay-leaf":"bay leaves","chicken-breast":"chicken breasts",salmon:"salmon fillets","white-fish":"white fish fillets"};
+K.label=id=>K.ING[id]?(K.PLURAL[id]||K.ING[id].name):id;
 K.aisleOf=name=>{const id=K.match(name)[0];return id?K.AISLE[K.ING[id].aisle]:null};
 
 /* ---------- ingredient catalog ---------- */
