@@ -278,8 +278,6 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
 #remix,.pzbtns:has(#pzspin) #pzremix{flex-direction:row;gap:7px;font-size:17px;padding:10px 6px}#remix .i,#pzremix .i{width:1.6em;height:1.6em}
 #save[aria-pressed=true] .i{fill:var(--acc)}
 .ck-done{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center}.ck-done h2{margin:0;font:800 clamp(40px,10vw,72px)/1 Bricolage,sans-serif;letter-spacing:-.04em}.ck-done p{margin:0;color:var(--mute);font-size:20px}.ck-done .ck-n{margin-top:12px;min-width:200px;border:var(--bw) solid var(--ink);border-radius:20px;padding:16px;font:800 22px Bricolage,sans-serif;box-shadow:var(--sh);cursor:pointer}
-.conf{display:flex;gap:10px;font-size:44px}.conf span{display:block;animation:cf 1.2s ease-in-out infinite}.conf span:nth-child(2){animation-delay:.15s}.conf span:nth-child(3){animation-delay:.3s}.conf span:nth-child(4){animation-delay:.45s}.conf span:nth-child(5){animation-delay:.6s}
-@keyframes cf{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-18px) rotate(8deg) scale(1.15)}}
 .agehint{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px;padding:10px 12px;border:2px dashed var(--ink);border-radius:14px;background:var(--soft);font-size:14px}.agehint[hidden]{display:none}.agehint button{flex:none;border:var(--bw) solid var(--ink);background:var(--sun);color:#2a1a13;border-radius:99px;padding:6px 14px;font:800 14px "DM Sans",sans-serif;cursor:pointer;box-shadow:2px 2px 0 var(--ink)}
 .toss{position:relative;width:240px;height:190px;margin:0 auto 6px}
 .toss .potsvg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
@@ -322,6 +320,53 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
 @keyframes fmrise{0%{opacity:0;transform:translateY(0) scale(.5)}15%{opacity:.9}85%{opacity:.9}100%{opacity:0;transform:translateY(-100px) scale(1.2)}}
 @keyframes fmjig{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(1.5deg)}}
 
+
+/* ending */
+.ck-badge{width:112px;height:112px;overflow:visible;animation:ckpop .5s cubic-bezier(.2,1.3,.4,1) both}
+.ck-badge .bg{fill:var(--acc2);stroke:var(--ink);stroke-width:3}
+.ck-badge .tick{fill:none;stroke:#fff;stroke-width:9;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:80;stroke-dashoffset:80;animation:cktick .45s .35s ease-out forwards}
+.ck-done h2{animation:ckup .5s .45s ease-out both}.ck-done p,.ck-done .ck-n{animation:ckup .5s .6s ease-out both}
+@keyframes ckpop{from{transform:scale(.5);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes cktick{to{stroke-dashoffset:0}}
+@keyframes ckup{from{transform:translateY(10px);opacity:0}to{transform:none;opacity:1}}
+/* hover + press feedback (chunky buttons lift on hover, sink on press) */
+.tile,.tg button,.quick button,.row button,.fav button,.btns button,.tabs button,.ck-nav button,.ck-n,.suggest button,.pzseg button,.ck-t{transition:transform .14s ease,box-shadow .14s ease,background-color .14s ease,border-color .14s ease,filter .14s ease}
+@media (hover:hover){
+ .btns button:hover:not(:disabled),.row .go:hover,.ck-nav button:hover,.ck-n:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink);filter:none}
+ .tile:hover,.tg button:hover,.row button:hover,.fav button:hover{transform:translate(-1px,-1px);box-shadow:3px 3px 0 var(--ink)}
+ .quick button:hover{transform:translateY(-1px)}
+ .tabs button:hover:not([aria-selected=true]){transform:translateY(-1px)}
+ .tag button:hover{transform:scale(1.15)}
+ .fav button:hover,.row button:not(.go):hover{background:var(--soft)}
+}
+.btns button:active:not(:disabled),.row .go:active,.ck-nav button:active,.ck-n:active,.tile:active,.tg button:active,.row button:active,.fav button:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.tile:focus-visible,.tg button:focus-visible,.quick button:focus-visible,.row button:focus-visible,.fav button:focus-visible,.btns button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+
+/* cooking log, shortcuts, print */
+.ck-done .ck-meta{font-size:15px;font-weight:700;color:var(--acc2);animation:ckup .5s .65s ease-out both;margin-top:-6px}
+.cl-stats{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 12px}.cl-stats div{flex:1;min-width:84px;text-align:center;border:var(--bw) solid var(--ink);border-radius:16px;padding:10px 6px;background:var(--soft)}.cl-stats b{display:block;font:800 28px/1 Bricolage,sans-serif}.cl-stats span{font-size:12px;color:var(--mute)}
+.cl-days{display:flex;gap:6px;margin:0 0 12px}.cl-days i{flex:1;height:26px;border-radius:8px;border:2px solid var(--ink);background:var(--card);display:flex;align-items:center;justify-content:center;font:700 11px "DM Sans",sans-serif;font-style:normal;color:var(--mute)}.cl-days i.on{background:var(--acc2);color:#fff}
+.cl-list{list-style:none;margin:0;padding:0;display:grid;gap:6px}.cl-list li{display:flex;justify-content:space-between;gap:10px;font-size:14px}.cl-list li span{color:var(--mute);white-space:nowrap}
+.kbd{display:none;text-align:center;font-size:12px;color:var(--mute);margin:6px 0 0}.kbd kbd{font:700 11px "DM Sans",sans-serif;border:1.5px solid var(--ink);border-radius:6px;padding:1px 6px;background:var(--card)}
+@media (hover:hover) and (min-width:760px){.kbd{display:block}}
+@media print{
+ body{background:#fff!important;color:#000!important}
+ .tabs,.side,.act,footer,.fav,header,.brand,.hl,.hl+p,.recipe-caution,#note,.reel,.ph,.pzseg,#boot,.row,.btns,.cookov,.pantry,.pzbtns,#plans{display:none!important}
+ .cols{display:block!important}.card,.panel{box-shadow:none!important;border:1px solid #bbb!important;break-inside:avoid;background:#fff!important}
+ *{animation:none!important;transition:none!important}
+}
+
+/* tour + extras */
+.tour{position:fixed;z-index:90;left:12px;right:12px;bottom:calc(96px + env(safe-area-inset-bottom,0px));max-width:460px;margin:0 auto;background:var(--card);color:var(--ink);border:var(--bw) solid var(--ink);border-radius:22px;box-shadow:var(--sh);padding:16px 16px 14px;animation:ckup .3s ease-out both}
+@media (min-width:760px){.tour{bottom:28px}}
+.tour small{color:var(--mute);font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.tour h3{margin:2px 0 4px;font:800 22px/1.1 Bricolage,sans-serif;letter-spacing:-.02em}.tour p{margin:0 0 12px;color:var(--mute);font-size:15px;line-height:1.4}
+.tour-row{display:flex;align-items:center;justify-content:space-between;gap:12px}.tour-dots{display:flex;gap:6px}.tour-dots i{width:9px;height:9px;border-radius:50%;border:2px solid var(--ink);background:var(--card)}.tour-dots i.on{background:var(--acc)}
+.tour-b{display:flex;gap:10px;align-items:center}.tour-s{background:none;border:0;color:var(--mute);font:inherit;font-weight:700;cursor:pointer;padding:8px 4px;text-decoration:underline}
+.tour-n{border:var(--bw) solid var(--ink);border-radius:14px;padding:10px 18px;font:800 16px Bricolage,sans-serif;background:var(--acc);color:#fff;cursor:pointer;box-shadow:var(--sh)}
+.tour-hl{outline:4px solid var(--acc)!important;outline-offset:5px;border-radius:18px;transition:outline-color .2s}
+.xtra-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:8px 0}.xtra-row p{margin:0;font-size:14px;color:var(--mute)}.xtra-row b{display:block;color:var(--ink);font-size:15px}
+@media print{.tour{display:none!important}}
 </style>
 </head>
 <body>
@@ -371,7 +416,7 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
 <main>
 <div id="tab-cook" class="tab" role="tabpanel"><h1 class="hl">What are we eating tonight?</h1><p>Pick a mood, then spin.</p><div class="cols">
  <aside class="side">
-  <p class="hint2" style="margin:0 0 8px">Pick a meal type. Spin and Plan ahead both use it.</p><nav class="tiles" id="meals" aria-label="Choose a meal type"></nav>
+  <nav class="tiles" id="meals" aria-label="Choose a meal type"></nav>
   <section class="panel">
    <div class="lab"><svg class="i"><use href="#i-fridge"/></svg>What's in your fridge?</div>
    <p class="hint2">Tap the clock on an item to use it first.</p>
@@ -385,7 +430,7 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
      <div class="ac-wrap"><div class="tags" id="lefttags"><input id="ladd" placeholder="Type a cooked leftover…" aria-label="Add cooked leftover" enterkeyhint="done" autocomplete="off" aria-autocomplete="list" aria-controls="ladd-suggest"></div><div class="suggest" id="ladd-suggest" role="listbox" aria-label="Cooked leftover suggestions" hidden></div></div>
      <div class="ac-help">Cooked rice, pasta, chicken… or type your own.</div>
      <div class="quick" id="lquick"></div>
-     <p class="hint2" style="margin:8px 0 0">Recipes that need a leftover will only be offered when you have selected that leftover.</p>
+     <p class="hint2" style="margin:8px 0 0">Leftover recipes only show up when you pick that leftover.</p>
     </div>
    </section>
    <div class="grid" style="margin-top:16px">
@@ -397,7 +442,7 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
    <p class="sum" id="sum1"></p>
    <div class="lab"><svg class="i"><use href="#i-cal"/></svg>Plan ahead</div><div class="tg" id="planmode"></div>
    <div id="planx" hidden>
-    <p class="hint" style="margin:10px 0 0">Builds meals day by day from your fridge and staples, rotates proteins, and gives you one shopping list sorted by aisle. Use “Try another” on any meal to swap it.</p>
+    <p class="hint" style="margin:10px 0 0">Builds meals day by day from your fridge and staples, with one shopping list by aisle. Use “Try another” to swap a meal.</p>
     <div class="grid" style="margin-top:12px">
      <div><div class="lab"><svg class="i"><use href="#i-cal"/></svg>Days</div><div class="step"><button id="dminus" aria-label="Fewer days"><svg class="i"><use href="#i-minus"/></svg></button><b id="dn">5 days</b><button id="dplus" aria-label="More days"><svg class="i"><use href="#i-plus"/></svg></button></div></div>
      <div><p class="hint2" style="margin:24px 0 0">Plans use the meal type selected above.</p></div>
@@ -405,8 +450,8 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
    </div>
   </section>
   <div class="btns act"><button id="spin"><svg class="i"><use href="#i-dice"/></svg>Spin</button><button id="remix"><svg class="i"><use href="#i-wand"/></svg>Whisk</button></div>
-  <p class="hint2" id="ah"></p>
-  <p class="recipe-caution"><strong>Recipe note:</strong> Some recipes—especially whisked and generated meals—may need tweaking or may not turn out perfectly. Use your judgment, double-check ingredients and quantities, cook food safely, and adjust to your ingredients, equipment, and taste.</p>
+  <p class="hint2" id="ah"></p><p class="kbd">Press <kbd>S</kbd> to spin, <kbd>W</kbd> to whisk, <kbd>1</kbd>–<kbd>4</kbd> to switch pages</p>
+  <p class="recipe-caution"><strong>Note:</strong> whisked and generated meals may need tweaking. Check quantities and cook food safely.</p>
  </aside>
  <section class="res">
   <div class="note" id="note" role="status"></div>
@@ -430,10 +475,11 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
 </div></div>
 
 <div id="tab-pizza" class="tab" role="tabpanel" hidden>
+ <h1 class="hl">What's for pizza night?</h1><p>Dough first, then toppings.</p>
  <nav class="pzseg" id="pzseg" aria-label="Pizza night steps"><button data-s="dough" aria-pressed="true">1 · Dough lab</button><button data-s="build" aria-pressed="false">2 · Build a pizza</button></nav>
  <div id="pz-dough" class="cols">
   <aside class="side">
-   <p class="hint2" style="margin:0 0 8px">Start with the dough. Pick a style and how long to ferment it; every weight is worked out for you. Then use it for a classic or a remix.</p>
+   <p class="hint2" style="margin:0 0 8px">Pick a style and how long to ferment it. Every weight is worked out for you, then use the dough for a classic or a remix.</p>
    <section class="panel">
     <div class="lab"><svg class="i"><use href="#i-chef"/></svg>Dough style</div>
     <div id="pzstyles"></div>
@@ -486,8 +532,7 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
 <div id="tab-ferm" class="tab" role="tabpanel" hidden></div>
 
 <div id="tab-kit" class="tab" role="tabpanel" hidden>
- <h2 class="pt">My kitchen</h2>
- <p class="hint" style="margin:0">Saved on this device. Everything here applies to spins, builds and plans.</p>
+ <h1 class="hl">What's in your kitchen?</h1><p>Saved on this device. It applies to every spin, build and plan.</p>
  <div class="kgrid">
   <section class="panel"><div class="lab"><svg class="i"><use href="#i-jar"/></svg>Always have at home</div>
    <p class="hint">Staples you keep stocked, like rice, eggs, flour or canned tomatoes. They count as "in stock" for every recipe, build and plan, so they never end up on your shopping list.</p>
@@ -503,6 +548,7 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
    <div class="lab" style="margin-top:0">Measures</div><div class="tg" id="u1"></div>
    <div class="lab">Oven and meat temperature</div><div class="tg" id="u2"></div>
   </section>
+  <section class="panel" id="cooklog"><div class="lab"><svg class="i"><use href="#i-chef"/></svg>Your cooking log</div><div id="cooklogbody"></div></section>
  </div>
 </div>
 <footer>© <span id="yr">2026</span> Strahinja Drazic. All rights reserved.</footer>
@@ -613,7 +659,7 @@ function draw(){
   $("mode").querySelectorAll("button").forEach(b=>b.onclick=()=>{S[b.dataset.k]=!S[b.dataset.k];save();draw()});
   $("mh").textContent=S.strict?"Only what I have: you only get meals your fridge and staples cover. If nothing fits, you see what to add.":"Closest real recipe to your fridge. Anything missing goes on the to-buy list.";
   $("planmode").innerHTML=`<button aria-pressed="${!!S.plan}" id="plt">${I("cal")}Plan several days</button>`;
-  $("plt").onclick=()=>{S.plan=!S.plan;save();draw()};
+  $("plt").onclick=()=>{S.plan=!S.plan;save();draw();if(S.plan)requestAnimationFrame(()=>$("planx").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth",block:"center"}))};
   $("planx").hidden=!S.plan;GEN.bakeOnly=!!S.bake;
   $("ah").textContent=S.plan?"Spin plans your days with generated meals. Whisk builds every meal as a new mix of two saved recipes.":"Spin picks a saved recipe. Whisk invents a new one from two of them.";
   $("dn").textContent=S.days+(S.days>1?" days":" day");
@@ -1066,7 +1112,7 @@ function cookMode(r){
   const close=()=>{clearInterval(tm);ov.remove();document.body.style.overflow="";document.removeEventListener("keydown",key);document.removeEventListener("visibilitychange",vis);if(wl){wl.release().catch(()=>{});wl=null}};
   const key=e=>{if(e.key==="Escape")close();else if(e.key==="ArrowRight")go(1);else if(e.key==="ArrowLeft")go(-1)};
   const vis=()=>{if(document.visibilityState==="visible"&&navigator.wakeLock&&ov.isConnected)navigator.wakeLock.request("screen").then(x=>wl=x).catch(()=>{})};document.addEventListener("visibilitychange",vis);
-  function finish(){clearInterval(tm);ov.innerHTML=`<div class="ck-done"><div class="conf" aria-hidden="true"><span>🎉</span><span>🍽️</span><span>✨</span><span>🥂</span><span>🎊</span></div><h2>Bon appétit!</h2><p>${esc(r.title)}</p><button class="ck-n">Close</button></div>`;ov.querySelector(".ck-n").onclick=close;ov.querySelector(".ck-n").focus();navigator.vibrate&&navigator.vibrate([80,60,80,60,200])}
+  function finish(){clearInterval(tm);ov.innerHTML=`<div class="ck-done"><svg class="ck-badge" viewBox="0 0 120 120" aria-hidden="true"><circle class="bg" cx="60" cy="60" r="52"/><path class="tick" d="M36 62l16 16 32-36"/></svg><h2>Enjoy your meal</h2><p>${esc(r.title)}</p>${(function(){try{return window.__logCooked?`<p class="ck-meta">${window.__logCooked(r.title)}</p>`:""}catch(e){return ""}})()}<button class="ck-n">Done</button></div>`;ov.querySelector(".ck-n").onclick=close;ov.querySelector(".ck-n").focus();navigator.vibrate&&navigator.vibrate([80,60,80,60,200])}
   function go(d){i=Math.max(0,Math.min(steps.length-1,i+d));paint()}
   function paint(){
     clearInterval(tm);const s=steps[i],sec=mins(s),last=i===steps.length-1;
@@ -1174,6 +1220,83 @@ function fill(){const mine=[];[...S.pantry,...(S.useLeftovers?S.leftovers:[])].f
   const list=[...mine.sort(()=>Math.random()-.5).slice(0,6)];DEF.forEach(e=>{if(list.length<6&&!list.includes(e))list.push(e)});
   document.querySelectorAll("#reel .ing i").forEach((el,k)=>el.textContent=list[k]||DEF[k])}
 const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,arguments)};
+})();
+
+/* ---- cooking log (local only), keyboard shortcuts ---- */
+(function(){
+  const day=ts=>new Date(ts).toDateString(),DAY=864e5;
+  const log=()=>store("cooklog")||[];
+  function streak(l){const d=new Set(l.map(x=>day(x.d)));let t=Date.now();if(!d.has(day(t)))t-=DAY;let n=0;while(d.has(day(t))){n++;t-=DAY}return n}
+  window.__logCooked=function(title){const l=log();l.unshift({t:title,d:Date.now()});store("cooklog",l.slice(0,300));renderLog();const n=l.length+0,st=streak(l);return "Meal #"+n+(st>1?" · "+st+"-day streak":"")};
+  function ago(ts){const n=Math.round((new Date(day(Date.now()))-new Date(day(ts)))/DAY);return n<=0?"today":n===1?"yesterday":n+" days ago"}
+  function renderLog(){
+    const b=$("cooklogbody");if(!b)return;const l=log();
+    if(!l.length){b.innerHTML='<p class="hint" style="margin:0">Finish a recipe in cooking mode and it shows up here, with your streak. Saved on this device only.</p>';return}
+    const wk=l.filter(x=>Date.now()-x.d<7*DAY).length,st=streak(l);
+    const names=["S","M","T","W","T","F","S"];let dots="";
+    for(let i=6;i>=0;i--){const t=Date.now()-i*DAY;dots+=`<i class="${l.some(x=>day(x.d)===day(t))?"on":""}" title="${esc(day(t))}">${names[new Date(t).getDay()]}</i>`}
+    b.innerHTML=`<div class="cl-stats"><div><b>${l.length}</b><span>meals cooked</span></div><div><b>${st}</b><span>day streak</span></div><div><b>${wk}</b><span>this week</span></div></div><div class="cl-days" aria-label="Last 7 days">${dots}</div><ul class="cl-list">${l.slice(0,5).map(x=>`<li>${esc(x.t)}<span>${ago(x.d)}</span></li>`).join("")}</ul><button type="button" class="lnk" id="clearlog" style="display:block;margin:12px 0 0;font-size:13px">Clear log</button>`;
+    $("clearlog").onclick=()=>{if(confirm("Clear your cooking log?")){store("cooklog",[]);renderLog()}};
+  }
+  renderLog();
+  const _st=setTab;setTab=function(t){const r=_st.apply(this,arguments);if(t==="kit")renderLog();return r};
+  document.addEventListener("keydown",e=>{
+    if(e.metaKey||e.ctrlKey||e.altKey||e.defaultPrevented)return;
+    const el=e.target;if(el&&el.closest&&el.closest("input,textarea,select,button,a,[contenteditable],[role=listbox]"))return;
+    if(document.querySelector(".cookov"))return;
+    const k=e.key.toLowerCase(),tabs=["cook","pizza","ferm","kit"];
+    if(k>="1"&&k<="4"){setTab(tabs[+k-1]);return}
+    if(tab==="cook"){if(k==="s"){const b=$("spin");if(b&&!b.disabled)b.click()}else if(k==="w"){const b=$("remix");if(b&&!b.disabled)b.click()}}
+  });
+})();
+
+
+/* ---- first-run tour + shake to spin ---- */
+(function(){
+  const STEPS=[["#meals","Pick a meal","Morning, Bite, Big plate or Treat. Spin and Plan ahead both use it."],["#tags","Add what you have","Type what is in your fridge, or skip it and spin anyway."],["#spin","Spin or Whisk","Spin picks a saved recipe. Whisk invents a new one from two of them."],["#tabs","More than dinner","Pizza night works out dough, Ferment covers jars and bakes, My kitchen keeps your staples and log."]];
+  let box=null,hl=null,idx=0;
+  function clear(){if(hl){hl.classList.remove("tour-hl");hl=null}}
+  function end(){clear();if(box){box.remove();box=null}store("tour",1);document.removeEventListener("keydown",esc)}
+  function esc(e){if(e.key==="Escape")end()}
+  function show(){
+    const st=STEPS[idx];clear();
+    if(idx<3){if(tab!=="cook")setTab("cook")}
+    const t=document.querySelector(st[0]);
+    if(t){hl=t;t.classList.add("tour-hl");const r=t.getBoundingClientRect(),fixed=getComputedStyle(t).position==="fixed";if(!fixed)window.scrollTo({top:Math.max(0,r.top+scrollY-innerHeight*.22),behavior:"smooth"})}
+    box.innerHTML=`<small>Quick tour · ${idx+1} of ${STEPS.length}</small><h3>${st[1]}</h3><p>${st[2]}</p><div class="tour-row"><div class="tour-dots" aria-hidden="true">${STEPS.map((_,i)=>`<i class="${i===idx?"on":""}"></i>`).join("")}</div><div class="tour-b"><button type="button" class="tour-s">${idx<STEPS.length-1?"Skip":""}</button><button type="button" class="tour-n">${idx<STEPS.length-1?"Next":"Got it"}</button></div></div>`;
+    box.querySelector(".tour-n").onclick=()=>{if(idx<STEPS.length-1){idx++;show()}else end()};
+    const sk=box.querySelector(".tour-s");sk.onclick=end;if(!sk.textContent)sk.remove();
+    box.querySelector(".tour-n").focus({preventScroll:true});
+  }
+  window.__startTour=function(){if(box)return;idx=0;box=document.createElement("div");box.className="tour";box.setAttribute("role","dialog");box.setAttribute("aria-label","Quick tour");document.body.appendChild(box);document.addEventListener("keydown",esc);show()};
+  const fresh=store("tour")===null&&!(store("cooklog")||[]).length&&!(store("favs2")||[]).length&&!S.pantry.length&&!(S.staples||[]).length;
+  if(fresh)setTimeout(()=>{if(!document.querySelector(".cookov"))window.__startTour()},900);
+  /* shake */
+  const canShake="DeviceMotionEvent" in window&&matchMedia("(hover:none)").matches;
+  let hits=[],last=0;
+  function onMotion(e){
+    const a=e.accelerationIncludingGravity;if(!a)return;
+    const m=Math.sqrt((a.x||0)**2+(a.y||0)**2+(a.z||0)**2),t=Date.now();
+    if(Math.abs(m-9.8)>14){hits=hits.filter(h=>t-h<700);hits.push(t);
+      if(hits.length>=3&&t-last>2500){hits=[];last=t;
+        const ae=document.activeElement;if(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))return;
+        if(tab==="cook"&&!document.querySelector(".cookov,.tour")){const b=$("spin");if(b&&!b.disabled){b.click();navigator.vibrate&&navigator.vibrate(30)}}}}
+  }
+  const set=v=>{if(v){addEventListener("devicemotion",onMotion)}else removeEventListener("devicemotion",onMotion)};
+  if(canShake&&store("shake")===1)set(true);
+  const grid=document.querySelector("#tab-kit .kgrid");
+  if(grid){
+    const sec=document.createElement("section");sec.className="panel";sec.id="kitextras";
+    sec.innerHTML=`<div class="lab">Extras</div>${canShake?`<div class="xtra-row"><p><b>Shake to spin</b>Shake your phone on the Cook page to spin.</p><div class="tg"><button type="button" id="shaketg" aria-pressed="${store("shake")===1}">${store("shake")===1?"On":"Off"}</button></div></div>`:""}<div class="xtra-row"><p><b>Quick tour</b>A 4-step walk through the app.</p><div class="tg"><button type="button" id="tourtg">Replay</button></div></div>`;
+    grid.appendChild(sec);
+    $("tourtg").onclick=()=>{setTab("cook");setTimeout(window.__startTour,250)};
+    const sb=$("shaketg");
+    if(sb)sb.onclick=()=>{
+      const on=sb.getAttribute("aria-pressed")!=="true";
+      const apply=ok=>{sb.setAttribute("aria-pressed",String(ok));sb.textContent=ok?"On":"Off";store("shake",ok?1:0);set(ok)};
+      if(on&&typeof DeviceMotionEvent.requestPermission==="function"){DeviceMotionEvent.requestPermission().then(r=>apply(r==="granted")).catch(()=>apply(false))}else apply(on);
+    };
+  }
 })();
 if("serviceWorker" in navigator&&location.protocol.startsWith("http")){
   const had=!!navigator.serviceWorker.controller;let reloaded=false;

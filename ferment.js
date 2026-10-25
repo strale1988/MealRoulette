@@ -333,7 +333,7 @@ function build(){
  const tmp=m.noTemp?"":`<div class="lab" style="margin-top:16px">${I("clock")}Room temperature</div><div class="tg">${TEMPS.map(t=>`<button data-a="t" data-id="${t.id}" aria-pressed="${ST.temp===t.id}">${t.n}</button>`).join("")}</div><p class="sum" style="margin:10px 0 0">${TEMPS.find(t=>t.id===ST.temp).r}. Warmer means faster.</p>`;
  const pcs=m.id==="lemons"?` · about ${Math.max(1,Math.round(g/110))} fruit`:"";
  const side=`
- <p class="hint2" style="margin:0 0 8px">Pick what you are making, or spin for an idea. Every amount, including the salt, is worked out for you in grams.</p>
+ <p class="hint2" style="margin:0 0 8px">Every amount, including the salt, is worked out for you in grams.</p>
  <section class="panel">
   <div class="lab">${I("jar")}What are you making?</div>
   <div class="tg fm">${mm}</div>
@@ -367,7 +367,7 @@ function build(){
  }
  const bt=ST.batches.length?ST.batches.map((b,i)=>`<li class="${isReady(b)?"rdy":""}"><div><b>${esc(b.title)}</b>${isReady(b)?' <span class="rdytag">Ready</span>':""}<small>Started ${fmtDate(b.start+"T00:00:00")} · ${esc(status(b))}</small></div><button data-a="rm" data-id="${i}" aria-label="Remove ${esc(b.title)}">${I("x")}</button></li>`).join(""):`<li class="none">Nothing on the go. Start a batch and its tasting days show up here.</li>`;
  const batches=`<section class="panel fmb"><div class="lab">${I("cal")}My ferments</div><ul>${bt}</ul></section>`;
- root.innerHTML=`<div class="cols"><aside class="side">${side}</aside><section class="res"><div id="fmout">${out}</div>${batches}</section></div>`;
+ root.innerHTML=`<h1 class="hl">What are we fermenting?</h1><p>Pick something to make, or spin for an idea.</p><div class="cols"><aside class="side">${side}</aside><section class="res"><div id="fmout">${out}</div>${batches}</section></div>`;
  root.querySelectorAll(".ing li").forEach(li=>li.onclick=()=>li.classList.toggle("done"));
  root._r=r;
  const nb=ST.batches.filter(isReady).length,tb=document.querySelector('#tabs [data-t="ferm"]');
