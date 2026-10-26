@@ -637,6 +637,8 @@ body .reel.on .rtx,body .fmreel .rtx{grid-row:3;align-self:start;justify-self:ce
 @media (prefers-reduced-motion:no-preference){.row button.spinagain:hover .i,.row button.spinagain:active .i{transform:rotate(360deg)}}
 /* Start cooking and Spin again: exactly half of the row each */
 .row:has(.go):has(.spinagain) .go,.row:has(.go) .spinagain{flex:0 0 calc(50% - 4px);box-sizing:border-box;min-width:0;white-space:nowrap;padding:0 10px;gap:8px;font-size:clamp(16px,4.6vw,20px);overflow:hidden}
+/* phones: Start cooking, then Spin again, one below the other, full width */
+@media (max-width:700px){.row:has(.go):has(.spinagain) .go,.row:has(.go) .spinagain{flex:0 0 100%;min-height:56px;font-size:20px}.row:has(.go):has(.spinagain) .go{order:-2}.row:has(.go) .spinagain{order:-1}}
 
 /* ---- My kitchen: the bookshelf ---- */
 .kbar{grid-template-columns:repeat(5,1fr)}
@@ -682,9 +684,14 @@ body .reel.on .rtx,body .fmreel .rtx{grid-row:3;align-self:start;justify-self:ce
 .shview{margin:0 0 12px}
 /* one long shelf: medium upright spines, grouped into labelled sections */
 /* continent sign: a divider card standing on the shelf just before that continent's books */
-.dv{--h:140px;position:relative;z-index:1;flex:none;width:34px;height:var(--h);box-sizing:border-box;margin:0 5px 0 4px;margin-bottom:calc(var(--bw)*-1);display:flex;align-items:center;justify-content:center;border:var(--bw) solid var(--ink);border-radius:8px 8px 0 0;background:var(--card);color:var(--ink)}
-.dv::before{content:"";position:absolute;inset:4px;border:2px dashed var(--ink);border-radius:5px 5px 0 0;border-bottom:0;opacity:.35;pointer-events:none}
-.dv span{writing-mode:vertical-rl;white-space:nowrap;font:800 15px/1 Bricolage,"DM Sans",sans-serif;letter-spacing:.1em;text-transform:uppercase}
+.dv{--h:140px;--c:var(--card);position:relative;z-index:1;flex:none;width:46px;height:var(--h);box-sizing:border-box;margin:0 6px 0 8px;margin-bottom:calc(var(--bw)*-1);display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:8px;padding:10px 0 8px;border:var(--bw) solid var(--ink);border-radius:10px 10px 0 0;background:var(--c);color:#2a1a13;box-shadow:3px 0 0 var(--ink)}
+.dv::before{content:"";position:absolute;inset:4px;border:2px dashed var(--ink);border-radius:6px 6px 0 0;border-bottom:0;opacity:.3;pointer-events:none}
+.dv span{flex:1;min-height:0;writing-mode:vertical-rl;white-space:nowrap;font:800 16px/1 Bricolage,"DM Sans",sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.dv em{flex:none;display:grid;place-items:center;min-width:26px;height:26px;padding:0 4px;box-sizing:border-box;border:2px solid var(--ink);border-radius:99px;background:var(--card);color:var(--ink);font:800 12px/1 "DM Sans",sans-serif;font-style:normal}
+/* a bookend closes each continent: slim block in the same colour */
+.dv.en{width:18px;margin:0 8px 0 4px;padding:0;justify-content:flex-end;border-radius:6px 6px 0 0;box-shadow:-3px 0 0 var(--ink)}
+.dv.en::before{display:none}
+.dv.en::after{content:"";width:100%;height:14px;border-top:var(--bw) solid var(--ink);background:var(--ink);opacity:.18}
 .shelfhint{margin:10px 2px 0;font-size:13px;color:var(--mute)}
 .bkhead{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-bottom:12px}
 .bkback{display:inline-flex;align-items:center;gap:4px;border:var(--bw) solid var(--ink);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 14px 6px 8px;font:800 14px "DM Sans",sans-serif;cursor:pointer;box-shadow:2px 2px 0 var(--ink)}
@@ -958,7 +965,7 @@ body .reel.on .rtx,body .fmreel .rtx{grid-row:3;align-self:start;justify-self:ce
   </section>
    </div>
   </section>
-  <section class="kzone" id="kz-shelf" data-c="0"><header class="kzh"><span class="kzb"><svg class="i"><use href="#i-book"/></svg></span><div><h2>On the shelf</h2><p>Pick a shelf, then pull out a cookbook and flip through its recipes.</p></div></header>
+  <section class="kzone" id="kz-shelf" data-c="0"><header class="kzh"><span class="kzb"><svg class="i"><use href="#i-book"/></svg></span><div><h2>On the shelf</h2><p>Every cookbook on one shelf, grouped by continent. Pull one out and flip through its recipes.</p></div></header>
    <div id="shelfbox" class="shelfbox" aria-live="polite"></div>
   </section>
  </div>
@@ -2052,13 +2059,14 @@ let cur=null,cont=null,q="",mf="",sig="",lastW=0,back=0;
 let view="all"; // regions = bookcase per continent; all = every cookbook on one packed shelf
 // shelves: books are grouped by region. A cuisine not listed here lands on "More books", so nothing ever disappears.
 const SHELVES=[
+ ["ev","Everyday cooking",["Everyday"]],
  ["na","North America",["American","Canadian","Cajun","Mexican","Belizean","Caribbean","Costa Rican","Cuban","Dominican","Guatemalan","Haitian","Honduran","Jamaican","Nicaraguan","Panamanian","Puerto Rican","Salvadoran","Trinidadian"]],
  ["sa","South America",["Argentine","Bolivian","Brazilian","Chilean","Colombian","Ecuadorian","Guyanese","Paraguayan","Peruvian","Surinamese","Uruguayan","Venezuelan"]],
  ["eu","Europe",["Balkan","British","Danish","French","German","Greek","Hungarian","Irish","Italian","Norwegian","Polish","Portuguese","Russian","Scottish","Spanish","Swedish","Swiss","Ukrainian"]],
  ["as","Asia",["Lebanese","Middle Eastern","Persian","Turkish","Armenian","Azerbaijani","Georgian","Kazakh","Kyrgyz","Tajik","Turkmen","Uzbek","Indian","Nepali","Pakistani","Sri Lankan","Chinese","Filipino","Indonesian","Japanese","Korean","Malaysian","Singaporean","Taiwanese","Thai","Vietnamese"]],
  ["af","Africa",["Cameroonian","Congolese","Eritrean","Ethiopian","Ghanaian","Ivorian","Kenyan","Malian","Moroccan","Nigerian","Senegalese","Somali","South African","Sudanese","Tanzanian","Ugandan"]],
  ["oc","Oceania",["Australian","Fijian","Māori","Papua New Guinean","Samoan","Tongan"]],
- ["ev","Everyday cooking",["Everyday"]]];
+ ];
 function shelves(list){
   const used=new Set(),out=[];
   SHELVES.forEach(([id,name,names])=>{const bs=list.filter(b=>names.includes(b.name));bs.forEach(b=>used.add(b.name));if(bs.length)out.push({id,name,books:bs})});
@@ -2085,7 +2093,7 @@ function unitsOf(list,tight){
   const u=[];
   if(tight)return list.map(b=>({k:"up",b,w:b.tw,t:1}));
   for(let i=0;i<list.length;i++){const b=list[i],h=hash(b.name);
-    if((h>>7)%7===0&&i+1<list.length){const g=list.slice(i,i+2+((h>>10)%2));u.push({k:"stack",bs:g,w:Math.max(...g.map(x=>x.L))+24});i+=g.length-1}
+    if((h>>7)%4===0&&i+2<list.length){const g=list.slice(i,i+3+((h>>10)%4));u.push({k:"stack",bs:g,w:Math.max(...g.map(x=>x.L))+24});i+=g.length-1}
     else if((h>>11)%5===0)u.push({k:"lean",b,ex:Math.ceil(b.h*Math.sin(b.ang*Math.PI/180)),w:b.w});
     else u.push({k:"up",b,w:b.w});
   }
@@ -2095,7 +2103,7 @@ const uw=x=>x.k==="lean"?x.w+x.ex:x.w;
 function rowsOf(list,tight,avail,units){
   const W=avail?avail-(matchMedia("(max-width:420px)").matches?30:42):(box.clientWidth||360)-(matchMedia("(max-width:420px)").matches?24:36),rows=[[]];let used=0;
   const us=units||unitsOf(list,tight);
-  us.forEach((x,i)=>{const w=uw(x),need=x.dv&&us[i+1]?w+uw(us[i+1]):w;if(used+need>W&&rows[rows.length-1].length){rows.push([]);used=0}rows[rows.length-1].push(x);used+=w});
+  us.forEach((x,i)=>{const w=uw(x),nx=us[i+1],need=(x.dv&&!x.en&&nx)||(nx&&nx.en)?w+uw(nx):w;if(used+need>W&&rows[rows.length-1].length){rows.push([]);used=0}rows[rows.length-1].push(x);used+=w});
   return rows.map(r=>arrange(r,W));
 }
 // a row starts and ends with a standing book; leaning books rest on a standing neighbour, piles sit in between
@@ -2114,7 +2122,8 @@ function spine(b,cls,style){
   return `<button type="button" class="bk ${cls} p${b.p}${b.name.length>11?" sm":""}" data-b="${esc(b.name)}" style="--c:${b.c};${style}" aria-label="${esc(b.name)} cookbook, ${n} ${n===1?"recipe":"recipes"}"><i class="bd"></i><b>${esc(b.name)}</b><span class="bn">${n}</span></button>`;
 }
 function unitHTML(x){
-  if(x.dv)return `<div class="dv" role="heading" aria-level="3" style="--h:${x.h}px"><span>${esc(x.name)}</span></div>`;
+  if(x.dv&&x.en)return `<div class="dv en" aria-hidden="true" style="--h:${x.h}px;--c:${x.c}"></div>`;
+  if(x.dv)return `<div class="dv" role="heading" aria-level="3" aria-label="${esc(x.name)}, ${x.n} cookbooks" style="--h:${x.h}px;--c:${x.c}"><span>${esc(x.name)}</span><em>${x.n}</em></div>`;
   if(x.k==="stack"){const mx=Math.max(...x.bs.map(b=>b.L));return `<div class="stack">${x.bs.map(b=>{const a=(mx-b.L)/2+4,o=Math.max(-a,Math.min(a,b.o));return spine(b,"flat",`--L:${b.L}px;--T:${b.T}px;--o:${o}px`)}).join("")}</div>`}
   const b=x.b;
   if(x.k==="lean"){const r=x.dir==="r";return spine(b,"lean "+(r?"r":"l"),`--h:${b.h}px;--w:${b.w}px;--t:${r?b.ang:-b.ang}deg;margin-${r?"right":"left"}:${x.ex}px`)}
@@ -2135,7 +2144,7 @@ function paintShelf(){
   $("kt-shelf").textContent=list.length;$("kl-shelf").textContent=list.length===1?"cookbook on the shelf":"cookbooks on the shelf";
   if(cur&&!list.some(b=>b.name===cur))cur=null;
   const shs=shelves(list);
-  if(cur){if(view==="all")return paintBook(list.find(b=>b.name===cur),hidden,{id:"all",name:"All books"});const sh=shs.find(s=>s.books.some(b=>b.name===cur));cont=sh.id;return paintBook(list.find(b=>b.name===cur),hidden,sh)}
+  if(cur){if(view==="all")return paintBook(list.find(b=>b.name===cur),hidden,{id:"all",name:"Shelf"});const sh=shs.find(s=>s.books.some(b=>b.name===cur));cont=sh.id;return paintBook(list.find(b=>b.name===cur),hidden,sh)}
   if(cont&&!shs.some(s=>s.id===cont))cont=null;
   if(!list.length){box.innerHTML='<div class="ph" style="display:block"><b>Your shelf is empty</b>Your diet filters hide every recipe. Loosen them in Around the table.</div>';return}
   const note=hidden?` ${hidden} ${hidden===1?"recipe is":"recipes are"} hidden by your diet filters.`:"";
@@ -2143,8 +2152,12 @@ function paintShelf(){
     // one long shelf: each continent starts with a sign. The first and last book of a continent always stand, so a sign is never next to a leaning book or a pile.
     const stand=x=>x.k==="stack"?x.bs.map(b=>({k:"up",b,w:b.w})):x.k==="lean"?[{k:"up",b:x.b,w:x.w}]:[x];
     const units=[];
+    const SC={ev:"#ffc63d",na:"#ff9b82",sa:"#7fd1a6",eu:"#8ecae6",as:"#b9a2f0",af:"#f4a261",oc:"#f6e27a",more:"#e0d6c8"};
     shs.forEach(sc=>{let u=unitsOf(sc.books);if(u.length){u=[...stand(u[0]),...u.slice(1)];const l=u.pop();u.push(...stand(l))}
-      units.push({k:"up",dv:true,name:sc.name,w:42,h:Math.max(120,Math.ceil(40+sc.name.length*12.5))},...u)});
+      // the Everyday book comes first and needs no sign; every continent starts with a coloured sign and ends with a bookend
+      if(sc.id!=="ev")units.push({k:"up",dv:true,name:sc.name,n:sc.books.length,c:SC[sc.id]||SC.more,w:60,h:Math.max(130,Math.ceil(80+sc.name.length*13))});
+      units.push(...u);
+      if(sc.id!=="ev")units.push({k:"up",dv:true,en:true,c:SC[sc.id]||SC.more,w:30,h:92})});
     box.innerHTML=`<div class="shelf">${rowsOf(null,false,0,units).map(r=>`<div class="shrow">${r.map(unitHTML).join("")}</div><div class="plank"></div>`).join("")}</div>`
      +`<p class="shelfhint">${list.length} cookbooks, grouped by continent. Tap a spine to open the book.${note}</p>`;
     fit();
