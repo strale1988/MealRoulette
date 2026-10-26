@@ -16,7 +16,7 @@ function enter(){if(res)return;res=true;root.classList.add("resmode");if(small()
 function leave(){if(!res)return;res=false;root.classList.remove("resmode");scrollTo({top:0})}
 function back(){if(history.state&&history.state.mrres)history.back();else leave()}
 addEventListener("popstate",()=>{if(res)leave()});
-{const tb=document.querySelector('#tabs [data-t="ferm"]');if(tb)tb.addEventListener("click",()=>{if(res&&small())back()})}
+{const tb=document.querySelector('#tabs [data-t="craft"]');if(tb)tb.addEventListener("click",()=>{if(res&&small())back()})}
 
 /* ---------- rounding: salt is exact to 0.5 g, everything else to a sensible kitchen step ---------- */
 const rg=a=>a<10?Math.round(a*2)/2:a<100?Math.round(a):a<500?Math.round(a/5)*5:Math.round(a/10)*10;

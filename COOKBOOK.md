@@ -66,6 +66,12 @@ node tools/check.js
 
 The converter matches names to the catalog, turns ml into grams, names canned legumes canned, re-tags sweet recipes as treats, and drops ready-made dishes (burgers, nuggets, hot dogs...). It lists every ingredient it could not match; add those to `ingredients.js` and run the checker again.
 
+## The shelf (My kitchen)
+
+Every cuisine becomes a cookbook on the shelf, grouped into wooden continent compartments. A cuisine gets its place from the `SHELVES` list in `index.html`; a cuisine missing from it lands on "More books", so add new cuisines there. Each continent has one colour family and one top pattern (`SC` and `PATN` in `index.html`), and a book's thickness grows with its recipe count.
+
+After changing the shelf code, run `node tools/shelf-test.js`. It opens the app in a real browser at 11 widths, in light and dark mode, and fails on a frozen page, clipped books, a row without a closed right side, a cut-off label or a missing cookbook. It needs Playwright once: `npm i -D playwright && npx playwright install chromium`.
+
 ## Pizza night (`pizza.js`)
 
 Pizza is generated from data, not stored as 57 separate step lists:

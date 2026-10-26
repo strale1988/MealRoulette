@@ -13,7 +13,7 @@ K.ROLES=["protein","carb","veg","fruit","dairy","fat","flavour","herb","sauce","
 // names the generator (engine.js) has flavours for; a recipe's cuisine should be one of these
 K.CUISINES=["Italian","Mexican","Indian","Thai","Chinese","Japanese","Korean","Greek","Middle Eastern","French","Spanish","Balkan","Moroccan","Vietnamese","Caribbean","Turkish","Hungarian","Indonesian","Peruvian","Cajun","Persian","German","Polish","Ethiopian","Portuguese"];
 // meal keys used by the app; recipe files may use the friendly names on the left
-K.MEAL={morning:"Breakfast",wake:"Breakfast",breakfast:"Breakfast",bite:"Snack",snack:"Snack",big:"Main",main:"Main",lunch:"Main",dinner:"Main",treat:"Dessert",dessert:"Dessert"};
+K.MEAL={extra:"Extra",pantry:"Extra",drink:"Extra",component:"Extra",morning:"Breakfast",wake:"Breakfast",breakfast:"Breakfast",bite:"Snack",snack:"Snack",big:"Main",main:"Main",lunch:"Main",dinner:"Main",treat:"Dessert",dessert:"Dessert"};
 // flags: meat fish shell dairy egg gluten nuts soy pork alcohol honey (diets) · pantry (assumed at home) · canned (ready to eat) · dried:N (needs N+ minutes) · sub:group (swappable)
 const FLAGS=new Set("meat fish shell dairy egg gluten nuts soy pork alcohol honey pantry canned".split(" "));
 const SWEET=["sugar","cocoa","vanilla","baking-powder","maple-syrup","honey"];
@@ -41,6 +41,35 @@ K.name=id=>K.ING[id]?K.ING[id].name:id;
 K.PLURAL={onion:"onions",shallot:"shallots","spring-onion":"spring onions","red-onion":"red onions",leek:"leeks",carrot:"carrots","red-pepper":"bell peppers",aubergine:"aubergines",avocado:"avocados",beetroot:"beetroots",cucumber:"cucumbers",plantain:"plantains","sweet-potato":"sweet potatoes",banana:"bananas",apple:"apples",pear:"pears",lemon:"lemons",lime:"limes",orange:"oranges",mango:"mangoes","bay-leaf":"bay leaves","chicken-breast":"chicken breasts",salmon:"salmon fillets","white-fish":"white fish fillets"};
 K.label=id=>K.ING[id]?(K.PLURAL[id]||K.ING[id].name):id;
 K.aisleOf=name=>{const id=K.match(name)[0];return id?K.AISLE[K.ING[id].aisle]:null};
+
+/* ---------- Craft tools (the Craft tab) ----------
+   Every tool is one row here. A recipe belongs to at most one tool: write craft:"burger" in the recipe, or leave it out and the tool is
+   derived from the name when "words" matches (only the clear-cut tools have words; the rest need the explicit tag, so nothing is mislabelled).
+   Recipes still go through K.add like every other recipe: same ingredients, diet flags, scaling, shopping list, fridge matching and search.
+   The Craft page (index.html, UI table) only adds an icon, a blurb and a group; a tool added here alone still gets a working card. */
+K.CRAFTS=[
+ {id:"pizza",name:"Pizza night",words:/\b(pizzas?|calzone)\b/i},
+ {id:"bread",name:"Bread",words:/\b(bread|loaf|sourdough|focaccia|baguette|brioche|ciabatta|flatbreads?)\b/i,not:/pudding|crumb|sandwich|toast/i},
+ {id:"pasta",name:"Pasta",words:/\b(pasta|spaghetti|tagliatelle|linguine|fettuccine|lasagn[ae]|ravioli|gnocchi|penne|rigatoni)\b/i},
+ {id:"dumpling",name:"Dumplings",words:/\b(dumplings?|gyoza|pierogi|momos?|wontons?|empanadas?)\b/i},
+ {id:"burger",name:"Burgers",words:/\bburgers?\b/i},
+ {id:"soup",name:"Soups and stocks",words:/\b(soups?|broth|chowder|bisque|stock)\b/i},
+ {id:"grill",name:"Grill and BBQ",words:null},
+ {id:"grain",name:"Rice and grains",words:/\b(rice|risotto|pilaf|pilau|couscous|quinoa|bulgur|polenta|congee|porridge)\b/i,not:/pudding|noodles?|paper|cake|crispy treats?/i},
+ {id:"noodle",name:"Noodles and stir-fry",words:/\b(noodles?|ramen|udon|soba|lo mein|chow mein|pad thai|stir[- ]fr(y|ied))\b/i,not:/soup|salad/i},
+ {id:"sandwich",name:"Sandwiches and wraps",words:/\b(sandwich(es)?|wraps?|toasties|toastie|panini|burritos?|quesadillas?)\b/i},
+ {id:"salad",name:"Salads and bowls",words:/\b(salads?|slaw|coleslaw)\b/i},
+ {id:"eggs",name:"Eggs and batters",words:/\b(omelettes?|omelets?|pancakes?|crepes?|waffles?|frittata|scrambled|shakshuka|french toast)\b/i},
+ {id:"sauce",name:"Sauces and dressings",words:null},
+ {id:"ferm",name:"Fermentation station",words:null},
+ {id:"dairy",name:"Dairy ferments",words:null},
+ {id:"jam",name:"Jams and preserves",words:null},
+ {id:"spice",name:"Spice blends and pastes",words:null},
+ {id:"bake",name:"Baking",words:null},
+ {id:"frozen",name:"Frozen treats",words:/\b(ice cream|sorbet|granita|popsicles?|ice lollies|ice lolly)\b/i},
+ {id:"drinks",name:"Drinks",words:null}
+];
+K.craftOf=name=>{const n=String(name||""),c=K.CRAFTS.find(c=>c.words&&c.words.test(n)&&!(c.not&&c.not.test(n)));return c?c.id:""};
 
 /* ---------- ingredient catalog ---------- */
 // row: [id, display name, aisle, role, kcal/100g, protein/100g, flags, aliases (comma), grams per piece, generator slots ("p:chicken,c:rice,v:carrot")]
@@ -187,6 +216,7 @@ K.add=list=>list.forEach(r=>{
   if(!(r.time>=5&&r.time<=240))Wn("time looks wrong: "+r.time);
   if(!(r.serves>=1))P("serves must be 1 or more");
   if(r.cuisine&&!K.CUISINES.includes(r.cuisine))Wn("cuisine '"+r.cuisine+"' has no generator flavours");
+  if(r.craft&&!K.CRAFTS.some(c=>c.id===r.craft))P("unknown craft '"+r.craft+"' (add the tool to K.CRAFTS in kitchen.js)");
   const seen=new Set(),ing=(r.ing||[]).map(a=>{
     const id=a[0],v=a[1],pc=typeof v==="string"&&/^[\d.]+pc$/.test(v),amt=pc?parseFloat(v):v;
     if(!K.ING[id])P("unknown ingredient '"+id+"' (add it to ingredients.js)");
@@ -225,11 +255,11 @@ K.add=list=>list.forEach(r=>{
   const leftoverSwaps=[...new Set(Array.isArray(r.leftoverSwaps)?r.leftoverSwaps:[])];
   leftoverSwaps.forEach(raw=>{if(!K.LEFTOVER_SWAPS[raw])P("unknown leftover substitution for '"+raw+"'");else if(!seen.has(raw))P("leftover substitution '"+raw+"' is not a recipe ingredient");});
   if(K.problems.slice(bad0).some(p=>p.lvl==="error"))return;
-  K.recipes.push({id:r.id,title:r.name,meals,min:r.time,serv:r.serves,cuisine:r.cuisine||"",note:r.note||"",leftoverSwaps,ing,steps,flags,slots,ids:ing.map(i=>i.id)});
+  K.recipes.push({id:r.id,title:r.name,meals,min:r.time,serv:r.serves,cuisine:r.cuisine||"",craft:r.craft||K.craftOf(r.name),note:r.note||"",leftoverSwaps,ing,steps,flags,slots,ids:ing.map(i=>i.id)});
 });
 
 K.report=()=>{const e=K.problems.filter(p=>p.lvl==="error"),w=K.problems.filter(p=>p.lvl==="warn");
-  return{ingredients:Object.keys(K.ING).length,recipes:K.recipes.length,errors:e,warnings:w}};
+  return{ingredients:Object.keys(K.ING).length,recipes:K.recipes.length,crafts:Object.fromEntries(K.CRAFTS.map(c=>[c.id,K.recipes.filter(r=>r.craft===c.id).length])),errors:e,warnings:w}};
 })();
 
 /* ---- shared recipe-card buttons: the same names and order on Cook, Pizza night and Ferment ----

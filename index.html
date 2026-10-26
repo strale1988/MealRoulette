@@ -521,6 +521,7 @@ footer{margin-top:28px;padding-top:12px}
 .kzone:nth-child(even) .kzb{transform:rotate(6deg)}
 .kzh h2{margin:0;font-size:23px;line-height:1.1;letter-spacing:-.02em}.kzh p{margin:3px 0 0;font-size:13.5px;line-height:1.35;color:var(--mute)}
 .kzone .kgrid{display:flex;flex-direction:column;gap:16px;margin-top:16px}
+.kzone .kgrid{align-items:stretch}.kzone .kgrid>*{min-width:0;max-width:100%}
 .kzone .panel>.lab:first-child{gap:9px;font-size:14.5px;color:var(--ink);margin-bottom:10px}
 .kzone .panel>.lab:first-child>.i{width:28px;height:28px;padding:5.5px;border-radius:50%;background:var(--za);color:#2a1a13;border:2px solid var(--ink);stroke-width:2}
 .hfaces{display:flex;align-items:flex-end;flex-wrap:wrap;gap:5px 3px;min-height:56px;padding:9px 12px;margin:2px 0 6px;border:2px dashed var(--ink);border-radius:20px;background:var(--bg)}
@@ -652,7 +653,7 @@ body .reel.on .rtx,body .fmreel .rtx{grid-row:3;align-self:start;justify-self:ce
 .shrow:last-child .plank{border-bottom:0}
 /* every book has a full outline; its bottom border sits exactly on the plank's top border */
 .bk{--c:#ffc63d;--h:180px;--w:54px;--t:0deg;position:relative;z-index:1;flex:none;width:var(--w);height:var(--h);box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:6px;padding:0 0 8px;margin-bottom:calc(var(--bw)*-1);border:var(--bw) solid var(--ink);border-radius:7px 7px 0 0;background:var(--c);color:#2a1a13;font:inherit;cursor:pointer;transition:transform .14s ease,box-shadow .14s ease}
-.shrow>.bk.up+.bk.up{margin-left:calc(var(--bw)*-1)}
+.shrow .bk.up+.bk.up{margin-left:calc(var(--bw)*-1)}
 .bk.lean{transform:rotate(var(--t))}
 .bk.lean.r{transform-origin:100% 100%}.bk.lean.l{transform-origin:0 100%}
 /* hover: like the buttons, the book is pulled slightly out of the shelf; press pushes it back in */
@@ -692,6 +693,22 @@ body .reel.on .rtx,body .fmreel .rtx{grid-row:3;align-self:start;justify-self:ce
 .dv.en{width:18px;margin:0 8px 0 4px;padding:0;justify-content:flex-end;border-radius:6px 6px 0 0;box-shadow:-3px 0 0 var(--ink)}
 .dv.en::before{display:none}
 .dv.en::after{content:"";width:100%;height:14px;border-top:var(--bw) solid var(--ink);background:var(--ink);opacity:.18}
+/* continents: each one is a wooden compartment (two upright boards, a top board and the plank below), its books share one top pattern and colour family */
+.shrow.cs{padding:0;align-items:stretch}
+.sec{flex:none;position:relative;display:flex;align-items:flex-end;padding:38px 20px 0}
+.sec+.sec{margin-left:-14px}
+.shrow.cs>.sec:last-child{flex:1 1 auto}
+.sec .wt{position:absolute;left:0;right:0;top:0;height:24px;z-index:3;display:block;padding:0 20px;box-sizing:border-box;border:var(--bw) solid var(--ink);border-top:0;background:repeating-linear-gradient(90deg,#c98a4b 0 46px,#b87a3d 46px 49px,#c98a4b 49px 92px,#d39a5a 92px 94px);font:800 12px/21px Bricolage,"DM Sans",sans-serif;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:left;color:#3a2412;text-shadow:0 1px 0 rgba(255,235,200,.45);font-style:normal}
+.sec .wd{position:absolute;top:0;bottom:calc(var(--bw)*-1);width:14px;z-index:2;box-sizing:border-box;border:var(--bw) solid var(--ink);border-top:0;border-bottom:0;background:repeating-linear-gradient(0deg,#c98a4b 0 46px,#b87a3d 46px 49px,#c98a4b 49px 92px,#d39a5a 92px 94px)}
+.sec .wt.cont{opacity:.7}
+.sec .wd.l{left:0}.sec .wd.r{right:0}
+/* more top patterns, so every continent gets its own */
+.bk.p4 .bd,.bkcover.p4 .bd{background:repeating-conic-gradient(var(--ink) 0 25%,transparent 0 50%) 0 0/8px 8px}
+.bk.p5 .bd,.bkcover.p5 .bd{background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 5px,var(--ink) 5px 7px,transparent 7px 14px)}
+.bk.p6 .bd,.bkcover.p6 .bd{background:repeating-linear-gradient(45deg,var(--ink) 0 2px,transparent 2px 6px),repeating-linear-gradient(-45deg,var(--ink) 0 2px,transparent 2px 6px)}
+.bk.p8 .bd,.bkcover.p8 .bd{background:repeating-linear-gradient(0deg,var(--ink) 0 2px,transparent 2px 5px)}
+.bk.flat.p5 .bd{background:repeating-linear-gradient(0deg,var(--ink) 0 2px,transparent 2px 5px,var(--ink) 5px 7px,transparent 7px 14px)}
+.bk.flat.p8 .bd{background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 5px)}
 .shelfhint{margin:10px 2px 0;font-size:13px;color:var(--mute)}
 .bkhead{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-bottom:12px}
 .bkback{display:inline-flex;align-items:center;gap:4px;border:var(--bw) solid var(--ink);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 14px 6px 8px;font:800 14px "DM Sans",sans-serif;cursor:pointer;box-shadow:2px 2px 0 var(--ink)}
@@ -742,8 +759,24 @@ body .reel.on .rtx,body .fmreel .rtx{grid-row:3;align-self:start;justify-self:ce
 .bkcover h3{margin:2px 0 0;font:800 clamp(28px,7vw,44px)/1 Bricolage,"DM Sans",sans-serif;letter-spacing:-.03em;text-transform:none;color:#2a1a13;overflow-wrap:anywhere}
 .bkcover p{margin:6px 0 0;font-size:13px;color:#2a1a13;opacity:.8}
 .bkcover .bn{flex:none;display:grid;place-items:center;min-width:42px;height:42px;padding:0 8px;box-sizing:border-box;border:2px solid var(--ink);border-radius:99px;background:var(--card);color:var(--ink);font:800 17px/1 "DM Sans",sans-serif}
-@media (max-width:420px){.shrow{padding:20px 12px 0}}
+@media (max-width:420px){.shrow{padding:20px 12px 0}.shrow.cs{padding:0}.sec{padding:36px 18px 0}.sec .wt{font-size:11px;padding:0 18px}}
 @media print{#kz-shelf{display:none!important}}
+/* ---- Craft hub, breadcrumb, Cook search ---- */
+.crumb{margin:0 0 4px}.crumb[hidden]{display:none}
+.crumb button{display:inline-flex;align-items:center;gap:4px;border:0;background:none;color:var(--mute);font:inherit;font-weight:700;font-size:15px;padding:6px 10px 6px 0;cursor:pointer}.crumb button:hover{color:var(--ink)}
+main:has(.tab.resmode:not([hidden])) .crumb{display:none}
+.cgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:8px}
+@media (min-width:760px){.cgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.cc{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:4px;text-align:left;padding:16px;background:var(--card);color:var(--ink);border:var(--bw,1.5px) solid var(--ink);border-radius:20px;box-shadow:var(--sh,none);font:inherit;cursor:pointer;transition:transform .14s ease}
+.cc:hover{transform:translateY(-2px)}.cc:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.cc .ci{font-size:32px;color:var(--acc);margin-bottom:4px}.cc b{font:800 18px Bricolage,sans-serif}.cc small{color:var(--mute);font-size:13px;line-height:1.3}
+.cc .soon{position:absolute;top:12px;right:12px;font-size:11px;font-weight:800;border:1.5px solid var(--ink);border-radius:999px;padding:2px 8px}
+.stubl{margin:0;padding-left:20px;line-height:1.7}.gs{margin:0 0 14px}.gs .bksearch{max-width:none}.gs .quick{margin-top:8px}.gs .quick button .i{margin-right:4px}
+.gs .bklist{margin-top:8px}.gs .bklist[hidden]{display:none}.gtool b .i{margin-right:6px;color:var(--acc)}
+.cgroup{margin-top:18px}.cgroup h2{margin:0 0 2px;font:800 15px "DM Sans",sans-serif;letter-spacing:.04em;text-transform:uppercase;color:var(--mute)}
+.cc .cn{font-style:normal;font-size:12px;font-weight:700;color:var(--acc);margin-top:2px}
+.stubmore{margin-top:10px;padding:8px 16px;border:var(--bw,1.5px) solid var(--ink);border-radius:999px;background:var(--card);color:var(--ink);font:700 14px "DM Sans",sans-serif;cursor:pointer}.stubmore[hidden]{display:none}
+.gtool .i,.gtool b .i{fill:none;stroke:currentColor}
 </style>
 </head>
 <body>
@@ -754,6 +787,24 @@ body .reel.on .rtx,body .fmreel .rtx{grid-row:3;align-self:start;justify-self:ce
 <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
 <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
 <symbol id="i-ice" viewBox="0 0 24 24"><path d="m7 11 5 11 5-11"/><path d="M5.5 11a3.5 3.5 0 1 1 3.1-5.1 4 4 0 0 1 6.8 0A3.5 3.5 0 1 1 18.5 11z"/></symbol>
+<symbol id="i-craft" viewBox="0 0 24 24"><path d="M3 12h18a9 9 0 0 1-18 0z"/><path d="M15.5 3 11 10"/></symbol>
+<symbol id="i-burger" viewBox="0 0 24 24"><path d="M4 10a8 6 0 0 1 16 0z"/><path d="M3 13.5h18M5 17h14a2 2 0 0 1-2 3H7a2 2 0 0 1-2-3z"/><path d="M9 7h.01M12 6h.01M15 7h.01"/></symbol>
+<symbol id="i-bread" viewBox="0 0 24 24"><path d="M5 11a4 4 0 0 1 2-7h10a4 4 0 0 1 2 7v8a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"/><path d="M9 13l1.5-2.5M13 13l1.5-2.5"/></symbol>
+<symbol id="i-pasta" viewBox="0 0 24 24"><path d="M3.5 14h17a8.5 6 0 0 1-17 0z"/><path d="M6.5 14c0-3 2.5-5.5 5.5-5.5s5.5 2.5 5.5 5.5M9.5 14c0-1.8 1.2-3 2.5-3s2.5 1.2 2.5 3M12 8.5V4"/></symbol>
+<symbol id="i-dumpling" viewBox="0 0 24 24"><path d="M3 15a9 7 0 0 1 18 0c0 2.5-4 4-9 4s-9-1.5-9-4z"/><path d="M8 9.5l1.2 4M12 8.5v5M16 9.5l-1.2 4"/></symbol>
+<symbol id="i-soup" viewBox="0 0 24 24"><path d="M5 10h14v7a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3zM3 12h2M19 12h2"/><path d="M8.5 7c0-1.3 1-1.3 1-2.5M12.5 7c0-1.3 1-1.3 1-2.5M16 7c0-1.3 1-1.3 1-2.5"/></symbol>
+<symbol id="i-grill" viewBox="0 0 24 24"><path d="M12 3c.8 3.2 5 5 5 10a5 5 0 0 1-10 0c0-2.2 1-3.6 2.2-4.6.1 1.8.9 2.8 1.8 3C11 8.5 10.6 6 12 3z"/></symbol>
+<symbol id="i-sauce" viewBox="0 0 24 24"><path d="M10 2h4v4l2 3v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V9l2-3z"/><path d="M8 13h8"/></symbol>
+<symbol id="i-drinks" viewBox="0 0 24 24"><path d="M5 8h14l-1.6 13H6.6zM4.5 8h15"/><path d="M13 8l2-5h3"/></symbol>
+<symbol id="i-rice" viewBox="0 0 24 24"><path d="M3 12h18a9 9 0 0 1-18 0z"/><path d="M8 8.5h.01M11 7h.01M14 8.5h.01M16.5 7.5h.01M9.5 10h.01M13 10h.01"/></symbol>
+<symbol id="i-sandwich" viewBox="0 0 24 24"><path d="M3 18 12 5l9 13z"/><path d="M6.5 13.5h11M8.5 16h7"/></symbol>
+<symbol id="i-salad" viewBox="0 0 24 24"><path d="M3 13h18a9 8 0 0 1-18 0z"/><path d="M7 12c0-3 2-5 5-6 0 3-1 5-3 6M13 12c0-2 1.5-4 4-4.5 0 2.5-1 4-3 4.5"/></symbol>
+<symbol id="i-egg" viewBox="0 0 24 24"><path d="M12 3c-4 0-7 6-7 11a7 7 0 0 0 14 0c0-5-3-11-7-11z"/></symbol>
+<symbol id="i-noodle" viewBox="0 0 24 24"><path d="M3 12h18a9 9 0 0 1-18 0z"/><path d="M14 3l-2 7M17.5 3.5 14.5 10"/></symbol>
+<symbol id="i-dairy" viewBox="0 0 24 24"><path d="M7 4h10l-1 16a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1z"/><path d="M7.4 9h9.2"/></symbol>
+<symbol id="i-jam" viewBox="0 0 24 24"><path d="M8 3h8M7 6h10v14a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1z"/><path d="M9.5 12h5v4h-5z"/></symbol>
+<symbol id="i-icecream" viewBox="0 0 24 24"><path d="M12 22 7 12h10z"/><path d="M7 12a5 5 0 0 1 10 0"/></symbol>
+<symbol id="i-spice" viewBox="0 0 24 24"><path d="M8 3h8l1 4H7zM7 7h10v13a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1z"/><path d="M10 5h.01M12 5h.01M14 5h.01"/></symbol>
 <symbol id="i-dice" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8.5 8.5h.01M15.5 8.5h.01M12 12h.01M8.5 15.5h.01M15.5 15.5h.01"/></symbol>
 <symbol id="i-cupcake" viewBox="0 0 24 24"><path d="M5.5 12h13l-1.4 8H6.9z"/><path d="M6 12a3.5 3.5 0 0 1 2.2-5.6 4 4 0 0 1 7.6 0A3.5 3.5 0 0 1 18 12"/></symbol>
 <symbol id="i-fridge" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M5 10h14M9 6v1M9 13v3"/></symbol>
@@ -792,15 +843,16 @@ body .reel.on .rtx,body .fmreel .rtx{grid-row:3;align-self:start;justify-self:ce
  <div class="brand"><button type="button" class="logo" id="logo" aria-label="Spin a random recipe" title="Spin a random recipe"><svg viewBox="0 0 128 128" aria-hidden="true"><use href="#logo-pizza"/></svg></button><div><b>Meal Roulette</b><small>Spin a recipe, cook from your fridge, plan your week</small></div></div>
  <nav class="tabs" id="tabs" role="tablist" aria-label="Sections">
   <button role="tab" data-t="cook" aria-selected="true"><svg class="i"><use href="#i-chef"/></svg>Cook</button>
-  <button role="tab" data-t="pizza" aria-selected="false"><svg class="i"><use href="#i-pizza"/></svg>Pizza night</button>
-  <button role="tab" data-t="ferm" aria-selected="false"><svg class="i"><use href="#i-ferm"/></svg><span class="lg">Fermentation station</span><span class="sm">Ferment</span></button>
+  <button role="tab" data-t="craft" aria-selected="false"><svg class="i"><use href="#i-craft"/></svg>Craft</button>
   <button role="tab" data-t="kit" aria-selected="false"><svg class="i"><use href="#i-jar"/></svg>My kitchen</button>
  </nav>
 </div></header>
 
 <main>
+<div class="crumb" id="crumb" hidden><button type="button" id="crumbb" aria-label="Back to Craft"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Craft</button></div>
 <div id="tab-cook" class="tab" role="tabpanel"><h1 class="hl">What are we eating tonight?</h1><p>Pick a mood, then spin.</p><div class="cols">
  <aside class="side">
+  <section class="gs" aria-label="Search recipes"><input class="bksearch" id="gq" type="search" placeholder="Search all recipes: burger, pasta, chicken…" aria-label="Search all recipes" autocomplete="off"><div class="quick" id="gchips"></div><ul class="bklist" id="gres" hidden></ul></section>
   <nav class="tiles" id="meals" aria-label="Choose a meal type"></nav>
   <section class="panel">
    <div class="lab"><svg class="i"><use href="#i-fridge"/></svg>What's in your fridge?</div>
@@ -915,6 +967,8 @@ body .reel.on .rtx,body .fmreel .rtx{grid-row:3;align-self:start;justify-self:ce
 </div>
 
 <div id="tab-ferm" class="tab" role="tabpanel" hidden></div>
+
+<div id="tab-craft" class="tab" role="tabpanel" hidden></div>
 
 <div id="tab-kit" class="tab" role="tabpanel" hidden>
  <h1 class="hl">What's in your kitchen?</h1><p>Saved on this device. It applies to every spin, build and plan.</p>
@@ -1042,9 +1096,86 @@ const isLeftId=id=>!!(K.ING[id]&&K.ING[id].aisle==="left");
 const isLeftIng=i=>!!(i&&(isLeftId(i.id)||K.match(i.name||"").some(isLeftId)));
 function clearCurrentForInventoryChange(){current=null;lastPlan=null;$("out").innerHTML="";$("note").textContent="";}
 let tab="cook",lastPlan=null;
-function setTab(t){tab=t;["cook","pizza","ferm","kit"].forEach(k=>{$("tab-"+k).hidden=k!==t;document.querySelector(`#tabs [data-t="${k}"]`).setAttribute("aria-selected",k===t)});if(t==="pizza"&&typeof pzUI==="function")pzSection(S.pz.sec||"dough");scrollTo({top:0})}
+/* ---------- sections: 3 tabs (Cook, Craft, My kitchen). Craft is a hub of tools.
+   WHAT a tool is lives in kitchen.js (K.CRAFTS: id, name, which recipes belong to it). HOW it looks lives in UI below (icon, blurb, group).
+   A tool added to K.CRAFTS alone still gets a working card and a page that lists its recipes. To give a tool its own calculator:
+   put <div id="tab-ID" class="tab" role="tabpanel" hidden></div> in the page, let ID.js fill it (like ferment.js) and set ready:1 here. ---------- */
+const UI={
+ pizza:{icon:"pizza",grp:"Doughs and pasta",ready:1,chip:1,blurb:"Dough lab, sauces and toppings, scaled to your table"},
+ bread:{icon:"bread",grp:"Doughs and pasta",chip:1,blurb:"Loaves, rolls and flatbreads",kw:"loaf sourdough focaccia rolls",plan:["Loaf calculator: flour, water, salt and yeast","Sourdough timing planner","Rolls, flatbreads and enriched doughs"]},
+ pasta:{icon:"pasta",grp:"Doughs and pasta",chip:1,blurb:"Fresh pasta, shapes and sauces",kw:"noodle spaghetti",plan:["Fresh pasta dough by eggs and flour","Shapes and cooking times","Sauces matched to the shape"]},
+ dumpling:{icon:"dumpling",grp:"Doughs and pasta",blurb:"Wrappers, fillings and folds",kw:"gyoza wonton momo pierogi",plan:["Wrapper dough by hydration","Filling quantities per dumpling","Steam, boil or pan-fry times"]},
+ burger:{icon:"burger",grp:"Mains",chip:1,blurb:"Patties, buns and sauces",plan:["Patty size and fat ratio for your table","Brioche and potato bun dough","Sauces and toppings that go together"]},
+ soup:{icon:"soup",grp:"Mains",chip:1,blurb:"Stocks, broths and big pots",kw:"broth stock chowder",plan:["Stock from bones and scraps: water, salt and time","Soup thickness and seasoning guide","Big-batch scaling and freezing"]},
+ grill:{icon:"grill",grp:"Mains",blurb:"Marinades, rubs and cooking times",kw:"bbq barbecue marinade",plan:["Marinade and brine amounts by weight","Cooking time by thickness and doneness","Rubs and glazes"]},
+ grain:{icon:"rice",grp:"Mains",blurb:"Rice, risotto and grains with the right water",kw:"rice risotto quinoa couscous pilaf porridge",plan:["Water ratio and cook time by grain","Risotto and pilaf timing","Big batches that reheat well"]},
+ sandwich:{icon:"sandwich",grp:"Light and quick",blurb:"Sandwiches, wraps and toasties",kw:"wrap toastie panini burrito quesadilla",plan:["Fillings that balance: crunch, creamy, sharp","Wraps and toasties for a crowd","Lunchbox builds"]},
+ salad:{icon:"salad",grp:"Light and quick",blurb:"Salads, slaws and bowls",kw:"slaw coleslaw bowl",plan:["Bowl builder: base, protein, crunch, dressing","Dressing ratios per serving","Salads that keep for tomorrow"]},
+ eggs:{icon:"egg",grp:"Light and quick",blurb:"Omelettes, pancakes, crepes and waffles",kw:"omelette omelet pancake crepe waffle frittata scrambled shakshuka",plan:["Batter ratios: flour, milk and eggs","Omelette and frittata sizes by pan","Cooking times by doneness"]},
+ noodle:{icon:"noodle",grp:"Mains",blurb:"Noodle bowls and stir-fries with a sauce from the pantry",kw:"ramen udon soba stir fry lo mein",plan:["Stir-fry sauce ratios from pantry staples","Noodle cook times by type","Fast bowls for one"]},
+ sauce:{icon:"sauce",grp:"Pantry and preserving",blurb:"Dressings, dips and pan sauces",kw:"dressing dip gravy pesto",plan:["Dressing ratios that always balance","Pan sauces from what is in the pan","Dips and spreads"]},
+ ferm:{icon:"ferm",grp:"Pantry and preserving",ready:1,blurb:"Pickles, kraut and kimchi with exact salt and timing",kw:"ferment pickle kimchi sauerkraut"},
+ dairy:{icon:"dairy",grp:"Pantry and preserving",blurb:"Yogurt, labneh and fresh cheese",kw:"yogurt yoghurt paneer labneh kefir ricotta",plan:["Yogurt: milk, starter, temperature and hours","Strained yogurt and labneh by thickness","Fresh cheeses from milk and acid"]},
+ jam:{icon:"jam",grp:"Pantry and preserving",blurb:"Jams, compotes and quick fridge preserves",kw:"jam compote marmalade preserve",plan:["Fruit-to-sugar ratios and set point","Fridge jams versus properly canned jars","Compotes and fruit sauces"]},
+ spice:{icon:"spice",grp:"Pantry and preserving",blurb:"Spice blends, rubs and pastes you make once and reuse",kw:"masala rub seasoning curry paste",plan:["Blends by the tablespoon, scaled to any batch","Curry pastes and marinades","How long each blend keeps"]},
+ frozen:{icon:"icecream",grp:"Sweet and sips",blurb:"Ice cream, sorbet and ice lollies",kw:"icecream sorbet granita popsicle lolly",plan:["Sorbet from fruit: sugar balance for a soft scoop","Ice cream bases with and without a machine","Granita and lollies"]},
+ bake:{icon:"cupcake",grp:"Sweet and sips",blurb:"Cakes, cookies and tins sized right",kw:"cake cookie cookies",plan:["Scale a cake to any tin size","Cookie dough ratios","Baking times by tin and oven"]},
+ drinks:{icon:"drinks",grp:"Sweet and sips",blurb:"Smoothies, cold brew and lemonade",kw:"smoothie coffee lemonade",plan:["Cold brew and tea ratios","Smoothies from your fridge","Syrups and lemonade by the jug"]}
+};
+Object.keys(UI).forEach(k=>{if(!K.CRAFTS.some(c=>c.id===k))console.error("Craft UI entry '"+k+"' has no tool in K.CRAFTS (kitchen.js)")});
+const TOOLS=K.CRAFTS.map(c=>{const u=UI[c.id]||{};return{id:c.id,name:c.name,icon:u.icon||"chef",grp:u.grp||"More",blurb:u.blurb||"",ready:u.ready||0,chip:u.chip||0,plan:u.plan||[],
+  words:[...new Set(K.norm(c.id+" "+c.name+" "+(u.kw||"")).split(" ").filter(Boolean))]}});
+const PANELS=["cook","craft",...TOOLS.map(t=>t.id),"kit"],navOf=t=>t==="cook"||t==="kit"?t:"craft";
+const recText=r=>r._h||(r._h=K.norm([r.title,r.cuisine,r.craft,...(r.ids||[]).map(id=>K.ING[id]?K.ING[id].name:"")].join(" ")));
+function findRecipes(q){const t=K.norm(q||"").split(" ").filter(Boolean);if(!t.length)return[];
+  return K.recipes.filter(r=>K.allowed(r,S.diet)&&t.every(w=>recText(r).includes(w))).sort((a,b)=>(K.norm(b.title).includes(t[0])?1:0)-(K.norm(a.title).includes(t[0])?1:0)||a.min-b.min)}
+// a tool's recipes: the ones filed under it (craft tag or derived from the name), after the diet filters
+const craftAll=t=>K.recipes.filter(r=>r.craft===t.id),craftRecipes=t=>craftAll(t).filter(r=>K.allowed(r,S.diet)).sort((a,b)=>a.min-b.min||a.title.localeCompare(b.title));
+function stubSync(t,all){const el=$("tab-"+t.id);if(!el)return;const rs=craftRecipes(t),tot=craftAll(t).length,cap=all?rs.length:8,p=el.querySelector("[data-n]"),ul=el.querySelector("[data-l]"),more=el.querySelector(".stubmore");
+  p.textContent=!tot?"No recipes here yet. They show up as soon as one is added to the cookbooks.":`${rs.length} ${rs.length===1?"recipe":"recipes"}${tot>rs.length?` (${tot-rs.length} hidden by your diet filters)`:""}. Tap one to cook it for your household.`;
+  ul.innerHTML=rs.slice(0,cap).map(r=>`<li><button type="button" class="bkrec" data-id="${esc(r.id)}"><span><b>${esc(r.title)}</b><small>${r.min} min${r.meals.length===1&&r.meals[0]==="Extra"?"":" · serves "+r.serv}</small></span></button></li>`).join("");
+  ul.querySelectorAll("button").forEach(b=>b.onclick=()=>window.__openRecipe&&window.__openRecipe(b.dataset.id));
+  more.hidden=rs.length<=cap;more.textContent=`Show all ${rs.length}`;more.onclick=()=>stubSync(t,true)}
+(function buildCraft(){
+  const hub=$("tab-craft"),groups=[...new Set(TOOLS.map(t=>t.grp))];
+  hub.innerHTML=`<h1 class="hl">What are we making?</h1><p>Pick a project. Amounts scale to your household.</p>`+groups.map(g=>`<section class="cgroup"><h2>${esc(g)}</h2><div class="cgrid">${TOOLS.filter(t=>t.grp===g).map(t=>`<button type="button" class="cc" data-tool="${t.id}">${t.ready?"":'<span class="soon" title="Its own calculator is coming. The recipes work now.">Soon</span>'}<span class="ci">${I(t.icon)}</span><b>${esc(t.name)}</b><small>${esc(t.blurb)}</small><em class="cn" hidden></em></button>`).join("")}</div></section>`).join("");
+  hub.querySelectorAll(".cc").forEach(b=>b.onclick=()=>setTab(b.dataset.tool));
+  let after=$("tab-kit");
+  TOOLS.forEach(t=>{if($("tab-"+t.id)||t.ready)return;const el=document.createElement("div");el.id="tab-"+t.id;el.className="tab";el.setAttribute("role","tabpanel");el.hidden=true;
+    el.innerHTML=`<h1 class="hl">${esc(t.name)}</h1><p>${esc(t.blurb)}. The calculators are on their way.</p><section class="panel"><div class="lab">${I(t.icon)}Recipes</div><p class="hint" data-n></p><ul class="bklist" data-l></ul><button type="button" class="stubmore" hidden></button></section>`
+     +(t.plan.length?`<section class="panel"><div class="lab">${I("wand")}Coming to this page</div><ul class="stubl">${t.plan.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></section>`:"");
+    after.after(el);after=el});
+  $("crumbb").onclick=()=>setTab("craft");
+})();
+// recipe count on each card that has no calculator yet (after the diet filters), refreshed whenever the hub opens
+function hubSync(){TOOLS.forEach(t=>{const e=document.querySelector(`#tab-craft .cc[data-tool="${t.id}"] .cn`);if(!e)return;const n=t.ready?0:craftRecipes(t).length;e.hidden=!n;e.textContent=n?`${n} ${n===1?"recipe":"recipes"}`:""})}
+function setTab(t){if(!PANELS.includes(t))t="cook";tab=t;
+  PANELS.forEach(k=>{const el=$("tab-"+k);if(el)el.hidden=k!==t});
+  document.querySelectorAll("#tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.t===navOf(t)));
+  $("crumb").hidden=!TOOLS.some(x=>x.id===t);
+  const T=TOOLS.find(x=>x.id===t);if(T&&!T.ready)stubSync(T);if(t==="craft")hubSync();
+  if(t==="pizza"&&typeof pzUI==="function")pzSection(S.pz.sec||"dough");scrollTo({top:0})}
 document.querySelectorAll("#tabs button").forEach(b=>b.onclick=()=>setTab(b.dataset.t));
-{const _st=setTab;setTab=function(t){_st(t);try{localStorage.setItem("mr-tab",t)}catch(e){}};try{const t0=localStorage.getItem("mr-tab");if(["pizza","ferm","kit"].includes(t0))_st(t0)}catch(e){}} // reopen on the last tab
+/* ---------- Cook search: one box for every recipe, plus a shortcut into a matching Craft tool ---------- */
+let gSearch;
+(function(){
+  const inp=$("gq"),out=$("gres"),chips=$("gchips");
+  const paint=()=>{const q=inp.value.trim(),qn=K.norm(q);
+    if(qn.length<2){out.hidden=true;out.innerHTML="";return}
+    const tools=TOOLS.filter(t=>t.words.some(w=>w.startsWith(qn)||(qn.length>=3&&qn.startsWith(w)))),rs=findRecipes(q),shown=rs.slice(0,8);
+    out.innerHTML=tools.map(t=>`<li><button type="button" class="bkrec gtool" data-tool="${t.id}"><span><b>${I(t.icon)}${esc(t.name)}</b><small>${t.ready?"Open in Craft":"In Craft"}</small></span></button></li>`).join("")
+     +shown.map(r=>`<li><button type="button" class="bkrec" data-id="${esc(r.id)}"><span><b>${esc(r.title)}</b><small>${r.min} min${r.cuisine?" · "+esc(r.cuisine):""}</small></span></button></li>`).join("")
+     +(rs.length>shown.length?`<li class="hint" style="grid-column:1/-1;margin:2px 2px 0">${rs.length-shown.length} more. Add a word to narrow it down.</li>`:"")
+     +(!rs.length&&!tools.length?'<li class="hint" style="grid-column:1/-1;margin:2px">No recipes match. Your diet filters apply here too.</li>':"");
+    out.hidden=false;
+    out.querySelectorAll("[data-id]").forEach(b=>b.onclick=()=>{out.hidden=true;window.__openRecipe&&window.__openRecipe(b.dataset.id)});
+    out.querySelectorAll("[data-tool]").forEach(b=>b.onclick=()=>setTab(b.dataset.tool))};
+  gSearch=q=>{inp.value=q;paint();inp.scrollIntoView({block:"center"})};
+  inp.oninput=paint;inp.onkeydown=e=>{if(e.key==="Escape"){inp.value="";paint()}else if(e.key==="Enter"){const b=out.querySelector("[data-id]")||out.querySelector("[data-tool]");if(b){e.preventDefault();inp.blur();b.click()}}};
+  chips.innerHTML=TOOLS.filter(t=>t.chip).map(t=>`<button type="button" data-q="${esc(t.id)}">${I(t.icon)}${esc(t.name.split(" ")[0])}</button>`).join("");
+  chips.querySelectorAll("button").forEach(b=>b.onclick=()=>gSearch(b.dataset.q));
+})();
+{const _st=setTab;setTab=function(t){_st(t);try{localStorage.setItem("mr-tab",t)}catch(e){}};try{const t0=localStorage.getItem("mr-tab");if(t0!=="cook"&&PANELS.includes(t0))_st(t0)}catch(e){}} // reopen on the last tab
 
 /* ---------- controls ---------- */
 function draw(){
@@ -1762,8 +1893,8 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
     if(e.metaKey||e.ctrlKey||e.altKey||e.defaultPrevented)return;
     const el=e.target;if(el&&el.closest&&el.closest("input,textarea,select,button,a,[contenteditable],[role=listbox]"))return;
     if(document.querySelector(".cookov"))return;
-    const k=e.key.toLowerCase(),tabs=["cook","pizza","ferm","kit"];
-    if(k>="1"&&k<="4"){setTab(tabs[+k-1]);return}
+    const k=e.key.toLowerCase(),tabs=["cook","craft","kit"];
+    if(k>="1"&&k<="3"){setTab(tabs[+k-1]);return}
     if(tab==="cook"){if(k==="s"){const b=$("spin");if(b&&!b.disabled)b.click()}else if(k==="w"){const b=$("remix");if(b&&!b.disabled)b.click()}}
   });
 })();
@@ -1935,7 +2066,7 @@ const _ps=pzShow;pzShow=function(r,m){
   _ps(r,m);if(!r)return;
   try{const row=$("pzout").querySelector(".card .row");if(row&&!r.dough){window.__thumbs(row,r.title,{},()=>{const a=row.querySelector(".pzagain");if(a)a.click()});window.__tidyRow(row,"pizza")}}catch(e){console.error(e)}
   try{const h=$("pzout").querySelector(".hero");if(h&&!h.querySelector(".heroback")){const b=document.createElement("button");b.type="button";b.className="heroback";b.setAttribute("aria-label","Back");b.title="Back";b.innerHTML=XB;b.onclick=back;h.append(b)}}catch(e){console.error(e)}};
-document.querySelector('#tabs [data-t="pizza"]').addEventListener("click",()=>{if(on&&small())back()});
+document.querySelector('#tabs [data-t="craft"]').addEventListener("click",()=>{if(on&&small())back()});
 })();
 /* ---- My kitchen: live summary tiles that also jump to their section ---- */
 (function(){
@@ -2054,7 +2185,7 @@ if(kx){const row=document.createElement("div");row.className="xtra-row";row.inne
 const box=$("shelfbox");if(!box)return;
 const PAL=["#ffc63d","#ff9b82","#7fd1a6","#b9a2f0","#8ecae6","#f4a261","#f6e27a","#e86a5a"];
 const hash=t=>{let h=5381;for(const c of String(t))h=((h<<5)+h+c.charCodeAt(0))>>>0;return h};
-const MEALK=["Breakfast","Snack","Main","Dessert"];
+const MEALK=["Breakfast","Snack","Main","Dessert","Extra"];
 let cur=null,cont=null,q="",mf="",sig="",lastW=0,back=0;
 let view="all"; // regions = bookcase per continent; all = every cookbook on one packed shelf
 // shelves: books are grouped by region. A cuisine not listed here lands on "More books", so nothing ever disappears.
@@ -2074,6 +2205,14 @@ function shelves(list){
   out.forEach(s=>s.n=s.books.reduce((t,b)=>t+b.recs.length,0));
   return out;
 }
+const SC={ev:"#ffc63d",na:"#ff9b82",sa:"#7fd1a6",eu:"#8ecae6",as:"#b9a2f0",af:"#f4a261",oc:"#f6e27a",more:"#e0d6c8"};
+const PATN={ev:2,na:0,sa:1,eu:3,as:4,af:5,oc:6,more:8}; // top pattern of every book in a continent
+const CONT={};SHELVES.forEach(([id,,names])=>names.forEach(n=>CONT[n]=id));
+// colour family of a continent: the base colour with shifted hue and lightness, six variations in a fixed order
+const _hsl=hex=>{const r=parseInt(hex.slice(1,3),16)/255,g=parseInt(hex.slice(3,5),16)/255,b=parseInt(hex.slice(5,7),16)/255,mx=Math.max(r,g,b),mn=Math.min(r,g,b),l=(mx+mn)/2,d=mx-mn;let h=0,s=0;
+  if(d){s=d/(1-Math.abs(2*l-1));h=mx===r?((g-b)/d)%6:mx===g?(b-r)/d+2:(r-g)/d+4;h=(h*60+360)%360}return[h,s*100,l*100]};
+const SHADES=[[0,0],[-16,8],[14,-6],[-7,-12],[20,6],[6,12],[-22,-2],[10,-16]]; // [hue shift, lightness shift]
+const shade=(id,i)=>{const[h,s,l]=_hsl(SC[id]),[dh,dl]=SHADES[i%SHADES.length];return `hsl(${Math.round(h+dh+360)%360} ${Math.round(Math.min(85,Math.max(40,s)))}% ${Math.round(Math.min(86,Math.max(52,l+dl-4)))}%)`};
 const goTop=()=>{const bt=$("kz-shelf");bt&&bt.scrollIntoView({block:"start",behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"})};
 const backBtn=label=>`<button type="button" class="bkback"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>${esc(label)}</button>`;
 const bookName=c=>c||"Everyday";
@@ -2083,8 +2222,10 @@ function books(){
   const list=Object.keys(m).sort((a,b)=>a.localeCompare(b,"en",{sensitivity:"base"})).map(n=>({name:n,recs:m[n].sort((a,b)=>a.title.localeCompare(b.title,"en",{sensitivity:"base"}))}));
   // look: seeded from the title, so the shelf looks random but is the same every visit
   let prev=-1;list.forEach(b=>{const h=hash(b.name);let c=h%PAL.length;if(c===prev)c=(c+1)%PAL.length;prev=c;
-    b.c=PAL[c];b.p=(h>>>3)%4;b.h=Math.max(150+(h>>>5)%62,Math.ceil(90+b.name.length*(b.name.length>11?9.8:11.4)));b.w=Math.round(46+Math.min(b.recs.length,60)/60*20+(h>>>9)%7);
+    b.c=PAL[c];b.p=(h>>>3)%4;b.h=Math.max(150+(h>>>5)%62,Math.ceil(90+b.name.length*(b.name.length>11?9.8:11.4)));b.w=Math.round(38+Math.min(1,Math.log(b.recs.length+1)/Math.log(150))*46+(h>>>9)%5);
     b.tw=Math.round(38+Math.min(b.recs.length,60)/60*8+(h>>>9)%4);b.th=Math.max(138+(h>>>5)%40,Math.ceil(78+b.name.length*(b.name.length>11?9.2:10.4)));b.ang=8+(h>>>17)%6;b.L=Math.max(116,Math.ceil(76+b.name.length*9.8));b.T=30+(h>>>19)%9;b.o=((h>>>21)%11)-5});
+  // books of one continent look alike: same top pattern, same colour family (alternating shades)
+  const nth={};list.forEach(b=>{const id=CONT[b.name]||"more",n=nth[id]=(nth[id]||0)+1;b.c=shade(id,n-1);b.p=PATN[id]});
   return{list,hidden};
 }
 const kitOpen=()=>!$("tab-kit").hidden;
@@ -2092,14 +2233,16 @@ const kitOpen=()=>!$("tab-kit").hidden;
 function unitsOf(list,tight){
   const u=[];
   if(tight)return list.map(b=>({k:"up",b,w:b.tw,t:1}));
-  for(let i=0;i<list.length;i++){const b=list[i],h=hash(b.name);
-    if((h>>>7)%4===0&&i+2<list.length){const g=list.slice(i,i+3+((h>>>10)%4));u.push({k:"stack",bs:g,w:Math.max(...g.map(x=>x.L))+24});i+=g.length-1}
+  let piles=0;const maxPiles=Math.max(1,Math.floor(list.length/8)); // a few piles per shelf, never a whole continent lying down
+  let guard=0; // the index must always move forward; this stops a bad slice from ever freezing the page again
+  for(let i=0;i<list.length&&guard++<list.length*3+10;i++){const b=list[i],h=hash(b.name);
+    if((h>>>7)%5===0&&i+2<list.length&&piles<maxPiles){piles++;const g=list.slice(i,i+3+((h>>>10)%2));u.push({k:"stack",bs:g,w:Math.max(...g.map(x=>x.L))+24});i+=Math.max(1,g.length)-1}
     else if((h>>>11)%5===0)u.push({k:"lean",b,ex:Math.ceil(b.h*Math.sin(b.ang*Math.PI/180)),w:b.w});
     else u.push({k:"up",b,w:b.w});
   }
   return u;
 }
-const uw=x=>x.k==="lean"?x.w+x.ex:x.w;
+const uw=x=>(x.k==="lean"?x.w+x.ex:x.w)+(x.ov||0); // ov: the room a continent's wooden frame takes
 function rowsOf(list,tight,avail,units){
   const W=avail?avail-(matchMedia("(max-width:420px)").matches?30:42):(box.clientWidth||360)-(matchMedia("(max-width:420px)").matches?24:36),rows=[[]];let used=0;
   const us=units||unitsOf(list,tight);
@@ -2152,13 +2295,14 @@ function paintShelf(){
     // one long shelf: each continent starts with a sign. The first and last book of a continent always stand, so a sign is never next to a leaning book or a pile.
     const stand=x=>x.k==="stack"?x.bs.map(b=>({k:"up",b,w:b.w})):x.k==="lean"?[{k:"up",b:x.b,w:x.w}]:[x];
     const units=[];
-    const SC={ev:"#ffc63d",na:"#ff9b82",sa:"#7fd1a6",eu:"#8ecae6",as:"#b9a2f0",af:"#f4a261",oc:"#f6e27a",more:"#e0d6c8"};
     shs.forEach(sc=>{let u=unitsOf(sc.books);if(u.length){u=[...stand(u[0]),...u.slice(1)];const l=u.pop();u.push(...stand(l))}
-      // the Everyday book comes first and needs no sign; every continent starts with a coloured sign and ends with a bookend
-      if(sc.id!=="ev")units.push({k:"up",dv:true,name:sc.name,n:sc.books.length,c:SC[sc.id]||SC.more,w:60,h:Math.max(130,Math.ceil(80+sc.name.length*13))});
-      units.push(...u);
-      if(sc.id!=="ev")units.push({k:"up",dv:true,en:true,c:SC[sc.id]||SC.more,w:30,h:92})});
-    box.innerHTML=`<div class="shelf">${rowsOf(null,false,0,units).map(r=>`<div class="shrow">${r.map(unitHTML).join("")}</div><div class="plank"></div>`).join("")}</div>`
+      if(u.length){const need=sc.name.length*10+34; // the name is written on the first compartment, which must be wide enough for it
+        u[0]={...u[0],ov:40+Math.max(0,need-40-uw(u[0]))}}
+      units.push(...u)});
+    const BS={},SI={},named=new Set();shs.forEach(s=>{SI[s.id]=s;s.books.forEach(b=>BS[b.name]=s.id)});
+    const scOf=x=>x.sc||BS[(x.b||x.bs[0]).name];
+    const secs=r=>{const g=[];r.forEach(x=>{const id=scOf(x),l=g[g.length-1];if(l&&l.id===id)l.u.push(x);else g.push({id,u:[x]})});return g.map(s=>{const c=SI[s.id];const first=!named.has(s.id);named.add(s.id);return `<div class="sec" role="group" aria-label="${esc(c.name)}, ${c.books.length} cookbooks"${first?` style="min-width:${c.name.length*10+34}px"`:""}><i class="wt${first?"":" cont"}" title="${esc(c.name)}">${esc(first?c.name:c.name+" · cont.")}</i><i class="wd l"></i><i class="wd r"></i>${s.u.map(unitHTML).join("")}</div>`}).join("")};
+    box.innerHTML=`<div class="shelf">${rowsOf(null,false,0,units).map(r=>`<div class="shrow cs">${secs(r)}</div><div class="plank"></div>`).join("")}</div>`
      +`<p class="shelfhint">${list.length} cookbooks, grouped by continent. Tap a spine to open the book.${note}</p>`;
     fit();
     box.querySelectorAll(".bk").forEach(b=>b.onclick=()=>{cur=b.dataset.b;q="";mf="";paintShelf();goTop()});
@@ -2202,12 +2346,19 @@ function paintBook(b,hidden,sh){
 function openRecipe(id){
   const r=K.recipes.find(x=>x.id===id);if(!r)return;
   // same card as a spin: your household size, fridge and leftovers apply
-  S.meal=r.meals.includes(S.meal)?S.meal:r.meals[0];S.pm={[S.meal]:true};save();draw();
+  {const mm=r.meals.find(m=>MEALS.some(x=>x[0]===m));if(mm&&!r.meals.includes(S.meal))S.meal=mm} // "Extra" recipes (sauces, spice blends, jams) keep the meal you had
+  S.pm={[S.meal]:true};save();draw();
   const F=fridgeIds(),U=new Set([...S.urgent.flatMap(x=>K.match(x)),...[...F].filter(isLeftId)]),x=K.resolve(r,S.n,{fridge:F,basic:S.basic,urgent:U});
   back=1;
   show({rid:r.id,title:r.title,min:r.min,n:S.n,steps:x.steps,ing:x.ing,desc:[r.note,x.leftoverNote].filter(Boolean).join(" ")},"");
   toCard("out");
 }
+window.__openRecipe=openRecipe;
+const _ps=paintShelf;let _psBusy=false;
+paintShelf=function(){try{return _ps.apply(this,arguments)}catch(e){console.error(e);if(_psBusy)return;_psBusy=true;
+  try{const{list}=books();box.innerHTML='<p class="shelfhint">The shelf could not be drawn, so here is a plain list.</p><ul class="bklist">'+list.map(b=>`<li><button type="button" class="bkrec" data-b="${esc(b.name)}"><span><b>${esc(b.name)}</b><small>${b.recs.length} recipes</small></span></button></li>`).join("")+"</ul>";
+    box.querySelectorAll(".bkrec").forEach(x=>x.onclick=()=>{cur=x.dataset.b;_psBusy=false;paintShelf()})}catch(e2){console.error(e2);box.textContent="The shelf could not be drawn. Reload the page."}
+  _psBusy=false}};
 const refresh=()=>{const k=JSON.stringify(S.diet||{});if(k===sig&&box.firstChild)return;sig=k;paintShelf()};
 const _dr=draw;draw=function(){_dr.apply(this,arguments);try{refresh()}catch(e){console.error(e)}};
 // the page may be laid out while My kitchen is hidden, so re-chunk the rows once it has a width
@@ -2309,7 +2460,7 @@ window.__tidyRow=function(row,icon){
 /* Loader: downloads every file in parallel (fast on phones), runs them in order, retries a failed file once,
    and shows a Reload button instead of a blank page if something still fails. */
 (function(){
-var FILES=["kitchen.js","ingredients.js","cookbook/cookbook-bake.js","cookbook/cookbook-cuisine-american.js","cookbook/cookbook-cuisine-argentine.js","cookbook/cookbook-cuisine-armenian.js","cookbook/cookbook-cuisine-australian.js","cookbook/cookbook-cuisine-azerbaijani.js","cookbook/cookbook-cuisine-balkan.js","cookbook/cookbook-cuisine-belizean.js","cookbook/cookbook-cuisine-bolivian.js","cookbook/cookbook-cuisine-brazilian.js","cookbook/cookbook-cuisine-british.js","cookbook/cookbook-cuisine-cajun.js","cookbook/cookbook-cuisine-cameroonian.js","cookbook/cookbook-cuisine-canadian.js","cookbook/cookbook-cuisine-caribbean.js","cookbook/cookbook-cuisine-chilean.js","cookbook/cookbook-cuisine-chinese.js","cookbook/cookbook-cuisine-colombian.js","cookbook/cookbook-cuisine-congolese.js","cookbook/cookbook-cuisine-costa-rican.js","cookbook/cookbook-cuisine-cuban.js","cookbook/cookbook-cuisine-danish.js","cookbook/cookbook-cuisine-dominican.js","cookbook/cookbook-cuisine-ecuadorian.js","cookbook/cookbook-cuisine-eritrean.js","cookbook/cookbook-cuisine-ethiopian.js","cookbook/cookbook-cuisine-fijian.js","cookbook/cookbook-cuisine-filipino.js","cookbook/cookbook-cuisine-french.js","cookbook/cookbook-cuisine-georgian.js","cookbook/cookbook-cuisine-german.js","cookbook/cookbook-cuisine-ghanaian.js","cookbook/cookbook-cuisine-greek.js","cookbook/cookbook-cuisine-guatemalan.js","cookbook/cookbook-cuisine-guyanese.js","cookbook/cookbook-cuisine-haitian.js","cookbook/cookbook-cuisine-honduran.js","cookbook/cookbook-cuisine-hungarian.js","cookbook/cookbook-cuisine-indian.js","cookbook/cookbook-cuisine-indonesian.js","cookbook/cookbook-cuisine-irish.js","cookbook/cookbook-cuisine-italian.js","cookbook/cookbook-cuisine-ivorian.js","cookbook/cookbook-cuisine-jamaican.js","cookbook/cookbook-cuisine-japanese.js","cookbook/cookbook-cuisine-kazakh.js","cookbook/cookbook-cuisine-kenyan.js","cookbook/cookbook-cuisine-korean.js","cookbook/cookbook-cuisine-kyrgyz.js","cookbook/cookbook-cuisine-lebanese.js","cookbook/cookbook-cuisine-malaysian.js","cookbook/cookbook-cuisine-malian.js","cookbook/cookbook-cuisine-maori.js","cookbook/cookbook-cuisine-mexican.js","cookbook/cookbook-cuisine-middle-eastern.js","cookbook/cookbook-cuisine-moroccan.js","cookbook/cookbook-cuisine-nepali.js","cookbook/cookbook-cuisine-nicaraguan.js","cookbook/cookbook-cuisine-nigerian.js","cookbook/cookbook-cuisine-norwegian.js","cookbook/cookbook-cuisine-pakistani.js","cookbook/cookbook-cuisine-panamanian.js","cookbook/cookbook-cuisine-papua-new-guinean.js","cookbook/cookbook-cuisine-paraguayan.js","cookbook/cookbook-cuisine-persian.js","cookbook/cookbook-cuisine-peruvian.js","cookbook/cookbook-cuisine-polish.js","cookbook/cookbook-cuisine-portuguese.js","cookbook/cookbook-cuisine-puerto-rican.js","cookbook/cookbook-cuisine-russian.js","cookbook/cookbook-cuisine-salvadoran.js","cookbook/cookbook-cuisine-samoan.js","cookbook/cookbook-cuisine-scottish.js","cookbook/cookbook-cuisine-senegalese.js","cookbook/cookbook-cuisine-singaporean.js","cookbook/cookbook-cuisine-somali.js","cookbook/cookbook-cuisine-south-african.js","cookbook/cookbook-cuisine-spanish.js","cookbook/cookbook-cuisine-sri-lankan.js","cookbook/cookbook-cuisine-sudanese.js","cookbook/cookbook-cuisine-surinamese.js","cookbook/cookbook-cuisine-swedish.js","cookbook/cookbook-cuisine-swiss.js","cookbook/cookbook-cuisine-taiwanese.js","cookbook/cookbook-cuisine-tajik.js","cookbook/cookbook-cuisine-tanzanian.js","cookbook/cookbook-cuisine-thai.js","cookbook/cookbook-cuisine-tongan.js","cookbook/cookbook-cuisine-trinidadian.js","cookbook/cookbook-cuisine-turkish.js","cookbook/cookbook-cuisine-turkmen.js","cookbook/cookbook-cuisine-ugandan.js","cookbook/cookbook-cuisine-ukrainian.js","cookbook/cookbook-cuisine-uruguayan.js","cookbook/cookbook-cuisine-uzbek.js","cookbook/cookbook-cuisine-venezuelan.js","cookbook/cookbook-cuisine-vietnamese.js","cookbook/cookbook-everyday.js","cookbook/cookbook-fancy.js","cookbook/cookbook-leftovers.js","cookbook/cookbook-light.js","cookbook/cookbook-more-light-b.js","cookbook/cookbook-more-light.js","cookbook/cookbook-more-mains-a.js","cookbook/cookbook-more-mains-b.js","cookbook/cookbook-quick.js","cookbook/cookbook-wraps-sandwiches.js","pizza.js","ferment.js","engine.js"];
+var FILES=["kitchen.js","ingredients.js","cookbook/cookbook-bake.js","cookbook/cookbook-craft.js","cookbook/cookbook-cuisine-american.js","cookbook/cookbook-cuisine-argentine.js","cookbook/cookbook-cuisine-armenian.js","cookbook/cookbook-cuisine-australian.js","cookbook/cookbook-cuisine-azerbaijani.js","cookbook/cookbook-cuisine-balkan.js","cookbook/cookbook-cuisine-belizean.js","cookbook/cookbook-cuisine-bolivian.js","cookbook/cookbook-cuisine-brazilian.js","cookbook/cookbook-cuisine-british.js","cookbook/cookbook-cuisine-cajun.js","cookbook/cookbook-cuisine-cameroonian.js","cookbook/cookbook-cuisine-canadian.js","cookbook/cookbook-cuisine-caribbean.js","cookbook/cookbook-cuisine-chilean.js","cookbook/cookbook-cuisine-chinese.js","cookbook/cookbook-cuisine-colombian.js","cookbook/cookbook-cuisine-congolese.js","cookbook/cookbook-cuisine-costa-rican.js","cookbook/cookbook-cuisine-cuban.js","cookbook/cookbook-cuisine-danish.js","cookbook/cookbook-cuisine-dominican.js","cookbook/cookbook-cuisine-ecuadorian.js","cookbook/cookbook-cuisine-eritrean.js","cookbook/cookbook-cuisine-ethiopian.js","cookbook/cookbook-cuisine-fijian.js","cookbook/cookbook-cuisine-filipino.js","cookbook/cookbook-cuisine-french.js","cookbook/cookbook-cuisine-georgian.js","cookbook/cookbook-cuisine-german.js","cookbook/cookbook-cuisine-ghanaian.js","cookbook/cookbook-cuisine-greek.js","cookbook/cookbook-cuisine-guatemalan.js","cookbook/cookbook-cuisine-guyanese.js","cookbook/cookbook-cuisine-haitian.js","cookbook/cookbook-cuisine-honduran.js","cookbook/cookbook-cuisine-hungarian.js","cookbook/cookbook-cuisine-indian.js","cookbook/cookbook-cuisine-indonesian.js","cookbook/cookbook-cuisine-irish.js","cookbook/cookbook-cuisine-italian.js","cookbook/cookbook-cuisine-ivorian.js","cookbook/cookbook-cuisine-jamaican.js","cookbook/cookbook-cuisine-japanese.js","cookbook/cookbook-cuisine-kazakh.js","cookbook/cookbook-cuisine-kenyan.js","cookbook/cookbook-cuisine-korean.js","cookbook/cookbook-cuisine-kyrgyz.js","cookbook/cookbook-cuisine-lebanese.js","cookbook/cookbook-cuisine-malaysian.js","cookbook/cookbook-cuisine-malian.js","cookbook/cookbook-cuisine-maori.js","cookbook/cookbook-cuisine-mexican.js","cookbook/cookbook-cuisine-middle-eastern.js","cookbook/cookbook-cuisine-moroccan.js","cookbook/cookbook-cuisine-nepali.js","cookbook/cookbook-cuisine-nicaraguan.js","cookbook/cookbook-cuisine-nigerian.js","cookbook/cookbook-cuisine-norwegian.js","cookbook/cookbook-cuisine-pakistani.js","cookbook/cookbook-cuisine-panamanian.js","cookbook/cookbook-cuisine-papua-new-guinean.js","cookbook/cookbook-cuisine-paraguayan.js","cookbook/cookbook-cuisine-persian.js","cookbook/cookbook-cuisine-peruvian.js","cookbook/cookbook-cuisine-polish.js","cookbook/cookbook-cuisine-portuguese.js","cookbook/cookbook-cuisine-puerto-rican.js","cookbook/cookbook-cuisine-russian.js","cookbook/cookbook-cuisine-salvadoran.js","cookbook/cookbook-cuisine-samoan.js","cookbook/cookbook-cuisine-scottish.js","cookbook/cookbook-cuisine-senegalese.js","cookbook/cookbook-cuisine-singaporean.js","cookbook/cookbook-cuisine-somali.js","cookbook/cookbook-cuisine-south-african.js","cookbook/cookbook-cuisine-spanish.js","cookbook/cookbook-cuisine-sri-lankan.js","cookbook/cookbook-cuisine-sudanese.js","cookbook/cookbook-cuisine-surinamese.js","cookbook/cookbook-cuisine-swedish.js","cookbook/cookbook-cuisine-swiss.js","cookbook/cookbook-cuisine-taiwanese.js","cookbook/cookbook-cuisine-tajik.js","cookbook/cookbook-cuisine-tanzanian.js","cookbook/cookbook-cuisine-thai.js","cookbook/cookbook-cuisine-tongan.js","cookbook/cookbook-cuisine-trinidadian.js","cookbook/cookbook-cuisine-turkish.js","cookbook/cookbook-cuisine-turkmen.js","cookbook/cookbook-cuisine-ugandan.js","cookbook/cookbook-cuisine-ukrainian.js","cookbook/cookbook-cuisine-uruguayan.js","cookbook/cookbook-cuisine-uzbek.js","cookbook/cookbook-cuisine-venezuelan.js","cookbook/cookbook-cuisine-vietnamese.js","cookbook/cookbook-everyday.js","cookbook/cookbook-fancy.js","cookbook/cookbook-leftovers.js","cookbook/cookbook-light.js","cookbook/cookbook-more-light-b.js","cookbook/cookbook-more-light.js","cookbook/cookbook-more-mains-a.js","cookbook/cookbook-more-mains-b.js","cookbook/cookbook-quick.js","cookbook/cookbook-wraps-sandwiches.js","pizza.js","ferment.js","engine.js"];
 var boot=document.getElementById("boot");
 function fail(){var sp=document.getElementById("splash");if(sp)sp.remove();boot.hidden=false;document.getElementById("bootbtn").onclick=function(){
   var go=function(){location.reload()};
