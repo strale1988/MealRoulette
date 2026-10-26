@@ -315,7 +315,7 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
 .tabs .sm{display:inline}.tabs .lg{display:none}
 @media (min-width:1100px){.tabs .lg{display:inline}.tabs .sm{display:none}}
 @media (max-width:480px){.tabs button{font-size:12px!important;white-space:nowrap;padding-left:2px!important;padding-right:2px!important}}
-.tg.fm button span{font-size:16px;line-height:1}
+.tg.fm button{min-height:34px;overflow:visible}.tg.fm button span{font-size:16px;line-height:1.3;display:inline-block;padding:1px 0 2px;overflow:visible}
 .fmtl{list-style:none;margin:8px 0 0;padding:0}.fmtl li{display:flex;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line)}.fmtl li:last-child{border:0}.fmtl b{flex:none;min-width:92px}.fmtl span{color:var(--mute)}
 .fmb ul{list-style:none;margin:0;padding:0}.fmb li{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line)}.fmb li:last-child{border:0}.fmb li.none{color:var(--mute);font-size:14px}
 .fmb li small{display:block;color:var(--mute);font-size:13px;margin-top:2px}
@@ -618,6 +618,10 @@ ol li:before{display:flex;align-items:center;justify-content:center;padding:0;li
 
 /* ---- spinners fill the screen, centred, above the header and menu bar ---- */
 body .reel.on,body .fmreel{position:fixed;inset:0;z-index:90;margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;box-sizing:border-box;background:var(--bg);padding:max(16px,env(safe-area-inset-top)) 16px max(16px,env(safe-area-inset-bottom))}
+/* ---- v78: the spinning wheel is dead centre; the text sits below it in its own row, so a second line never moves the wheel ---- */
+body .reel.on,body .fmreel{display:grid;grid-template-rows:minmax(0,1fr) auto minmax(0,1fr);grid-template-columns:minmax(0,1fr);justify-items:center;align-items:center}
+body .reel.on .toss,body .reel.on .spinwrap,body .fmreel .fmjar{grid-row:2;margin:0}
+body .reel.on .rtx,body .fmreel .rtx{grid-row:3;align-self:start;justify-self:center;width:100%;max-width:520px;padding-top:14px;box-sizing:border-box;text-align:center}
 /* ---- phones/tablets: while a recipe, pizza, plan or ferment is open, header and menu bar are hidden (the X on the green bar and the browser Back button return) ---- */
 @media (max-width:959px){
  body:has(.tab.resmode:not([hidden]) .heroback) .bar{display:none}
@@ -674,6 +678,13 @@ body .reel.on,body .fmreel{position:fixed;inset:0;z-index:90;margin:0;display:fl
 .bk.flat.p3 .bd{background:repeating-linear-gradient(45deg,var(--ink) 0 3px,transparent 3px 8px)}
 .bk.flat b{writing-mode:horizontal-tb;padding:0;font-size:14px;text-align:center}
 .bk.flat .bn{min-width:20px;height:20px;font-size:11px;padding:0 3px}
+.shview{margin:0 0 12px}
+.shview{margin:0 0 12px}
+/* one long shelf: medium upright spines, grouped into labelled sections */
+/* continent sign: a divider card standing on the shelf just before that continent's books */
+.dv{--h:140px;position:relative;z-index:1;flex:none;width:34px;height:var(--h);box-sizing:border-box;margin:0 5px 0 4px;margin-bottom:calc(var(--bw)*-1);display:flex;align-items:center;justify-content:center;border:var(--bw) solid var(--ink);border-radius:8px 8px 0 0;background:var(--card);color:var(--ink)}
+.dv::before{content:"";position:absolute;inset:4px;border:2px dashed var(--ink);border-radius:5px 5px 0 0;border-bottom:0;opacity:.35;pointer-events:none}
+.dv span{writing-mode:vertical-rl;white-space:nowrap;font:800 15px/1 Bricolage,"DM Sans",sans-serif;letter-spacing:.1em;text-transform:uppercase}
 .shelfhint{margin:10px 2px 0;font-size:13px;color:var(--mute)}
 .bkhead{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-bottom:12px}
 .bkback{display:inline-flex;align-items:center;gap:4px;border:var(--bw) solid var(--ink);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 14px 6px 8px;font:800 14px "DM Sans",sans-serif;cursor:pointer;box-shadow:2px 2px 0 var(--ink)}
@@ -695,6 +706,35 @@ body .reel.on,body .fmreel{position:fixed;inset:0;z-index:90;margin:0;display:fl
 .bkrec:active{transform:translate(2px,2px);box-shadow:none}
 .bkrec:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
 .bkv{animation:pop .3s ease-out}
+/* level 1: one small bookcase per region */
+.shgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:16px}
+.shcase{display:block;width:100%;padding:0;text-align:left;font:inherit;color:var(--ink);cursor:pointer;border:var(--bw) solid var(--ink);border-radius:20px;box-shadow:var(--sh);overflow:hidden;background:repeating-linear-gradient(0deg,var(--sand) 0 22px,color-mix(in srgb,var(--sand) 86%,var(--ink)) 22px 23px);transition:transform .14s ease,box-shadow .14s ease}
+@media (hover:hover){.shcase:hover{transform:translate(-2px,-3px);box-shadow:5px 5px 0 var(--ink)}}
+.shcase:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.shcase:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.shcap{display:block;padding:12px 16px 0}
+.shcap b{display:block;font:800 19px/1.1 Bricolage,"DM Sans",sans-serif;letter-spacing:-.02em}
+.shcap small{display:block;margin-top:3px;font-size:12.5px;color:var(--mute)}
+.shmini{display:flex;align-items:flex-end;gap:3px;height:84px;padding:0 16px;overflow:hidden}
+.shmini i{flex:none;display:block;width:13px;height:var(--h);margin-bottom:calc(var(--bw)*-1);box-sizing:border-box;border:var(--bw) solid var(--ink);border-radius:4px 4px 0 0;background:var(--c)}
+.shmini i:nth-child(3n){width:17px}.shmini i:nth-child(4n+1){width:10px}
+.shmini em{flex:none;align-self:center;margin-left:4px;font:800 12px "DM Sans",sans-serif;font-style:normal;color:var(--mute)}
+.shcase .plank{margin-top:0}
+.shcase .plank{border-bottom:0}
+/* level 3: the open book looks like the spine on the shelf: same colour, same band, same count badge */
+.bkcover{--c:#ffc63d;display:flex;margin:4px 8px 16px 0;border:var(--bw) solid var(--ink);border-radius:10px 22px 22px 10px;background:var(--c);color:#2a1a13;box-shadow:7px 7px 0 var(--ink);overflow:hidden}
+.bkcover .hinge{flex:none;width:26px;border-right:2px solid var(--ink);background:linear-gradient(90deg,rgba(0,0,0,.18),rgba(0,0,0,.04) 70%,rgba(0,0,0,.12))}
+.bkcover .face{flex:1;min-width:0}
+.bkcover .bd{display:block;width:100%;height:14px;border-bottom:2px solid var(--ink);background:var(--ink)}
+.bkcover.p0 .bd{background:repeating-linear-gradient(90deg,var(--ink) 0 3px,transparent 3px 7px)}
+.bkcover.p1 .bd{background:radial-gradient(circle,var(--ink) 1.6px,transparent 2px) 0 0/8px 8px}
+.bkcover.p2 .bd{background:var(--ink);height:10px}
+.bkcover.p3 .bd{background:repeating-linear-gradient(135deg,var(--ink) 0 3px,transparent 3px 8px)}
+.bkcover .ttl{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:18px 20px 20px}
+.bkcover small.kind{display:block;font:800 11px "DM Sans",sans-serif;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+.bkcover h3{margin:2px 0 0;font:800 clamp(28px,7vw,44px)/1 Bricolage,"DM Sans",sans-serif;letter-spacing:-.03em;text-transform:none;color:#2a1a13;overflow-wrap:anywhere}
+.bkcover p{margin:6px 0 0;font-size:13px;color:#2a1a13;opacity:.8}
+.bkcover .bn{flex:none;display:grid;place-items:center;min-width:42px;height:42px;padding:0 8px;box-sizing:border-box;border:2px solid var(--ink);border-radius:99px;background:var(--card);color:var(--ink);font:800 17px/1 "DM Sans",sans-serif}
 @media (max-width:420px){.shrow{padding:20px 12px 0}}
 @media print{#kz-shelf{display:none!important}}
 </style>
@@ -803,7 +843,7 @@ body .reel.on,body .fmreel{position:fixed;inset:0;z-index:90;margin:0;display:fl
 <div class="swirl"><svg viewBox="-65 -65 130 130" aria-hidden="true"><path d="M0 0a4 4 0 0 1 8 0a8 8 0 0 1-16 0a12 12 0 0 1 24 0a16 16 0 0 1-32 0a20 20 0 0 1 40 0a24 24 0 0 1-48 0" fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="5" stroke-linecap="round"/><path d="M34-30C50-14 52 12 36 30S-6 52-30 40" fill="none" stroke="#c9741a" stroke-opacity=".5" stroke-width="5" stroke-linecap="round"/></svg></div>
 <span class="bub" style="--k:0;left:82px;top:70px"></span><span class="bub" style="--k:1;left:152px;top:118px"></span><span class="bub" style="--k:2;left:136px;top:56px"></span>
 <div class="steam"><s style="--k:0;--sx:-6px"></s><s style="--k:1;--sx:8px"></s><s style="--k:2;--sx:0px"></s></div>
-<div class="ring" style="--T:7s"><div class="ing" style="--k:0;--r:0deg;--R:46px"><u><i>🍅</i></u></div><div class="ing" style="--k:1;--r:120deg;--R:46px"><u><i>🥕</i></u></div><div class="ing" style="--k:2;--r:240deg;--R:46px"><u><i>🧄</i></u></div></div><div class="ring" style="--T:4.5s"><div class="ing" style="--k:3;--r:60deg;--R:22px"><u><i>🍋</i></u></div><div class="ing" style="--k:4;--r:180deg;--R:22px"><u><i>🧀</i></u></div><div class="ing" style="--k:5;--r:300deg;--R:22px"><u><i>🍄</i></u></div></div></div><span id="rt"></span><small>Picking something tasty…</small></div>
+<div class="ring" style="--T:7s"><div class="ing" style="--k:0;--r:0deg;--R:46px"><u><i>🍅</i></u></div><div class="ing" style="--k:1;--r:120deg;--R:46px"><u><i>🥕</i></u></div><div class="ing" style="--k:2;--r:240deg;--R:46px"><u><i>🧄</i></u></div></div><div class="ring" style="--T:4.5s"><div class="ing" style="--k:3;--r:60deg;--R:22px"><u><i>🍋</i></u></div><div class="ing" style="--k:4;--r:180deg;--R:22px"><u><i>🧀</i></u></div><div class="ing" style="--k:5;--r:300deg;--R:22px"><u><i>🍄</i></u></div></div></div><div class="rtx"><span id="rt"></span><small>Picking something tasty…</small></div></div>
   <div id="out"></div>
   <div class="ph"><b>Your recipe shows up here</b>Pick a meal, then spin or remix.</div>
   <div class="fav" id="fav"></div>
@@ -918,7 +958,7 @@ body .reel.on,body .fmreel{position:fixed;inset:0;z-index:90;margin:0;display:fl
   </section>
    </div>
   </section>
-  <section class="kzone" id="kz-shelf" data-c="0"><header class="kzh"><span class="kzb"><svg class="i"><use href="#i-book"/></svg></span><div><h2>On the shelf</h2><p>One cookbook per cuisine. Pull one out and flip through its recipes.</p></div></header>
+  <section class="kzone" id="kz-shelf" data-c="0"><header class="kzh"><span class="kzb"><svg class="i"><use href="#i-book"/></svg></span><div><h2>On the shelf</h2><p>Pick a shelf, then pull out a cookbook and flip through its recipes.</p></div></header>
    <div id="shelfbox" class="shelfbox" aria-live="polite"></div>
   </section>
  </div>
@@ -941,6 +981,7 @@ const QUICK=["chicken","eggs","rice","tomatoes","spinach","salmon","potatoes","m
 const I=n=>`<svg class="i"><use href="#i-${n}"/></svg>`;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const rnd=a=>a[Math.floor(Math.random()*a.length)],cap=s=>s[0].toUpperCase()+s.slice(1);
+window.mrNoSpin=()=>{try{return JSON.parse(localStorage.getItem("spins"))===0}catch(e){return false}};
 const store=(k,v)=>{try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||"null");localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}};
 const S=Object.assign({meal:"Main",n:2,pantry:[],diet:{},cuisine:"",strict:true,basic:true,days:5,pm:{Main:true},urgent:[],quick:false,staples:[],useLeftovers:false,leftovers:[],units:"metric",temp:"C"},store("mr2")||{});
 if(!Array.isArray(S.pantry))S.pantry=[];
@@ -1263,7 +1304,7 @@ function run(what,single,instant){
   const names=RECIPES.map(r=>r.title).concat(Object.keys(GEN.cuisines).map(c=>c+" "+rnd(["chicken bowl","stir-fry","curry","traybake","stew"])));
   const done=()=>{rl.classList.remove("on");btns.forEach(b=>b.disabled=false);if(!pl&&!single){const active=selectedMeals();if(active.length)S.meal=rnd(active);save();}pl?plan(what==="remix"?"remix":""):what==="remix"?invent():go();
     const c=o.firstElementChild||o;c.scrollIntoView({behavior:"smooth",block:"start"})};
-  if(rm||instant)return done();
+  if(rm||instant||mrNoSpin())return done();
   rl.classList.add("on");rl.scrollIntoView({behavior:"smooth",block:"center"});
   let d=70,el=0;const tick=()=>{rt.textContent=rnd(names);el+=d;if(el>=1500)return setTimeout(done,350);d=Math.round(d*1.15);setTimeout(tick,d)};tick();
 }
@@ -1598,11 +1639,11 @@ function cookMode(r){
 /* ---- pizza spinner, start-cooking for pizza, dynamic spin label ---- */
 (function(){
 const o=$("pzout");if(o){const rl=document.createElement("div");rl.className="reel pzreel";rl.id="pzreel";rl.setAttribute("aria-hidden","true");
- rl.innerHTML=`<div class="spinwrap"><div class="rot"><div class="sc" style="--r:0deg;--k:0"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-40" r="7.5" fill="#d63a22" style="stroke:var(--ink)" stroke-width="2"/><circle cx="-5" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:45deg;--k:1"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-38" r="6" fill="#1f9d5f" style="stroke:var(--ink)" stroke-width="2"/><circle cx="6" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:90deg;--k:2"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-40" r="7.5" fill="#d63a22" style="stroke:var(--ink)" stroke-width="2"/><circle cx="-5" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:135deg;--k:3"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-38" r="6" fill="#1f9d5f" style="stroke:var(--ink)" stroke-width="2"/><circle cx="6" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:180deg;--k:4"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-40" r="7.5" fill="#d63a22" style="stroke:var(--ink)" stroke-width="2"/><circle cx="-5" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:225deg;--k:5"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-38" r="6" fill="#1f9d5f" style="stroke:var(--ink)" stroke-width="2"/><circle cx="6" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:270deg;--k:6"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-40" r="7.5" fill="#d63a22" style="stroke:var(--ink)" stroke-width="2"/><circle cx="-5" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:315deg;--k:7"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-38" r="6" fill="#1f9d5f" style="stroke:var(--ink)" stroke-width="2"/><circle cx="6" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div></div></div><span id="pzrt"></span><small>Firing up the oven…</small>`;o.before(rl)}
+ rl.innerHTML=`<div class="spinwrap"><div class="rot"><div class="sc" style="--r:0deg;--k:0"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-40" r="7.5" fill="#d63a22" style="stroke:var(--ink)" stroke-width="2"/><circle cx="-5" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:45deg;--k:1"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-38" r="6" fill="#1f9d5f" style="stroke:var(--ink)" stroke-width="2"/><circle cx="6" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:90deg;--k:2"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-40" r="7.5" fill="#d63a22" style="stroke:var(--ink)" stroke-width="2"/><circle cx="-5" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:135deg;--k:3"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-38" r="6" fill="#1f9d5f" style="stroke:var(--ink)" stroke-width="2"/><circle cx="6" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:180deg;--k:4"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-40" r="7.5" fill="#d63a22" style="stroke:var(--ink)" stroke-width="2"/><circle cx="-5" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:225deg;--k:5"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-38" r="6" fill="#1f9d5f" style="stroke:var(--ink)" stroke-width="2"/><circle cx="6" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:270deg;--k:6"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-40" r="7.5" fill="#d63a22" style="stroke:var(--ink)" stroke-width="2"/><circle cx="-5" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:315deg;--k:7"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-38" r="6" fill="#1f9d5f" style="stroke:var(--ink)" stroke-width="2"/><circle cx="6" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div></div></div><div class="rtx"><span id="pzrt"></span><small>Firing up the oven…</small></div>`;o.before(rl)}
 const _pz=pzRun;let busy=false;
 pzRun=function(what){
   if(busy)return;const rl=$("pzreel");
-  if(!rl||matchMedia("(prefers-reduced-motion:reduce)").matches)return _pz(what);
+  if(!rl||matchMedia("(prefers-reduced-motion:reduce)").matches||mrNoSpin())return _pz(what);
   busy=true;const bs=[...document.querySelectorAll(".pzbtns button")],rt=$("pzrt");
   let names=((window.PZ&&PZ.recipes)||[]).map(x=>x.title||x.name).filter(Boolean);if(!names.length)names=["Margherita","Pepperoni","Diavola","Quattro formaggi","Funghi"];
   bs.forEach(b=>b.disabled=true);o.innerHTML="";$("pzph").style.display="none";$("pznote").textContent="";rl.classList.add("on");rl.scrollIntoView({behavior:"smooth",block:"center"});
@@ -1732,7 +1773,9 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
     if(Math.abs(m-9.8)>14){hits=hits.filter(h=>t-h<700);hits.push(t);
       if(hits.length>=3&&t-last>2500){hits=[];last=t;
         const ae=document.activeElement;if(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))return;
-        if(tab==="cook"&&!document.querySelector(".cookov")){const b=$("spin");if(b&&!b.disabled){b.click();navigator.vibrate&&navigator.vibrate(30)}}}}
+        if(document.querySelector(".cookov,.splash,.reel.on,.fmreel"))return;
+        const b=tab==="cook"?$("spin"):tab==="pizza"?$("pzspin"):tab==="ferm"?document.querySelector("#tab-ferm .fmspin"):null;
+        if(b&&!b.disabled){b.click();navigator.vibrate&&navigator.vibrate(30)}}}
   }
   const set=v=>{if(v){addEventListener("devicemotion",onMotion)}else removeEventListener("devicemotion",onMotion)};
   if(canShake&&store("shake")===1)set(true);
@@ -1748,8 +1791,10 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
   const grid=document.querySelector("#kz-setup .kgrid");
   if(grid){
     const sec=document.createElement("section");sec.className="panel";sec.id="kitextras";
-    sec.innerHTML=`<div class="lab"><svg class="i"><use href="#i-wand"/></svg>Extras</div>${canShake?`<div class="xtra-row"><p><b>Shake to spin</b>Shake your phone on the Cook page to spin.</p><div class="tg"><button type="button" id="shaketg" aria-pressed="${store("shake")===1}">${store("shake")===1?"On":"Off"}</button></div></div>`:""}`;
+    sec.innerHTML=`<div class="lab"><svg class="i"><use href="#i-wand"/></svg>Extras</div><div class="xtra-row"><p><b>Spin animation</b>Turn off to get your result straight away.</p><div class="tg"><button type="button" id="spintg" aria-pressed="${!mrNoSpin()}">${mrNoSpin()?"Off":"On"}</button></div></div>${canShake?`<div class="xtra-row"><p><b>Shake to spin</b>Shake your phone to spin on Cook, Pizza night and Ferment.</p><div class="tg"><button type="button" id="shaketg" aria-pressed="${store("shake")===1}">${store("shake")===1?"On":"Off"}</button></div></div>`:""}`;
     grid.appendChild(sec);
+    const st=$("spintg");
+    if(st)st.onclick=()=>{const on=st.getAttribute("aria-pressed")!=="true";st.setAttribute("aria-pressed",String(on));st.textContent=on?"On":"Off";store("spins",on?1:0)};
     const sb=$("shaketg");
     if(sb)sb.onclick=()=>{
       const on=sb.getAttribute("aria-pressed")!=="true";
@@ -2003,7 +2048,26 @@ const box=$("shelfbox");if(!box)return;
 const PAL=["#ffc63d","#ff9b82","#7fd1a6","#b9a2f0","#8ecae6","#f4a261","#f6e27a","#e86a5a"];
 const hash=t=>{let h=5381;for(const c of String(t))h=((h<<5)+h+c.charCodeAt(0))>>>0;return h};
 const MEALK=["Breakfast","Snack","Main","Dessert"];
-let cur=null,q="",mf="",sig="",lastW=0,back=0;
+let cur=null,cont=null,q="",mf="",sig="",lastW=0,back=0;
+let view="all"; // regions = bookcase per continent; all = every cookbook on one packed shelf
+// shelves: books are grouped by region. A cuisine not listed here lands on "More books", so nothing ever disappears.
+const SHELVES=[
+ ["na","North America",["American","Canadian","Cajun","Mexican","Belizean","Caribbean","Costa Rican","Cuban","Dominican","Guatemalan","Haitian","Honduran","Jamaican","Nicaraguan","Panamanian","Puerto Rican","Salvadoran","Trinidadian"]],
+ ["sa","South America",["Argentine","Bolivian","Brazilian","Chilean","Colombian","Ecuadorian","Guyanese","Paraguayan","Peruvian","Surinamese","Uruguayan","Venezuelan"]],
+ ["eu","Europe",["Balkan","British","Danish","French","German","Greek","Hungarian","Irish","Italian","Norwegian","Polish","Portuguese","Russian","Scottish","Spanish","Swedish","Swiss","Ukrainian"]],
+ ["as","Asia",["Lebanese","Middle Eastern","Persian","Turkish","Armenian","Azerbaijani","Georgian","Kazakh","Kyrgyz","Tajik","Turkmen","Uzbek","Indian","Nepali","Pakistani","Sri Lankan","Chinese","Filipino","Indonesian","Japanese","Korean","Malaysian","Singaporean","Taiwanese","Thai","Vietnamese"]],
+ ["af","Africa",["Cameroonian","Congolese","Eritrean","Ethiopian","Ghanaian","Ivorian","Kenyan","Malian","Moroccan","Nigerian","Senegalese","Somali","South African","Sudanese","Tanzanian","Ugandan"]],
+ ["oc","Oceania",["Australian","Fijian","Māori","Papua New Guinean","Samoan","Tongan"]],
+ ["ev","Everyday cooking",["Everyday"]]];
+function shelves(list){
+  const used=new Set(),out=[];
+  SHELVES.forEach(([id,name,names])=>{const bs=list.filter(b=>names.includes(b.name));bs.forEach(b=>used.add(b.name));if(bs.length)out.push({id,name,books:bs})});
+  const rest=list.filter(b=>!used.has(b.name));if(rest.length)out.push({id:"more",name:"More books",books:rest});
+  out.forEach(s=>s.n=s.books.reduce((t,b)=>t+b.recs.length,0));
+  return out;
+}
+const goTop=()=>{const bt=$("kz-shelf");bt&&bt.scrollIntoView({block:"start",behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"})};
+const backBtn=label=>`<button type="button" class="bkback"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>${esc(label)}</button>`;
 const bookName=c=>c||"Everyday";
 function books(){
   const m={};let hidden=0;
@@ -2012,13 +2076,14 @@ function books(){
   // look: seeded from the title, so the shelf looks random but is the same every visit
   let prev=-1;list.forEach(b=>{const h=hash(b.name);let c=h%PAL.length;if(c===prev)c=(c+1)%PAL.length;prev=c;
     b.c=PAL[c];b.p=(h>>3)%4;b.h=Math.max(150+(h>>5)%62,Math.ceil(90+b.name.length*(b.name.length>11?9.8:11.4)));b.w=Math.round(46+Math.min(b.recs.length,60)/60*20+(h>>9)%7);
-    b.ang=8+(h>>17)%6;b.L=Math.max(116,Math.ceil(76+b.name.length*9.8));b.T=30+(h>>19)%9;b.o=((h>>21)%11)-5});
+    b.tw=Math.round(38+Math.min(b.recs.length,60)/60*8+(h>>9)%4);b.th=Math.max(138+(h>>5)%40,Math.ceil(78+b.name.length*(b.name.length>11?9.2:10.4)));b.ang=8+(h>>17)%6;b.L=Math.max(116,Math.ceil(76+b.name.length*9.8));b.T=30+(h>>19)%9;b.o=((h>>21)%11)-5});
   return{list,hidden};
 }
 const kitOpen=()=>!$("tab-kit").hidden;
 // units: standing books, books leaning on a neighbour, and piles of 2-3 books lying flat
-function unitsOf(list){
+function unitsOf(list,tight){
   const u=[];
+  if(tight)return list.map(b=>({k:"up",b,w:b.tw,t:1}));
   for(let i=0;i<list.length;i++){const b=list[i],h=hash(b.name);
     if((h>>7)%7===0&&i+1<list.length){const g=list.slice(i,i+2+((h>>10)%2));u.push({k:"stack",bs:g,w:Math.max(...g.map(x=>x.L))+24});i+=g.length-1}
     else if((h>>11)%5===0)u.push({k:"lean",b,ex:Math.ceil(b.h*Math.sin(b.ang*Math.PI/180)),w:b.w});
@@ -2027,15 +2092,16 @@ function unitsOf(list){
   return u;
 }
 const uw=x=>x.k==="lean"?x.w+x.ex:x.w;
-function rowsOf(list){
-  const W=(box.clientWidth||360)-(matchMedia("(max-width:420px)").matches?24:36),rows=[[]];let used=0;
-  unitsOf(list).forEach(x=>{const w=uw(x);if(used+w>W&&rows[rows.length-1].length){rows.push([]);used=0}rows[rows.length-1].push(x);used+=w});
+function rowsOf(list,tight,avail,units){
+  const W=avail?avail-(matchMedia("(max-width:420px)").matches?30:42):(box.clientWidth||360)-(matchMedia("(max-width:420px)").matches?24:36),rows=[[]];let used=0;
+  const us=units||unitsOf(list,tight);
+  us.forEach((x,i)=>{const w=uw(x),need=x.dv&&us[i+1]?w+uw(us[i+1]):w;if(used+need>W&&rows[rows.length-1].length){rows.push([]);used=0}rows[rows.length-1].push(x);used+=w});
   return rows.map(r=>arrange(r,W));
 }
 // a row starts and ends with a standing book; leaning books rest on a standing neighbour, piles sit in between
 function arrange(row,W){
   // a row needs a standing book at both ends: with fewer than two, stand everything up if it still fits
-  if(row.filter(x=>x.k==="up").length<2&&row.length>1){const all=row.flatMap(x=>x.k==="stack"?x.bs.map(b=>({k:"up",b,w:b.w})):[{k:"up",b:x.b,w:x.w}]);if(all.reduce((t,x)=>t+x.w,0)<=W||!row.some(x=>x.k==="up"))row=all}
+  if(row.filter(x=>x.k==="up").length<2&&row.length>1){const all=row.flatMap(x=>x.k==="stack"?x.bs.map(b=>({k:"up",b,w:b.w})):[x.dv?x:{k:"up",b:x.b,w:x.w}]);if(all.reduce((t,x)=>t+x.w,0)<=W||!row.some(x=>x.k==="up"))row=all}
   let ups=row.filter(x=>x.k==="up");
   if(ups.length<2){row.forEach(x=>{if(x.k==="lean")x.k="up"});ups=row.filter(x=>x.k==="up")}
   if(ups.length>=2){const f=ups[0],l=ups[ups.length-1];row=[f,...row.filter(x=>x!==f&&x!==l),l]}
@@ -2048,9 +2114,11 @@ function spine(b,cls,style){
   return `<button type="button" class="bk ${cls} p${b.p}${b.name.length>11?" sm":""}" data-b="${esc(b.name)}" style="--c:${b.c};${style}" aria-label="${esc(b.name)} cookbook, ${n} ${n===1?"recipe":"recipes"}"><i class="bd"></i><b>${esc(b.name)}</b><span class="bn">${n}</span></button>`;
 }
 function unitHTML(x){
+  if(x.dv)return `<div class="dv" role="heading" aria-level="3" style="--h:${x.h}px"><span>${esc(x.name)}</span></div>`;
   if(x.k==="stack"){const mx=Math.max(...x.bs.map(b=>b.L));return `<div class="stack">${x.bs.map(b=>{const a=(mx-b.L)/2+4,o=Math.max(-a,Math.min(a,b.o));return spine(b,"flat",`--L:${b.L}px;--T:${b.T}px;--o:${o}px`)}).join("")}</div>`}
   const b=x.b;
   if(x.k==="lean"){const r=x.dir==="r";return spine(b,"lean "+(r?"r":"l"),`--h:${b.h}px;--w:${b.w}px;--t:${r?b.ang:-b.ang}deg;margin-${r?"right":"left"}:${x.ex}px`)}
+  if(x.t)return spine(b,"up",`--h:${b.th}px;--w:${b.tw}px`);
   return spine(b,"up",`--h:${b.h}px;--w:${b.w}px`);
 }
 function fit(){
@@ -2059,20 +2127,51 @@ function fit(){
     let fs=parseFloat(getComputedStyle(el).fontSize);el.style.fontSize="";fs=parseFloat(getComputedStyle(el).fontSize);
     while(fs>10&&over()){fs-=.5;el.style.fontSize=fs+"px"}});
 }
+const viewBar=()=>`<div class="tg shview" role="group" aria-label="Shelf layout"><button type="button" data-v="regions" aria-pressed="${view==="regions"}">By continent</button><button type="button" data-v="all" aria-pressed="${view==="all"}">All on one shelf</button></div>`;
+const bindView=()=>box.querySelectorAll(".shview button").forEach(x=>x.onclick=()=>{if(view===x.dataset.v)return;view=x.dataset.v;store("shelfview",view);cont=null;paintShelf()});
+const shelfLevel=()=>!cur&&(view==="all"||cont);
 function paintShelf(){
   const{list,hidden}=books();lastW=box.clientWidth;
   $("kt-shelf").textContent=list.length;$("kl-shelf").textContent=list.length===1?"cookbook on the shelf":"cookbooks on the shelf";
   if(cur&&!list.some(b=>b.name===cur))cur=null;
-  if(cur)return paintBook(list.find(b=>b.name===cur),hidden);
+  const shs=shelves(list);
+  if(cur){if(view==="all")return paintBook(list.find(b=>b.name===cur),hidden,{id:"all",name:"All books"});const sh=shs.find(s=>s.books.some(b=>b.name===cur));cont=sh.id;return paintBook(list.find(b=>b.name===cur),hidden,sh)}
+  if(cont&&!shs.some(s=>s.id===cont))cont=null;
   if(!list.length){box.innerHTML='<div class="ph" style="display:block"><b>Your shelf is empty</b>Your diet filters hide every recipe. Loosen them in Around the table.</div>';return}
-  box.innerHTML=`<div class="shelf">${rowsOf(list).map(r=>`<div class="shrow">${r.map(unitHTML).join("")}</div><div class="plank"></div>`).join("")}</div>`
-   +`<p class="shelfhint">Tap a spine to open the book.${hidden?` ${hidden} ${hidden===1?"recipe is":"recipes are"} hidden by your diet filters.`:""}</p>`;
+  const note=hidden?` ${hidden} ${hidden===1?"recipe is":"recipes are"} hidden by your diet filters.`:"";
+  if(view==="all"){ // every cookbook on one shelf, grouped into labelled sections
+    // one long shelf: each continent starts with a sign. The first and last book of a continent always stand, so a sign is never next to a leaning book or a pile.
+    const stand=x=>x.k==="stack"?x.bs.map(b=>({k:"up",b,w:b.w})):x.k==="lean"?[{k:"up",b:x.b,w:x.w}]:[x];
+    const units=[];
+    shs.forEach(sc=>{let u=unitsOf(sc.books);if(u.length){u=[...stand(u[0]),...u.slice(1)];const l=u.pop();u.push(...stand(l))}
+      units.push({k:"up",dv:true,name:sc.name,w:42,h:Math.max(120,Math.ceil(40+sc.name.length*12.5))},...u)});
+    box.innerHTML=`<div class="shelf">${rowsOf(null,false,0,units).map(r=>`<div class="shrow">${r.map(unitHTML).join("")}</div><div class="plank"></div>`).join("")}</div>`
+     +`<p class="shelfhint">${list.length} cookbooks, grouped by continent. Tap a spine to open the book.${note}</p>`;
+    fit();
+    box.querySelectorAll(".bk").forEach(b=>b.onclick=()=>{cur=b.dataset.b;q="";mf="";paintShelf();goTop()});
+    return;
+  }
+  if(!cont){ // level 1: the bookcases
+    box.innerHTML=viewBar()+`<div class="shgrid">${shs.map(s=>{const h=hash(s.id);
+      const mini=s.books.slice(0,15).map(b=>{const k=hash(b.name);return `<i style="--c:${b.c};--h:${34+k%44}px"></i>`}).join("")+(s.books.length>15?`<em>+${s.books.length-15}</em>`:"");
+      return `<button type="button" class="shcase" data-s="${s.id}" aria-label="${esc(s.name)} shelf, ${s.books.length} ${s.books.length===1?"cookbook":"cookbooks"}, ${s.n} recipes"><span class="shcap"><b>${esc(s.name)}</b><small>${s.books.length} ${s.books.length===1?"book":"books"} · ${s.n} recipes</small></span><span class="shmini">${mini}</span><span class="plank" style="display:block"></span></button>`}).join("")}</div>`
+     +`<p class="shelfhint">Tap a shelf to see its cookbooks.${note}</p>`;
+    bindView();
+    box.querySelectorAll(".shcase").forEach(x=>x.onclick=()=>{cont=x.dataset.s;paintShelf();goTop()});
+    return;
+  }
+  const sh=shs.find(s=>s.id===cont); // level 2: one shelf, its books standing, leaning and piled up
+  box.innerHTML=`<div class="bkhead">${backBtn("Shelves")}<div class="bkt"><div><h3>${esc(sh.name)}</h3><p>${sh.books.length} ${sh.books.length===1?"cookbook":"cookbooks"} · ${sh.n} recipes</p></div></div></div>`
+   +`<div class="shelf">${rowsOf(sh.books).map(r=>`<div class="shrow">${r.map(unitHTML).join("")}</div><div class="plank"></div>`).join("")}</div>`
+   +`<p class="shelfhint">Tap a spine to open the book.${note}</p>`;
   fit();
-  box.querySelectorAll(".bk").forEach(b=>b.onclick=()=>{cur=b.dataset.b;q="";mf="";paintShelf();const bt=$("kz-shelf");bt&&bt.scrollIntoView({block:"start",behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"})});
+  box.querySelector(".bkback").onclick=()=>{cont=null;paintShelf();goTop()};
+  box.querySelectorAll(".bk").forEach(b=>b.onclick=()=>{cur=b.dataset.b;q="";mf="";paintShelf();goTop()});
 }
-function paintBook(b,hidden){
+function paintBook(b,hidden,sh){
   const cnt=m=>b.recs.filter(r=>r.meals.includes(m)).length;
-  box.innerHTML=`<div class="bkv"><div class="bkhead"><button type="button" class="bkback"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Shelf</button><div class="bkt"><span class="bkmini" style="--c:${b.c}"></span><div><h3>${esc(b.name)} cookbook</h3><p>${b.recs.length} ${b.recs.length===1?"recipe":"recipes"}${hidden?` · ${hidden} hidden by your diet filters`:""}</p></div></div></div>
+  box.innerHTML=`<div class="bkv"><div class="bkhead">${backBtn(sh.name)}</div>
+  <div class="bkcover p${b.p}" style="--c:${b.c}"><span class="hinge"></span><div class="face"><i class="bd"></i><div class="ttl"><div><small class="kind">Cookbook</small><h3>${esc(b.name)}</h3><p>${b.recs.length} ${b.recs.length===1?"recipe":"recipes"}${hidden?` · ${hidden} hidden by your diet filters`:""}</p></div><span class="bn" aria-hidden="true">${b.recs.length}</span></div></div></div>
   <input class="bksearch" id="bksearch" type="search" placeholder="Search this book…" aria-label="Search this cookbook" autocomplete="off" value="${esc(q)}">
   <div class="tg" id="bkmeals" role="group" aria-label="Filter by meal"><button type="button" data-m="" aria-pressed="${mf===""}">All <small>${b.recs.length}</small></button>${MEALK.filter(cnt).map(m=>`<button type="button" data-m="${m}" aria-pressed="${mf===m}">${esc(ML(m))} <small>${cnt(m)}</small></button>`).join("")}</div>
   <ul class="bklist" id="bklist"></ul></div>`;
@@ -2083,7 +2182,7 @@ function paintBook(b,hidden){
     $("bklist").querySelectorAll(".bkrec").forEach(x=>x.onclick=()=>openRecipe(x.dataset.id));
   };
   list();
-  box.querySelector(".bkback").onclick=()=>{cur=null;q="";mf="";paintShelf();$("kz-shelf").scrollIntoView({block:"start",behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"})};
+  box.querySelector(".bkback").onclick=()=>{cur=null;q="";mf="";paintShelf();goTop()};
   $("bksearch").oninput=e=>{q=e.target.value;list()};
   $("bkmeals").querySelectorAll("button").forEach(x=>x.onclick=()=>{mf=x.dataset.m;$("bkmeals").querySelectorAll("button").forEach(y=>y.setAttribute("aria-pressed",String(y===x)));list()});
 }
@@ -2099,10 +2198,10 @@ function openRecipe(id){
 const refresh=()=>{const k=JSON.stringify(S.diet||{});if(k===sig&&box.firstChild)return;sig=k;paintShelf()};
 const _dr=draw;draw=function(){_dr.apply(this,arguments);try{refresh()}catch(e){console.error(e)}};
 // the page may be laid out while My kitchen is hidden, so re-chunk the rows once it has a width
-if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{if(!cur&&kitOpen())fit()});
-try{new ResizeObserver(()=>{if(!cur&&kitOpen()&&Math.abs(box.clientWidth-lastW)>8)paintShelf()}).observe(box)}catch(e){}
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{if(shelfLevel()&&kitOpen())fit()});
+try{new ResizeObserver(()=>{if(shelfLevel()&&kitOpen()&&Math.abs(box.clientWidth-lastW)>8)paintShelf()}).observe(box)}catch(e){}
 const _stS=setTab;setTab=function(t){const r=_stS.apply(this,arguments);
-  if(t==="kit"){try{if(!cur&&Math.abs(box.clientWidth-lastW)>8)paintShelf();else if(!cur)fit();if(back){back=0;setTimeout(()=>{const z=$("kz-shelf");z&&z.scrollIntoView({block:"start"})},40)}}catch(e){console.error(e)}}
+  if(t==="kit"){try{if(shelfLevel()&&Math.abs(box.clientWidth-lastW)>8)paintShelf();else if(shelfLevel())fit();if(back){back=0;setTimeout(()=>{const z=$("kz-shelf");z&&z.scrollIntoView({block:"start"})},40)}}catch(e){console.error(e)}}
   return r};
 refresh();
 })();
@@ -2116,7 +2215,7 @@ if("serviceWorker" in navigator&&location.protocol.startsWith("http")){
 /* Loader: downloads every file in parallel (fast on phones), runs them in order, retries a failed file once,
    and shows a Reload button instead of a blank page if something still fails. */
 (function(){
-var FILES=["kitchen.js","ingredients.js","cookbook/cookbook-bake.js","cookbook/cookbook-cuisine-balkan.js","cookbook/cookbook-cuisine-cajun.js","cookbook/cookbook-cuisine-caribbean.js","cookbook/cookbook-cuisine-chinese.js","cookbook/cookbook-cuisine-ethiopian.js","cookbook/cookbook-cuisine-french.js","cookbook/cookbook-cuisine-german.js","cookbook/cookbook-cuisine-greek.js","cookbook/cookbook-cuisine-hungarian.js","cookbook/cookbook-cuisine-indian.js","cookbook/cookbook-cuisine-indonesian.js","cookbook/cookbook-cuisine-italian.js","cookbook/cookbook-cuisine-japanese.js","cookbook/cookbook-cuisine-korean.js","cookbook/cookbook-cuisine-mexican.js","cookbook/cookbook-cuisine-middle-eastern.js","cookbook/cookbook-cuisine-moroccan.js","cookbook/cookbook-cuisine-persian.js","cookbook/cookbook-cuisine-peruvian.js","cookbook/cookbook-cuisine-polish.js","cookbook/cookbook-cuisine-portuguese.js","cookbook/cookbook-cuisine-spanish.js","cookbook/cookbook-cuisine-thai.js","cookbook/cookbook-cuisine-turkish.js","cookbook/cookbook-cuisine-vietnamese.js","cookbook/cookbook-everyday.js","cookbook/cookbook-fancy.js","cookbook/cookbook-leftovers.js","cookbook/cookbook-light.js","cookbook/cookbook-more-light-b.js","cookbook/cookbook-more-mains-b.js","cookbook/cookbook-more-light.js","cookbook/cookbook-more-mains-a.js","cookbook/cookbook-quick.js","cookbook/cookbook-wraps-sandwiches.js","pizza.js","ferment.js","engine.js"];
+var FILES=["kitchen.js","ingredients.js","cookbook/cookbook-bake.js","cookbook/cookbook-cuisine-american.js","cookbook/cookbook-cuisine-argentine.js","cookbook/cookbook-cuisine-armenian.js","cookbook/cookbook-cuisine-australian.js","cookbook/cookbook-cuisine-azerbaijani.js","cookbook/cookbook-cuisine-balkan.js","cookbook/cookbook-cuisine-belizean.js","cookbook/cookbook-cuisine-bolivian.js","cookbook/cookbook-cuisine-brazilian.js","cookbook/cookbook-cuisine-british.js","cookbook/cookbook-cuisine-cajun.js","cookbook/cookbook-cuisine-cameroonian.js","cookbook/cookbook-cuisine-canadian.js","cookbook/cookbook-cuisine-caribbean.js","cookbook/cookbook-cuisine-chilean.js","cookbook/cookbook-cuisine-chinese.js","cookbook/cookbook-cuisine-colombian.js","cookbook/cookbook-cuisine-congolese.js","cookbook/cookbook-cuisine-costa-rican.js","cookbook/cookbook-cuisine-cuban.js","cookbook/cookbook-cuisine-danish.js","cookbook/cookbook-cuisine-dominican.js","cookbook/cookbook-cuisine-ecuadorian.js","cookbook/cookbook-cuisine-eritrean.js","cookbook/cookbook-cuisine-ethiopian.js","cookbook/cookbook-cuisine-fijian.js","cookbook/cookbook-cuisine-filipino.js","cookbook/cookbook-cuisine-french.js","cookbook/cookbook-cuisine-georgian.js","cookbook/cookbook-cuisine-german.js","cookbook/cookbook-cuisine-ghanaian.js","cookbook/cookbook-cuisine-greek.js","cookbook/cookbook-cuisine-guatemalan.js","cookbook/cookbook-cuisine-guyanese.js","cookbook/cookbook-cuisine-haitian.js","cookbook/cookbook-cuisine-honduran.js","cookbook/cookbook-cuisine-hungarian.js","cookbook/cookbook-cuisine-indian.js","cookbook/cookbook-cuisine-indonesian.js","cookbook/cookbook-cuisine-irish.js","cookbook/cookbook-cuisine-italian.js","cookbook/cookbook-cuisine-ivorian.js","cookbook/cookbook-cuisine-jamaican.js","cookbook/cookbook-cuisine-japanese.js","cookbook/cookbook-cuisine-kazakh.js","cookbook/cookbook-cuisine-kenyan.js","cookbook/cookbook-cuisine-korean.js","cookbook/cookbook-cuisine-kyrgyz.js","cookbook/cookbook-cuisine-lebanese.js","cookbook/cookbook-cuisine-malaysian.js","cookbook/cookbook-cuisine-malian.js","cookbook/cookbook-cuisine-maori.js","cookbook/cookbook-cuisine-mexican.js","cookbook/cookbook-cuisine-middle-eastern.js","cookbook/cookbook-cuisine-moroccan.js","cookbook/cookbook-cuisine-nepali.js","cookbook/cookbook-cuisine-nicaraguan.js","cookbook/cookbook-cuisine-nigerian.js","cookbook/cookbook-cuisine-norwegian.js","cookbook/cookbook-cuisine-pakistani.js","cookbook/cookbook-cuisine-panamanian.js","cookbook/cookbook-cuisine-papua-new-guinean.js","cookbook/cookbook-cuisine-paraguayan.js","cookbook/cookbook-cuisine-persian.js","cookbook/cookbook-cuisine-peruvian.js","cookbook/cookbook-cuisine-polish.js","cookbook/cookbook-cuisine-portuguese.js","cookbook/cookbook-cuisine-puerto-rican.js","cookbook/cookbook-cuisine-russian.js","cookbook/cookbook-cuisine-salvadoran.js","cookbook/cookbook-cuisine-samoan.js","cookbook/cookbook-cuisine-scottish.js","cookbook/cookbook-cuisine-senegalese.js","cookbook/cookbook-cuisine-singaporean.js","cookbook/cookbook-cuisine-somali.js","cookbook/cookbook-cuisine-south-african.js","cookbook/cookbook-cuisine-spanish.js","cookbook/cookbook-cuisine-sri-lankan.js","cookbook/cookbook-cuisine-sudanese.js","cookbook/cookbook-cuisine-surinamese.js","cookbook/cookbook-cuisine-swedish.js","cookbook/cookbook-cuisine-swiss.js","cookbook/cookbook-cuisine-taiwanese.js","cookbook/cookbook-cuisine-tajik.js","cookbook/cookbook-cuisine-tanzanian.js","cookbook/cookbook-cuisine-thai.js","cookbook/cookbook-cuisine-tongan.js","cookbook/cookbook-cuisine-trinidadian.js","cookbook/cookbook-cuisine-turkish.js","cookbook/cookbook-cuisine-turkmen.js","cookbook/cookbook-cuisine-ugandan.js","cookbook/cookbook-cuisine-ukrainian.js","cookbook/cookbook-cuisine-uruguayan.js","cookbook/cookbook-cuisine-uzbek.js","cookbook/cookbook-cuisine-venezuelan.js","cookbook/cookbook-cuisine-vietnamese.js","cookbook/cookbook-everyday.js","cookbook/cookbook-fancy.js","cookbook/cookbook-leftovers.js","cookbook/cookbook-light.js","cookbook/cookbook-more-light-b.js","cookbook/cookbook-more-light.js","cookbook/cookbook-more-mains-a.js","cookbook/cookbook-more-mains-b.js","cookbook/cookbook-quick.js","cookbook/cookbook-wraps-sandwiches.js","pizza.js","ferment.js","engine.js"];
 var boot=document.getElementById("boot");
 function fail(){var sp=document.getElementById("splash");if(sp)sp.remove();boot.hidden=false;document.getElementById("bootbtn").onclick=function(){
   var go=function(){location.reload()};
