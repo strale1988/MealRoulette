@@ -1,6 +1,57 @@
-/* cookbook-cuisine-greek.js — recipes tagged as Greek. */
+/* cookbook-cuisine-greek.js — dedicated cookbook recipe data. */
 KITCHEN.add(
 [
+  {
+    "id": "gr-lemon-chicken-potatoes",
+    "name": "Greek lemon chicken with potatoes",
+    "meal": "big",
+    "cuisine": "Greek",
+    "time": 80,
+    "serves": 3,
+    "ing": [
+      [
+        "chicken-thigh",
+        700
+      ],
+      [
+        "potatoes",
+        600
+      ],
+      [
+        "lemon",
+        "2pc"
+      ],
+      [
+        "olive-oil",
+        50
+      ],
+      [
+        "garlic",
+        "4pc"
+      ],
+      [
+        "oregano",
+        3
+      ],
+      [
+        "chicken-stock",
+        200
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
+        1
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 200 °C. Cut {potatoes} into wedges and put them in a roasting tin with {chicken-thigh}.",
+      "Mix {olive-oil}, juice of the {lemon}, crushed {garlic}, {oregano}, {salt} and {black-pepper} and pour over, then add {chicken-stock}.",
+      "Roast 60 minutes, turning once, until the chicken is golden and the potatoes have soaked up the sauce."
+    ]
+  },
   {
     "id": "greek-chicken-rice-bowl",
     "leftoverSwaps": [
@@ -777,12 +828,7 @@ KITCHEN.add(
       "Cook the chopped {onion} and {garlic} in half the {olive-oil}; add the {rice}, chopped tomato flesh, {canned-tomatoes}, {parsley} and {mint}. Stir for 2 minutes.",
       "Spoon the rice mixture loosely into the vegetables. Cut the {potatoes} into wedges and tuck them around the dish; pour in a splash of water, drizzle with remaining oil and bake 55–60 minutes until tender."
     ]
-  }
-]
-);
-
-/* Additional curated recipes */
-KITCHEN.add([
+  },
   {
     "id": "greek-fasolada",
     "name": "Fasolada (Greek white bean soup)",
@@ -902,181 +948,315 @@ KITCHEN.add([
       "Pan-fry in {olive-oil}, turning until browned and cooked through.",
       "Serve with {yogurt} and grated {cucumber}."
     ]
-  }
-]);
-
-/* ---- additions: flatbreads, wraps and new pantry ingredients ---- */
-KITCHEN.add([
-  {id:"chicken-gyros-tzatziki", name:"Chicken gyros with tzatziki", meal:"big", cuisine:"Greek", time:35, serves:2,
-   ing:[["chicken-thigh",350],["pita-bread","2pc"],["yogurt",100],["cucumber",150],["garlic","2pc"],["oregano",3],["lemon","1pc"],["tomato","1pc"],["red-onion","0.5pc"],["olive-oil",20],["salt",2]],
-   steps:[
-    "Marinate the {chicken-thigh} in {olive-oil}, {oregano}, the juice of half the {lemon}, one crushed {garlic} clove and {salt} for 15 minutes or more.",
-    "Grate {cucumber}, squeeze out the water and mix with {yogurt}, the other crushed garlic clove and a squeeze of lemon.",
-    "Cook the chicken for 12 minutes, turning, until charred and cooked through (74 °C). Slice.",
-    "Warm the {pita-bread}. Fill with chicken, sliced {tomato}, {red-onion} and plenty of tzatziki."]},
-  {id:"pork-souvlaki-pita-wraps", name:"Pork souvlaki pita wraps", meal:"big", cuisine:"Greek", time:35, serves:2,
-   ing:[["pork",300],["pita-bread","2pc"],["yogurt",80],["lemon","1pc"],["oregano",3],["garlic","2pc"],["tomato","1pc"],["red-onion","0.5pc"],["olive-oil",20],["salt",2]],
-   steps:[
-    "Cube {pork} and marinate with {olive-oil}, {oregano}, crushed {garlic}, the juice of half the {lemon} and {salt} for 20 minutes or more.",
-    "Thread onto skewers and cook in a hot pan for 10 minutes, turning, until cooked through (70 °C).",
-    "Stir the rest of the lemon juice into {yogurt}.",
-    "Warm the {pita-bread}; fill with pork, sliced {tomato}, {red-onion} and the lemon yogurt."]},
-  {id:"greek-salad-lavash-wraps", name:"Greek salad lavash wraps", meal:"bite", cuisine:"Greek", time:10, serves:2,
-   ing:[["lavash","2pc"],["feta",80],["cucumber",100],["tomato","1pc"],["black-olives",30],["red-onion","0.5pc"],["lettuce",40],["olive-oil",10],["oregano",1]],
-   steps:[
-    "Dice {cucumber} and {tomato}; slice {red-onion}. Toss with {black-olives}, {olive-oil} and {oregano}.",
-    "Warm the {lavash}, cover with {lettuce} and the salad, and crumble over {feta}.",
-    "Roll up tightly and halve."]}
-]);
-
-/* Additional curated recipes */
-KITCHEN.add([
-{
-  "id": "greek-lemon-chickpea-orzo",
-  "name": "Greek lemon chickpeas with pasta",
-  "meal": "big",
-  "cuisine": "Greek",
-  "time": 25,
-  "serves": 2,
-  "ing": [
-    [
-      "chickpeas",
-      240
+  },
+  {
+    "id": "chicken-gyros-tzatziki",
+    "name": "Chicken gyros with tzatziki",
+    "meal": "big",
+    "cuisine": "Greek",
+    "time": 35,
+    "serves": 2,
+    "ing": [
+      [
+        "chicken-thigh",
+        350
+      ],
+      [
+        "pita-bread",
+        "2pc"
+      ],
+      [
+        "yogurt",
+        100
+      ],
+      [
+        "cucumber",
+        150
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "oregano",
+        3
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "1pc"
+      ],
+      [
+        "red-onion",
+        "0.5pc"
+      ],
+      [
+        "olive-oil",
+        20
+      ],
+      [
+        "salt",
+        2
+      ]
     ],
-    [
-      "pasta",
-      160
-    ],
-    [
-      "spinach",
-      100
-    ],
-    [
-      "lemon",
-      "1pc"
-    ],
-    [
-      "feta",
-      80
-    ],
-    [
-      "garlic",
-      "2pc"
-    ],
-    [
-      "olive-oil",
-      20
-    ],
-    [
-      "oregano",
-      3
+    "steps": [
+      "Marinate the {chicken-thigh} in {olive-oil}, {oregano}, the juice of half the {lemon}, one crushed {garlic} clove and {salt} for 15 minutes or more.",
+      "Grate {cucumber}, squeeze out the water and mix with {yogurt}, the other crushed garlic clove and a squeeze of lemon.",
+      "Cook the chicken for 12 minutes, turning, until charred and cooked through (74 °C). Slice.",
+      "Warm the {pita-bread}. Fill with chicken, sliced {tomato}, {red-onion} and plenty of tzatziki."
     ]
-  ],
-  "steps": [
-    "Cook {pasta} until al dente and reserve a little cooking water.",
-    "Warm {olive-oil} in a pan; add {garlic}, {oregano} and drained {chickpeas}. Cook for 3 minutes, gently crushing a few chickpeas.",
-    "Add {spinach}, lemon zest and {lemon} juice. Toss with pasta, loosening with cooking water, and crumble {feta} over the top."
-  ]
-},
-{
-  "id": "greek-baked-orzo-tomato",
-  "name": "Greek baked tomato orzo with feta",
-  "meal": "big",
-  "cuisine": "Greek",
-  "time": 35,
-  "serves": 3,
-  "ing": [
-    [
-      "pasta",
-      220
+  },
+  {
+    "id": "pork-souvlaki-pita-wraps",
+    "name": "Pork souvlaki pita wraps",
+    "meal": "big",
+    "cuisine": "Greek",
+    "time": 35,
+    "serves": 2,
+    "ing": [
+      [
+        "pork",
+        300
+      ],
+      [
+        "pita-bread",
+        "2pc"
+      ],
+      [
+        "yogurt",
+        80
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "oregano",
+        3
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "tomato",
+        "1pc"
+      ],
+      [
+        "red-onion",
+        "0.5pc"
+      ],
+      [
+        "olive-oil",
+        20
+      ],
+      [
+        "salt",
+        2
+      ]
     ],
-    [
-      "canned-tomatoes",
-      400
-    ],
-    [
-      "vegetable-stock",
-      450
-    ],
-    [
-      "red-onion",
-      "1pc"
-    ],
-    [
-      "garlic",
-      "3pc"
-    ],
-    [
-      "oregano",
-      3
-    ],
-    [
-      "feta",
-      100
-    ],
-    [
-      "black-olives",
-      60
+    "steps": [
+      "Cube {pork} and marinate with {olive-oil}, {oregano}, crushed {garlic}, the juice of half the {lemon} and {salt} for 20 minutes or more.",
+      "Thread onto skewers and cook in a hot pan for 10 minutes, turning, until cooked through (70 °C).",
+      "Stir the rest of the lemon juice into {yogurt}.",
+      "Warm the {pita-bread}; fill with pork, sliced {tomato}, {red-onion} and the lemon yogurt."
     ]
-  ],
-  "steps": [
-    "Heat the oven to 190 °C. Dice {red-onion} and crush {garlic}.",
-    "Combine {pasta}, {canned-tomatoes}, {vegetable-stock}, onion, garlic and {oregano} in a baking dish. Cover tightly with foil.",
-    "Bake 20 minutes, stir, then bake uncovered 8–10 minutes until the pasta is tender. Add a splash of water if needed; finish with {feta} and {black-olives}."
-  ]
-},
-{
-  "id": "greek-lamb-meatball-pitas",
-  "name": "Greek lamb meatball pitas",
-  "meal": "big",
-  "cuisine": "Greek",
-  "time": 30,
-  "serves": 2,
-  "ing": [
-    [
-      "lamb",
-      300
+  },
+  {
+    "id": "greek-salad-lavash-wraps",
+    "name": "Greek salad lavash wraps",
+    "meal": "bite",
+    "cuisine": "Greek",
+    "time": 10,
+    "serves": 2,
+    "ing": [
+      [
+        "lavash",
+        "2pc"
+      ],
+      [
+        "feta",
+        80
+      ],
+      [
+        "cucumber",
+        100
+      ],
+      [
+        "tomato",
+        "1pc"
+      ],
+      [
+        "black-olives",
+        30
+      ],
+      [
+        "red-onion",
+        "0.5pc"
+      ],
+      [
+        "lettuce",
+        40
+      ],
+      [
+        "olive-oil",
+        10
+      ],
+      [
+        "oregano",
+        1
+      ]
     ],
-    [
-      "onion",
-      "0.5pc"
-    ],
-    [
-      "garlic",
-      "2pc"
-    ],
-    [
-      "oregano",
-      3
-    ],
-    [
-      "pita-bread",
-      "4pc"
-    ],
-    [
-      "yogurt",
-      120
-    ],
-    [
-      "cucumber",
-      120
-    ],
-    [
-      "lemon",
-      "0.5pc"
+    "steps": [
+      "Dice {cucumber} and {tomato}; slice {red-onion}. Toss with {black-olives}, {olive-oil} and {oregano}.",
+      "Warm the {lavash}, cover with {lettuce} and the salad, and crumble over {feta}.",
+      "Roll up tightly and halve."
     ]
-  ],
-  "steps": [
-    "Mix {lamb} with grated {onion}, {garlic}, {oregano}, salt and pepper. Shape into small meatballs.",
-    "Pan-fry or bake the meatballs until browned and cooked through, turning as needed.",
-    "Mix {yogurt}, grated {cucumber} and {lemon} juice. Warm {pita-bread} and fill with meatballs and cucumber yogurt."
-  ]
-}
-]);
-
-
-/* Additional recipes — added in a schema-compatible batch. */
-KITCHEN.add([
+  },
+  {
+    "id": "greek-lemon-chickpea-orzo",
+    "name": "Greek lemon chickpeas with pasta",
+    "meal": "big",
+    "cuisine": "Greek",
+    "time": 25,
+    "serves": 2,
+    "ing": [
+      [
+        "chickpeas",
+        240
+      ],
+      [
+        "pasta",
+        160
+      ],
+      [
+        "spinach",
+        100
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "feta",
+        80
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "olive-oil",
+        20
+      ],
+      [
+        "oregano",
+        3
+      ]
+    ],
+    "steps": [
+      "Cook {pasta} until al dente and reserve a little cooking water.",
+      "Warm {olive-oil} in a pan; add {garlic}, {oregano} and drained {chickpeas}. Cook for 3 minutes, gently crushing a few chickpeas.",
+      "Add {spinach}, lemon zest and {lemon} juice. Toss with pasta, loosening with cooking water, and crumble {feta} over the top."
+    ]
+  },
+  {
+    "id": "greek-baked-orzo-tomato",
+    "name": "Greek baked tomato orzo with feta",
+    "meal": "big",
+    "cuisine": "Greek",
+    "time": 35,
+    "serves": 3,
+    "ing": [
+      [
+        "pasta",
+        220
+      ],
+      [
+        "canned-tomatoes",
+        400
+      ],
+      [
+        "vegetable-stock",
+        450
+      ],
+      [
+        "red-onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "oregano",
+        3
+      ],
+      [
+        "feta",
+        100
+      ],
+      [
+        "black-olives",
+        60
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 190 °C. Dice {red-onion} and crush {garlic}.",
+      "Combine {pasta}, {canned-tomatoes}, {vegetable-stock}, onion, garlic and {oregano} in a baking dish. Cover tightly with foil.",
+      "Bake 20 minutes, stir, then bake uncovered 8–10 minutes until the pasta is tender. Add a splash of water if needed; finish with {feta} and {black-olives}."
+    ]
+  },
+  {
+    "id": "greek-lamb-meatball-pitas",
+    "name": "Greek lamb meatball pitas",
+    "meal": "big",
+    "cuisine": "Greek",
+    "time": 30,
+    "serves": 2,
+    "ing": [
+      [
+        "lamb",
+        300
+      ],
+      [
+        "onion",
+        "0.5pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "oregano",
+        3
+      ],
+      [
+        "pita-bread",
+        "4pc"
+      ],
+      [
+        "yogurt",
+        120
+      ],
+      [
+        "cucumber",
+        120
+      ],
+      [
+        "lemon",
+        "0.5pc"
+      ]
+    ],
+    "steps": [
+      "Mix {lamb} with grated {onion}, {garlic}, {oregano}, salt and pepper. Shape into small meatballs.",
+      "Pan-fry or bake the meatballs until browned and cooked through, turning as needed.",
+      "Mix {yogurt}, grated {cucumber} and {lemon} juice. Warm {pita-bread} and fill with meatballs and cucumber yogurt."
+    ]
+  },
   {
     "id": "extra-world-greek-lemon-potatoes",
     "name": "Greek lemon oregano potatoes",
@@ -1168,5 +1348,833 @@ KITCHEN.add([
       "Fold in chopped {parsley} and crumbled {feta}. Serve warm or chilled."
     ],
     "cuisine": "Greek"
+  },
+  {
+    "id": "world-greek-spanakopita",
+    "name": "Greek spinach and feta filo pie",
+    "meal": "big",
+    "cuisine": "Greek",
+    "time": 55,
+    "serves": 6,
+    "ing": [
+      [
+        "spinach",
+        500
+      ],
+      [
+        "feta",
+        200
+      ],
+      [
+        "eggs",
+        "2pc"
+      ],
+      [
+        "spring-onion",
+        3
+      ],
+      [
+        "dill",
+        15
+      ],
+      [
+        "filo-pastry",
+        250
+      ],
+      [
+        "olive-oil",
+        50
+      ],
+      [
+        "black-pepper",
+        2
+      ]
+    ],
+    "steps": [
+      "Wilt the {spinach}, cool and squeeze out as much liquid as possible. Chop and mix with crumbled {feta}, {eggs}, sliced {spring-onion}, {dill} and {black-pepper}.",
+      "Heat the oven to 190 °C. Brush a baking dish with {olive-oil}; layer in half the {filo-pastry}, brushing each sheet lightly with oil.",
+      "Spread the spinach filling evenly, then layer the remaining filo on top, brushing with oil and tucking the edges in.",
+      "Score the top into portions and bake 35–40 minutes until crisp and deeply golden. Rest 10 minutes before cutting."
+    ]
+  },
+  {
+    "id": "world-greek-fasolada",
+    "name": "Greek white bean and tomato soup",
+    "meal": "big",
+    "cuisine": "Greek",
+    "time": 45,
+    "serves": 4,
+    "ing": [
+      [
+        "white-beans",
+        800
+      ],
+      [
+        "carrots",
+        2
+      ],
+      [
+        "celery",
+        2
+      ],
+      [
+        "onion",
+        1
+      ],
+      [
+        "tomatoes",
+        400
+      ],
+      [
+        "tomato-paste",
+        25
+      ],
+      [
+        "olive-oil",
+        35
+      ],
+      [
+        "bay-leaf",
+        1
+      ],
+      [
+        "stock",
+        900
+      ],
+      [
+        "parsley",
+        15
+      ]
+    ],
+    "steps": [
+      "Dice the {carrots}, {celery} and {onion}. Soften them in half the {olive-oil} for 8 minutes.",
+      "Stir in {tomato-paste}, then add {tomatoes}, {white-beans}, {bay-leaf} and {stock}.",
+      "Simmer 25–30 minutes until the vegetables are tender and the broth is rich. Mash a few beans against the side to thicken slightly.",
+      "Remove the bay leaf, stir in chopped {parsley} and remaining olive oil, and season to taste. Serve with crusty bread."
+    ]
+  },
+  {
+    "id": "greek-lamb-souvlaki",
+    "name": "Lamb souvlaki with lemon oregano potatoes",
+    "meal": "big",
+    "cuisine": "Greek",
+    "time": 45,
+    "serves": 2,
+    "ing": [
+      [
+        "lamb",
+        400
+      ],
+      [
+        "potatoes",
+        500
+      ],
+      [
+        "lemon",
+        "2pc"
+      ],
+      [
+        "olive-oil",
+        35
+      ],
+      [
+        "oregano",
+        4
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "yogurt",
+        120
+      ],
+      [
+        "cucumber",
+        100
+      ],
+      [
+        "salt",
+        4
+      ]
+    ],
+    "steps": [
+      "Cut {lamb} into chunks and marinate with half the {olive-oil}, juice of one {lemon}, {oregano}, crushed {garlic} and salt for 20 minutes.",
+      "Cut {potatoes} into wedges; toss with remaining oil, lemon juice and salt. Roast at 210 °C for 35–40 minutes.",
+      "Thread lamb onto skewers and grill or sear until browned and cooked to preference.",
+      "Mix {yogurt} with grated, squeezed {cucumber} and a little garlic for a quick sauce. Serve with potatoes."
+    ]
+  },
+  {
+    "id": "greek-pastitsio",
+    "name": "Greek pastitsio baked pasta",
+    "cuisine": "Greek",
+    "meal": "big",
+    "time": 80,
+    "serves": 4,
+    "ing": [
+      [
+        "pasta",
+        300
+      ],
+      [
+        "beef-mince",
+        450
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "tomato-passata",
+        350
+      ],
+      [
+        "cinnamon",
+        1
+      ],
+      [
+        "butter",
+        50
+      ],
+      [
+        "flour",
+        45
+      ],
+      [
+        "milk",
+        600
+      ],
+      [
+        "parmesan",
+        70
+      ],
+      [
+        "eggs",
+        "1pc"
+      ]
+    ],
+    "steps": [
+      "Cook {pasta} until just under al dente. Brown {beef-mince} with diced {onion}; add {tomato-passata} and {cinnamon}, simmer 15 minutes.",
+      "Make béchamel: melt {butter}, stir in {flour}, then gradually whisk in {milk}; simmer until thick. Cool slightly, then whisk in {eggs} and half the {parmesan}.",
+      "Layer pasta and meat sauce in a baking dish, cover with béchamel and remaining cheese. Bake at 180 °C for 35–40 minutes until golden; rest 15 minutes before slicing."
+    ]
+  },
+  {
+    "id": "greek-kolokithokeftedes",
+    "name": "Greek zucchini fritters with feta, dill and mint",
+    "meal": "light",
+    "cuisine": "Greek",
+    "time": 30,
+    "serves": 2,
+    "ing": [
+      [
+        "zucchini",
+        350
+      ],
+      [
+        "feta",
+        100
+      ],
+      [
+        "egg",
+        1
+      ],
+      [
+        "flour",
+        50
+      ],
+      [
+        "dill",
+        8
+      ],
+      [
+        "mint",
+        6
+      ],
+      [
+        "spring-onion",
+        2
+      ],
+      [
+        "olive-oil",
+        25
+      ],
+      [
+        "black-pepper",
+        1
+      ]
+    ],
+    "steps": [
+      "Grate {zucchini}, salt lightly and leave 10 minutes; squeeze out as much liquid as possible.",
+      "Mix zucchini with crumbled {feta}, {egg}, {flour}, chopped {dill}, {mint}, sliced {spring-onion} and {black-pepper}.",
+      "Drop spoonfuls into hot {olive-oil}; flatten slightly and fry 2–3 minutes per side until golden. Drain and serve with yogurt."
+    ]
+  },
+  {
+    "id": "greek-galaktoboureko-custard-filo",
+    "name": "Greek galaktoboureko semolina custard filo pie",
+    "meal": "sweet",
+    "cuisine": "Greek",
+    "time": 65,
+    "serves": 2,
+    "ing": [
+      [
+        "filo-pastry",
+        220
+      ],
+      [
+        "milk",
+        350
+      ],
+      [
+        "semolina",
+        45
+      ],
+      [
+        "sugar",
+        90
+      ],
+      [
+        "eggs",
+        2
+      ],
+      [
+        "butter",
+        60
+      ],
+      [
+        "lemon",
+        1
+      ],
+      [
+        "cinnamon",
+        2
+      ],
+      [
+        "water",
+        80
+      ],
+      [
+        "vanilla-extract",
+        3
+      ]
+    ],
+    "steps": [
+      "Warm {milk} with half the {sugar} and {vanilla-extract}; whisk in {semolina} and cook until thick. Off heat, whisk in {eggs} and lemon zest from {lemon}.",
+      "Layer sheets of {filo-pastry} in a buttered dish, brushing each with melted {butter}; add the cooled custard and fold pastry over the top.",
+      "Bake at 180 °C for 35–40 minutes. Simmer remaining {sugar}, {water}, {cinnamon} and a strip of lemon zest into a light syrup; pour over the hot pie and cool before cutting."
+    ]
+  },
+  {
+    "id": "greek-soutzoukakia-tomato-cumin",
+    "name": "Soutzoukakia Greek cumin meatballs in tomato sauce",
+    "meal": "big",
+    "cuisine": "Greek",
+    "time": 40,
+    "serves": 2,
+    "ing": [
+      [
+        "beef-mince",
+        300
+      ],
+      [
+        "stale-bread",
+        40
+      ],
+      [
+        "egg",
+        1
+      ],
+      [
+        "garlic",
+        3
+      ],
+      [
+        "cumin",
+        4
+      ],
+      [
+        "cinnamon",
+        1
+      ],
+      [
+        "tomato-passata",
+        300
+      ],
+      [
+        "onion",
+        1
+      ],
+      [
+        "olive-oil",
+        20
+      ],
+      [
+        "parsley",
+        8
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
+        1
+      ]
+    ],
+    "steps": [
+      "Soak {stale-bread}, squeeze dry and mix with {beef-mince}, {egg}, minced {garlic}, {cumin}, {cinnamon}, {salt} and {black-pepper}. Shape into oblong meatballs.",
+      "Brown meatballs in {olive-oil} and set aside. Cook chopped {onion} in the same pan, then add {tomato-passata} and a splash of water.",
+      "Return meatballs and simmer gently for 20 minutes until cooked through. Finish with chopped {parsley}; serve over rice or potatoes."
+    ]
+  },
+  {
+    "id": "greek-garides-saganaki",
+    "name": "Garides saganaki (Greek prawns with tomato, feta and ouzo-style herbs)",
+    "meal": "big",
+    "cuisine": "Greek",
+    "time": 25,
+    "serves": 2,
+    "ing": [
+      [
+        "prawns",
+        350
+      ],
+      [
+        "tomato",
+        3
+      ],
+      [
+        "onion",
+        1
+      ],
+      [
+        "garlic",
+        3
+      ],
+      [
+        "feta",
+        100
+      ],
+      [
+        "oregano",
+        3
+      ],
+      [
+        "olive-oil",
+        20
+      ],
+      [
+        "parsley",
+        12
+      ],
+      [
+        "chilli-flakes",
+        1
+      ],
+      [
+        "salt",
+        2
+      ]
+    ],
+    "steps": [
+      "Sauté chopped {onion} in {olive-oil}; add {garlic} and diced {tomato}. Simmer until thick and saucy, 10–12 minutes.",
+      "Add {prawns}, {oregano}, {chilli-flakes} and {salt}; cook until the prawns turn pink.",
+      "Crumble {feta} over the top and cover for 2 minutes to soften. Finish with chopped {parsley} and serve with crusty bread."
+    ]
+  },
+  {
+    "id": "greek-koulouri",
+    "name": "Koulouri Thessalonikis (Greek sesame bread rings)",
+    "meal": "morning",
+    "cuisine": "Greek",
+    "time": 80,
+    "serves": 4,
+    "ing": [
+      [
+        "flour",
+        300
+      ],
+      [
+        "yeast",
+        7
+      ],
+      [
+        "water",
+        180
+      ],
+      [
+        "sugar",
+        10
+      ],
+      [
+        "salt",
+        5
+      ],
+      [
+        "sesame-seeds",
+        100
+      ],
+      [
+        "honey",
+        20
+      ]
+    ],
+    "steps": [
+      "Mix {flour}, {yeast}, {water}, {sugar} and {salt}; knead until smooth and let rise 45 minutes.",
+      "Divide into 4 ropes, join each into a ring and dip briefly in water mixed with {honey}. Roll generously in {sesame-seeds}.",
+      "Bake at 200 °C for 18–22 minutes until deep golden and crisp outside."
+    ]
+  },
+  {
+    "id": "greek-revithada",
+    "name": "Revithada (Greek slow-baked chickpeas with rosemary and lemon)",
+    "meal": "big",
+    "cuisine": "Greek",
+    "time": 90,
+    "serves": 3,
+    "ing": [
+      [
+        "chickpeas",
+        300
+      ],
+      [
+        "onion",
+        2
+      ],
+      [
+        "garlic",
+        3
+      ],
+      [
+        "rosemary",
+        3
+      ],
+      [
+        "olive-oil",
+        35
+      ],
+      [
+        "lemon-juice",
+        30
+      ],
+      [
+        "bay-leaf",
+        2
+      ],
+      [
+        "water",
+        900
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "black-pepper",
+        1
+      ]
+    ],
+    "steps": [
+      "Soak {chickpeas} overnight and drain. Put in a covered ovenproof pot with sliced {onion}, {garlic}, {rosemary}, {bay-leaf}, {olive-oil} and {water}.",
+      "Cover and bake at 160 °C for 2 hours or until the chickpeas are very tender, adding water if needed.",
+      "Season with {salt} and {black-pepper}; finish with {lemon-juice} and a little olive oil."
+    ]
+  },
+  {
+    "id": "greek-loukoumades",
+    "name": "Loukoumades (Greek honey-soaked doughnuts)",
+    "meal": "treat",
+    "cuisine": "Greek",
+    "time": 55,
+    "serves": 4,
+    "ing": [
+      [
+        "flour",
+        220
+      ],
+      [
+        "yeast",
+        7
+      ],
+      [
+        "water",
+        220
+      ],
+      [
+        "sugar",
+        15
+      ],
+      [
+        "salt",
+        2
+      ],
+      [
+        "oil",
+        500
+      ],
+      [
+        "honey",
+        100
+      ],
+      [
+        "cinnamon",
+        2
+      ],
+      [
+        "walnuts",
+        35
+      ]
+    ],
+    "steps": [
+      "Mix {flour}, {yeast}, {water}, {sugar} and {salt} into a sticky batter. Cover and rise 35–40 minutes until bubbly.",
+      "Heat {oil} in a deep pan. Drop small spoonfuls of batter into the oil and fry, turning, until puffed and deep golden. Drain well.",
+      "Warm {honey} with a spoon of water, drizzle over doughnuts and finish with {cinnamon} and chopped {walnuts}."
+    ]
+  },
+  {
+    "id": "greek-giouvetsi",
+    "name": "Greek beef giouvetsi with orzo",
+    "meal": "big",
+    "cuisine": "Greek",
+    "time": 100,
+    "serves": 4,
+    "ing": [
+      [
+        "beef-strips",
+        600
+      ],
+      [
+        "orzo",
+        250
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "canned-tomatoes",
+        400
+      ],
+      [
+        "beef-stock",
+        700
+      ],
+      [
+        "cinnamon",
+        1
+      ],
+      [
+        "oregano",
+        3
+      ],
+      [
+        "olive-oil",
+        20
+      ],
+      [
+        "parmesan",
+        40
+      ]
+    ],
+    "steps": [
+      "Brown {beef-strips} in {olive-oil}; add diced {onion} and {garlic}.",
+      "Add {canned-tomatoes}, {beef-stock}, {cinnamon} and {oregano}; cover and braise at 170 °C until beef is tender, about 75 minutes.",
+      "Stir in {orzo}, adding more hot water if needed; bake uncovered until pasta is tender and most liquid is absorbed.",
+      "Rest 5 minutes and finish with {parmesan}."
+    ]
+  },
+  {
+    "id": "gyros-pork-pita",
+    "name": "Pork gyros-style pitas",
+    "meal": "big",
+    "cuisine": "Greek",
+    "time": 40,
+    "serves": 3,
+    "ing": [
+      [
+        "pork",
+        400
+      ],
+      [
+        "yogurt",
+        150
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "oregano",
+        3
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "paprika",
+        2
+      ],
+      [
+        "olive-oil",
+        30
+      ],
+      [
+        "pita-bread",
+        "4pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "red-onion",
+        50
+      ],
+      [
+        "cucumber",
+        100
+      ],
+      [
+        "salt",
+        2
+      ]
+    ],
+    "steps": [
+      "Slice {pork} thinly and marinate with half the {yogurt}, {garlic}, {oregano}, {paprika}, juice of the {lemon}, {olive-oil} and {salt} for at least 15 minutes.",
+      "Fry the pork in a hot pan for 6–8 minutes until browned and cooked through.",
+      "Mix the rest of the {yogurt} with grated {cucumber}. Warm {pita-bread} and fill with the pork, sliced {tomato}, {red-onion} and the yogurt sauce."
+    ]
+  },
+  {
+    "id": "gr-moussaka",
+    "name": "Greek moussaka with aubergine, spiced mince and béchamel",
+    "meal": "big",
+    "cuisine": "Greek",
+    "time": 80,
+    "serves": 2,
+    "ing": [
+      [
+        "aubergine",
+        1
+      ],
+      [
+        "beef-mince",
+        400
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "canned-tomatoes",
+        200
+      ],
+      [
+        "cinnamon",
+        2
+      ],
+      [
+        "olive-oil",
+        15
+      ],
+      [
+        "milk",
+        250
+      ],
+      [
+        "butter",
+        35
+      ],
+      [
+        "flour",
+        120
+      ],
+      [
+        "eggs",
+        "2pc"
+      ],
+      [
+        "parmesan",
+        30
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
+        1
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 190 °C and lightly grease a baking dish or line a tray.",
+      "Prepare {aubergine} with the other listed ingredients, layer or shape the mixture evenly and season it well.",
+      "Brown aubergine slices, simmer a cinnamon-scented mince sauce and make a thick béchamel; layer in a dish and bake until set with a deeply golden top.",
+      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+    ]
+  },
+  {
+    "id": "gr-avgolemono",
+    "name": "Avgolemono (Greek lemon, egg and rice soup)",
+    "meal": "big",
+    "cuisine": "Greek",
+    "time": 40,
+    "serves": 2,
+    "ing": [
+      [
+        "chicken-thigh",
+        400
+      ],
+      [
+        "chicken-stock",
+        450
+      ],
+      [
+        "rice",
+        180
+      ],
+      [
+        "eggs",
+        "2pc"
+      ],
+      [
+        "lemon-juice",
+        20
+      ],
+      [
+        "carrot",
+        150
+      ],
+      [
+        "parsley",
+        10
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
+        1
+      ],
+      [
+        "oil",
+        15
+      ]
+    ],
+    "steps": [
+      "Prepare the vegetables and bring the cooking liquid to a gentle simmer.",
+      "Add {chicken-stock} and {chicken-thigh}, simmering gently until the main ingredient is tender.",
+      "Simmer chicken and rice in stock until tender, temper beaten eggs with hot broth slowly, then stir the lemon-egg mixture back into the pot off the boil for a silky finish.",
+      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
+    ]
   }
-]);
+]
+);

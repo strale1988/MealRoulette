@@ -1,5 +1,6 @@
-/* cookbook-bake.js — general recipes in this category without a cuisine tag. */
-KITCHEN.add([
+/* cookbook-bake.js — dedicated cookbook recipe data. */
+KITCHEN.add(
+[
   {
     "id": "bake-white-loaf",
     "name": "Simple white loaf",
@@ -566,281 +567,124 @@ KITCHEN.add([
       "Beat in {eggs}, {milk}, {oil} and {vanilla}, then stir in the hot {water}. The batter will be thin.",
       "Pour into the tin and bake 35–40 minutes until a skewer comes out clean. Cool completely before serving."
     ]
-  }
-]);
-
-/* Additional curated recipes */
-KITCHEN.add([
+  },
   {
-    "id": "bake-basque-cheesecake",
-    "name": "Basque burnt cheesecake",
-    "meal": "treat",
-    "cuisine": "French",
-    "time": 60,
-    "serves": 2,
+    "id": "bake-wholemeal-soda-bread",
+    "name": "Wholemeal soda bread",
+    "meal": "bite",
+    "cuisine": "",
+    "time": 50,
+    "serves": 8,
     "ing": [
       [
-        "cream-cheese",
-        500
-      ],
-      [
-        "sugar",
-        160
-      ],
-      [
-        "eggs",
-        "4pc"
-      ],
-      [
-        "cream",
+        "flour",
         250
       ],
       [
-        "flour",
-        25
-      ],
-      [
-        "vanilla",
-        4
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 220 °C and line a springform tin with crumpled baking paper.",
-      "Beat the {cream-cheese} and {sugar} until smooth. Beat in the {eggs} one at a time, then the {cream} and {vanilla}.",
-      "Fold in the {flour} and pour into the tin.",
-      "Bake 40–50 minutes until deeply browned on top and still slightly wobbly in the centre. Cool completely before slicing."
-    ]
-  },
-  {
-    "id": "bake-hotteok-inspired-pancakes",
-    "name": "Korean-style brown sugar hotteok",
-    "meal": "bite",
-    "cuisine": "Korean",
-    "time": 60,
-    "serves": 2,
-    "ing": [
-      [
-        "flour",
-        240
-      ],
-      [
-        "yeast",
-        5
-      ],
-      [
-        "milk",
-        150
-      ],
-      [
-        "sugar",
-        25
-      ],
-      [
-        "brown-sugar",
-        65
-      ],
-      [
-        "cinnamon",
-        3
-      ],
-      [
-        "walnuts",
-        25
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        2
-      ]
-    ],
-    "steps": [
-      "Mix the {flour}, {yeast}, {milk}, {sugar} and {salt} into a sticky dough. Cover and rise until doubled, about 45 minutes.",
-      "Mix {brown-sugar}, {cinnamon} and chopped {walnuts} for the filling.",
-      "Divide dough into portions, flatten each, add filling and seal.",
-      "Pan-fry in {oil}, pressing gently, until golden on both sides and the sugar centre has melted. Serve warm."
-    ]
-  },
-  {
-    "id": "bake-sfouf-turmeric-cake",
-    "name": "Sfouf (Lebanese turmeric semolina cake)",
-    "meal": "treat",
-    "cuisine": "Middle Eastern",
-    "time": 40,
-    "serves": 2,
-    "ing": [
-      [
-        "semolina",
-        180
-      ],
-      [
-        "flour",
-        80
-      ],
-      [
-        "sugar",
+        "oats",
         100
       ],
       [
-        "milk",
+        "baking-soda",
+        5
+      ],
+      [
+        "salt",
+        5
+      ],
+      [
+        "buttermilk",
+        300
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 200 °C and line a baking tray.",
+      "Mix {flour}, {oats}, {baking-soda} and {salt}. Stir in {buttermilk} until a soft, slightly sticky dough forms.",
+      "Shape into a round loaf, cut a deep cross on top and bake 35–40 minutes until browned and hollow-sounding when tapped. Cool before slicing."
+    ]
+  },
+  {
+    "id": "bake-cheese-herb-muffins",
+    "name": "Cheddar and herb savoury muffins",
+    "meal": "bite",
+    "cuisine": "",
+    "time": 30,
+    "serves": 8,
+    "ing": [
+      [
+        "flour",
         220
-      ],
-      [
-        "oil",
-        70
-      ],
-      [
-        "turmeric",
-        4
       ],
       [
         "baking-powder",
         8
       ],
       [
-        "tahini",
+        "eggs",
+        "2pc"
+      ],
+      [
+        "milk",
+        180
+      ],
+      [
+        "cheddar",
+        100
+      ],
+      [
+        "chives",
         10
       ],
       [
-        "pistachios",
-        25
+        "butter",
+        50
       ]
     ],
     "steps": [
-      "Heat the oven to 180 °C and grease a small tin with {tahini}.",
-      "Mix {semolina}, {flour}, {sugar}, {turmeric} and {baking-powder}.",
-      "Stir in {milk} and {oil} until combined; spread in the tin and scatter {pistachios} on top.",
-      "Bake 25–30 minutes until set and lightly golden. Cool before cutting."
+      "Heat the oven to 190 °C and grease a muffin tin. Melt {butter} and let cool slightly.",
+      "Mix {flour} and {baking-powder}. Whisk {eggs} with {milk}, then stir into the dry ingredients just until combined.",
+      "Fold in {cheddar} and chopped {chives}. Divide into the tin and bake 18–22 minutes until risen and golden."
     ]
-  }
-]);
-
-/* Additional curated recipes */
-KITCHEN.add([
-{
-  "id": "bake-wholemeal-soda-bread",
-  "name": "Wholemeal soda bread",
-  "meal": "bite",
-  "cuisine": "",
-  "time": 50,
-  "serves": 8,
-  "ing": [
-    [
-      "flour",
-      250
+  },
+  {
+    "id": "bake-banana-oat-breakfast-bars",
+    "name": "Banana oat breakfast bars",
+    "meal": "morning",
+    "cuisine": "",
+    "time": 30,
+    "serves": 8,
+    "ing": [
+      [
+        "banana",
+        "2pc"
+      ],
+      [
+        "oats",
+        220
+      ],
+      [
+        "peanut-butter",
+        60
+      ],
+      [
+        "honey",
+        25
+      ],
+      [
+        "cinnamon",
+        2
+      ],
+      [
+        "dark-chocolate",
+        40
+      ]
     ],
-    [
-      "oats",
-      100
-    ],
-    [
-      "baking-soda",
-      5
-    ],
-    [
-      "salt",
-      5
-    ],
-    [
-      "buttermilk",
-      300
+    "steps": [
+      "Heat the oven to 180 °C and line a small square tin.",
+      "Mash {banana}; stir in {oats}, {peanut-butter}, {honey} and {cinnamon}. Fold through chopped {dark-chocolate}.",
+      "Press firmly into the tin and bake 20–25 minutes until set at the edges. Cool completely before cutting into bars."
     ]
-  ],
-  "steps": [
-    "Heat the oven to 200 °C and line a baking tray.",
-    "Mix {flour}, {oats}, {baking-soda} and {salt}. Stir in {buttermilk} until a soft, slightly sticky dough forms.",
-    "Shape into a round loaf, cut a deep cross on top and bake 35–40 minutes until browned and hollow-sounding when tapped. Cool before slicing."
-  ]
-},
-{
-  "id": "bake-cheese-herb-muffins",
-  "name": "Cheddar and herb savoury muffins",
-  "meal": "bite",
-  "cuisine": "",
-  "time": 30,
-  "serves": 8,
-  "ing": [
-    [
-      "flour",
-      220
-    ],
-    [
-      "baking-powder",
-      8
-    ],
-    [
-      "eggs",
-      "2pc"
-    ],
-    [
-      "milk",
-      180
-    ],
-    [
-      "cheddar",
-      100
-    ],
-    [
-      "chives",
-      10
-    ],
-    [
-      "butter",
-      50
-    ]
-  ],
-  "steps": [
-    "Heat the oven to 190 °C and grease a muffin tin. Melt {butter} and let cool slightly.",
-    "Mix {flour} and {baking-powder}. Whisk {eggs} with {milk}, then stir into the dry ingredients just until combined.",
-    "Fold in {cheddar} and chopped {chives}. Divide into the tin and bake 18–22 minutes until risen and golden."
-  ]
-},
-{
-  "id": "bake-banana-oat-breakfast-bars",
-  "name": "Banana oat breakfast bars",
-  "meal": "morning",
-  "cuisine": "",
-  "time": 30,
-  "serves": 8,
-  "ing": [
-    [
-      "banana",
-      "2pc"
-    ],
-    [
-      "oats",
-      220
-    ],
-    [
-      "peanut-butter",
-      60
-    ],
-    [
-      "honey",
-      25
-    ],
-    [
-      "cinnamon",
-      2
-    ],
-    [
-      "dark-chocolate",
-      40
-    ]
-  ],
-  "steps": [
-    "Heat the oven to 180 °C and line a small square tin.",
-    "Mash {banana}; stir in {oats}, {peanut-butter}, {honey} and {cinnamon}. Fold through chopped {dark-chocolate}.",
-    "Press firmly into the tin and bake 20–25 minutes until set at the edges. Cool completely before cutting into bars."
-  ]
-}
-]);
-
-
-/* Additional recipes — added in a schema-compatible batch. */
-KITCHEN.add([
+  },
   {
     "id": "bake-olive-rosemary-soda-bread",
     "name": "Olive and rosemary soda bread",
@@ -973,5 +817,267 @@ KITCHEN.add([
       "Beat {eggs} with {milk}, reserving a little for brushing. Stir into the dry ingredients with spinach and feta to make a soft dough.",
       "Pat to 2.5 cm thick, cut into rounds and brush with reserved egg. Bake 12–15 minutes until risen and golden."
     ]
+  },
+  {
+    "id": "bake-olive-rosemary-crackers",
+    "name": "Olive and rosemary crackers",
+    "meal": "bite",
+    "cuisine": "",
+    "time": 35,
+    "serves": 8,
+    "ing": [
+      [
+        "flour",
+        220
+      ],
+      [
+        "olive-oil",
+        35
+      ],
+      [
+        "water",
+        100
+      ],
+      [
+        "olives",
+        60
+      ],
+      [
+        "rosemary",
+        4
+      ],
+      [
+        "salt",
+        4
+      ]
+    ],
+    "steps": [
+      "Heat oven to 190 °C. Finely chop the {olives} and {rosemary}.",
+      "Mix {flour} and {salt}; add {olive-oil}, {water}, olives and rosemary to form a firm dough.",
+      "Roll very thin between sheets of baking paper and cut into squares. Prick with a fork.",
+      "Bake 12–16 minutes until crisp and lightly golden; cool completely before storing."
+    ]
+  },
+  {
+    "id": "bake-orange-polenta-cake",
+    "name": "Orange and almond polenta cake",
+    "meal": "treat",
+    "cuisine": "",
+    "time": 55,
+    "serves": 8,
+    "ing": [
+      [
+        "ground-almonds",
+        150
+      ],
+      [
+        "polenta",
+        120
+      ],
+      [
+        "butter",
+        150
+      ],
+      [
+        "sugar",
+        150
+      ],
+      [
+        "eggs",
+        "3pc"
+      ],
+      [
+        "orange",
+        2
+      ],
+      [
+        "baking-powder",
+        5
+      ]
+    ],
+    "steps": [
+      "Heat oven to 170 °C and line a 20 cm cake tin. Cream {butter} and {sugar} until light.",
+      "Beat in {eggs} one at a time, then add finely grated zest of the {orange}.",
+      "Fold in {ground-almonds}, {polenta} and {baking-powder}; spread in the tin.",
+      "Bake 35–40 minutes until golden and a skewer comes out clean. Brush with a little orange juice while warm if desired."
+    ]
+  },
+  {
+    "id": "bake-raspberry-almond-financiers",
+    "name": "Raspberry almond mini cakes with browned butter",
+    "meal": "sweet",
+    "cuisine": "Baking",
+    "time": 35,
+    "serves": 2,
+    "ing": [
+      [
+        "butter",
+        80
+      ],
+      [
+        "ground-almonds",
+        80
+      ],
+      [
+        "icing-sugar",
+        90
+      ],
+      [
+        "flour",
+        30
+      ],
+      [
+        "eggs",
+        3
+      ],
+      [
+        "vanilla-extract",
+        3
+      ],
+      [
+        "berries",
+        80
+      ]
+    ],
+    "steps": [
+      "Melt {butter} in a small pan and cook until nut-brown and fragrant; cool slightly.",
+      "Whisk {ground-almonds}, {icing-sugar} and {flour}; stir in {eggs} and {vanilla-extract}, then fold in browned butter.",
+      "Divide batter into small greased moulds, add {berries} and bake at 190 °C for 12–15 minutes until golden."
+    ]
+  },
+  {
+    "id": "bake-cinnamon-cardamom-knots",
+    "name": "Cinnamon cardamom sweet bread knots",
+    "meal": "sweet",
+    "cuisine": "Baking",
+    "time": 90,
+    "serves": 2,
+    "ing": [
+      [
+        "flour",
+        280
+      ],
+      [
+        "yeast",
+        5
+      ],
+      [
+        "milk",
+        150
+      ],
+      [
+        "sugar",
+        45
+      ],
+      [
+        "butter",
+        50
+      ],
+      [
+        "cardamom",
+        3
+      ],
+      [
+        "cinnamon",
+        3
+      ],
+      [
+        "egg",
+        1
+      ],
+      [
+        "salt",
+        3
+      ]
+    ],
+    "steps": [
+      "Mix {flour}, {yeast}, {milk}, {sugar}, half the {butter}, {cardamom} and {salt}; knead until smooth. Let rise until doubled.",
+      "Mix remaining softened {butter} with {cinnamon} and a spoonful of sugar. Roll dough into a rectangle, spread filling, fold and cut into strips; twist into knots.",
+      "Brush with beaten {egg} and bake at 190 °C for 15–18 minutes until golden."
+    ]
+  },
+  {
+    "id": "bake-black-sesame-shortbread",
+    "name": "Black sesame shortbread biscuits",
+    "meal": "sweet",
+    "cuisine": "Baking",
+    "time": 35,
+    "serves": 2,
+    "ing": [
+      [
+        "flour",
+        160
+      ],
+      [
+        "butter",
+        100
+      ],
+      [
+        "sugar",
+        55
+      ],
+      [
+        "sesame-seeds",
+        25
+      ],
+      [
+        "vanilla-extract",
+        3
+      ],
+      [
+        "salt",
+        2
+      ]
+    ],
+    "steps": [
+      "Cream softened {butter} with {sugar} and {vanilla-extract}; mix in {flour}, {sesame-seeds} and {salt} to form a soft dough.",
+      "Shape into a log, chill for 20 minutes, then slice into rounds and arrange on a lined tray.",
+      "Bake at 170 °C for 12–15 minutes until just turning golden at the edges. Cool on the tray to firm up."
+    ]
+  },
+  {
+    "id": "bake-lemon-drizzle-cake",
+    "name": "Lemon drizzle loaf cake",
+    "meal": "sweet",
+    "cuisine": "",
+    "time": 60,
+    "serves": 8,
+    "ing": [
+      [
+        "butter",
+        180
+      ],
+      [
+        "sugar",
+        180
+      ],
+      [
+        "eggs",
+        "3pc"
+      ],
+      [
+        "flour",
+        180
+      ],
+      [
+        "baking-powder",
+        6
+      ],
+      [
+        "lemon",
+        2
+      ],
+      [
+        "icing-sugar",
+        100
+      ]
+    ],
+    "steps": [
+      "Heat oven to 180 °C and line a loaf tin. Cream {butter} and {sugar} until pale.",
+      "Beat in {eggs} one at a time; fold in {flour}, {baking-powder} and zest of one {lemon}.",
+      "Bake 40–45 minutes until a skewer comes out clean. Mix juice of one lemon with half the {icing-sugar}.",
+      "Prick the warm cake and spoon over lemon syrup; cool, then glaze with remaining icing sugar mixed with a little lemon juice."
+    ]
   }
-]);
+]
+);
