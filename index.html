@@ -533,6 +533,81 @@ footer{margin-top:28px;padding-top:12px}
  #tab-ferm:not(.resmode) .heroback{display:none}
  #tab-ferm:not(.resmode) .hero:has(.heroback)>h2{padding-right:0}
 }
+/* ---- v73: roomier desktop (wider page, filters 2/5 + recipe 3/5), smaller controls on desktop, © only in My kitchen ---- */
+main>footer{display:none}
+main:has(#tab-kit:not([hidden]))>footer{display:block}
+@media (min-width:760px){main>.tab:not(#tab-kit):not([hidden]){padding-bottom:20px}}
+/* ingredients | method go side by side only when the recipe card itself is wide enough */
+.card{container-type:inline-size}
+@media (min-width:1100px){.split{display:block}}
+@container (min-width:640px){
+ .split{display:grid;grid-template-columns:minmax(230px,5fr) minmax(0,7fr);gap:0 32px;align-items:start}
+ .split ol{max-width:none}
+}
+@media (min-width:960px){
+ body{font-size:15px}
+ main,.bar-in{max-width:1760px}
+ .cols{grid-template-columns:minmax(360px,2fr) minmax(0,3fr);gap:clamp(20px,2.2vw,36px)}
+ .side{top:66px;max-height:calc(100vh - 78px)}
+ .card{scroll-margin-top:72px}
+ .hl{font-size:30px;margin:0 0 2px}.hl+p{font-size:14px;margin:0 0 8px}
+ .hero{padding:10px 18px}.hero .ic{width:38px;height:38px;font-size:20px}.hero h2{font-size:20px}
+ .body{padding:2px 18px 14px}
+ .meta span{font-size:12.5px;padding:2px 10px}
+ .desc{font-size:13.5px}
+ h3{font-size:11.5px;margin:12px 0 6px}
+ .call{font-size:13px;padding:6px 10px}
+ .ktile{padding:8px 11px 9px}.ktile b{font-size:20px}.ktile .kti{width:28px;height:28px;font-size:14px;margin-bottom:3px}.ktile>span:last-child{font-size:12px}
+ .kbar{gap:10px;margin:10px 0 0}.kzones{gap:22px 18px;margin-top:16px}
+ .kzh h2{font-size:20px}.kzb{width:38px;height:38px;font-size:18px}.kzh p{font-size:13px}
+}
+@media (min-width:960px) and (pointer:fine){
+ .panel{padding:10px 12px;margin-top:8px;border-radius:18px}
+ .tiles{gap:6px}.tile{padding:4px 12px;font-size:13px}.tile .i{font-size:17px}
+ .lab{font-size:11.5px;margin-bottom:4px}.lab:not(:first-child){margin-top:8px}
+ .tags{padding:2px 10px}.tags input{padding:2px 6px;font-size:14px}
+ .tag{font-size:13px;padding:2px 5px 2px 10px}
+ .quick button{font-size:12px;padding:2px 10px;min-height:26px}
+ .step{height:36px;padding:0 4px;box-shadow:2px 2px 0 var(--ink)}
+ .step button{width:26px;height:26px;font-size:14px;border-width:2px}
+ .step b{font-size:14px}
+ .hstep{min-width:104px}
+ select{height:36px;font-size:14px;padding:0 14px}
+ .hages select{height:32px}
+ .tg{gap:5px}.tg button{padding:3px 10px;font-size:12.5px}
+ .grid{gap:8px}
+ .btns,.pzbtns:has(#pzspin){gap:10px;margin-top:10px}
+ #spin,#pzspin,#pzuse,.fmspin,#remix,#pzremix{min-height:46px;font-size:18px;box-shadow:3px 3px 0 var(--ink)}
+ #remix,#pzremix,.pzbtns:has(#pzspin) #pzremix{font-size:15px}
+ #remix .i,#pzremix .i{width:1.3em;height:1.3em}
+ .row .go{min-height:46px;font-size:17px}
+ .row button{padding:5px 8px;font-size:13px}
+ ul.ing li,.split ul.ing li{padding:4px 10px;margin-bottom:4px;font-size:14px;border-radius:14px}
+ .split ul.ing li:before,ul.ing.tick li:before{width:18px;height:18px;border-width:2px}
+ ol li{font-size:14.5px;margin-bottom:6px;gap:10px}
+ ol li:before{width:24px;height:24px;font-size:13px}
+ .pzseg button{padding:6px 8px}
+ .fmspin{margin-top:10px}
+}
+/* ---- v74: slimmer ingredient capsules (match the suggestion chips), numbers dead-center in the round badges ---- */
+.tag{min-height:0;height:28px;padding:0 4px 0 11px;gap:3px;font-size:13px;line-height:1}
+.tag button,.tag button.u{min-height:0;width:22px;height:22px;padding:0;border-radius:50%}
+.tag .i{width:1.05em;height:1.05em}
+ol li:before{display:flex;align-items:center;justify-content:center;padding:0;line-height:1;text-align:center;text-box:trim-both cap alphabetic}
+.cl-days i,.pantry span{line-height:1}
+/* ---- v75: portions chip is the servings control (click it to change), no separate Servings row ---- */
+.meta .pchip{cursor:pointer;-webkit-user-select:none;user-select:none;transition:background-color .14s ease,padding .14s ease}
+.meta .pchip:hover{background:var(--soft)}
+.meta .pchip em{font-style:normal;display:flex;align-items:center;gap:5px}
+.meta .pchip:not(.open)::after{content:"";width:5px;height:5px;border:solid currentColor;border-width:0 2px 2px 0;transform:rotate(45deg) translateY(-2px);margin-left:2px;opacity:.7}
+.meta .pchip.open{padding-left:3px;padding-right:3px;gap:6px;background:var(--soft)}
+.meta .pchip .pm{display:none;place-items:center;width:22px;height:22px;padding:0;border:2px solid var(--ink);border-radius:50%;background:var(--sun);color:#2a1a13;cursor:pointer;transition:transform .14s ease}
+.meta .pchip.open .pm{display:grid}
+.meta .pchip .pm:hover{transform:scale(1.1)}.meta .pchip .pm:active{transform:scale(.92)}
+.meta .pchip .pm .i{width:12px;height:12px;stroke-width:3}
+.meta .pchip:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+/* ---- v76: empty-state boxes have no icon ---- */
+.ph .i{display:none!important}
 </style>
 </head>
 <body>
@@ -574,7 +649,6 @@ footer{margin-top:28px;padding-top:12px}
 <div class="splash" id="splash" role="status" aria-label="Loading Meal Roulette">
  <div class="sp-wheel"><div class="sp-pizza"><svg viewBox="0 0 128 128" aria-hidden="true"><use href="#logo-pizza"/></svg></div></div>
  <h1 class="sp-t" aria-label="Meal Roulette"><span style="--i:0">M</span><span style="--i:1">e</span><span style="--i:2">a</span><span style="--i:3">l</span><span style="--i:4">&nbsp;</span><span style="--i:5">R</span><span style="--i:6">o</span><span style="--i:7">u</span><span style="--i:8">l</span><span style="--i:9">e</span><span style="--i:10">t</span><span style="--i:11">t</span><span style="--i:12">e</span></h1>
- <p class="sp-h" aria-live="polite">Loading<span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></p>
 </div>
 
 <header class="bar"><div class="bar-in">
@@ -641,7 +715,7 @@ footer{margin-top:28px;padding-top:12px}
 <div class="steam"><s style="--k:0;--sx:-6px"></s><s style="--k:1;--sx:8px"></s><s style="--k:2;--sx:0px"></s></div>
 <div class="ring" style="--T:7s"><div class="ing" style="--k:0;--r:0deg;--R:46px"><u><i>🍅</i></u></div><div class="ing" style="--k:1;--r:120deg;--R:46px"><u><i>🥕</i></u></div><div class="ing" style="--k:2;--r:240deg;--R:46px"><u><i>🧄</i></u></div></div><div class="ring" style="--T:4.5s"><div class="ing" style="--k:3;--r:60deg;--R:22px"><u><i>🍋</i></u></div><div class="ing" style="--k:4;--r:180deg;--R:22px"><u><i>🧀</i></u></div><div class="ing" style="--k:5;--r:300deg;--R:22px"><u><i>🍄</i></u></div></div></div><span id="rt"></span><small>Picking something tasty…</small></div>
   <div id="out"></div>
-  <div class="ph"><svg class="i"><use href="#i-dice"/></svg><b>Your recipe shows up here</b>Pick a meal, then spin or remix.</div>
+  <div class="ph"><b>Your recipe shows up here</b>Pick a meal, then spin or remix.</div>
   <div class="fav" id="fav"></div>
   <div class="fav" id="plans"></div>
  </section>
@@ -697,7 +771,7 @@ footer{margin-top:28px;padding-top:12px}
   <section class="res">
    <div class="note" id="pznote" role="status"></div>
    <div id="pzout"></div>
-   <div class="ph" id="pzph"><svg class="i"><use href="#i-pizza"/></svg><b>Your pizza shows up here</b>Pick a classic or remix a new one.</div>
+   <div class="ph" id="pzph"><b>Your pizza shows up here</b>Pick a classic or remix a new one.</div>
    <div class="fav" id="pzfav"></div>
   </section>
  </div>
@@ -739,7 +813,7 @@ footer{margin-top:28px;padding-top:12px}
   </section>
    </div>
   </section>
-  <section class="kzone" id="kz-saved" data-c="2"><header class="kzh"><span class="kzb"><svg class="i"><use href="#i-heart"/></svg></span><div><h2>Your scrapbook</h2><p>Recipes and plans you kept, and what you have cooked.</p></div></header>
+  <section class="kzone" id="kz-saved" data-c="2"><header class="kzh"><span class="kzb"><svg class="i"><use href="#i-heart"/></svg></span><div><h2>Your scrapbook</h2><p>Recipes and plans you kept, what you have cooked, and your ferments.</p></div></header>
    <div class="kgrid">
   <section class="panel" id="cooklog"><div class="lab"><svg class="i"><use href="#i-chef"/></svg>Your cooking log</div><div id="cooklogbody"></div></section>
    </div>
@@ -1018,7 +1092,7 @@ function nothing(){
   const others=MEALS.filter(m=>m[0]!==S.meal&&canMake(m[0])),near={};
   recipeInfos().filter(x=>x.miss===1).forEach(x=>{const i=x.ing.find(missing);if(i)near[i.name]=(near[i.name]||0)+1});
   const add=Object.entries(near).sort((a,b)=>b[1]-a[1]).slice(0,4);
-  $("out").innerHTML=`<article class="card"><div class="body"><div class="ph">${I("fridge")}<b>Nothing for ${esc(ML(S.meal).toLowerCase())} from only your fridge</b>${others.length||add.length?"Here is what would work:":"Add a few more ingredients and try again."}</div>
+  $("out").innerHTML=`<article class="card"><div class="body"><div class="ph"><b>Nothing for ${esc(ML(S.meal).toLowerCase())} from only your fridge</b>${others.length||add.length?"Here is what would work:":"Add a few more ingredients and try again."}</div>
   ${others.length?`<h3>${I("dice")}Works right now</h3><div class="row">${others.map(m=>`<button data-meal="${m[0]}">${I(m[1])}${m[2]}</button>`).join("")}</div>`:""}
   ${add.length?`<h3>${I("cart")}One ingredient away</h3><div class="row">${add.map(a=>`<button data-add="${esc(a[0])}">+ ${esc(a[0])} <small>(${a[1]} recipe${a[1]>1?"s":""})</small></button>`).join("")}</div>`:""}
   <div class="row"><button data-closest="1">${I("list")}Show the closest recipe anyway</button></div></div></article>`;
@@ -1091,7 +1165,7 @@ function run(what,single,instant){
   [["add",addItem],["sadd",addStaple],["ladd",addLeftover]].forEach(([id,fn])=>{if($(id).value.trim())fn()}); // text typed but not yet confirmed still counts
   const pl=!!S.plan&&!single,rl=$("reel"),rt=$("rt"),o=$("out"),nt=$("note");rl.querySelector("small").textContent=pl?"Planning your days…":"Picking something tasty…";
   const btns=document.querySelectorAll(".btns button"),rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
-  btns.forEach(b=>b.disabled=true);o.innerHTML="";nt.textContent=pl?"Planning your days…":what==="remix"?"Whisking up a new recipe…":"Picking something tasty…";
+  btns.forEach(b=>b.disabled=true);o.innerHTML="";nt.textContent="";
   const names=RECIPES.map(r=>r.title).concat(Object.keys(GEN.cuisines).map(c=>c+" "+rnd(["chicken bowl","stir-fry","curry","traybake","stew"])));
   const done=()=>{rl.classList.remove("on");btns.forEach(b=>b.disabled=false);if(!pl&&!single){const active=selectedMeals();if(active.length)S.meal=rnd(active);save();}pl?plan(what==="remix"?"remix":""):what==="remix"?invent():go();
     const c=o.firstElementChild||o;c.scrollIntoView({behavior:"smooth",block:"start"})};
@@ -1566,6 +1640,8 @@ function scaleMade(r,n){
   Object.defineProperty(o,"base",{value:b,enumerable:false,writable:true,configurable:true});return o;
 }
 /* ---- on every recipe: change the servings, and rate it (thumbs steer future spins) ---- */
+let SERV=null;
+document.addEventListener("click",e=>{if(!SERV||e.target.closest&&e.target.closest(".pchip"))return;SERV=null;document.querySelectorAll(".pchip.open").forEach(c=>{c.classList.remove("open");c.setAttribute("aria-expanded","false");c.querySelectorAll(".pm").forEach(b=>b.tabIndex=-1)})});
 (function(){
 const _sh=show;
 show=function(r,m){_sh(r,m);if(!r)return;try{
@@ -1573,13 +1649,22 @@ show=function(r,m){_sh(r,m);if(!r)return;try{
   // servings
   const rec=r.rid&&K.recipes.find(x=>x.id===r.rid),meta=card.querySelector(".meta");
   if(meta){
-    const box=document.createElement("div");box.className="scl";box.style.cssText="display:flex;align-items:center;gap:10px;margin:2px 0 10px;color:var(--mute);font-size:14px";
-    box.innerHTML=`<span>Servings</span><span class="step" style="display:inline-flex;width:auto;min-width:130px;gap:6px"><button type="button" data-d="-1" aria-label="Fewer servings">${I("minus")}</button><b aria-live="polite">${r.n}</b><button type="button" data-d="1" aria-label="More servings">${I("plus")}</button></span>`;
-    meta.after(box);
-    box.querySelectorAll("button").forEach(b=>b.onclick=()=>{const n=Math.min(24,Math.max(1,r.n+ +b.dataset.d));if(n===r.n)return;
-      if(rec){const F=fridgeIds(),U=new Set([...S.urgent.flatMap(x=>K.match(x)),...[...F].filter(isLeftId)]),x=K.resolve(rec,n,{fridge:F,basic:S.basic,urgent:U});
-        return show({...r,n,ing:x.ing,steps:x.steps},$("note").textContent)}
-      show(scaleMade(r,n),$("note").textContent)})}
+    const chip=[...meta.children].find(x=>x.querySelector('use[href="#i-users"]'));
+    if(chip){
+      const lab=chip.innerHTML;
+      chip.className="pchip";chip.tabIndex=0;chip.setAttribute("role","button");chip.title="Change servings";
+      chip.innerHTML=`<button type="button" class="pm" data-d="-1" aria-label="Fewer servings" tabindex="-1">${I("minus")}</button><em>${lab}</em><button type="button" class="pm" data-d="1" aria-label="More servings" tabindex="-1">${I("plus")}</button>`;
+      const open=v=>{chip.classList.toggle("open",v);chip.setAttribute("aria-expanded",String(v));chip.querySelectorAll(".pm").forEach(b=>b.tabIndex=v?0:-1);if(!v)SERV=null};
+      chip.setAttribute("aria-expanded","false");
+      if(SERV&&SERV.t===r.title){open(true);SERV.t=r.title;if(SERV.f){const f=chip.querySelector('.pm[data-d="'+SERV.f+'"]');f&&f.focus({preventScroll:true})}}
+      chip.onclick=e=>{if(e.target.closest(".pm"))return;e.stopPropagation();const v=!chip.classList.contains("open");open(v);if(v)SERV={t:r.title}};
+      chip.onkeydown=e=>{if(e.target!==chip)return;if(e.key==="Enter"||e.key===" "){e.preventDefault();chip.click()}else if(e.key==="Escape")open(false)};
+      chip.querySelectorAll(".pm").forEach(b=>b.onclick=e=>{e.stopPropagation();const n=Math.min(24,Math.max(1,r.n+ +b.dataset.d));if(n===r.n)return;SERV={t:r.title,f:b.dataset.d};
+        if(rec){const F=fridgeIds(),U=new Set([...S.urgent.flatMap(x=>K.match(x)),...[...F].filter(isLeftId)]),x=K.resolve(rec,n,{fridge:F,basic:S.basic,urgent:U});
+          return show({...r,n,ing:x.ing,steps:x.steps},$("note").textContent)}
+        show(scaleMade(r,n),$("note").textContent)});
+    }
+  }
   // thumbs
   const cur=ratings()[r.title],mk=(v,ic,lbl)=>{const b=document.createElement("button");b.type="button";b.className="thumb";b.dataset.v=v;b.setAttribute("aria-pressed",String(!!cur&&cur.v===v));b.innerHTML=ic+lbl;b.title=v>0?"Show me more like this":"Show me this less";return b};
   const up=mk(1,I("thumbup"),"Like"),dn=mk(-1,I("thumbdown"),"Not for me");row.append(up,dn);

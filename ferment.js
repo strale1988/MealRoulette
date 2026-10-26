@@ -358,7 +358,7 @@ function build(){
  <button class="fmspin" data-a="rand">Spin a ferment!</button>`;
 
  let out;
- if(!r)out=`<div class="ph">${I("jar")}<b>Pick something to ferment</b>Tick at least one ingredient.</div>`;
+ if(!r)out=`<div class="ph"><b>Your ferment shows up here</b>Tick at least one ingredient, or spin a ferment.</div>`;
  else{
   const dRange=m.quick?"2 hours to 1 day":r.ready[0]===r.ready[1]?r.ready[0]+" days":r.ready[0]+" to "+r.ready[1]+" days";
   out=`<article class="card"><div class="hero"><div class="ic" style="font-size:28px;line-height:1">${m.e}</div><h2>${esc(r.title)}</h2></div><div class="body">
@@ -374,13 +374,16 @@ function build(){
   <div class="row"><button data-a="start">${I("cal")}Start this batch today</button><button data-a="copy">${I("cart")}Copy list</button><button data-a="share">${I("share")}Share</button><button data-a="rand">Spin again</button></div></div></article>`;
  }
  const bt=ST.batches.length?ST.batches.map((b,i)=>`<li class="${isReady(b)?"rdy":""}"><div><b>${esc(b.title)}</b>${isReady(b)?' <span class="rdytag">Ready</span>':""}<small>Started ${fmtDate(b.start+"T00:00:00")} · ${esc(status(b))}</small></div><button data-a="rm" data-id="${i}" aria-label="Remove ${esc(b.title)}">${I("x")}</button></li>`).join(""):`<li class="none">Nothing on the go. Start a batch and its tasting days show up here.</li>`;
- const batches=`<section class="panel fmb"><div class="lab">${I("cal")}My ferments</div><ul>${bt}</ul></section>`;
- root.innerHTML=`<h1 class="hl">What are we fermenting?</h1><p>Pick something to make, or spin for an idea.</p><div class="cols"><aside class="side">${side}</aside><section class="res"><div id="fmout">${out}</div>${batches}</section></div>`;
+ let fmbox=document.getElementById("fmbatches");
+ if(!fmbox){const g=document.querySelector("#kz-saved .kgrid");if(g){fmbox=document.createElement("section");fmbox.className="panel fmb";fmbox.id="fmbatches";g.appendChild(fmbox);
+  fmbox.addEventListener("click",e=>{const b=e.target.closest('button[data-a="rm"]');if(!b)return;ST.batches.splice(+b.dataset.id,1);save();build()})}}
+ if(fmbox)fmbox.innerHTML=`<div class="lab">${I("jar")}My ferments</div><ul>${bt}</ul>`;
+ root.innerHTML=`<h1 class="hl">What are we fermenting?</h1><p>Pick something to make, or spin for an idea.</p><div class="cols"><aside class="side">${side}</aside><section class="res"><div id="fmout">${out}</div></section></div>`;
  root.querySelectorAll(".ing li").forEach(li=>li.onclick=()=>li.classList.toggle("done"));
  root._r=r;
  {const row=root.querySelector("#fmout .card .row");if(row&&r&&window.__tidyRow){window.__thumbs(row,r.title,{m:m.id},()=>{const a=row.querySelector("[data-a=rand]");if(a)a.click()});window.__tidyRow(row,"ferm")}}
  {const h=root.querySelector("#fmout .hero");if(h){const b=document.createElement("button");b.type="button";b.className="heroback";b.setAttribute("aria-label","Back");b.title="Back";b.innerHTML=XB;b.onclick=back;h.append(b)}}
- const nb=ST.batches.filter(isReady).length,tb=document.querySelector('#tabs [data-t="ferm"]');
+ const nb=ST.batches.filter(isReady).length,tb=document.querySelector('#tabs [data-t="kit"]');
  if(tb){tb.classList.toggle("dot",nb>0);tb.title=nb?nb+" ferment"+(nb>1?"s":"")+" ready to taste":""}
 }
 
@@ -456,6 +459,7 @@ root.addEventListener("click",e=>{
  save();
  const top=window.scrollY;
  build();
+ if(a==="start"){const sb=root.querySelector('[data-a="start"]');if(sb)sb.innerHTML=I("check")+"Added to My kitchen"}
  if(a==="rand"||a==="m"){const c=root.querySelector(".card");if(c&&a==="rand")c.scrollIntoView({behavior:"smooth",block:"start"});else scrollTo({top:top})}
  else scrollTo({top:top});
 });
