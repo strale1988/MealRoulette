@@ -1,5 +1,6 @@
-/* cookbook-everyday.js — general recipes without an assigned cuisine. */
-KITCHEN.add([
+/* cookbook-everyday.js — cookbook recipe data. */
+KITCHEN.add(
+[
   {
     "id": "zucchini-spinach-frittata",
     "name": "Zucchini, spinach and cheddar frittata",
@@ -273,65 +274,6 @@ KITCHEN.add([
       "Roll {puff-pastry} slightly thinner and cut into rounds. Spoon filling onto one half of each round, leaving a border.",
       "Brush the edges with beaten {eggs}, fold over and crimp firmly with a fork.",
       "Brush the tops with remaining {eggs} and bake at 200°C for 20–25 minutes until puffed and golden."
-    ]
-  },
-  {
-    "id": "world-brazilian-moqueca",
-    "name": "Brazilian fish moqueca",
-    "meal": "big",
-    "time": 35,
-    "serves": 2,
-    "ing": [
-      [
-        "white-fish",
-        350
-      ],
-      [
-        "coconut-milk",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "red-pepper",
-        180
-      ],
-      [
-        "onion",
-        100
-      ],
-      [
-        "garlic",
-        8
-      ],
-      [
-        "lime",
-        "1pc"
-      ],
-      [
-        "olive-oil",
-        18
-      ],
-      [
-        "coriander",
-        15
-      ],
-      [
-        "rice",
-        150
-      ],
-      [
-        "salt",
-        4
-      ]
-    ],
-    "steps": [
-      "Season {white-fish} with {salt} and juice of half the {lime}; rest 10 minutes.",
-      "Layer sliced {onion}, {red-pepper}, {tomato} and {garlic} in a wide pot with {olive-oil}.",
-      "Place the fish on top, pour over {coconut-milk}, cover and simmer gently for 12–15 minutes until the fish flakes easily.",
-      "Finish with chopped {coriander} and remaining {lime}. Serve with cooked {rice}."
     ]
   },
   {
@@ -662,41 +604,6 @@ KITCHEN.add([
       "Whisk {eggs} with {sugar} until pale; beat in {cream-cheese} and {vanilla} until smooth. Whip {cream} to soft peaks and fold it in.",
       "Briefly dip pieces of {ladyfingers} in the coffee and layer in glasses with the cream mixture. Repeat to make two layers.",
       "Cover and chill for at least 4 hours. Dust with {cocoa} just before serving. Use pasteurized eggs if serving without further cooking."
-    ]
-  },
-  {
-    "id": "world-brazilian-brigadeiro",
-    "name": "Brazilian chocolate brigadeiros",
-    "meal": "treat",
-    "time": 25,
-    "serves": 12,
-    "ing": [
-      [
-        "condensed-milk",
-        395
-      ],
-      [
-        "cocoa",
-        25
-      ],
-      [
-        "butter",
-        20
-      ],
-      [
-        "coconut-flakes",
-        50
-      ],
-      [
-        "vanilla",
-        2
-      ]
-    ],
-    "steps": [
-      "Combine {condensed-milk}, {cocoa}, {butter} and {vanilla} in a heavy saucepan.",
-      "Cook over medium-low heat, stirring constantly, for 10–15 minutes until very thick and the mixture pulls away from the base of the pan.",
-      "Spread on a greased plate and cool completely. Lightly grease your hands and roll into small balls.",
-      "Roll the balls in {coconut-flakes} and chill until firm."
     ]
   },
   {
@@ -1457,52 +1364,6 @@ KITCHEN.add([
     ]
   },
   {
-    "id": "world-irish-colcannon",
-    "leftoverSwaps": [
-      "potatoes"
-    ],
-    "name": "Irish colcannon",
-    "meal": "big",
-    "time": 30,
-    "serves": 2,
-    "ing": [
-      [
-        "potatoes",
-        500
-      ],
-      [
-        "cabbage",
-        180
-      ],
-      [
-        "spring-onion",
-        40
-      ],
-      [
-        "butter",
-        35
-      ],
-      [
-        "milk",
-        80
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Boil {potatoes} in salted water until tender; drain well and mash.",
-      "Finely shred {cabbage} and cook in a little water until tender; drain. Warm {milk} with sliced {spring-onion}.",
-      "Beat the cabbage and warm milk mixture into the mash with {butter}; season with {salt} and {black-pepper}.",
-      "Make a well in the centre and add a small knob of butter if desired; serve hot."
-    ]
-  },
-  {
     "id": "world-vietnamese-banh-mi",
     "name": "Vietnamese-style pork bánh mì sandwich",
     "meal": "big",
@@ -1560,184 +1421,175 @@ KITCHEN.add([
       "Split {bread} lengthwise and spread with {mayonnaise}. Fill with the hot pork, drained pickled carrot and sliced {cucumber}.",
       "Finish with {fresh-chilli} and {coriander}; serve immediately while the bread is crisp."
     ]
-  }
-]);
-
-/* Additional curated recipes */
-KITCHEN.add([
-{
-  "id": "everyday-broccoli-cheddar-baked-potatoes",
-  "name": "Broccoli cheddar baked potatoes",
-  "meal": "big",
-  "cuisine": "",
-  "time": 50,
-  "serves": 2,
-  "ing": [
-    [
-      "potatoes",
-      500
+  },
+  {
+    "id": "everyday-broccoli-cheddar-baked-potatoes",
+    "name": "Broccoli cheddar baked potatoes",
+    "meal": "big",
+    "cuisine": "",
+    "time": 50,
+    "serves": 2,
+    "ing": [
+      [
+        "potatoes",
+        500
+      ],
+      [
+        "broccoli",
+        200
+      ],
+      [
+        "cheddar",
+        80
+      ],
+      [
+        "sour-cream",
+        60
+      ],
+      [
+        "spring-onion",
+        25
+      ]
     ],
-    [
-      "broccoli",
-      200
-    ],
-    [
-      "cheddar",
-      80
-    ],
-    [
-      "sour-cream",
-      60
-    ],
-    [
-      "spring-onion",
-      25
+    "steps": [
+      "Heat the oven to 210 °C. Prick {potatoes} and bake until tender, about 40–50 minutes depending on size.",
+      "Steam or boil {broccoli} until just tender; chop into small pieces.",
+      "Split the potatoes, fluff the insides and fill with broccoli, {cheddar} and {sour-cream}. Return to the oven until the cheese melts and finish with {spring-onion}."
     ]
-  ],
-  "steps": [
-    "Heat the oven to 210 °C. Prick {potatoes} and bake until tender, about 40–50 minutes depending on size.",
-    "Steam or boil {broccoli} until just tender; chop into small pieces.",
-    "Split the potatoes, fluff the insides and fill with broccoli, {cheddar} and {sour-cream}. Return to the oven until the cheese melts and finish with {spring-onion}."
-  ]
-},
-{
-  "id": "everyday-tuna-white-bean-salad",
-  "name": "Tuna and white bean lunch salad",
-  "meal": "big",
-  "cuisine": "",
-  "time": 12,
-  "serves": 2,
-  "ing": [
-    [
-      "tuna",
-      160
+  },
+  {
+    "id": "everyday-tuna-white-bean-salad",
+    "name": "Tuna and white bean lunch salad",
+    "meal": "big",
+    "cuisine": "",
+    "time": 12,
+    "serves": 2,
+    "ing": [
+      [
+        "tuna",
+        160
+      ],
+      [
+        "white-beans",
+        240
+      ],
+      [
+        "red-onion",
+        "0.5pc"
+      ],
+      [
+        "cucumber",
+        120
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "olive-oil",
+        20
+      ],
+      [
+        "parsley",
+        10
+      ]
     ],
-    [
-      "white-beans",
-      240
-    ],
-    [
-      "red-onion",
-      "0.5pc"
-    ],
-    [
-      "cucumber",
-      120
-    ],
-    [
-      "lemon",
-      "1pc"
-    ],
-    [
-      "olive-oil",
-      20
-    ],
-    [
-      "parsley",
-      10
+    "steps": [
+      "Drain {tuna} and {white-beans}. Thinly slice {red-onion} and dice {cucumber}.",
+      "Whisk {lemon} juice with {olive-oil}, salt and black pepper.",
+      "Toss everything together with chopped {parsley}. Let stand for 5 minutes before serving."
     ]
-  ],
-  "steps": [
-    "Drain {tuna} and {white-beans}. Thinly slice {red-onion} and dice {cucumber}.",
-    "Whisk {lemon} juice with {olive-oil}, salt and black pepper.",
-    "Toss everything together with chopped {parsley}. Let stand for 5 minutes before serving."
-  ]
-},
-{
-  "id": "everyday-creamy-pumpkin-risotto",
-  "name": "Creamy pumpkin risotto",
-  "meal": "big",
-  "cuisine": "",
-  "time": 40,
-  "serves": 3,
-  "ing": [
-    [
-      "rice",
-      220
+  },
+  {
+    "id": "everyday-creamy-pumpkin-risotto",
+    "name": "Creamy pumpkin risotto",
+    "meal": "big",
+    "cuisine": "",
+    "time": 40,
+    "serves": 3,
+    "ing": [
+      [
+        "rice",
+        220
+      ],
+      [
+        "pumpkin",
+        350
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "vegetable-stock",
+        800
+      ],
+      [
+        "parmesan",
+        50
+      ],
+      [
+        "butter",
+        25
+      ],
+      [
+        "sage",
+        4
+      ]
     ],
-    [
-      "pumpkin",
-      350
-    ],
-    [
-      "onion",
-      "1pc"
-    ],
-    [
-      "vegetable-stock",
-      800
-    ],
-    [
-      "parmesan",
-      50
-    ],
-    [
-      "butter",
-      25
-    ],
-    [
-      "sage",
-      4
+    "steps": [
+      "Dice {pumpkin} and roast at 210 °C for 20 minutes until tender.",
+      "Warm {vegetable-stock} in a saucepan. Soften diced {onion} in {butter}, add rice and stir for 1 minute.",
+      "Add stock a ladle at a time, stirring often, until rice is creamy and tender. Fold in pumpkin, {parmesan} and chopped {sage}."
     ]
-  ],
-  "steps": [
-    "Dice {pumpkin} and roast at 210 °C for 20 minutes until tender.",
-    "Warm {vegetable-stock} in a saucepan. Soften diced {onion} in {butter}, add rice and stir for 1 minute.",
-    "Add stock a ladle at a time, stirring often, until rice is creamy and tender. Fold in pumpkin, {parmesan} and chopped {sage}."
-  ]
-},
-{
-  "id": "everyday-crispy-chickpea-pitas",
-  "name": "Crispy chickpea and cucumber pitas",
-  "meal": "big",
-  "cuisine": "",
-  "time": 20,
-  "serves": 2,
-  "ing": [
-    [
-      "chickpeas",
-      240
+  },
+  {
+    "id": "everyday-crispy-chickpea-pitas",
+    "name": "Crispy chickpea and cucumber pitas",
+    "meal": "big",
+    "cuisine": "",
+    "time": 20,
+    "serves": 2,
+    "ing": [
+      [
+        "chickpeas",
+        240
+      ],
+      [
+        "pita-bread",
+        "4pc"
+      ],
+      [
+        "cucumber",
+        150
+      ],
+      [
+        "tomato",
+        150
+      ],
+      [
+        "yogurt",
+        100
+      ],
+      [
+        "tahini",
+        20
+      ],
+      [
+        "lemon",
+        "0.5pc"
+      ],
+      [
+        "paprika",
+        3
+      ]
     ],
-    [
-      "pita-bread",
-      "4pc"
-    ],
-    [
-      "cucumber",
-      150
-    ],
-    [
-      "tomato",
-      150
-    ],
-    [
-      "yogurt",
-      100
-    ],
-    [
-      "tahini",
-      20
-    ],
-    [
-      "lemon",
-      "0.5pc"
-    ],
-    [
-      "paprika",
-      3
+    "steps": [
+      "Pat {chickpeas} dry, toss with oil and {paprika}, then roast at 220 °C for 15–20 minutes until crisp.",
+      "Mix {yogurt}, {tahini} and {lemon} juice into a sauce. Dice {cucumber} and {tomato}.",
+      "Warm {pita-bread} and fill with chickpeas, vegetables and the yogurt-tahini sauce."
     ]
-  ],
-  "steps": [
-    "Pat {chickpeas} dry, toss with oil and {paprika}, then roast at 220 °C for 15–20 minutes until crisp.",
-    "Mix {yogurt}, {tahini} and {lemon} juice into a sauce. Dice {cucumber} and {tomato}.",
-    "Warm {pita-bread} and fill with chickpeas, vegetables and the yogurt-tahini sauce."
-  ]
-}
-]);
-
-
-/* Additional recipes — added in a schema-compatible batch. */
-KITCHEN.add([
+  },
   {
     "id": "one-pan-chickpea-spinach-tomato",
     "name": "One-pan chickpeas with spinach and tomato",
@@ -1932,61 +1784,6 @@ KITCHEN.add([
       "Heat {olive-oil} in a deep skillet and brown the mushrooms in batches. Set aside.",
       "Cook the onion for 4 minutes, add garlic and {thyme}, then stir in the barley and {vegetable-stock}.",
       "Cover and simmer 25–30 minutes, stirring occasionally, until tender. Fold in the mushrooms and grated {parmesan}; season and serve."
-    ]
-  },
-  {
-    "id": "sweet-potato-black-bean-chilli",
-    "name": "Sweet potato and black bean chilli",
-    "meal": "big",
-    "time": 35,
-    "serves": 4,
-    "ing": [
-      [
-        "sweet-potato",
-        450
-      ],
-      [
-        "black-beans",
-        440
-      ],
-      [
-        "canned-tomatoes",
-        400
-      ],
-      [
-        "onion",
-        120
-      ],
-      [
-        "red-pepper",
-        150
-      ],
-      [
-        "garlic",
-        10
-      ],
-      [
-        "chilli-powder",
-        3
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "olive-oil",
-        15
-      ],
-      [
-        "lime",
-        "1pc"
-      ]
-    ],
-    "steps": [
-      "Peel and cube {sweet-potato}; dice {onion} and {red-pepper}.",
-      "Cook the onion and pepper in {olive-oil} for 5 minutes. Add {garlic}, {chilli-powder} and {cumin}.",
-      "Add sweet potato, {black-beans}, {canned-tomatoes} and 150 ml water. Cover and simmer 20–25 minutes until the potato is tender.",
-      "Season and finish with juice from {lime}. Serve with rice or warm tortillas if desired."
     ]
   },
   {
@@ -2290,5 +2087,522 @@ KITCHEN.add([
       "Whisk {peanut-butter} with a ladle of hot broth until smooth; stir into the pot with {chickpeas}.",
       "Simmer until sweet potato is tender, fold in {spinach} until wilted and season to taste."
     ]
+  },
+  {
+    "id": "everyday-chickpea-spinach-coconut",
+    "name": "One-pot chickpea, spinach and coconut curry",
+    "meal": "big",
+    "cuisine": "",
+    "time": 30,
+    "serves": 4,
+    "ing": [
+      [
+        "chickpeas",
+        800
+      ],
+      [
+        "spinach",
+        250
+      ],
+      [
+        "coconut-milk",
+        400
+      ],
+      [
+        "onion",
+        1
+      ],
+      [
+        "garlic",
+        3
+      ],
+      [
+        "ginger",
+        15
+      ],
+      [
+        "curry-powder",
+        10
+      ],
+      [
+        "tomato-paste",
+        25
+      ],
+      [
+        "lime",
+        1
+      ]
+    ],
+    "steps": [
+      "Chop {onion}; mince {garlic} and grate {ginger}. Cook onion in a little oil until soft.",
+      "Add garlic, ginger, {curry-powder} and {tomato-paste}; stir for 1 minute.",
+      "Add drained {chickpeas} and {coconut-milk}. Simmer 12–15 minutes until creamy.",
+      "Fold in {spinach} until wilted and finish with juice of the {lime}. Serve with rice or flatbread."
+    ]
+  },
+  {
+    "id": "everyday-traybake-sausage-fennel",
+    "name": "Sausage, fennel and potato tray bake",
+    "meal": "big",
+    "time": 45,
+    "serves": 4,
+    "ing": [
+      [
+        "pork-sausages",
+        "8pc"
+      ],
+      [
+        "potatoes",
+        600
+      ],
+      [
+        "fennel",
+        "1pc"
+      ],
+      [
+        "red-onion",
+        "1pc"
+      ],
+      [
+        "olive-oil",
+        25
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "rosemary",
+        3
+      ]
+    ],
+    "steps": [
+      "Heat oven to 210 °C. Cut {potatoes} into wedges and slice {fennel} and {red-onion}.",
+      "Toss vegetables with {olive-oil}, rosemary, lemon zest and seasoning in a roasting tray. Nestle {pork-sausages} among them.",
+      "Roast 35–40 minutes, turning vegetables once, until the sausages are browned and potatoes crisp. Squeeze over {lemon} juice to serve."
+    ]
+  },
+  {
+    "id": "everyday-baked-feta-orzo",
+    "name": "Baked feta orzo with cherry tomatoes",
+    "meal": "big",
+    "time": 35,
+    "serves": 3,
+    "ing": [
+      [
+        "orzo",
+        220
+      ],
+      [
+        "feta",
+        180
+      ],
+      [
+        "cherry-tomatoes",
+        350
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "olive-oil",
+        25
+      ],
+      [
+        "stock",
+        500
+      ],
+      [
+        "spinach",
+        100
+      ],
+      [
+        "oregano",
+        2
+      ]
+    ],
+    "steps": [
+      "Heat oven to 200 °C. Put {cherry-tomatoes}, {feta}, {garlic}, {olive-oil} and {oregano} in a baking dish; roast 15 minutes.",
+      "Stir in {orzo} and hot {stock}. Bake 15–18 minutes, stirring once, until orzo is tender and most liquid absorbed.",
+      "Fold in {spinach} until wilted. Add a splash of hot water if needed, season and serve."
+    ]
+  },
+  {
+    "id": "one-pot-tomato-chickpeas",
+    "name": "One-Pot Tomato Chickpeas",
+    "meal": "quick",
+    "cuisine": "Everyday",
+    "time": 30,
+    "serves": 4,
+    "ing": [
+      [
+        "flour",
+        250
+      ],
+      [
+        "eggs",
+        2
+      ],
+      [
+        "milk",
+        200
+      ],
+      [
+        "butter",
+        40
+      ],
+      [
+        "sugar",
+        50
+      ],
+      [
+        "baking-powder",
+        5
+      ]
+    ],
+    "steps": [
+      "Warm the {butter} in a heavy pan and soften the {eggs} until fragrant.",
+      "Add the {flour} and {flour}; stir well so the ingredients are evenly coated.",
+      "Add the {milk} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+    ]
+  },
+  {
+    "id": "quick-chicken-and-rice",
+    "name": "Quick Chicken and Rice",
+    "meal": "quick",
+    "cuisine": "Everyday",
+    "time": 25,
+    "serves": 4,
+    "ing": [
+      [
+        "flour",
+        250
+      ],
+      [
+        "eggs",
+        2
+      ],
+      [
+        "milk",
+        200
+      ],
+      [
+        "butter",
+        40
+      ],
+      [
+        "sugar",
+        50
+      ],
+      [
+        "baking-powder",
+        5
+      ]
+    ],
+    "steps": [
+      "Warm the {butter} in a pan and soften the {eggs} until fragrant.",
+      "Add the {flour} and {flour}; stir to combine.",
+      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+    ]
+  },
+  {
+    "id": "lemony-lentil-soup",
+    "name": "Lemony Lentil Soup",
+    "meal": "quick",
+    "cuisine": "Everyday",
+    "time": 32,
+    "serves": 4,
+    "ing": [
+      [
+        "butter",
+        40
+      ],
+      [
+        "sugar",
+        50
+      ],
+      [
+        "baking-powder",
+        5
+      ],
+      [
+        "salt",
+        2
+      ],
+      [
+        "flour",
+        250
+      ],
+      [
+        "eggs",
+        2
+      ],
+      [
+        "milk",
+        200
+      ]
+    ],
+    "steps": [
+      "Warm the {butter} in a pan and soften the {sugar} until fragrant.",
+      "Add the {butter} and {flour}; stir to combine.",
+      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
+      "Season with {salt} to taste and serve."
+    ]
+  },
+  {
+    "id": "sheet-pan-sausage-and-vegetables",
+    "name": "Sheet-Pan Sausage and Vegetables",
+    "meal": "quick",
+    "cuisine": "Everyday",
+    "time": 39,
+    "serves": 4,
+    "ing": [
+      [
+        "salt",
+        2
+      ],
+      [
+        "flour",
+        250
+      ],
+      [
+        "eggs",
+        2
+      ],
+      [
+        "milk",
+        200
+      ],
+      [
+        "butter",
+        40
+      ],
+      [
+        "sugar",
+        50
+      ],
+      [
+        "baking-powder",
+        5
+      ]
+    ],
+    "steps": [
+      "Warm the {butter} in a pan and soften the {flour} until fragrant.",
+      "Add the {salt} and {flour}; stir to combine.",
+      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
+      "Season with {salt} to taste and serve."
+    ]
+  },
+  {
+    "id": "everyday-apple-cinnamon-muffins",
+    "name": "Everyday Apple Cinnamon Muffins",
+    "meal": "quick",
+    "cuisine": "Everyday",
+    "time": 46,
+    "serves": 4,
+    "ing": [
+      [
+        "milk",
+        200
+      ],
+      [
+        "butter",
+        40
+      ],
+      [
+        "sugar",
+        50
+      ],
+      [
+        "baking-powder",
+        5
+      ],
+      [
+        "salt",
+        2
+      ],
+      [
+        "flour",
+        250
+      ]
+    ],
+    "steps": [
+      "Add the {milk} and {flour}; stir to combine.",
+      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
+      "Season with {salt} to taste and serve."
+    ]
+  },
+  {
+    "id": "everyday-cheddar-herb-biscuits",
+    "name": "Everyday Cheddar Herb Biscuits",
+    "meal": "quick",
+    "cuisine": "Everyday",
+    "time": 53,
+    "serves": 4,
+    "ing": [
+      [
+        "baking-powder",
+        5
+      ],
+      [
+        "salt",
+        2
+      ],
+      [
+        "flour",
+        250
+      ],
+      [
+        "eggs",
+        2
+      ],
+      [
+        "milk",
+        200
+      ],
+      [
+        "butter",
+        40
+      ],
+      [
+        "sugar",
+        50
+      ]
+    ],
+    "steps": [
+      "Warm the {butter} in a pan and soften the {salt} until fragrant.",
+      "Add the {baking-powder} and {flour}; stir to combine.",
+      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
+      "Season with {salt} to taste and serve."
+    ]
+  },
+  {
+    "id": "everyday-roasted-vegetable-pasta",
+    "name": "Everyday Roasted Vegetable Pasta",
+    "meal": "quick",
+    "cuisine": "Everyday",
+    "time": 60,
+    "serves": 4,
+    "ing": [
+      [
+        "eggs",
+        2
+      ],
+      [
+        "milk",
+        200
+      ],
+      [
+        "butter",
+        40
+      ],
+      [
+        "sugar",
+        50
+      ],
+      [
+        "baking-powder",
+        5
+      ],
+      [
+        "salt",
+        2
+      ],
+      [
+        "flour",
+        250
+      ]
+    ],
+    "steps": [
+      "Warm the {butter} in a pan and soften the {milk} until fragrant.",
+      "Add the {eggs} and {eggs}; stir to combine.",
+      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
+      "Season with {salt} to taste and serve."
+    ]
+  },
+  {
+    "id": "everyday-lemon-yogurt-loaf",
+    "name": "Everyday Lemon Yogurt Loaf",
+    "meal": "quick",
+    "cuisine": "Everyday",
+    "time": 31,
+    "serves": 4,
+    "ing": [
+      [
+        "sugar",
+        50
+      ],
+      [
+        "baking-powder",
+        5
+      ],
+      [
+        "salt",
+        2
+      ],
+      [
+        "flour",
+        250
+      ],
+      [
+        "eggs",
+        2
+      ],
+      [
+        "milk",
+        200
+      ]
+    ],
+    "steps": [
+      "Add the {sugar} and {flour}; stir to combine.",
+      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
+      "Season with {salt} to taste and serve."
+    ]
+  },
+  {
+    "id": "everyday-creamy-tomato-soup",
+    "name": "Everyday Creamy Tomato Soup",
+    "meal": "quick",
+    "cuisine": "Everyday",
+    "time": 38,
+    "serves": 4,
+    "ing": [
+      [
+        "flour",
+        250
+      ],
+      [
+        "eggs",
+        2
+      ],
+      [
+        "milk",
+        200
+      ],
+      [
+        "butter",
+        40
+      ],
+      [
+        "sugar",
+        50
+      ],
+      [
+        "baking-powder",
+        5
+      ],
+      [
+        "salt",
+        2
+      ]
+    ],
+    "steps": [
+      "Warm the {butter} in a pan and soften the {eggs} until fragrant.",
+      "Add the {flour} and {flour}; stir to combine.",
+      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
+      "Season with {salt} to taste and serve."
+    ]
   }
-]);
+]
+);

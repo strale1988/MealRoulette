@@ -1,5 +1,6 @@
-/* cookbook-light.js — general recipes in this category without a cuisine tag. */
-KITCHEN.add([
+/* cookbook-light.js — dedicated cookbook recipe data. */
+KITCHEN.add(
+[
   {
     "id": "yogurt-pancakes",
     "name": "Fluffy yogurt pancakes",
@@ -983,98 +984,89 @@ KITCHEN.add([
       "Simmer {berries} with {sugar} and the juice of {lemon} over medium heat for 8 minutes until syrupy.",
       "Cool 5 minutes, then spoon over {yogurt}."
     ]
-  }
-]);
-
-/* Additional curated recipes */
-KITCHEN.add([
-{
-  "id": "light-cottage-cheese-herb-toast",
-  "name": "Cottage cheese and herb toast",
-  "meal": "morning",
-  "cuisine": "",
-  "time": 8,
-  "serves": 1,
-  "ing": [
-    [
-      "rye-bread",
-      "2pc"
+  },
+  {
+    "id": "light-cottage-cheese-herb-toast",
+    "name": "Cottage cheese and herb toast",
+    "meal": "morning",
+    "cuisine": "",
+    "time": 8,
+    "serves": 1,
+    "ing": [
+      [
+        "rye-bread",
+        "2pc"
+      ],
+      [
+        "cottage-cheese",
+        120
+      ],
+      [
+        "cucumber",
+        80
+      ],
+      [
+        "chives",
+        5
+      ],
+      [
+        "lemon",
+        "0.25pc"
+      ],
+      [
+        "black-pepper",
+        1
+      ]
     ],
-    [
-      "cottage-cheese",
-      120
-    ],
-    [
-      "cucumber",
-      80
-    ],
-    [
-      "chives",
-      5
-    ],
-    [
-      "lemon",
-      "0.25pc"
-    ],
-    [
-      "black-pepper",
-      1
+    "steps": [
+      "Toast the {rye-bread}.",
+      "Stir {cottage-cheese} with {lemon} juice, chopped {chives} and {black-pepper}.",
+      "Spread over toast and top with sliced {cucumber}."
     ]
-  ],
-  "steps": [
-    "Toast the {rye-bread}.",
-    "Stir {cottage-cheese} with {lemon} juice, chopped {chives} and {black-pepper}.",
-    "Spread over toast and top with sliced {cucumber}."
-  ]
-},
-{
-  "id": "light-green-lentil-lunch-salad",
-  "name": "Green lentil, apple and walnut salad",
-  "meal": "big",
-  "cuisine": "",
-  "time": 15,
-  "serves": 2,
-  "ing": [
-    [
-      "green-lentils",
-      240
+  },
+  {
+    "id": "light-green-lentil-lunch-salad",
+    "name": "Green lentil, apple and walnut salad",
+    "meal": "big",
+    "cuisine": "",
+    "time": 15,
+    "serves": 2,
+    "ing": [
+      [
+        "green-lentils",
+        240
+      ],
+      [
+        "apple",
+        "1pc"
+      ],
+      [
+        "walnuts",
+        30
+      ],
+      [
+        "rocket",
+        60
+      ],
+      [
+        "dijon-mustard",
+        8
+      ],
+      [
+        "vinegar",
+        15
+      ],
+      [
+        "olive-oil",
+        20
+      ]
     ],
-    [
-      "apple",
-      "1pc"
-    ],
-    [
-      "walnuts",
-      30
-    ],
-    [
-      "rocket",
-      60
-    ],
-    [
-      "dijon-mustard",
-      8
-    ],
-    [
-      "vinegar",
-      15
-    ],
-    [
-      "olive-oil",
-      20
+    "steps": [
+      "Use cooked, cooled {green-lentils}; drain well if needed.",
+      "Whisk {dijon-mustard}, {vinegar} and {olive-oil}. Dice {apple} and roughly chop {walnuts}.",
+      "Toss lentils with {rocket}, apple, walnuts and dressing. Season and serve."
     ]
-  ],
-  "steps": [
-    "Use cooked, cooled {green-lentils}; drain well if needed.",
-    "Whisk {dijon-mustard}, {vinegar} and {olive-oil}. Dice {apple} and roughly chop {walnuts}.",
-    "Toss lentils with {rocket}, apple, walnuts and dressing. Season and serve."
-  ]
-}
-]);
-
-
-/* Additional recipes — added in a schema-compatible batch. */
-KITCHEN.add([
+  },
   {
     "id": "light-broccoli-edamame-salad",
     "name": "Broccoli and edamame sesame salad",
@@ -1168,5 +1160,430 @@ KITCHEN.add([
       "Mix {yogurt} with lemon juice from {lemon} and a little water to make a dressing.",
       "Serve lentils topped with roasted carrots, {parsley}, {pumpkin-seeds} and lemon yogurt."
     ]
+  },
+  {
+    "id": "light-salmon-cucumber-yogurt-bowls",
+    "name": "Salmon bowls with cucumber dill yogurt",
+    "meal": "big",
+    "cuisine": "",
+    "time": 25,
+    "serves": 2,
+    "ing": [
+      [
+        "salmon-fillet",
+        300
+      ],
+      [
+        "cucumber",
+        1
+      ],
+      [
+        "yogurt",
+        150
+      ],
+      [
+        "dill",
+        10
+      ],
+      [
+        "lemon",
+        1
+      ],
+      [
+        "rice",
+        160
+      ],
+      [
+        "olive-oil",
+        12
+      ]
+    ],
+    "steps": [
+      "Cook the {rice}. Heat oven to 200 °C and place {salmon-fillet} on a lined tray with {olive-oil}, salt and pepper.",
+      "Roast salmon 10–14 minutes, depending on thickness, until just opaque and flaky.",
+      "Grate or finely dice {cucumber}; mix with {yogurt}, chopped {dill} and lemon juice from half the {lemon}.",
+      "Serve salmon over rice with cucumber yogurt and remaining lemon wedges."
+    ]
+  },
+  {
+    "id": "light-lentil-herb-salad",
+    "name": "French lentil and herb salad",
+    "meal": "big",
+    "cuisine": "",
+    "time": 30,
+    "serves": 4,
+    "ing": [
+      [
+        "green-lentils",
+        250
+      ],
+      [
+        "carrots",
+        2
+      ],
+      [
+        "celery",
+        2
+      ],
+      [
+        "red-onion",
+        0.5
+      ],
+      [
+        "parsley",
+        20
+      ],
+      [
+        "dijon-mustard",
+        12
+      ],
+      [
+        "red-wine-vinegar",
+        25
+      ],
+      [
+        "olive-oil",
+        30
+      ]
+    ],
+    "steps": [
+      "Rinse {green-lentils} and simmer in water until tender but intact, 20–25 minutes; drain well.",
+      "Finely dice {carrots}, {celery} and {red-onion}. Add to the warm lentils so they soften slightly.",
+      "Whisk {dijon-mustard}, {red-wine-vinegar} and {olive-oil} into a dressing.",
+      "Toss lentils with dressing and chopped {parsley}; season and serve warm or at room temperature."
+    ]
+  },
+  {
+    "id": "light-roasted-cauliflower-lentil-salad",
+    "name": "Roasted cauliflower and lentil salad",
+    "meal": "light",
+    "time": 35,
+    "serves": 3,
+    "ing": [
+      [
+        "cauliflower",
+        500
+      ],
+      [
+        "lentils",
+        250
+      ],
+      [
+        "spinach",
+        80
+      ],
+      [
+        "yogurt",
+        100
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "olive-oil",
+        20
+      ],
+      [
+        "parsley",
+        10
+      ]
+    ],
+    "steps": [
+      "Heat oven to 220 °C. Break {cauliflower} into florets, toss with {olive-oil}, {cumin} and salt, then roast 22–25 minutes until browned.",
+      "Whisk {yogurt} with lemon juice from {lemon}, a little water and seasoning.",
+      "Toss warm cauliflower with drained {lentils}, {spinach} and chopped {parsley}. Drizzle with yogurt dressing."
+    ]
+  },
+  {
+    "id": "light-salmon-cucumber-rice-bowl",
+    "name": "Salmon cucumber rice bowl with sesame",
+    "meal": "light",
+    "time": 25,
+    "serves": 2,
+    "ing": [
+      [
+        "salmon",
+        300
+      ],
+      [
+        "rice",
+        140
+      ],
+      [
+        "cucumber",
+        "1pc"
+      ],
+      [
+        "edamame",
+        120
+      ],
+      [
+        "soy-sauce",
+        20
+      ],
+      [
+        "rice-vinegar",
+        15
+      ],
+      [
+        "sesame-oil",
+        8
+      ],
+      [
+        "sesame-seeds",
+        5
+      ]
+    ],
+    "steps": [
+      "Cook {rice} until tender. Season {salmon} and bake at 200 °C for 10–12 minutes until just cooked.",
+      "Slice {cucumber}; cook {edamame} briefly in boiling water and drain.",
+      "Mix {soy-sauce}, {rice-vinegar} and {sesame-oil}. Divide rice between bowls, add salmon, cucumber and edamame, then drizzle with dressing and sprinkle {sesame-seeds}."
+    ]
+  },
+  {
+    "id": "light-watermelon-feta-mint-salad",
+    "name": "Mango salad with feta, mint and lime",
+    "meal": "light",
+    "cuisine": "Everyday",
+    "time": 10,
+    "serves": 2,
+    "ing": [
+      [
+        "mango",
+        350
+      ],
+      [
+        "feta",
+        100
+      ],
+      [
+        "mint",
+        10
+      ],
+      [
+        "lime-juice",
+        15
+      ],
+      [
+        "olive-oil",
+        8
+      ],
+      [
+        "cucumber",
+        100
+      ],
+      [
+        "black-pepper",
+        1
+      ]
+    ],
+    "steps": [
+      "Cut {mango} and {cucumber} into bite-sized pieces and arrange on a platter.",
+      "Crumble {feta} over the top and add torn {mint}.",
+      "Drizzle with {lime-juice} and {olive-oil}; finish with {black-pepper} and serve chilled."
+    ]
+  },
+  {
+    "id": "light-roasted-beetroot-goat-cheese-salad",
+    "name": "Roasted beetroot and goat cheese salad with walnuts",
+    "meal": "light",
+    "cuisine": "Everyday",
+    "time": 35,
+    "serves": 2,
+    "ing": [
+      [
+        "fresh-beetroot",
+        350
+      ],
+      [
+        "goat-cheese",
+        100
+      ],
+      [
+        "walnuts",
+        30
+      ],
+      [
+        "rocket",
+        80
+      ],
+      [
+        "balsamic-vinegar",
+        15
+      ],
+      [
+        "olive-oil",
+        15
+      ],
+      [
+        "honey",
+        8
+      ],
+      [
+        "black-pepper",
+        1
+      ]
+    ],
+    "steps": [
+      "Wrap {fresh-beetroot} and roast at 200 °C until tender, 30–40 minutes; cool, peel and slice.",
+      "Whisk {balsamic-vinegar}, {olive-oil}, {honey} and {black-pepper}.",
+      "Arrange {rocket} and beetroot on a platter, add {goat-cheese} and toasted {walnuts}, then dress just before serving."
+    ]
+  },
+  {
+    "id": "light-edamame-avocado-salad",
+    "name": "Edamame avocado salad with sesame-lime dressing",
+    "meal": "light",
+    "cuisine": "Everyday",
+    "time": 15,
+    "serves": 2,
+    "ing": [
+      [
+        "edamame",
+        200
+      ],
+      [
+        "avocado",
+        1
+      ],
+      [
+        "cucumber",
+        100
+      ],
+      [
+        "lime-juice",
+        20
+      ],
+      [
+        "sesame-oil",
+        8
+      ],
+      [
+        "soy-sauce",
+        10
+      ],
+      [
+        "sesame-seeds",
+        8
+      ],
+      [
+        "spring-onion",
+        2
+      ]
+    ],
+    "steps": [
+      "Cook {edamame} until tender and cool. Dice {avocado} and {cucumber}.",
+      "Whisk {lime-juice}, {sesame-oil} and {soy-sauce}.",
+      "Toss edamame, avocado and cucumber with the dressing; top with {sesame-seeds} and sliced {spring-onion}."
+    ]
+  },
+  {
+    "id": "light-carrot-orange-couscous",
+    "name": "Carrot and orange couscous salad with pistachios",
+    "meal": "light",
+    "cuisine": "Everyday",
+    "time": 20,
+    "serves": 2,
+    "ing": [
+      [
+        "couscous",
+        150
+      ],
+      [
+        "carrot",
+        150
+      ],
+      [
+        "orange",
+        1
+      ],
+      [
+        "pistachios",
+        25
+      ],
+      [
+        "mint",
+        8
+      ],
+      [
+        "lemon-juice",
+        15
+      ],
+      [
+        "olive-oil",
+        15
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "salt",
+        3
+      ]
+    ],
+    "steps": [
+      "Cover {couscous} with boiling water and a pinch of {salt}; cover 5 minutes, then fluff.",
+      "Grate {carrot}; segment {orange} over a bowl to catch the juice.",
+      "Toss couscous with carrot, orange, {pistachios}, chopped {mint}, {lemon-juice}, {olive-oil} and {cumin}. Serve warm or chilled."
+    ]
+  },
+  {
+    "id": "light-roasted-carrot-lentil-salad",
+    "name": "Roasted carrot and lentil salad with yogurt",
+    "meal": "light,big",
+    "cuisine": "",
+    "time": 35,
+    "serves": 2,
+    "ing": [
+      [
+        "carrot",
+        350
+      ],
+      [
+        "lentils",
+        200
+      ],
+      [
+        "yogurt",
+        120
+      ],
+      [
+        "lemon",
+        1
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "olive-oil",
+        20
+      ],
+      [
+        "mint",
+        10
+      ],
+      [
+        "parsley",
+        10
+      ],
+      [
+        "salt",
+        3
+      ]
+    ],
+    "steps": [
+      "Cut {carrot} into batons, toss with half the {olive-oil}, {cumin} and {salt}; roast at 210 °C until caramelized.",
+      "Cook {lentils} until tender but intact; drain and cool slightly.",
+      "Mix {yogurt} with {lemon} juice and chopped {mint}.",
+      "Toss lentils with carrots, remaining oil and {parsley}; serve with yogurt dressing."
+    ]
   }
-]);
+]
+);

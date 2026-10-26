@@ -1,5 +1,6 @@
-/* cookbook-fancy.js — general recipes in this category without a cuisine tag. */
-KITCHEN.add([
+/* cookbook-fancy.js — dedicated cookbook recipe data. */
+KITCHEN.add(
+[
   {
     "id": "fancy-almond-berry-torte",
     "name": "Almond and berry torte (gluten-free)",
@@ -43,55 +44,7 @@ KITCHEN.add([
       "Fold in the {ground-almonds} and {baking-powder}, then spread in the tin and scatter with the {berries}.",
       "Bake 35–40 minutes until golden and a skewer comes out clean. Cool in the tin."
     ]
-  }
-]);
-
-/* Additional curated recipes */
-KITCHEN.add([
-{
-  "id": "fancy-chocolate-orange-tart",
-  "name": "Dark chocolate and orange tart",
-  "meal": "treat",
-  "cuisine": "French",
-  "time": 60,
-  "serves": 8,
-  "ing": [
-    [
-      "shortcrust-pastry",
-      250
-    ],
-    [
-      "dark-chocolate",
-      200
-    ],
-    [
-      "cream",
-      200
-    ],
-    [
-      "orange",
-      "1pc"
-    ],
-    [
-      "butter",
-      25
-    ],
-    [
-      "sugar",
-      15
-    ]
-  ],
-  "steps": [
-    "Heat the oven to 180 °C. Line a tart tin with {shortcrust-pastry}, prick the base and blind-bake until lightly golden.",
-    "Warm {cream} until steaming. Pour over chopped {dark-chocolate} and {butter}; leave 2 minutes, then stir until smooth. Add finely grated {orange} zest and {sugar}.",
-    "Pour ganache into the cooled tart shell. Chill until set, then slice with a warm knife."
-  ]
-}
-]);
-
-
-/* Additional recipes — added in a schema-compatible batch. */
-KITCHEN.add([
+  },
   {
     "id": "fancy-mushroom-polenta",
     "name": "Creamy polenta with thyme mushrooms",
@@ -189,5 +142,48 @@ KITCHEN.add([
       "Mix {yogurt} with grated {garlic}, lemon juice from {lemon} and chopped {parsley}.",
       "Serve cauliflower steaks over herby yogurt with the browned florets around them."
     ]
+  },
+  {
+    "id": "fancy-duck-orange",
+    "name": "Pan-seared duck breast with orange pan sauce",
+    "meal": "fancy",
+    "time": 35,
+    "serves": 2,
+    "ing": [
+      [
+        "duck-breast",
+        "2pc"
+      ],
+      [
+        "orange",
+        "2pc"
+      ],
+      [
+        "honey",
+        15
+      ],
+      [
+        "chicken-stock",
+        120
+      ],
+      [
+        "red-wine-vinegar",
+        15
+      ],
+      [
+        "butter",
+        20
+      ],
+      [
+        "thyme",
+        2
+      ]
+    ],
+    "steps": [
+      "Score the skin of {duck-breast} without cutting into the meat; season. Place skin-side down in a cold pan and cook over medium-low heat 8–10 minutes, pouring off excess fat.",
+      "Turn and cook 4–6 minutes more, depending on thickness. Rest 8 minutes.",
+      "Pour off most fat. Add juice and zest of one {orange}, {honey}, {red-wine-vinegar}, {chicken-stock} and {thyme}; reduce until glossy. Whisk in {butter}, slice duck and serve with sauce and orange segments."
+    ]
   }
-]);
+]
+);
