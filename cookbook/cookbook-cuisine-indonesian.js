@@ -399,3 +399,109 @@ KITCHEN.add(
   }
 ]
 );
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "indonesian-peanut-tempeh-bowl",
+  "name": "Indonesian-inspired peanut tempeh bowl",
+  "meal": "big",
+  "cuisine": "Indonesian",
+  "time": 25,
+  "serves": 2,
+  "ing": [
+    [
+      "tofu",
+      300
+    ],
+    [
+      "rice",
+      150
+    ],
+    [
+      "peanut-butter",
+      35
+    ],
+    [
+      "soy-sauce",
+      20
+    ],
+    [
+      "lime",
+      "1pc"
+    ],
+    [
+      "honey",
+      10
+    ],
+    [
+      "cucumber",
+      120
+    ],
+    [
+      "carrot",
+      100
+    ],
+    [
+      "chilli-flakes",
+      1
+    ]
+  ],
+  "steps": [
+    "Cook the {rice}. Cube {tofu} and pan-fry until golden.",
+    "Whisk {peanut-butter}, {soy-sauce}, {lime} juice, {honey}, {chilli-flakes} and a little hot water into a pourable sauce.",
+    "Serve tofu over rice with sliced {cucumber} and grated {carrot}; spoon over the peanut sauce."
+  ]
+},
+{
+  "id": "indonesian-sweet-soy-noodles",
+  "name": "Sweet soy vegetable noodles",
+  "meal": "big",
+  "cuisine": "Indonesian",
+  "time": 20,
+  "serves": 2,
+  "ing": [
+    [
+      "noodles",
+      180
+    ],
+    [
+      "eggs",
+      "2pc"
+    ],
+    [
+      "carrot",
+      100
+    ],
+    [
+      "cabbage",
+      150
+    ],
+    [
+      "spring-onion",
+      40
+    ],
+    [
+      "soy-sauce",
+      20
+    ],
+    [
+      "sweet-chilli-sauce",
+      20
+    ],
+    [
+      "garlic",
+      "2pc"
+    ],
+    [
+      "sesame-oil",
+      8
+    ]
+  ],
+  "steps": [
+    "Cook and drain {noodles}. Mix {soy-sauce} and {sweet-chilli-sauce}.",
+    "Scramble {eggs} in a hot wok and set aside. Stir-fry sliced {carrot} and {cabbage} for 3–4 minutes; add {garlic}.",
+    "Add noodles, sauce and eggs. Toss over high heat until hot, then finish with {spring-onion} and {sesame-oil}."
+  ]
+}
+]);

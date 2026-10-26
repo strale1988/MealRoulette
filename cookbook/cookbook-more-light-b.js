@@ -118,3 +118,93 @@ KITCHEN.add([
  ing:[["flour",100],["milk",200],["eggs","3pc"],["sugar",40],["butter",30],["raisins",30],["salt",0.5]],
  steps:["Whisk {flour}, {milk}, the yolks of {eggs}, {sugar} and {salt} into a batter. Whisk the whites to stiff peaks and fold in.","Melt {butter} in a large pan, pour in the batter, scatter over {raisins} and cook 4 minutes until set underneath.","Flip, tear into pieces with two forks and cook 3 minutes more until golden."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "light-smoked-salmon-cucumber-bagel",
+  "name": "Smoked salmon and cucumber bagel",
+  "meal": "morning",
+  "time": 10,
+  "serves": 2,
+  "ing": [
+    [
+      "bagels",
+      "2pc"
+    ],
+    [
+      "cream-cheese",
+      70
+    ],
+    [
+      "smoked-salmon",
+      100
+    ],
+    [
+      "cucumber",
+      100
+    ],
+    [
+      "dill",
+      5
+    ],
+    [
+      "lemon",
+      "0.5pc"
+    ]
+  ],
+  "steps": [
+    "Split and toast {bagels}.",
+    "Spread with {cream-cheese}; layer on {smoked-salmon} and thin slices of {cucumber}.",
+    "Finish with {dill}, a little {lemon} juice and black pepper."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "light-courgette-pea-soup",
+    "name": "Courgette and pea soup",
+    "meal": "big",
+    "time": 25,
+    "serves": 3,
+    "ing": [
+      [
+        "zucchini",
+        400
+      ],
+      [
+        "green-peas",
+        180
+      ],
+      [
+        "onion",
+        80
+      ],
+      [
+        "vegetable-stock",
+        650
+      ],
+      [
+        "mint",
+        8
+      ],
+      [
+        "olive-oil",
+        12
+      ],
+      [
+        "yogurt",
+        60
+      ]
+    ],
+    "steps": [
+      "Dice {zucchini} and {onion}. Cook onion in {olive-oil} for 4 minutes.",
+      "Add courgette and {vegetable-stock}; simmer 10 minutes until soft. Add {green-peas} and cook for 3 minutes.",
+      "Blend with chopped {mint} until smooth, adding water if needed. Season well.",
+      "Serve warm or chilled with a spoonful of {yogurt}."
+    ]
+  }
+]);

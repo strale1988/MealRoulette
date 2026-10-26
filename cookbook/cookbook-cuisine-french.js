@@ -888,3 +888,257 @@ KITCHEN.add([
     "Pat {scallops} dry and sear in the remaining {butter} for 90 seconds per side until golden.",
     "Spoon the purée onto plates, add the scallops, bacon and a squeeze of {lemon}."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "french-ratatouille-bean-bake",
+  "name": "Ratatouille and white bean bake",
+  "meal": "big",
+  "cuisine": "French",
+  "time": 45,
+  "serves": 3,
+  "ing": [
+    [
+      "aubergine",
+      250
+    ],
+    [
+      "zucchini",
+      250
+    ],
+    [
+      "red-pepper",
+      150
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "canned-tomatoes",
+      400
+    ],
+    [
+      "white-beans",
+      240
+    ],
+    [
+      "garlic",
+      "3pc"
+    ],
+    [
+      "thyme",
+      2
+    ],
+    [
+      "olive-oil",
+      25
+    ]
+  ],
+  "steps": [
+    "Heat the oven to 200 °C. Cube {aubergine} and {zucchini}; dice {red-pepper} and {onion}.",
+    "Toss vegetables with {olive-oil}, crushed {garlic} and {thyme}. Roast for 15 minutes in a baking dish.",
+    "Stir in {canned-tomatoes} and drained {white-beans}. Bake another 20–25 minutes until bubbling and the vegetables are tender."
+  ]
+},
+{
+  "id": "french-mushroom-mustard-pasta",
+  "name": "Creamy French mustard mushroom pasta",
+  "meal": "big",
+  "cuisine": "French",
+  "time": 25,
+  "serves": 2,
+  "ing": [
+    [
+      "pasta",
+      180
+    ],
+    [
+      "mushrooms",
+      250
+    ],
+    [
+      "cream",
+      120
+    ],
+    [
+      "dijon-mustard",
+      15
+    ],
+    [
+      "shallot",
+      "1pc"
+    ],
+    [
+      "garlic",
+      "2pc"
+    ],
+    [
+      "parsley",
+      10
+    ],
+    [
+      "parmesan",
+      25
+    ]
+  ],
+  "steps": [
+    "Cook {pasta} in salted water; reserve a mug of cooking water before draining.",
+    "Sauté sliced {mushrooms} and chopped {shallot} until browned. Add {garlic}, then stir in {cream} and {dijon-mustard}. Simmer gently for 3 minutes.",
+    "Toss the pasta with the sauce, adding cooking water to loosen. Finish with {parsley} and {parmesan}."
+  ]
+},
+{
+  "id": "french-apple-cinnamon-clafoutis",
+  "name": "Apple and cinnamon clafoutis",
+  "meal": "treat",
+  "cuisine": "French",
+  "time": 45,
+  "serves": 6,
+  "ing": [
+    [
+      "apple",
+      300
+    ],
+    [
+      "eggs",
+      "3pc"
+    ],
+    [
+      "milk",
+      250
+    ],
+    [
+      "flour",
+      80
+    ],
+    [
+      "sugar",
+      60
+    ],
+    [
+      "butter",
+      20
+    ],
+    [
+      "cinnamon",
+      2
+    ],
+    [
+      "vanilla",
+      3
+    ]
+  ],
+  "steps": [
+    "Heat the oven to 180 °C and butter a shallow baking dish with {butter}. Slice {apple} and arrange in the dish.",
+    "Whisk {eggs}, {milk}, {flour}, {sugar}, {cinnamon} and {vanilla} into a smooth, thin batter.",
+    "Pour over the apples and bake 30–35 minutes until puffed and set in the centre. Cool slightly before serving."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "world-ratatouille-beans",
+    "name": "Ratatouille with white beans",
+    "meal": "big",
+    "time": 40,
+    "serves": 3,
+    "ing": [
+      [
+        "aubergine",
+        250
+      ],
+      [
+        "zucchini",
+        250
+      ],
+      [
+        "red-pepper",
+        180
+      ],
+      [
+        "canned-tomatoes",
+        400
+      ],
+      [
+        "white-beans",
+        240
+      ],
+      [
+        "onion",
+        100
+      ],
+      [
+        "garlic",
+        8
+      ],
+      [
+        "olive-oil",
+        20
+      ],
+      [
+        "thyme",
+        2
+      ]
+    ],
+    "steps": [
+      "Cube {aubergine} and {zucchini}; dice {red-pepper} and {onion}.",
+      "Heat {olive-oil} in a heavy pot. Brown aubergine in batches, then set aside. Cook onion and pepper for 5 minutes.",
+      "Add {garlic}, {thyme}, zucchini and {canned-tomatoes}. Return aubergine and simmer gently for 20 minutes.",
+      "Stir in drained {white-beans} and cook for 5 minutes more. Season and serve warm or at room temperature."
+    ],
+    "cuisine": "French"
+  },
+  {
+    "id": "world-leek-potato-gratin",
+    "name": "Leek and potato gratin",
+    "meal": "big",
+    "time": 55,
+    "serves": 4,
+    "ing": [
+      [
+        "potato",
+        650
+      ],
+      [
+        "leek",
+        250
+      ],
+      [
+        "cream",
+        200
+      ],
+      [
+        "milk",
+        150
+      ],
+      [
+        "garlic",
+        5
+      ],
+      [
+        "gruyere",
+        100
+      ],
+      [
+        "butter",
+        20
+      ],
+      [
+        "thyme",
+        2
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 190°C. Butter a baking dish with {butter}. Slice {potato} thinly and wash and slice {leek}.",
+      "Warm {cream}, {milk}, crushed {garlic} and {thyme} in a saucepan; do not boil. Season well.",
+      "Layer potato and leek in the dish, pour over the cream mixture and cover with foil. Bake 30 minutes.",
+      "Remove foil, top with grated {gruyere} and bake another 20–25 minutes until golden and tender."
+    ],
+    "cuisine": "French"
+  }
+]);

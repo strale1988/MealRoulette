@@ -823,3 +823,327 @@ KITCHEN.add([
     "Cook in {oil} for 8 minutes, turning, until browned and cooked through (72 °C).",
     "Warm the {pita-bread}, spread with {ajvar} and fill with the ćevapi, diced {onion} and sliced {red-onion}."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "balkan-ajvar-chicken-traybake",
+  "name": "Balkan ajvar chicken and pepper traybake",
+  "meal": "big",
+  "cuisine": "Balkan",
+  "time": 45,
+  "serves": 2,
+  "ing": [
+    [
+      "chicken-thigh",
+      500
+    ],
+    [
+      "ajvar",
+      50
+    ],
+    [
+      "potatoes",
+      400
+    ],
+    [
+      "red-pepper",
+      180
+    ],
+    [
+      "red-onion",
+      "1pc"
+    ],
+    [
+      "olive-oil",
+      20
+    ],
+    [
+      "paprika",
+      3
+    ],
+    [
+      "salt",
+      2
+    ]
+  ],
+  "steps": [
+    "Heat the oven to 210 °C. Toss {potatoes}, {red-pepper} and {red-onion} with half the {olive-oil} and {salt}.",
+    "Coat {chicken-thigh} with {ajvar}, {paprika} and the remaining {olive-oil}. Arrange over the vegetables.",
+    "Roast for 30–35 minutes, turning the vegetables once, until the chicken is cooked through and the potatoes are tender."
+  ]
+},
+{
+  "id": "balkan-sarma-style-cabbage-skillet",
+  "name": "Sarma-inspired cabbage and beef skillet",
+  "meal": "big",
+  "cuisine": "Balkan",
+  "time": 40,
+  "serves": 3,
+  "ing": [
+    [
+      "cabbage",
+      450
+    ],
+    [
+      "beef-mince",
+      300
+    ],
+    [
+      "rice",
+      100
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "canned-tomatoes",
+      250
+    ],
+    [
+      "paprika",
+      4
+    ],
+    [
+      "vegetable-stock",
+      350
+    ],
+    [
+      "olive-oil",
+      15
+    ]
+  ],
+  "steps": [
+    "Cook the {rice} until just tender and drain if needed.",
+    "Soften the diced {onion} in {olive-oil}; add {beef-mince} and brown, breaking it up. Stir in {paprika}.",
+    "Add shredded {cabbage}, {canned-tomatoes} and {vegetable-stock}. Cover and simmer for 20 minutes, then fold in the cooked rice."
+  ]
+},
+{
+  "id": "balkan-spinach-feta-pita",
+  "name": "Spinach and feta filo pie",
+  "meal": "big",
+  "cuisine": "Balkan",
+  "time": 45,
+  "serves": 4,
+  "ing": [
+    [
+      "spinach",
+      300
+    ],
+    [
+      "feta",
+      180
+    ],
+    [
+      "eggs",
+      "2pc"
+    ],
+    [
+      "phyllo-pastry",
+      250
+    ],
+    [
+      "yogurt",
+      80
+    ],
+    [
+      "olive-oil",
+      25
+    ],
+    [
+      "onion",
+      "1pc"
+    ]
+  ],
+  "steps": [
+    "Heat the oven to 190 °C. Soften diced {onion} in a little {olive-oil}, then add {spinach} and cook until wilted; cool slightly.",
+    "Mix the spinach with crumbled {feta}, {eggs} and {yogurt}. Layer half the {phyllo-pastry} in an oiled baking dish, brushing lightly with {olive-oil}.",
+    "Spread in the filling, top with the remaining pastry and oil, then bake 25–30 minutes until crisp and golden."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "world-ajvar-cheese-toast",
+    "name": "Balkan ajvar and cheese toast",
+    "meal": "morning,bite",
+    "time": 10,
+    "serves": 2,
+    "ing": [
+      [
+        "bread",
+        120
+      ],
+      [
+        "ajvar",
+        50
+      ],
+      [
+        "feta",
+        80
+      ],
+      [
+        "tomato",
+        "1pc"
+      ],
+      [
+        "olive-oil",
+        5
+      ],
+      [
+        "parsley",
+        5
+      ]
+    ],
+    "steps": [
+      "Toast the {bread} until crisp.",
+      "Spread {ajvar} over the warm toast and crumble {feta} on top.",
+      "Serve with sliced {tomato}, a little {olive-oil} and chopped {parsley}."
+    ],
+    "cuisine": "Balkan"
+  },
+  {
+    "id": "world-sarma-inspired-skillet",
+    "name": "Cabbage and rice skillet, sarma-inspired",
+    "meal": "big",
+    "time": 35,
+    "serves": 3,
+    "ing": [
+      [
+        "cabbage",
+        350
+      ],
+      [
+        "beef-mince",
+        250
+      ],
+      [
+        "rice",
+        120
+      ],
+      [
+        "onion",
+        100
+      ],
+      [
+        "canned-tomatoes",
+        300
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "garlic",
+        6
+      ],
+      [
+        "vegetable-stock",
+        300
+      ]
+    ],
+    "steps": [
+      "Cook {rice} until just tender and drain.",
+      "Brown {beef-mince} in a deep skillet. Add diced {onion}, shredded {cabbage} and {garlic}; cook for 6 minutes.",
+      "Stir in {paprika}, {canned-tomatoes}, {vegetable-stock} and the rice. Cover and simmer for 15 minutes until the cabbage is tender and the meat fully cooked.",
+      "Season to taste and serve hot."
+    ],
+    "cuisine": "Balkan"
+  },
+  {
+    "id": "world-balkan-yogurt-cucumber-soup",
+    "name": "Cold Balkan cucumber-yogurt soup",
+    "meal": "bite",
+    "time": 12,
+    "serves": 2,
+    "ing": [
+      [
+        "yogurt",
+        350
+      ],
+      [
+        "cucumber",
+        250
+      ],
+      [
+        "garlic",
+        4
+      ],
+      [
+        "dill",
+        5
+      ],
+      [
+        "walnuts",
+        20
+      ],
+      [
+        "olive-oil",
+        10
+      ],
+      [
+        "water",
+        100
+      ]
+    ],
+    "steps": [
+      "Grate or finely dice {cucumber}. Crush {garlic} and chop {dill}.",
+      "Whisk {yogurt} with {water} until pourable. Stir in cucumber, garlic and dill.",
+      "Chill for at least 10 minutes. Serve with chopped {walnuts} and a drizzle of {olive-oil}."
+    ],
+    "cuisine": "Balkan"
+  },
+  {
+    "id": "world-proja-cornbread",
+    "name": "Serbian-style proja cornmeal bread",
+    "meal": "bite,big",
+    "time": 35,
+    "serves": 6,
+    "ing": [
+      [
+        "cornmeal",
+        200
+      ],
+      [
+        "flour",
+        80
+      ],
+      [
+        "yogurt",
+        250
+      ],
+      [
+        "eggs",
+        "2pc"
+      ],
+      [
+        "oil",
+        70
+      ],
+      [
+        "feta",
+        120
+      ],
+      [
+        "baking-powder",
+        8
+      ],
+      [
+        "salt",
+        3
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 200°C and grease a small baking tin.",
+      "Whisk {eggs}, {yogurt} and {oil}. In another bowl mix {cornmeal}, {flour}, {baking-powder} and {salt}.",
+      "Combine wet and dry ingredients, then fold in crumbled {feta}.",
+      "Pour into the tin and bake for 25–30 minutes until golden and a skewer comes out clean."
+    ],
+    "cuisine": "Balkan"
+  }
+]);

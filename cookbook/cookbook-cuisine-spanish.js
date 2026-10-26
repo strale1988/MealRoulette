@@ -701,3 +701,202 @@ KITCHEN.add([
     "Slice {squid} into rings and add; simmer 5 minutes more until just tender.",
     "Scatter with {parsley} to serve."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "spanish-garlic-shrimp-white-beans",
+  "name": "Spanish garlic prawns with white beans",
+  "meal": "big",
+  "cuisine": "Spanish",
+  "time": 20,
+  "serves": 2,
+  "ing": [
+    [
+      "prawns",
+      300
+    ],
+    [
+      "white-beans",
+      240
+    ],
+    [
+      "garlic",
+      "4pc"
+    ],
+    [
+      "smoked-paprika",
+      3
+    ],
+    [
+      "olive-oil",
+      25
+    ],
+    [
+      "parsley",
+      10
+    ],
+    [
+      "lemon",
+      "0.5pc"
+    ],
+    [
+      "chilli-flakes",
+      1
+    ]
+  ],
+  "steps": [
+    "Drain and rinse {white-beans}. Thinly slice {garlic}.",
+    "Warm {olive-oil} in a skillet; cook garlic and {chilli-flakes} briefly without browning. Add {prawns} and {smoked-paprika}.",
+    "Cook until prawns are opaque, then stir in beans to warm through. Finish with {parsley} and {lemon} juice."
+  ]
+},
+{
+  "id": "spanish-spinach-chickpea-stew",
+  "name": "Spanish spinach and chickpea stew",
+  "meal": "big",
+  "cuisine": "Spanish",
+  "time": 25,
+  "serves": 3,
+  "ing": [
+    [
+      "chickpeas",
+      480
+    ],
+    [
+      "spinach",
+      200
+    ],
+    [
+      "canned-tomatoes",
+      250
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "garlic",
+      "3pc"
+    ],
+    [
+      "smoked-paprika",
+      4
+    ],
+    [
+      "cumin",
+      2
+    ],
+    [
+      "bread",
+      60
+    ]
+  ],
+  "steps": [
+    "Toast or pan-fry {bread} until crisp, then crush into coarse crumbs.",
+    "Soften diced {onion} in oil; add {garlic}, {smoked-paprika} and {cumin}. Stir in {canned-tomatoes} and simmer 8 minutes.",
+    "Add {chickpeas} and a splash of water; simmer 8 minutes. Stir in {spinach} until wilted and thicken with the bread crumbs."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "world-spinach-chickpea-garlic",
+    "name": "Spanish-style spinach and chickpeas",
+    "meal": "big",
+    "time": 20,
+    "serves": 2,
+    "ing": [
+      [
+        "chickpeas",
+        440
+      ],
+      [
+        "spinach",
+        250
+      ],
+      [
+        "garlic",
+        12
+      ],
+      [
+        "olive-oil",
+        20
+      ],
+      [
+        "smoked-paprika",
+        3
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "lemon",
+        "0.5pc"
+      ],
+      [
+        "bread",
+        120
+      ]
+    ],
+    "steps": [
+      "Warm {olive-oil} in a skillet and gently cook sliced {garlic} until fragrant but not browned.",
+      "Add {smoked-paprika} and {cumin}; stir for 15 seconds. Add drained {chickpeas} and a splash of water.",
+      "Fold in {spinach} in batches and cook until wilted. Lightly mash some chickpeas to thicken.",
+      "Finish with lemon juice from {lemon}, season and serve with {bread}."
+    ],
+    "cuisine": "Spanish"
+  },
+  {
+    "id": "world-pisto-egg",
+    "name": "Spanish pisto vegetables with eggs",
+    "meal": "big",
+    "time": 35,
+    "serves": 3,
+    "ing": [
+      [
+        "zucchini",
+        250
+      ],
+      [
+        "aubergine",
+        200
+      ],
+      [
+        "red-pepper",
+        180
+      ],
+      [
+        "onion",
+        100
+      ],
+      [
+        "canned-tomatoes",
+        350
+      ],
+      [
+        "eggs",
+        "3pc"
+      ],
+      [
+        "olive-oil",
+        20
+      ],
+      [
+        "garlic",
+        6
+      ]
+    ],
+    "steps": [
+      "Dice {zucchini}, {aubergine}, {red-pepper} and {onion}.",
+      "Cook onion and pepper in {olive-oil} for 5 minutes. Add aubergine and zucchini and cook another 8 minutes.",
+      "Stir in {garlic} and {canned-tomatoes}; simmer 15 minutes until thick and tender.",
+      "Make small wells, crack in {eggs}, cover and cook until the eggs are set."
+    ],
+    "cuisine": "Spanish"
+  }
+]);

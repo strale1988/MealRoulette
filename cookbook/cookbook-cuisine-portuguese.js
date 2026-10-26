@@ -468,3 +468,101 @@ KITCHEN.add([
     "Toast the {bread}.",
     "Top with the {sardines} and the salad."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "portuguese-piri-piri-chickpeas",
+  "name": "Piri-piri chickpeas with peppers",
+  "meal": "big",
+  "cuisine": "Portuguese",
+  "time": 25,
+  "serves": 2,
+  "ing": [
+    [
+      "chickpeas",
+      480
+    ],
+    [
+      "red-pepper",
+      180
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "garlic",
+      "3pc"
+    ],
+    [
+      "paprika",
+      4
+    ],
+    [
+      "fresh-chilli",
+      8
+    ],
+    [
+      "lemon",
+      "1pc"
+    ],
+    [
+      "olive-oil",
+      20
+    ],
+    [
+      "parsley",
+      8
+    ]
+  ],
+  "steps": [
+    "Slice {red-pepper} and {onion}; mince {garlic} and {fresh-chilli}.",
+    "Cook onion and pepper in {olive-oil} for 7 minutes. Add garlic, chilli and {paprika}; stir briefly.",
+    "Add drained {chickpeas} and a splash of water. Simmer 8 minutes, then finish with {lemon} juice and {parsley}."
+  ]
+},
+{
+  "id": "portuguese-caldo-verde-white-bean",
+  "name": "Portuguese-style kale and potato soup",
+  "meal": "big",
+  "cuisine": "Portuguese",
+  "time": 35,
+  "serves": 3,
+  "ing": [
+    [
+      "potatoes",
+      400
+    ],
+    [
+      "kale",
+      180
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "garlic",
+      "2pc"
+    ],
+    [
+      "vegetable-stock",
+      800
+    ],
+    [
+      "sausage",
+      150
+    ],
+    [
+      "olive-oil",
+      15
+    ]
+  ],
+  "steps": [
+    "Dice {potatoes} and {onion}; slice {sausage}.",
+    "Soften onion in {olive-oil}, add garlic and potatoes, then pour in {vegetable-stock}. Simmer until potatoes are tender.",
+    "Mash some potatoes into the broth. Add finely sliced {kale} and sausage; simmer 5–7 minutes until the kale is tender and sausage hot."
+  ]
+}
+]);

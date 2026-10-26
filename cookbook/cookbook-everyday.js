@@ -1562,3 +1562,733 @@ KITCHEN.add([
     ]
   }
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "everyday-broccoli-cheddar-baked-potatoes",
+  "name": "Broccoli cheddar baked potatoes",
+  "meal": "big",
+  "cuisine": "",
+  "time": 50,
+  "serves": 2,
+  "ing": [
+    [
+      "potatoes",
+      500
+    ],
+    [
+      "broccoli",
+      200
+    ],
+    [
+      "cheddar",
+      80
+    ],
+    [
+      "sour-cream",
+      60
+    ],
+    [
+      "spring-onion",
+      25
+    ]
+  ],
+  "steps": [
+    "Heat the oven to 210 °C. Prick {potatoes} and bake until tender, about 40–50 minutes depending on size.",
+    "Steam or boil {broccoli} until just tender; chop into small pieces.",
+    "Split the potatoes, fluff the insides and fill with broccoli, {cheddar} and {sour-cream}. Return to the oven until the cheese melts and finish with {spring-onion}."
+  ]
+},
+{
+  "id": "everyday-tuna-white-bean-salad",
+  "name": "Tuna and white bean lunch salad",
+  "meal": "big",
+  "cuisine": "",
+  "time": 12,
+  "serves": 2,
+  "ing": [
+    [
+      "tuna",
+      160
+    ],
+    [
+      "white-beans",
+      240
+    ],
+    [
+      "red-onion",
+      "0.5pc"
+    ],
+    [
+      "cucumber",
+      120
+    ],
+    [
+      "lemon",
+      "1pc"
+    ],
+    [
+      "olive-oil",
+      20
+    ],
+    [
+      "parsley",
+      10
+    ]
+  ],
+  "steps": [
+    "Drain {tuna} and {white-beans}. Thinly slice {red-onion} and dice {cucumber}.",
+    "Whisk {lemon} juice with {olive-oil}, salt and black pepper.",
+    "Toss everything together with chopped {parsley}. Let stand for 5 minutes before serving."
+  ]
+},
+{
+  "id": "everyday-creamy-pumpkin-risotto",
+  "name": "Creamy pumpkin risotto",
+  "meal": "big",
+  "cuisine": "",
+  "time": 40,
+  "serves": 3,
+  "ing": [
+    [
+      "rice",
+      220
+    ],
+    [
+      "pumpkin",
+      350
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "vegetable-stock",
+      800
+    ],
+    [
+      "parmesan",
+      50
+    ],
+    [
+      "butter",
+      25
+    ],
+    [
+      "sage",
+      4
+    ]
+  ],
+  "steps": [
+    "Dice {pumpkin} and roast at 210 °C for 20 minutes until tender.",
+    "Warm {vegetable-stock} in a saucepan. Soften diced {onion} in {butter}, add rice and stir for 1 minute.",
+    "Add stock a ladle at a time, stirring often, until rice is creamy and tender. Fold in pumpkin, {parmesan} and chopped {sage}."
+  ]
+},
+{
+  "id": "everyday-crispy-chickpea-pitas",
+  "name": "Crispy chickpea and cucumber pitas",
+  "meal": "big",
+  "cuisine": "",
+  "time": 20,
+  "serves": 2,
+  "ing": [
+    [
+      "chickpeas",
+      240
+    ],
+    [
+      "pita-bread",
+      "4pc"
+    ],
+    [
+      "cucumber",
+      150
+    ],
+    [
+      "tomato",
+      150
+    ],
+    [
+      "yogurt",
+      100
+    ],
+    [
+      "tahini",
+      20
+    ],
+    [
+      "lemon",
+      "0.5pc"
+    ],
+    [
+      "paprika",
+      3
+    ]
+  ],
+  "steps": [
+    "Pat {chickpeas} dry, toss with oil and {paprika}, then roast at 220 °C for 15–20 minutes until crisp.",
+    "Mix {yogurt}, {tahini} and {lemon} juice into a sauce. Dice {cucumber} and {tomato}.",
+    "Warm {pita-bread} and fill with chickpeas, vegetables and the yogurt-tahini sauce."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "one-pan-chickpea-spinach-tomato",
+    "name": "One-pan chickpeas with spinach and tomato",
+    "meal": "big",
+    "time": 25,
+    "serves": 3,
+    "ing": [
+      [
+        "chickpeas",
+        440
+      ],
+      [
+        "canned-tomatoes",
+        400
+      ],
+      [
+        "spinach",
+        120
+      ],
+      [
+        "onion",
+        100
+      ],
+      [
+        "garlic",
+        8
+      ],
+      [
+        "olive-oil",
+        15
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "bread",
+        180
+      ]
+    ],
+    "steps": [
+      "Dice the {onion} and mince the {garlic}.",
+      "Warm {olive-oil} in a wide pan and cook the onion for 5 minutes. Add garlic, {cumin} and {paprika} for 30 seconds.",
+      "Add {canned-tomatoes} and {chickpeas}; simmer for 12 minutes. Fold in {spinach} until wilted.",
+      "Season to taste and serve with {bread}."
+    ]
+  },
+  {
+    "id": "lemon-orzo-peas",
+    "name": "Lemon orzo with peas and herbs",
+    "meal": "big",
+    "time": 22,
+    "serves": 3,
+    "ing": [
+      [
+        "orzo",
+        220
+      ],
+      [
+        "green-peas",
+        150
+      ],
+      [
+        "vegetable-stock",
+        650
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "parmesan",
+        45
+      ],
+      [
+        "olive-oil",
+        15
+      ],
+      [
+        "parsley",
+        10
+      ],
+      [
+        "garlic",
+        5
+      ]
+    ],
+    "steps": [
+      "Warm {olive-oil} in a saucepan and cook the chopped {garlic} for 30 seconds.",
+      "Stir in {orzo} and gradually add hot {vegetable-stock}; simmer, stirring often, until nearly tender.",
+      "Add {green-peas} for the final 4 minutes. Stir in lemon zest and juice from {lemon}, grated {parmesan} and chopped {parsley}.",
+      "Rest for 2 minutes and loosen with a splash of water if needed."
+    ]
+  },
+  {
+    "id": "roasted-cauliflower-tahini-bowls",
+    "name": "Roasted cauliflower and tahini bowls",
+    "meal": "big",
+    "time": 35,
+    "serves": 2,
+    "ing": [
+      [
+        "cauliflower",
+        500
+      ],
+      [
+        "chickpeas",
+        220
+      ],
+      [
+        "rice",
+        140
+      ],
+      [
+        "tahini",
+        35
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "olive-oil",
+        20
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "garlic",
+        5
+      ],
+      [
+        "yogurt",
+        80
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 220°C. Break {cauliflower} into florets and toss with {olive-oil}, {cumin}, salt and pepper.",
+      "Roast the cauliflower for 20–25 minutes, adding drained {chickpeas} for the final 10 minutes.",
+      "Cook {rice}. Mix {tahini}, lemon juice from {lemon}, grated {garlic} and enough water to make a pourable sauce.",
+      "Serve the rice topped with roasted cauliflower, chickpeas, {yogurt} and tahini sauce."
+    ]
+  },
+  {
+    "id": "mushroom-barley-skillet",
+    "name": "Mushroom and barley skillet",
+    "meal": "big",
+    "time": 40,
+    "serves": 3,
+    "ing": [
+      [
+        "pearl-barley",
+        200
+      ],
+      [
+        "mushrooms",
+        300
+      ],
+      [
+        "onion",
+        100
+      ],
+      [
+        "garlic",
+        8
+      ],
+      [
+        "vegetable-stock",
+        700
+      ],
+      [
+        "thyme",
+        2
+      ],
+      [
+        "olive-oil",
+        15
+      ],
+      [
+        "parmesan",
+        35
+      ]
+    ],
+    "steps": [
+      "Rinse {pearl-barley}. Slice {mushrooms}, dice {onion} and mince {garlic}.",
+      "Heat {olive-oil} in a deep skillet and brown the mushrooms in batches. Set aside.",
+      "Cook the onion for 4 minutes, add garlic and {thyme}, then stir in the barley and {vegetable-stock}.",
+      "Cover and simmer 25–30 minutes, stirring occasionally, until tender. Fold in the mushrooms and grated {parmesan}; season and serve."
+    ]
+  },
+  {
+    "id": "sweet-potato-black-bean-chilli",
+    "name": "Sweet potato and black bean chilli",
+    "meal": "big",
+    "time": 35,
+    "serves": 4,
+    "ing": [
+      [
+        "sweet-potato",
+        450
+      ],
+      [
+        "black-beans",
+        440
+      ],
+      [
+        "canned-tomatoes",
+        400
+      ],
+      [
+        "onion",
+        120
+      ],
+      [
+        "red-pepper",
+        150
+      ],
+      [
+        "garlic",
+        10
+      ],
+      [
+        "chilli-powder",
+        3
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "olive-oil",
+        15
+      ],
+      [
+        "lime",
+        "1pc"
+      ]
+    ],
+    "steps": [
+      "Peel and cube {sweet-potato}; dice {onion} and {red-pepper}.",
+      "Cook the onion and pepper in {olive-oil} for 5 minutes. Add {garlic}, {chilli-powder} and {cumin}.",
+      "Add sweet potato, {black-beans}, {canned-tomatoes} and 150 ml water. Cover and simmer 20–25 minutes until the potato is tender.",
+      "Season and finish with juice from {lime}. Serve with rice or warm tortillas if desired."
+    ]
+  },
+  {
+    "id": "baked-salmon-mustard-dill",
+    "name": "Baked salmon with mustard and dill",
+    "meal": "big",
+    "time": 22,
+    "serves": 2,
+    "ing": [
+      [
+        "salmon",
+        350
+      ],
+      [
+        "dijon-mustard",
+        20
+      ],
+      [
+        "yogurt",
+        45
+      ],
+      [
+        "lemon",
+        "0.5pc"
+      ],
+      [
+        "dill",
+        5
+      ],
+      [
+        "potato",
+        400
+      ],
+      [
+        "olive-oil",
+        15
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 200°C. Cut {potato} into small chunks and toss with half the {olive-oil}; roast for 15 minutes.",
+      "Mix {dijon-mustard}, {yogurt}, chopped {dill} and a squeeze of {lemon}.",
+      "Place {salmon} on the tray, brush with the mustard mixture and bake for 10–12 minutes, until it flakes easily and is cooked through.",
+      "Serve with the roasted potatoes and remaining lemon."
+    ]
+  },
+  {
+    "id": "tomato-white-bean-stew",
+    "name": "Tomato and white bean stew",
+    "meal": "big",
+    "time": 25,
+    "serves": 3,
+    "ing": [
+      [
+        "white-beans",
+        440
+      ],
+      [
+        "canned-tomatoes",
+        400
+      ],
+      [
+        "onion",
+        100
+      ],
+      [
+        "garlic",
+        8
+      ],
+      [
+        "spinach",
+        100
+      ],
+      [
+        "olive-oil",
+        15
+      ],
+      [
+        "rosemary",
+        2
+      ],
+      [
+        "vegetable-stock",
+        200
+      ],
+      [
+        "bread",
+        180
+      ]
+    ],
+    "steps": [
+      "Dice {onion} and mince {garlic}. Cook in {olive-oil} for 5 minutes until softened.",
+      "Add {rosemary}, {canned-tomatoes}, {vegetable-stock} and drained {white-beans}. Simmer for 15 minutes.",
+      "Stir in {spinach} and cook until wilted. Season with salt and black pepper.",
+      "Serve in bowls with toasted {bread}."
+    ]
+  },
+  {
+    "id": "ginger-sesame-tofu-noodles",
+    "name": "Ginger sesame tofu noodles",
+    "meal": "big",
+    "time": 25,
+    "serves": 2,
+    "ing": [
+      [
+        "tofu",
+        300
+      ],
+      [
+        "noodles",
+        180
+      ],
+      [
+        "soy-sauce",
+        30
+      ],
+      [
+        "sesame-oil",
+        10
+      ],
+      [
+        "ginger",
+        12
+      ],
+      [
+        "garlic",
+        8
+      ],
+      [
+        "carrot",
+        120
+      ],
+      [
+        "cabbage",
+        150
+      ],
+      [
+        "sesame-seeds",
+        10
+      ],
+      [
+        "lime",
+        "1pc"
+      ]
+    ],
+    "steps": [
+      "Cook {noodles} according to the packet and drain. Cut {tofu} into cubes and pat dry.",
+      "Brown tofu in a non-stick pan with a little neutral oil, turning until crisp. Remove from the pan.",
+      "Stir-fry shredded {carrot} and {cabbage} for 3–4 minutes. Add grated {ginger} and {garlic}.",
+      "Return tofu and noodles to the pan; toss with {soy-sauce} and {sesame-oil}. Finish with {sesame-seeds} and lime juice from {lime}."
+    ]
+  },
+  {
+    "id": "baked-eggplant-lentil-parmesan",
+    "name": "Aubergine and lentil bake",
+    "meal": "big",
+    "time": 50,
+    "serves": 4,
+    "ing": [
+      [
+        "aubergine",
+        500
+      ],
+      [
+        "brown-lentils",
+        220
+      ],
+      [
+        "canned-tomatoes",
+        500
+      ],
+      [
+        "mozzarella",
+        150
+      ],
+      [
+        "parmesan",
+        40
+      ],
+      [
+        "onion",
+        100
+      ],
+      [
+        "garlic",
+        8
+      ],
+      [
+        "olive-oil",
+        20
+      ],
+      [
+        "basil",
+        8
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 200°C. Slice {aubergine}, brush with {olive-oil} and roast on trays for 20 minutes.",
+      "Cook diced {onion} in a pan until soft. Add {garlic}, {canned-tomatoes} and cooked {brown-lentils}; simmer 10 minutes.",
+      "Layer tomato-lentil sauce, aubergine and pieces of {mozzarella} in a baking dish. Finish with grated {parmesan}.",
+      "Bake 20 minutes until bubbling. Rest 5 minutes and finish with {basil}."
+    ]
+  },
+  {
+    "id": "lemon-chicken-couscous-tray",
+    "name": "Lemon chicken and vegetable couscous tray",
+    "meal": "big",
+    "time": 35,
+    "serves": 3,
+    "ing": [
+      [
+        "chicken-thigh",
+        450
+      ],
+      [
+        "couscous",
+        180
+      ],
+      [
+        "zucchini",
+        200
+      ],
+      [
+        "red-pepper",
+        150
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "olive-oil",
+        20
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "vegetable-stock",
+        220
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 210°C. Toss {chicken-thigh}, sliced {zucchini} and {red-pepper} with {olive-oil}, {paprika}, {cumin}, lemon zest and half the juice from {lemon}.",
+      "Spread on a tray and roast for 25–30 minutes until vegetables are tender and chicken is fully cooked.",
+      "Put {couscous} in a heatproof bowl and pour over boiling {vegetable-stock}. Cover 5 minutes, then fluff.",
+      "Serve the chicken and vegetables over couscous with remaining lemon juice."
+    ]
+  },
+  {
+    "id": "peanut-sweet-potato-stew",
+    "name": "Peanut sweet potato stew",
+    "meal": "big",
+    "time": 35,
+    "serves": 4,
+    "ing": [
+      [
+        "sweet-potato",
+        400
+      ],
+      [
+        "chickpeas",
+        300
+      ],
+      [
+        "canned-tomatoes",
+        350
+      ],
+      [
+        "peanut-butter",
+        50
+      ],
+      [
+        "spinach",
+        120
+      ],
+      [
+        "onion",
+        100
+      ],
+      [
+        "garlic",
+        8
+      ],
+      [
+        "ginger",
+        10
+      ],
+      [
+        "vegetable-stock",
+        350
+      ]
+    ],
+    "steps": [
+      "Dice {onion}; mince {garlic} and grate {ginger}. Cook onion in a little oil for 5 minutes.",
+      "Add garlic and ginger, then stir in {sweet-potato}, {canned-tomatoes} and {vegetable-stock}. Simmer 15 minutes.",
+      "Whisk {peanut-butter} with a ladle of hot broth until smooth; stir into the pot with {chickpeas}.",
+      "Simmer until sweet potato is tender, fold in {spinach} until wilted and season to taste."
+    ]
+  }
+]);

@@ -928,3 +928,245 @@ KITCHEN.add([
     "Warm the {lavash}, cover with {lettuce} and the salad, and crumble over {feta}.",
     "Roll up tightly and halve."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "greek-lemon-chickpea-orzo",
+  "name": "Greek lemon chickpeas with pasta",
+  "meal": "big",
+  "cuisine": "Greek",
+  "time": 25,
+  "serves": 2,
+  "ing": [
+    [
+      "chickpeas",
+      240
+    ],
+    [
+      "pasta",
+      160
+    ],
+    [
+      "spinach",
+      100
+    ],
+    [
+      "lemon",
+      "1pc"
+    ],
+    [
+      "feta",
+      80
+    ],
+    [
+      "garlic",
+      "2pc"
+    ],
+    [
+      "olive-oil",
+      20
+    ],
+    [
+      "oregano",
+      3
+    ]
+  ],
+  "steps": [
+    "Cook {pasta} until al dente and reserve a little cooking water.",
+    "Warm {olive-oil} in a pan; add {garlic}, {oregano} and drained {chickpeas}. Cook for 3 minutes, gently crushing a few chickpeas.",
+    "Add {spinach}, lemon zest and {lemon} juice. Toss with pasta, loosening with cooking water, and crumble {feta} over the top."
+  ]
+},
+{
+  "id": "greek-baked-orzo-tomato",
+  "name": "Greek baked tomato orzo with feta",
+  "meal": "big",
+  "cuisine": "Greek",
+  "time": 35,
+  "serves": 3,
+  "ing": [
+    [
+      "pasta",
+      220
+    ],
+    [
+      "canned-tomatoes",
+      400
+    ],
+    [
+      "vegetable-stock",
+      450
+    ],
+    [
+      "red-onion",
+      "1pc"
+    ],
+    [
+      "garlic",
+      "3pc"
+    ],
+    [
+      "oregano",
+      3
+    ],
+    [
+      "feta",
+      100
+    ],
+    [
+      "black-olives",
+      60
+    ]
+  ],
+  "steps": [
+    "Heat the oven to 190 °C. Dice {red-onion} and crush {garlic}.",
+    "Combine {pasta}, {canned-tomatoes}, {vegetable-stock}, onion, garlic and {oregano} in a baking dish. Cover tightly with foil.",
+    "Bake 20 minutes, stir, then bake uncovered 8–10 minutes until the pasta is tender. Add a splash of water if needed; finish with {feta} and {black-olives}."
+  ]
+},
+{
+  "id": "greek-lamb-meatball-pitas",
+  "name": "Greek lamb meatball pitas",
+  "meal": "big",
+  "cuisine": "Greek",
+  "time": 30,
+  "serves": 2,
+  "ing": [
+    [
+      "lamb",
+      300
+    ],
+    [
+      "onion",
+      "0.5pc"
+    ],
+    [
+      "garlic",
+      "2pc"
+    ],
+    [
+      "oregano",
+      3
+    ],
+    [
+      "pita-bread",
+      "4pc"
+    ],
+    [
+      "yogurt",
+      120
+    ],
+    [
+      "cucumber",
+      120
+    ],
+    [
+      "lemon",
+      "0.5pc"
+    ]
+  ],
+  "steps": [
+    "Mix {lamb} with grated {onion}, {garlic}, {oregano}, salt and pepper. Shape into small meatballs.",
+    "Pan-fry or bake the meatballs until browned and cooked through, turning as needed.",
+    "Mix {yogurt}, grated {cucumber} and {lemon} juice. Warm {pita-bread} and fill with meatballs and cucumber yogurt."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "extra-world-greek-lemon-potatoes",
+    "name": "Greek lemon oregano potatoes",
+    "meal": "big",
+    "time": 50,
+    "serves": 4,
+    "ing": [
+      [
+        "potato",
+        700
+      ],
+      [
+        "lemon",
+        "2pc"
+      ],
+      [
+        "olive-oil",
+        35
+      ],
+      [
+        "garlic",
+        8
+      ],
+      [
+        "oregano",
+        3
+      ],
+      [
+        "vegetable-stock",
+        250
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 200°C. Cut {potato} into wedges and place in a roasting dish.",
+      "Whisk juice from {lemon} with {olive-oil}, minced {garlic}, {oregano}, salt and pepper. Pour over potatoes and toss.",
+      "Add {vegetable-stock}; roast for 40–45 minutes, turning once, until tender and browned.",
+      "Serve hot with extra lemon if desired."
+    ],
+    "cuisine": "Greek"
+  },
+  {
+    "id": "world-greek-lentil-salad",
+    "name": "Greek lentil salad with feta",
+    "meal": "big,bite",
+    "time": 25,
+    "serves": 3,
+    "ing": [
+      [
+        "brown-lentils",
+        200
+      ],
+      [
+        "cucumber",
+        150
+      ],
+      [
+        "tomato",
+        200
+      ],
+      [
+        "red-onion",
+        50
+      ],
+      [
+        "feta",
+        100
+      ],
+      [
+        "olive-oil",
+        20
+      ],
+      [
+        "red-wine-vinegar",
+        10
+      ],
+      [
+        "parsley",
+        10
+      ],
+      [
+        "oregano",
+        2
+      ]
+    ],
+    "steps": [
+      "Simmer {brown-lentils} in water until tender but not falling apart, about 20 minutes; drain and cool slightly.",
+      "Dice {cucumber} and {tomato}; thinly slice {red-onion}.",
+      "Whisk {olive-oil}, {red-wine-vinegar}, {oregano}, salt and pepper. Toss with lentils and vegetables.",
+      "Fold in chopped {parsley} and crumbled {feta}. Serve warm or chilled."
+    ],
+    "cuisine": "Greek"
+  }
+]);

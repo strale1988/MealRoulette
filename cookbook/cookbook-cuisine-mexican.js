@@ -1235,3 +1235,305 @@ KITCHEN.add([
     "Scatter bacon, egg and grated {monterey-jack} over half of each of the {flour-tortillas} and fold.",
     "Toast in a dry pan for 2 minutes per side until crisp and the cheese has melted."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "mexican-black-bean-sweet-potato-enchiladas",
+  "name": "Black bean and sweet potato enchiladas",
+  "meal": "big",
+  "cuisine": "Mexican",
+  "time": 45,
+  "serves": 4,
+  "ing": [
+    [
+      "sweet-potato",
+      350
+    ],
+    [
+      "black-beans",
+      240
+    ],
+    [
+      "corn-tortillas",
+      "8pc"
+    ],
+    [
+      "enchilada-sauce",
+      350
+    ],
+    [
+      "monterey-jack",
+      120
+    ],
+    [
+      "cumin",
+      3
+    ],
+    [
+      "chilli-powder",
+      3
+    ],
+    [
+      "coriander",
+      8
+    ]
+  ],
+  "steps": [
+    "Heat the oven to 200 °C. Cube {sweet-potato}, toss with {cumin} and {chilli-powder}, and roast for 20 minutes until tender.",
+    "Mix the roasted sweet potato with drained {black-beans}. Fill {corn-tortillas}, roll and arrange seam-side down in a baking dish.",
+    "Cover with {enchilada-sauce} and {monterey-jack}. Bake 15–20 minutes until bubbling. Finish with {coriander}."
+  ]
+},
+{
+  "id": "mexican-elote-style-corn-salad",
+  "name": "Mexican street corn salad",
+  "meal": "bite",
+  "cuisine": "Mexican",
+  "time": 15,
+  "serves": 3,
+  "ing": [
+    [
+      "sweetcorn",
+      300
+    ],
+    [
+      "mayonnaise",
+      25
+    ],
+    [
+      "sour-cream",
+      35
+    ],
+    [
+      "lime",
+      "1pc"
+    ],
+    [
+      "queso-fresco",
+      50
+    ],
+    [
+      "chilli-powder",
+      2
+    ],
+    [
+      "coriander",
+      8
+    ]
+  ],
+  "steps": [
+    "Char {sweetcorn} in a very hot dry skillet, stirring occasionally, until golden in spots. Let cool slightly.",
+    "Mix {mayonnaise}, {sour-cream} and {lime} juice in a bowl.",
+    "Toss corn with the dressing, crumbled {queso-fresco}, {chilli-powder} and chopped {coriander}. Serve warm or chilled."
+  ]
+},
+{
+  "id": "mexican-poblano-style-pepper-pasta",
+  "name": "Creamy chipotle pepper pasta",
+  "meal": "big",
+  "cuisine": "Mexican",
+  "time": 25,
+  "serves": 2,
+  "ing": [
+    [
+      "pasta",
+      180
+    ],
+    [
+      "roasted-peppers",
+      180
+    ],
+    [
+      "cream",
+      100
+    ],
+    [
+      "chipotle-adobo",
+      15
+    ],
+    [
+      "garlic",
+      "2pc"
+    ],
+    [
+      "parmesan",
+      30
+    ],
+    [
+      "lime",
+      "0.5pc"
+    ]
+  ],
+  "steps": [
+    "Cook {pasta} until al dente, reserving a mug of cooking water.",
+    "Blend {roasted-peppers}, {cream}, {chipotle-adobo} and {garlic} until smooth. Warm gently in a skillet.",
+    "Toss pasta with the sauce and {parmesan}, adding cooking water to loosen. Finish with {lime} juice and season to taste."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "world-poblano-corn-tacos",
+    "name": "Charred corn and pepper tacos",
+    "meal": "big,bite",
+    "time": 25,
+    "serves": 3,
+    "ing": [
+      [
+        "tortillas",
+        6
+      ],
+      [
+        "corn",
+        250
+      ],
+      [
+        "red-pepper",
+        180
+      ],
+      [
+        "black-beans",
+        220
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "yogurt",
+        80
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "coriander",
+        10
+      ],
+      [
+        "olive-oil",
+        12
+      ]
+    ],
+    "steps": [
+      "Char {corn} and sliced {red-pepper} in a hot skillet with {olive-oil}, turning until browned.",
+      "Warm drained {black-beans} with {cumin} and a splash of water.",
+      "Fill warm {tortillas} with beans, corn and pepper.",
+      "Mix {yogurt} with lime juice from {lime}; drizzle over tacos and finish with chopped {coriander}."
+    ],
+    "cuisine": "Mexican"
+  },
+  {
+    "id": "world-sopa-de-lima-inspired",
+    "name": "Lime and vegetable tortilla soup",
+    "meal": "big",
+    "time": 30,
+    "serves": 3,
+    "ing": [
+      [
+        "vegetable-stock",
+        800
+      ],
+      [
+        "canned-tomatoes",
+        250
+      ],
+      [
+        "onion",
+        100
+      ],
+      [
+        "garlic",
+        8
+      ],
+      [
+        "corn",
+        120
+      ],
+      [
+        "black-beans",
+        220
+      ],
+      [
+        "lime",
+        "2pc"
+      ],
+      [
+        "tortillas",
+        3
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "coriander",
+        10
+      ]
+    ],
+    "steps": [
+      "Dice {onion} and cook in a little oil for 5 minutes. Add {garlic} and {cumin}.",
+      "Add {canned-tomatoes} and {vegetable-stock}; simmer for 10 minutes. Add {corn} and drained {black-beans} and cook another 5 minutes.",
+      "Cut {tortillas} into thin strips and toast in a dry pan until crisp.",
+      "Season soup with juice from {lime}. Serve with tortilla strips and chopped {coriander}."
+    ],
+    "cuisine": "Mexican"
+  },
+  {
+    "id": "world-sweet-potato-enchiladas",
+    "name": "Sweet potato and black bean enchiladas",
+    "meal": "big",
+    "time": 45,
+    "serves": 4,
+    "ing": [
+      [
+        "sweet-potato",
+        400
+      ],
+      [
+        "black-beans",
+        440
+      ],
+      [
+        "tortillas",
+        6
+      ],
+      [
+        "canned-tomatoes",
+        350
+      ],
+      [
+        "cheddar",
+        120
+      ],
+      [
+        "onion",
+        100
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "olive-oil",
+        12
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 200°C. Cube {sweet-potato} and roast with {olive-oil}, {cumin} and {paprika} for 20 minutes.",
+      "Mix roasted sweet potato with drained {black-beans} and half the grated {cheddar}.",
+      "Spoon filling into {tortillas}, roll and place seam-side down in a baking dish. Cover with {canned-tomatoes} mixed with diced {onion}.",
+      "Scatter remaining cheese on top and bake for 20 minutes until bubbling."
+    ],
+    "cuisine": "Mexican"
+  }
+]);

@@ -76,3 +76,351 @@ KITCHEN.add([
  ing:[["ground-almonds",150],["sugar",120],["eggs","3pc"],["orange","1pc"],["baking-powder",4]],
  steps:["Heat the oven to 180 °C and line a small round tin.","Zest the {orange} and squeeze its juice. Beat {eggs} with {sugar} until pale and thick.","Fold in {ground-almonds}, {baking-powder}, the zest and 3 tablespoons of the juice.","Pour into the tin and bake 35–40 minutes until golden and a skewer comes out clean. Cool before slicing."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "quick-garlic-butter-prawn-toast",
+  "name": "Garlic butter prawn toast",
+  "meal": "bite",
+  "time": 12,
+  "serves": 2,
+  "ing": [
+    [
+      "bread",
+      "4pc"
+    ],
+    [
+      "prawns",
+      180
+    ],
+    [
+      "butter",
+      25
+    ],
+    [
+      "garlic",
+      "2pc"
+    ],
+    [
+      "parsley",
+      8
+    ],
+    [
+      "lemon",
+      "0.5pc"
+    ]
+  ],
+  "steps": [
+    "Toast {bread} lightly. Chop {prawns} into small pieces.",
+    "Melt {butter} in a skillet and cook {garlic} for 30 seconds. Add prawns and cook until opaque.",
+    "Spoon onto toast and finish with {parsley} and {lemon} juice."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "hummus-cucumber-flatbread",
+    "name": "Hummus and cucumber flatbreads",
+    "meal": "bite",
+    "time": 10,
+    "serves": 2,
+    "ing": [
+      [
+        "flatbread",
+        2
+      ],
+      [
+        "hummus",
+        120
+      ],
+      [
+        "cucumber",
+        120
+      ],
+      [
+        "tomato",
+        120
+      ],
+      [
+        "feta",
+        50
+      ],
+      [
+        "lemon",
+        "0.5pc"
+      ],
+      [
+        "parsley",
+        5
+      ]
+    ],
+    "steps": [
+      "Warm the {flatbread} briefly in a dry pan.",
+      "Spread {hummus} over each flatbread. Dice {cucumber} and {tomato}, then scatter over the top.",
+      "Crumble {feta} over the vegetables, add chopped {parsley} and a squeeze of {lemon}. Fold and serve."
+    ]
+  },
+  {
+    "id": "tuna-cannellini-lemon-salad",
+    "name": "Tuna and cannellini bean lemon salad",
+    "meal": "bite,big",
+    "time": 12,
+    "serves": 2,
+    "ing": [
+      [
+        "tuna",
+        160
+      ],
+      [
+        "white-beans",
+        240
+      ],
+      [
+        "red-onion",
+        40
+      ],
+      [
+        "parsley",
+        10
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "olive-oil",
+        18
+      ],
+      [
+        "cucumber",
+        120
+      ]
+    ],
+    "steps": [
+      "Drain {tuna} and {white-beans}. Thinly slice {red-onion} and dice {cucumber}.",
+      "Whisk lemon juice from {lemon} with {olive-oil}, salt and black pepper.",
+      "Gently toss the tuna, beans, onion and cucumber with the dressing and chopped {parsley}. Rest 5 minutes before serving."
+    ]
+  },
+  {
+    "id": "avocado-egg-rice-bowl",
+    "name": "Avocado and egg rice bowl",
+    "meal": "big,morning",
+    "time": 15,
+    "serves": 1,
+    "ing": [
+      [
+        "rice",
+        180
+      ],
+      [
+        "eggs",
+        "2pc"
+      ],
+      [
+        "avocado",
+        "0.5pc"
+      ],
+      [
+        "soy-sauce",
+        10
+      ],
+      [
+        "sesame-seeds",
+        5
+      ],
+      [
+        "spring-onion",
+        15
+      ],
+      [
+        "lime",
+        "0.5pc"
+      ]
+    ],
+    "steps": [
+      "Use freshly cooked or safely refrigerated cooked {rice}; reheat leftovers until steaming hot.",
+      "Boil {eggs} for 7–9 minutes, cool briefly, peel and halve. Slice {avocado} and {spring-onion}.",
+      "Put the rice in a bowl and top with eggs and avocado. Season with {soy-sauce}, lime juice from {lime} and {sesame-seeds}."
+    ]
+  },
+  {
+    "id": "apple-cinnamon-yogurt-oats",
+    "name": "Apple cinnamon overnight oats",
+    "meal": "morning",
+    "time": 5,
+    "serves": 2,
+    "ing": [
+      [
+        "oats",
+        90
+      ],
+      [
+        "yogurt",
+        180
+      ],
+      [
+        "milk",
+        120
+      ],
+      [
+        "apple",
+        "1pc"
+      ],
+      [
+        "cinnamon",
+        1
+      ],
+      [
+        "chia-seeds",
+        10
+      ],
+      [
+        "honey",
+        10
+      ]
+    ],
+    "steps": [
+      "Mix {oats}, {yogurt}, {milk}, {cinnamon} and {chia-seeds} in a covered container.",
+      "Grate or finely dice {apple} and stir half into the oat mixture. Refrigerate for at least 4 hours or overnight.",
+      "Serve cold topped with the remaining apple and a little {honey}."
+    ]
+  },
+  {
+    "id": "garlic-butter-peas-toast",
+    "name": "Garlic butter peas on toast",
+    "meal": "morning,bite",
+    "time": 12,
+    "serves": 2,
+    "ing": [
+      [
+        "green-peas",
+        200
+      ],
+      [
+        "bread",
+        120
+      ],
+      [
+        "butter",
+        20
+      ],
+      [
+        "garlic",
+        5
+      ],
+      [
+        "lemon",
+        "0.5pc"
+      ],
+      [
+        "mint",
+        5
+      ],
+      [
+        "feta",
+        40
+      ]
+    ],
+    "steps": [
+      "Toast the {bread}.",
+      "Warm {butter} in a small pan and gently cook chopped {garlic} for 30 seconds. Add {green-peas} and 2 tablespoons of water; cook until tender.",
+      "Mash half the peas with lemon juice from {lemon}, chopped {mint}, salt and pepper. Spoon over toast.",
+      "Top with remaining peas and crumbled {feta}."
+    ]
+  },
+  {
+    "id": "smoky-bean-quesadillas",
+    "name": "Smoky bean and cheese quesadillas",
+    "meal": "big,bite",
+    "time": 18,
+    "serves": 2,
+    "ing": [
+      [
+        "tortillas",
+        4
+      ],
+      [
+        "black-beans",
+        220
+      ],
+      [
+        "cheddar",
+        100
+      ],
+      [
+        "red-pepper",
+        100
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "smoked-paprika",
+        2
+      ],
+      [
+        "olive-oil",
+        10
+      ],
+      [
+        "yogurt",
+        80
+      ]
+    ],
+    "steps": [
+      "Drain and mash {black-beans} roughly with {cumin}, {smoked-paprika} and a pinch of salt.",
+      "Dice {red-pepper}. Spread beans over half of each {tortillas}, add pepper and grated {cheddar}, then fold closed.",
+      "Brush a skillet lightly with {olive-oil} and cook each quesadilla for 2–3 minutes per side until crisp and the cheese melts.",
+      "Cut into wedges and serve with {yogurt}."
+    ]
+  },
+  {
+    "id": "lemon-ricotta-pasta",
+    "name": "Lemon ricotta pasta",
+    "meal": "big",
+    "time": 18,
+    "serves": 2,
+    "ing": [
+      [
+        "pasta",
+        200
+      ],
+      [
+        "ricotta",
+        150
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "parmesan",
+        35
+      ],
+      [
+        "spinach",
+        80
+      ],
+      [
+        "garlic",
+        5
+      ],
+      [
+        "olive-oil",
+        10
+      ]
+    ],
+    "steps": [
+      "Cook {pasta} in salted water until al dente; reserve a mug of pasta water before draining.",
+      "Warm {olive-oil} and gently cook chopped {garlic} for 30 seconds. Add {spinach} and wilt.",
+      "Stir {ricotta}, lemon zest and juice from {lemon}, and grated {parmesan} into the pan with a splash of pasta water.",
+      "Toss in the pasta, adding more pasta water until glossy. Season and serve."
+    ]
+  }
+]);

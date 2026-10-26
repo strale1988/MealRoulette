@@ -410,3 +410,236 @@ KITCHEN.add([
     "Pour in {cream} and simmer 2 minutes. Fold through {spinach} until wilted.",
     "Serve topped with grated {parmesan}."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "wraps-crispy-tofu-slaw-wraps",
+  "name": "Crispy tofu slaw wraps",
+  "meal": "big",
+  "time": 25,
+  "serves": 2,
+  "ing": [
+    [
+      "tofu",
+      300
+    ],
+    [
+      "flour-tortillas",
+      "4pc"
+    ],
+    [
+      "red-cabbage",
+      150
+    ],
+    [
+      "carrot",
+      100
+    ],
+    [
+      "mayonnaise",
+      30
+    ],
+    [
+      "soy-sauce",
+      15
+    ],
+    [
+      "cornstarch",
+      15
+    ],
+    [
+      "lime",
+      "0.5pc"
+    ]
+  ],
+  "steps": [
+    "Pat {tofu} dry and cut into strips. Toss with {soy-sauce} then coat with {cornstarch}.",
+    "Pan-fry in oil over medium-high heat until crisp on all sides. Thinly slice {red-cabbage} and grate {carrot}.",
+    "Mix vegetables with {mayonnaise} and {lime} juice. Warm {flour-tortillas}, add slaw and tofu, then roll tightly."
+  ]
+},
+{
+  "id": "wraps-roast-beef-horseradish-baguette",
+  "name": "Roast beef and horseradish baguette",
+  "meal": "big",
+  "time": 10,
+  "serves": 2,
+  "ing": [
+    [
+      "baguette",
+      "1pc"
+    ],
+    [
+      "left-beef",
+      180
+    ],
+    [
+      "horseradish",
+      20
+    ],
+    [
+      "mayonnaise",
+      25
+    ],
+    [
+      "rocket",
+      40
+    ],
+    [
+      "pickles",
+      50
+    ]
+  ],
+  "steps": [
+    "Split {baguette} lengthwise. Mix {horseradish} with {mayonnaise}.",
+    "Spread the sauce inside the baguette and layer on thin slices of cooked {left-beef}.",
+    "Add {rocket} and sliced {pickles}; close, press lightly and cut into portions."
+  ]
+},
+{
+  "id": "wraps-halloumi-avocado-burgers",
+  "name": "Halloumi and avocado burgers",
+  "meal": "big",
+  "time": 20,
+  "serves": 2,
+  "ing": [
+    [
+      "burger-buns",
+      "2pc"
+    ],
+    [
+      "halloumi",
+      180
+    ],
+    [
+      "avocado",
+      "1pc"
+    ],
+    [
+      "tomato",
+      100
+    ],
+    [
+      "lettuce",
+      50
+    ],
+    [
+      "yogurt",
+      40
+    ],
+    [
+      "lemon",
+      "0.5pc"
+    ]
+  ],
+  "steps": [
+    "Slice {halloumi} and pan-sear in a dry skillet until golden on both sides.",
+    "Mash {avocado} with {lemon} juice and a pinch of salt. Mix {yogurt} with black pepper.",
+    "Toast {burger-buns}; spread with avocado and yogurt, then add halloumi, sliced {tomato} and {lettuce}."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "wrap-crispy-chickpea-salad",
+    "name": "Crispy chickpea salad wraps",
+    "meal": "big",
+    "time": 20,
+    "serves": 2,
+    "ing": [
+      [
+        "chickpeas",
+        300
+      ],
+      [
+        "tortillas",
+        2
+      ],
+      [
+        "lettuce",
+        100
+      ],
+      [
+        "tomato",
+        150
+      ],
+      [
+        "cucumber",
+        120
+      ],
+      [
+        "yogurt",
+        100
+      ],
+      [
+        "lemon",
+        "0.5pc"
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "olive-oil",
+        12
+      ]
+    ],
+    "steps": [
+      "Drain {chickpeas}, pat dry and toss with {olive-oil}, {paprika}, salt and pepper. Roast at 220°C for 15 minutes or pan-fry until crisp.",
+      "Mix {yogurt} with lemon juice from {lemon}, salt and pepper.",
+      "Chop {lettuce}, {tomato} and {cucumber}. Warm {tortillas}.",
+      "Fill tortillas with salad and crispy chickpeas, drizzle with yogurt sauce and roll tightly."
+    ]
+  },
+  {
+    "id": "wrap-halloumi-roasted-pepper",
+    "name": "Halloumi and roasted pepper wraps",
+    "meal": "big,bite",
+    "time": 18,
+    "serves": 2,
+    "ing": [
+      [
+        "tortillas",
+        2
+      ],
+      [
+        "halloumi",
+        180
+      ],
+      [
+        "red-pepper",
+        180
+      ],
+      [
+        "yogurt",
+        70
+      ],
+      [
+        "lemon",
+        "0.5pc"
+      ],
+      [
+        "mint",
+        5
+      ],
+      [
+        "olive-oil",
+        10
+      ],
+      [
+        "lettuce",
+        60
+      ]
+    ],
+    "steps": [
+      "Slice {red-pepper} and cook in {olive-oil} until soft and lightly charred.",
+      "Slice {halloumi} and sear in a hot dry pan for 1–2 minutes per side.",
+      "Mix {yogurt} with lemon juice from {lemon} and chopped {mint}.",
+      "Warm {tortillas}; fill with {lettuce}, peppers and halloumi. Add yogurt sauce and roll."
+    ]
+  }
+]);

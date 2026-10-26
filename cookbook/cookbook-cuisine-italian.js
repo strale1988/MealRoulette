@@ -1552,3 +1552,344 @@ KITCHEN.add([
     "Tip into a dish, top with torn {mozzarella} and {parmesan}, and bake 18 minutes.",
     "Scatter over {basil} to serve."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "italian-pasta-alla-norma",
+  "name": "Pasta alla Norma with aubergine",
+  "meal": "big",
+  "cuisine": "Italian",
+  "time": 35,
+  "serves": 2,
+  "ing": [
+    [
+      "pasta",
+      180
+    ],
+    [
+      "aubergine",
+      300
+    ],
+    [
+      "passata",
+      300
+    ],
+    [
+      "garlic",
+      "2pc"
+    ],
+    [
+      "olive-oil",
+      25
+    ],
+    [
+      "basil",
+      8
+    ],
+    [
+      "ricotta",
+      60
+    ],
+    [
+      "chilli-flakes",
+      1
+    ]
+  ],
+  "steps": [
+    "Cube {aubergine}, toss with half the {olive-oil} and roast at 220 °C for 20 minutes until golden.",
+    "Cook {pasta} until al dente. Warm remaining oil with {garlic} and {chilli-flakes}; add {passata} and simmer for 10 minutes.",
+    "Toss pasta and aubergine through the sauce, adding a little pasta water. Finish with {basil} and spoonfuls of {ricotta}."
+  ]
+},
+{
+  "id": "italian-white-bean-rosemary-soup",
+  "name": "Tuscan white bean and rosemary soup",
+  "meal": "big",
+  "cuisine": "Italian",
+  "time": 30,
+  "serves": 3,
+  "ing": [
+    [
+      "white-beans",
+      480
+    ],
+    [
+      "carrot",
+      "1pc"
+    ],
+    [
+      "celery",
+      80
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "garlic",
+      "2pc"
+    ],
+    [
+      "vegetable-stock",
+      700
+    ],
+    [
+      "rosemary",
+      2
+    ],
+    [
+      "kale",
+      100
+    ],
+    [
+      "parmesan",
+      25
+    ]
+  ],
+  "steps": [
+    "Dice {carrot}, {celery} and {onion}; soften in olive oil for 6 minutes.",
+    "Add {garlic}, {rosemary}, drained {white-beans} and {vegetable-stock}. Simmer for 15 minutes, lightly mashing some beans to thicken.",
+    "Stir in {kale} and cook until wilted. Season and serve with {parmesan}."
+  ]
+},
+{
+  "id": "italian-lemon-ricotta-cake",
+  "name": "Italian lemon ricotta cake",
+  "meal": "treat",
+  "cuisine": "Italian",
+  "time": 50,
+  "serves": 8,
+  "ing": [
+    [
+      "ricotta",
+      250
+    ],
+    [
+      "eggs",
+      "3pc"
+    ],
+    [
+      "sugar",
+      140
+    ],
+    [
+      "flour",
+      160
+    ],
+    [
+      "butter",
+      80
+    ],
+    [
+      "lemon",
+      "1pc"
+    ],
+    [
+      "baking-powder",
+      5
+    ],
+    [
+      "vanilla",
+      3
+    ]
+  ],
+  "steps": [
+    "Heat the oven to 175 °C and line a small cake tin. Cream softened {butter} with {sugar}.",
+    "Beat in {ricotta}, then {eggs} one at a time. Fold in {flour}, {baking-powder}, {vanilla} and the zest of {lemon}.",
+    "Bake 35–40 minutes until golden and a skewer comes out clean. Cool before slicing."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "world-pasta-e-ceci",
+    "name": "Pasta e ceci, chickpea and pasta soup",
+    "meal": "big",
+    "time": 30,
+    "serves": 3,
+    "ing": [
+      [
+        "chickpeas",
+        440
+      ],
+      [
+        "small-pasta",
+        120
+      ],
+      [
+        "canned-tomatoes",
+        200
+      ],
+      [
+        "onion",
+        80
+      ],
+      [
+        "garlic",
+        6
+      ],
+      [
+        "rosemary",
+        2
+      ],
+      [
+        "vegetable-stock",
+        700
+      ],
+      [
+        "olive-oil",
+        18
+      ],
+      [
+        "parmesan",
+        25
+      ]
+    ],
+    "steps": [
+      "Cook diced {onion} in {olive-oil} for 5 minutes. Add {garlic} and {rosemary}.",
+      "Add {canned-tomatoes}, {chickpeas} and {vegetable-stock}; simmer for 10 minutes. Mash a few chickpeas to thicken the broth.",
+      "Add {small-pasta} and cook until tender, adding water if the soup becomes too thick.",
+      "Serve with grated {parmesan} and black pepper."
+    ],
+    "cuisine": "Italian"
+  },
+  {
+    "id": "world-melanzane-panini",
+    "name": "Grilled aubergine and mozzarella panini",
+    "meal": "big,bite",
+    "time": 20,
+    "serves": 2,
+    "ing": [
+      [
+        "bread",
+        2
+      ],
+      [
+        "aubergine",
+        250
+      ],
+      [
+        "mozzarella",
+        125
+      ],
+      [
+        "tomato",
+        120
+      ],
+      [
+        "basil",
+        8
+      ],
+      [
+        "olive-oil",
+        15
+      ],
+      [
+        "balsamic-vinegar",
+        8
+      ]
+    ],
+    "steps": [
+      "Slice {aubergine} into rounds, brush with {olive-oil} and grill or pan-sear until tender and browned.",
+      "Split the {bread} and layer with aubergine, sliced {tomato}, {mozzarella} and {basil}.",
+      "Toast in a sandwich press or skillet until the bread is crisp and mozzarella softens. Finish with a few drops of {balsamic-vinegar}."
+    ],
+    "cuisine": "Italian"
+  },
+  {
+    "id": "world-risotto-pea-mint",
+    "name": "Pea and mint risotto",
+    "meal": "big",
+    "time": 35,
+    "serves": 3,
+    "ing": [
+      [
+        "arborio-rice",
+        220
+      ],
+      [
+        "green-peas",
+        180
+      ],
+      [
+        "onion",
+        80
+      ],
+      [
+        "vegetable-stock",
+        850
+      ],
+      [
+        "white-wine",
+        80
+      ],
+      [
+        "parmesan",
+        50
+      ],
+      [
+        "butter",
+        25
+      ],
+      [
+        "mint",
+        8
+      ]
+    ],
+    "steps": [
+      "Keep {vegetable-stock} hot in a saucepan. Finely dice {onion}.",
+      "Cook onion in half the {butter} until soft. Add {arborio-rice} and stir for 1 minute.",
+      "Add {white-wine} and stir until absorbed. Add hot stock a ladle at a time, stirring often, until rice is creamy and tender, about 18 minutes.",
+      "Stir in {green-peas} for the final 4 minutes, then finish with remaining {butter}, grated {parmesan} and chopped {mint}."
+    ],
+    "cuisine": "Italian"
+  },
+  {
+    "id": "world-white-pizza-potato-rosemary",
+    "name": "White pizza with potato and rosemary",
+    "meal": "big",
+    "time": 35,
+    "serves": 2,
+    "ing": [
+      [
+        "pizza-dough",
+        350
+      ],
+      [
+        "potato",
+        180
+      ],
+      [
+        "mozzarella",
+        120
+      ],
+      [
+        "olive-oil",
+        15
+      ],
+      [
+        "rosemary",
+        2
+      ],
+      [
+        "garlic",
+        4
+      ],
+      [
+        "parmesan",
+        25
+      ]
+    ],
+    "steps": [
+      "Heat the oven and a baking tray to 240°C. Slice {potato} very thinly and toss with half the {olive-oil}, chopped {rosemary} and a pinch of salt.",
+      "Stretch {pizza-dough} into a thin round. Brush with remaining oil and rub lightly with cut {garlic}.",
+      "Scatter over mozzarella, arrange potato slices and finish with grated {parmesan}.",
+      "Bake on the hot tray for 10–14 minutes until the crust is browned and potato is tender."
+    ],
+    "cuisine": "Italian"
+  }
+]);

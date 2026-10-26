@@ -506,3 +506,156 @@ KITCHEN.add([
     "Shred {cabbage}, dice {mango} and toss with {coriander} and the remaining lime juice.",
     "Warm the {flour-tortillas} and fill with chicken and slaw."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "caribbean-coconut-lentil-stew",
+  "name": "Caribbean coconut lentil stew",
+  "meal": "big",
+  "cuisine": "Caribbean",
+  "time": 35,
+  "serves": 3,
+  "ing": [
+    [
+      "red-lentils",
+      180
+    ],
+    [
+      "coconut-milk",
+      400
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "garlic",
+      "3pc"
+    ],
+    [
+      "ginger",
+      12
+    ],
+    [
+      "sweet-potato",
+      250
+    ],
+    [
+      "curry-powder",
+      5
+    ],
+    [
+      "vegetable-stock",
+      400
+    ],
+    [
+      "lime",
+      "1pc"
+    ]
+  ],
+  "steps": [
+    "Dice {onion} and {sweet-potato}. Cook the onion in a splash of oil for 5 minutes, then add {garlic}, {ginger} and {curry-powder}.",
+    "Stir in {red-lentils}, {coconut-milk} and {vegetable-stock}. Simmer 20–25 minutes, stirring occasionally, until the lentils and sweet potato are tender.",
+    "Season to taste and finish with {lime} juice. Add a little water if the stew becomes thicker than you like."
+  ]
+},
+{
+  "id": "caribbean-pineapple-black-bean-tacos",
+  "name": "Pineapple and black bean tacos",
+  "meal": "big",
+  "cuisine": "Caribbean",
+  "time": 20,
+  "serves": 2,
+  "ing": [
+    [
+      "black-beans",
+      240
+    ],
+    [
+      "pineapple",
+      180
+    ],
+    [
+      "corn-tortillas",
+      "6pc"
+    ],
+    [
+      "red-cabbage",
+      150
+    ],
+    [
+      "lime",
+      "1pc"
+    ],
+    [
+      "coriander",
+      8
+    ],
+    [
+      "jalapeno",
+      20
+    ],
+    [
+      "olive-oil",
+      10
+    ]
+  ],
+  "steps": [
+    "Drain and rinse {black-beans}; warm them in a pan with {olive-oil} and a pinch of salt.",
+    "Dice {pineapple} and finely slice {red-cabbage}. Toss with {lime} juice, chopped {coriander} and {jalapeno}.",
+    "Warm {corn-tortillas}, fill with beans and pineapple slaw, and serve immediately."
+  ]
+},
+{
+  "id": "caribbean-jerk-tofu-rice",
+  "name": "Jerk-spiced tofu with rice and mango",
+  "meal": "big",
+  "cuisine": "Caribbean",
+  "time": 30,
+  "serves": 2,
+  "ing": [
+    [
+      "tofu",
+      300
+    ],
+    [
+      "rice",
+      150
+    ],
+    [
+      "mango",
+      150
+    ],
+    [
+      "red-pepper",
+      120
+    ],
+    [
+      "spring-onion",
+      35
+    ],
+    [
+      "allspice",
+      2
+    ],
+    [
+      "paprika",
+      3
+    ],
+    [
+      "lime",
+      "1pc"
+    ],
+    [
+      "soy-sauce",
+      15
+    ]
+  ],
+  "steps": [
+    "Cook the {rice} according to the package directions.",
+    "Cube {tofu}; toss with {allspice}, {paprika} and {soy-sauce}. Pan-fry until browned on most sides. Add sliced {red-pepper} and cook until tender-crisp.",
+    "Serve over rice with diced {mango}, sliced {spring-onion} and {lime} juice."
+  ]
+}
+]);

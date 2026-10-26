@@ -937,3 +937,206 @@ KITCHEN.add([
     "Whisk the juice of {lemon}, remaining {olive-oil}, {sumac} and {salt}; toss through the salad.",
     "Add the crisp pita just before serving."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "middle-eastern-mujadara",
+  "name": "Mujadara lentils and caramelized onions",
+  "meal": "big",
+  "cuisine": "Middle Eastern",
+  "time": 45,
+  "serves": 3,
+  "ing": [
+    [
+      "green-lentils",
+      180
+    ],
+    [
+      "rice",
+      150
+    ],
+    [
+      "onion",
+      "2pc"
+    ],
+    [
+      "cumin",
+      3
+    ],
+    [
+      "olive-oil",
+      30
+    ],
+    [
+      "yogurt",
+      100
+    ],
+    [
+      "parsley",
+      8
+    ]
+  ],
+  "steps": [
+    "Rinse {green-lentils} and simmer in water until nearly tender; drain, reserving a little liquid.",
+    "Thinly slice {onion}. Cook slowly in {olive-oil} for 20–25 minutes, stirring often, until deeply golden. Remove half for garnish.",
+    "Add {rice} and {cumin} to the pot with the lentils and enough water to cook the rice. Cover and simmer until tender. Top with onions, {parsley} and {yogurt}."
+  ]
+},
+{
+  "id": "middle-eastern-roasted-cauliflower-tahini",
+  "name": "Roasted cauliflower with tahini chickpeas",
+  "meal": "big",
+  "cuisine": "Middle Eastern",
+  "time": 35,
+  "serves": 2,
+  "ing": [
+    [
+      "cauliflower",
+      400
+    ],
+    [
+      "chickpeas",
+      240
+    ],
+    [
+      "tahini",
+      35
+    ],
+    [
+      "lemon",
+      "1pc"
+    ],
+    [
+      "garlic",
+      "1pc"
+    ],
+    [
+      "cumin",
+      3
+    ],
+    [
+      "olive-oil",
+      20
+    ],
+    [
+      "parsley",
+      8
+    ]
+  ],
+  "steps": [
+    "Heat the oven to 220 °C. Cut {cauliflower} into florets and toss with {olive-oil} and {cumin}. Roast 25 minutes until browned.",
+    "Warm drained {chickpeas} in a pan with a splash of water and a pinch of salt.",
+    "Whisk {tahini}, {lemon} juice, crushed {garlic} and enough water to make a pourable sauce. Serve cauliflower and chickpeas with the sauce and {parsley}."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "world-mujadara-rice-lentils",
+    "name": "Mujadara rice and lentils with onions",
+    "meal": "big",
+    "time": 40,
+    "serves": 4,
+    "ing": [
+      [
+        "brown-lentils",
+        180
+      ],
+      [
+        "rice",
+        180
+      ],
+      [
+        "onion",
+        300
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "olive-oil",
+        30
+      ],
+      [
+        "vegetable-stock",
+        700
+      ],
+      [
+        "yogurt",
+        100
+      ],
+      [
+        "parsley",
+        10
+      ]
+    ],
+    "steps": [
+      "Rinse {brown-lentils} and simmer in water for 15 minutes until partly tender; drain.",
+      "Slice {onion} thinly. Cook slowly in {olive-oil} for 15–20 minutes until deeply golden, reserving some for garnish.",
+      "Add {rice}, {cumin}, lentils and {vegetable-stock}. Cover and simmer gently until rice and lentils are tender, about 20 minutes.",
+      "Rest for 5 minutes, fluff and top with reserved onions and chopped {parsley}. Serve with {yogurt}."
+    ],
+    "cuisine": "Middle Eastern"
+  },
+  {
+    "id": "world-fattoush-chickpea-salad",
+    "name": "Fattoush-inspired chickpea salad",
+    "meal": "bite,big",
+    "time": 18,
+    "serves": 3,
+    "ing": [
+      [
+        "chickpeas",
+        300
+      ],
+      [
+        "cucumber",
+        180
+      ],
+      [
+        "tomato",
+        250
+      ],
+      [
+        "lettuce",
+        120
+      ],
+      [
+        "radish",
+        80
+      ],
+      [
+        "flatbread",
+        1
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "olive-oil",
+        25
+      ],
+      [
+        "sumac",
+        3
+      ],
+      [
+        "mint",
+        8
+      ]
+    ],
+    "steps": [
+      "Tear {flatbread} into pieces and toast until crisp.",
+      "Chop {cucumber}, {tomato}, {lettuce} and {radish}; rinse and drain {chickpeas}.",
+      "Whisk lemon juice from {lemon}, {olive-oil}, {sumac}, salt and pepper.",
+      "Toss vegetables and chickpeas with the dressing, then add toasted flatbread and chopped {mint} just before serving."
+    ],
+    "cuisine": "Middle Eastern"
+  }
+]);

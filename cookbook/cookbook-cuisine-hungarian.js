@@ -329,3 +329,105 @@ KITCHEN.add([
     "Fry in hot {oil} for 2 minutes per side until puffed and golden; drain.",
     "Rub with crushed {garlic}, spread with {sour-cream} and sprinkle with grated {cheddar}."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "hungarian-mushroom-paprikash",
+  "name": "Hungarian mushroom paprikash",
+  "meal": "big",
+  "cuisine": "Hungarian",
+  "time": 30,
+  "serves": 2,
+  "ing": [
+    [
+      "mushrooms",
+      350
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "paprika",
+      8
+    ],
+    [
+      "smoked-paprika",
+      2
+    ],
+    [
+      "sour-cream",
+      120
+    ],
+    [
+      "vegetable-stock",
+      180
+    ],
+    [
+      "flour",
+      8
+    ],
+    [
+      "noodles",
+      160
+    ]
+  ],
+  "steps": [
+    "Cook {noodles} according to the package directions.",
+    "Sauté chopped {onion} and sliced {mushrooms} until softened and browned. Stir in {paprika} and {smoked-paprika} for 30 seconds.",
+    "Sprinkle over {flour}, stir, then gradually add {vegetable-stock}. Simmer 8 minutes; remove from the heat and stir in {sour-cream}. Serve over noodles."
+  ]
+},
+{
+  "id": "hungarian-lentil-stew",
+  "name": "Hungarian-style paprika lentil stew",
+  "meal": "big",
+  "cuisine": "Hungarian",
+  "time": 35,
+  "serves": 3,
+  "ing": [
+    [
+      "green-lentils",
+      200
+    ],
+    [
+      "carrot",
+      150
+    ],
+    [
+      "potatoes",
+      250
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "garlic",
+      "2pc"
+    ],
+    [
+      "smoked-paprika",
+      5
+    ],
+    [
+      "bay-leaf",
+      "1pc"
+    ],
+    [
+      "vegetable-stock",
+      700
+    ],
+    [
+      "vinegar",
+      10
+    ]
+  ],
+  "steps": [
+    "Dice {onion}, {carrot} and {potatoes}. Soften onion in a little oil for 5 minutes.",
+    "Add {garlic}, {smoked-paprika} and {green-lentils}; stir, then pour in {vegetable-stock} and add {bay-leaf}.",
+    "Simmer 25–30 minutes until lentils and vegetables are tender. Finish with {vinegar} and season to taste."
+  ]
+}
+]);

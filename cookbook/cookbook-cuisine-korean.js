@@ -576,3 +576,162 @@ KITCHEN.add([
     "Cover half of each of the {flour-tortillas} with {mozzarella}, kimchi and {spring-onion}; fold.",
     "Brush the pan with {sesame-oil} and cook 2 minutes per side until crisp and gooey."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "korean-kimchi-left-rice-skillet",
+  "name": "Kimchi fried rice with egg",
+  "meal": "big",
+  "cuisine": "Korean",
+  "time": 15,
+  "serves": 2,
+  "ing": [
+    [
+      "left-rice",
+      350
+    ],
+    [
+      "kimchi",
+      120
+    ],
+    [
+      "eggs",
+      "2pc"
+    ],
+    [
+      "spring-onion",
+      35
+    ],
+    [
+      "gochujang",
+      15
+    ],
+    [
+      "soy-sauce",
+      10
+    ],
+    [
+      "sesame-oil",
+      8
+    ],
+    [
+      "sesame-seeds",
+      5
+    ]
+  ],
+  "steps": [
+    "Use cold cooked {left-rice}; break up any clumps. Chop {kimchi} and reserve a little of its juice.",
+    "Stir-fry kimchi in a hot pan for 2 minutes. Add {gochujang}, {soy-sauce} and rice; toss until piping hot and evenly coated.",
+    "Fry {eggs} separately and place on the rice. Finish with {spring-onion}, {sesame-oil} and {sesame-seeds}."
+  ]
+},
+{
+  "id": "korean-bulgogi-mushroom-lettuce-wraps",
+  "name": "Korean-style mushroom lettuce wraps",
+  "meal": "big",
+  "cuisine": "Korean",
+  "time": 20,
+  "serves": 2,
+  "ing": [
+    [
+      "mushrooms",
+      300
+    ],
+    [
+      "soy-sauce",
+      25
+    ],
+    [
+      "apple",
+      "0.5pc"
+    ],
+    [
+      "garlic",
+      "2pc"
+    ],
+    [
+      "ginger",
+      8
+    ],
+    [
+      "sesame-oil",
+      10
+    ],
+    [
+      "lettuce",
+      150
+    ],
+    [
+      "rice",
+      120
+    ],
+    [
+      "sesame-seeds",
+      8
+    ]
+  ],
+  "steps": [
+    "Cook the {rice}. Slice {mushrooms} and grate the {apple}.",
+    "Mix {soy-sauce}, apple, {garlic}, {ginger} and {sesame-oil}. Toss with mushrooms and leave for 5 minutes.",
+    "Stir-fry mushrooms over high heat until browned and the sauce reduces. Serve in {lettuce} leaves with rice and {sesame-seeds}."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "world-korean-gochujang-tofu-bowl",
+    "name": "Gochujang tofu rice bowl",
+    "meal": "big",
+    "time": 25,
+    "serves": 2,
+    "ing": [
+      [
+        "tofu",
+        300
+      ],
+      [
+        "gochujang",
+        20
+      ],
+      [
+        "soy-sauce",
+        15
+      ],
+      [
+        "honey",
+        10
+      ],
+      [
+        "rice",
+        140
+      ],
+      [
+        "cucumber",
+        120
+      ],
+      [
+        "carrot",
+        100
+      ],
+      [
+        "sesame-seeds",
+        8
+      ],
+      [
+        "sesame-oil",
+        8
+      ]
+    ],
+    "steps": [
+      "Cook {rice}. Press {tofu} dry and cut into cubes.",
+      "Mix {gochujang}, {soy-sauce}, {honey}, {sesame-oil} and 1 tablespoon of water.",
+      "Brown tofu in a skillet, pour over the sauce and toss until sticky and heated through.",
+      "Serve over rice with sliced {cucumber}, grated {carrot} and {sesame-seeds}."
+    ],
+    "cuisine": "Korean"
+  }
+]);

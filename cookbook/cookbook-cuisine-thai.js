@@ -827,3 +827,214 @@ KITCHEN.add([
     "Shred {cabbage} and {carrot}.",
     "Warm the {flour-tortillas} and fill with chicken, vegetables and {coriander}; drizzle with the remaining sauce and roll up."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "thai-basil-chicken",
+  "name": "Thai basil chicken with rice",
+  "meal": "big",
+  "cuisine": "Thai",
+  "time": 20,
+  "serves": 2,
+  "ing": [
+    [
+      "beef-mince",
+      300
+    ],
+    [
+      "rice",
+      150
+    ],
+    [
+      "garlic",
+      "3pc"
+    ],
+    [
+      "fresh-chilli",
+      8
+    ],
+    [
+      "soy-sauce",
+      20
+    ],
+    [
+      "fish-sauce",
+      10
+    ],
+    [
+      "honey",
+      8
+    ],
+    [
+      "basil",
+      20
+    ],
+    [
+      "eggs",
+      "2pc"
+    ]
+  ],
+  "steps": [
+    "Cook the {rice}. Mince {garlic} and {fresh-chilli}.",
+    "Stir-fry {beef-mince} over high heat until cooked through. Add garlic and chilli, then stir in {soy-sauce}, {fish-sauce} and {honey}.",
+    "Fold in {basil} until just wilted. Fry {eggs} separately and serve on top of the chicken with rice."
+  ]
+},
+{
+  "id": "thai-peanut-cucumber-noodle-salad",
+  "name": "Thai peanut cucumber noodle salad",
+  "meal": "big",
+  "cuisine": "Thai",
+  "time": 20,
+  "serves": 2,
+  "ing": [
+    [
+      "rice-noodles",
+      180
+    ],
+    [
+      "cucumber",
+      180
+    ],
+    [
+      "carrot",
+      100
+    ],
+    [
+      "peanut-butter",
+      35
+    ],
+    [
+      "lime",
+      "1pc"
+    ],
+    [
+      "soy-sauce",
+      20
+    ],
+    [
+      "honey",
+      10
+    ],
+    [
+      "fresh-chilli",
+      5
+    ],
+    [
+      "mint",
+      8
+    ]
+  ],
+  "steps": [
+    "Cook {rice-noodles} according to the package directions, rinse cool and drain well.",
+    "Whisk {peanut-butter}, {lime} juice, {soy-sauce}, {honey}, {fresh-chilli} and a little warm water into a dressing.",
+    "Toss noodles with ribboned {cucumber}, grated {carrot} and chopped {mint}. Add dressing and mix well."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "world-thai-basil-tofu",
+    "name": "Thai basil tofu stir-fry",
+    "meal": "big",
+    "time": 20,
+    "serves": 2,
+    "ing": [
+      [
+        "tofu",
+        300
+      ],
+      [
+        "basil",
+        20
+      ],
+      [
+        "garlic",
+        10
+      ],
+      [
+        "red-chilli",
+        5
+      ],
+      [
+        "soy-sauce",
+        20
+      ],
+      [
+        "oyster-sauce",
+        15
+      ],
+      [
+        "sugar",
+        5
+      ],
+      [
+        "rice",
+        140
+      ],
+      [
+        "red-pepper",
+        120
+      ]
+    ],
+    "steps": [
+      "Cook {rice}. Pat {tofu} dry and cut into cubes.",
+      "Brown tofu in a hot wok with a little oil. Add minced {garlic}, sliced {red-chilli} and {red-pepper}; stir-fry for 3 minutes.",
+      "Add {soy-sauce}, {oyster-sauce}, {sugar} and 2 tablespoons of water. Toss until the tofu is coated.",
+      "Turn off the heat, fold in {basil} until just wilted and serve with rice."
+    ],
+    "cuisine": "Thai"
+  },
+  {
+    "id": "world-thai-coconut-pumpkin-soup",
+    "name": "Thai-inspired coconut pumpkin soup",
+    "meal": "big",
+    "time": 30,
+    "serves": 3,
+    "ing": [
+      [
+        "pumpkin",
+        500
+      ],
+      [
+        "coconut-milk",
+        400
+      ],
+      [
+        "vegetable-stock",
+        350
+      ],
+      [
+        "red-curry-paste",
+        20
+      ],
+      [
+        "ginger",
+        8
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "oil",
+        10
+      ],
+      [
+        "coriander",
+        10
+      ]
+    ],
+    "steps": [
+      "Cube {pumpkin}. Warm {oil} in a pot and fry {red-curry-paste} and grated {ginger} for 1 minute.",
+      "Add pumpkin, {coconut-milk} and {vegetable-stock}. Simmer 18–20 minutes until pumpkin is soft.",
+      "Blend until smooth, adding water if needed. Reheat gently.",
+      "Season with juice from {lime} and garnish with chopped {coriander}."
+    ],
+    "cuisine": "Thai"
+  }
+]);

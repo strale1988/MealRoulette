@@ -76,3 +76,153 @@ KITCHEN.add([
  ing:[["beef-strips",400],["mushrooms",250],["onion","1pc"],["sour-cream",120],["paprika",5],["mustard",5],["butter",30],["oil",15],["rice",200],["salt",2],["black-pepper",1]],
  steps:["Cook {rice}. Sear {beef-strips} in {oil} over high heat for 2 minutes and set aside.","Fry sliced {onion} and {mushrooms} in {butter} for 8 minutes, then add {paprika} and {mustard}.","Return the beef, stir in {sour-cream}, {salt} and {black-pepper} and warm gently 2 minutes. Serve over the rice."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "main-roasted-cauliflower-cheese",
+  "name": "Roasted cauliflower cheese bake",
+  "meal": "big",
+  "cuisine": "British",
+  "time": 40,
+  "serves": 3,
+  "ing": [
+    [
+      "cauliflower",
+      500
+    ],
+    [
+      "milk",
+      300
+    ],
+    [
+      "butter",
+      25
+    ],
+    [
+      "flour",
+      25
+    ],
+    [
+      "cheddar",
+      120
+    ],
+    [
+      "mustard",
+      8
+    ],
+    [
+      "breadcrumbs",
+      30
+    ]
+  ],
+  "steps": [
+    "Heat the oven to 200 °C. Cut {cauliflower} into florets and parboil for 4 minutes; drain well.",
+    "Melt {butter}, stir in {flour} and cook 1 minute. Gradually whisk in {milk}; simmer until thick, then stir in {mustard} and most of the {cheddar}.",
+    "Put cauliflower in a baking dish, pour over sauce, top with remaining cheddar and {breadcrumbs}. Bake 20–25 minutes until golden."
+  ]
+},
+{
+  "id": "main-sausage-white-bean-cassoulet",
+  "name": "Sausage and white bean casserole",
+  "meal": "big",
+  "cuisine": "French",
+  "time": 45,
+  "serves": 3,
+  "ing": [
+    [
+      "sausage",
+      300
+    ],
+    [
+      "white-beans",
+      480
+    ],
+    [
+      "canned-tomatoes",
+      300
+    ],
+    [
+      "carrot",
+      "1pc"
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "garlic",
+      "3pc"
+    ],
+    [
+      "thyme",
+      2
+    ],
+    [
+      "breadcrumbs",
+      35
+    ]
+  ],
+  "steps": [
+    "Brown sliced {sausage} in a casserole pan and set aside. Cook diced {onion} and {carrot} in the rendered fat until softened.",
+    "Add {garlic}, {thyme}, {canned-tomatoes} and drained {white-beans}. Return sausage and simmer 10 minutes.",
+    "Top with {breadcrumbs} and bake at 200 °C for 20 minutes until bubbling and crisp on top."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "main-turkey-meatballs-tomato",
+    "name": "Turkey meatballs in tomato sauce",
+    "meal": "big",
+    "time": 35,
+    "serves": 4,
+    "ing": [
+      [
+        "turkey-mince",
+        450
+      ],
+      [
+        "breadcrumbs",
+        50
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "garlic",
+        8
+      ],
+      [
+        "parmesan",
+        35
+      ],
+      [
+        "canned-tomatoes",
+        500
+      ],
+      [
+        "onion",
+        100
+      ],
+      [
+        "olive-oil",
+        15
+      ],
+      [
+        "pasta",
+        250
+      ]
+    ],
+    "steps": [
+      "Mix {turkey-mince} with {breadcrumbs}, {eggs}, half the minced {garlic}, grated {parmesan}, salt and pepper. Shape into small meatballs.",
+      "Brown meatballs in {olive-oil} in a wide pan; remove. Cook diced {onion} and remaining garlic until soft.",
+      "Add {canned-tomatoes}, return meatballs and simmer gently for 15–18 minutes until fully cooked.",
+      "Cook {pasta} and serve with the sauce and meatballs."
+    ]
+  }
+]);

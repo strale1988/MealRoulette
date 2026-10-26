@@ -378,3 +378,101 @@ KITCHEN.add(
   }
 ]
 );
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "peruvian-chicken-green-rice",
+  "name": "Peruvian-inspired green herb chicken rice",
+  "meal": "big",
+  "cuisine": "Peruvian",
+  "time": 35,
+  "serves": 3,
+  "ing": [
+    [
+      "chicken-thigh",
+      450
+    ],
+    [
+      "rice",
+      200
+    ],
+    [
+      "spinach",
+      80
+    ],
+    [
+      "coriander",
+      25
+    ],
+    [
+      "peas",
+      100
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "garlic",
+      "2pc"
+    ],
+    [
+      "chicken-stock",
+      400
+    ],
+    [
+      "lime",
+      "1pc"
+    ]
+  ],
+  "steps": [
+    "Blend {spinach}, {coriander} and a splash of water into a green puree.",
+    "Brown {chicken-thigh} in a pot and set aside. Cook diced {onion} until soft, then add {garlic}.",
+    "Stir in {rice}, green puree and {chicken-stock}. Nestle chicken back in, cover and simmer until rice is tender and chicken is cooked through. Fold in {peas} and finish with {lime} juice."
+  ]
+},
+{
+  "id": "peruvian-causa-tuna-potato",
+  "name": "Peruvian-inspired tuna and potato causa",
+  "meal": "big",
+  "cuisine": "Peruvian",
+  "time": 35,
+  "serves": 2,
+  "ing": [
+    [
+      "potatoes",
+      500
+    ],
+    [
+      "tuna",
+      160
+    ],
+    [
+      "mayonnaise",
+      30
+    ],
+    [
+      "lime",
+      "1pc"
+    ],
+    [
+      "avocado",
+      "1pc"
+    ],
+    [
+      "red-onion",
+      "0.5pc"
+    ],
+    [
+      "fresh-chilli",
+      "10"
+    ]
+  ],
+  "steps": [
+    "Boil {potatoes} until tender, drain and mash until smooth. Let cool, then season with {lime} juice, salt and a little oil.",
+    "Mix drained {tuna} with {mayonnaise} and finely diced {red-onion}. Slice {avocado}.",
+    "Layer half the seasoned potato into a small dish, add tuna and avocado, then top with remaining potato. Chill briefly before slicing."
+  ]
+}
+]);

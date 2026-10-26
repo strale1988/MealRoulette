@@ -587,3 +587,214 @@ KITCHEN.add([
     "Roast 20 minutes, add drained {chickpeas} and roast 10 minutes more.",
     "Spoon {yogurt} onto plates, top with the roasted mixture, and finish with chopped {almonds}, {mint} and a squeeze of {lemon}."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "moroccan-chicken-olive-preserved-lemon",
+  "name": "Moroccan chicken with olives and preserved lemon",
+  "meal": "big",
+  "cuisine": "Moroccan",
+  "time": 40,
+  "serves": 3,
+  "ing": [
+    [
+      "chicken-thigh",
+      500
+    ],
+    [
+      "green-olives",
+      80
+    ],
+    [
+      "preserved-lemon",
+      35
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "garlic",
+      "3pc"
+    ],
+    [
+      "ginger",
+      10
+    ],
+    [
+      "ras-el-hanout",
+      6
+    ],
+    [
+      "chicken-stock",
+      300
+    ],
+    [
+      "couscous",
+      180
+    ]
+  ],
+  "steps": [
+    "Season {chicken-thigh} with {ras-el-hanout}. Brown in a pot with a little oil; remove.",
+    "Cook sliced {onion} until soft, then add {garlic} and {ginger}. Return chicken and add {chicken-stock}. Cover and simmer 25 minutes.",
+    "Stir in chopped {preserved-lemon} and {green-olives}; simmer 5 minutes. Prepare {couscous} and serve with the chicken and sauce."
+  ]
+},
+{
+  "id": "moroccan-roasted-carrot-couscous",
+  "name": "Moroccan roasted carrot couscous",
+  "meal": "big",
+  "cuisine": "Moroccan",
+  "time": 30,
+  "serves": 2,
+  "ing": [
+    [
+      "carrot",
+      350
+    ],
+    [
+      "couscous",
+      150
+    ],
+    [
+      "chickpeas",
+      240
+    ],
+    [
+      "ras-el-hanout",
+      4
+    ],
+    [
+      "olive-oil",
+      20
+    ],
+    [
+      "lemon",
+      "1pc"
+    ],
+    [
+      "mint",
+      8
+    ],
+    [
+      "yogurt",
+      80
+    ]
+  ],
+  "steps": [
+    "Heat the oven to 220 °C. Cut {carrot} into batons and toss with {olive-oil} and {ras-el-hanout}. Roast 20 minutes until caramelized.",
+    "Prepare {couscous} according to the package directions and fluff with a fork. Warm drained {chickpeas}.",
+    "Fold carrots and chickpeas through the couscous with {lemon} juice and chopped {mint}. Serve with {yogurt}."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "world-moroccan-carrot-salad",
+    "name": "Moroccan cumin carrot salad",
+    "meal": "bite",
+    "time": 18,
+    "serves": 3,
+    "ing": [
+      [
+        "carrot",
+        350
+      ],
+      [
+        "garlic",
+        5
+      ],
+      [
+        "olive-oil",
+        15
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "paprika",
+        2
+      ],
+      [
+        "parsley",
+        10
+      ],
+      [
+        "coriander",
+        8
+      ]
+    ],
+    "steps": [
+      "Slice {carrot} and steam or boil until just tender; drain well.",
+      "Warm {olive-oil} in a pan and cook minced {garlic}, {cumin} and {paprika} for 30 seconds.",
+      "Toss carrots with the spiced oil and lemon juice from {lemon}.",
+      "Cool to room temperature and finish with chopped {parsley} and {coriander}."
+    ],
+    "cuisine": "Moroccan"
+  },
+  {
+    "id": "world-moroccan-lentil-tomato-stew",
+    "name": "Moroccan lentil and tomato stew",
+    "meal": "big",
+    "time": 35,
+    "serves": 3,
+    "ing": [
+      [
+        "brown-lentils",
+        200
+      ],
+      [
+        "canned-tomatoes",
+        350
+      ],
+      [
+        "onion",
+        100
+      ],
+      [
+        "carrot",
+        120
+      ],
+      [
+        "celery",
+        80
+      ],
+      [
+        "garlic",
+        8
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "coriander-ground",
+        3
+      ],
+      [
+        "paprika",
+        2
+      ],
+      [
+        "vegetable-stock",
+        650
+      ]
+    ],
+    "steps": [
+      "Dice {onion}, {carrot} and {celery}; mince {garlic}.",
+      "Cook vegetables in a little olive oil for 6 minutes. Add {cumin}, {coriander-ground}, {paprika} and garlic.",
+      "Stir in rinsed {brown-lentils}, {canned-tomatoes} and {vegetable-stock}. Bring to a boil, then simmer 25 minutes until lentils are tender.",
+      "Season and add water if you prefer a thinner stew."
+    ],
+    "cuisine": "Moroccan"
+  }
+]);

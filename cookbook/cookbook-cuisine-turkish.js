@@ -586,3 +586,113 @@ KITCHEN.add([
     "Bake 8 minutes until the edges are crisp and the lamb is cooked.",
     "Top with chopped {parsley} and squeeze over {lemon}."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "turkish-lahmacun-style-flatbread",
+  "name": "Turkish-inspired spiced beef flatbreads",
+  "meal": "big",
+  "cuisine": "Turkish",
+  "time": 25,
+  "serves": 2,
+  "ing": [
+    [
+      "pita-bread",
+      "4pc"
+    ],
+    [
+      "beef-mince",
+      250
+    ],
+    [
+      "tomato",
+      180
+    ],
+    [
+      "red-pepper",
+      100
+    ],
+    [
+      "onion",
+      "0.5pc"
+    ],
+    [
+      "garlic",
+      "2pc"
+    ],
+    [
+      "cumin",
+      3
+    ],
+    [
+      "paprika",
+      3
+    ],
+    [
+      "parsley",
+      10
+    ],
+    [
+      "lemon",
+      "0.5pc"
+    ]
+  ],
+  "steps": [
+    "Finely chop {tomato}, {red-pepper}, {onion} and {garlic}; mix with {beef-mince}, {cumin} and {paprika}.",
+    "Spread a thin layer of the mixture over {pita-bread}. Bake at 220 °C for 10–12 minutes until the beef is cooked through and the edges crisp.",
+    "Top with chopped {parsley} and a squeeze of {lemon} juice. Serve folded or rolled."
+  ]
+},
+{
+  "id": "turkish-white-bean-tomato-stew",
+  "name": "Turkish-style white bean tomato stew",
+  "meal": "big",
+  "cuisine": "Turkish",
+  "time": 30,
+  "serves": 3,
+  "ing": [
+    [
+      "white-beans",
+      480
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "garlic",
+      "2pc"
+    ],
+    [
+      "canned-tomatoes",
+      300
+    ],
+    [
+      "tomato-paste",
+      20
+    ],
+    [
+      "paprika",
+      3
+    ],
+    [
+      "olive-oil",
+      20
+    ],
+    [
+      "parsley",
+      8
+    ],
+    [
+      "rice",
+      150
+    ]
+  ],
+  "steps": [
+    "Cook the {rice}. Dice {onion} and mince {garlic}.",
+    "Soften onion in {olive-oil}; add garlic, {tomato-paste} and {paprika}. Stir for 1 minute.",
+    "Add {canned-tomatoes}, drained {white-beans} and 150 ml water. Simmer 15–20 minutes until thick. Finish with {parsley} and serve with rice."
+  ]
+}
+]);

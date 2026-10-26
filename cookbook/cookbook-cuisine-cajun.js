@@ -536,3 +536,144 @@ KITCHEN.add([
     "Heat the oven to 220 °C. Cut {potatoes}, {red-pepper} and {onion} into chunks and toss with {oil} and {cajun-seasoning} on a tray.",
     "Roast 20 minutes, add the {sausage} and roast 25 minutes more, turning once, until browned and the potatoes are crisp."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "cajun-red-bean-rice-bowl",
+  "name": "Cajun red beans and rice",
+  "meal": "big",
+  "cuisine": "Cajun",
+  "time": 35,
+  "serves": 3,
+  "ing": [
+    [
+      "kidney-beans",
+      480
+    ],
+    [
+      "rice",
+      180
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "celery",
+      100
+    ],
+    [
+      "red-pepper",
+      120
+    ],
+    [
+      "garlic",
+      "3pc"
+    ],
+    [
+      "cajun-seasoning",
+      8
+    ],
+    [
+      "vegetable-stock",
+      350
+    ],
+    [
+      "olive-oil",
+      15
+    ]
+  ],
+  "steps": [
+    "Cook the {rice} according to its package directions.",
+    "Dice {onion}, {celery} and {red-pepper}; cook in {olive-oil} for 7 minutes. Add {garlic} and {cajun-seasoning}.",
+    "Stir in {kidney-beans} and {vegetable-stock}. Simmer 15–18 minutes until creamy, lightly mashing a few beans. Serve over the rice."
+  ]
+},
+{
+  "id": "cajun-salmon-corn-skillet",
+  "name": "Cajun salmon with sweetcorn skillet",
+  "meal": "big",
+  "cuisine": "Cajun",
+  "time": 25,
+  "serves": 2,
+  "ing": [
+    [
+      "salmon",
+      320
+    ],
+    [
+      "sweetcorn",
+      180
+    ],
+    [
+      "red-pepper",
+      150
+    ],
+    [
+      "spring-onion",
+      40
+    ],
+    [
+      "cajun-seasoning",
+      6
+    ],
+    [
+      "olive-oil",
+      15
+    ],
+    [
+      "lime",
+      "1pc"
+    ]
+  ],
+  "steps": [
+    "Pat the {salmon} dry and rub with {cajun-seasoning}.",
+    "Heat {olive-oil} in a skillet and cook the salmon 3–5 minutes per side, depending on thickness, until just cooked through. Set aside.",
+    "Cook diced {red-pepper} and {sweetcorn} in the same pan for 5 minutes. Add sliced {spring-onion}; return the salmon and finish with {lime} juice."
+  ]
+},
+{
+  "id": "cajun-sweet-potato-chickpea-bowl",
+  "name": "Cajun sweet potato and chickpea bowl",
+  "meal": "big",
+  "cuisine": "Cajun",
+  "time": 35,
+  "serves": 2,
+  "ing": [
+    [
+      "sweet-potato",
+      400
+    ],
+    [
+      "chickpeas",
+      240
+    ],
+    [
+      "kale",
+      100
+    ],
+    [
+      "olive-oil",
+      20
+    ],
+    [
+      "cajun-seasoning",
+      6
+    ],
+    [
+      "yogurt",
+      100
+    ],
+    [
+      "lime",
+      "1pc"
+    ]
+  ],
+  "steps": [
+    "Heat the oven to 220 °C. Cube {sweet-potato}; toss with {chickpeas}, {olive-oil} and {cajun-seasoning}.",
+    "Roast 25 minutes, turning once. Add {kale} for the final 5 minutes until softened.",
+    "Mix {yogurt} with a squeeze of {lime}. Serve the roasted vegetables with the lime yogurt."
+  ]
+}
+]);

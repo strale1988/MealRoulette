@@ -361,6 +361,13 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
 
 /* cooking log, shortcuts, print */
 .ck-done .ck-meta{font-size:15px;font-weight:700;color:var(--acc2);animation:ckup .5s .65s ease-out both;margin-top:-6px}
+
+/* cook mode: screen-lock indicator, notes */
+.ck-wl{display:inline-flex;align-items:center;gap:6px;margin-left:auto;margin-right:4px;font:700 12px "DM Sans",sans-serif;color:var(--mute);white-space:nowrap}.ck-wl i{width:8px;height:8px;border-radius:50%;background:var(--mute)}.ck-wl[data-on="1"] i{background:var(--acc2)}.ck-wl em{font-style:normal}
+.ck-last{border:var(--bw) dashed var(--ink);border-radius:16px;padding:12px 14px;background:var(--card);font:600 16px/1.35 "DM Sans",sans-serif;white-space:pre-wrap}.ck-last b{display:block;margin-bottom:4px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.ck-nl{display:block;font:800 14px "DM Sans",sans-serif;color:var(--mute);letter-spacing:.04em;text-transform:uppercase}
+.ck-ta{display:block;width:min(100%,520px);box-sizing:border-box;min-height:84px;padding:12px 14px;border:var(--bw) solid var(--ink);border-radius:16px;background:var(--card);color:var(--ink);font:600 17px/1.35 "DM Sans",sans-serif;resize:vertical}
+.cknote{margin:12px 0}.cknote .nt{margin:0 0 6px;color:var(--ink);font-size:14.5px;white-space:pre-wrap}.cknote .nt b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin-bottom:2px}.cknote .cnr{display:flex;gap:16px;margin-top:8px;font-size:14px;font-weight:700}.cknote .ck-ta{width:100%;font-size:16px}
 .cl-stats{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 12px}.cl-stats div{flex:1;min-width:84px;text-align:center;border:var(--bw) solid var(--ink);border-radius:16px;padding:10px 6px;background:var(--soft)}.cl-stats b{display:block;font:800 28px/1 Bricolage,sans-serif}.cl-stats span{font-size:12px;color:var(--mute)}
 .cl-days{display:flex;gap:6px;margin:0 0 12px}.cl-days i{flex:1;height:26px;border-radius:8px;border:2px solid var(--ink);background:var(--card);display:flex;align-items:center;justify-content:center;font:700 11px "DM Sans",sans-serif;font-style:normal;color:var(--mute)}.cl-days i.on{background:var(--acc2);color:#fff}
 .cl-list{list-style:none;margin:0;padding:0;display:grid;gap:6px}.cl-list li{display:flex;justify-content:space-between;gap:10px;font-size:14px}.cl-list li span{color:var(--mute);white-space:nowrap}
@@ -608,6 +615,88 @@ ol li:before{display:flex;align-items:center;justify-content:center;padding:0;li
 .meta .pchip:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
 /* ---- v76: empty-state boxes have no icon ---- */
 .ph .i{display:none!important}
+
+/* ---- spinners fill the screen, centred, above the header and menu bar ---- */
+body .reel.on,body .fmreel{position:fixed;inset:0;z-index:90;margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;box-sizing:border-box;background:var(--bg);padding:max(16px,env(safe-area-inset-top)) 16px max(16px,env(safe-area-inset-bottom))}
+/* ---- phones/tablets: while a recipe, pizza, plan or ferment is open, header and menu bar are hidden (the X on the green bar and the browser Back button return) ---- */
+@media (max-width:959px){
+ body:has(.tab.resmode:not([hidden]) .heroback) .bar{display:none}
+ body:has(.tab.resmode:not([hidden]) .heroback) main{padding-bottom:max(24px,env(safe-area-inset-bottom))!important}
+}
+
+/* ---- Spin again: its own (yellow) look, compact, right next to Start cooking ---- */
+.row button.spinagain{flex:0 0 auto;margin:0 0 0 auto;order:99;min-width:0;gap:7px;padding:0 16px;background:var(--sun,#ffc63d);color:#2a1a13;font:800 15px Bricolage,"DM Sans",sans-serif;letter-spacing:-.01em;box-shadow:var(--sh,3px 3px 0 var(--ink))}
+.row button.spinagain:hover{border-color:var(--ink);filter:brightness(1.05)}
+.row button.spinagain .i{width:22px;height:22px;transition:transform .5s cubic-bezier(.3,1.3,.5,1)}
+.row:has(.go) .spinagain{order:-1;margin:0;align-self:stretch}
+.row:has(.go):has(.spinagain) .go{order:-2;flex:1 1 0;min-width:0;white-space:nowrap;font-size:clamp(17px,5.4vw,22px)}
+@media (prefers-reduced-motion:no-preference){.row button.spinagain:hover .i,.row button.spinagain:active .i{transform:rotate(360deg)}}
+/* Start cooking and Spin again: exactly half of the row each */
+.row:has(.go):has(.spinagain) .go,.row:has(.go) .spinagain{flex:0 0 calc(50% - 4px);box-sizing:border-box;min-width:0;white-space:nowrap;padding:0 10px;gap:8px;font-size:clamp(16px,4.6vw,20px);overflow:hidden}
+
+/* ---- My kitchen: the bookshelf ---- */
+.kbar{grid-template-columns:repeat(5,1fr)}
+@media (max-width:899px){.kbar{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.kbar{grid-template-columns:repeat(2,1fr)}.kbar .ktile:last-child{grid-column:1/-1}}
+#kz-shelf{grid-column:1/-1}
+.shelfbox{margin-top:16px}
+.shelf{border:var(--bw) solid var(--ink);border-radius:20px;box-shadow:var(--sh);overflow:hidden;background:repeating-linear-gradient(0deg,var(--sand) 0 22px,color-mix(in srgb,var(--sand) 86%,var(--ink)) 22px 23px)}
+.shrow{display:flex;align-items:flex-end;gap:0;padding:22px 18px 0;min-height:120px}
+.plank{height:16px;border-top:var(--bw) solid var(--ink);border-bottom:var(--bw) solid var(--ink);background:repeating-linear-gradient(90deg,#c98a4b 0 46px,#b87a3d 46px 49px,#c98a4b 49px 92px,#d39a5a 92px 94px)}
+.shrow:last-child .plank{border-bottom:0}
+/* every book has a full outline; its bottom border sits exactly on the plank's top border */
+.bk{--c:#ffc63d;--h:180px;--w:54px;--t:0deg;position:relative;z-index:1;flex:none;width:var(--w);height:var(--h);box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:6px;padding:0 0 8px;margin-bottom:calc(var(--bw)*-1);border:var(--bw) solid var(--ink);border-radius:7px 7px 0 0;background:var(--c);color:#2a1a13;font:inherit;cursor:pointer;transition:transform .14s ease,box-shadow .14s ease}
+.shrow>.bk.up+.bk.up{margin-left:calc(var(--bw)*-1)}
+.bk.lean{transform:rotate(var(--t))}
+.bk.lean.r{transform-origin:100% 100%}.bk.lean.l{transform-origin:0 100%}
+/* hover: like the buttons, the book is pulled slightly out of the shelf; press pushes it back in */
+.bk:hover,.bk:focus-visible{z-index:3;box-shadow:4px 4px 0 var(--ink);transform:translate(-2px,-3px) scale(1.03)}
+.bk.lean:hover,.bk.lean:focus-visible{transform:translate(-2px,-3px) rotate(var(--t)) scale(1.03)}
+.bk.flat:hover,.bk.flat:focus-visible{transform:translateX(var(--o,0px)) translate(-2px,-2px) scale(1.03)}
+.bk:active{z-index:3;box-shadow:1px 1px 0 var(--ink);transform:translate(1px,1px)}
+.bk.lean:active{transform:translate(1px,1px) rotate(var(--t))}
+.bk.flat:active{transform:translateX(var(--o,0px)) translate(1px,1px)}
+.bk .bd{display:block;width:100%;height:14px;flex:none;border-bottom:2px solid var(--ink);background:var(--ink)}
+.bk.p0 .bd{background:repeating-linear-gradient(90deg,var(--ink) 0 3px,transparent 3px 7px)}
+.bk.p1 .bd{background:radial-gradient(circle,var(--ink) 1.6px,transparent 2px) 0 0/8px 8px}
+.bk.p2 .bd{background:var(--ink);height:10px}
+.bk.p3 .bd{background:repeating-linear-gradient(135deg,var(--ink) 0 3px,transparent 3px 8px)}
+.bk b{flex:1;min-height:0;max-height:100%;display:block;writing-mode:vertical-rl;text-align:center;font:800 17px/1.05 Bricolage,"DM Sans",sans-serif;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-top:2px}
+.bk.sm b{font-size:14px}
+.bk .bn{flex:none;display:grid;place-items:center;min-width:26px;height:26px;padding:0 4px;box-sizing:border-box;border:2px solid var(--ink);border-radius:99px;background:var(--card);color:var(--ink);font:800 12px/1 "DM Sans",sans-serif}
+/* books lying flat, piled on top of each other */
+.stack{display:flex;flex-direction:column-reverse;align-items:center;flex:none;padding:0 12px}
+.bk.flat{width:var(--L);height:var(--T);flex-direction:row;gap:6px;padding:0 6px 0 0;border-radius:7px;transform:translateX(var(--o,0px))}
+.bk.flat .bd{width:14px;height:100%;border-bottom:0;border-right:2px solid var(--ink)}
+.bk.flat.p0 .bd{background:repeating-linear-gradient(0deg,var(--ink) 0 3px,transparent 3px 7px)}
+.bk.flat.p1 .bd{background:radial-gradient(circle,var(--ink) 1.6px,transparent 2px) 0 0/8px 8px}
+.bk.flat.p2 .bd{width:10px;background:var(--ink)}
+.bk.flat.p3 .bd{background:repeating-linear-gradient(45deg,var(--ink) 0 3px,transparent 3px 8px)}
+.bk.flat b{writing-mode:horizontal-tb;padding:0;font-size:14px;text-align:center}
+.bk.flat .bn{min-width:20px;height:20px;font-size:11px;padding:0 3px}
+.shelfhint{margin:10px 2px 0;font-size:13px;color:var(--mute)}
+.bkhead{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-bottom:12px}
+.bkback{display:inline-flex;align-items:center;gap:4px;border:var(--bw) solid var(--ink);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 14px 6px 8px;font:800 14px "DM Sans",sans-serif;cursor:pointer;box-shadow:2px 2px 0 var(--ink)}
+.bkback .i{stroke-width:3}
+.bkback:hover{background:var(--soft)}.bkback:active{transform:translate(2px,2px);box-shadow:none}
+.bkt{display:flex;align-items:center;gap:12px;min-width:0}
+.bkmini{flex:none;width:30px;height:46px;border:var(--bw) solid var(--ink);border-radius:5px 5px 0 0;background:var(--c,#ffc63d);box-shadow:var(--sh)}
+.bkt h3{margin:0;font:800 clamp(22px,4vw,30px)/1.05 Bricolage,"DM Sans",sans-serif;letter-spacing:-.03em;text-transform:none;color:var(--ink)}
+.bkt p{margin:2px 0 0;font-size:13px;color:var(--mute)}
+.bksearch{display:block;width:100%;max-width:460px;height:44px;box-sizing:border-box;padding:0 18px;border:var(--bw) solid var(--ink);border-radius:999px;background:var(--card);color:var(--ink);font:inherit}
+.bksearch:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+#bkmeals{margin:10px 0 12px}
+#bkmeals button small{opacity:.7;font-weight:700;margin-left:2px}
+.bklist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:8px}
+.bkrec{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;text-align:left;border:var(--bw) solid var(--ink);background:var(--card);color:var(--ink);border-radius:16px;padding:9px 14px;font:inherit;cursor:pointer;transition:transform .14s ease,box-shadow .14s ease,background-color .14s ease}
+.bkrec span{min-width:0}.bkrec b{display:block;font-size:15px;line-height:1.25}.bkrec small{display:block;margin-top:1px;font-size:12.5px;color:var(--mute)}
+.bkrec .i{flex:none;color:var(--acc);fill:var(--acc)}
+@media (hover:hover){.bkrec:hover{transform:translate(-1px,-1px);box-shadow:3px 3px 0 var(--ink);background:var(--soft)}}
+.bkrec:active{transform:translate(2px,2px);box-shadow:none}
+.bkrec:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.bkv{animation:pop .3s ease-out}
+@media (max-width:420px){.shrow{padding:20px 12px 0}}
+@media print{#kz-shelf{display:none!important}}
 </style>
 </head>
 <body>
@@ -643,6 +732,7 @@ ol li:before{display:flex;align-items:center;justify-content:center;padding:0;li
 <symbol id="i-wand" viewBox="0 0 24 24"><g transform="rotate(45 12 12)"><path d="M12 15C6.5 13 6.5 5.5 12 2.5C17.5 5.5 17.5 13 12 15Z"/><path d="M12 15C9.6 11.5 9.6 6.5 12 2.5M12 15C14.4 11.5 14.4 6.5 12 2.5"/><path d="M9.6 15.2h4.8M12 15.2V22"/></g></symbol>
 <symbol id="i-pizza" viewBox="0 0 24 24"><path d="M12 22 3.5 6.2A18 18 0 0 1 20.5 6.2zM5.8 10.4A13 13 0 0 1 18.2 10.4"/><path d="M10 10.5h.01M14 11.5h.01M12 15.5h.01"/></symbol>
 <symbol id="i-ferm" viewBox="0 0 24 24"><path d="M8 3h8M7.5 6h9A1.5 1.5 0 0 1 18 7.5V19a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V7.5A1.5 1.5 0 0 1 7.5 6z"/><circle cx="10" cy="15" r="1.2"/><circle cx="14" cy="12.5" r="1"/><circle cx="14.5" cy="17" r="1.3"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v15H6.5A2.5 2.5 0 0 0 4 19.5zM4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5M9 7h6"/></symbol>
 <symbol id="i-thumbup" viewBox="0 0 24 24"><path d="M7 10v12M15 5.9 14 10h5.8a2 2 0 0 1 1.9 2.6l-2.3 8a2 2 0 0 1-1.9 1.4H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.8a2 2 0 0 0 1.8-1.1L12 2a3.1 3.1 0 0 1 3 3.9z"/></symbol>
 <symbol id="i-thumbdown" viewBox="0 0 24 24"><path d="M17 14V2M9 18.1 10 14H4.2a2 2 0 0 1-1.9-2.6l2.3-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.8a2 2 0 0 0-1.8 1.1L12 22a3.1 3.1 0 0 1-3-3.9z"/></symbol>
 </defs></svg>
@@ -786,6 +876,7 @@ ol li:before{display:flex;align-items:center;justify-content:center;padding:0;li
   <button type="button" class="ktile" data-z="kz-pantry" data-c="0"><span class="kti"><svg class="i"><use href="#i-jar"/></svg></span><b id="kt-pantry">0</b><span id="kl-pantry">staples at home</span></button>
   <button type="button" class="ktile" data-z="kz-diet" data-c="1"><span class="kti"><svg class="i"><use href="#i-leaf"/></svg></span><b id="kt-diet">0</b><span id="kl-diet">diet filters</span></button>
   <button type="button" class="ktile" data-z="kz-saved" data-c="2"><span class="kti"><svg class="i"><use href="#i-heart"/></svg></span><b id="kt-saved">0</b><span id="kl-saved">saved</span></button>
+  <button type="button" class="ktile" data-z="kz-shelf" data-c="0"><span class="kti"><svg class="i"><use href="#i-book"/></svg></span><b id="kt-shelf">0</b><span id="kl-shelf">cookbooks on the shelf</span></button>
  </nav>
  <div class="kzones">
   <section class="kzone" id="kz-table" data-c="1"><header class="kzh"><span class="kzb"><svg class="i"><use href="#i-users"/></svg></span><div><h2>Around the table</h2><p>Who is eating, and what they can't or won't eat.</p></div></header>
@@ -826,6 +917,9 @@ ol li:before{display:flex;align-items:center;justify-content:center;padding:0;li
    <div class="lab">Oven and meat temperature</div><div class="tg" id="u2"></div>
   </section>
    </div>
+  </section>
+  <section class="kzone" id="kz-shelf" data-c="0"><header class="kzh"><span class="kzb"><svg class="i"><use href="#i-book"/></svg></span><div><h2>On the shelf</h2><p>One cookbook per cuisine. Pull one out and flip through its recipes.</p></div></header>
+   <div id="shelfbox" class="shelfbox" aria-live="polite"></div>
   </section>
  </div>
 </div>
@@ -1262,7 +1356,7 @@ function renderPlan(days,list,meta,saved,open){
   const can=days.every(x=>x.g.ing.every(i=>typeof i.a==="number")),st=i=>i.st||"buy",buy=list.filter(i=>st(i)==="buy"&&!isLeftIng(i)),rest=list.filter(i=>st(i)!=="buy"&&!isLeftIng(i)),
     groups=CORD.map(c=>[c,buy.filter(i=>catOf(i.name)===c)]).filter(g=>g[1].length),li=i=>`<li><span>${esc(i.name)}</span><span class="q">${esc(Q(i))}</span></li>`;
   $("note").textContent=saved?"":(meta.mode==="remix"?"Available leftovers are used in dedicated cookbook recipes first; other meals are remixes. ":"")+"Priority (clock) items go first, selected leftovers are used in recipes written for cooked food, fridge items are used up day by day, and proteins rotate.";
-  $("out").innerHTML=`<article class="card plan"><div class="hero"><div class="ic">${I("cal")}</div><h2>${esc(meta.title)} for ${meta.n} ${meta.n>1?"people":"person"}</h2></div><div class="body">`+days.map((x,i)=>`<details class="day"${i===open?" open":""}><summary>Day ${x.d} · ${ML(x.m)}: ${esc(x.g.title)}</summary>${x.g.note?`<p class="hint">${esc(cv(x.g.note))}</p>`:""}<h3>${I("list")}Ingredients</h3><ul class="ing">${x.g.ing.map(i=>`<li><span>${esc(i.name)}</span><span class="q">${esc(Q(i))}</span></li>`).join("")}</ul><h3>${I("chef")}Method</h3><ol>${x.g.steps.map(s=>`<li><span>${esc(cv(s))}</span></li>`).join("")}</ol>${can?`<div class="row"><button data-sw="${i}">${I("dice")}Try another ${ML(x.m).toLowerCase()}</button></div>`:""}</details>`).join("")+
+  $("out").innerHTML=`<article class="card plan"><div class="hero"><div class="ic">${I("cal")}</div><h2>${esc(meta.title)} for ${meta.n} ${meta.n>1?"people":"person"}</h2></div><div class="body">`+days.map((x,i)=>`<details class="day"${i===open?" open":""}><summary>Day ${x.d} · ${ML(x.m)}: ${esc(x.g.title)}</summary>${x.g.note?`<p class="hint">${esc(cv(x.g.note))}</p>`:""}<h3>${I("list")}Ingredients</h3><ul class="ing">${x.g.ing.map(i=>`<li><span>${esc(i.name)}</span><span class="q">${esc(Q(i))}</span></li>`).join("")}</ul><h3>${I("chef")}Method</h3><ol>${x.g.steps.map(s=>`<li><span>${esc(cv(s))}</span></li>`).join("")}</ol>${can?`<div class="row"><button data-sw="${i}">${I(meta.mode==="remix"?"wand":"dice")}${meta.mode==="remix"?"Whisk another":"Try another"} ${ML(x.m).toLowerCase()}</button></div>`:""}</details>`).join("")+
    `<h3>${I("cart")}Shopping list <small style="text-transform:none;letter-spacing:0;color:var(--mute)">(${buy.length} to buy, tap to tick off)</small></h3>`+
    (groups.length?`<div class="shopg">`+groups.map(g=>`<div class="sg"><h4 class="cat">${g[0]}</h4><ul class="ing tick">${g[1].map(li).join("")}</ul></div>`).join("")+`</div>`:"<p class=\"hint\">Nothing to buy.</p>")+
    (rest.length?`<details><summary>Already have or assumed at home (${rest.length})</summary><ul class="ing">${rest.map(li).join("")}</ul></details>`:"")+
@@ -1438,7 +1532,7 @@ function enhance(r){
   const tot=r.ing.length,have=r.ing.filter(i=>!missing(i)).length,pct=tot?Math.round(have/tot*100):0;
   const pg=document.createElement("div");pg.className="pantry";pg.hidden=!items().length;
   pg.innerHTML=`<div><b>You already have ${have} of ${tot}</b><span class="${have===tot?"all":""}">${have===tot?"Nothing to buy":tot-have+" to buy"}</span></div><i role="progressbar" aria-valuemin="0" aria-valuemax="${tot}" aria-valuenow="${have}"><u style="width:${pct}%"></u></i>`;
-  const body=card.querySelector(".body"),meta=body.querySelector(".meta");meta.after(pg);
+  const body=card.querySelector(".body"),meta=body.querySelector(".meta");meta.after(pg);pg.after(noteBlock(r.title));
   card.querySelectorAll("ol li").forEach(li=>{li.tabIndex=0;li.onclick=()=>li.classList.toggle("done");li.onkeydown=e=>{if(e.key===" "||e.key==="Enter"){e.preventDefault();li.click()}}});
   card.querySelectorAll("ul.ing li").forEach(li=>{li.tabIndex=0;li.onkeydown=e=>{if(e.key===" "||e.key==="Enter"){e.preventDefault();li.click()}}});
   const b=document.createElement("button");b.id="cookgo";b.className="go";b.innerHTML=I("flame")+"Start cooking";
@@ -1446,25 +1540,59 @@ function enhance(r){
   const sv=$("save");if(sv){const o=sv.onclick;sv.onclick=()=>{o();navigator.vibrate&&navigator.vibrate(15)}}
 }
 let wl=null;window.__cook=(r)=>cookMode(r);
+/* notes per recipe title, kept on this device */
+const NK="cooknotes",notesAll=()=>store(NK)||{},getNote=t=>notesAll()[t]||null;
+const putNote=(t,v)=>{const n=notesAll();v=String(v||"").trim().slice(0,600);if(v)n[t]={t:v,d:Date.now()};else delete n[t];store(NK,n);window.dispatchEvent(new Event("mr-notes"))};
+const PH="e.g. used bulgur instead of rice, 5 min less in the oven";
+function noteBlock(title){
+  const d=document.createElement("div");d.className="cknote";let edit=false;
+  const draw=()=>{
+    if(d.dataset.ready&&!d.isConnected){window.removeEventListener("mr-notes",draw);return}d.dataset.ready=1;
+    const x=getNote(title);
+    if(edit){
+      d.innerHTML=`<label class="ck-nl">Your note<textarea class="ck-ta" rows="3" maxlength="600" placeholder="${PH}"></textarea></label><div class="cnr"><button type="button" class="lnk" data-a="save">Save</button><button type="button" class="lnk" data-a="cancel">Cancel</button></div>`;
+      const ta=d.querySelector("textarea");ta.value=x?x.t:"";ta.focus();
+    }else d.innerHTML=x?`<p class="nt"><b>Your note · ${new Date(x.d).toLocaleDateString()}</b>${esc(x.t)}</p><button type="button" class="lnk" data-a="edit">Edit note</button>`:`<button type="button" class="lnk" data-a="edit">+ Add a note (swaps, tweaks)</button>`;
+  };
+  d.onclick=e=>{const a=e.target.closest("button");if(!a)return;const k=a.dataset.a;
+    if(k==="edit"){edit=true;draw()}
+    else if(k==="cancel"){edit=false;draw()}
+    else if(k==="save"){const v=d.querySelector("textarea").value;edit=false;putNote(title,v)}};
+  window.addEventListener("mr-notes",draw);draw();return d;
+}
+window.__noteBlock=noteBlock;
 const mins=t=>{const m=String(t).match(/(\d+)(?:\s?[–-]\s?(\d+))?\s*(hours?|hrs?|minutes?|mins?|seconds?|secs?)\b/i);if(!m)return 0;const n=+(m[2]||m[1]),u=m[3][0].toLowerCase();return u==="h"?n*3600:u==="s"?n:n*60};
-function beep(){try{const a=new(window.AudioContext||window.webkitAudioContext)(),o=a.createOscillator();o.connect(a.destination);o.frequency.value=880;o.start();setTimeout(()=>{o.stop();a.close()},700)}catch(e){}navigator.vibrate&&navigator.vibrate([300,150,300])}
+function beep(){ // a soft bell arpeggio (C-E-G-C), played twice, instead of one harsh tone
+  try{const A=window.AudioContext||window.webkitAudioContext,a=new A();a.resume&&a.resume();const t0=a.currentTime+.05,out=a.createGain();out.gain.value=.2;out.connect(a.destination);
+    const bell=(f,t)=>{[[1,1],[2,.16],[3,.05]].forEach(([m,v])=>{const o=a.createOscillator(),g=a.createGain();o.type="sine";o.frequency.value=f*m;o.connect(g);g.connect(out);
+      g.gain.setValueAtTime(0,t0+t);g.gain.linearRampToValueAtTime(v,t0+t+.015);g.gain.exponentialRampToValueAtTime(.0008,t0+t+(m===1?1.3:.6));o.start(t0+t);o.stop(t0+t+1.4)})};
+    [0,2.4].forEach(base=>[523.25,659.25,783.99,1046.5].forEach((f,i)=>bell(f,base+i*.2)));
+    setTimeout(()=>{try{a.close()}catch(e){}},5200)}catch(e){}
+  navigator.vibrate&&navigator.vibrate([160,120,160]);
+}
 function cookMode(r){
-  const steps=r.steps.map(s=>cv(s)),ov=document.createElement("div");let i=0,tm=null;
+  const steps=r.steps.map(s=>cv(s)),ov=document.createElement("div");let i=0,tm=null,wlOn=false;const noteLast=n=>{const x=n===0&&getNote(r.title);return x?`<div class="ck-last"><b>Your note from ${new Date(x.d).toLocaleDateString()}</b>${esc(x.t)}</div>`:""};
   ov.className="cookov";ov.setAttribute("role","dialog");ov.setAttribute("aria-modal","true");ov.setAttribute("aria-label","Cooking mode");
   const close=()=>{clearInterval(tm);ov.remove();document.body.style.overflow="";document.removeEventListener("keydown",key);document.removeEventListener("visibilitychange",vis);if(wl){wl.release().catch(()=>{});wl=null}};
-  const key=e=>{if(e.key==="Escape")close();else if(e.key==="ArrowRight")go(1);else if(e.key==="ArrowLeft")go(-1)};
-  const vis=()=>{if(document.visibilityState==="visible"&&navigator.wakeLock&&ov.isConnected)navigator.wakeLock.request("screen").then(x=>wl=x).catch(()=>{})};document.addEventListener("visibilitychange",vis);
-  function finish(){clearInterval(tm);ov.innerHTML=`<div class="ck-done"><svg class="ck-badge" viewBox="0 0 120 120" aria-hidden="true"><circle class="bg" cx="60" cy="60" r="52"/><path class="tick" d="M36 62l16 16 32-36"/></svg><h2>Enjoy your meal</h2><p>${esc(r.title)}</p>${(function(){try{return window.__logCooked?`<p class="ck-meta">${window.__logCooked(r.title)}</p>`:""}catch(e){return ""}})()}<button class="ck-n">Done</button></div>`;ov.querySelector(".ck-n").onclick=close;ov.querySelector(".ck-n").focus();navigator.vibrate&&navigator.vibrate([80,60,80,60,200])}
+  const key=e=>{if(e.target&&e.target.closest&&e.target.closest("textarea")&&e.key!=="Escape")return;if(e.key==="Escape")close();else if(e.key==="ArrowRight")go(1);else if(e.key==="ArrowLeft")go(-1)};
+  const vis=()=>{if(document.visibilityState==="visible"&&ov.isConnected)lock()};
+  function wlPaint(){const e=ov.querySelector(".ck-wl");if(!e)return;e.dataset.on=wlOn?"1":"0";e.lastChild.textContent=wlOn?"Screen on":"Screen may sleep";e.title=wlOn?"The screen stays awake while you cook":navigator.wakeLock?"The browser refused to keep the screen awake (battery saver?)":"This browser can't keep the screen awake"}
+  function lock(){ // keeps the screen awake; re-asks after the tab comes back or the system drops the lock
+    if(!navigator.wakeLock){wlOn=false;wlPaint();return}
+    if(wl&&!wl.released){wlOn=true;wlPaint();return}
+    navigator.wakeLock.request("screen").then(x=>{wl=x;wlOn=true;wlPaint();x.addEventListener("release",()=>{if(wl===x)wl=null;wlOn=false;wlPaint()})}).catch(()=>{wlOn=false;wlPaint()});
+  }document.addEventListener("visibilitychange",vis);
+  function finish(){clearInterval(tm);ov.innerHTML=`<div class="ck-done"><svg class="ck-badge" viewBox="0 0 120 120" aria-hidden="true"><circle class="bg" cx="60" cy="60" r="52"/><path class="tick" d="M36 62l16 16 32-36"/></svg><h2>Enjoy your meal</h2><p>${esc(r.title)}</p>${(function(){try{return window.__logCooked?`<p class="ck-meta">${window.__logCooked(r.title)}</p>`:""}catch(e){return ""}})()}<label class="ck-nl" for="cknote">Tweaks for next time</label><textarea id="cknote" class="ck-ta" rows="3" maxlength="600" placeholder="${PH}"></textarea><button class="ck-n">Done</button></div>`;const ta=ov.querySelector("#cknote");ta.value=(getNote(r.title)||{}).t||"";ta.oninput=()=>putNote(r.title,ta.value);ov.querySelector(".ck-n").onclick=close;ov.querySelector(".ck-n").focus();navigator.vibrate&&navigator.vibrate([80,60,80,60,200])}
   function go(d){i=Math.max(0,Math.min(steps.length-1,i+d));paint()}
   function paint(){
     clearInterval(tm);const s=steps[i],sec=mins(s),last=i===steps.length-1;
-    ov.innerHTML=`<div class="ck-top"><b>${esc(r.title)}</b><button class="ck-x" aria-label="Close cooking mode">${I("x")}</button></div><i class="ck-bar"><u style="width:${(i+1)/steps.length*100}%"></u></i><div class="ck-step"><small>Step ${i+1} of ${steps.length}</small><p>${esc(s)}</p>${sec?`<button class="ck-t" data-s="${sec}">${I("clock")}<span>Start ${Math.round(sec/60*10)/10>=1?Math.round(sec/60)+" min":sec+" s"} timer</span></button>`:""}</div><div class="ck-nav"><button class="ck-p" ${i?"":"disabled"}>Back</button><button class="ck-n">${last?"Done!":"Next"}</button></div>`;
+    ov.innerHTML=`<div class="ck-top"><b>${esc(r.title)}</b><span class="ck-wl" aria-live="polite"><i></i><em></em></span><button class="ck-x" aria-label="Close cooking mode">${I("x")}</button></div><i class="ck-bar"><u style="width:${(i+1)/steps.length*100}%"></u></i><div class="ck-step"><small>Step ${i+1} of ${steps.length}</small><p>${esc(s)}</p>${noteLast(i)}${sec?`<button class="ck-t" data-s="${sec}">${I("clock")}<span>Start ${Math.round(sec/60*10)/10>=1?Math.round(sec/60)+" min":sec+" s"} timer</span></button>`:""}</div><div class="ck-nav"><button class="ck-p" ${i?"":"disabled"}>Back</button><button class="ck-n">${last?"Done!":"Next"}</button></div>`;
     ov.querySelector(".ck-x").onclick=close;ov.querySelector(".ck-p").onclick=()=>go(-1);ov.querySelector(".ck-n").onclick=()=>last?finish():go(1);
-    const t=ov.querySelector(".ck-t");if(t)t.onclick=()=>{let left=+t.dataset.s;const lab=t.querySelector("span"),show=()=>lab.textContent=Math.floor(left/60)+":"+String(left%60).padStart(2,"0")+" left";show();t.onclick=null;tm=setInterval(()=>{left--;if(left<=0){clearInterval(tm);lab.textContent="Time's up!";t.classList.add("ring");beep()}else show()},1000)};
-    ov.querySelector(".ck-n").focus();
+    const t=ov.querySelector(".ck-t");if(t)t.onclick=()=>{let left=+t.dataset.s;const end=Date.now()+left*1000,lab=t.querySelector("span"),show=()=>lab.textContent=Math.floor(left/60)+":"+String(left%60).padStart(2,"0")+" left";show();t.onclick=null;tm=setInterval(()=>{left=Math.ceil((end-Date.now())/1000);if(left<=0){clearInterval(tm);lab.textContent="Time's up!";t.classList.add("ring");beep()}else show()},1000)};
+    ov.querySelector(".ck-n").focus();wlPaint();
   }
   document.body.appendChild(ov);document.body.style.overflow="hidden";document.addEventListener("keydown",key);paint();
-  if(navigator.wakeLock)navigator.wakeLock.request("screen").then(x=>wl=x).catch(()=>{});
+  lock();
 }
 })();
 /* ---- pizza spinner, start-cooking for pizza, dynamic spin label ---- */
@@ -1483,7 +1611,7 @@ pzRun=function(what){
 const _ps=pzShow;
 pzShow=function(r,m){_ps(r,m);try{const sv=o.querySelector(".pzsave");if(!r||!sv||o.querySelector("#pzcook"))return;
   const steps=[...o.querySelectorAll("ol li")].map(l=>l.textContent.trim()).filter(Boolean);if(!steps.length)return;
-  const b=document.createElement("button");b.id="pzcook";b.className="go";b.innerHTML=I("flame")+"Start cooking";sv.parentNode.prepend(b);
+  const b=document.createElement("button");b.id="pzcook";b.className="go";b.innerHTML=I("flame")+"Start cooking";sv.parentNode.prepend(b);try{sv.parentNode.before(window.__noteBlock(r.title||"Pizza"))}catch(_){}
   b.onclick=()=>window.__cook({title:r.title||"Pizza",steps})}catch(e){console.error(e)}};
 const _d=draw;
 draw=function(){_d();const b=$("spin");if(b&&!b.disabled){b.textContent="Spin"}};
@@ -1868,6 +1996,116 @@ if(kx){const row=document.createElement("div");row.className="xtra-row";row.inne
   document.addEventListener("click",e=>{if(e.target.closest&&e.target.closest(".thumb"))setTimeout(pr,0)});
   $("appsh").onclick=()=>window.__shareOut("app",null,"Meal Roulette","Meal Roulette: spin for a recipe, plan your week and build a shopping list.",$("appsh"))}
 })();
+
+/* ---- My kitchen: the cookbook shelf. One book per cuisine (recipes without one share "Everyday"); diet filters hide recipes ---- */
+(function(){
+const box=$("shelfbox");if(!box)return;
+const PAL=["#ffc63d","#ff9b82","#7fd1a6","#b9a2f0","#8ecae6","#f4a261","#f6e27a","#e86a5a"];
+const hash=t=>{let h=5381;for(const c of String(t))h=((h<<5)+h+c.charCodeAt(0))>>>0;return h};
+const MEALK=["Breakfast","Snack","Main","Dessert"];
+let cur=null,q="",mf="",sig="",lastW=0,back=0;
+const bookName=c=>c||"Everyday";
+function books(){
+  const m={};let hidden=0;
+  K.recipes.forEach(r=>{if(!K.allowed(r,S.diet)){hidden++;return}(m[bookName(r.cuisine)]=m[bookName(r.cuisine)]||[]).push(r)});
+  const list=Object.keys(m).sort((a,b)=>a.localeCompare(b,"en",{sensitivity:"base"})).map(n=>({name:n,recs:m[n].sort((a,b)=>a.title.localeCompare(b.title,"en",{sensitivity:"base"}))}));
+  // look: seeded from the title, so the shelf looks random but is the same every visit
+  let prev=-1;list.forEach(b=>{const h=hash(b.name);let c=h%PAL.length;if(c===prev)c=(c+1)%PAL.length;prev=c;
+    b.c=PAL[c];b.p=(h>>3)%4;b.h=Math.max(150+(h>>5)%62,Math.ceil(90+b.name.length*(b.name.length>11?9.8:11.4)));b.w=Math.round(46+Math.min(b.recs.length,60)/60*20+(h>>9)%7);
+    b.ang=8+(h>>17)%6;b.L=Math.max(116,Math.ceil(76+b.name.length*9.8));b.T=30+(h>>19)%9;b.o=((h>>21)%11)-5});
+  return{list,hidden};
+}
+const kitOpen=()=>!$("tab-kit").hidden;
+// units: standing books, books leaning on a neighbour, and piles of 2-3 books lying flat
+function unitsOf(list){
+  const u=[];
+  for(let i=0;i<list.length;i++){const b=list[i],h=hash(b.name);
+    if((h>>7)%7===0&&i+1<list.length){const g=list.slice(i,i+2+((h>>10)%2));u.push({k:"stack",bs:g,w:Math.max(...g.map(x=>x.L))+24});i+=g.length-1}
+    else if((h>>11)%5===0)u.push({k:"lean",b,ex:Math.ceil(b.h*Math.sin(b.ang*Math.PI/180)),w:b.w});
+    else u.push({k:"up",b,w:b.w});
+  }
+  return u;
+}
+const uw=x=>x.k==="lean"?x.w+x.ex:x.w;
+function rowsOf(list){
+  const W=(box.clientWidth||360)-(matchMedia("(max-width:420px)").matches?24:36),rows=[[]];let used=0;
+  unitsOf(list).forEach(x=>{const w=uw(x);if(used+w>W&&rows[rows.length-1].length){rows.push([]);used=0}rows[rows.length-1].push(x);used+=w});
+  return rows.map(r=>arrange(r,W));
+}
+// a row starts and ends with a standing book; leaning books rest on a standing neighbour, piles sit in between
+function arrange(row,W){
+  // a row needs a standing book at both ends: with fewer than two, stand everything up if it still fits
+  if(row.filter(x=>x.k==="up").length<2&&row.length>1){const all=row.flatMap(x=>x.k==="stack"?x.bs.map(b=>({k:"up",b,w:b.w})):[{k:"up",b:x.b,w:x.w}]);if(all.reduce((t,x)=>t+x.w,0)<=W||!row.some(x=>x.k==="up"))row=all}
+  let ups=row.filter(x=>x.k==="up");
+  if(ups.length<2){row.forEach(x=>{if(x.k==="lean")x.k="up"});ups=row.filter(x=>x.k==="up")}
+  if(ups.length>=2){const f=ups[0],l=ups[ups.length-1];row=[f,...row.filter(x=>x!==f&&x!==l),l]}
+  row.forEach((x,i)=>{if(x.k!=="lean")return;const nx=row[i+1],pv=row[i-1];
+    if(nx&&nx.k==="up")x.dir="r";else if(pv&&pv.k==="up")x.dir="l";else x.k="up"});
+  return row;
+}
+function spine(b,cls,style){
+  const n=b.recs.length;
+  return `<button type="button" class="bk ${cls} p${b.p}${b.name.length>11?" sm":""}" data-b="${esc(b.name)}" style="--c:${b.c};${style}" aria-label="${esc(b.name)} cookbook, ${n} ${n===1?"recipe":"recipes"}"><i class="bd"></i><b>${esc(b.name)}</b><span class="bn">${n}</span></button>`;
+}
+function unitHTML(x){
+  if(x.k==="stack"){const mx=Math.max(...x.bs.map(b=>b.L));return `<div class="stack">${x.bs.map(b=>{const a=(mx-b.L)/2+4,o=Math.max(-a,Math.min(a,b.o));return spine(b,"flat",`--L:${b.L}px;--T:${b.T}px;--o:${o}px`)}).join("")}</div>`}
+  const b=x.b;
+  if(x.k==="lean"){const r=x.dir==="r";return spine(b,"lean "+(r?"r":"l"),`--h:${b.h}px;--w:${b.w}px;--t:${r?b.ang:-b.ang}deg;margin-${r?"right":"left"}:${x.ex}px`)}
+  return spine(b,"up",`--h:${b.h}px;--w:${b.w}px`);
+}
+function fit(){
+  box.querySelectorAll(".bk b").forEach(el=>{
+    if(!el.clientHeight&&!el.clientWidth)return;const flat=el.parentNode.classList.contains("flat"),over=()=>flat?el.scrollWidth>el.clientWidth+1:el.scrollHeight>el.clientHeight+1;
+    let fs=parseFloat(getComputedStyle(el).fontSize);el.style.fontSize="";fs=parseFloat(getComputedStyle(el).fontSize);
+    while(fs>10&&over()){fs-=.5;el.style.fontSize=fs+"px"}});
+}
+function paintShelf(){
+  const{list,hidden}=books();lastW=box.clientWidth;
+  $("kt-shelf").textContent=list.length;$("kl-shelf").textContent=list.length===1?"cookbook on the shelf":"cookbooks on the shelf";
+  if(cur&&!list.some(b=>b.name===cur))cur=null;
+  if(cur)return paintBook(list.find(b=>b.name===cur),hidden);
+  if(!list.length){box.innerHTML='<div class="ph" style="display:block"><b>Your shelf is empty</b>Your diet filters hide every recipe. Loosen them in Around the table.</div>';return}
+  box.innerHTML=`<div class="shelf">${rowsOf(list).map(r=>`<div class="shrow">${r.map(unitHTML).join("")}</div><div class="plank"></div>`).join("")}</div>`
+   +`<p class="shelfhint">Tap a spine to open the book.${hidden?` ${hidden} ${hidden===1?"recipe is":"recipes are"} hidden by your diet filters.`:""}</p>`;
+  fit();
+  box.querySelectorAll(".bk").forEach(b=>b.onclick=()=>{cur=b.dataset.b;q="";mf="";paintShelf();const bt=$("kz-shelf");bt&&bt.scrollIntoView({block:"start",behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"})});
+}
+function paintBook(b,hidden){
+  const cnt=m=>b.recs.filter(r=>r.meals.includes(m)).length;
+  box.innerHTML=`<div class="bkv"><div class="bkhead"><button type="button" class="bkback"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Shelf</button><div class="bkt"><span class="bkmini" style="--c:${b.c}"></span><div><h3>${esc(b.name)} cookbook</h3><p>${b.recs.length} ${b.recs.length===1?"recipe":"recipes"}${hidden?` · ${hidden} hidden by your diet filters`:""}</p></div></div></div>
+  <input class="bksearch" id="bksearch" type="search" placeholder="Search this book…" aria-label="Search this cookbook" autocomplete="off" value="${esc(q)}">
+  <div class="tg" id="bkmeals" role="group" aria-label="Filter by meal"><button type="button" data-m="" aria-pressed="${mf===""}">All <small>${b.recs.length}</small></button>${MEALK.filter(cnt).map(m=>`<button type="button" data-m="${m}" aria-pressed="${mf===m}">${esc(ML(m))} <small>${cnt(m)}</small></button>`).join("")}</div>
+  <ul class="bklist" id="bklist"></ul></div>`;
+  const list=()=>{
+    const fav=new Set((store("favs2")||[]).map(x=>x.title)),t=K.norm(q);
+    const rs=b.recs.filter(r=>(!mf||r.meals.includes(mf))&&(!t||K.norm(r.title).includes(t)));
+    $("bklist").innerHTML=rs.length?rs.map(r=>`<li><button type="button" class="bkrec" data-id="${esc(r.id)}"><span><b>${esc(r.title)}</b><small>${r.min} min · ${esc(ML(r.meals.includes(S.meal)?S.meal:r.meals[0]))}</small></span>${fav.has(r.title)?I("heart"):""}</button></li>`).join(""):'<li class="hint" style="grid-column:1/-1;margin:6px 2px">No recipes match.</li>';
+    $("bklist").querySelectorAll(".bkrec").forEach(x=>x.onclick=()=>openRecipe(x.dataset.id));
+  };
+  list();
+  box.querySelector(".bkback").onclick=()=>{cur=null;q="";mf="";paintShelf();$("kz-shelf").scrollIntoView({block:"start",behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"})};
+  $("bksearch").oninput=e=>{q=e.target.value;list()};
+  $("bkmeals").querySelectorAll("button").forEach(x=>x.onclick=()=>{mf=x.dataset.m;$("bkmeals").querySelectorAll("button").forEach(y=>y.setAttribute("aria-pressed",String(y===x)));list()});
+}
+function openRecipe(id){
+  const r=K.recipes.find(x=>x.id===id);if(!r)return;
+  // same card as a spin: your household size, fridge and leftovers apply
+  S.meal=r.meals.includes(S.meal)?S.meal:r.meals[0];S.pm={[S.meal]:true};save();draw();
+  const F=fridgeIds(),U=new Set([...S.urgent.flatMap(x=>K.match(x)),...[...F].filter(isLeftId)]),x=K.resolve(r,S.n,{fridge:F,basic:S.basic,urgent:U});
+  back=1;
+  show({rid:r.id,title:r.title,min:r.min,n:S.n,steps:x.steps,ing:x.ing,desc:[r.note,x.leftoverNote].filter(Boolean).join(" ")},"");
+  toCard("out");
+}
+const refresh=()=>{const k=JSON.stringify(S.diet||{});if(k===sig&&box.firstChild)return;sig=k;paintShelf()};
+const _dr=draw;draw=function(){_dr.apply(this,arguments);try{refresh()}catch(e){console.error(e)}};
+// the page may be laid out while My kitchen is hidden, so re-chunk the rows once it has a width
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{if(!cur&&kitOpen())fit()});
+try{new ResizeObserver(()=>{if(!cur&&kitOpen()&&Math.abs(box.clientWidth-lastW)>8)paintShelf()}).observe(box)}catch(e){}
+const _stS=setTab;setTab=function(t){const r=_stS.apply(this,arguments);
+  if(t==="kit"){try{if(!cur&&Math.abs(box.clientWidth-lastW)>8)paintShelf();else if(!cur)fit();if(back){back=0;setTimeout(()=>{const z=$("kz-shelf");z&&z.scrollIntoView({block:"start"})},40)}}catch(e){console.error(e)}}
+  return r};
+refresh();
+})();
 if("serviceWorker" in navigator&&location.protocol.startsWith("http")){
   const had=!!navigator.serviceWorker.controller;let reloaded=false;
   navigator.serviceWorker.addEventListener("controllerchange",()=>{if(had&&!reloaded){reloaded=true;location.reload()}}); // a new version took over: load it once
@@ -1888,6 +2126,88 @@ Promise.all(FILES.map(function(f){return load(f)})).then(function(){
   if(!window.KITCHEN||!window.GEN)throw new Error("catalog missing");
   var s=document.createElement("script");s.textContent=document.getElementById("main").textContent;document.body.appendChild(s);
 }).catch(function(e){console.error(e);fail()});
+})();
+
+/* ---- pizzas can come up as a Big plate: now and then a Spin, "Only what I have" spin or planned day returns a pizza classic ---- */
+(function(){
+const FROM={Italian:"Italy"};
+const okHere=()=>typeof PZ!=="undefined"&&PZ.recipes&&!S.quick; // a pizza needs hours of dough, so never in Quick mode
+// strict = "Only what I have": only pizzas where nothing has to be bought
+function cands(strict,m){
+  const rt=ratings(),base={diet:{...S.diet},fridge:fridgeIds(),urgent:new Set(S.urgent.flatMap(x=>K.match(x))),count:Math.max(1,pzCount()),ferm:"quick",basic:S.basic},out=[];
+  [S.pz.fresh,!S.pz.fresh].slice(0,strict?2:1).forEach(fresh=>PZ.recipes.filter(x=>x.cat!=="sweet"&&(!S.cuisine||FROM[S.cuisine]===x.from)).forEach(x=>{
+    const p=PZ.resolve(x,{...base,fresh});if(!p||out.some(y=>y.title===p.title))return;
+    if(strict&&p.ing.some(missing))return;
+    if(recent(p.title)||(rt[p.title]&&rt[p.title].v<0&&Date.now()-rt[p.title].t<28*864e5))return;
+    out.push(p)}));
+  const sc=x=>x.urg*4+x.hit*1.5-x.ing.filter(missing).length*1.2+Math.random()*3+(rt[x.title]&&rt[x.title].v>0?2.5:0);
+  return out.sort((a,b)=>sc(b)-sc(a));
+}
+function asMeal(p){ // one shape for both the Cook card and a planned day
+  const steps=[];p.sections.forEach(sec=>sec.steps.forEach((t,i)=>steps.push((i===0?sec.h.replace(/\s*\(.*$/,"")+": ":"")+t)));
+  const h=(PZ.modes[p.ferm]||{}).h||3,ing=[];
+  p.ing.forEach(i=>{const e=ing.find(x=>x.id===i.id&&x.u===i.u&&typeof i.a==="number");if(e){e.a+=i.a;e.txt=fmt(e.a,e.u||"g")}else ing.push({...i})}); // one line per ingredient
+  const desc=["The dough needs about "+h+" hours before baking; for a longer, tastier rise use Pizza night.",p.desc].filter(Boolean).join(" ");
+  return{title:p.title,min:h*60+30,steps,ing,cuisine:p.from||"Pizza",pizza:true,pk:"",ck:"",desc,note:desc};
+}
+const card=p=>({...asMeal(p),n:S.n});
+// single spin
+const _spin=spin;
+spin=function(){
+  try{if(okHere()&&isMain(S.meal)&&Math.random()<.12){const c=cands(false);if(c.length){markGen(c[0].title);return show(card(c[0]),"")}}}catch(e){console.error(e)}
+  return _spin.apply(this,arguments);
+};
+// "Only what I have"
+const _go=go;
+go=function(){
+  try{if(S.strict&&items().length&&okHere()&&isMain(S.meal)&&Math.random()<.12){const c=cands(true);if(c.length){markGen(c[0].title);return show(card(c[0]),"")}}}catch(e){console.error(e)}
+  return _go.apply(this,arguments);
+};
+// planned days: at most one pizza per plan, never over a meal that uses your use-first items or leftovers
+const _bm=bestMeal,PZT=()=>new Set((PZ.recipes||[]).map(x=>x.name));
+bestMeal=function(m,it,cu,dd,mode,pc,not){
+  const best=_bm.apply(this,arguments);
+  try{
+    if(!okHere()||normM(m)!=="Main"||!best||Math.random()>.15)return best;
+    const names=PZT();if([...PT].some(t=>names.has(t)))return best;
+    const urg=(dd&&Array.isArray(dd.urgent)?dd.urgent:S.urgent).filter(u=>it.some(x=>K.match(x).some(id=>K.match(u).includes(id))));
+    if(priorityUseCount(best,urg)>0||best.ing.some(isLeftIng))return best;
+    const c=cands(false).filter(x=>x.title!==not&&!PT.has(x.title));
+    if(c.length)return planPizza(c[0],it);
+  }catch(e){console.error(e)}
+  return best;
+};
+function planPizza(p,it){const g=asMeal(p);const F=new Set(it.flatMap(x=>K.match(x)));g.ing.forEach(i=>{i.have=F.has(i.id)||i.id==="water"});return g}
+})();
+/* ---- tick-off lists work on every card: Cook, Pizza night, Ferment, plans and saved recipes.
+   One delegated handler covers any method step or ingredient line that has no handler of its own. ---- */
+(function(){
+const SEL=".card ol:not(.fmtl)>li,.card ul.ing>li";
+const flip=li=>li.classList.toggle("done");
+document.addEventListener("click",e=>{
+  const li=e.target.closest&&e.target.closest(SEL);
+  if(!li||li.onclick||e.target.closest("a,button,input,textarea,select")||li.closest(".cookov"))return;
+  flip(li);
+});
+document.addEventListener("keydown",e=>{
+  if(e.key!==" "&&e.key!=="Enter")return;
+  const li=e.target.matches&&e.target.matches(SEL)?e.target:null;
+  if(!li||li.onclick||li.closest(".cookov"))return;
+  e.preventDefault();flip(li);
+});
+let q=0;const tidy=()=>{q=0;document.querySelectorAll(".card ol:not(.fmtl)>li:not([tabindex]),.card ul.ing>li:not([tabindex])").forEach(li=>li.tabIndex=0)};
+new MutationObserver(()=>{if(!q)q=requestAnimationFrame(tidy)}).observe(document.body,{childList:true,subtree:true});
+tidy();
+})();
+/* ---- a whisked result says "Whisk again" (wand icon) instead of "Spin again", on Cook and Pizza night cards ---- */
+(function(){
+const _t=window.__tidyRow;if(!_t)return;
+window.__tidyRow=function(row,icon){
+  const r=_t.apply(this,arguments);
+  try{const a=row&&row.querySelector(".spinagain"),c=row&&row.closest(".card");
+    if(a&&c&&c.querySelector(".meta use[href='#i-wand']"))a.innerHTML=I("wand")+"Whisk again"}catch(e){console.error(e)}
+  return r;
+};
 })();
 </script>
 </body>

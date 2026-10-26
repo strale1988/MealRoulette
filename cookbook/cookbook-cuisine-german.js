@@ -616,3 +616,140 @@ KITCHEN.add([
     "Fry or grill the {sausage} for 8 minutes until browned; slice.",
     "Pour the sauce over the sausage, dust with extra curry powder and serve with the fries."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "german-mushroom-spaetzle-style",
+  "name": "Creamy mushroom noodles with chives",
+  "meal": "big",
+  "cuisine": "German",
+  "time": 25,
+  "serves": 2,
+  "ing": [
+    [
+      "noodles",
+      180
+    ],
+    [
+      "mushrooms",
+      250
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "cream",
+      120
+    ],
+    [
+      "vegetable-stock",
+      100
+    ],
+    [
+      "mustard",
+      8
+    ],
+    [
+      "chives",
+      8
+    ],
+    [
+      "butter",
+      20
+    ]
+  ],
+  "steps": [
+    "Cook {noodles} according to the package directions and drain.",
+    "Melt {butter}; cook sliced {onion} and {mushrooms} until golden. Add {vegetable-stock} and simmer for 2 minutes.",
+    "Stir in {cream} and {mustard}; simmer until lightly thickened. Toss with noodles and finish with chopped {chives}."
+  ]
+},
+{
+  "id": "german-red-cabbage-apple",
+  "name": "Braised red cabbage with apple",
+  "meal": "bite",
+  "cuisine": "German",
+  "time": 35,
+  "serves": 4,
+  "ing": [
+    [
+      "red-cabbage",
+      500
+    ],
+    [
+      "apple",
+      "1pc"
+    ],
+    [
+      "red-onion",
+      "1pc"
+    ],
+    [
+      "vinegar",
+      25
+    ],
+    [
+      "brown-sugar",
+      12
+    ],
+    [
+      "butter",
+      20
+    ],
+    [
+      "cinnamon",
+      1
+    ]
+  ],
+  "steps": [
+    "Finely shred {red-cabbage} and slice {red-onion}. Dice the {apple}.",
+    "Melt {butter} in a pot and soften the onion. Add cabbage, apple, {vinegar}, {brown-sugar}, {cinnamon} and 100 ml water.",
+    "Cover and cook gently for 25–30 minutes, stirring occasionally, until tender. Add a splash of water if the pot dries out."
+  ]
+},
+{
+  "id": "german-potato-leek-soup",
+  "name": "German-style potato and leek soup",
+  "meal": "big",
+  "cuisine": "German",
+  "time": 35,
+  "serves": 3,
+  "ing": [
+    [
+      "potatoes",
+      450
+    ],
+    [
+      "leek",
+      200
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "vegetable-stock",
+      800
+    ],
+    [
+      "cream",
+      80
+    ],
+    [
+      "nutmeg",
+      1
+    ],
+    [
+      "parsley",
+      8
+    ]
+  ],
+  "steps": [
+    "Slice {leek} and dice {onion} and {potatoes}.",
+    "Cook leek and onion in a little oil for 5 minutes. Add potatoes and {vegetable-stock}; simmer 20 minutes until tender.",
+    "Mash some potatoes into the broth for body, stir in {cream} and {nutmeg}, then warm through. Serve with {parsley}."
+  ]
+}
+]);

@@ -716,3 +716,262 @@ KITCHEN.add([
     ]
   }
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "bake-wholemeal-soda-bread",
+  "name": "Wholemeal soda bread",
+  "meal": "bite",
+  "cuisine": "",
+  "time": 50,
+  "serves": 8,
+  "ing": [
+    [
+      "flour",
+      250
+    ],
+    [
+      "oats",
+      100
+    ],
+    [
+      "baking-soda",
+      5
+    ],
+    [
+      "salt",
+      5
+    ],
+    [
+      "buttermilk",
+      300
+    ]
+  ],
+  "steps": [
+    "Heat the oven to 200 °C and line a baking tray.",
+    "Mix {flour}, {oats}, {baking-soda} and {salt}. Stir in {buttermilk} until a soft, slightly sticky dough forms.",
+    "Shape into a round loaf, cut a deep cross on top and bake 35–40 minutes until browned and hollow-sounding when tapped. Cool before slicing."
+  ]
+},
+{
+  "id": "bake-cheese-herb-muffins",
+  "name": "Cheddar and herb savoury muffins",
+  "meal": "bite",
+  "cuisine": "",
+  "time": 30,
+  "serves": 8,
+  "ing": [
+    [
+      "flour",
+      220
+    ],
+    [
+      "baking-powder",
+      8
+    ],
+    [
+      "eggs",
+      "2pc"
+    ],
+    [
+      "milk",
+      180
+    ],
+    [
+      "cheddar",
+      100
+    ],
+    [
+      "chives",
+      10
+    ],
+    [
+      "butter",
+      50
+    ]
+  ],
+  "steps": [
+    "Heat the oven to 190 °C and grease a muffin tin. Melt {butter} and let cool slightly.",
+    "Mix {flour} and {baking-powder}. Whisk {eggs} with {milk}, then stir into the dry ingredients just until combined.",
+    "Fold in {cheddar} and chopped {chives}. Divide into the tin and bake 18–22 minutes until risen and golden."
+  ]
+},
+{
+  "id": "bake-banana-oat-breakfast-bars",
+  "name": "Banana oat breakfast bars",
+  "meal": "morning",
+  "cuisine": "",
+  "time": 30,
+  "serves": 8,
+  "ing": [
+    [
+      "banana",
+      "2pc"
+    ],
+    [
+      "oats",
+      220
+    ],
+    [
+      "peanut-butter",
+      60
+    ],
+    [
+      "honey",
+      25
+    ],
+    [
+      "cinnamon",
+      2
+    ],
+    [
+      "dark-chocolate",
+      40
+    ]
+  ],
+  "steps": [
+    "Heat the oven to 180 °C and line a small square tin.",
+    "Mash {banana}; stir in {oats}, {peanut-butter}, {honey} and {cinnamon}. Fold through chopped {dark-chocolate}.",
+    "Press firmly into the tin and bake 20–25 minutes until set at the edges. Cool completely before cutting into bars."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "bake-olive-rosemary-soda-bread",
+    "name": "Olive and rosemary soda bread",
+    "meal": "big",
+    "time": 45,
+    "serves": 8,
+    "ing": [
+      [
+        "flour",
+        350
+      ],
+      [
+        "wholemeal-flour",
+        150
+      ],
+      [
+        "baking-soda",
+        6
+      ],
+      [
+        "salt",
+        5
+      ],
+      [
+        "buttermilk",
+        400
+      ],
+      [
+        "olives",
+        90
+      ],
+      [
+        "rosemary",
+        4
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 200°C and line a baking tray.",
+      "Mix {flour}, {wholemeal-flour}, {baking-soda} and {salt}. Chop {olives} and {rosemary} and stir through.",
+      "Pour in {buttermilk} and mix gently until a soft dough forms; do not knead heavily. Shape into a round and score a deep cross on top.",
+      "Bake for 35–40 minutes until browned and the base sounds hollow when tapped. Cool before slicing."
+    ]
+  },
+  {
+    "id": "bake-banana-oat-muffins",
+    "name": "Banana oat muffins",
+    "meal": "morning",
+    "time": 30,
+    "serves": 8,
+    "ing": [
+      [
+        "banana",
+        "2pc"
+      ],
+      [
+        "oats",
+        120
+      ],
+      [
+        "flour",
+        100
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "yogurt",
+        100
+      ],
+      [
+        "honey",
+        35
+      ],
+      [
+        "baking-powder",
+        6
+      ],
+      [
+        "cinnamon",
+        2
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 180°C and line a muffin tin. Mash {banana} in a bowl.",
+      "Whisk in {eggs}, {yogurt} and {honey}. Fold in {oats}, {flour}, {baking-powder} and {cinnamon}.",
+      "Divide the batter between 8 muffin cups.",
+      "Bake for 18–22 minutes until risen and a skewer comes out clean. Cool before serving."
+    ]
+  },
+  {
+    "id": "bake-savory-spinach-feta-scones",
+    "name": "Spinach and feta savoury scones",
+    "meal": "bite",
+    "time": 30,
+    "serves": 8,
+    "ing": [
+      [
+        "flour",
+        300
+      ],
+      [
+        "baking-powder",
+        10
+      ],
+      [
+        "butter",
+        60
+      ],
+      [
+        "milk",
+        150
+      ],
+      [
+        "spinach",
+        80
+      ],
+      [
+        "feta",
+        100
+      ],
+      [
+        "eggs",
+        "1pc"
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 200°C. Mix {flour} and {baking-powder}; rub in cold {butter} until the mixture resembles breadcrumbs.",
+      "Wilt {spinach}, squeeze dry and chop. Crumble {feta}.",
+      "Beat {eggs} with {milk}, reserving a little for brushing. Stir into the dry ingredients with spinach and feta to make a soft dough.",
+      "Pat to 2.5 cm thick, cut into rounds and brush with reserved egg. Bake 12–15 minutes until risen and golden."
+    ]
+  }
+]);

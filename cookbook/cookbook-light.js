@@ -985,3 +985,188 @@ KITCHEN.add([
     ]
   }
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "light-cottage-cheese-herb-toast",
+  "name": "Cottage cheese and herb toast",
+  "meal": "morning",
+  "cuisine": "",
+  "time": 8,
+  "serves": 1,
+  "ing": [
+    [
+      "rye-bread",
+      "2pc"
+    ],
+    [
+      "cottage-cheese",
+      120
+    ],
+    [
+      "cucumber",
+      80
+    ],
+    [
+      "chives",
+      5
+    ],
+    [
+      "lemon",
+      "0.25pc"
+    ],
+    [
+      "black-pepper",
+      1
+    ]
+  ],
+  "steps": [
+    "Toast the {rye-bread}.",
+    "Stir {cottage-cheese} with {lemon} juice, chopped {chives} and {black-pepper}.",
+    "Spread over toast and top with sliced {cucumber}."
+  ]
+},
+{
+  "id": "light-green-lentil-lunch-salad",
+  "name": "Green lentil, apple and walnut salad",
+  "meal": "big",
+  "cuisine": "",
+  "time": 15,
+  "serves": 2,
+  "ing": [
+    [
+      "green-lentils",
+      240
+    ],
+    [
+      "apple",
+      "1pc"
+    ],
+    [
+      "walnuts",
+      30
+    ],
+    [
+      "rocket",
+      60
+    ],
+    [
+      "dijon-mustard",
+      8
+    ],
+    [
+      "vinegar",
+      15
+    ],
+    [
+      "olive-oil",
+      20
+    ]
+  ],
+  "steps": [
+    "Use cooked, cooled {green-lentils}; drain well if needed.",
+    "Whisk {dijon-mustard}, {vinegar} and {olive-oil}. Dice {apple} and roughly chop {walnuts}.",
+    "Toss lentils with {rocket}, apple, walnuts and dressing. Season and serve."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "light-broccoli-edamame-salad",
+    "name": "Broccoli and edamame sesame salad",
+    "meal": "big,bite",
+    "time": 18,
+    "serves": 2,
+    "ing": [
+      [
+        "broccoli",
+        300
+      ],
+      [
+        "edamame",
+        150
+      ],
+      [
+        "soy-sauce",
+        15
+      ],
+      [
+        "rice-vinegar",
+        12
+      ],
+      [
+        "sesame-oil",
+        8
+      ],
+      [
+        "ginger",
+        8
+      ],
+      [
+        "sesame-seeds",
+        8
+      ],
+      [
+        "lime",
+        "0.5pc"
+      ]
+    ],
+    "steps": [
+      "Steam {broccoli} florets for 4–5 minutes until bright green and just tender. Cook {edamame} according to the packet.",
+      "Whisk {soy-sauce}, {rice-vinegar}, {sesame-oil}, grated {ginger} and lime juice from {lime}.",
+      "Toss warm broccoli and edamame with the dressing.",
+      "Sprinkle with {sesame-seeds} and serve warm or chilled."
+    ]
+  },
+  {
+    "id": "light-roasted-carrot-lentil-bowl",
+    "name": "Roasted carrot and lentil bowl",
+    "meal": "big",
+    "time": 30,
+    "serves": 2,
+    "ing": [
+      [
+        "carrot",
+        300
+      ],
+      [
+        "brown-lentils",
+        180
+      ],
+      [
+        "yogurt",
+        100
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "olive-oil",
+        15
+      ],
+      [
+        "parsley",
+        10
+      ],
+      [
+        "pumpkin-seeds",
+        15
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 210°C. Cut {carrot} into batons and toss with {olive-oil}, {cumin}, salt and pepper. Roast for 20–25 minutes.",
+      "Cook {brown-lentils} until tender and drain well.",
+      "Mix {yogurt} with lemon juice from {lemon} and a little water to make a dressing.",
+      "Serve lentils topped with roasted carrots, {parsley}, {pumpkin-seeds} and lemon yogurt."
+    ]
+  }
+]);

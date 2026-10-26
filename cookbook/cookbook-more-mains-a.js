@@ -70,3 +70,149 @@ KITCHEN.add([
  ing:[["chicken-thigh",700],["onion","2pc"],["paprika",12],["sour-cream",120],["tomato","2pc"],["red-pepper","1pc"],["oil",25],["flour",15],["chicken-stock",250],["noodles",250],["salt",2]],
  steps:["Cook sliced {onion} in {oil} for 10 minutes until soft. Take off the heat and stir in {paprika}.","Add {chicken-thigh}, {salt}, chopped {tomato} and {red-pepper} and {chicken-stock}. Simmer covered 35 minutes.","Boil {noodles} until tender. Whisk {flour} into {sour-cream}, stir into the sauce and heat gently 3 minutes. Serve over the noodles."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "main-baked-ricotta-spinach-shells",
+  "name": "Baked ricotta and spinach pasta",
+  "meal": "big",
+  "cuisine": "Italian",
+  "time": 40,
+  "serves": 3,
+  "ing": [
+    [
+      "pasta",
+      220
+    ],
+    [
+      "ricotta",
+      200
+    ],
+    [
+      "spinach",
+      180
+    ],
+    [
+      "passata",
+      350
+    ],
+    [
+      "mozzarella",
+      100
+    ],
+    [
+      "garlic",
+      "2pc"
+    ],
+    [
+      "oregano",
+      2
+    ]
+  ],
+  "steps": [
+    "Heat the oven to 190 °C. Cook {pasta} until just shy of al dente and drain.",
+    "Wilt {spinach}, squeeze out excess moisture and mix with {ricotta} and half the {mozzarella}. Stir the pasta through.",
+    "Spread {passata} in a baking dish, add pasta mixture, top with remaining mozzarella, {garlic} and {oregano}. Bake 20 minutes until bubbling."
+  ]
+},
+{
+  "id": "main-braised-beef-carrots-polenta",
+  "name": "Braised beef with carrots and creamy polenta",
+  "meal": "big",
+  "cuisine": "Italian",
+  "time": 100,
+  "serves": 3,
+  "ing": [
+    [
+      "beef-strips",
+      500
+    ],
+    [
+      "carrot",
+      200
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "red-wine",
+      150
+    ],
+    [
+      "beef-stock",
+      400
+    ],
+    [
+      "thyme",
+      2
+    ],
+    [
+      "polenta",
+      160
+    ],
+    [
+      "butter",
+      25
+    ]
+  ],
+  "steps": [
+    "Brown {beef-strips} in a heavy pot in batches; set aside. Cook diced {onion} and {carrot} until softened.",
+    "Return beef to the pot, add {red-wine}, {beef-stock} and {thyme}. Cover and simmer gently 75–90 minutes until tender.",
+    "Cook {polenta} according to the package directions and finish with {butter}. Serve the beef and sauce over the polenta."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "main-baked-cod-tomato-olives",
+    "name": "Baked cod with tomatoes and olives",
+    "meal": "big",
+    "time": 25,
+    "serves": 2,
+    "ing": [
+      [
+        "cod",
+        350
+      ],
+      [
+        "tomato",
+        250
+      ],
+      [
+        "olives",
+        50
+      ],
+      [
+        "garlic",
+        6
+      ],
+      [
+        "olive-oil",
+        15
+      ],
+      [
+        "lemon",
+        "0.5pc"
+      ],
+      [
+        "parsley",
+        8
+      ],
+      [
+        "potato",
+        350
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 200°C. Cut {potato} into small wedges, toss with half the {olive-oil} and roast for 15 minutes.",
+      "Place {cod} in a baking dish. Scatter chopped {tomato}, {olives} and minced {garlic} around it.",
+      "Drizzle with remaining oil and lemon juice from {lemon}. Bake for 10–12 minutes until the fish flakes easily.",
+      "Finish with chopped {parsley} and serve with the potatoes."
+    ]
+  }
+]);

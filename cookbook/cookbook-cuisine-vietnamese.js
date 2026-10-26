@@ -492,3 +492,166 @@ KITCHEN.add([
     "Split the {baguette}, toast and spread with {mayonnaise} and {sriracha}.",
     "Fill with eggs, sliced {cucumber} and {coriander}, and sprinkle with {soy-sauce}."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "vietnamese-lemongrass-tofu",
+  "name": "Vietnamese lemongrass tofu rice bowls",
+  "meal": "big",
+  "cuisine": "Vietnamese",
+  "time": 25,
+  "serves": 2,
+  "ing": [
+    [
+      "tofu",
+      300
+    ],
+    [
+      "rice",
+      150
+    ],
+    [
+      "lemongrass",
+      20
+    ],
+    [
+      "garlic",
+      "2pc"
+    ],
+    [
+      "soy-sauce",
+      20
+    ],
+    [
+      "lime",
+      "1pc"
+    ],
+    [
+      "cucumber",
+      120
+    ],
+    [
+      "carrot",
+      100
+    ],
+    [
+      "mint",
+      8
+    ]
+  ],
+  "steps": [
+    "Cook the {rice}. Pat {tofu} dry and cut into cubes.",
+    "Finely mince {lemongrass} and {garlic}; fry briefly in a little oil. Add tofu and cook until golden, then add {soy-sauce} and a splash of water.",
+    "Serve over rice with sliced {cucumber}, grated {carrot}, chopped {mint} and {lime} juice."
+  ]
+},
+{
+  "id": "vietnamese-caramel-pork-bowl",
+  "name": "Vietnamese-style caramel pork bowl",
+  "meal": "big",
+  "cuisine": "Vietnamese",
+  "time": 30,
+  "serves": 2,
+  "ing": [
+    [
+      "pork-mince",
+      300
+    ],
+    [
+      "rice",
+      150
+    ],
+    [
+      "brown-sugar",
+      20
+    ],
+    [
+      "fish-sauce",
+      20
+    ],
+    [
+      "garlic",
+      "3pc"
+    ],
+    [
+      "ginger",
+      8
+    ],
+    [
+      "spring-onion",
+      30
+    ],
+    [
+      "lime",
+      "0.5pc"
+    ]
+  ],
+  "steps": [
+    "Cook the {rice}. Mince {garlic} and {ginger}.",
+    "Cook {brown-sugar} in a skillet with a tablespoon of water until syrupy, then add pork and stir to coat. Cook until browned and cooked through.",
+    "Add garlic, ginger and {fish-sauce}; simmer until glossy. Finish with {spring-onion} and {lime} juice and serve over rice."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "world-vietnamese-noodle-salad",
+    "name": "Vietnamese-inspired rice noodle salad",
+    "meal": "big",
+    "time": 25,
+    "serves": 2,
+    "ing": [
+      [
+        "rice-noodles",
+        180
+      ],
+      [
+        "carrot",
+        100
+      ],
+      [
+        "cucumber",
+        120
+      ],
+      [
+        "lettuce",
+        100
+      ],
+      [
+        "tofu",
+        200
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "soy-sauce",
+        15
+      ],
+      [
+        "sugar",
+        8
+      ],
+      [
+        "mint",
+        8
+      ],
+      [
+        "peanuts",
+        20
+      ]
+    ],
+    "steps": [
+      "Cook {rice-noodles} according to the packet, rinse under cold water and drain well.",
+      "Brown cubes of {tofu} in a skillet. Julienne {carrot}, slice {cucumber} and shred {lettuce}.",
+      "Whisk lime juice from {lime} with {soy-sauce}, {sugar} and 2 tablespoons of water.",
+      "Arrange noodles, vegetables and tofu in bowls. Add dressing, chopped {mint} and crushed {peanuts}."
+    ],
+    "cuisine": "Vietnamese"
+  }
+]);

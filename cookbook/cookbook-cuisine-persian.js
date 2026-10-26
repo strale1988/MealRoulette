@@ -324,3 +324,101 @@ KITCHEN.add([
     ]
   }
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "persian-herb-frittata-kuku",
+  "name": "Persian herb kuku sabzi",
+  "meal": "big",
+  "cuisine": "Persian",
+  "time": 30,
+  "serves": 3,
+  "ing": [
+    [
+      "eggs",
+      "5pc"
+    ],
+    [
+      "parsley",
+      30
+    ],
+    [
+      "coriander",
+      20
+    ],
+    [
+      "dill",
+      15
+    ],
+    [
+      "spinach",
+      80
+    ],
+    [
+      "walnuts",
+      30
+    ],
+    [
+      "barberries",
+      20
+    ],
+    [
+      "turmeric",
+      2
+    ]
+  ],
+  "steps": [
+    "Finely chop {parsley}, {coriander}, {dill} and {spinach}. Roughly chop {walnuts}.",
+    "Beat {eggs} with {turmeric}, salt and pepper. Stir in the herbs, spinach, walnuts and {barberries}.",
+    "Pour into an oiled oven-safe skillet. Cook gently until the base sets, then finish under a grill or in a 180 °C oven until fully set."
+  ]
+},
+{
+  "id": "persian-saffron-chickpea-rice",
+  "name": "Saffron chickpea rice with herbs",
+  "meal": "big",
+  "cuisine": "Persian",
+  "time": 30,
+  "serves": 3,
+  "ing": [
+    [
+      "rice",
+      220
+    ],
+    [
+      "chickpeas",
+      240
+    ],
+    [
+      "saffron",
+      1
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "cumin",
+      2
+    ],
+    [
+      "parsley",
+      10
+    ],
+    [
+      "dill",
+      8
+    ],
+    [
+      "lemon",
+      "0.5pc"
+    ]
+  ],
+  "steps": [
+    "Rinse {rice} until the water runs mostly clear. Soak {saffron} in 2 tablespoons warm water.",
+    "Soften sliced {onion} in oil, add {cumin} and drained {chickpeas}.",
+    "Add rice and water according to the rice variety, then stir in saffron water. Cover and cook until rice is tender. Rest 5 minutes, fluff and finish with {parsley}, {dill} and {lemon} juice."
+  ]
+}
+]);

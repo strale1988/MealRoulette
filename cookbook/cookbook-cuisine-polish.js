@@ -366,3 +366,93 @@ KITCHEN.add([
     "Pile onto the bread, cover with grated {cheddar} and grill 3 minutes until bubbling.",
     "Zigzag with {ketchup} and scatter over {chives}."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "polish-red-cabbage-soup",
+  "name": "Polish-style red cabbage soup",
+  "meal": "big",
+  "cuisine": "Polish",
+  "time": 40,
+  "serves": 3,
+  "ing": [
+    [
+      "red-cabbage",
+      350
+    ],
+    [
+      "carrot",
+      "1pc"
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "vegetable-stock",
+      800
+    ],
+    [
+      "bay-leaf",
+      "1pc"
+    ],
+    [
+      "vinegar",
+      15
+    ],
+    [
+      "sour-cream",
+      80
+    ],
+    [
+      "dill",
+      8
+    ]
+  ],
+  "steps": [
+    "Thinly shred {red-cabbage} and grate {carrot}; dice {onion}.",
+    "Add vegetables, {vegetable-stock} and {bay-leaf} to a pot. Simmer 30 minutes until tender.",
+    "Remove the bay leaf, stir in {vinegar} and season to taste. Serve with a swirl of {sour-cream} and chopped {dill}."
+  ]
+},
+{
+  "id": "polish-kopytka-potato-dumplings",
+  "name": "Polish potato dumplings with browned butter",
+  "meal": "big",
+  "cuisine": "Polish",
+  "time": 45,
+  "serves": 3,
+  "ing": [
+    [
+      "potatoes",
+      500
+    ],
+    [
+      "flour",
+      160
+    ],
+    [
+      "eggs",
+      "1pc"
+    ],
+    [
+      "butter",
+      45
+    ],
+    [
+      "sage",
+      4
+    ],
+    [
+      "parmesan",
+      25
+    ]
+  ],
+  "steps": [
+    "Boil {potatoes} until tender, drain well and mash until smooth. Cool until just warm.",
+    "Mix in {eggs} and enough {flour} to form a soft dough. Roll into ropes and cut into diamond-shaped dumplings.",
+    "Boil in batches; when the dumplings float, cook 1 minute more and lift out. Brown {butter} with {sage} and toss with dumplings; finish with {parmesan}."
+  ]
+}
+]);

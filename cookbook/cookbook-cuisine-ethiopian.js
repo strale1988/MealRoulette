@@ -328,3 +328,105 @@ KITCHEN.add([
     ]
   }
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "ethiopian-spiced-cabbage-potatoes",
+  "name": "Ethiopian-style cabbage and potato stew",
+  "meal": "big",
+  "cuisine": "Ethiopian",
+  "time": 35,
+  "serves": 3,
+  "ing": [
+    [
+      "potatoes",
+      350
+    ],
+    [
+      "cabbage",
+      300
+    ],
+    [
+      "carrot",
+      150
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "garlic",
+      "3pc"
+    ],
+    [
+      "ginger",
+      10
+    ],
+    [
+      "berbere",
+      6
+    ],
+    [
+      "olive-oil",
+      20
+    ],
+    [
+      "vegetable-stock",
+      350
+    ]
+  ],
+  "steps": [
+    "Dice {onion}, {potatoes} and {carrot}; slice {cabbage}.",
+    "Cook onion in {olive-oil} for 6 minutes. Add {garlic}, {ginger} and {berbere}, then stir for 30 seconds.",
+    "Add potatoes, carrot, cabbage and {vegetable-stock}. Cover and simmer 20–25 minutes until tender, stirring occasionally."
+  ]
+},
+{
+  "id": "ethiopian-lentil-carrot-salad",
+  "name": "Warm Ethiopian lentil and carrot salad",
+  "meal": "big",
+  "cuisine": "Ethiopian",
+  "time": 30,
+  "serves": 2,
+  "ing": [
+    [
+      "green-lentils",
+      180
+    ],
+    [
+      "carrot",
+      180
+    ],
+    [
+      "red-onion",
+      "0.5pc"
+    ],
+    [
+      "lemon",
+      "1pc"
+    ],
+    [
+      "olive-oil",
+      20
+    ],
+    [
+      "cumin",
+      3
+    ],
+    [
+      "paprika",
+      2
+    ],
+    [
+      "parsley",
+      10
+    ]
+  ],
+  "steps": [
+    "Simmer {green-lentils} in water until tender but still holding their shape; drain well.",
+    "Grate {carrot} and finely slice {red-onion}. Warm {cumin} and {paprika} in {olive-oil} for 30 seconds.",
+    "Toss the warm lentils with carrot, onion, chopped {parsley} and {lemon} juice. Season and serve warm or at room temperature."
+  ]
+}
+]);

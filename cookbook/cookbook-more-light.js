@@ -133,3 +133,132 @@ KITCHEN.add([
  ing:[["tahini",120],["sugar",80],["flour",100],["baking-soda",1],["sesame-seeds",15],["salt",1]],
  steps:["Heat the oven to 170 °C. Mix {tahini} with {sugar} until smooth, then add {flour}, {baking-soda} and {salt} to a soft dough.","Roll into balls, coat in {sesame-seeds} and flatten slightly on a lined tray.","Bake 12 minutes until just golden. Cool completely before moving."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "light-banana-oat-egg-pancakes",
+  "name": "Banana oat pancakes",
+  "meal": "morning",
+  "cuisine": "",
+  "time": 15,
+  "serves": 2,
+  "ing": [
+    [
+      "banana",
+      "1pc"
+    ],
+    [
+      "eggs",
+      "2pc"
+    ],
+    [
+      "oats",
+      70
+    ],
+    [
+      "milk",
+      50
+    ],
+    [
+      "cinnamon",
+      1
+    ],
+    [
+      "yogurt",
+      80
+    ]
+  ],
+  "steps": [
+    "Mash {banana} and whisk with {eggs}, {oats}, {milk} and {cinnamon}. Rest for 3 minutes.",
+    "Heat a lightly oiled skillet over medium-low heat. Spoon in small pancakes and cook until the edges set.",
+    "Flip carefully and cook another 1–2 minutes. Serve with {yogurt}."
+  ]
+},
+{
+  "id": "light-tomato-white-bean-toast",
+  "name": "Tomato white bean toast",
+  "meal": "morning",
+  "cuisine": "",
+  "time": 12,
+  "serves": 2,
+  "ing": [
+    [
+      "bread",
+      "4pc"
+    ],
+    [
+      "white-beans",
+      240
+    ],
+    [
+      "tomato",
+      200
+    ],
+    [
+      "garlic",
+      "1pc"
+    ],
+    [
+      "olive-oil",
+      15
+    ],
+    [
+      "basil",
+      8
+    ],
+    [
+      "lemon",
+      "0.5pc"
+    ]
+  ],
+  "steps": [
+    "Toast {bread} until crisp.",
+    "Warm {white-beans} with {olive-oil}, crushed {garlic}, {lemon} juice and a splash of water; mash lightly.",
+    "Spoon beans onto toast, top with diced {tomato} and torn {basil}."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "light-citrus-fennel-orange-salad",
+    "name": "Fennel and orange salad",
+    "meal": "bite",
+    "time": 12,
+    "serves": 2,
+    "ing": [
+      [
+        "fennel",
+        200
+      ],
+      [
+        "orange",
+        "2pc"
+      ],
+      [
+        "olive-oil",
+        15
+      ],
+      [
+        "lemon",
+        "0.5pc"
+      ],
+      [
+        "olives",
+        40
+      ],
+      [
+        "parsley",
+        8
+      ]
+    ],
+    "steps": [
+      "Trim and thinly slice {fennel}. Peel {orange} and cut into segments over a bowl to catch the juice.",
+      "Whisk the orange juice with {olive-oil}, lemon juice from {lemon}, salt and pepper.",
+      "Toss fennel with orange segments and {olives}. Dress and finish with chopped {parsley}."
+    ]
+  }
+]);

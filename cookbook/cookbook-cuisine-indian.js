@@ -1272,3 +1272,341 @@ KITCHEN.add([
     "Brown {lamb} in the pan for 8 minutes, then add {garam-masala}, {salt} and a splash of water; simmer 10 minutes. Stir in {peas} for the last 3.",
     "Serve with warmed {roti} and {yogurt}."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "indian-saag-paneer",
+  "name": "Saag paneer with warm naan",
+  "meal": "big",
+  "cuisine": "Indian",
+  "time": 30,
+  "serves": 2,
+  "ing": [
+    [
+      "paneer",
+      250
+    ],
+    [
+      "spinach",
+      300
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "garlic",
+      "3pc"
+    ],
+    [
+      "ginger",
+      12
+    ],
+    [
+      "cumin-seeds",
+      3
+    ],
+    [
+      "garam-masala",
+      4
+    ],
+    [
+      "cream",
+      50
+    ],
+    [
+      "naan",
+      "2pc"
+    ]
+  ],
+  "steps": [
+    "Cube {paneer} and brown in a little oil; set aside.",
+    "Cook diced {onion} until soft. Add {cumin-seeds}, {garlic} and {ginger}; stir for a minute, then add {spinach} and cook until wilted. Blend or chop the mixture to your preferred texture.",
+    "Stir in {garam-masala}, {cream} and paneer. Simmer gently for 4 minutes and serve with warmed {naan}."
+  ]
+},
+{
+  "id": "indian-classic-chana-masala",
+  "name": "Chana masala chickpea curry",
+  "meal": "big",
+  "cuisine": "Indian",
+  "time": 30,
+  "serves": 3,
+  "ing": [
+    [
+      "chickpeas",
+      480
+    ],
+    [
+      "canned-tomatoes",
+      400
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "garlic",
+      "3pc"
+    ],
+    [
+      "ginger",
+      12
+    ],
+    [
+      "cumin-seeds",
+      3
+    ],
+    [
+      "coriander",
+      3
+    ],
+    [
+      "turmeric",
+      2
+    ],
+    [
+      "garam-masala",
+      4
+    ],
+    [
+      "rice",
+      150
+    ]
+  ],
+  "steps": [
+    "Cook the {rice}. Dice {onion}; mince {garlic} and {ginger}.",
+    "Toast {cumin-seeds} in a pan with a little oil, add onion and cook until golden. Stir in garlic, ginger, {coriander} and {turmeric}.",
+    "Add {canned-tomatoes} and simmer 5 minutes. Stir in {chickpeas} and {garam-masala}; simmer 12 minutes. Serve with rice."
+  ]
+},
+{
+  "id": "indian-aloo-gobi",
+  "name": "Aloo gobi cauliflower and potato",
+  "meal": "big",
+  "cuisine": "Indian",
+  "time": 35,
+  "serves": 3,
+  "ing": [
+    [
+      "cauliflower",
+      350
+    ],
+    [
+      "potatoes",
+      300
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "tomato",
+      180
+    ],
+    [
+      "garlic",
+      "2pc"
+    ],
+    [
+      "ginger",
+      10
+    ],
+    [
+      "turmeric",
+      3
+    ],
+    [
+      "cumin-seeds",
+      3
+    ],
+    [
+      "coriander",
+      3
+    ]
+  ],
+  "steps": [
+    "Cut {cauliflower} into florets and cube {potatoes}.",
+    "Heat oil, add {cumin-seeds}, then cook diced {onion} until soft. Add {garlic}, {ginger}, {turmeric} and ground {coriander}; stir briefly.",
+    "Add potatoes, cauliflower, chopped {tomato} and a splash of water. Cover and cook 20–25 minutes, stirring gently, until tender. Finish with fresh coriander."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "extra-world-aloo-gobi",
+    "name": "Aloo gobi cauliflower and potato curry",
+    "meal": "big",
+    "time": 35,
+    "serves": 3,
+    "ing": [
+      [
+        "cauliflower",
+        350
+      ],
+      [
+        "potato",
+        250
+      ],
+      [
+        "onion",
+        100
+      ],
+      [
+        "tomato",
+        200
+      ],
+      [
+        "garlic",
+        8
+      ],
+      [
+        "ginger",
+        10
+      ],
+      [
+        "turmeric",
+        3
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "garam-masala",
+        3
+      ],
+      [
+        "oil",
+        18
+      ]
+    ],
+    "steps": [
+      "Cut {cauliflower} into florets and cube {potato}. Dice {onion}; grate {ginger} and {garlic}.",
+      "Heat {oil} and toast {cumin} briefly. Add onion and cook until golden, then stir in ginger, garlic, {turmeric} and {garam-masala}.",
+      "Add potato, {tomato} and a splash of water. Cover and cook for 10 minutes, then add cauliflower.",
+      "Cook covered for 12–15 minutes until vegetables are tender, stirring gently and adding water if needed."
+    ],
+    "cuisine": "Indian"
+  },
+  {
+    "id": "world-chana-saag",
+    "name": "Chana saag chickpea and spinach curry",
+    "meal": "big",
+    "time": 25,
+    "serves": 3,
+    "ing": [
+      [
+        "chickpeas",
+        440
+      ],
+      [
+        "spinach",
+        250
+      ],
+      [
+        "onion",
+        100
+      ],
+      [
+        "tomato",
+        200
+      ],
+      [
+        "garlic",
+        8
+      ],
+      [
+        "ginger",
+        10
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "coriander-ground",
+        3
+      ],
+      [
+        "garam-masala",
+        3
+      ],
+      [
+        "coconut-milk",
+        120
+      ]
+    ],
+    "steps": [
+      "Cook diced {onion} in a little oil until soft. Add chopped {garlic}, grated {ginger}, {cumin} and {coriander-ground}; stir for 30 seconds.",
+      "Add chopped {tomato} and cook until pulpy. Stir in drained {chickpeas} and {coconut-milk}; simmer for 10 minutes.",
+      "Fold in {spinach} in batches until wilted. Add {garam-masala}, season and simmer for another 3 minutes.",
+      "Serve with rice or flatbread."
+    ],
+    "cuisine": "Indian"
+  },
+  {
+    "id": "world-coconut-vegetable-pulao",
+    "name": "Coconut vegetable pulao",
+    "meal": "big",
+    "time": 30,
+    "serves": 3,
+    "ing": [
+      [
+        "basmati-rice",
+        220
+      ],
+      [
+        "coconut-milk",
+        200
+      ],
+      [
+        "water",
+        250
+      ],
+      [
+        "carrot",
+        100
+      ],
+      [
+        "green-peas",
+        100
+      ],
+      [
+        "onion",
+        80
+      ],
+      [
+        "garlic",
+        5
+      ],
+      [
+        "ginger",
+        8
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "cardamom",
+        2
+      ],
+      [
+        "oil",
+        12
+      ]
+    ],
+    "steps": [
+      "Rinse {basmati-rice} until the water runs mostly clear. Dice {carrot} and {onion}.",
+      "Heat {oil} and toast {cumin} and {cardamom}. Add onion, {garlic} and {ginger}; cook for 3 minutes.",
+      "Stir in carrot, {green-peas} and rice. Add {coconut-milk}, {water} and salt; bring to a simmer.",
+      "Cover and cook on low for 15 minutes. Rest covered for 5 minutes, then fluff gently."
+    ],
+    "cuisine": "Indian"
+  }
+]);

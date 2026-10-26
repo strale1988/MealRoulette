@@ -1091,3 +1091,253 @@ KITCHEN.add([
     "Cook {rice} in {water} in a covered pan on low heat for 12 minutes.",
     "Stir-fry {pak-choi} in the remaining {oil} for 3 minutes and serve with the chicken and rice."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "chinese-tomato-egg-stirfry",
+  "name": "Chinese tomato and egg stir-fry",
+  "meal": "big",
+  "cuisine": "Chinese",
+  "time": 15,
+  "serves": 2,
+  "ing": [
+    [
+      "eggs",
+      "4pc"
+    ],
+    [
+      "tomato",
+      350
+    ],
+    [
+      "spring-onion",
+      30
+    ],
+    [
+      "soy-sauce",
+      10
+    ],
+    [
+      "sugar",
+      4
+    ],
+    [
+      "sesame-oil",
+      8
+    ],
+    [
+      "rice",
+      150
+    ]
+  ],
+  "steps": [
+    "Cook the {rice} and keep warm.",
+    "Beat {eggs} with a pinch of salt. Scramble gently in a hot pan with a little oil until softly set; transfer to a plate.",
+    "Cook chopped {tomato} until juicy. Add {sugar} and {soy-sauce}, return the eggs to the pan and fold together briefly. Finish with {sesame-oil} and sliced {spring-onion}; serve over rice."
+  ]
+},
+{
+  "id": "chinese-black-pepper-beef",
+  "name": "Black pepper beef and broccoli",
+  "meal": "big",
+  "cuisine": "Chinese",
+  "time": 25,
+  "serves": 2,
+  "ing": [
+    [
+      "beef-strips",
+      300
+    ],
+    [
+      "broccoli",
+      250
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "garlic",
+      "2pc"
+    ],
+    [
+      "soy-sauce",
+      25
+    ],
+    [
+      "oyster-sauce",
+      20
+    ],
+    [
+      "black-pepper",
+      3
+    ],
+    [
+      "cornstarch",
+      8
+    ],
+    [
+      "rice",
+      150
+    ]
+  ],
+  "steps": [
+    "Cook the {rice}. Mix {soy-sauce}, {oyster-sauce}, {black-pepper}, {cornstarch} and 2 tablespoons water.",
+    "Sear {beef-strips} in a hot pan in batches; remove. Stir-fry {broccoli} and sliced {onion} for 4–5 minutes, adding a splash of water if needed.",
+    "Add {garlic} and beef back to the pan. Pour in the sauce and toss until glossy and the beef is cooked. Serve with rice."
+  ]
+},
+{
+  "id": "chinese-sesame-tofu-noodles",
+  "name": "Sesame tofu noodles",
+  "meal": "big",
+  "cuisine": "Chinese",
+  "time": 25,
+  "serves": 2,
+  "ing": [
+    [
+      "tofu",
+      300
+    ],
+    [
+      "noodles",
+      180
+    ],
+    [
+      "cucumber",
+      120
+    ],
+    [
+      "carrot",
+      100
+    ],
+    [
+      "soy-sauce",
+      25
+    ],
+    [
+      "sesame-oil",
+      12
+    ],
+    [
+      "sesame-seeds",
+      10
+    ],
+    [
+      "rice-vinegar",
+      12
+    ],
+    [
+      "honey",
+      10
+    ]
+  ],
+  "steps": [
+    "Cook {noodles} according to the package directions, rinse briefly and drain.",
+    "Cube and pan-fry {tofu} until golden. Whisk {soy-sauce}, {sesame-oil}, {rice-vinegar} and {honey}.",
+    "Toss noodles with the sauce, matchstick {carrot}, sliced {cucumber} and tofu. Sprinkle with {sesame-seeds}."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "world-tomato-egg-stir-fry",
+    "name": "Chinese-style tomato and egg stir-fry",
+    "meal": "big",
+    "time": 15,
+    "serves": 2,
+    "ing": [
+      [
+        "eggs",
+        "4pc"
+      ],
+      [
+        "tomato",
+        350
+      ],
+      [
+        "spring-onion",
+        20
+      ],
+      [
+        "soy-sauce",
+        10
+      ],
+      [
+        "sugar",
+        4
+      ],
+      [
+        "oil",
+        15
+      ],
+      [
+        "rice",
+        140
+      ]
+    ],
+    "steps": [
+      "Cook {rice}. Beat {eggs} with a pinch of salt. Cut {tomato} into wedges.",
+      "Heat half the {oil} in a wok and softly scramble the eggs until just set; transfer to a plate.",
+      "Add remaining oil and cook tomatoes for 3–4 minutes until juicy. Add {soy-sauce} and {sugar}.",
+      "Return eggs to the wok and fold gently until warmed through. Top with sliced {spring-onion} and serve over rice."
+    ],
+    "cuisine": "Chinese"
+  },
+  {
+    "id": "world-garlic-broccoli-tofu",
+    "name": "Garlic broccoli and tofu stir-fry",
+    "meal": "big",
+    "time": 22,
+    "serves": 2,
+    "ing": [
+      [
+        "tofu",
+        250
+      ],
+      [
+        "broccoli",
+        300
+      ],
+      [
+        "garlic",
+        12
+      ],
+      [
+        "ginger",
+        8
+      ],
+      [
+        "soy-sauce",
+        25
+      ],
+      [
+        "cornstarch",
+        8
+      ],
+      [
+        "water",
+        100
+      ],
+      [
+        "sesame-oil",
+        8
+      ],
+      [
+        "rice",
+        140
+      ]
+    ],
+    "steps": [
+      "Cook {rice}. Cut {tofu} into cubes and {broccoli} into small florets.",
+      "Brown tofu in a hot pan with a little oil; set aside. Stir-fry broccoli with a splash of water for 3 minutes.",
+      "Add minced {garlic} and grated {ginger}. Mix {soy-sauce}, {cornstarch}, {water} and {sesame-oil}; pour into the pan.",
+      "Return tofu and toss until the sauce thickens and broccoli is tender-crisp. Serve over rice."
+    ],
+    "cuisine": "Chinese"
+  }
+]);

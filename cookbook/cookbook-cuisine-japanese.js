@@ -904,3 +904,210 @@ KITCHEN.add([
     "Grate {carrot} and slice {cucumber}.",
     "Serve over rice with the vegetables and {edamame}."]}
 ]);
+
+/* Additional curated recipes */
+KITCHEN.add([
+{
+  "id": "japanese-oyakodon-chicken-egg-rice",
+  "name": "Japanese chicken and egg rice bowl",
+  "meal": "big",
+  "cuisine": "Japanese",
+  "time": 25,
+  "serves": 2,
+  "ing": [
+    [
+      "chicken-thigh",
+      280
+    ],
+    [
+      "eggs",
+      "3pc"
+    ],
+    [
+      "rice",
+      150
+    ],
+    [
+      "onion",
+      "1pc"
+    ],
+    [
+      "soy-sauce",
+      25
+    ],
+    [
+      "mirin",
+      25
+    ],
+    [
+      "sake",
+      15
+    ],
+    [
+      "spring-onion",
+      25
+    ]
+  ],
+  "steps": [
+    "Cook the {rice}. Slice {onion} thinly and cut {chicken-thigh} into bite-sized pieces.",
+    "Simmer {soy-sauce}, {mirin}, {sake} and 100 ml water with the onion for 3 minutes. Add chicken and simmer until cooked through.",
+    "Pour lightly beaten {eggs} over the chicken. Cover and cook gently until just set. Spoon over rice and garnish with {spring-onion}."
+  ]
+},
+{
+  "id": "japanese-miso-aubergine",
+  "name": "Miso-glazed aubergine",
+  "meal": "big",
+  "cuisine": "Japanese",
+  "time": 30,
+  "serves": 2,
+  "ing": [
+    [
+      "aubergine",
+      350
+    ],
+    [
+      "miso-paste",
+      30
+    ],
+    [
+      "mirin",
+      20
+    ],
+    [
+      "honey",
+      12
+    ],
+    [
+      "sesame-oil",
+      10
+    ],
+    [
+      "sesame-seeds",
+      8
+    ],
+    [
+      "rice",
+      150
+    ],
+    [
+      "spring-onion",
+      25
+    ]
+  ],
+  "steps": [
+    "Heat the oven to 220 °C. Halve {aubergine} lengthwise and score the cut sides.",
+    "Mix {miso-paste}, {mirin}, {honey} and {sesame-oil}. Brush over the aubergine and roast cut-side up for 20–25 minutes until soft and glazed.",
+    "Cook {rice} and serve with the aubergine, {sesame-seeds} and sliced {spring-onion}."
+  ]
+}
+]);
+
+
+/* Additional recipes — added in a schema-compatible batch. */
+KITCHEN.add([
+  {
+    "id": "world-miso-butter-corn-ramen",
+    "name": "Miso butter corn noodle soup",
+    "meal": "big",
+    "time": 25,
+    "serves": 2,
+    "ing": [
+      [
+        "noodles",
+        180
+      ],
+      [
+        "vegetable-stock",
+        700
+      ],
+      [
+        "miso",
+        35
+      ],
+      [
+        "corn",
+        180
+      ],
+      [
+        "mushrooms",
+        120
+      ],
+      [
+        "butter",
+        20
+      ],
+      [
+        "spring-onion",
+        25
+      ],
+      [
+        "soy-sauce",
+        10
+      ],
+      [
+        "garlic",
+        5
+      ]
+    ],
+    "steps": [
+      "Cook {noodles} according to the packet and drain.",
+      "Sauté sliced {mushrooms} and {garlic} in half the {butter} until browned. Add {corn}.",
+      "Warm {vegetable-stock}; whisk in {miso} and {soy-sauce} until dissolved. Do not boil vigorously after adding miso.",
+      "Divide noodles and broth between bowls. Top with corn and mushrooms, remaining butter and sliced {spring-onion}."
+    ],
+    "cuisine": "Japanese"
+  },
+  {
+    "id": "world-teriyaki-mushroom-rice",
+    "name": "Teriyaki mushroom rice bowls",
+    "meal": "big",
+    "time": 22,
+    "serves": 2,
+    "ing": [
+      [
+        "rice",
+        140
+      ],
+      [
+        "mushrooms",
+        300
+      ],
+      [
+        "soy-sauce",
+        25
+      ],
+      [
+        "honey",
+        15
+      ],
+      [
+        "ginger",
+        8
+      ],
+      [
+        "garlic",
+        5
+      ],
+      [
+        "cornstarch",
+        5
+      ],
+      [
+        "spring-onion",
+        20
+      ],
+      [
+        "sesame-seeds",
+        5
+      ]
+    ],
+    "steps": [
+      "Cook {rice}. Slice {mushrooms}; grate {ginger} and {garlic}.",
+      "Brown mushrooms in a hot skillet until their moisture evaporates.",
+      "Mix {soy-sauce}, {honey}, ginger, garlic, {cornstarch} and 60 ml water. Pour over mushrooms and simmer until glossy and thickened.",
+      "Serve over rice with sliced {spring-onion} and {sesame-seeds}."
+    ],
+    "cuisine": "Japanese"
+  }
+]);
