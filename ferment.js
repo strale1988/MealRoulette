@@ -423,7 +423,7 @@ function spin(btn){
 }
 
 /* ---------- events ---------- */
-const shuf=a=>a.slice().sort(()=>Math.random()-.5);
+const shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
 const rnd=a=>a[Math.floor(Math.random()*a.length)];
 root.addEventListener("click",e=>{
  const b=e.target.closest("button[data-a]");if(!b)return;

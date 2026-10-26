@@ -7,7 +7,7 @@
 "use strict";
 const K=window.KITCHEN,PZ=window.PIZZA={styles:{},recipes:[],themes:{},groups:[],cats:[]};
 const bad=(who,msg)=>K.problems.push({lvl:"error",who:"pizza "+who,msg});
-const cap=s=>s[0].toUpperCase()+s.slice(1),rnd=a=>a[Math.floor(Math.random()*a.length)],shuf=a=>a.slice().sort(()=>Math.random()-.5);
+const cap=s=>s[0].toUpperCase()+s.slice(1),rnd=a=>a[Math.floor(Math.random()*a.length)],shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
 const nm=id=>K.name(id).toLowerCase();
 const rg=a=>a<5?Math.round(a*10)/10:a<50?Math.round(a):a<500?Math.round(a/5)*5:Math.round(a/10)*10;
 const num=(a,u)=>u==="pcs"?String(Math.max(1,Math.round(a))):String(rg(a));

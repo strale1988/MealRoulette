@@ -1,6 +1,6 @@
 // Meal generator: ingredients x techniques x templates x cuisines. Metric only.
 (function(){
-const rnd=a=>a[Math.floor(Math.random()*a.length)], shuf=a=>a.slice().sort(()=>Math.random()-.5);
+const rnd=a=>a[Math.floor(Math.random()*a.length)], shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
 const G=window.GEN={};
 // cooked leftovers are only for cookbook recipes written for them; the generator would cook them as raw food
 G.LO=/\b(leftover|cooked|stale|roast|pulled|boiled|mashed|day old|cold)\b/i;G.bakeOnly=false;

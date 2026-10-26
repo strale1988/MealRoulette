@@ -967,6 +967,24 @@ main:has(.tab.resmode:not([hidden])) .crumb{display:none}
 </div>
 
 <div id="tab-ferm" class="tab" role="tabpanel" hidden></div>
+<div id="tab-bread" class="tab" role="tabpanel" hidden></div>
+<div id="tab-grain" class="tab" role="tabpanel" hidden></div>
+<div id="tab-bake" class="tab" role="tabpanel" hidden></div>
+<div id="tab-drinks" class="tab" role="tabpanel" hidden></div>
+<div id="tab-pasta" class="tab" role="tabpanel" hidden></div>
+<div id="tab-soup" class="tab" role="tabpanel" hidden></div>
+<div id="tab-sauce" class="tab" role="tabpanel" hidden></div>
+<div id="tab-eggs" class="tab" role="tabpanel" hidden></div>
+<div id="tab-jam" class="tab" role="tabpanel" hidden></div>
+<div id="tab-dairy" class="tab" role="tabpanel" hidden></div>
+<div id="tab-dumpling" class="tab" role="tabpanel" hidden></div>
+<div id="tab-burger" class="tab" role="tabpanel" hidden></div>
+<div id="tab-grill" class="tab" role="tabpanel" hidden></div>
+<div id="tab-sandwich" class="tab" role="tabpanel" hidden></div>
+<div id="tab-salad" class="tab" role="tabpanel" hidden></div>
+<div id="tab-noodle" class="tab" role="tabpanel" hidden></div>
+<div id="tab-spice" class="tab" role="tabpanel" hidden></div>
+<div id="tab-frozen" class="tab" role="tabpanel" hidden></div>
 
 <div id="tab-craft" class="tab" role="tabpanel" hidden></div>
 
@@ -1042,6 +1060,7 @@ const QUICK=["chicken","eggs","rice","tomatoes","spinach","salmon","potatoes","m
 const I=n=>`<svg class="i"><use href="#i-${n}"/></svg>`;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const rnd=a=>a[Math.floor(Math.random()*a.length)],cap=s=>s[0].toUpperCase()+s.slice(1);
+const shufA=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
 window.mrNoSpin=()=>{try{return JSON.parse(localStorage.getItem("spins"))===0}catch(e){return false}};
 const store=(k,v)=>{try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||"null");localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}};
 const S=Object.assign({meal:"Main",n:2,pantry:[],diet:{},cuisine:"",strict:true,basic:true,days:5,pm:{Main:true},urgent:[],quick:false,staples:[],useLeftovers:false,leftovers:[],units:"metric",temp:"C"},store("mr2")||{});
@@ -1102,28 +1121,28 @@ let tab="cook",lastPlan=null;
    put <div id="tab-ID" class="tab" role="tabpanel" hidden></div> in the page, let ID.js fill it (like ferment.js) and set ready:1 here. ---------- */
 const UI={
  pizza:{icon:"pizza",grp:"Doughs and pasta",ready:1,chip:1,blurb:"Dough lab, sauces and toppings, scaled to your table"},
- bread:{icon:"bread",grp:"Doughs and pasta",chip:1,blurb:"Loaves, rolls and flatbreads",kw:"loaf sourdough focaccia rolls",plan:["Loaf calculator: flour, water, salt and yeast","Sourdough timing planner","Rolls, flatbreads and enriched doughs"]},
- pasta:{icon:"pasta",grp:"Doughs and pasta",chip:1,blurb:"Fresh pasta, shapes and sauces",kw:"noodle spaghetti",plan:["Fresh pasta dough by eggs and flour","Shapes and cooking times","Sauces matched to the shape"]},
- dumpling:{icon:"dumpling",grp:"Doughs and pasta",blurb:"Wrappers, fillings and folds",kw:"gyoza wonton momo pierogi",plan:["Wrapper dough by hydration","Filling quantities per dumpling","Steam, boil or pan-fry times"]},
- burger:{icon:"burger",grp:"Mains",chip:1,blurb:"Patties, buns and sauces",plan:["Patty size and fat ratio for your table","Brioche and potato bun dough","Sauces and toppings that go together"]},
- soup:{icon:"soup",grp:"Mains",chip:1,blurb:"Stocks, broths and big pots",kw:"broth stock chowder",plan:["Stock from bones and scraps: water, salt and time","Soup thickness and seasoning guide","Big-batch scaling and freezing"]},
- grill:{icon:"grill",grp:"Mains",blurb:"Marinades, rubs and cooking times",kw:"bbq barbecue marinade",plan:["Marinade and brine amounts by weight","Cooking time by thickness and doneness","Rubs and glazes"]},
- grain:{icon:"rice",grp:"Mains",blurb:"Rice, risotto and grains with the right water",kw:"rice risotto quinoa couscous pilaf porridge",plan:["Water ratio and cook time by grain","Risotto and pilaf timing","Big batches that reheat well"]},
- sandwich:{icon:"sandwich",grp:"Light and quick",blurb:"Sandwiches, wraps and toasties",kw:"wrap toastie panini burrito quesadilla",plan:["Fillings that balance: crunch, creamy, sharp","Wraps and toasties for a crowd","Lunchbox builds"]},
- salad:{icon:"salad",grp:"Light and quick",blurb:"Salads, slaws and bowls",kw:"slaw coleslaw bowl",plan:["Bowl builder: base, protein, crunch, dressing","Dressing ratios per serving","Salads that keep for tomorrow"]},
- eggs:{icon:"egg",grp:"Light and quick",blurb:"Omelettes, pancakes, crepes and waffles",kw:"omelette omelet pancake crepe waffle frittata scrambled shakshuka",plan:["Batter ratios: flour, milk and eggs","Omelette and frittata sizes by pan","Cooking times by doneness"]},
- noodle:{icon:"noodle",grp:"Mains",blurb:"Noodle bowls and stir-fries with a sauce from the pantry",kw:"ramen udon soba stir fry lo mein",plan:["Stir-fry sauce ratios from pantry staples","Noodle cook times by type","Fast bowls for one"]},
- sauce:{icon:"sauce",grp:"Pantry and preserving",blurb:"Dressings, dips and pan sauces",kw:"dressing dip gravy pesto",plan:["Dressing ratios that always balance","Pan sauces from what is in the pan","Dips and spreads"]},
+ bread:{icon:"bread",grp:"Doughs and pasta",ready:1,rec:1,chip:1,blurb:"Loaves, rolls and flatbreads",kw:"loaf sourdough focaccia rolls",plan:["Loaf calculator: flour, water, salt and yeast","Sourdough timing planner","Rolls, flatbreads and enriched doughs"]},
+ pasta:{icon:"pasta",grp:"Doughs and pasta",ready:1,rec:1,chip:1,blurb:"Fresh pasta, shapes and sauces",kw:"noodle spaghetti",plan:["Fresh pasta dough by eggs and flour","Shapes and cooking times","Sauces matched to the shape"]},
+ dumpling:{icon:"dumpling",grp:"Doughs and pasta",ready:1,rec:1,blurb:"Wrappers, fillings and folds",kw:"gyoza wonton momo pierogi",plan:["Wrapper dough by hydration","Filling quantities per dumpling","Steam, boil or pan-fry times"]},
+ burger:{icon:"burger",grp:"Mains",ready:1,rec:1,chip:1,blurb:"Patties, buns and sauces",plan:["Patty size and fat ratio for your table","Brioche and potato bun dough","Sauces and toppings that go together"]},
+ soup:{icon:"soup",grp:"Mains",ready:1,rec:1,chip:1,blurb:"Stocks, broths and big pots",kw:"broth stock chowder",plan:["Stock from bones and scraps: water, salt and time","Soup thickness and seasoning guide","Big-batch scaling and freezing"]},
+ grill:{icon:"grill",grp:"Mains",ready:1,rec:1,blurb:"Marinades, rubs and cooking times",kw:"bbq barbecue marinade",plan:["Marinade and brine amounts by weight","Cooking time by thickness and doneness","Rubs and glazes"]},
+ grain:{icon:"rice",grp:"Mains",ready:1,rec:1,blurb:"Rice, risotto and grains with the right water",kw:"rice risotto quinoa couscous pilaf porridge",plan:["Water ratio and cook time by grain","Risotto and pilaf timing","Big batches that reheat well"]},
+ sandwich:{icon:"sandwich",grp:"Light and quick",ready:1,rec:1,blurb:"Sandwiches, wraps and toasties",kw:"wrap toastie panini burrito quesadilla",plan:["Fillings that balance: crunch, creamy, sharp","Wraps and toasties for a crowd","Lunchbox builds"]},
+ salad:{icon:"salad",grp:"Light and quick",ready:1,rec:1,blurb:"Salads, slaws and bowls",kw:"slaw coleslaw bowl",plan:["Bowl builder: base, protein, crunch, dressing","Dressing ratios per serving","Salads that keep for tomorrow"]},
+ eggs:{icon:"egg",grp:"Light and quick",ready:1,rec:1,blurb:"Omelettes, pancakes, crepes and waffles",kw:"omelette omelet pancake crepe waffle frittata scrambled shakshuka",plan:["Batter ratios: flour, milk and eggs","Omelette and frittata sizes by pan","Cooking times by doneness"]},
+ noodle:{icon:"noodle",grp:"Mains",ready:1,rec:1,blurb:"Noodle bowls and stir-fries with a sauce from the pantry",kw:"ramen udon soba stir fry lo mein",plan:["Stir-fry sauce ratios from pantry staples","Noodle cook times by type","Fast bowls for one"]},
+ sauce:{icon:"sauce",grp:"Pantry and preserving",ready:1,rec:1,blurb:"Dressings, dips and pan sauces",kw:"dressing dip gravy pesto",plan:["Dressing ratios that always balance","Pan sauces from what is in the pan","Dips and spreads"]},
  ferm:{icon:"ferm",grp:"Pantry and preserving",ready:1,blurb:"Pickles, kraut and kimchi with exact salt and timing",kw:"ferment pickle kimchi sauerkraut"},
- dairy:{icon:"dairy",grp:"Pantry and preserving",blurb:"Yogurt, labneh and fresh cheese",kw:"yogurt yoghurt paneer labneh kefir ricotta",plan:["Yogurt: milk, starter, temperature and hours","Strained yogurt and labneh by thickness","Fresh cheeses from milk and acid"]},
- jam:{icon:"jam",grp:"Pantry and preserving",blurb:"Jams, compotes and quick fridge preserves",kw:"jam compote marmalade preserve",plan:["Fruit-to-sugar ratios and set point","Fridge jams versus properly canned jars","Compotes and fruit sauces"]},
- spice:{icon:"spice",grp:"Pantry and preserving",blurb:"Spice blends, rubs and pastes you make once and reuse",kw:"masala rub seasoning curry paste",plan:["Blends by the tablespoon, scaled to any batch","Curry pastes and marinades","How long each blend keeps"]},
- frozen:{icon:"icecream",grp:"Sweet and sips",blurb:"Ice cream, sorbet and ice lollies",kw:"icecream sorbet granita popsicle lolly",plan:["Sorbet from fruit: sugar balance for a soft scoop","Ice cream bases with and without a machine","Granita and lollies"]},
- bake:{icon:"cupcake",grp:"Sweet and sips",blurb:"Cakes, cookies and tins sized right",kw:"cake cookie cookies",plan:["Scale a cake to any tin size","Cookie dough ratios","Baking times by tin and oven"]},
- drinks:{icon:"drinks",grp:"Sweet and sips",blurb:"Smoothies, cold brew and lemonade",kw:"smoothie coffee lemonade",plan:["Cold brew and tea ratios","Smoothies from your fridge","Syrups and lemonade by the jug"]}
+ dairy:{icon:"dairy",grp:"Pantry and preserving",ready:1,rec:1,blurb:"Yogurt, labneh and fresh cheese",kw:"yogurt yoghurt paneer labneh kefir ricotta",plan:["Yogurt: milk, starter, temperature and hours","Strained yogurt and labneh by thickness","Fresh cheeses from milk and acid"]},
+ jam:{icon:"jam",grp:"Pantry and preserving",ready:1,rec:1,blurb:"Jams, compotes and quick fridge preserves",kw:"jam compote marmalade preserve",plan:["Fruit-to-sugar ratios and set point","Fridge jams versus properly canned jars","Compotes and fruit sauces"]},
+ spice:{icon:"spice",grp:"Pantry and preserving",ready:1,rec:1,blurb:"Spice blends, rubs and pastes you make once and reuse",kw:"masala rub seasoning curry paste",plan:["Blends by the tablespoon, scaled to any batch","Curry pastes and marinades","How long each blend keeps"]},
+ frozen:{icon:"icecream",grp:"Sweet and sips",ready:1,rec:1,blurb:"Ice cream, sorbet and ice lollies",kw:"icecream sorbet granita popsicle lolly",plan:["Sorbet from fruit: sugar balance for a soft scoop","Ice cream bases with and without a machine","Granita and lollies"]},
+ bake:{icon:"cupcake",grp:"Sweet and sips",ready:1,rec:1,blurb:"Cakes, cookies and tins sized right",kw:"cake cookie cookies",plan:["Scale a cake to any tin size","Cookie dough ratios","Baking times by tin and oven"]},
+ drinks:{icon:"drinks",grp:"Sweet and sips",ready:1,rec:1,blurb:"Smoothies, cold brew and lemonade",kw:"smoothie coffee lemonade",plan:["Cold brew and tea ratios","Smoothies from your fridge","Syrups and lemonade by the jug"]}
 };
 Object.keys(UI).forEach(k=>{if(!K.CRAFTS.some(c=>c.id===k))console.error("Craft UI entry '"+k+"' has no tool in K.CRAFTS (kitchen.js)")});
-const TOOLS=K.CRAFTS.map(c=>{const u=UI[c.id]||{};return{id:c.id,name:c.name,icon:u.icon||"chef",grp:u.grp||"More",blurb:u.blurb||"",ready:u.ready||0,chip:u.chip||0,plan:u.plan||[],
+const TOOLS=K.CRAFTS.map(c=>{const u=UI[c.id]||{};return{id:c.id,name:c.name,icon:u.icon||"chef",grp:u.grp||"More",blurb:u.blurb||"",ready:u.ready||0,rec:u.rec||0,chip:u.chip||0,plan:u.plan||[],
   words:[...new Set(K.norm(c.id+" "+c.name+" "+(u.kw||"")).split(" ").filter(Boolean))]}});
 const PANELS=["cook","craft",...TOOLS.map(t=>t.id),"kit"],navOf=t=>t==="cook"||t==="kit"?t:"craft";
 const recText=r=>r._h||(r._h=K.norm([r.title,r.cuisine,r.craft,...(r.ids||[]).map(id=>K.ING[id]?K.ING[id].name:"")].join(" ")));
@@ -1148,12 +1167,12 @@ function stubSync(t,all){const el=$("tab-"+t.id);if(!el)return;const rs=craftRec
   $("crumbb").onclick=()=>setTab("craft");
 })();
 // recipe count on each card that has no calculator yet (after the diet filters), refreshed whenever the hub opens
-function hubSync(){TOOLS.forEach(t=>{const e=document.querySelector(`#tab-craft .cc[data-tool="${t.id}"] .cn`);if(!e)return;const n=t.ready?0:craftRecipes(t).length;e.hidden=!n;e.textContent=n?`${n} ${n===1?"recipe":"recipes"}`:""})}
+function hubSync(){TOOLS.forEach(t=>{const e=document.querySelector(`#tab-craft .cc[data-tool="${t.id}"] .cn`);if(!e)return;const n=t.ready&&!t.rec?0:craftRecipes(t).length;e.hidden=!n;e.textContent=n?`${n} ${n===1?"recipe":"recipes"}`:""})}
 function setTab(t){if(!PANELS.includes(t))t="cook";tab=t;
   PANELS.forEach(k=>{const el=$("tab-"+k);if(el)el.hidden=k!==t});
   document.querySelectorAll("#tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.t===navOf(t)));
   $("crumb").hidden=!TOOLS.some(x=>x.id===t);
-  const T=TOOLS.find(x=>x.id===t);if(T&&!T.ready)stubSync(T);if(t==="craft")hubSync();
+  const T=TOOLS.find(x=>x.id===t);if(T&&(!T.ready||T.rec))stubSync(T);if(t==="craft")hubSync();
   if(t==="pizza"&&typeof pzUI==="function")pzSection(S.pz.sec||"dough");scrollTo({top:0})}
 document.querySelectorAll("#tabs button").forEach(b=>b.onclick=()=>setTab(b.dataset.t));
 /* ---------- Cook search: one box for every recipe, plus a shortcut into a matching Craft tool ---------- */
@@ -1283,7 +1302,7 @@ const RECIPES=K.recipes; // built by kitchen.js from ingredients.js + cookbook-*
 let current=null,kind="spin";
 /* history survives reloads: recipes are not repeated until the whole pool for that meal has been used */
 const HK="hist3",hist=()=>store(HK)||{},seenOf=()=>(hist().r||{})[S.meal]||[],recentG=()=>hist().g||[];
-function markSeen(id){const h=hist();h.r=h.r||{};h.r[S.meal]=(h.r[S.meal]||[]).filter(x=>x!==id).concat(id).slice(-80);store(HK,h)}
+function markSeen(id){const h=hist();h.r=h.r||{};h.r[S.meal]=(h.r[S.meal]||[]).filter(x=>x!==id).concat(id).slice(-400);store(HK,h)}
 function clearSeen(){const h=hist();h.r=h.r||{};h.r[S.meal]=[];store(HK,h)}
 function markGen(t){const h=hist();h.g=(h.g||[]).filter(x=>x!==t).concat(t).slice(-40);store(HK,h)}
 const recent=t=>recentG().includes(t);
@@ -1334,6 +1353,7 @@ function pickWeighted(pool){
   for(let i=0;i<pool.length;i++){if((t-=ws[i])<0)return pool[i]}return pool[pool.length-1];
 }
 function pickRecipe(L,msg){
+  if(!L||!L.length)return nothing();
   // best tier first (fewest to buy, cuisine match, priority items, then most fridge items); only move to a worse tier when every recipe in the better ones was already shown
   const sn=seenOf(),tiers=[];
   L.slice().sort((a,b)=>b.urg-a.urg||a.miss-b.miss||b.hit-a.hit||b.cu-a.cu).forEach(x=>{const t=tiers[tiers.length-1];if(t&&t[0].urg===x.urg&&t[0].miss===x.miss&&t[0].hit===x.hit&&t[0].cu===x.cu)t.push(x);else tiers.push([x])});
@@ -1512,7 +1532,7 @@ function buildList(days){
 }
 function plan(mode){
   const meals=MEALS.map(m=>m[0]).filter(m=>S.pm[m]);PT=new Set();if(!meals.length){$("out").innerHTML="";$("note").textContent="Pick a meal type above to plan.";return}
-  let it=items(),ug=S.urgent.slice();const cus=Object.keys(GEN.cuisines).sort(()=>Math.random()-.5),days=[],pc={},rp=[],rc=[];let ci=0;
+  let it=items(),ug=S.urgent.slice();const cus=shufA(Object.keys(GEN.cuisines)),days=[],pc={},rp=[],rc=[];let ci=0;
   for(let d=1;d<=S.days;d++)for(const m of meals){
     const cu=S.cuisine||cus[ci++%cus.length],g=planG(bestMeal(m,it,cu,dietP({avoidP:rp.slice(-3),avoidC:rc.slice(-2),urgent:ug}),mode,pc));
     if(m==="Main"){if(g.pk)rp.push(g.pk);if(g.ck)rc.push(g.ck)}
@@ -1866,7 +1886,7 @@ draw();
 const EM=[[/chicken|poultry|turkey/,"🍗"],[/beef|steak|mince|pork|ham|bacon|sausage|lamb/,"🥩"],[/salmon|fish|tuna|cod|prawn|shrimp/,"🐟"],[/egg/,"🥚"],[/rice/,"🍚"],[/pasta|spaghetti|noodle|macaroni|orzo/,"🍝"],[/tomato/,"🍅"],[/spinach|lettuce|kale|cabbage|salad|herb|basil|parsley/,"🥬"],[/potato/,"🥔"],[/mushroom/,"🍄"],[/cheese|cheddar|feta|parmesan|mozzarella/,"🧀"],[/onion|leek/,"🧅"],[/garlic/,"🧄"],[/carrot/,"🥕"],[/lemon|lime/,"🍋"],[/pepper|chilli|chili|paprika/,"🌶️"],[/bread|toast|bun/,"🍞"],[/milk|cream|yogurt|yoghurt/,"🥛"],[/butter/,"🧈"],[/corn/,"🌽"],[/avocado/,"🥑"],[/broccoli|cauliflower/,"🥦"],[/banana/,"🍌"],[/apple|pear/,"🍎"],[/bean|lentil|chickpea/,"🫘"],[/cucumber|courgette|zucchini/,"🥒"],[/aubergine|eggplant/,"🍆"]];
 const DEF=["🍅","🥕","🧄","🍋","🧀","🍄"];
 function fill(){const mine=[];[...S.pantry,...(S.useLeftovers?S.leftovers:[])].forEach(p=>{const e=(EM.find(x=>x[0].test(p.toLowerCase()))||[])[1];if(e&&!mine.includes(e))mine.push(e)});
-  const list=[...mine.sort(()=>Math.random()-.5).slice(0,6)];DEF.forEach(e=>{if(list.length<6&&!list.includes(e))list.push(e)});
+  const list=[...shufA(mine).slice(0,6)];DEF.forEach(e=>{if(list.length<6&&!list.includes(e))list.push(e)});
   document.querySelectorAll("#reel .ing i").forEach((el,k)=>el.textContent=list[k]||DEF[k])}
 const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,arguments)};
 })();
@@ -2460,7 +2480,7 @@ window.__tidyRow=function(row,icon){
 /* Loader: downloads every file in parallel (fast on phones), runs them in order, retries a failed file once,
    and shows a Reload button instead of a blank page if something still fails. */
 (function(){
-var FILES=["kitchen.js","ingredients.js","cookbook/cookbook-bake.js","cookbook/cookbook-craft.js","cookbook/cookbook-cuisine-american.js","cookbook/cookbook-cuisine-argentine.js","cookbook/cookbook-cuisine-armenian.js","cookbook/cookbook-cuisine-australian.js","cookbook/cookbook-cuisine-azerbaijani.js","cookbook/cookbook-cuisine-balkan.js","cookbook/cookbook-cuisine-belizean.js","cookbook/cookbook-cuisine-bolivian.js","cookbook/cookbook-cuisine-brazilian.js","cookbook/cookbook-cuisine-british.js","cookbook/cookbook-cuisine-cajun.js","cookbook/cookbook-cuisine-cameroonian.js","cookbook/cookbook-cuisine-canadian.js","cookbook/cookbook-cuisine-caribbean.js","cookbook/cookbook-cuisine-chilean.js","cookbook/cookbook-cuisine-chinese.js","cookbook/cookbook-cuisine-colombian.js","cookbook/cookbook-cuisine-congolese.js","cookbook/cookbook-cuisine-costa-rican.js","cookbook/cookbook-cuisine-cuban.js","cookbook/cookbook-cuisine-danish.js","cookbook/cookbook-cuisine-dominican.js","cookbook/cookbook-cuisine-ecuadorian.js","cookbook/cookbook-cuisine-eritrean.js","cookbook/cookbook-cuisine-ethiopian.js","cookbook/cookbook-cuisine-fijian.js","cookbook/cookbook-cuisine-filipino.js","cookbook/cookbook-cuisine-french.js","cookbook/cookbook-cuisine-georgian.js","cookbook/cookbook-cuisine-german.js","cookbook/cookbook-cuisine-ghanaian.js","cookbook/cookbook-cuisine-greek.js","cookbook/cookbook-cuisine-guatemalan.js","cookbook/cookbook-cuisine-guyanese.js","cookbook/cookbook-cuisine-haitian.js","cookbook/cookbook-cuisine-honduran.js","cookbook/cookbook-cuisine-hungarian.js","cookbook/cookbook-cuisine-indian.js","cookbook/cookbook-cuisine-indonesian.js","cookbook/cookbook-cuisine-irish.js","cookbook/cookbook-cuisine-italian.js","cookbook/cookbook-cuisine-ivorian.js","cookbook/cookbook-cuisine-jamaican.js","cookbook/cookbook-cuisine-japanese.js","cookbook/cookbook-cuisine-kazakh.js","cookbook/cookbook-cuisine-kenyan.js","cookbook/cookbook-cuisine-korean.js","cookbook/cookbook-cuisine-kyrgyz.js","cookbook/cookbook-cuisine-lebanese.js","cookbook/cookbook-cuisine-malaysian.js","cookbook/cookbook-cuisine-malian.js","cookbook/cookbook-cuisine-maori.js","cookbook/cookbook-cuisine-mexican.js","cookbook/cookbook-cuisine-middle-eastern.js","cookbook/cookbook-cuisine-moroccan.js","cookbook/cookbook-cuisine-nepali.js","cookbook/cookbook-cuisine-nicaraguan.js","cookbook/cookbook-cuisine-nigerian.js","cookbook/cookbook-cuisine-norwegian.js","cookbook/cookbook-cuisine-pakistani.js","cookbook/cookbook-cuisine-panamanian.js","cookbook/cookbook-cuisine-papua-new-guinean.js","cookbook/cookbook-cuisine-paraguayan.js","cookbook/cookbook-cuisine-persian.js","cookbook/cookbook-cuisine-peruvian.js","cookbook/cookbook-cuisine-polish.js","cookbook/cookbook-cuisine-portuguese.js","cookbook/cookbook-cuisine-puerto-rican.js","cookbook/cookbook-cuisine-russian.js","cookbook/cookbook-cuisine-salvadoran.js","cookbook/cookbook-cuisine-samoan.js","cookbook/cookbook-cuisine-scottish.js","cookbook/cookbook-cuisine-senegalese.js","cookbook/cookbook-cuisine-singaporean.js","cookbook/cookbook-cuisine-somali.js","cookbook/cookbook-cuisine-south-african.js","cookbook/cookbook-cuisine-spanish.js","cookbook/cookbook-cuisine-sri-lankan.js","cookbook/cookbook-cuisine-sudanese.js","cookbook/cookbook-cuisine-surinamese.js","cookbook/cookbook-cuisine-swedish.js","cookbook/cookbook-cuisine-swiss.js","cookbook/cookbook-cuisine-taiwanese.js","cookbook/cookbook-cuisine-tajik.js","cookbook/cookbook-cuisine-tanzanian.js","cookbook/cookbook-cuisine-thai.js","cookbook/cookbook-cuisine-tongan.js","cookbook/cookbook-cuisine-trinidadian.js","cookbook/cookbook-cuisine-turkish.js","cookbook/cookbook-cuisine-turkmen.js","cookbook/cookbook-cuisine-ugandan.js","cookbook/cookbook-cuisine-ukrainian.js","cookbook/cookbook-cuisine-uruguayan.js","cookbook/cookbook-cuisine-uzbek.js","cookbook/cookbook-cuisine-venezuelan.js","cookbook/cookbook-cuisine-vietnamese.js","cookbook/cookbook-everyday.js","cookbook/cookbook-fancy.js","cookbook/cookbook-leftovers.js","cookbook/cookbook-light.js","cookbook/cookbook-more-light-b.js","cookbook/cookbook-more-light.js","cookbook/cookbook-more-mains-a.js","cookbook/cookbook-more-mains-b.js","cookbook/cookbook-quick.js","cookbook/cookbook-wraps-sandwiches.js","pizza.js","ferment.js","engine.js"];
+var FILES=["kitchen.js","ingredients.js","cookbook/cookbook-bake.js","cookbook/cookbook-craft.js","cookbook/cookbook-cuisine-american.js","cookbook/cookbook-cuisine-argentine.js","cookbook/cookbook-cuisine-armenian.js","cookbook/cookbook-cuisine-australian.js","cookbook/cookbook-cuisine-azerbaijani.js","cookbook/cookbook-cuisine-balkan.js","cookbook/cookbook-cuisine-belizean.js","cookbook/cookbook-cuisine-bolivian.js","cookbook/cookbook-cuisine-brazilian.js","cookbook/cookbook-cuisine-british.js","cookbook/cookbook-cuisine-cajun.js","cookbook/cookbook-cuisine-cameroonian.js","cookbook/cookbook-cuisine-canadian.js","cookbook/cookbook-cuisine-caribbean.js","cookbook/cookbook-cuisine-chilean.js","cookbook/cookbook-cuisine-chinese.js","cookbook/cookbook-cuisine-colombian.js","cookbook/cookbook-cuisine-congolese.js","cookbook/cookbook-cuisine-costa-rican.js","cookbook/cookbook-cuisine-cuban.js","cookbook/cookbook-cuisine-danish.js","cookbook/cookbook-cuisine-dominican.js","cookbook/cookbook-cuisine-ecuadorian.js","cookbook/cookbook-cuisine-eritrean.js","cookbook/cookbook-cuisine-ethiopian.js","cookbook/cookbook-cuisine-fijian.js","cookbook/cookbook-cuisine-filipino.js","cookbook/cookbook-cuisine-french.js","cookbook/cookbook-cuisine-georgian.js","cookbook/cookbook-cuisine-german.js","cookbook/cookbook-cuisine-ghanaian.js","cookbook/cookbook-cuisine-greek.js","cookbook/cookbook-cuisine-guatemalan.js","cookbook/cookbook-cuisine-guyanese.js","cookbook/cookbook-cuisine-haitian.js","cookbook/cookbook-cuisine-honduran.js","cookbook/cookbook-cuisine-hungarian.js","cookbook/cookbook-cuisine-indian.js","cookbook/cookbook-cuisine-indonesian.js","cookbook/cookbook-cuisine-irish.js","cookbook/cookbook-cuisine-italian.js","cookbook/cookbook-cuisine-ivorian.js","cookbook/cookbook-cuisine-jamaican.js","cookbook/cookbook-cuisine-japanese.js","cookbook/cookbook-cuisine-kazakh.js","cookbook/cookbook-cuisine-kenyan.js","cookbook/cookbook-cuisine-korean.js","cookbook/cookbook-cuisine-kyrgyz.js","cookbook/cookbook-cuisine-lebanese.js","cookbook/cookbook-cuisine-malaysian.js","cookbook/cookbook-cuisine-malian.js","cookbook/cookbook-cuisine-maori.js","cookbook/cookbook-cuisine-mexican.js","cookbook/cookbook-cuisine-middle-eastern.js","cookbook/cookbook-cuisine-moroccan.js","cookbook/cookbook-cuisine-nepali.js","cookbook/cookbook-cuisine-nicaraguan.js","cookbook/cookbook-cuisine-nigerian.js","cookbook/cookbook-cuisine-norwegian.js","cookbook/cookbook-cuisine-pakistani.js","cookbook/cookbook-cuisine-panamanian.js","cookbook/cookbook-cuisine-papua-new-guinean.js","cookbook/cookbook-cuisine-paraguayan.js","cookbook/cookbook-cuisine-persian.js","cookbook/cookbook-cuisine-peruvian.js","cookbook/cookbook-cuisine-polish.js","cookbook/cookbook-cuisine-portuguese.js","cookbook/cookbook-cuisine-puerto-rican.js","cookbook/cookbook-cuisine-russian.js","cookbook/cookbook-cuisine-salvadoran.js","cookbook/cookbook-cuisine-samoan.js","cookbook/cookbook-cuisine-scottish.js","cookbook/cookbook-cuisine-senegalese.js","cookbook/cookbook-cuisine-singaporean.js","cookbook/cookbook-cuisine-somali.js","cookbook/cookbook-cuisine-south-african.js","cookbook/cookbook-cuisine-spanish.js","cookbook/cookbook-cuisine-sri-lankan.js","cookbook/cookbook-cuisine-sudanese.js","cookbook/cookbook-cuisine-surinamese.js","cookbook/cookbook-cuisine-swedish.js","cookbook/cookbook-cuisine-swiss.js","cookbook/cookbook-cuisine-taiwanese.js","cookbook/cookbook-cuisine-tajik.js","cookbook/cookbook-cuisine-tanzanian.js","cookbook/cookbook-cuisine-thai.js","cookbook/cookbook-cuisine-tongan.js","cookbook/cookbook-cuisine-trinidadian.js","cookbook/cookbook-cuisine-turkish.js","cookbook/cookbook-cuisine-turkmen.js","cookbook/cookbook-cuisine-ugandan.js","cookbook/cookbook-cuisine-ukrainian.js","cookbook/cookbook-cuisine-uruguayan.js","cookbook/cookbook-cuisine-uzbek.js","cookbook/cookbook-cuisine-venezuelan.js","cookbook/cookbook-cuisine-vietnamese.js","cookbook/cookbook-everyday.js","cookbook/cookbook-fancy.js","cookbook/cookbook-leftovers.js","cookbook/cookbook-light.js","cookbook/cookbook-more-light-b.js","cookbook/cookbook-more-light.js","cookbook/cookbook-more-mains-a.js","cookbook/cookbook-more-mains-b.js","cookbook/cookbook-quick.js","cookbook/cookbook-wraps-sandwiches.js","pizza.js","ferment.js","craft.js","engine.js"];
 var boot=document.getElementById("boot");
 function fail(){var sp=document.getElementById("splash");if(sp)sp.remove();boot.hidden=false;document.getElementById("bootbtn").onclick=function(){
   var go=function(){location.reload()};
