@@ -350,7 +350,7 @@ function build(){
   <div class="lab" style="margin-top:16px">${I("leaf")}${m.multi?"What is going in? <small style='font-weight:400'>(pick one or more)</small>":"What is going in?"}</div>
   <div class="tg fm">${its}</div>
   <div class="lab" style="margin-top:16px">${I("ruler")}How much ${m.id==="honey"?"to ferment":m.id==="lemons"?"fruit":"vegetables"}</div>
-  <div class="step"><button data-a="gm" aria-label="Less">${I("minus")}</button><b id="fmg">${g} g</b><button data-a="gp" aria-label="More">${I("plus")}</button></div>
+  <div class="step"><button data-a="gm" aria-label="Less ${m.id==="honey"?"honey":m.id==="lemons"?"fruit":"vegetables"}">${I("minus")}</button><b id="fmg">${g} g</b><button data-a="gp" aria-label="More ${m.id==="honey"?"honey":m.id==="lemons"?"fruit":"vegetables"}">${I("plus")}</button></div>
   <p class="sum" style="margin:8px 0 0">${(g/1000).toFixed(g%100?2:1)} kg${pcs}${r?` · makes about ${r.jar}`:""}</p>
   ${sal}${tmp}
   <div class="lab" style="margin-top:16px">${I("wand")}Flavour</div>
@@ -393,7 +393,7 @@ function build(){
 const DEFE=["🥒","🥕","🧄","🌶️","🥬","🍋"];
 let busy=false;
 function pickRandom(){
- let rt={};try{rt=JSON.parse(localStorage.getItem("rate")||"null")||{}}catch(e){}
+ let rt={};try{rt=JSON.parse(localStorage.getItem("mr-rate")||"null")||{}}catch(e){}
  const wt=x=>{let k=1;for(const t in rt){const e=rt[t];if(e&&e.m===x.id)k*=e.v>0?1.6:.5}return k}; // thumbs steer which kind of ferment comes up
  let tot=0;const ws=M.map(x=>{const w=wt(x);tot+=w;return w});let pick=Math.random()*tot,mm=M[M.length-1];for(let i=0;i<M.length;i++){pick-=ws[i];if(pick<=0){mm=M[i];break}}
 ST.m=mm.id;

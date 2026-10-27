@@ -8,7 +8,13 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",
 const I=n=>`<svg class="i"><use href="#i-${n}"/></svg>`;
 const KEY="mr-craft";let ST={};try{ST=JSON.parse(localStorage.getItem(KEY)||"{}")||{}}catch(e){}
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(ST))}catch(e){}};
-let people=2;try{people=Math.min(10,Math.max(1,+(JSON.parse(localStorage.getItem("mr2")||"{}").n)||2))}catch(e){}
+/* copy to the clipboard; falls back to a hidden textarea + execCommand where the Clipboard API is missing or refused (older browsers, non-secure pages). Resolves true/false. */
+const copyText=async t=>{
+ try{if(navigator.clipboard&&navigator.clipboard.writeText){await navigator.clipboard.writeText(t);return true}}catch(e){}
+ try{const a=document.createElement("textarea");a.value=t;a.setAttribute("readonly","");a.style.cssText="position:fixed;top:0;left:0;opacity:0";document.body.appendChild(a);a.select();a.setSelectionRange(0,t.length);const ok=document.execCommand("copy");a.remove();return !!ok}catch(e){return false}};
+/* flash a button label ("Copied" / "Couldn't copy"), then put the original back after 2 s; a second press restarts the timer */
+const flash=(b,icon,txt)=>{if(b._t)clearTimeout(b._t);else b._o=b.innerHTML;b.innerHTML=I(icon)+txt;b._t=setTimeout(()=>{b.innerHTML=b._o;b._t=b._o=null},2000)};
+let people=2;try{people=Math.min(10,Math.max(1,+(JSON.parse(localStorage.getItem("mr-state")||"{}").n)||2))}catch(e){}
 const rg=a=>a<10?Math.round(a*2)/2:a<100?Math.round(a):a<500?Math.round(a/5)*5:Math.round(a/10)*10;
 const G=a=>rg(a)+" g",ML=a=>rg(a)+" g",P1=a=>Math.max(.5,Math.round(a*2)/2);
 const eggs=gr=>{const n=Math.max(.5,Math.round(gr/50*2)/2);return n+(n===1?" egg":" eggs")+" ("+rg(gr)+" g)"};
@@ -52,11 +58,19 @@ const ICO={
 "🍇":`<path d="M0 -10V-14" stroke="#2e7d32" stroke-width="2" stroke-linecap="round"/><path d="M0 -13Q6 -16 9 -12Q4 -9 0 -13Z" fill="#43a047" ${IS1}/><g fill="#8e4cc4" ${IS1}><circle cx="-7" cy="-4" r="5"/><circle cx="0" cy="-4" r="5"/><circle cx="7" cy="-4" r="5"/><circle cx="-3.5" cy="3" r="5"/><circle cx="3.5" cy="3" r="5"/><circle cx="0" cy="10" r="5"/></g><g fill="#fff" fill-opacity=".6"><circle cx="-8" cy="-6" r="1.2"/><circle cx="-1" cy="-6" r="1.2"/><circle cx="6" cy="-6" r="1.2"/></g>`,
 "🧀":`<path d="M-14 -6L14 -12V8H-14Z" fill="#ffc83d" ${IS}/><g fill="#e6a312"><circle cx="-6" cy="0" r="2.4"/><circle cx="4" cy="-2" r="2"/><circle cx="8" cy="3" r="2.2"/><circle cx="-2" cy="5" r="1.8"/></g>`,
 "🍯":`<path d="M-9 -8Q-12 -3 -12 4Q-12 12 -5 12H5Q12 12 12 4Q12 -3 9 -8Z" fill="#f3a712" ${IS}/><rect x="-8" y="-13" width="16" height="5" rx="2" fill="#8a5a2b" ${IS1}/><rect x="-6" y="-1" width="12" height="8" rx="2" fill="#fff3cf"/><path d="M-8 -4Q-8 0 -9 3" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="2" stroke-linecap="round"/>`,
-"🍫":`<rect x="-11" y="-13" width="22" height="26" rx="3" fill="#7a3b1d" ${IS}/><path d="M-3.7 -13V13M3.7 -13V13M-11 -4.3H11M-11 4.3H11" stroke="#4a2410" stroke-width="1.5"/>`
+"🍫":`<rect x="-11" y="-13" width="22" height="26" rx="3" fill="#7a3b1d" ${IS}/><path d="M-3.7 -13V13M3.7 -13V13M-11 -4.3H11M-11 4.3H11" stroke="#4a2410" stroke-width="1.5"/>`,
+"🐟":`<path d="M-13 0Q-5 -9 5 -5L9 -9V9L5 5Q-5 9 -13 0Z" fill="#6fb3d9" ${IS}/><path d="M-1 -5Q2 0 -1 5" fill="none" stroke="#3b82b0" stroke-width="1.5" stroke-linecap="round"/><circle cx="-7" cy="-1.5" r="1.4" fill="#2a1a13"/>`,
+"🍝":`<path d="M-9 1Q-9 -9 -3 -8Q0 -12 3 -8Q9 -9 9 1Z" fill="#f2c94c" ${IS}/><circle cx="0" cy="-3" r="2.2" fill="#e53b2c"/><path d="M-13 1H13Q12 12 0 13Q-12 12 -13 1Z" fill="#f6efe0" ${IS}/>`,
+"🥛":`<path d="M-8 -12H8L6 11Q6 13 4 13H-4Q-6 13 -6 11Z" fill="#dff0fa" ${IS}/><path d="M-7.3 -3H7.3L6 11Q6 13 4 13H-4Q-6 13 -6 11Z" fill="#fff" ${IS1}/>`,
+"🥦":`<path d="M-3 14L-2 5H2L3 14Z" fill="#8bc34a" ${IS1}/><circle cx="-6" cy="-1" r="6" fill="#43a047" ${IS}/><circle cx="6" cy="-1" r="6" fill="#43a047" ${IS}/><circle cx="0" cy="-6" r="7" fill="#4caf50" ${IS}/>`,
+"🍌":`<path d="M-12 -6Q-10 8 4 11Q12 12 14 6Q6 8 0 2Q-4 -4 -4 -12L-9 -12Q-12 -9 -12 -6Z" fill="#ffd54f" ${IS}/>`,
+"🍎":`<path d="M0 -6Q-6 -9 -11 -4Q-14 4 -8 11Q-4 14 0 12Q4 14 8 11Q14 4 11 -4Q6 -9 0 -6Z" fill="#e53b2c" ${IS}/><path d="M0 -6Q0 -11 3 -13" fill="none" stroke="#5d4037" stroke-width="1.8" stroke-linecap="round"/><path d="M2 -9Q6 -13 10 -10Q6 -6 2 -9Z" fill="#43a047" ${IS1}/>`,
+"🫘":`<path d="M-12 -2Q-12 -10 -4 -9Q4 -8 2 0Q0 8 -7 8Q-12 7 -12 -2Z" fill="#a1432a" ${IS}/><path d="M2 3Q2 -4 8 -4Q14 -3 13 4Q12 12 6 12Q2 11 2 3Z" fill="#c25a35" ${IS}/>`,
+"🍆":`<path d="M5 -9Q13 -2 9 6Q4 14 -5 12Q-12 10 -9 3Q-5 -3 1 -8Z" fill="#6a3a8c" ${IS}/><path d="M1 -8L5 -9L7 -13Q2 -14 -1 -11Z" fill="#43a047" ${IS1}/>`
 };
 window.__ico=e=>icoHTML(e);const icoHTML=e=>ICO[e]?`<svg viewBox="-16 -16 32 32" width="30" height="30" aria-hidden="true">${ICO[e]}</svg>`:e;
 /* burger spinner art: the layers lift off one after another and drop back into a stack (animated in index.html) */
-const BURGER_ART=`<div class="bgr"><svg viewBox="0 0 240 190" aria-hidden="true"><circle cx="120" cy="95" r="84" fill="#f6efe0" style="stroke:var(--ink)" stroke-width="3"/><circle cx="120" cy="95" r="76" fill="none" stroke="#d63a22" stroke-opacity=".4" stroke-width="3"/><g transform="translate(120 100) scale(.66) translate(-120 -108)">
+const BURGER_ART=`<div class="bgr"><svg viewBox="0 0 240 190" aria-hidden="true"><circle cx="120" cy="95" r="84" fill="#f6efe0" style="stroke:var(--ink)" stroke-width="3"/><circle class="rim" cx="120" cy="95" r="76" fill="none" stroke="#d63a22" stroke-opacity=".55" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 24"/><g transform="translate(120 100) scale(.66) translate(-120 -108)">
 <g class="bl" style="--k:0"><path d="M44 150h152v6q0 16-16 16H60q-16 0-16-16z" fill="#e8a84d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/></g>
 <g class="bl" style="--k:1"><rect x="40" y="128" width="160" height="22" rx="11" fill="#7a3b1d" style="stroke:var(--ink)" stroke-width="3"/><path d="M62 137h14M94 141h12M130 136h14M160 141h12" stroke="#a5552a" stroke-width="3" stroke-linecap="round"/></g>
 <g class="bl" style="--k:2"><path d="M46 121h148v7h-44l-10 14-10-14H46z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/></g>
@@ -66,7 +80,7 @@ const BURGER_ART=`<div class="bgr"><svg viewBox="0 0 240 190" aria-hidden="true"
 window.__burgerArt=BURGER_ART;
 
 /* pasta spinner art: a bowl with a noodle spiral that twirls at the shared spin speed; tomato, basil and cheese orbit it */
-const PASTA_ART=`<div class="pgr"><svg viewBox="0 0 240 190" aria-hidden="true"><circle cx="120" cy="95" r="84" fill="#4a90c2" style="stroke:var(--ink)" stroke-width="3"/><circle cx="120" cy="95" r="76" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="3"/><circle cx="120" cy="95" r="70" fill="#f6efe0" style="stroke:var(--ink)" stroke-width="3"/></svg>
+const PASTA_ART=`<div class="pgr"><svg class="base" viewBox="0 0 240 190" aria-hidden="true"><circle cx="120" cy="95" r="84" fill="#4a90c2" style="stroke:var(--ink)" stroke-width="3"/><circle cx="120" cy="95" r="77" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 24"/><circle cx="120" cy="95" r="70" fill="#f6efe0" style="stroke:var(--ink)" stroke-width="3"/></svg>
 <div class="pspin"><svg viewBox="-33 -33 66 66" aria-hidden="true"><path d="M0 0a4 4 0 0 1 8 0a8 8 0 0 1-16 0a12 12 0 0 1 24 0a16 16 0 0 1-32 0a20 20 0 0 1 40 0a24 24 0 0 1-48 0a28 28 0 0 1 56 0" fill="none" style="stroke:var(--ink)" stroke-width="6.2" stroke-linecap="round"/><path d="M0 0a4 4 0 0 1 8 0a8 8 0 0 1-16 0a12 12 0 0 1 24 0a16 16 0 0 1-32 0a20 20 0 0 1 40 0a24 24 0 0 1-48 0a28 28 0 0 1 56 0" fill="none" stroke="#f2c14e" stroke-width="3.4" stroke-linecap="round"/></svg></div>
 <svg class="pcap" viewBox="0 0 240 190" aria-hidden="true"><circle cx="120" cy="95" r="14" fill="#d63a22" style="stroke:var(--ink)" stroke-width="3"/><path d="M120 92q-10-12 2-16 8 6-2 16zM120 92q12-10 18 2-8 8-18-2z" fill="#3fae5a" style="stroke:var(--ink)" stroke-width="2" stroke-linejoin="round"/></svg>
 <div class="ring"><div class="ing" style="--k:0;--r:0deg;--R:52px"><u><i>${icoHTML("🍅")}</i></u></div><div class="ing" style="--k:1;--r:120deg;--R:52px"><u><i>${icoHTML("🌿")}</i></u></div><div class="ing" style="--k:2;--r:240deg;--R:52px"><u><i>${icoHTML("🧀")}</i></u></div></div></div>`;
@@ -413,7 +427,7 @@ const SCENES={
  dairy:c=>SC(CI(84,"#8fb8de")+RG(77)+CI(70,"#f6efe0")+CI(62,"#fffaf0")+SW(1.7,4,"#e9dcc0")+EM("🧀",40,40,28,20)+EM("🧈",40,160,26)+EM("🍯",40,280,26)),
  spice:c=>SC(CI(84,"#9a9aa3")+RG(77)+CI(70,"#6d6d76")+CI(62,c)+Array.from({length:30},(_,i)=>`<circle cx="${(120+Math.sqrt(RR(i+2))*54*Math.cos(RR(i+40)*6.28)).toFixed(0)}" cy="${(95+Math.sqrt(RR(i+2))*54*Math.sin(RR(i+40)*6.28)).toFixed(0)}" r="${(2+RR(i+70)*2).toFixed(1)}" fill="${["#8a3a10","#e8a33a","#b5481c","#f3d27a"][i%4]}"/>`).join("")+`<rect x="116" y="87" width="66" height="16" rx="8" fill="#d9d0c0" ${IK}/><circle cx="182" cy="95" r="9" fill="#d9d0c0" ${IK}/>`+EM("🌶️",42,115,26,20)+EM("🧄",42,195,24)+EM("🌿",42,275,26,-30)),
  frozen:c=>SC(CI(84,c)+RG(77)+CI(70,"#f6efe0")+[[30,"#f7b6cc"],[150,"#fff1c9"],[270,"#b6e8cf"]].map(([a,f])=>{const x=120+34*Math.cos(a*.01745),y=95+34*Math.sin(a*.01745);return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="26" fill="${f}" ${IK}/><path d="M${(x-14).toFixed(0)} ${(y-8).toFixed(0)}q8-12 20-8" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="3" stroke-linecap="round"/>`}).join("")+EM("🍒",0,0,28)+EM("🍓",50,90,18)+EM("🍫",50,210,18)+EM("🍋",50,330,18)),
- sandwich:()=>`<div class="bgr"><svg viewBox="0 0 240 190" aria-hidden="true"><circle cx="120" cy="95" r="84" fill="#f6efe0" style="stroke:var(--ink)" stroke-width="3"/><circle cx="120" cy="95" r="76" fill="none" stroke="#d63a22" stroke-opacity=".4" stroke-width="3"/><g transform="translate(120 98) scale(.7) translate(-120 -121)">`+
+ sandwich:()=>`<div class="bgr"><svg viewBox="0 0 240 190" aria-hidden="true"><circle cx="120" cy="95" r="84" fill="#f6efe0" style="stroke:var(--ink)" stroke-width="3"/><circle class="rim" cx="120" cy="95" r="76" fill="none" stroke="#d63a22" stroke-opacity=".55" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 24"/><g transform="translate(120 98) scale(.7) translate(-120 -121)">`+
   LAY(0,`<rect x="44" y="144" width="152" height="24" rx="11" fill="#e8c98b" ${IK}/><path d="M60 156h120" stroke="#fff3cf" stroke-width="3" stroke-linecap="round"/>`)+
   LAY(1,`<path d="M40 136q9.5 10 19 0t19 0t19 0t19 0t19 0t19 0t19 0t19 0v12H40z" fill="#f4a3a3" ${IK} stroke-linejoin="round"/>`)+
   LAY(2,`<path d="M46 124h148v8h-40l-10 12-10-12H46z" fill="#ffc63d" ${IK} stroke-linejoin="round"/>`)+
@@ -451,10 +465,11 @@ TOOLS.grill.main="m"; // Doneness and Thickness depend on the meat (key m), not 
 const cfg=id=>{const o=ST[id]=ST[id]||{};TOOLS[id].ctl.forEach(c=>{if(o[c.k]===undefined)o[c.k]=c.def});return o};
 function draw(id){
  const T=TOOLS[id],s=cfg(id),root=document.getElementById("tab-"+id);if(!root)return;
+ const nm=c=>esc(c.label.replace(/\s*\(.*$/,"").toLowerCase().replace(/^how many\s*/,"").replace(/^how much to make$/,"")||"amount"); // "Flour" -> "flour", "How many cookies" -> "cookies"
  const vis=T.ctl.filter(c=>!c.only||[].concat(c.only).includes(s[T.main||"t"]));
  const ctl=vis.map(c=>`<div class="lab"${c===vis[0]?"":' style="margin-top:16px"'}>${I(c.icon)}${esc(c.label)}</div>`+(c.tg?`<div class="tg">${c.tg.map(o=>`<button data-k="${c.k}" data-v="${esc(o[0])}" aria-pressed="${String(s[c.k])===String(o[0])}">${esc(o[1])}</button>`).join("")}</div>`
    :c.ms?`<div class="tg">${c.ms.map(o=>`<button data-k="${c.k}" data-m="${esc(o[0])}" aria-pressed="${(s[c.k]||[]).includes(o[0])}">${esc(o[1])}</button>`).join("")}</div>`
-   :`<div class="step"><button data-k="${c.k}" data-d="-1" aria-label="Less">${I("minus")}</button><b>${s[c.k]||people}${c.step[3]?" "+c.step[3]:""}</b><button data-k="${c.k}" data-d="1" aria-label="More">${I("plus")}</button></div>`)).join("");
+   :`<div class="step"><button data-k="${c.k}" data-d="-1" aria-label="Less ${nm(c)}">${I("minus")}</button><b>${s[c.k]||people}${c.step[3]?" "+c.step[3]:""}</b><button data-k="${c.k}" data-d="1" aria-label="More ${nm(c)}">${I("plus")}</button></div>`)).join("");
  const r=T.calc(s);
  root.querySelector("[data-ctl]").innerHTML=ctl;
  root.querySelector("[data-out]").innerHTML=`<article class="card"><div class="hero"><div class="ic">${I(T.icon)}</div><h2>${esc(r.title)}</h2></div><div class="body">
@@ -466,7 +481,7 @@ function draw(id){
  root.querySelectorAll(".ing li").forEach(li=>li.onclick=()=>li.classList.toggle("done"));
  decorate(id,T,r,root,s);
  root.querySelector("[data-copy]").onclick=e=>{const b=e.currentTarget,txt=r.title+"\n"+r.ing.map(i=>"• "+i[0]+" – "+i[1]).join("\n");
-  (navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(()=>{b.innerHTML=I("check")+"Copied"},()=>{})};
+  copyText(txt).then(ok=>flash(b,ok?"check":"cart",ok?"Copied":"Couldn't copy"))};
 }
 /* ---- card buttons: the same set and order as the Cook card: Start cooking · Spin again, then Save · Copy list · Share · Like · Not for me ---- */
 const FK="mr-craftfav",favs=()=>{try{return JSON.parse(localStorage.getItem(FK)||"[]")||[]}catch(e){return[]}},setFavs=f=>{try{localStorage.setItem(FK,JSON.stringify(f.slice(0,60)))}catch(e){}};
@@ -483,7 +498,7 @@ function decorate(id,T,r,root,s){
  const has=()=>favs().some(x=>x.id===id&&x.sig===sig),paint=()=>{sv.setAttribute("aria-pressed",String(has()));sv.innerHTML=I("heart")+(has()?"Saved":"Save")};
  sv.onclick=()=>{let f=favs();if(has())f=f.filter(x=>!(x.id===id&&x.sig===sig));else f.unshift({id,title:r.title,sig,s:JSON.parse(sig)});setFavs(f);paint();drawFavs(id);navigator.vibrate&&navigator.vibrate(15)};paint();
  sh.onclick=async()=>{const text=r.title+"\n\nIngredients\n"+r.ing.map(i=>"• "+i[0]+" – "+i[1]).join("\n")+"\n\nMethod\n"+r.steps.map((x,k)=>(k+1)+". "+x).join("\n")+"\n\nMade with Meal Roulette";
-  try{if(navigator.share)await navigator.share({title:r.title,text});else{await navigator.clipboard.writeText(text);sh.innerHTML=I("share")+"Copied";setTimeout(()=>{sh.innerHTML=I("share")+"Share"},2000)}}catch(e){}};
+  try{if(navigator.share)await navigator.share({title:r.title,text});else{flash(sh,"share",await copyText(text)?"Copied":"Couldn't copy")}}catch(e){}};
  try{const m=root.querySelector("[data-out] .meta");if(m&&window.__noteBlock)m.after(window.__noteBlock(r.title))}catch(e){}
  if(window.__thumbs)window.__thumbs(row,r.title,{craft:id},()=>spinTool(id));
  if(window.__tidyRow)window.__tidyRow(row,T.icon);
@@ -505,13 +520,13 @@ Object.keys(TOOLS).forEach(id=>{
  const T=TOOLS[id],root=document.getElementById("tab-"+id);if(!root)return;
  T.icon=T.icon||({bread:"bread",grain:"rice",bake:"cupcake",drinks:"drinks",pasta:"pasta",soup:"soup",sauce:"sauce",eggs:"egg",jam:"jam",dairy:"dairy",dumpling:"dumpling",burger:"burger",grill:"grill",sandwich:"sandwich",salad:"salad",noodle:"noodle",spice:"spice",frozen:"icecream"})[id]||"chef";
  root.innerHTML=`<h1 class="hl">${esc(T.title)}</h1><p>${esc(T.sub)}</p><div class="cols"><aside class="side"><section class="panel" data-ctl></section>${T.spin?`<button type="button" class="fmspin" data-spin>${I(T.icon)}${esc(T.spinLabel||"Spin!")}</button>`:""}<div class="fav" data-fav></div></aside><section class="res"><div data-out></div></section></div>
-  <section class="panel"><div class="lab">${I(T.icon)}Recipes</div><p class="hint" data-n></p><ul class="bklist" data-l></ul><button type="button" class="stubmore" hidden></button></section>`;
+  <section class="panel"><div class="lab">${I(T.icon)}Recipes</div><input class="bksearch rsearch" type="search" placeholder="Search ${esc(T.name)} recipes…" aria-label="Search ${esc(T.name)} recipes" autocomplete="off"><p class="hint" data-n></p><ul class="bklist" data-l></ul><button type="button" class="stubmore" hidden></button></section>`;
  root.querySelector("[data-ctl]").addEventListener("click",e=>{
-  const b=e.target.closest("button[data-k]");if(!b)return;const s=cfg(id),c=T.ctl.find(x=>x.k===b.dataset.k);
+  const b=e.target.closest("button[data-k]");if(!b)return;const box=e.currentTarget,at=[...box.querySelectorAll("button")].indexOf(b),s=cfg(id),c=T.ctl.find(x=>x.k===b.dataset.k);
   if(b.dataset.m!==undefined){const a=Array.isArray(s[c.k])?s[c.k]:[];s[c.k]=a.includes(b.dataset.m)?a.filter(x=>x!==b.dataset.m):[...a,b.dataset.m]}
   else if(b.dataset.d){const[lo,hi,by]=c.step,v=(s[c.k]||people)+(+b.dataset.d)*by;s[c.k]=Math.min(hi,Math.max(lo,v))}
   else{const o=c.tg.find(x=>String(x[0])===b.dataset.v);s[c.k]=o?o[0]:b.dataset.v}
-  save();draw(id)});
+  save();draw(id);const nb=box.querySelectorAll("button")[at];if(nb)nb.focus()});
  root.addEventListener("click",e=>{const b=e.target.closest("[data-spin]");if(b&&!b.disabled)spinTool(id)});
  draw(id);drawFavs(id);
 });

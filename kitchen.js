@@ -266,8 +266,8 @@ K.report=()=>{const e=K.problems.filter(p=>p.lvl==="error"),w=K.problems.filter(
    Save · Copy list · Share · Like · Not for me · Spin again (always last, pinned to the right, with the section's icon) */
 (function(){
 const ic=n=>`<svg class="i"><use href="#i-${n}"/></svg>`;
-const rd=()=>{try{return JSON.parse(localStorage.getItem("rate")||"null")||{}}catch(e){return{}}};
-const wr=o=>{try{localStorage.setItem("rate",JSON.stringify(o))}catch(e){}};
+const rd=()=>{try{return JSON.parse(localStorage.getItem("mr-rate")||"null")||{}}catch(e){return{}}};
+const wr=o=>{try{localStorage.setItem("mr-rate",JSON.stringify(o))}catch(e){}};
 window.__ratings=rd;
 // Like / Not for me for a card that has none yet. meta is stored with the rating (e.g. the ferment method), again() runs after Not for me.
 window.__thumbs=function(row,key,meta,again){
