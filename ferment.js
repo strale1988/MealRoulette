@@ -15,6 +15,7 @@ const XB='<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12
 function enter(){if(res)return;res=true;root.classList.add("resmode");if(small()){try{history.pushState({mrres:1},"")}catch(e){}}scrollTo({top:0})}
 function leave(){if(!res)return;res=false;root.classList.remove("resmode");scrollTo({top:0})}
 function back(){if(history.state&&history.state.mrres)history.back();else leave()}
+window.__leaveFerm=()=>{if(res){res=false;root.classList.remove("resmode");window.__nav&&__nav.drop()}};
 addEventListener("popstate",()=>{if(res)leave()});
 {const tb=document.querySelector('#tabs [data-t="craft"]');if(tb)tb.addEventListener("click",()=>{if(res&&small())back()})}
 
