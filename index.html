@@ -665,7 +665,7 @@ body .reel.on .toss,body .reel.on .spinwrap,body .reel.on .stage,body .fmreel .f
 .art{position:absolute;inset:0;display:grid;place-items:center;opacity:0;transition:opacity .15s ease;pointer-events:none}
 .art.on{opacity:1}
 .art .lg{width:100%;height:100%;animation:sp var(--rev) linear infinite}
-.art .toss{flex:none;margin:0;transform:scale(var(--kp))}.art .spinwrap{flex:none;margin:0;transform:scale(var(--kw))}
+.art .toss{flex:none;margin:0;transform:scale(var(--kp))}.art .spinwrap{position:relative;width:170px;height:170px;flex:none;margin:0;transform:scale(var(--kw))} /* sized here too: its size used to come from .reel only, so in the start wheel it collapsed to an empty gray disc */
 /* burger spinner: the layers fan out and lift off one after another, then drop back into a stack */
 .bgr{position:relative;width:240px;height:190px;flex:none}.art .bgr{margin:0;transform:scale(var(--kp))}
 .bgr svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
