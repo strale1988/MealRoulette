@@ -243,7 +243,7 @@ footer{border-top:var(--bw) solid var(--ink)}
 .row .go{flex-basis:100%;background:var(--acc);color:#fff;border:var(--bw) solid var(--ink);box-shadow:var(--sh);font:800 20px Bricolage,sans-serif;padding:15px 8px;border-radius:18px}.row .go:hover{background:var(--acc);border-color:var(--ink)}
 ol li,ul.ing li{-webkit-tap-highlight-color:transparent}ol li{cursor:pointer}ol li.done{opacity:.45;text-decoration:line-through}
 .cookov{position:fixed;inset:0;z-index:100;background:var(--bg);display:flex;flex-direction:column;padding:max(16px,env(safe-area-inset-top)) 18px max(18px,env(safe-area-inset-bottom));overflow:auto}
-.ck-top{display:flex;align-items:center;justify-content:space-between;gap:12px;font:800 18px Bricolage,sans-serif}.ck-x{width:44px;height:44px;border:var(--bw) solid var(--ink);background:var(--card);color:var(--ink);border-radius:14px;cursor:pointer;display:grid;place-items:center;flex:none}
+.ck-top{display:flex;align-items:center;justify-content:space-between;gap:12px;font:800 18px Bricolage,sans-serif}.ck-x{margin-left:auto;width:44px;height:44px;border:var(--bw) solid var(--ink);background:var(--card);color:var(--ink);border-radius:14px;cursor:pointer;display:grid;place-items:center;flex:none}
 .ck-bar{display:block;height:12px;margin:14px 0;border:var(--bw) solid var(--ink);border-radius:99px;background:var(--sand);overflow:hidden}.ck-bar u{display:block;height:100%;background:var(--acc);transition:width .25s}
 .ck-step{flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px;max-width:760px;width:100%;margin:0 auto}.ck-step small{font:800 13px "DM Sans";letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
 .ck-step p{margin:0;font:700 clamp(26px,6vw,44px)/1.15 Bricolage,sans-serif;letter-spacing:-.02em}
@@ -267,6 +267,8 @@ ol li,ul.ing li{-webkit-tap-highlight-color:transparent}ol li{cursor:pointer}ol 
 .badge{background:var(--mint);color:#2a1a13;border:2px solid var(--ink);border-radius:99px;padding:6px 14px;font:800 14px "DM Sans",sans-serif}
 /* ---- readability + adaptability pass ---- */
 :root{--pink:#ffd2c7;--acct:#c0301b;--hero:#1f7d50}
+/* one speed rule for every spinner (pot, pizza, jar, home wheel): one turn takes --rev, one bounce --bob */
+:root{--rev:2.4s;--bob:1.1s}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]){--acc:#e0432a;--acct:#ff8f74;--pink:#5a2a22;--mint:#1f3a2c}}
 :root[data-theme=dark]{--acc:#e0432a;--acct:#ff8f74;--pink:#5a2a22;--mint:#1f3a2c}
 .buy2{background:var(--pink);color:var(--ink)}.ok2{background:var(--mint);color:var(--ink)}
@@ -283,13 +285,13 @@ main,.bar-in{max-width:1280px}
 a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
 /* ---- fun spinners: one shared whirl (rotating ring, pieces pop out and in) ---- */
 .reel .spinwrap{position:relative;width:170px;height:170px;margin:0 auto 12px}
-.spinwrap .rot{position:absolute;inset:0;animation:sp 5s linear infinite}
+.spinwrap .rot{position:absolute;inset:0;animation:sp var(--rev) linear infinite}
 .spinwrap .sc{position:absolute;inset:0;transform:rotate(var(--r))}
-.spinwrap .pop{position:absolute;inset:0;animation:sout 1.6s ease-in-out infinite;animation-delay:calc(var(--k)*.2s)}
+.spinwrap .pop{position:absolute;inset:0;animation:sout calc(var(--bob)*1.4) ease-in-out infinite;animation-delay:calc(var(--k)*.2s)}
 .spinwrap .wg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .spinwrap .em{position:absolute;left:50%;top:50%;width:0;height:0}
 .spinwrap .em b{position:absolute;left:-19px;top:-72px;display:block;transform:rotate(calc(var(--r)*-1))}
-.spinwrap .em i{display:block;font-style:normal;font-size:34px;line-height:38px;width:38px;text-align:center;animation:sp 5s linear infinite reverse}
+.spinwrap .em i{display:block;font-style:normal;font-size:34px;line-height:38px;width:38px;text-align:center;animation:sp var(--rev) linear infinite reverse}
 @keyframes sout{0%,60%,100%{transform:translateY(0) scale(1)}30%{transform:translateY(-24px) scale(1.12)}}
 #remix,.pzbtns:has(#pzspin) #pzremix{flex-direction:row;gap:7px;font-size:17px;padding:10px 6px}#remix .i,#pzremix .i{width:1.6em;height:1.6em}
 #save[aria-pressed=true] .i{fill:var(--acc)}
@@ -298,12 +300,12 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
 .agehint{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px;padding:10px 12px;border:2px dashed var(--ink);border-radius:14px;background:var(--soft);font-size:14px}.agehint[hidden]{display:none}.agehint button{flex:none;border:var(--bw) solid var(--ink);background:var(--sun);color:#2a1a13;border-radius:99px;padding:6px 14px;font:800 14px "DM Sans",sans-serif;cursor:pointer;box-shadow:2px 2px 0 var(--ink)}
 .toss{position:relative;width:240px;height:190px;margin:0 auto 6px}
 .toss .potsvg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.toss .swirl{position:absolute;left:55px;top:30px;width:130px;height:130px;animation:sp 9s linear infinite}
+.toss .swirl{position:absolute;left:55px;top:30px;width:130px;height:130px;animation:sp var(--rev) linear infinite}
 .toss .swirl svg{width:100%;height:100%;display:block}
-.toss .ring{position:absolute;left:120px;top:95px;width:0;height:0;animation:sp var(--T) linear infinite}
+.toss .ring{position:absolute;left:120px;top:95px;width:0;height:0;animation:sp var(--rev) linear infinite}
 .toss .ing{position:absolute;left:0;top:0;width:0;height:0;transform:rotate(var(--r))}
-.toss .ing u{position:absolute;left:-18px;top:-18px;width:36px;height:36px;text-decoration:none;transform:translateY(calc(var(--R)*-1)) rotate(calc(var(--r)*-1));animation:bobr 1.4s ease-in-out infinite;animation-delay:calc(var(--k)*-.25s)}
-.toss .ing i{display:block;font-style:normal;font-size:30px;line-height:36px;text-align:center;animation:sp var(--T) linear infinite reverse}
+.toss .ing u{position:absolute;left:-18px;top:-18px;width:36px;height:36px;text-decoration:none;transform:translateY(calc(var(--R)*-1)) rotate(calc(var(--r)*-1));animation:bobr var(--bob) ease-in-out infinite;animation-delay:calc(var(--k)*-.25s)}
+.toss .ing i{display:block;font-style:normal;font-size:30px;line-height:36px;text-align:center;animation:sp var(--rev) linear infinite reverse}
 .toss .bub{position:absolute;width:8px;height:8px;border-radius:50%;border:2px solid var(--ink);background:rgba(255,255,255,.5);opacity:0;animation:bub 1.8s ease-out infinite;animation-delay:calc(var(--k)*-.6s)}
 .toss .steam{position:absolute;left:120px;top:95px;width:0;height:0}
 .toss .steam s{position:absolute;left:-16px;top:-16px;width:32px;height:32px;border-radius:50%;background:var(--mute);opacity:0;animation:puff 2.4s ease-out infinite;animation-delay:calc(var(--k)*.8s)}
@@ -327,8 +329,8 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
 .fmspin{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:14px;padding:16px 8px;background:var(--acc);color:#fff;border:var(--bw,2px) solid var(--ink);border-radius:22px;box-shadow:var(--sh,3px 3px 0 var(--ink));font:800 24px Bricolage,sans-serif;cursor:pointer}.fmspin .i{font-size:1.1em}.fmspin:active{transform:translate(2px,2px);box-shadow:none}
 .fmreel{text-align:center;margin:40px 0;font:800 22px Bricolage,sans-serif;color:var(--ink)}.fmreel small{display:block;color:var(--mute);font:400 14px "DM Sans",sans-serif;margin-top:6px}.fmrt{display:block;min-height:1.4em}
 .fmjar{position:relative;width:240px;height:190px;margin:0 auto 6px}.fmjar svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;animation:fmjig .8s ease-in-out infinite}
-.fmjar .fi{position:absolute;left:102px;top:92px;width:36px;height:36px;animation:fmx 2.4s cubic-bezier(.37,0,.63,1) infinite alternate;animation-delay:calc(var(--k)*-.4s)}
-.fmjar .fi u{display:block;text-decoration:none;animation:fmy 3.1s cubic-bezier(.37,0,.63,1) infinite alternate;animation-delay:calc(var(--k)*-.52s)}
+.fmjar .fi{position:absolute;left:102px;top:92px;width:36px;height:36px;animation:fmx var(--rev) cubic-bezier(.37,0,.63,1) infinite alternate;animation-delay:calc(var(--k)*-.4s)}
+.fmjar .fi u{display:block;text-decoration:none;animation:fmy calc(var(--rev)*1.3) cubic-bezier(.37,0,.63,1) infinite alternate;animation-delay:calc(var(--k)*-.52s)}
 .fmjar .fi i{display:block;font-style:normal;font-size:26px;line-height:36px;text-align:center;animation:fmw 1s ease-in-out infinite alternate;animation-delay:calc(var(--k)*-.3s)}
 .fmjar .fb{position:absolute;bottom:34px;width:9px;height:9px;border-radius:50%;border:2px solid var(--ink);background:rgba(255,255,255,.6);opacity:0;animation:fmrise 2s ease-in infinite;animation-delay:calc(var(--k)*-.33s)}
 @keyframes fmx{from{transform:translateX(-26px)}to{transform:translateX(26px)}}
@@ -417,11 +419,15 @@ main>footer{margin-top:auto!important;padding-top:12px;width:100%}
 main>footer{padding-bottom:10px}
 @media (min-width:760px){main{padding-bottom:6px!important}}
 main>.tab:not([hidden]){width:100%;box-sizing:border-box;padding-bottom:56px} /* room between long content and the footer */
-html{scrollbar-gutter:stable}html:has(.splash){overflow:hidden}
+html{scrollbar-gutter:stable}html:has(.splash:not(.out)){overflow:hidden}
 .splash{pointer-events:none;touch-action:none;overscroll-behavior:contain;position:fixed;inset:0;z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;padding-bottom:calc(24px + env(safe-area-inset-bottom,0px));background:var(--bg);color:var(--ink);text-align:center;transition:opacity .3s ease,transform .3s ease}
 .splash{transition:opacity .3s ease,transform .3s cubic-bezier(.3,.7,.2,1),filter .3s ease}
-.splash.out{opacity:0;transform:scale(1.06);filter:blur(6px);pointer-events:none}
-.sp-wheel{position:relative;width:min(72vw,44vh,320px);aspect-ratio:1;margin-top:18px;transition:transform .25s cubic-bezier(.3,.7,.2,1);animation:spPop .4s cubic-bezier(.2,.9,.3,1.15) backwards}
+.splash.out{opacity:0;transform:scale(1.06);filter:blur(6px);pointer-events:none;visibility:hidden;transition:opacity .3s ease,transform .3s ease,filter .3s ease,visibility 0s .3s}
+.splash.ready{pointer-events:auto;touch-action:manipulation}.splash.nofade,.splash.nofade.out{transition:none!important}
+.sp-go{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom,0px));display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border:var(--bw) solid var(--ink);border-radius:999px;background:var(--card);color:var(--ink);font:700 15px "DM Sans",sans-serif;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .35s ease .15s,transform .35s ease .15s,box-shadow .15s}
+.splash.ready .sp-go{opacity:1;pointer-events:auto;transform:none}.splash.ready .sp-go:hover{transform:translateY(-2px)}.splash.ready .sp-go:active{transform:translateY(1px)}
+.sp-go:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.sp-wheel{position:relative;width:var(--D);aspect-ratio:1;margin-top:18px;transition:transform .25s cubic-bezier(.3,.7,.2,1);animation:spPop .4s cubic-bezier(.2,.9,.3,1.15) backwards}
 .sp-wheel:before{content:"";position:absolute;left:50%;top:-20px;z-index:2;transform:translateX(-50%);border-left:14px solid transparent;border-right:14px solid transparent;border-top:26px solid var(--acc);filter:drop-shadow(0 2px 0 var(--ink))}
 .sp-pizza{will-change:transform;display:block;width:100%;height:100%;padding:0;border:0;border-radius:50%;background:none;cursor:default;animation:spLoad 1.2s cubic-bezier(.2,.7,.2,1) both;-webkit-tap-highlight-color:transparent}
 .sp-pizza svg{display:block;width:100%;height:100%}
@@ -431,7 +437,8 @@ html{scrollbar-gutter:stable}html:has(.splash){overflow:hidden}
 .sp-t{margin:8px 0 0;font:800 clamp(34px,8vw,56px)/1 Bricolage,"DM Sans",sans-serif;letter-spacing:-.04em;white-space:nowrap}
 .sp-t span{display:inline-block;animation:spLetter .45s cubic-bezier(.2,.9,.3,1.25) backwards;animation-delay:calc(.1s + var(--i)*25ms)}
 .sp-h{margin:0;min-height:2.7em;max-width:30ch;color:var(--mute);font-size:17px;line-height:1.35;transition:opacity .22s ease,transform .22s ease;animation:spIn .4s ease .3s backwards}
-.sp-h.fade{opacity:0;transform:translateY(-6px)}
+.sp-h.fade{opacity:0;transform:translateY(-6px)}.sp-h.tick{color:var(--ink);font:800 clamp(18px,4.6vw,24px)/1.2 Bricolage,"DM Sans",sans-serif;letter-spacing:-.02em}
+.splash .sp-h{height:60px;min-height:60px;overflow:hidden;flex:none}
 .sp-h .w{display:inline-block;animation:spWord .55s cubic-bezier(.2,.9,.3,1) backwards;animation-delay:calc(var(--w)*60ms)}
 .dots i{display:inline-block;width:.32em;height:.32em;margin-left:.28em;border-radius:50%;background:currentColor;animation:spDot 1.1s ease-in-out infinite}.dots i:nth-child(2){animation-delay:.15s}.dots i:nth-child(3){animation-delay:.3s}
 .sp-wheel:before{transform-origin:50% 0}
@@ -483,7 +490,7 @@ details{margin-top:8px}summary{padding:9px 0}
 footer{margin-top:28px;padding-top:12px}
 .tabs{padding:4px}.tabs button{padding:7px 4px;gap:2px;font-size:12.5px}.tabs .i{font-size:20px}
 @media (min-width:760px){.tabs{padding:0}.tabs button{padding:6px 16px;gap:8px;font-size:14.5px}}
-.splash{gap:10px}.sp-wheel{width:min(66vw,40vh,290px);margin-top:14px}.sp-t{font-size:clamp(30px,7vw,46px)}.sp-h{font-size:16px}
+.splash{gap:10px}.sp-wheel{width:var(--D);margin-top:14px}.sp-t{font-size:clamp(30px,7vw,46px)}.sp-h{font-size:16px}
 
 /* ---- phone/tablet: filters and results are separate screens; desktop keeps filters left, recipe right ---- */
 @media (max-width:959px){
@@ -621,7 +628,39 @@ ol li:before{display:flex;align-items:center;justify-content:center;padding:0;li
 body .reel.on,body .fmreel{position:fixed;inset:0;z-index:90;margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;box-sizing:border-box;background:var(--bg);padding:max(16px,env(safe-area-inset-top)) 16px max(16px,env(safe-area-inset-bottom))}
 /* ---- v78: the spinning wheel is dead centre; the text sits below it in its own row, so a second line never moves the wheel ---- */
 body .reel.on,body .fmreel{display:grid;grid-template-rows:minmax(0,1fr) auto minmax(0,1fr);grid-template-columns:minmax(0,1fr);justify-items:center;align-items:center}
-body .reel.on .toss,body .reel.on .spinwrap,body .fmreel .fmjar{grid-row:2;margin:0}
+body .reel.on .toss,body .reel.on .spinwrap,body .reel.on .stage,body .fmreel .fmjar{grid-row:2;margin:0}
+/* one spinner stage for Cook, Pizza night and the start wheel: same size (--D), and the art swaps while it spins */
+:root{--D:220px;--kp:1.2;--kw:1.2}
+.stage{position:relative;width:var(--D);height:var(--D);flex:none}
+.art{position:absolute;inset:0;display:grid;place-items:center;opacity:0;transition:opacity .15s ease;pointer-events:none}
+.art.on{opacity:1}
+.art .lg{width:100%;height:100%;animation:sp var(--rev) linear infinite}
+.art .toss{flex:none;margin:0;transform:scale(var(--kp))}.art .spinwrap{flex:none;margin:0;transform:scale(var(--kw))}
+/* burger spinner: the layers fan out and lift off one after another, then drop back into a stack */
+.bgr{position:relative;width:240px;height:190px;flex:none}.art .bgr{margin:0;transform:scale(var(--kp))}
+.bgr svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.bgr .bl{transform-box:fill-box;transform-origin:50% 50%;animation:bgl calc(var(--bob)*2) ease-in-out infinite;animation-delay:calc(var(--k)*.09s)}
+/* pasta spinner: the noodle spiral twirls at the shared speed, tomato, basil and cheese orbit it */
+.pgr{position:relative;width:240px;height:190px;flex:none}.art .pgr{margin:0;transform:scale(var(--kp))}
+.pgr>svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.pgr .pspin{position:absolute;left:55px;top:30px;width:130px;height:130px;animation:sp var(--rev) linear infinite}.pgr .pspin svg{width:100%;height:100%;display:block}
+.pgr .ring{position:absolute;left:120px;top:95px;width:0;height:0;animation:sp var(--rev) linear infinite}
+.pgr .ing{position:absolute;left:0;top:0;width:0;height:0;transform:rotate(var(--r))}
+.pgr .ing u{position:absolute;left:-18px;top:-18px;width:36px;height:36px;text-decoration:none;transform:translateY(calc(var(--R)*-1)) rotate(calc(var(--r)*-1));animation:bobr var(--bob) ease-in-out infinite;animation-delay:calc(var(--k)*-.25s)}
+.pgr .ing i{display:block;font-style:normal;font-size:30px;line-height:36px;text-align:center;animation:sp var(--rev) linear infinite reverse}
+/* section spinners (bowl, pan, board, jar, glass): big emoji in the middle, three more orbiting it */
+.pgr .cem{position:absolute;left:120px;top:95px;width:0;height:0}.pgr .cem i{position:absolute;left:-32px;top:-36px;width:64px;font-style:normal;font-size:52px;line-height:72px;text-align:center;animation:cbob var(--bob) ease-in-out infinite}
+@keyframes cbob{0%,100%{transform:scale(.92) rotate(-6deg)}50%{transform:scale(1.1) rotate(6deg)}}
+.art:not(.on) *{animation-play-state:paused!important} /* hidden spinner art costs nothing while another one shows */
+@keyframes bgl{0%,65%,100%{transform:none}30%{transform:translateY(calc(var(--k)*-7px - 3px)) rotate(calc((var(--k) - 2.5)*3deg))}}
+/* ---- every spinner turns, at the same speed (--rev): bases, rings and the ferment jar's swirl ---- */
+.pgr>svg.base{animation:sp var(--rev) linear infinite}
+.fmjar svg{animation:none}
+.fmjar .fring{position:absolute;left:120px;top:126px;width:0;height:0;animation:sp var(--rev) linear infinite}
+.fmjar .ing{position:absolute;left:0;top:0;width:0;height:0;transform:rotate(var(--r))}
+.fmjar .ing u{position:absolute;left:-16px;top:-16px;width:32px;height:32px;text-decoration:none;transform:translateY(calc(var(--R)*-1)) rotate(calc(var(--r)*-1));animation:bobr var(--bob) ease-in-out infinite;animation-delay:calc(var(--k)*-.25s)}
+.fmjar .ing i{display:block;font-style:normal;font-size:24px;line-height:32px;text-align:center;animation:sp var(--rev) linear infinite reverse}
+.sp-wheel>.art{z-index:1}
 body .reel.on .rtx,body .fmreel .rtx{grid-row:3;align-self:start;justify-self:center;width:100%;max-width:520px;padding-top:14px;box-sizing:border-box;text-align:center}
 /* ---- phones/tablets: while a recipe, pizza, plan or ferment is open, header and menu bar are hidden (the X on the green bar and the browser Back button return) ---- */
 @media (max-width:959px){
@@ -640,6 +679,9 @@ body .reel.on .rtx,body .fmreel .rtx{grid-row:3;align-self:start;justify-self:ce
 .row:has(.go):has(.spinagain) .go,.row:has(.go) .spinagain{flex:0 0 calc(50% - 4px);box-sizing:border-box;min-width:0;white-space:nowrap;padding:0 10px;gap:8px;font-size:clamp(16px,4.6vw,20px);overflow:hidden}
 /* phones: Start cooking, then Spin again, one below the other, full width */
 @media (max-width:700px){.row:has(.go):has(.spinagain) .go,.row:has(.go) .spinagain{flex:0 0 100%;min-height:56px;font-size:20px}.row:has(.go):has(.spinagain) .go{order:-2}.row:has(.go) .spinagain{order:-1}}
+/* colours swapped: Start cooking is yellow, Spin again is red (everywhere) */
+.row .go,.row .go:hover{background:var(--sun,#ffc63d)!important;color:#2a1a13!important}
+.row button.spinagain,.row button.spinagain:hover{background:#d63a22!important;color:#fff!important}
 
 /* ---- My kitchen: the bookshelf ---- */
 .kbar{grid-template-columns:repeat(5,1fr)}
@@ -837,6 +879,8 @@ main:has(.tab.resmode:not([hidden])) .crumb{display:none}
 <div class="splash" id="splash" role="status" aria-label="Loading Meal Roulette">
  <div class="sp-wheel"><div class="sp-pizza"><svg viewBox="0 0 128 128" aria-hidden="true"><use href="#logo-pizza"/></svg></div></div>
  <h1 class="sp-t" aria-label="Meal Roulette"><span style="--i:0">M</span><span style="--i:1">e</span><span style="--i:2">a</span><span style="--i:3">l</span><span style="--i:4">&nbsp;</span><span style="--i:5">R</span><span style="--i:6">o</span><span style="--i:7">u</span><span style="--i:8">l</span><span style="--i:9">e</span><span style="--i:10">t</span><span style="--i:11">t</span><span style="--i:12">e</span></h1>
+ <p class="sp-h" id="sph"></p>
+ <button type="button" class="sp-go" id="spgo" tabindex="-1">Full app <span aria-hidden="true">&rarr;</span></button>
 </div>
 
 <header class="bar"><div class="bar-in">
@@ -1061,6 +1105,7 @@ const I=n=>`<svg class="i"><use href="#i-${n}"/></svg>`;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const rnd=a=>a[Math.floor(Math.random()*a.length)],cap=s=>s[0].toUpperCase()+s.slice(1);
 const shufA=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+window.mrSpinNames=function(el,names,done){let d=70,t=0;const tick=()=>{el.textContent=names[Math.floor(Math.random()*names.length)];t+=d;if(t>=1500)return setTimeout(done,350);d=Math.round(d*1.15);setTimeout(tick,d)};tick()}; // every spinner shows names the same way for the same time
 window.mrNoSpin=()=>{try{return JSON.parse(localStorage.getItem("spins"))===0}catch(e){return false}};
 const store=(k,v)=>{try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||"null");localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}};
 const S=Object.assign({meal:"Main",n:2,pantry:[],diet:{},cuisine:"",strict:true,basic:true,days:5,pm:{Main:true},urgent:[],quick:false,staples:[],useLeftovers:false,leftovers:[],units:"metric",temp:"C"},store("mr2")||{});
@@ -1464,7 +1509,7 @@ function run(what,single,instant){
     const c=o.firstElementChild||o;c.scrollIntoView({behavior:"smooth",block:"start"})};
   if(rm||instant||mrNoSpin())return done();
   rl.classList.add("on");rl.scrollIntoView({behavior:"smooth",block:"center"});
-  let d=70,el=0;const tick=()=>{rt.textContent=rnd(names);el+=d;if(el>=1500)return setTimeout(done,350);d=Math.round(d*1.15);setTimeout(tick,d)};tick();
+  mrSpinNames(rt,names,done);
 }
 $("dminus").onclick=()=>{S.days=Math.max(1,S.days-1);save();draw()};$("dplus").onclick=()=>{S.days=Math.min(7,S.days+1);save();draw()};
 /* ---------- plan ---------- */
@@ -1696,8 +1741,9 @@ function pzRun(what){
 }
 $("pzspin").onclick=()=>pzRun("spin");$("pzremix").onclick=()=>pzRun("remix");
 $("spin").onclick=()=>run("spin");
-$("logo").onclick=()=>{ // the logo is a shortcut: spin a random recipe from anywhere
-  if(document.querySelector(".cookov,.splash")||$("spin").disabled)return;
+$("logo").onclick=()=>{ // the logo goes back to the start screen (the main roulette)
+  if(window.__home&&window.__home.open())return;
+  if(document.querySelector(".cookov,.splash:not(.out)")||$("spin").disabled)return;
   const lg=$("logo").firstElementChild;setTab("cook");run("spin",true); // same spinner as the Spin button
   if(!matchMedia("(prefers-reduced-motion:reduce)").matches&&lg.animate)lg.animate([{transform:"rotate(0)"},{transform:"rotate(720deg)"}],{duration:900,easing:"cubic-bezier(.15,.7,.2,1)"})};
 $("remix").onclick=()=>run("remix");
@@ -1713,7 +1759,7 @@ $("remix").onclick=()=>run("remix");
   ];
   let last=-1;
   const go=()=>{
-    if(!document.hidden&&!document.querySelector(".splash,.cookov")){let k;do k=Math.floor(Math.random()*T.length);while(k===last);last=k;T[k][0].animate(T[k][1],T[k][2])}
+    if(!document.hidden&&!document.querySelector(".splash:not(.out),.cookov")){let k;do k=Math.floor(Math.random()*T.length);while(k===last);last=k;T[k][0].animate(T[k][1],T[k][2])}
     setTimeout(go,5000+Math.random()*7000)};
   setTimeout(go,2500+Math.random()*2000);
 })();
@@ -1759,20 +1805,22 @@ function noteBlock(title){
     else if(k==="save"){const v=d.querySelector("textarea").value;edit=false;putNote(title,v)}};
   window.addEventListener("mr-notes",draw);draw();return d;
 }
-window.__noteBlock=noteBlock;
+window.__noteBlock=noteBlock;try{window.CRAFT&&CRAFT.redraw&&CRAFT.redraw()}catch(e){console.error(e)} // craft cards get the note block too
 const mins=t=>{const m=String(t).match(/(\d+)(?:\s?[–-]\s?(\d+))?\s*(hours?|hrs?|minutes?|mins?|seconds?|secs?)\b/i);if(!m)return 0;const n=+(m[2]||m[1]),u=m[3][0].toLowerCase();return u==="h"?n*3600:u==="s"?n:n*60};
 function beep(){ // a soft bell arpeggio (C-E-G-C), played twice, instead of one harsh tone
   try{const A=window.AudioContext||window.webkitAudioContext,a=new A();a.resume&&a.resume();const t0=a.currentTime+.05,out=a.createGain();out.gain.value=.2;out.connect(a.destination);
     const bell=(f,t)=>{[[1,1],[2,.16],[3,.05]].forEach(([m,v])=>{const o=a.createOscillator(),g=a.createGain();o.type="sine";o.frequency.value=f*m;o.connect(g);g.connect(out);
       g.gain.setValueAtTime(0,t0+t);g.gain.linearRampToValueAtTime(v,t0+t+.015);g.gain.exponentialRampToValueAtTime(.0008,t0+t+(m===1?1.3:.6));o.start(t0+t);o.stop(t0+t+1.4)})};
-    [0,2.4].forEach(base=>[523.25,659.25,783.99,1046.5].forEach((f,i)=>bell(f,base+i*.2)));
-    setTimeout(()=>{try{a.close()}catch(e){}},5200)}catch(e){}
+    [523.25,659.25,783.99,1046.5].forEach((f,i)=>bell(f,i*.2));
+    setTimeout(()=>{try{a.close()}catch(e){}},3000)}catch(e){}
   navigator.vibrate&&navigator.vibrate([160,120,160]);
 }
+let alarmT=null;const ringStop=()=>{clearInterval(alarmT);alarmT=null};
+function ringStart(){ringStop();beep();alarmT=setInterval(beep,3200)} // rings again and again until the cook presses Next, Back, Done or close
 function cookMode(r){
   const steps=r.steps.map(s=>cv(s)),ov=document.createElement("div");let i=0,tm=null,wlOn=false;const noteLast=n=>{const x=n===0&&getNote(r.title);return x?`<div class="ck-last"><b>Your note from ${new Date(x.d).toLocaleDateString()}</b>${esc(x.t)}</div>`:""};
   ov.className="cookov";ov.setAttribute("role","dialog");ov.setAttribute("aria-modal","true");ov.setAttribute("aria-label","Cooking mode");
-  const close=()=>{clearInterval(tm);ov.remove();document.body.style.overflow="";document.removeEventListener("keydown",key);document.removeEventListener("visibilitychange",vis);if(wl){wl.release().catch(()=>{});wl=null}};
+  const close=()=>{clearInterval(tm);ringStop();ov.remove();document.body.style.overflow="";document.removeEventListener("keydown",key);document.removeEventListener("visibilitychange",vis);if(wl){wl.release().catch(()=>{});wl=null}};
   const key=e=>{if(e.target&&e.target.closest&&e.target.closest("textarea")&&e.key!=="Escape")return;if(e.key==="Escape")close();else if(e.key==="ArrowRight")go(1);else if(e.key==="ArrowLeft")go(-1)};
   const vis=()=>{if(document.visibilityState==="visible"&&ov.isConnected)lock()};
   function wlPaint(){const e=ov.querySelector(".ck-wl");if(!e)return;e.dataset.on=wlOn?"1":"0";e.lastChild.textContent=wlOn?"Screen on":"Screen may sleep";e.title=wlOn?"The screen stays awake while you cook":navigator.wakeLock?"The browser refused to keep the screen awake (battery saver?)":"This browser can't keep the screen awake"}
@@ -1781,13 +1829,13 @@ function cookMode(r){
     if(wl&&!wl.released){wlOn=true;wlPaint();return}
     navigator.wakeLock.request("screen").then(x=>{wl=x;wlOn=true;wlPaint();x.addEventListener("release",()=>{if(wl===x)wl=null;wlOn=false;wlPaint()})}).catch(()=>{wlOn=false;wlPaint()});
   }document.addEventListener("visibilitychange",vis);
-  function finish(){clearInterval(tm);ov.innerHTML=`<div class="ck-done"><svg class="ck-badge" viewBox="0 0 120 120" aria-hidden="true"><circle class="bg" cx="60" cy="60" r="52"/><path class="tick" d="M36 62l16 16 32-36"/></svg><h2>Enjoy your meal</h2><p>${esc(r.title)}</p>${(function(){try{return window.__logCooked?`<p class="ck-meta">${window.__logCooked(r.title)}</p>`:""}catch(e){return ""}})()}<label class="ck-nl" for="cknote">Tweaks for next time</label><textarea id="cknote" class="ck-ta" rows="3" maxlength="600" placeholder="${PH}"></textarea><button class="ck-n">Done</button></div>`;const ta=ov.querySelector("#cknote");ta.value=(getNote(r.title)||{}).t||"";ta.oninput=()=>putNote(r.title,ta.value);ov.querySelector(".ck-n").onclick=close;ov.querySelector(".ck-n").focus();navigator.vibrate&&navigator.vibrate([80,60,80,60,200])}
+  function finish(){clearInterval(tm);ringStop();ov.innerHTML=`<div class="ck-done"><svg class="ck-badge" viewBox="0 0 120 120" aria-hidden="true"><circle class="bg" cx="60" cy="60" r="52"/><path class="tick" d="M36 62l16 16 32-36"/></svg><h2>Enjoy your meal</h2><p>${esc(r.title)}</p>${(function(){try{return window.__logCooked?`<p class="ck-meta">${window.__logCooked(r.title)}</p>`:""}catch(e){return ""}})()}<label class="ck-nl" for="cknote">Tweaks for next time</label><textarea id="cknote" class="ck-ta" rows="3" maxlength="600" placeholder="${PH}"></textarea><button class="ck-n">Done</button></div>`;const ta=ov.querySelector("#cknote");ta.value=(getNote(r.title)||{}).t||"";ta.oninput=()=>putNote(r.title,ta.value);ov.querySelector(".ck-n").onclick=close;ov.querySelector(".ck-n").focus();navigator.vibrate&&navigator.vibrate([80,60,80,60,200])}
   function go(d){i=Math.max(0,Math.min(steps.length-1,i+d));paint()}
   function paint(){
-    clearInterval(tm);const s=steps[i],sec=mins(s),last=i===steps.length-1;
-    ov.innerHTML=`<div class="ck-top"><b>${esc(r.title)}</b><span class="ck-wl" aria-live="polite"><i></i><em></em></span><button class="ck-x" aria-label="Close cooking mode">${I("x")}</button></div><i class="ck-bar"><u style="width:${(i+1)/steps.length*100}%"></u></i><div class="ck-step"><small>Step ${i+1} of ${steps.length}</small><p>${esc(s)}</p>${noteLast(i)}${sec?`<button class="ck-t" data-s="${sec}">${I("clock")}<span>Start ${Math.round(sec/60*10)/10>=1?Math.round(sec/60)+" min":sec+" s"} timer</span></button>`:""}</div><div class="ck-nav"><button class="ck-p" ${i?"":"disabled"}>Back</button><button class="ck-n">${last?"Done!":"Next"}</button></div>`;
+    clearInterval(tm);ringStop();const s=steps[i],sec=mins(s),last=i===steps.length-1;
+    ov.innerHTML=`<div class="ck-top"><b>${esc(r.title)}</b><button class="ck-x" aria-label="Close cooking mode">${I("x")}</button></div><i class="ck-bar"><u style="width:${(i+1)/steps.length*100}%"></u></i><div class="ck-step"><small>Step ${i+1} of ${steps.length}</small><p>${esc(s)}</p>${noteLast(i)}${sec?`<button class="ck-t" data-s="${sec}">${I("clock")}<span>Start ${Math.round(sec/60*10)/10>=1?Math.round(sec/60)+" min":sec+" s"} timer</span></button>`:""}</div><div class="ck-nav"><button class="ck-p" ${i?"":"disabled"}>Back</button><button class="ck-n">${last?"Done!":"Next"}</button></div>`;
     ov.querySelector(".ck-x").onclick=close;ov.querySelector(".ck-p").onclick=()=>go(-1);ov.querySelector(".ck-n").onclick=()=>last?finish():go(1);
-    const t=ov.querySelector(".ck-t");if(t)t.onclick=()=>{let left=+t.dataset.s;const end=Date.now()+left*1000,lab=t.querySelector("span"),show=()=>lab.textContent=Math.floor(left/60)+":"+String(left%60).padStart(2,"0")+" left";show();t.onclick=null;tm=setInterval(()=>{left=Math.ceil((end-Date.now())/1000);if(left<=0){clearInterval(tm);lab.textContent="Time's up!";t.classList.add("ring");beep()}else show()},1000)};
+    const t=ov.querySelector(".ck-t");if(t)t.onclick=()=>{let left=+t.dataset.s;const end=Date.now()+left*1000,lab=t.querySelector("span"),show=()=>lab.textContent=Math.floor(left/60)+":"+String(left%60).padStart(2,"0")+" left";show();t.onclick=null;tm=setInterval(()=>{left=Math.ceil((end-Date.now())/1000);if(left<=0){clearInterval(tm);lab.textContent="Time's up!";t.classList.add("ring");ringStart()}else show()},1000)};
     ov.querySelector(".ck-n").focus();wlPaint();
   }
   document.body.appendChild(ov);document.body.style.overflow="hidden";document.addEventListener("keydown",key);paint();
@@ -1799,13 +1847,13 @@ function cookMode(r){
 const o=$("pzout");if(o){const rl=document.createElement("div");rl.className="reel pzreel";rl.id="pzreel";rl.setAttribute("aria-hidden","true");
  rl.innerHTML=`<div class="spinwrap"><div class="rot"><div class="sc" style="--r:0deg;--k:0"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-40" r="7.5" fill="#d63a22" style="stroke:var(--ink)" stroke-width="2"/><circle cx="-5" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:45deg;--k:1"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-38" r="6" fill="#1f9d5f" style="stroke:var(--ink)" stroke-width="2"/><circle cx="6" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:90deg;--k:2"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-40" r="7.5" fill="#d63a22" style="stroke:var(--ink)" stroke-width="2"/><circle cx="-5" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:135deg;--k:3"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-38" r="6" fill="#1f9d5f" style="stroke:var(--ink)" stroke-width="2"/><circle cx="6" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:180deg;--k:4"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-40" r="7.5" fill="#d63a22" style="stroke:var(--ink)" stroke-width="2"/><circle cx="-5" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:225deg;--k:5"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-38" r="6" fill="#1f9d5f" style="stroke:var(--ink)" stroke-width="2"/><circle cx="6" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:270deg;--k:6"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-40" r="7.5" fill="#d63a22" style="stroke:var(--ink)" stroke-width="2"/><circle cx="-5" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div><div class="sc" style="--r:315deg;--k:7"><div class="pop"><svg class="wg" viewBox="-85 -85 170 170" aria-hidden="true"><path d="M0 0L-23.6 -61.6A66 66 0 0 1 23.6 -61.6Z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M-23.6 -61.6A66 66 0 0 1 23.6 -61.6" fill="none" stroke="#c98a3a" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="-38" r="6" fill="#1f9d5f" style="stroke:var(--ink)" stroke-width="2"/><circle cx="6" cy="-22" r="3.5" fill="#d63a22"/></svg></div></div></div></div><div class="rtx"><span id="pzrt"></span><small>Firing up the oven…</small></div>`;o.before(rl)}
 const _pz=pzRun;let busy=false;
-pzRun=function(what){
+pzRun=function(what,instant){
   if(busy)return;const rl=$("pzreel");
-  if(!rl||matchMedia("(prefers-reduced-motion:reduce)").matches||mrNoSpin())return _pz(what);
+  if(!rl||instant||matchMedia("(prefers-reduced-motion:reduce)").matches||mrNoSpin())return _pz(what);
   busy=true;const bs=[...document.querySelectorAll(".pzbtns button")],rt=$("pzrt");
   let names=((window.PZ&&PZ.recipes)||[]).map(x=>x.title||x.name).filter(Boolean);if(!names.length)names=["Margherita","Pepperoni","Diavola","Quattro formaggi","Funghi"];
   bs.forEach(b=>b.disabled=true);o.innerHTML="";$("pzph").style.display="none";$("pznote").textContent="";rl.classList.add("on");rl.scrollIntoView({behavior:"smooth",block:"center"});
-  let d=70,el=0;const tick=()=>{rt.textContent=rnd(names);el+=d;if(el>=1400){return setTimeout(()=>{rl.classList.remove("on");bs.forEach(b=>b.disabled=false);busy=false;_pz(what)},300)}d=Math.round(d*1.15);setTimeout(tick,d)};tick();
+  mrSpinNames(rt,names,()=>{rl.classList.remove("on");bs.forEach(b=>b.disabled=false);busy=false;_pz(what)});
 };
 const _ps=pzShow;
 pzShow=function(r,m){_ps(r,m);try{const sv=o.querySelector(".pzsave");if(!r||!sv||o.querySelector("#pzcook"))return;
@@ -1815,6 +1863,29 @@ pzShow=function(r,m){_ps(r,m);try{const sv=o.querySelector(".pzsave");if(!r||!sv
 const _d=draw;
 draw=function(){_d();const b=$("spin");if(b&&!b.disabled){b.textContent="Spin"}};
 draw();
+})();
+/* ---- spinner stage: the same size everywhere; while spinning the art swaps: logo pizza, pot, pizza slices (add burger, pasta... to ARTS) ---- */
+(function(){
+const cookReel=$("reel"),pzReel=$("pzreel");if(!cookReel||!pzReel)return;
+const potEl=cookReel.querySelector(".toss"),wedgeEl=pzReel.querySelector(".spinwrap");if(!potEl||!wedgeEl)return;
+const ART={pot:potEl.outerHTML,wedge:wedgeEl.outerHTML,...(window.__craftArts||{}),logo:'<svg class="lg" viewBox="0 0 128 128" aria-hidden="true"><use href="#logo-pizza"/></svg>'};
+window.__art=ART;
+const root=document.documentElement.style,setD=()=>{const D=Math.round(Math.max(150,Math.min(innerWidth*.58,innerHeight*.34,230)));root.setProperty("--D",D+"px");root.setProperty("--kp",(D*.84/152).toFixed(3));root.setProperty("--kw",(D*.84/150).toFixed(3))};
+setD();addEventListener("resize",setD);
+const rm=()=>matchMedia("(prefers-reduced-motion:reduce)").matches,STEP=620;
+const NOMIX=["dairy"];window.__noMix=NOMIX; // fermenting spinners keep to their own section and stay out of the mix
+const POOL=["logo","pot","wedge"].concat(Object.keys(window.__craftArts||{})).filter(k=>ART[k]&&!NOMIX.includes(k)); // Cook and the start wheel mix all of these; each section keeps its own art (Pizza: slices only, Burger: burger, Ferment: jar)
+const rndArt=(n,cur)=>{let k;do{k=Math.floor(Math.random()*n)}while(n>1&&k===cur);return k}; // random, never the same twice in a row
+window.__rndArt=rndArt;
+const stageHTML=pool=>`<div class="stage">${pool.map(k=>`<div class="art">${ART[k]}</div>`).join("")}</div>`;
+function wire(reel,old,pool){
+  old.insertAdjacentHTML("beforebegin",stageHTML(pool));old.remove();
+  const arts=[...reel.querySelectorAll(".stage>.art")];let i=-1,t=null;
+  const step=()=>{i=rndArt(arts.length,i);arts.forEach((a,k)=>a.classList.toggle("on",k===i))};
+  new MutationObserver(()=>{if(reel.classList.contains("on")){if(t)return;i=-1;step();if(!rm()&&arts.length>1)t=setInterval(step,STEP)}else{clearInterval(t);t=null}}).observe(reel,{attributes:true,attributeFilter:["class"]});
+}
+wire(cookReel,potEl,POOL);wire(pzReel,wedgeEl,["wedge"]);
+window.__artStep=STEP;
 })();
 /* ---- pizza dough sliders (fermentation + hydration), layered on the existing state; the old buttons still work ---- */
 (function(){
@@ -1912,7 +1983,7 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
   document.addEventListener("keydown",e=>{
     if(e.metaKey||e.ctrlKey||e.altKey||e.defaultPrevented)return;
     const el=e.target;if(el&&el.closest&&el.closest("input,textarea,select,button,a,[contenteditable],[role=listbox]"))return;
-    if(document.querySelector(".cookov"))return;
+    if(document.querySelector(".cookov")||(window.__home&&window.__home.up()))return;
     const k=e.key.toLowerCase(),tabs=["cook","craft","kit"];
     if(k>="1"&&k<="3"){setTab(tabs[+k-1]);return}
     if(tab==="cook"){if(k==="s"){const b=$("spin");if(b&&!b.disabled)b.click()}else if(k==="w"){const b=$("remix");if(b&&!b.disabled)b.click()}}
@@ -1931,25 +2002,66 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
     if(Math.abs(m-9.8)>14){hits=hits.filter(h=>t-h<700);hits.push(t);
       if(hits.length>=3&&t-last>2500){hits=[];last=t;
         const ae=document.activeElement;if(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))return;
-        if(document.querySelector(".cookov,.splash,.reel.on,.fmreel"))return;
-        const b=tab==="cook"?$("spin"):tab==="pizza"?$("pzspin"):tab==="ferm"?document.querySelector("#tab-ferm .fmspin"):null;
+        const H=window.__home;if(H&&H.up()){H.spin();navigator.vibrate&&navigator.vibrate(30);return}if(document.querySelector(".cookov,.reel.on,.fmreel"))return;
+        const b=tab==="cook"?$("spin"):tab==="pizza"?$("pzspin"):tab==="ferm"?document.querySelector("#tab-ferm .fmspin"):document.querySelector("#tab-"+tab+" .fmspin[data-spin]");
         if(b&&!b.disabled){b.click();navigator.vibrate&&navigator.vibrate(30)}}}
   }
   const set=v=>{if(v){addEventListener("devicemotion",onMotion)}else removeEventListener("devicemotion",onMotion)};
   if(canShake&&store("shake")===1)set(true);
-  /* loading screen: the pizza spins once, then the screen fades out by itself. Nothing to tap. */
+  /* start screen = home: the pizza spins once like it is loading, then waits. Tap it (or shake) for a random recipe;
+     closing the recipe brings you back here; "Full app" opens the whole app. */
   {const sp=document.getElementById("splash");
   if(sp){
-    const pz=sp.querySelector(".sp-pizza"),rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
-    const done=()=>{sp.classList.add("out");setTimeout(()=>sp.remove(),rm?0:320)};
+    const pz=sp.querySelector(".sp-pizza"),go=document.getElementById("spgo"),hint=document.getElementById("sph"),rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+    let ready=false,busy=false;
+    let hintHtml="";
+    const wheel=sp.querySelector(".sp-wheel"),AR=window.__art;let overlays=[];
+    const OV=AR?["pot","wedge"].concat(Object.keys(window.__craftArts||{})).filter(k=>AR[k]&&!(window.__noMix||[]).includes(k)):[]; // the pizza logo itself is the 4th art
+    if(AR&&OV.length){wheel.insertAdjacentHTML("beforeend",OV.map(k=>`<div class="art">${AR[k]}</div>`).join(""));overlays=[...wheel.querySelectorAll(":scope>.art")]}
+    let cyc=null,rot=null;
+    const cycStart=()=>{if(!overlays.length||rm)return;let i=-1;const n=overlays.length+1,step=()=>{i=window.__rndArt?__rndArt(n,i):(i+1)%n;pz.style.visibility=i===0?"visible":"hidden";overlays.forEach((a,k)=>a.classList.toggle("on",k+1===i))};step();cyc=setInterval(step,window.__artStep||620)}; // random start, random swaps, never the same art twice in a row
+    const cycStop=()=>{clearInterval(cyc);cyc=null;pz.style.visibility="";overlays.forEach(a=>a.classList.remove("on"))};
+    const names=()=>{const z=((window.PZ&&PZ.recipes)||[]).map(x=>x.title||x.name).filter(Boolean);
+      return RECIPES.map(r=>r.title).concat(Object.keys(GEN.cuisines).map(c=>c+" "+rnd(["chicken bowl","stir-fry","curry","traybake","stew"])),z)};
+    /* the start wheel mixes the app's spinners: add a kind here (e.g. burger) and it joins the roulette */
+    const KINDS=[{w:4,go:()=>{setTab("cook");run("spin",true,true)}},{w:1,go:()=>{setTab("pizza");pzRun("spin",true)}}];
+    const pick=()=>{let r=Math.random()*KINDS.reduce((t,k)=>t+k.w,0);return KINDS.find(k=>(r-=k.w)<0)||KINDS[0]};
+    const H=window.__home={from:false,
+      up:()=>sp.isConnected&&ready&&!sp.classList.contains("out"),
+      hide(){sp.classList.add("out");sp.inert=true;go.tabIndex=-1},
+      show(now){busy=false;sp.inert=false;if(now)sp.classList.add("nofade");sp.classList.remove("out","ready");hint.classList.remove("tick");hint.style.animation="";hint.innerHTML=hintHtml;void sp.offsetWidth;sp.classList.add("ready");go.tabIndex=0;scrollTo({top:0});if(now)requestAnimationFrame(()=>requestAnimationFrame(()=>sp.classList.remove("nofade")))},
+      open(){ // the logo in the top left brings you back to this screen
+        if(!sp.isConnected||!ready||document.querySelector(".cookov"))return false;
+        H.from=false;H.show(true);try{window.__leaveCook&&window.__leaveCook();window.__leavePizza&&window.__leavePizza();setTab("cook")}catch(e){console.error(e)}return true},
+      spin(){
+        if(busy||!H.up())return;busy=true;const k=pick();
+        const fire=()=>{cycStop();if(rot){const r=rot;rot=null;setTimeout(()=>r.cancel(),500)}H.from=true;try{k.go()}catch(e){console.error(e)}H.hide();busy=false};
+        if(rm||mrNoSpin()){fire();return}
+        cycStart();
+        if(pz.animate){const rev=(parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--rev"))||2.4)*1000; // constant speed, the same turn time as every other spinner
+          rot=pz.animate([{transform:"rotate(1417.5deg)"},{transform:"rotate(1777.5deg)"}],{duration:rev,iterations:Infinity,easing:"linear"})}
+        hint.classList.add("tick");hint.style.animation="none";
+        mrSpinNames(hint,names(),fire); // same name ticker as the Cook spinner
+      }};
+    const makeReady=()=>{
+      if(ready||!sp.isConnected)return;ready=true;
+      const txt=canShake&&store("shake")===1?"Tap the pizza or shake your phone for a random recipe":"Tap the pizza for a random recipe";
+      hintHtml=rm?txt:txt.split(" ").map((w,i)=>`<span class="w" style="--w:${i}">${w}</span>`).join(" ");hint.innerHTML=hintHtml;
+      sp.removeAttribute("role");sp.setAttribute("aria-label","Meal Roulette. "+txt);
+      pz.setAttribute("role","button");pz.tabIndex=0;pz.setAttribute("aria-label","Spin a random recipe");
+      go.tabIndex=0;sp.classList.add("ready");
+    };
+    pz.onclick=()=>H.spin();
+    pz.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();H.spin()}};
+    go.onclick=()=>{H.from=false;H.hide()};
     const a=!rm&&pz.getAnimations?pz.getAnimations()[0]:null;
-    (a?a.finished.catch(()=>{}):Promise.resolve()).then(()=>setTimeout(done,rm?400:120));
-    setTimeout(()=>{if(sp.isConnected)done()},2500); // safety net
+    (a?a.finished.catch(()=>{}):Promise.resolve()).then(()=>setTimeout(makeReady,rm?200:120));
+    setTimeout(makeReady,2500); // safety net
   }}
   const grid=document.querySelector("#kz-setup .kgrid");
   if(grid){
     const sec=document.createElement("section");sec.className="panel";sec.id="kitextras";
-    sec.innerHTML=`<div class="lab"><svg class="i"><use href="#i-wand"/></svg>Extras</div><div class="xtra-row"><p><b>Spin animation</b>Turn off to get your result straight away.</p><div class="tg"><button type="button" id="spintg" aria-pressed="${!mrNoSpin()}">${mrNoSpin()?"Off":"On"}</button></div></div>${canShake?`<div class="xtra-row"><p><b>Shake to spin</b>Shake your phone to spin on Cook, Pizza night and Ferment.</p><div class="tg"><button type="button" id="shaketg" aria-pressed="${store("shake")===1}">${store("shake")===1?"On":"Off"}</button></div></div>`:""}`;
+    sec.innerHTML=`<div class="lab"><svg class="i"><use href="#i-wand"/></svg>Extras</div><div class="xtra-row"><p><b>Spin animation</b>Turn off to get your result straight away.</p><div class="tg"><button type="button" id="spintg" aria-pressed="${!mrNoSpin()}">${mrNoSpin()?"Off":"On"}</button></div></div>${canShake?`<div class="xtra-row"><p><b>Shake to spin</b>Shake your phone to spin on every page that has a Spin button.</p><div class="tg"><button type="button" id="shaketg" aria-pressed="${store("shake")===1}">${store("shake")===1?"On":"Off"}</button></div></div>`:""}`;
     grid.appendChild(sec);
     const st=$("spintg");
     if(st)st.onclick=()=>{const on=st.getAttribute("aria-pressed")!=="true";st.setAttribute("aria-pressed",String(on));st.textContent=on?"On":"Off";store("spins",on?1:0)};
@@ -2022,16 +2134,18 @@ function enter(){
   if(tab!=="cook"){origin=origin||tab;setTab("cook")}
 }
 function leave(){
-  if(!inRes())return;cook.classList.remove("resmode");const to=origin;origin=null;
+  if(!inRes())return;const H=window.__home;if(H&&H.from){H.from=false;H.show(true)} // cover the app first, so the filters never flash
+  cook.classList.remove("resmode");const to=origin;origin=null;
   if(to&&to!=="cook")setTab(to);scrollTo({top:0});
 }
 function back(){if(history.state&&history.state.mrres){history.back()}else leave()}
+window.__leaveCook=()=>{if(!inRes())return;cook.classList.remove("resmode");origin=null};
 addEventListener("popstate",()=>{if(inRes())leave()});
 const _run=run;run=function(){enter();return _run.apply(this,arguments)};
 const _sw=show;show=function(r,m){if(r)enter();return _sw(r,m)};
 const _rp2=renderPlan;renderPlan=function(){enter();return _rp2.apply(this,arguments)};
 // the Cook tab itself is "home": tapping it while a result is open goes back
-document.querySelector('#tabs [data-t="cook"]').addEventListener("click",()=>{if(inRes()&&tab==="cook")back()});
+document.querySelector('#tabs [data-t="cook"]').addEventListener("click",()=>{if(inRes()&&tab==="cook"){if(window.__home)window.__home.from=false;back()}});
 // a Back button at the end of every recipe card (phones/tablets)
 const XB='<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
 const addX=c=>{const h=c&&c.querySelector(".hero");if(h&&!h.querySelector(".heroback")){const b=document.createElement("button");b.type="button";b.className="heroback";b.setAttribute("aria-label","Back");b.title="Back";b.innerHTML=XB;b.onclick=back;h.append(b)}};
@@ -2076,10 +2190,11 @@ if(grid&&$("fav")&&$("plans")){
 const small=()=>matchMedia("(max-width:959px)").matches,tabEl=$("tab-pizza");let on=false;
 const XB='<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
 function enter(){if(on)return;on=true;tabEl.classList.add("resmode");if(small()){try{history.pushState({mrres:1},"")}catch(e){}}scrollTo({top:0})}
-function leave(){if(!on)return;on=false;tabEl.classList.remove("resmode");pzShow(null);scrollTo({top:0})}
+function leave(){if(!on)return;on=false;const H=window.__home;if(H&&H.from){H.from=false;H.show(true);setTab("cook")}tabEl.classList.remove("resmode");pzShow(null);scrollTo({top:0})}
+window.__leavePizza=()=>{if(on){on=false;tabEl.classList.remove("resmode");pzShow(null)}};
 function back(){if(history.state&&history.state.mrres)history.back();else leave()}
 addEventListener("popstate",()=>{if(on)leave()});
-const _pr=pzRun;pzRun=function(w){enter();return _pr(w)}; // the spinning reel already shows on the result screen, like Cook
+const _pr=pzRun;pzRun=function(w,i){enter();return _pr(w,i)}; // the spinning reel already shows on the result screen, like Cook
 const _ps=pzShow;pzShow=function(r,m){
   if(r)enter();
   else if(m&&on){on=false;tabEl.classList.remove("resmode");if(small()&&history.state&&history.state.mrres)history.back()} // nothing to show: back to the filters, keep the message

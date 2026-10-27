@@ -11,8 +11,25 @@ const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(ST))}catch(e){}};
 let people=2;try{people=Math.min(10,Math.max(1,+(JSON.parse(localStorage.getItem("mr2")||"{}").n)||2))}catch(e){}
 const rg=a=>a<10?Math.round(a*2)/2:a<100?Math.round(a):a<500?Math.round(a/5)*5:Math.round(a/10)*10;
 const G=a=>rg(a)+" g",ML=a=>rg(a)+" g",P1=a=>Math.max(.5,Math.round(a*2)/2);
-const eggs=gr=>{const n=Math.max(.5,Math.round(gr/50*2)/2);return rg(gr)+" g beaten egg (about "+n+(n===1?" egg)":" eggs)")};
+const eggs=gr=>{const n=Math.max(.5,Math.round(gr/50*2)/2);return n+(n===1?" egg":" eggs")+" ("+rg(gr)+" g)"};
 const hm=m=>m<60?m+" min":Math.floor(m/60)+" h"+(m%60?" "+m%60+" min":"");
+
+/* burger spinner art: the layers lift off one after another and drop back into a stack (animated in index.html) */
+const BURGER_ART=`<div class="pgr bgr"><svg class="base" viewBox="0 0 240 190" aria-hidden="true"><circle cx="120" cy="95" r="90" fill="#f6efe0" style="stroke:var(--ink)" stroke-width="3"/><circle cx="120" cy="95" r="80" fill="none" stroke="#d63a22" stroke-opacity=".55" stroke-width="4" stroke-linecap="round" stroke-dasharray="16 26"/></svg><svg viewBox="0 0 240 190" aria-hidden="true">
+<g class="bl" style="--k:0"><path d="M44 150h152v6q0 16-16 16H60q-16 0-16-16z" fill="#e8a84d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="bl" style="--k:1"><rect x="40" y="128" width="160" height="22" rx="11" fill="#7a3b1d" style="stroke:var(--ink)" stroke-width="3"/><path d="M62 137h14M94 141h12M130 136h14M160 141h12" stroke="#a5552a" stroke-width="3" stroke-linecap="round"/></g>
+<g class="bl" style="--k:2"><path d="M46 121h148v7h-44l-10 14-10-14H46z" fill="#ffc63d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="bl" style="--k:3"><rect x="50" y="109" width="140" height="11" rx="5.5" fill="#d63a22" style="stroke:var(--ink)" stroke-width="3"/></g>
+<g class="bl" style="--k:4"><path d="M40 103q9.5 10 19 0t19 0t19 0t19 0t19 0t19 0t19 0t19 0v9H40z" fill="#5fbf6a" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="bl" style="--k:5"><path d="M38 101C38 64 72 44 120 44S202 64 202 101z" fill="#e8a84d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><g fill="#fff3cf"><ellipse cx="94" cy="68" rx="5" ry="2.6" transform="rotate(-25 94 68)"/><ellipse cx="122" cy="58" rx="5" ry="2.6" transform="rotate(10 122 58)"/><ellipse cx="148" cy="70" rx="5" ry="2.6" transform="rotate(30 148 70)"/><ellipse cx="108" cy="84" rx="5" ry="2.6" transform="rotate(15 108 84)"/><ellipse cx="136" cy="85" rx="5" ry="2.6" transform="rotate(-20 136 85)"/></g></g></svg><div class="ring"><div class="ing" style="--k:0;--r:0deg;--R:84px"><u><i>🍅</i></u></div><div class="ing" style="--k:1;--r:120deg;--R:84px"><u><i>🧀</i></u></div><div class="ing" style="--k:2;--r:240deg;--R:84px"><u><i>🥬</i></u></div></div></div>`;
+window.__burgerArt=BURGER_ART;
+
+/* pasta spinner art: a bowl with a noodle spiral that twirls at the shared spin speed; tomato, basil and cheese orbit it */
+const PASTA_ART=`<div class="pgr"><svg viewBox="0 0 240 190" aria-hidden="true"><ellipse cx="120" cy="182" rx="70" ry="6" fill="rgba(0,0,0,.14)"/><circle cx="120" cy="95" r="84" fill="#4a90c2" style="stroke:var(--ink)" stroke-width="3"/><circle cx="120" cy="95" r="76" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="3"/><circle cx="120" cy="95" r="70" fill="#f6efe0" style="stroke:var(--ink)" stroke-width="3"/></svg>
+<div class="pspin"><svg viewBox="-33 -33 66 66" aria-hidden="true"><path d="M0 0a4 4 0 0 1 8 0a8 8 0 0 1-16 0a12 12 0 0 1 24 0a16 16 0 0 1-32 0a20 20 0 0 1 40 0a24 24 0 0 1-48 0a28 28 0 0 1 56 0" fill="none" style="stroke:var(--ink)" stroke-width="6.2" stroke-linecap="round"/><path d="M0 0a4 4 0 0 1 8 0a8 8 0 0 1-16 0a12 12 0 0 1 24 0a16 16 0 0 1-32 0a20 20 0 0 1 40 0a24 24 0 0 1-48 0a28 28 0 0 1 56 0" fill="none" stroke="#f2c14e" stroke-width="3.4" stroke-linecap="round"/></svg></div>
+<svg class="pcap" viewBox="0 0 240 190" aria-hidden="true"><circle cx="120" cy="95" r="14" fill="#d63a22" style="stroke:var(--ink)" stroke-width="3"/><path d="M120 92q-10-12 2-16 8 6-2 16zM120 92q12-10 18 2-8 8-18-2z" fill="#3fae5a" style="stroke:var(--ink)" stroke-width="2" stroke-linejoin="round"/></svg>
+<div class="ring"><div class="ing" style="--k:0;--r:0deg;--R:52px"><u><i>🍅</i></u></div><div class="ing" style="--k:1;--r:120deg;--R:52px"><u><i>🌿</i></u></div><div class="ing" style="--k:2;--r:240deg;--R:52px"><u><i>🧀</i></u></div></div></div>`;
+window.__pastaArt=PASTA_ART;
 
 /* controls: {k,label,icon,tg:[[value,label]]} or {k,label,icon,step:[min,max,by,unit]}; def = default value */
 const TOOLS={
@@ -107,14 +124,45 @@ drinks:{title:"What are we drinking?",sub:"Cold brew, lemonade and syrup by the 
   const rich=s.r==="2",wt=a/(rich?2.05:1.6)*1,sg=wt*(rich?2:1);
   return{title:(rich?"Rich":"Simple")+" syrup",meta:[["drinks","About "+ML(a)],["fridge",rich?"Keeps 6 months":"Keeps 1 month"]],note:["Ratio by weight: "+(rich?"2 parts sugar to 1 part water":"equal sugar and water")+"."],
    ing:[["Water",ML(wt)],["Sugar",G(sg)]],steps:["Warm the water and sugar in a pot, stirring, until the sugar dissolves. Do not boil hard.","Cool, pour into a clean bottle and keep in the fridge."]}}},
-pasta:{title:"What pasta are we rolling?",sub:"Fresh pasta dough for any number of people.",
- ctl:[{k:"t",label:"Dough",icon:"pasta",def:"egg",tg:[["egg","Egg pasta"],["semo","Eggless semolina"]]},{k:"p",label:"People",icon:"users",def:null,step:[1,12,1,""]}],
+pasta:{title:"What pasta are we rolling?",sub:"Pick a dough, shape and sauce, or spin for a surprise.",
+ spinLabel:"Spin a pasta!",spinNote:"Rolling out your pasta…",
+ names:["Tagliatelle ragù","Cacio e pepe","Orecchiette with pesto","Pappardelle with mushrooms","Spaghetti-style aglio e olio","Tomato and basil","Trofie with pesto","Carbonara","Cavatelli with tomato","Tagliolini with garlic and chilli","Creamy mushroom"],
+ spin(s){const pk=a=>a[Math.floor(Math.random()*a.length)];
+  s.t=pk(["egg","egg","egg","semo"]);s.h=pk(["tagliatelle","pappardelle","tagliolini"]);s.m=pk(["orecchiette","cavatelli","trofie"]);s.a=pk(["tomato","cacio","pesto","ragu","aglio","carbonara","mushroom"])},
+ ctl:[{k:"t",label:"Dough",icon:"pasta",def:"egg",tg:[["egg","Egg pasta"],["semo","Eggless semolina"]]},
+  {k:"h",label:"Shape",icon:"pasta",def:"tagliatelle",tg:[["tagliatelle","Tagliatelle"],["pappardelle","Pappardelle"],["tagliolini","Tagliolini"]],only:"egg"},
+  {k:"m",label:"Shape",icon:"pasta",def:"orecchiette",tg:[["orecchiette","Orecchiette"],["cavatelli","Cavatelli"],["trofie","Trofie"]],only:"semo"},
+  {k:"a",label:"Sauce",icon:"sauce",def:"tomato",tg:[["tomato","Tomato and basil"],["cacio","Cacio e pepe"],["pesto","Pesto"],["ragu","Ragù"],["aglio","Garlic and chilli"],["carbonara","Carbonara"],["mushroom","Creamy mushroom"]]},
+  {k:"p",label:"People",icon:"users",def:null,step:[1,12,1,""]}],
  calc(s){
-  const n=s.p||people,egg=s.t==="egg",w=Math.max(2000,100*n*10),salt=Math.round(w/100)/10;
-  return{title:(egg?"Egg pasta":"Semolina pasta")+" for "+n,meta:[["clock",egg?"Cooks in 2–3 min":"Cooks in 4–5 min"],["pasta","Dough "+G(egg?100*n*1.55:100*n*1.5)],["jar","Pot of "+Math.ceil(w/1000)+" L water"]],
-   note:[egg?"Rest the dough 30 minutes: it makes rolling much easier. Great for tagliatelle, pappardelle and filled pasta.":"Shape into orecchiette, cavatelli or trofie. Best with a robust sauce such as tomato or broccoli."],
-   ing:egg?[["Plain or 00 flour",G(100*n)],["Eggs",eggs(55*n)],["Salt",P1(n)+" g"],["Semolina, for dusting",G(20*n)]]:[["Semolina flour",G(100*n)],["Warm water",G(50*n)],["Salt",P1(n)+" g"]],
-   steps:(egg?["Mound the flour, make a well and add the eggs and salt. Whisk with a fork, slowly pulling in flour.","Knead 8–10 minutes until smooth and elastic. Wrap and rest 30 minutes.","Roll out thin (you should see your hand through it), dust with semolina and cut into ribbons."]:["Mix the semolina and salt, add the warm water and knead 8 minutes until smooth.","Wrap and rest 30 minutes.","Roll into ropes, cut into small pieces and press each with your thumb or drag it on a board to shape."]).concat(["Boil in "+G(w)+" of water with "+salt+" g salt (10 g per litre) for "+(egg?"2–3":"4–5")+" minutes. Drain, keeping a cup of the water for the sauce."])}}},
+  const n=s.p||people,egg=s.t!=="semo",w=Math.max(2000,100*n*10),salt=Math.round(w/100),Gm=x=>x<10?P1(x)+" g":G(x);
+  const SH=(egg?{tagliatelle:["Tagliatelle",["Roll out thin (you should see your hand through it), dust with semolina, roll up loosely and cut into ribbons about 6 mm wide. Shake them out into loose nests."],"2–3"],
+    pappardelle:["Pappardelle",["Roll out thin (you should see your hand through it), dust with semolina and cut into ribbons about 2 cm wide, with a knife or a fluted wheel."],"2–3"],
+    tagliolini:["Tagliolini",["Roll out very thin, dust with semolina, roll up loosely and cut into thin ribbons about 2 mm wide. Shake them out into loose nests."],"1–2"]}[s.h||"tagliatelle"]
+   :{orecchiette:["Orecchiette",["Roll the dough into ropes 1 cm thick and cut into small pieces. Drag each piece against the board with a butter knife so it curls, then flip it over your thumb into a little dome."],"4–5"],
+    cavatelli:["Cavatelli",["Roll the dough into ropes as thick as a finger and cut into 2 cm pieces. Press two fingers on each piece and drag it toward you so it curls into a little shell."],"4–5"],
+    trofie:["Trofie",["Cut the dough into small 2 cm pieces and roll each one under your palm on the board into a thin twist about 4 cm long."],"3–4"]}[s.m||"orecchiette"]);
+  const SA={
+   tomato:{n:"tomato and basil",t:20,ing:[["Sauce: passata or canned tomatoes",130],["Sauce: olive oil",8],["Sauce: garlic, sliced",4],["Sauce: fresh basil",3],["Parmesan, to serve",10]],
+    pre:["Warm the oil and garlic gently for 1 minute, without letting the garlic brown. Add the tomatoes and a pinch of salt and simmer 15 minutes until thick."],fin:"Toss the drained pasta in the sauce with a splash of the pasta water. Tear in the basil and serve with parmesan."},
+   cacio:{n:"cacio e pepe",t:10,ing:[["Sauce: pecorino romano, finely grated",35],["Sauce: black pepper, freshly ground",1.5]],
+    pre:["Toast the pepper in a wide dry pan for 1 minute. Stir the pecorino with a few spoonfuls of cooled pasta water into a thick paste."],fin:"Move the drained pasta to the pepper pan with a splash of pasta water. Off the heat, stir in the cheese paste, adding more water until the sauce is creamy and clings to the pasta."},
+   pesto:{n:"pesto",t:10,ing:[["Sauce: fresh basil",25],["Sauce: pine nuts",6],["Sauce: parmesan, grated",12],["Sauce: olive oil",18],["Sauce: garlic",1.5]],
+    pre:["Pound or blitz the basil, pine nuts, garlic and a pinch of salt, then stir in the parmesan and the oil."],fin:"Toss the drained pasta with the pesto and a splash of pasta water, off the heat (heat turns basil dark and bitter)."},
+   ragu:{n:"ragù",t:130,first:1,note:"The ragù is the long part (about 1½ hours), so start it before the pasta.",ing:[["Sauce: beef mince",70],["Sauce: onion, finely chopped",30],["Sauce: carrot, finely chopped",15],["Sauce: celery, finely chopped",15],["Sauce: canned tomatoes",100],["Sauce: red wine (or stock)",30],["Sauce: olive oil",8],["Parmesan, to serve",10]],
+    pre:["Ragù: soften the onion, carrot and celery in the oil for 8 minutes. Add the mince and brown it well, about 8 minutes.","Add the wine and let it bubble away, then the tomatoes and a pinch of salt. Simmer on low heat 1½ hours, stirring now and then, with a splash of water if it gets dry."],fin:"Toss the drained pasta with the ragù and a splash of pasta water. Serve with parmesan."},
+   aglio:{n:"garlic and chilli",t:10,ing:[["Sauce: olive oil",20],["Sauce: garlic, thinly sliced",6],["Sauce: chilli flakes",.3],["Sauce: parsley, chopped",5],["Parmesan, to serve (optional)",8]],
+    pre:["Warm the oil with the garlic and chilli on low heat 3–4 minutes, until the garlic is pale gold (not brown)."],fin:"Toss the drained pasta in the pan with a ladle of pasta water for 1 minute until glossy. Stir in the parsley."},
+   carbonara:{n:"carbonara",t:15,ing:[["Sauce: pancetta or guanciale, diced",40],["Sauce: egg yolks",n+(n>1?" yolks":" yolk")],["Sauce: pecorino or parmesan, grated",25],["Sauce: black pepper",1.5]],
+    pre:["Fry the pancetta in a dry pan over medium heat 6–8 minutes until crisp. Whisk the yolks with the cheese and plenty of pepper."],fin:"Off the heat, toss the hot drained pasta with the pancetta, then the egg mix, adding pasta water a splash at a time until creamy. Do not put it back on the heat or the eggs scramble."},
+   mushroom:{n:"creamy mushroom",t:20,ing:[["Sauce: mushrooms, sliced",100],["Sauce: cream",40],["Sauce: butter",8],["Sauce: garlic",3],["Sauce: fresh thyme",1],["Parmesan, to serve",10]],
+    pre:["Fry the mushrooms in the butter on high heat 6 minutes until golden. Add the garlic and thyme for 30 seconds, then the cream, and simmer 3 minutes."],fin:"Toss the drained pasta in the sauce with a splash of pasta water. Serve with parmesan."}}[s.a||"tomato"];
+  const dough=egg?["Mound the flour, make a well and add the eggs and salt. Whisk with a fork, slowly pulling in flour.","Knead 8–10 minutes until smooth and elastic. Wrap and rest 30 minutes."]:["Mix the semolina and salt, add the warm water and knead 8 minutes until smooth.","Wrap and rest 30 minutes."];
+  const cook="Boil the pasta in "+(w/1000)+" L of water with "+salt+" g salt (10 g per litre) for "+SH[2]+" minutes. Drain, keeping a cup of the water for the sauce.";
+  return{title:SH[0]+" with "+SA.n+" for "+n,meta:[["clock","About "+hm(60+SA.t)],["pasta","Dough "+G(egg?100*n*1.55:100*n*1.5)],["jar","Pot of "+Math.ceil(w/1000)+" L water"]],
+   note:[egg?"Rest the dough 30 minutes: it makes rolling much easier. Cook fresh egg pasta only 2–3 minutes.":"Semolina pasta is firmer than egg pasta and suits robust sauces. Shape it while the dough is still smooth.",SA.note].filter(Boolean),
+   ing:(egg?[["Pasta: plain or 00 flour",G(100*n)],["Pasta: eggs",eggs(55*n)],["Pasta: salt",P1(n)+" g"],["Pasta: semolina, for dusting",G(20*n)]]:[["Pasta: semolina flour",G(100*n)],["Pasta: warm water",G(50*n)],["Pasta: salt",P1(n)+" g"]]).concat([["Salt, for the pasta water",salt+" g"]],SA.ing.map(x=>[x[0],typeof x[1]==="number"?Gm(x[1]*n):x[1]])),
+   steps:[].concat(SA.first?SA.pre:[],dough,SH[1],SA.first?[]:SA.pre,[cook,SA.fin])}}},
 soup:{title:"What are we simmering?",sub:"Stock from bones and scraps, or soup for your table.",
  ctl:[{k:"t",label:"Make",icon:"soup",def:"soup",tg:[["soup","Soup"],["stock","Stock"]]},
   {k:"p",label:"People",icon:"users",def:null,step:[1,12,1,""],only:"soup"},{k:"y",label:"Style",icon:"soup",def:"brothy",tg:[["brothy","Brothy"],["creamy","Creamy"]],only:"soup"},
@@ -177,13 +225,53 @@ dumpling:{title:"What are we folding?",sub:"Wrappers, filling and cooking time f
    note:["Per dumpling: 10 g of dough and "+(s.t==="gyoza"?12:15)+" g of filling. Freeze uncooked on a tray, then bag them. Cook from frozen, 2 minutes longer."],
    ing:[["Wrapper: flour",G(c*10)],["Wrapper: warm water",G(c*5)],["Wrapper: salt",P1(c*.1)+" g"],["Pork mince (or chicken, or crumbled tofu)",G(fl*.55)],["Cabbage, finely chopped",G(fl*.35)],["Salt, for the cabbage",P1(fl*.35*.01)+" g"],["Spring onion",G(fl*.05)],["Ginger, grated",G(fl*.02)],["Soy sauce",G(fl*.03)],["Sesame oil",P1(fl*.015)+" g"]],
    steps:["Mix the flour and salt, stir in the warm water and knead 8 minutes until smooth. Rest 30 minutes under a cloth.","Toss the cabbage with its salt, wait 10 minutes and squeeze out the water. Mix with all the other filling ingredients.","Roll the dough into 8 cm discs ("+c+" of them, 10 g each).","Put a spoonful of filling in the middle, wet the edge, fold in half and pleat to seal."].concat(how,["Dip in soy sauce mixed with a little rice vinegar."])}}},
-burger:{title:"What are we flipping?",sub:"Patties, buns and sauce, all made from scratch.",
- ctl:[{k:"p",label:"Burgers",icon:"burger",def:null,step:[1,12,1,""]},{k:"z",label:"Patty size",icon:"ruler",def:150,tg:[[100,"Small 100 g"],[150,"Classic 150 g"],[200,"Big 200 g"]]}],
+burger:{title:"What are we flipping?",sub:"Pick your patty, cheese, sauce and toppings, or spin for a surprise.",
+ spinLabel:"Spin a burger!",spinNote:"Stacking your burger…",
+ names:["Cheddar beef","Swiss and caramelised onion","Blue cheese lamb","Smoky BBQ bacon","Chipotle chicken","Black bean and avocado","Fried egg and bacon","Jalapeño cheddar","Garlic aioli chicken","Classic with pickles","Lamb and tomato","Beef, egg and avocado"],
+ spin(s){ // a random burger that still makes sense: toppings are shuffled, bacon stays off the veggie one
+  const pk=a=>a[Math.floor(Math.random()*a.length)],sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+  s.t=pk(["beef","beef","lamb","chicken","bean"]);s.c=pk(["none","cheddar","cheddar","swiss","blue"]);s.s=pk(["classic","bbq","chipotle","aioli"]);
+  s.o=sh(["lettuce","tomato","onion","pickles","bacon","egg","avocado","jalapeno","caramel"].filter(x=>!(x==="bacon"&&s.t==="bean"))).slice(0,2+Math.floor(Math.random()*3))},
+ ctl:[{k:"p",label:"Burgers",icon:"burger",def:null,step:[1,12,1,""]},{k:"z",label:"Patty size",icon:"ruler",def:150,tg:[[100,"Small 100 g"],[150,"Classic 150 g"],[200,"Big 200 g"]]},
+  {k:"t",label:"Patty",icon:"burger",def:"beef",tg:[["beef","Beef"],["lamb","Lamb"],["chicken","Chicken"],["bean","Black bean (veggie)"]]},
+  {k:"c",label:"Cheese",icon:"dairy",def:"none",tg:[["none","No cheese"],["cheddar","Cheddar"],["swiss","Swiss"],["blue","Blue cheese"]]},
+  {k:"s",label:"Sauce",icon:"sauce",def:"classic",tg:[["classic","Classic"],["bbq","Smoky BBQ"],["chipotle","Chipotle mayo"],["aioli","Garlic aioli"]]},
+  {k:"o",label:"Toppings (pick any)",icon:"salad",def:["pickles"],ms:[["lettuce","Lettuce"],["tomato","Tomato"],["onion","Red onion"],["pickles","Pickles"],["bacon","Bacon"],["egg","Fried egg"],["avocado","Avocado"],["jalapeno","Jalapeños"],["caramel","Caramelised onions"]]}],
  calc(s){
-  const n=s.p||people,z=+s.z,meat=n*z;
-  return{title:n+" burger"+(n>1?"s":""),meta:[["clock","About 3 hours (buns)"],["burger","Patties "+G(meat)],["flame","71 °C inside"]],note:["Use beef mince with about 20% fat. Keep it cold and handle it as little as you can."],
-   ing:[["Patty: beef mince (20% fat)",G(meat)],["Patty: salt",P1(meat*.01)+" g"],["Patty: black pepper",P1(meat*.004)+" g"],["Bun: flour",G(70*n)],["Bun: warm milk",G(40*n)],["Bun: egg",eggs(12*n)],["Bun: butter",G(8*n)],["Bun: sugar",P1(7*n)+" g"],["Bun: instant yeast",P1(Math.max(2,n)*.7)+" g"],["Bun: salt",P1(1.2*n)+" g"],["Sauce: mayonnaise",G(20*n)],["Sauce: ketchup",G(10*n)],["Sauce: mustard",G(4*n)],["Chopped pickles",G(15*n)]],
-   steps:["Buns: knead the flour, milk, egg, sugar, yeast and salt 8 minutes. Work in the butter. Rise 1 hour.","Divide into "+n+" balls, shape, proof 40 minutes and bake at 190 °C for 15 minutes. Cool.","Patties: gently shape "+n+" patties of "+z+" g, a little wider than the bun. Press a dimple in the middle. Salt only just before cooking.","Cook on a very hot pan or grill 3–4 minutes per side, until 71 °C inside. Rest 3 minutes.","Stir the sauce ingredients together. Toast the buns, then build."]}}},
+  const n=s.p||people,z=+s.z,meat=n*z,top=Array.isArray(s.o)?s.o:[],has=k=>top.includes(k),pt=s.t||"beef",ch=s.c||"none",sc=s.s||"classic";
+  const PT={
+   beef:{w:"beef",flame:"71 °C inside",note:"Use beef mince with about 20% fat. Keep it cold and handle it as little as you can.",
+    ing:[["Patty: beef mince (20% fat)",G(meat)],["Patty: salt",P1(meat*.01)+" g"],["Patty: black pepper",P1(meat*.004)+" g"]],
+    shape:"Patties: gently shape "+n+" patties of "+z+" g, a little wider than the bun. Press a dimple in the middle. Salt only just before cooking.",
+    cook:"Cook on a very hot pan or grill 3–4 minutes per side, until 71 °C inside.",rest:" Rest 3 minutes."},
+   lamb:{w:"lamb",flame:"71 °C inside",note:"Use lamb mince with about 20% fat. Keep it cold and handle it as little as you can.",
+    ing:[["Patty: lamb mince (20% fat)",G(meat)],["Patty: salt",P1(meat*.01)+" g"],["Patty: black pepper",P1(meat*.004)+" g"],["Patty: ground cumin",P1(meat*.004)+" g"],["Patty: fresh mint, chopped",G(meat*.03)]],
+    shape:"Patties: mix the mince lightly with the cumin, mint and pepper, then shape "+n+" patties of "+z+" g, a little wider than the bun. Press a dimple in the middle. Salt only just before cooking.",
+    cook:"Cook on a very hot pan or grill 3–4 minutes per side, until 71 °C inside.",rest:" Rest 3 minutes."},
+   chicken:{w:"chicken",flame:"75 °C inside",note:"Use thigh mince (or mince skinless thighs yourself). Breast mince turns dry. Chicken must cook all the way through.",
+    ing:[["Patty: chicken thigh mince",G(meat)],["Patty: salt",P1(meat*.01)+" g"],["Patty: smoked paprika",P1(meat*.006)+" g"],["Patty: garlic powder",P1(meat*.004)+" g"]],
+    shape:"Patties: mix the mince with the salt, paprika and garlic powder, then shape "+n+" patties of "+z+" g, a little wider than the bun. Chill 15 minutes.",
+    cook:"Cook in a hot pan or on a grill over medium-high heat 4–5 minutes per side, until 75 °C inside.",rest:" Rest 3 minutes."},
+   bean:{w:"black bean",flame:"Crisp and hot through",note:"Mash only half the beans so the patties keep some bite. Chilling 20 minutes helps them hold together.",
+    ing:[["Patty: canned black beans, drained",G(meat*.5)],["Patty: breadcrumbs or rolled oats",G(meat*.2)],["Patty: onion, grated",G(meat*.15)],["Patty: egg, beaten",G(meat*.12)],["Patty: smoked paprika",P1(meat*.008)+" g"],["Patty: ground cumin",P1(meat*.008)+" g"],["Patty: salt",P1(meat*.01)+" g"]],
+    shape:"Patties: mash half the beans roughly with a fork, mix in everything else for the patties, and shape "+n+" patties of "+z+" g. Chill 20 minutes.",
+    cook:"Cook in a pan with a little oil over medium heat 4 minutes per side, until crisp outside and hot through. Do not press on them.",rest:""}}[pt]||null;
+  const CH={cheddar:["Cheddar, sliced",20,"cheddar"],swiss:["Swiss cheese (Emmental or Gruyère), sliced",20,"Swiss"],blue:["Blue cheese, crumbled",15,"blue cheese"]}[ch];
+  const SC={classic:[["Sauce: mayonnaise",20],["Sauce: ketchup",10],["Sauce: mustard",4]],bbq:[["Sauce: BBQ sauce",25],["Sauce: mayonnaise",10]],chipotle:[["Sauce: mayonnaise",25],["Sauce: chipotle paste (or chipotles in adobo)",5],["Sauce: lime juice",4]],aioli:[["Sauce: mayonnaise",25],["Sauce: garlic, crushed",3],["Sauce: lemon juice",4]]}[sc]||[];
+  const TP={lettuce:["Lettuce leaves",15],tomato:["Tomato, sliced",30],onion:["Red onion, thinly sliced",15],pickles:["Chopped pickles",15],bacon:["Streaky bacon",30],egg:["Eggs, for frying",n+(n>1?" eggs":" egg")],avocado:["Ripe avocado, sliced",40],jalapeno:["Pickled jalapeños",8],caramel:["Onions, for caramelising",60]};
+  const tops=Object.keys(TP).filter(has).map(k=>[TP[k][0],typeof TP[k][1]==="number"?G(TP[k][1]*n):TP[k][1]]);
+  if(has("caramel"))tops.push(["Butter, for the onions",P1(5*n)+" g"]);
+  const stack=[has("lettuce")&&"lettuce",PT.w+" patty"+(CH?" with "+CH[2]:""),has("bacon")&&"bacon",has("egg")&&"fried egg",has("avocado")&&"avocado",has("caramel")&&"caramelised onions",has("tomato")&&"tomato",has("onion")&&"red onion",has("pickles")&&"pickles",has("jalapeno")&&"jalapeños"].filter(Boolean);
+  const st=["Buns: knead the flour, milk, egg, sugar, yeast and salt 8 minutes. Work in the butter. Rise 1 hour.","Divide into "+n+" balls, shape, proof 40 minutes and bake at 190 °C for 15 minutes. Cool."];
+  if(has("caramel"))st.push("Onions: slice them thinly and cook slowly in the butter with a pinch of salt for 25 minutes, stirring now and then, until soft and golden.");
+  st.push(PT.shape);
+  if(has("bacon"))st.push("Fry the bacon in a dry pan until crisp, then drain it on paper.");
+  st.push(PT.cook+(CH?" Lay the cheese on the patties for the last minute and cover with a lid so it melts.":"")+PT.rest);
+  if(has("egg"))st.push("Fry the eggs in a little oil 2–3 minutes, until the whites are set and the yolk is still soft.");
+  st.push("Stir the sauce ingredients together and toast the buns.","Build from the bottom: sauce on the bottom bun, then "+stack.join(", ")+". Add the top bun and press down gently.");
+  return{title:n+" "+(CH?CH[2]+" ":"")+PT.w+" burger"+(n>1?"s":""),meta:[["clock","About 3 hours (buns)"],["burger","Patties "+G(meat)],["flame",PT.flame]],note:[PT.note],
+   ing:PT.ing.concat([["Bun: flour",G(70*n)],["Bun: warm milk",G(40*n)],["Bun: egg",eggs(12*n)],["Bun: butter",G(8*n)],["Bun: sugar",P1(7*n)+" g"],["Bun: instant yeast",P1(Math.max(2,n)*.7)+" g"],["Bun: salt",P1(1.2*n)+" g"]],CH?[[CH[0],G(CH[1]*n)]]:[],SC.map(x=>[x[0],G(x[1]*n)]),tops),
+   steps:st}}},
 grill:{title:"What are we grilling?",sub:"Marinade amounts and cooking times by thickness.",
  ctl:[{k:"m",label:"Meat or fish",icon:"grill",def:"beef",tg:[["beef","Beef steak"],["pork","Pork chop"],["chicken","Chicken breast"],["lamb","Lamb chop"],["salmon","Salmon"],["prawn","Prawns"]]},
   {k:"d",label:"Doneness",icon:"flame",def:"mr",tg:[["rare","Rare"],["mr","Medium-rare"],["med","Medium"],["well","Well done"]],only:"beef"},
@@ -244,11 +332,52 @@ frozen:{title:"What are we freezing?",sub:"Sorbet, ice cream and lollies with a 
   return{title:"Ice lollies",meta:[["clock","10 min + 6 h freezing"],["icecream","About "+Math.max(4,Math.round(a/70))+" lollies"]],note:["A little sugar keeps them from freezing rock hard."],ing:[["Blended fruit or juice",G(a*.85)],["Sugar or honey",G(a*.08)],["Water",G(a*.07)]],steps:["Blend everything until smooth. Taste: it should be a bit too sweet, as freezing dulls sweetness.","Pour into moulds, add sticks after 1 hour and freeze 6 hours.","Run the mould under warm water for 10 seconds to release."]}}}
 };
 
+/* ---- one spinner per section: burger and pasta have hand-drawn art; every other section gets a base (bowl, pan, board, jar, glass) with its own colour,
+   a big emoji in the middle and three more orbiting it. Same size and speed as every other spinner. ---- */
+const emojiArt=(base,col,c,o)=>{
+ const ik='style="stroke:var(--ink)" stroke-width="3"',dash='fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 24"';
+ const B={ // every base is seen from above and turns at the shared speed; the dashed rim (and handle / straw) makes the turn visible
+  bowl:`<circle cx="120" cy="95" r="84" fill="${col}" ${ik}/><circle cx="120" cy="95" r="77" ${dash}/><circle cx="120" cy="95" r="70" fill="#f6efe0" ${ik}/>`,
+  pan:`<rect x="186" y="88" width="40" height="15" rx="7.5" fill="#6b4a2b" ${ik}/><circle cx="120" cy="95" r="76" fill="#3b3b44" ${ik}/><circle cx="120" cy="95" r="70" ${dash}/><circle cx="120" cy="95" r="64" fill="${col}" ${ik}/>`,
+  board:`<rect x="196" y="87" width="34" height="16" rx="8" fill="${col}" ${ik}/><circle cx="120" cy="95" r="84" fill="${col}" ${ik}/><circle cx="120" cy="95" r="74" ${dash}/><circle cx="220" cy="95" r="4" fill="#f6efe0" ${ik}/>`,
+  jar:`<circle cx="120" cy="95" r="84" fill="#e9f5d0" fill-opacity=".9" ${ik}/><circle cx="120" cy="95" r="72" fill="${col}" fill-opacity=".85"/><circle cx="120" cy="95" r="78" ${dash}/>`,
+  glass:`<circle cx="120" cy="95" r="84" fill="#e9f5fb" fill-opacity=".9" ${ik}/><circle cx="120" cy="95" r="72" fill="${col}" fill-opacity=".85"/><circle cx="120" cy="95" r="78" ${dash}/><path d="M130 86L164 28" ${ik} stroke-width="11" stroke-linecap="round"/><path d="M130 86L164 28" stroke="#fff" stroke-width="5" stroke-linecap="round"/>`}[base];
+ const R=base==="board"?60:base==="pan"?48:base==="bowl"?54:56;
+ return `<div class="pgr"><svg viewBox="0 0 240 190" aria-hidden="true"><ellipse cx="120" cy="186" rx="64" ry="5" fill="rgba(0,0,0,.14)"/></svg><svg class="base" viewBox="0 0 240 190" aria-hidden="true">${B}</svg><div class="cem"><i>${c}</i></div><div class="ring">${o.map((e,k)=>`<div class="ing" style="--k:${k};--r:${Math.round(k*360/o.length)}deg;--R:${R}px"><u><i>${e}</i></u></div>`).join("")}</div></div>`};
+/* id: [button label, spinner caption, base, colour, centre emoji, orbiting emojis] */
+const SPIN={
+ bread:["Spin a bread!","Kneading the dough…","board","#c98a3a","🍞",["🌾","🧈","🥖"]],
+ grain:["Spin a grain dish!","Fluffing the grains…","bowl","#e07a3a","🍚",["🌾","🥕","🧅"]],
+ bake:["Spin a bake!","Preheating the oven…","board","#e58fa6","🧁",["🥚","🧈","🍫"]],
+ drinks:["Spin a drink!","Shaking it up…","glass","#f5a623","🍹",["🍋","🍊","🌿"]],
+ soup:["Spin a soup!","Stirring the pot…","bowl","#d95f3b","🍲",["🥕","🧅","🍅"]],
+ sauce:["Spin a sauce!","Whisking it together…","jar","#d63a22","🥫",["🍅","🧄","🌿"]],
+ eggs:["Spin an egg dish!","Cracking the eggs…","pan","#ffd35c","🍳",["🥚","🧈","🍄"]],
+ jam:["Spin a jam!","Bubbling the fruit…","jar","#a33a6b","🍓",["🍑","🍇","🍋"]],
+ dairy:["Spin a dairy ferment!","Warming the milk…","jar","#fff1c9","🥛",["🧀","🧈","🥣"]],
+ dumpling:["Spin a dumpling!","Pleating the dumplings…","bowl","#c9a26a","🥟",["🧄","🥬","🌶️"]],
+ grill:["Spin a grill!","Heating the grill…","pan","#7a3b1d","🥩",["🔥","🌶️","🍋"]],
+ sandwich:["Spin a sandwich!","Stacking the filling…","board","#d9a45a","🥪",["🍅","🥬","🧀"]],
+ salad:["Spin a salad!","Tossing the leaves…","bowl","#5fbf6a","🥗",["🥒","🍅","🫒"]],
+ noodle:["Spin a noodle dish!","Tossing the wok…","bowl","#c0392b","🍜",["🥢","🌶️","🥬"]],
+ spice:["Spin a spice blend!","Grinding the spices…","jar","#c9741a","🌶️",["🧄","🌿","🧂"]],
+ frozen:["Spin a frozen treat!","Churning it up…","glass","#f4a6c0","🍨",["🍓","🍦","🍋"]]};
+const CRAFT_ARTS={burger:BURGER_ART,pasta:PASTA_ART};
+Object.keys(SPIN).forEach(id=>{if(TOOLS[id])CRAFT_ARTS[id]=emojiArt(SPIN[id][2],SPIN[id][3],SPIN[id][4],SPIN[id][5])});
+window.__craftArts=CRAFT_ARTS;
+const autoSpin=T=>s=>{T.ctl.forEach(c=>{if(c.tg)s[c.k]=c.tg[Math.floor(Math.random()*c.tg.length)][0]})}; // a random option for every choice; amounts and people stay as set
+Object.keys(TOOLS).forEach(id=>{const T=TOOLS[id],sp=SPIN[id];
+ T.art=CRAFT_ARTS[id];if(sp){T.spinLabel=T.spinLabel||sp[0];T.spinNote=T.spinNote||sp[1]}
+ if(!T.spin)T.spin=autoSpin(T);
+ if(!T.names)T.names=[...new Set(T.ctl.filter(c=>c.tg&&!c.only).flatMap(c=>c.tg.map(o=>o[1])))]});
+TOOLS.grill.main="m"; // Doneness and Thickness depend on the meat (key m), not on key t
+
 const cfg=id=>{const o=ST[id]=ST[id]||{};TOOLS[id].ctl.forEach(c=>{if(o[c.k]===undefined)o[c.k]=c.def});return o};
 function draw(id){
  const T=TOOLS[id],s=cfg(id),root=document.getElementById("tab-"+id);if(!root)return;
- const vis=T.ctl.filter(c=>!c.only||[].concat(c.only).includes(s.t));
+ const vis=T.ctl.filter(c=>!c.only||[].concat(c.only).includes(s[T.main||"t"]));
  const ctl=vis.map(c=>`<div class="lab"${c===vis[0]?"":' style="margin-top:16px"'}>${I(c.icon)}${esc(c.label)}</div>`+(c.tg?`<div class="tg">${c.tg.map(o=>`<button data-k="${c.k}" data-v="${esc(o[0])}" aria-pressed="${String(s[c.k])===String(o[0])}">${esc(o[1])}</button>`).join("")}</div>`
+   :c.ms?`<div class="tg">${c.ms.map(o=>`<button data-k="${c.k}" data-m="${esc(o[0])}" aria-pressed="${(s[c.k]||[]).includes(o[0])}">${esc(o[1])}</button>`).join("")}</div>`
    :`<div class="step"><button data-k="${c.k}" data-d="-1" aria-label="Less">${I("minus")}</button><b>${s[c.k]||people}${c.step[3]?" "+c.step[3]:""}</b><button data-k="${c.k}" data-d="1" aria-label="More">${I("plus")}</button></div>`)).join("");
  const r=T.calc(s);
  root.querySelector("[data-ctl]").innerHTML=ctl;
@@ -257,23 +386,59 @@ function draw(id){
   ${(r.note||[]).map(n=>`<div class="call" style="background:var(--soft)">${I("flame")}<span>${esc(n)}</span></div>`).join("")}
   <div class="split"><div><h3>${I("list")}Ingredients <small style="text-transform:none;letter-spacing:0;color:var(--mute)">(tap to tick off)</small></h3><ul class="ing">${r.ing.map(i=>`<li><span>${esc(i[0])}</span><span class="q">${esc(i[1])}</span></li>`).join("")}</ul></div>
   <div><h3>${I("chef")}Method</h3><ol>${r.steps.map(x=>`<li><span>${esc(x)}</span></li>`).join("")}</ol></div></div>
-  <div class="row"><button data-copy>${I("cart")}Copy list</button></div></div></article>`;
+  <div class="row"><button class="go" data-a="start">${I("flame")}Start cooking</button><button class="pzsave">${I("heart")}Save</button><button data-a="copy" data-copy>${I("cart")}Copy list</button><button data-a="share">${I("share")}Share</button><button type="button" data-a="rand" data-spin>Spin again</button></div></div></article>`;
  root.querySelectorAll(".ing li").forEach(li=>li.onclick=()=>li.classList.toggle("done"));
+ decorate(id,T,r,root,s);
  root.querySelector("[data-copy]").onclick=e=>{const b=e.currentTarget,txt=r.title+"\n"+r.ing.map(i=>"• "+i[0]+" – "+i[1]).join("\n");
   (navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(()=>{b.innerHTML=I("check")+"Copied"},()=>{})};
+}
+/* ---- card buttons: the same set and order as the Cook card: Start cooking · Spin again, then Save · Copy list · Share · Like · Not for me ---- */
+const FK="mr-craftfav",favs=()=>{try{return JSON.parse(localStorage.getItem(FK)||"[]")||[]}catch(e){return[]}},setFavs=f=>{try{localStorage.setItem(FK,JSON.stringify(f.slice(0,60)))}catch(e){}};
+function drawFavs(id){
+ const root=document.getElementById("tab-"+id),el=root&&root.querySelector("[data-fav]");if(!el)return;
+ const f=favs().filter(x=>x.id===id);
+ el.innerHTML=f.length?`<h3>${I("heart")}Saved</h3>`+f.map((x,i)=>`<button data-fi="${i}">${I("heart")}${esc(x.title)}</button>`).join(""):"";
+ el.onclick=e=>{const b=e.target.closest("button[data-fi]");if(!b)return;const x=f[+b.dataset.fi];if(!x)return;Object.assign(cfg(id),x.s);save();draw(id);const c=root.querySelector(".card");if(c)c.scrollIntoView({behavior:"smooth",block:"start"})};
+}
+function decorate(id,T,r,root,s){
+ const row=root.querySelector("[data-out] .row");if(!row)return;
+ const go=row.querySelector("[data-a=start]"),sv=row.querySelector(".pzsave"),sh=row.querySelector("[data-a=share]"),sig=JSON.stringify(s);
+ go.onclick=()=>{if(window.__cook)window.__cook({title:r.title,steps:r.steps})};
+ const has=()=>favs().some(x=>x.id===id&&x.sig===sig),paint=()=>{sv.setAttribute("aria-pressed",String(has()));sv.innerHTML=I("heart")+(has()?"Saved":"Save")};
+ sv.onclick=()=>{let f=favs();if(has())f=f.filter(x=>!(x.id===id&&x.sig===sig));else f.unshift({id,title:r.title,sig,s:JSON.parse(sig)});setFavs(f);paint();drawFavs(id);navigator.vibrate&&navigator.vibrate(15)};paint();
+ sh.onclick=async()=>{const text=r.title+"\n\nIngredients\n"+r.ing.map(i=>"• "+i[0]+" – "+i[1]).join("\n")+"\n\nMethod\n"+r.steps.map((x,k)=>(k+1)+". "+x).join("\n")+"\n\nMade with Meal Roulette";
+  try{if(navigator.share)await navigator.share({title:r.title,text});else{await navigator.clipboard.writeText(text);sh.innerHTML=I("share")+"Copied";setTimeout(()=>{sh.innerHTML=I("share")+"Share"},2000)}}catch(e){}};
+ try{const m=root.querySelector("[data-out] .meta");if(m&&window.__noteBlock)m.after(window.__noteBlock(r.title))}catch(e){}
+ if(window.__thumbs)window.__thumbs(row,r.title,{craft:id},()=>spinTool(id));
+ if(window.__tidyRow)window.__tidyRow(row,T.icon);
+}
+
+/* spin a random build: full-screen spinner with the tool's own art and a name ticker, then the card (same rhythm as Cook, Pizza and Ferment) */
+const SPINNING={};
+function spinTool(id,instant){
+ const T=TOOLS[id],root=document.getElementById("tab-"+id);if(!T||!T.spin||!root||SPINNING[id])return;
+ const done=()=>{T.spin(cfg(id));save();draw(id);const c=root.querySelector(".card");if(c)c.scrollIntoView({behavior:"smooth",block:"start"})};
+ if(instant||matchMedia("(prefers-reduced-motion:reduce)").matches||(window.mrNoSpin&&mrNoSpin())||!window.mrSpinNames||!T.art)return done();
+ SPINNING[id]=1;const bs=[...root.querySelectorAll("[data-spin]")];bs.forEach(b=>b.disabled=true);
+ const rl=document.createElement("div");rl.className="reel on";rl.setAttribute("aria-hidden","true");
+ rl.innerHTML=`<div class="stage"><div class="art on">${T.art}</div></div><div class="rtx"><span class="rt"></span><small>${esc(T.spinNote||"Picking something tasty…")}</small></div>`;
+ document.body.appendChild(rl);
+ mrSpinNames(rl.querySelector(".rt"),T.names||[T.title],()=>{rl.remove();bs.forEach(b=>b.disabled=false);SPINNING[id]=0;done()});
 }
 Object.keys(TOOLS).forEach(id=>{
  const T=TOOLS[id],root=document.getElementById("tab-"+id);if(!root)return;
  T.icon=T.icon||({bread:"bread",grain:"rice",bake:"cupcake",drinks:"drinks",pasta:"pasta",soup:"soup",sauce:"sauce",eggs:"egg",jam:"jam",dairy:"dairy",dumpling:"dumpling",burger:"burger",grill:"grill",sandwich:"sandwich",salad:"salad",noodle:"noodle",spice:"spice",frozen:"icecream"})[id]||"chef";
- root.innerHTML=`<h1 class="hl">${esc(T.title)}</h1><p>${esc(T.sub)}</p><div class="cols"><aside class="side"><section class="panel" data-ctl></section></aside><section class="res"><div data-out></div></section></div>
+ root.innerHTML=`<h1 class="hl">${esc(T.title)}</h1><p>${esc(T.sub)}</p><div class="cols"><aside class="side"><section class="panel" data-ctl></section>${T.spin?`<button type="button" class="fmspin" data-spin>${I(T.icon)}${esc(T.spinLabel||"Spin!")}</button>`:""}<div class="fav" data-fav></div></aside><section class="res"><div data-out></div></section></div>
   <section class="panel"><div class="lab">${I(T.icon)}Recipes</div><p class="hint" data-n></p><ul class="bklist" data-l></ul><button type="button" class="stubmore" hidden></button></section>`;
  root.querySelector("[data-ctl]").addEventListener("click",e=>{
   const b=e.target.closest("button[data-k]");if(!b)return;const s=cfg(id),c=T.ctl.find(x=>x.k===b.dataset.k);
-  if(b.dataset.d){const[lo,hi,by]=c.step,v=(s[c.k]||people)+(+b.dataset.d)*by;s[c.k]=Math.min(hi,Math.max(lo,v))}
+  if(b.dataset.m!==undefined){const a=Array.isArray(s[c.k])?s[c.k]:[];s[c.k]=a.includes(b.dataset.m)?a.filter(x=>x!==b.dataset.m):[...a,b.dataset.m]}
+  else if(b.dataset.d){const[lo,hi,by]=c.step,v=(s[c.k]||people)+(+b.dataset.d)*by;s[c.k]=Math.min(hi,Math.max(lo,v))}
   else{const o=c.tg.find(x=>String(x[0])===b.dataset.v);s[c.k]=o?o[0]:b.dataset.v}
   save();draw(id)});
- draw(id);
+ root.addEventListener("click",e=>{const b=e.target.closest("[data-spin]");if(b&&!b.disabled)spinTool(id)});
+ draw(id);drawFavs(id);
 });
 
-window.CRAFT={tools:TOOLS,cfg};
+window.CRAFT={tools:TOOLS,cfg,spin:spinTool,redraw:()=>Object.keys(TOOLS).forEach(id=>{if(document.getElementById("tab-"+id)){draw(id);drawFavs(id)}})};
 })();

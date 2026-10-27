@@ -403,9 +403,9 @@ ST.m=mm.id;
  ST.sal=1;ST.temp=rnd(["cool","mild","mild","warm"]);
 }
 function jarHTML(em){
- const f=em.map((e,k)=>`<div class="fi" style="--k:${k}"><u><i>${e}</i></u></div>`).join("");
+ const f=em.map((e,k)=>`<div class="ing" style="--k:${k};--r:${Math.round(k*360/em.length)}deg;--R:30px"><u><i>${e}</i></u></div>`).join("");
  const bub=[0,1,2,3,4,5].map(k=>`<span class="fb" style="--k:${k};left:${96+((k*37)%48)}px"></span>`).join("");
- return `<div class="fmreel" aria-hidden="true"><div class="fmjar"><svg viewBox="0 0 240 190"><ellipse cx="120" cy="180" rx="62" ry="7" fill="rgba(0,0,0,.14)"/><rect x="88" y="14" width="64" height="20" rx="6" fill="#c98a3a" style="stroke:var(--ink)" stroke-width="3"/><path d="M92 34h56v8q22 6 22 26v94q0 12-12 12H82q-12 0-12-12V68q0-20 22-26z" fill="#e9f5d0" fill-opacity=".75" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M74 78h92v84q0 8-8 8H82q-8 0-8-8z" fill="#9fd36b" fill-opacity=".55"/><path d="M82 52q-6 8-6 24" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="4" stroke-linecap="round"/></svg>${f}${bub}</div><div class="rtx"><span class="fmrt"></span><small>Brewing an idea…</small></div></div>`;
+ return `<div class="fmreel" aria-hidden="true"><div class="fmjar"><svg viewBox="0 0 240 190"><ellipse cx="120" cy="180" rx="62" ry="7" fill="rgba(0,0,0,.14)"/><rect x="88" y="14" width="64" height="20" rx="6" fill="#c98a3a" style="stroke:var(--ink)" stroke-width="3"/><path d="M92 34h56v8q22 6 22 26v94q0 12-12 12H82q-12 0-12-12V68q0-20 22-26z" fill="#e9f5d0" fill-opacity=".75" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/><path d="M74 78h92v84q0 8-8 8H82q-8 0-8-8z" fill="#9fd36b" fill-opacity=".55"/><path d="M82 52q-6 8-6 24" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="4" stroke-linecap="round"/></svg><div class="fring">${f}</div>${bub}</div><div class="rtx"><span class="fmrt"></span><small>Brewing an idea…</small></div></div>`;
 }
 function spin(btn){
  if(busy)return;
@@ -419,7 +419,7 @@ function spin(btn){
  out.innerHTML=jarHTML(em);
  const rt=out.querySelector(".fmrt"),names=M.map(x=>x.e+" "+x.n);
  out.scrollIntoView({behavior:"smooth",block:"center"});
- let d=70,el=0;const tick=()=>{rt.textContent=rnd(names);el+=d;if(el>=1600)return setTimeout(finish,350);d=Math.round(d*1.15);setTimeout(tick,d)};tick();
+ window.mrSpinNames?window.mrSpinNames(rt,names,finish):finish();
 }
 
 /* ---------- events ---------- */
