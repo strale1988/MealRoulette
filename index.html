@@ -83,7 +83,7 @@ button::selection,button *::selection{background:transparent}
 .note{color:var(--mute);font-size:14px;margin-top:12px}
 .recipe-caution{color:var(--mute);font-size:13px;line-height:1.45;margin:10px 0 0;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--soft)}.recipe-caution strong{color:var(--ink)}
 .reel{display:none;text-align:center;margin:48px 0;min-height:120px;font-size:22px;font-weight:700;color:var(--acc)}.reel small{display:block;color:var(--mute);font-weight:400;font-size:14px;margin-top:6px}#rt,#prt{display:block;min-height:1.4em}.card{scroll-margin-top:130px}
-.reel.on{display:block}.reel .i{font-size:44px;display:block;margin:0 auto 6px;animation:sp .5s linear infinite}
+.reel.on{display:block}.reel .i{font-size:44px;display:block;margin:0 auto 6px;animation:sp var(--rev) linear infinite}
 @keyframes sp{to{transform:rotate(360deg)}}
 @keyframes pop{from{opacity:0;transform:translateY(12px) scale(.98)}}
 .card{background:var(--card);border:1px solid var(--line);border-radius:20px;margin-top:20px;overflow:hidden;animation:pop .35s ease-out}
@@ -306,9 +306,9 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
 .toss .ing{position:absolute;left:0;top:0;width:0;height:0;transform:rotate(var(--r))}
 .toss .ing u{position:absolute;left:-18px;top:-18px;width:36px;height:36px;text-decoration:none;transform:translateY(calc(var(--R)*-1)) rotate(calc(var(--r)*-1));animation:bobr var(--bob) ease-in-out infinite;animation-delay:calc(var(--k)*-.25s)}
 .toss .ing i{display:block;font-style:normal;font-size:30px;line-height:36px;text-align:center;animation:sp var(--rev) linear infinite reverse}
-.toss .bub{position:absolute;width:8px;height:8px;border-radius:50%;border:2px solid var(--ink);background:rgba(255,255,255,.5);opacity:0;animation:bub 1.8s ease-out infinite;animation-delay:calc(var(--k)*-.6s)}
+.toss .bub{position:absolute;width:8px;height:8px;border-radius:50%;border:2px solid var(--ink);background:rgba(255,255,255,.5);opacity:0;animation:bub calc(var(--rev)*.75) ease-out infinite;animation-delay:calc(var(--k)*-.6s)}
 .toss .steam{position:absolute;left:120px;top:95px;width:0;height:0}
-.toss .steam s{position:absolute;left:-16px;top:-16px;width:32px;height:32px;border-radius:50%;background:var(--mute);opacity:0;animation:puff 2.4s ease-out infinite;animation-delay:calc(var(--k)*.8s)}
+.toss .steam s{position:absolute;left:-16px;top:-16px;width:32px;height:32px;border-radius:50%;background:var(--mute);opacity:0;animation:puff var(--rev) ease-out infinite;animation-delay:calc(var(--k)*.8s)}
 @keyframes bobr{0%,100%{transform:translateY(calc(var(--R)*-1)) rotate(calc(var(--r)*-1)) scale(.95)}50%{transform:translateY(calc(var(--R)*-1)) rotate(calc(var(--r)*-1)) scale(1.15)}}
 @keyframes bub{0%{opacity:0;transform:scale(.3)}30%{opacity:.9}70%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(1.5)}}
 @keyframes puff{0%{opacity:0;transform:translate(0,0) scale(.4)}30%{opacity:.22}100%{opacity:0;transform:translate(var(--sx),-8px) scale(2.6)}}
@@ -331,8 +331,8 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
 .fmjar{position:relative;width:240px;height:190px;margin:0 auto 6px}.fmjar svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;animation:fmjig .8s ease-in-out infinite}
 .fmjar .fi{position:absolute;left:102px;top:92px;width:36px;height:36px;animation:fmx var(--rev) cubic-bezier(.37,0,.63,1) infinite alternate;animation-delay:calc(var(--k)*-.4s)}
 .fmjar .fi u{display:block;text-decoration:none;animation:fmy calc(var(--rev)*1.3) cubic-bezier(.37,0,.63,1) infinite alternate;animation-delay:calc(var(--k)*-.52s)}
-.fmjar .fi i{display:block;font-style:normal;font-size:26px;line-height:36px;text-align:center;animation:fmw 1s ease-in-out infinite alternate;animation-delay:calc(var(--k)*-.3s)}
-.fmjar .fb{position:absolute;bottom:34px;width:9px;height:9px;border-radius:50%;border:2px solid var(--ink);background:rgba(255,255,255,.6);opacity:0;animation:fmrise 2s ease-in infinite;animation-delay:calc(var(--k)*-.33s)}
+.fmjar .fi i{display:block;font-style:normal;font-size:26px;line-height:36px;text-align:center;animation:fmw var(--bob) ease-in-out infinite alternate;animation-delay:calc(var(--k)*-.3s)}
+.fmjar .fb{position:absolute;bottom:34px;width:9px;height:9px;border-radius:50%;border:2px solid var(--ink);background:rgba(255,255,255,.6);opacity:0;animation:fmrise var(--rev) ease-in infinite;animation-delay:calc(var(--k)*-.33s)}
 @keyframes fmx{from{transform:translateX(-26px)}to{transform:translateX(26px)}}
 @keyframes fmy{from{transform:translateY(-34px) scale(.85)}to{transform:translateY(34px) scale(1.1)}}
 @keyframes fmw{from{transform:rotate(-25deg)}to{transform:rotate(25deg)}}
@@ -655,6 +655,9 @@ body .reel.on .toss,body .reel.on .spinwrap,body .reel.on .stage,body .fmreel .f
 @keyframes bgl{0%,65%,100%{transform:none}30%{transform:translateY(calc(var(--k)*-7px - 3px)) rotate(calc((var(--k) - 2.5)*3deg))}}
 /* ---- every spinner turns, at the same speed (--rev): bases, rings and the ferment jar's swirl ---- */
 .pgr>svg.base{animation:sp var(--rev) linear infinite}
+.pgr .base text{font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif}
+.art.on{animation:artin calc(var(--rev)/6) cubic-bezier(.2,1.3,.4,1)} /* each new spinner pops in as the mix swaps */
+@keyframes artin{from{transform:scale(.82)}to{transform:none}}
 .fmjar svg{animation:none}
 .fmjar .fring{position:absolute;left:120px;top:126px;width:0;height:0;animation:sp var(--rev) linear infinite}
 .fmjar .ing{position:absolute;left:0;top:0;width:0;height:0;transform:rotate(var(--r))}
