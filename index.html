@@ -358,16 +358,9 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
 .fmb li.rdy{background:var(--soft);border-radius:12px;padding-left:10px;padding-right:10px}.rdytag{display:inline-block;margin-left:6px;padding:1px 9px;border-radius:99px;background:#1f9d5f;color:#fff;font-size:12px;font-weight:700;vertical-align:1px}
 .fmspin{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:14px;padding:16px 8px;background:var(--acc);color:#fff;border:var(--bw,2px) solid var(--ink);border-radius:22px;box-shadow:var(--sh,3px 3px 0 var(--ink));font:800 24px Bricolage,sans-serif;cursor:pointer}.fmspin .i{font-size:1.1em}.fmspin:active{transform:translate(2px,2px);box-shadow:none}
 .fmreel{text-align:center;margin:40px 0;font:800 22px Bricolage,sans-serif;color:var(--ink)}.fmreel small{display:block;color:var(--mute);font:400 14px "DM Sans",sans-serif;margin-top:6px}.fmrt{display:block;min-height:1.4em}
-.fmjar{position:relative;width:240px;height:190px;margin:0 auto 6px}.fmjar svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;animation:fmjig .8s ease-in-out infinite}
-.fmjar .fi{position:absolute;left:102px;top:92px;width:36px;height:36px;animation:fmx var(--rev) cubic-bezier(.37,0,.63,1) infinite alternate;animation-delay:calc(var(--k)*-.4s)}
-.fmjar .fi u{display:block;text-decoration:none;animation:fmy calc(var(--rev)*1.3) cubic-bezier(.37,0,.63,1) infinite alternate;animation-delay:calc(var(--k)*-.52s)}
-.fmjar .fi i{display:block;font-style:normal;font-size:26px;line-height:36px;text-align:center;animation:fmw var(--bob) ease-in-out infinite alternate;animation-delay:calc(var(--k)*-.3s)}
+.fmjar{position:relative;width:240px;height:190px;margin:0 auto 6px}.fmjar svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .fmjar .fb{position:absolute;bottom:34px;width:9px;height:9px;border-radius:50%;border:2px solid var(--ink);background:rgba(255,255,255,.6);opacity:0;animation:fmrise var(--rev) ease-in infinite;animation-delay:calc(var(--k)*-.33s)}
-@keyframes fmx{from{transform:translateX(-26px)}to{transform:translateX(26px)}}
-@keyframes fmy{from{transform:translateY(-34px) scale(.85)}to{transform:translateY(34px) scale(1.1)}}
-@keyframes fmw{from{transform:rotate(-25deg)}to{transform:rotate(25deg)}}
 @keyframes fmrise{0%{opacity:0;transform:translateY(0) scale(.5)}15%{opacity:.9}85%{opacity:.9}100%{opacity:0;transform:translateY(-100px) scale(1.2)}}
-@keyframes fmjig{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(1.5deg)}}
 
 
 /* ending */
@@ -472,7 +465,7 @@ html{scrollbar-gutter:stable}html:has(.splash:not(.out)){overflow:hidden}
 .sp-h .w{display:inline-block;animation:spWord .55s cubic-bezier(.2,.9,.3,1) backwards;animation-delay:calc(var(--w)*60ms)}
 .dots i{display:inline-block;width:.32em;height:.32em;margin-left:.28em;border-radius:50%;background:currentColor;animation:spDot 1.1s ease-in-out infinite}.dots i:nth-child(2){animation-delay:.15s}.dots i:nth-child(3){animation-delay:.3s}
 .sp-wheel:before{transform-origin:50% 0}
-.sp-wheel{isolation:isolate}.sp-wheel:after{content:"";position:absolute;left:20%;width:60%;top:91%;height:5%;border-radius:50%;background:rgba(42,26,19,.18);z-index:-1;pointer-events:none;animation:shin .6s cubic-bezier(.2,.8,.3,1) .25s backwards}
+.sp-wheel{isolation:isolate}
 .splash.ready .sp-wheel:before{animation:spTick .7s cubic-bezier(.3,1.6,.5,1)}
 @keyframes spLoad{from{transform:rotate(0)}to{transform:rotate(1417.5deg)}}
 @keyframes spIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
@@ -482,7 +475,7 @@ html{scrollbar-gutter:stable}html:has(.splash:not(.out)){overflow:hidden}
 @keyframes spDot{0%,70%,100%{transform:translateY(0);opacity:.4}35%{transform:translateY(-.35em);opacity:1}}
 @keyframes spTick{0%{transform:translateX(-50%) rotate(0)}30%{transform:translateX(-50%) rotate(-22deg)}60%{transform:translateX(-50%) rotate(12deg)}100%{transform:translateX(-50%) rotate(0)}}
 @keyframes spRing{0%{opacity:.55;transform:scale(.96)}100%{opacity:0;transform:scale(1.18)}}
-@media (prefers-reduced-motion:reduce){.stage::before,.sp-wheel:after,.fmjar::before{animation:none}.sp-pizza{animation:none;transform:rotate(1417.5deg)}.splash,.sp-wheel,.sp-h{transition:none}.sp-wheel,.sp-t span,.sp-h,.sp-h .w,.dots i,.splash.ready .sp-bar i,.splash.ready .sp-wheel:before{animation:none}.splash.out{filter:none}}
+@media (prefers-reduced-motion:reduce){.sp-pizza{animation:none;transform:rotate(1417.5deg)}.splash,.sp-wheel,.sp-h{transition:none}.sp-wheel,.sp-t span,.sp-h,.sp-h .w,.dots i,.splash.ready .sp-bar i,.splash.ready .sp-wheel:before{animation:none}.splash.out{filter:none}}
 
 /* ---- v58: compact: tighter spacing and slightly smaller type everywhere, same look ---- */
 main{padding-top:10px;padding-bottom:104px}
@@ -662,9 +655,8 @@ body .reel.on .toss,body .reel.on .spinwrap,body .reel.on .stage,body .fmreel .f
 /* one spinner stage for Cook, Pizza night and the start wheel: same size (--D), and the art swaps while it spins */
 :root{--D:220px;--kp:1.2;--kw:1.2}
 .stage{position:relative;width:var(--D);height:var(--D);flex:none}
-@keyframes shin{from{opacity:0;transform:scale(.55)}to{opacity:1;transform:none}} /* the shadow stays put while the art swaps; it only fades in and grows a little when a spinner appears */
-.stage::before{content:"";position:absolute;left:20%;width:60%;top:91%;height:5%;border-radius:50%;background:rgba(42,26,19,.18);pointer-events:none;animation:shin .6s cubic-bezier(.2,.8,.3,1) both} /* the one shadow every spinner shares */
-.fmreel .fmjar{transform:scale(var(--kp))}.fmjar::before{content:"";position:absolute;left:61px;top:175px;width:117px;height:10px;border-radius:50%;background:rgba(42,26,19,.18);animation:shin .6s cubic-bezier(.2,.8,.3,1) both}.fmjar .fmin{position:absolute;inset:0;transform:scale(.8)}
+ /* the one shadow every spinner shares */
+.fmreel .fmjar{transform:scale(var(--kp))}.fmjar .fmin{position:absolute;inset:0;transform:scale(.8)}
 .art{position:absolute;inset:0;display:grid;place-items:center;opacity:0;transition:opacity .15s ease;pointer-events:none}
 .art.on{opacity:1}
 .art .lg{width:102%;height:102%;flex:none;animation:sp var(--rev) linear infinite}
@@ -692,7 +684,6 @@ body .reel.on .toss,body .reel.on .spinwrap,body .reel.on .stage,body .fmreel .f
 .pgr .base text{font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif}
 .art.on{animation:artin calc(var(--rev)/6) cubic-bezier(.2,1.3,.4,1)} /* each new spinner pops in as the mix swaps */
 @keyframes artin{from{transform:scale(.82)}to{transform:none}}
-.fmjar svg{animation:none}
 .fmjar .fring{position:absolute;left:120px;top:126px;width:0;height:0;animation:sp var(--rev) linear infinite}
 .fmjar .ing{position:absolute;left:0;top:0;width:0;height:0;transform:rotate(var(--r))}
 .fmjar .ing u{position:absolute;left:-16px;top:-16px;width:32px;height:32px;text-decoration:none;transform:translateY(calc(var(--R)*-1)) rotate(calc(var(--r)*-1));animation:bobr var(--bob) ease-in-out infinite;animation-delay:calc(var(--k)*-.25s)}
