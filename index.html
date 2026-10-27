@@ -472,7 +472,7 @@ html{scrollbar-gutter:stable}html:has(.splash:not(.out)){overflow:hidden}
 .sp-h .w{display:inline-block;animation:spWord .55s cubic-bezier(.2,.9,.3,1) backwards;animation-delay:calc(var(--w)*60ms)}
 .dots i{display:inline-block;width:.32em;height:.32em;margin-left:.28em;border-radius:50%;background:currentColor;animation:spDot 1.1s ease-in-out infinite}.dots i:nth-child(2){animation-delay:.15s}.dots i:nth-child(3){animation-delay:.3s}
 .sp-wheel:before{transform-origin:50% 0}
-.sp-wheel{isolation:isolate}.sp-wheel:after{content:"";position:absolute;left:20%;width:60%;top:91%;height:5%;border-radius:50%;background:rgba(42,26,19,.18);z-index:-1;pointer-events:none}
+.sp-wheel{isolation:isolate}.sp-wheel:after{content:"";position:absolute;left:20%;width:60%;top:91%;height:5%;border-radius:50%;background:rgba(42,26,19,.18);z-index:-1;pointer-events:none;animation:shin .6s cubic-bezier(.2,.8,.3,1) .25s backwards}
 .splash.ready .sp-wheel:before{animation:spTick .7s cubic-bezier(.3,1.6,.5,1)}
 @keyframes spLoad{from{transform:rotate(0)}to{transform:rotate(1417.5deg)}}
 @keyframes spIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
@@ -482,7 +482,7 @@ html{scrollbar-gutter:stable}html:has(.splash:not(.out)){overflow:hidden}
 @keyframes spDot{0%,70%,100%{transform:translateY(0);opacity:.4}35%{transform:translateY(-.35em);opacity:1}}
 @keyframes spTick{0%{transform:translateX(-50%) rotate(0)}30%{transform:translateX(-50%) rotate(-22deg)}60%{transform:translateX(-50%) rotate(12deg)}100%{transform:translateX(-50%) rotate(0)}}
 @keyframes spRing{0%{opacity:.55;transform:scale(.96)}100%{opacity:0;transform:scale(1.18)}}
-@media (prefers-reduced-motion:reduce){.sp-pizza{animation:none;transform:rotate(1417.5deg)}.splash,.sp-wheel,.sp-h{transition:none}.sp-wheel,.sp-t span,.sp-h,.sp-h .w,.dots i,.splash.ready .sp-bar i,.splash.ready .sp-wheel:before{animation:none}.splash.out{filter:none}}
+@media (prefers-reduced-motion:reduce){.stage::before,.sp-wheel:after,.fmjar::before{animation:none}.sp-pizza{animation:none;transform:rotate(1417.5deg)}.splash,.sp-wheel,.sp-h{transition:none}.sp-wheel,.sp-t span,.sp-h,.sp-h .w,.dots i,.splash.ready .sp-bar i,.splash.ready .sp-wheel:before{animation:none}.splash.out{filter:none}}
 
 /* ---- v58: compact: tighter spacing and slightly smaller type everywhere, same look ---- */
 main{padding-top:10px;padding-bottom:104px}
@@ -662,8 +662,9 @@ body .reel.on .toss,body .reel.on .spinwrap,body .reel.on .stage,body .fmreel .f
 /* one spinner stage for Cook, Pizza night and the start wheel: same size (--D), and the art swaps while it spins */
 :root{--D:220px;--kp:1.2;--kw:1.2}
 .stage{position:relative;width:var(--D);height:var(--D);flex:none}
-.stage::before{content:"";position:absolute;left:20%;width:60%;top:91%;height:5%;border-radius:50%;background:rgba(42,26,19,.18);pointer-events:none} /* the one shadow every spinner shares */
-.fmreel .fmjar{transform:scale(var(--kp))}.fmjar::before{content:"";position:absolute;left:61px;top:175px;width:117px;height:10px;border-radius:50%;background:rgba(42,26,19,.18)}.fmjar .fmin{position:absolute;inset:0;transform:scale(.8)}
+@keyframes shin{from{opacity:0;transform:scale(.55)}to{opacity:1;transform:none}} /* the shadow stays put while the art swaps; it only fades in and grows a little when a spinner appears */
+.stage::before{content:"";position:absolute;left:20%;width:60%;top:91%;height:5%;border-radius:50%;background:rgba(42,26,19,.18);pointer-events:none;animation:shin .6s cubic-bezier(.2,.8,.3,1) both} /* the one shadow every spinner shares */
+.fmreel .fmjar{transform:scale(var(--kp))}.fmjar::before{content:"";position:absolute;left:61px;top:175px;width:117px;height:10px;border-radius:50%;background:rgba(42,26,19,.18);animation:shin .6s cubic-bezier(.2,.8,.3,1) both}.fmjar .fmin{position:absolute;inset:0;transform:scale(.8)}
 .art{position:absolute;inset:0;display:grid;place-items:center;opacity:0;transition:opacity .15s ease;pointer-events:none}
 .art.on{opacity:1}
 .art .lg{width:102%;height:102%;flex:none;animation:sp var(--rev) linear infinite}
