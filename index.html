@@ -460,7 +460,7 @@ html{scrollbar-gutter:stable}html:has(.splash:not(.out)){overflow:hidden}
 .sp-wheel{position:relative;width:var(--D);aspect-ratio:1;margin-top:18px;transition:transform .25s cubic-bezier(.3,.7,.2,1);animation:spPop .4s cubic-bezier(.2,.9,.3,1.15) backwards}
 .sp-wheel:before{content:"";position:absolute;left:50%;top:-20px;z-index:2;transform:translateX(-50%);border-left:14px solid transparent;border-right:14px solid transparent;border-top:26px solid var(--acc);filter:drop-shadow(0 2px 0 var(--ink))}
 .sp-pizza{will-change:transform;display:block;width:100%;height:100%;padding:0;border:0;border-radius:50%;background:none;cursor:default;animation:spLoad 1.2s cubic-bezier(.2,.7,.2,1) both;-webkit-tap-highlight-color:transparent}
-.sp-pizza svg{display:block;width:100%;height:100%}
+.sp-pizza svg{display:block;width:102%;height:102%;margin:-1%}
 .sp-pizza:focus-visible{outline:4px solid var(--acc);outline-offset:6px}
 .splash.ready .sp-pizza:not(:disabled){cursor:pointer}
 .splash.ready .sp-wheel:hover{transform:scale(1.03)}.splash.ready .sp-wheel:active{transform:scale(.97)}
@@ -472,7 +472,7 @@ html{scrollbar-gutter:stable}html:has(.splash:not(.out)){overflow:hidden}
 .sp-h .w{display:inline-block;animation:spWord .55s cubic-bezier(.2,.9,.3,1) backwards;animation-delay:calc(var(--w)*60ms)}
 .dots i{display:inline-block;width:.32em;height:.32em;margin-left:.28em;border-radius:50%;background:currentColor;animation:spDot 1.1s ease-in-out infinite}.dots i:nth-child(2){animation-delay:.15s}.dots i:nth-child(3){animation-delay:.3s}
 .sp-wheel:before{transform-origin:50% 0}
-.sp-wheel{isolation:isolate}.sp-wheel:after{content:"";position:absolute;inset:7.8%;border-radius:50%;background:rgba(42,26,19,.2);transform:translateY(9px);z-index:-1;pointer-events:none}
+.sp-wheel{isolation:isolate}.sp-wheel:after{content:"";position:absolute;left:20%;width:60%;top:91%;height:5%;border-radius:50%;background:rgba(42,26,19,.18);z-index:-1;pointer-events:none}
 .splash.ready .sp-wheel:before{animation:spTick .7s cubic-bezier(.3,1.6,.5,1)}
 @keyframes spLoad{from{transform:rotate(0)}to{transform:rotate(1417.5deg)}}
 @keyframes spIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
@@ -662,9 +662,11 @@ body .reel.on .toss,body .reel.on .spinwrap,body .reel.on .stage,body .fmreel .f
 /* one spinner stage for Cook, Pizza night and the start wheel: same size (--D), and the art swaps while it spins */
 :root{--D:220px;--kp:1.2;--kw:1.2}
 .stage{position:relative;width:var(--D);height:var(--D);flex:none}
+.stage::before{content:"";position:absolute;left:20%;width:60%;top:91%;height:5%;border-radius:50%;background:rgba(42,26,19,.18);pointer-events:none} /* the one shadow every spinner shares */
+.fmreel .fmjar{transform:scale(var(--kp))}.fmjar::before{content:"";position:absolute;left:61px;top:175px;width:117px;height:10px;border-radius:50%;background:rgba(42,26,19,.18)}.fmjar .fmin{position:absolute;inset:0;transform:scale(.8)}
 .art{position:absolute;inset:0;display:grid;place-items:center;opacity:0;transition:opacity .15s ease;pointer-events:none}
 .art.on{opacity:1}
-.art .lg{width:100%;height:100%;animation:sp var(--rev) linear infinite}
+.art .lg{width:102%;height:102%;flex:none;animation:sp var(--rev) linear infinite}
 .art .toss{flex:none;margin:0;transform:scale(var(--kp))}.art .spinwrap{position:relative;width:170px;height:170px;flex:none;margin:0;transform:scale(var(--kw))} /* sized here too: its size used to come from .reel only, so in the start wheel it collapsed to an empty gray disc */
 /* burger spinner: the layers fan out and lift off one after another, then drop back into a stack */
 .bgr{position:relative;width:240px;height:190px;flex:none}.art .bgr{margin:0;transform:scale(var(--kp))}
@@ -693,7 +695,7 @@ body .reel.on .toss,body .reel.on .spinwrap,body .reel.on .stage,body .fmreel .f
 .fmjar .fring{position:absolute;left:120px;top:126px;width:0;height:0;animation:sp var(--rev) linear infinite}
 .fmjar .ing{position:absolute;left:0;top:0;width:0;height:0;transform:rotate(var(--r))}
 .fmjar .ing u{position:absolute;left:-16px;top:-16px;width:32px;height:32px;text-decoration:none;transform:translateY(calc(var(--R)*-1)) rotate(calc(var(--r)*-1));animation:bobr var(--bob) ease-in-out infinite;animation-delay:calc(var(--k)*-.25s)}
-.fmjar .ing i{display:block;font-style:normal;font-size:24px;line-height:32px;text-align:center;animation:sp var(--rev) linear infinite reverse}
+.fmjar .ing i svg{width:24px;height:24px;margin:4px auto}.fmjar .ing i{display:block;font-style:normal;font-size:24px;line-height:32px;text-align:center;animation:sp var(--rev) linear infinite reverse}
 .sp-wheel>.art{z-index:1}
 body .reel.on .rtx,body .fmreel .rtx{grid-row:3;align-self:start;justify-self:center;width:100%;max-width:520px;padding-top:14px;box-sizing:border-box;text-align:center}
 /* ---- phones/tablets: while a recipe, pizza, plan or ferment is open, header and menu bar are hidden (the X on the green bar and the browser Back button return) ---- */
@@ -1902,9 +1904,10 @@ draw();
 (function(){
 const cookReel=$("reel"),pzReel=$("pzreel");if(!cookReel||!pzReel)return;
 const potEl=cookReel.querySelector(".toss"),wedgeEl=pzReel.querySelector(".spinwrap");if(!potEl||!wedgeEl)return;
+potEl.querySelectorAll(".ing i").forEach(i=>{const g=window.__ico&&window.__ico(i.textContent.trim());if(g&&g!==i.textContent.trim())i.innerHTML=g}); // drawn icons instead of emoji
 const ART={pot:potEl.outerHTML,wedge:wedgeEl.outerHTML,...(window.__craftArts||{}),logo:'<svg class="lg" viewBox="0 0 128 128" aria-hidden="true"><use href="#logo-pizza"/></svg>'};
 window.__art=ART;
-const root=document.documentElement.style,setD=()=>{const D=Math.round(Math.max(150,Math.min(innerWidth*.58,innerHeight*.34,230)));root.setProperty("--D",D+"px");root.setProperty("--kp",(D*.84/152).toFixed(3));root.setProperty("--kw",(D*.84/150).toFixed(3))};
+const root=document.documentElement.style,setD=()=>{const D=Math.round(Math.max(150,Math.min(innerWidth*.58,innerHeight*.34,230)));root.setProperty("--D",D+"px");root.setProperty("--kp",(D*.86/168).toFixed(3));root.setProperty("--kw",(D*.86/141).toFixed(3))};
 setD();addEventListener("resize",setD);
 const rm=()=>matchMedia("(prefers-reduced-motion:reduce)").matches,STEP=620;
 const NOMIX=["dairy"];window.__noMix=NOMIX; // fermenting spinners keep to their own section and stay out of the mix
