@@ -218,6 +218,7 @@ function decorate(id,T,r,root,s){
  const has=()=>favs().some(x=>x.id===id&&x.sig===sig),paint=()=>{sv.setAttribute("aria-pressed",String(has()));sv.innerHTML=I("heart")+(has()?"Saved":"Save")};
  sv.onclick=()=>{let f=favs();if(has())f=f.filter(x=>!(x.id===id&&x.sig===sig));else f.unshift({id,title:r.title,sig,s:JSON.parse(sig)});setFavs(f);paint();drawFavs(id);navigator.vibrate&&navigator.vibrate(15)};paint();
  sh.onclick=async()=>{const text=r.title+"\n\nIngredients\n"+r.ing.map(i=>"• "+i[0]+" – "+i[1]).join("\n")+"\n\nMethod\n"+r.steps.map((x,k)=>(k+1)+". "+x).join("\n")+"\n\nMade with Meal Roulette";
+  if(window.__shareOut){window.__shareOut("k",{id,s:JSON.parse(sig)},r.title,r.title+(r.meta[0]?" · "+r.meta[0][1]:""),sh,()=>text);return} // a link that reopens this exact build
   try{if(navigator.share)await navigator.share({title:r.title,text});else{flash(sh,"share",await copyText(text)?"Copied":"Couldn't copy")}}catch(e){}};
  try{const m=root.querySelector("[data-out] .meta");if(m&&window.__noteBlock)m.after(window.__noteBlock(r.title))}catch(e){}
  if(window.__thumbs)window.__thumbs(row,r.title,{craft:id},()=>spinTool(id));
@@ -251,5 +252,12 @@ Object.keys(TOOLS).forEach(id=>{
  draw(id);drawFavs(id);
 });
 
-window.CRAFT={tools:TOOLS,cfg,spin:spinTool,redraw:()=>Object.keys(TOOLS).forEach(id=>{if(document.getElementById("tab-"+id)){draw(id);drawFavs(id)}})};
+/* a shared link carries just the tool id and its settings; every value is checked against the tool's own controls before it is used */
+const applyShare=d=>{const id=d&&typeof d.id==="string"?d.id:"",T=Object.prototype.hasOwnProperty.call(TOOLS,id)?TOOLS[id]:null;if(!T||!d.s||typeof d.s!=="object")return null;
+ const n={};T.ctl.forEach(c=>{const v=d.s[c.k];if(v===undefined||v===null)return;
+  if(c.tg){const m=c.tg.find(x=>String(x[0])===String(v));if(m)n[c.k]=m[0]}
+  else if(c.ms){if(Array.isArray(v))n[c.k]=c.ms.map(x=>x[0]).filter(x=>v.includes(x))}
+  else if(c.step){const x=Number(v);if(Number.isFinite(x))n[c.k]=Math.min(c.step[1],Math.max(c.step[0],x))}});
+ Object.assign(cfg(id),n);save();draw(id);return id};
+window.CRAFT={tools:TOOLS,cfg,spin:spinTool,applyShare,redraw:()=>Object.keys(TOOLS).forEach(id=>{if(document.getElementById("tab-"+id)){draw(id);drawFavs(id)}})};
 })();

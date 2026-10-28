@@ -42,15 +42,15 @@ const GRAINX=(s,n)=>{
 Object.assign(window.CRAFTLIB.TOOLS,{
 burger:{title:"What are we flipping?",sub:"Pick your patty, cheese, sauce and toppings, or spin for a surprise.",
  spinLabel:"Spin a burger!",spinNote:"Stacking your burger…",
- names:["Cheddar beef","Swiss and caramelised onion","Blue cheese lamb","Smoky BBQ bacon","Chipotle chicken","Black bean and avocado","Fried egg and bacon","Jalapeño cheddar","Garlic aioli chicken","Classic with pickles","Lamb and tomato","Beef, egg and avocado"],
+ names:["Cheddar beef","Swiss and caramelised onion","Blue cheese lamb","Smoky BBQ bacon","Chipotle chicken","Black bean and avocado","Fried egg and bacon","Jalapeño cheddar","Garlic aioli chicken","Classic with pickles","Lamb and tomato","Beef, egg and avocado","Smash with American cheese","Salmon and dill","Turkey and pepper jack","Portobello and swiss"],
  spin(s){ // a random burger that still makes sense: toppings are shuffled, bacon stays off the veggie one
   const pk=a=>a[Math.floor(Math.random()*a.length)],sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
-  s.t=pk(["beef","beef","lamb","chicken","bean"]);s.c=pk(["none","cheddar","cheddar","swiss","blue"]);s.s=pk(["classic","bbq","chipotle","aioli"]);
-  s.o=sh(["lettuce","tomato","onion","pickles","bacon","egg","avocado","jalapeno","caramel"].filter(x=>!(x==="bacon"&&s.t==="bean"))).slice(0,2+Math.floor(Math.random()*3))},
+  s.t=pk(["beef","beef","smash","lamb","chicken","turkey","salmon","bean","mushroom"]);s.c=pk(["none","cheddar","cheddar","swiss","blue","american","pepperjack"]);s.s=pk(["classic","bbq","chipotle","aioli","special"]);
+  s.o=sh(["lettuce","tomato","onion","pickles","bacon","egg","avocado","jalapeno","caramel"].filter(x=>!(x==="bacon"&&(s.t==="bean"||s.t==="mushroom")))).slice(0,2+Math.floor(Math.random()*3))},
  ctl:[{k:"p",label:"Burgers",icon:"burger",def:null,step:[1,12,1,""]},{k:"z",label:"Patty size",icon:"ruler",def:150,tg:[[100,"Small 100 g"],[150,"Classic 150 g"],[200,"Big 200 g"]]},
-  {k:"t",label:"Patty",icon:"burger",def:"beef",tg:[["beef","Beef"],["lamb","Lamb"],["chicken","Chicken"],["bean","Black bean (veggie)"]]},
-  {k:"c",label:"Cheese",icon:"dairy",def:"none",tg:[["none","No cheese"],["cheddar","Cheddar"],["swiss","Swiss"],["blue","Blue cheese"]]},
-  {k:"s",label:"Sauce",icon:"sauce",def:"classic",tg:[["classic","Classic"],["bbq","Smoky BBQ"],["chipotle","Chipotle mayo"],["aioli","Garlic aioli"]]},
+  {k:"t",label:"Patty",icon:"burger",def:"beef",tg:[["beef","Beef"],["lamb","Lamb"],["chicken","Chicken"],["bean","Black bean (veggie)"],["smash","Smash beef"],["turkey","Turkey"],["salmon","Salmon"],["mushroom","Portobello (veggie)"]]},
+  {k:"c",label:"Cheese",icon:"dairy",def:"none",tg:[["none","No cheese"],["cheddar","Cheddar"],["swiss","Swiss"],["blue","Blue cheese"],["american","American cheese"],["pepperjack","Pepper jack"]]},
+  {k:"s",label:"Sauce",icon:"sauce",def:"classic",tg:[["classic","Classic"],["bbq","Smoky BBQ"],["chipotle","Chipotle mayo"],["aioli","Garlic aioli"],["special","Burger sauce"]]},
   {k:"o",label:"Toppings (pick any)",icon:"salad",def:["pickles"],ms:[["lettuce","Lettuce"],["tomato","Tomato"],["onion","Red onion"],["pickles","Pickles"],["bacon","Bacon"],["egg","Fried egg"],["avocado","Avocado"],["jalapeno","Jalapeños"],["caramel","Caramelised onions"]]}],
  calc(s){
   const n=s.p||people,z=+s.z,meat=n*z,top=Array.isArray(s.o)?s.o:[],has=k=>top.includes(k),pt=s.t||"beef",ch=s.c||"none",sc=s.s||"classic";
@@ -67,12 +67,28 @@ burger:{title:"What are we flipping?",sub:"Pick your patty, cheese, sauce and to
     ing:[["Patty: chicken thigh mince",G(meat)],["Patty: salt",P1(meat*.01)+" g"],["Patty: smoked paprika",P1(meat*.006)+" g"],["Patty: garlic powder",P1(meat*.004)+" g"]],
     shape:"Patties: mix the mince with the salt, paprika and garlic powder, then shape "+n+" patties of "+z+" g, a little wider than the bun. Chill 15 minutes.",
     cook:"Cook in a hot pan or on a grill over medium-high heat 4–5 minutes per side, until 75 °C inside.",rest:" Rest 3 minutes."},
+   smash:{w:"smash",flame:"71 °C inside",note:"Use beef mince with about 20% fat. Roll loose balls and do not pack them: the fat is what makes the crispy, lacy edges.",
+    ing:[["Patty: beef mince (20% fat)",G(meat)],["Patty: salt",P1(meat*.01)+" g"],["Patty: black pepper",P1(meat*.004)+" g"]],
+    shape:"Patties: loosely roll "+(2*n)+" balls of "+Math.round(z/2)+" g without packing them. Chill until you cook. Season only after you smash.",
+    cook:"Heat a cast-iron pan or griddle until it is smoking hot. Put the balls down, smash each flat with a stiff spatula, season and cook 2 minutes until the edges are crisp and lacy. Scrape under, flip, add the cheese and cook 1 minute more. Stack two patties per burger.",rest:""},
+   turkey:{w:"turkey",flame:"75 °C inside",note:"Use thigh mince if you can, since breast mince turns dry. Turkey must cook all the way through.",
+    ing:[["Patty: turkey mince (thigh)",G(meat)],["Patty: salt",P1(meat*.01)+" g"],["Patty: dried sage",P1(meat*.004)+" g"],["Patty: garlic powder",P1(meat*.004)+" g"],["Patty: olive oil",G(meat*.03)]],
+    shape:"Patties: mix the mince lightly with the salt, sage, garlic powder and oil, then shape "+n+" patties of "+z+" g. Chill 15 minutes.",
+    cook:"Cook in a hot pan or on a grill over medium-high heat 4–5 minutes per side, until 75 °C inside.",rest:" Rest 3 minutes."},
+   salmon:{w:"salmon",flame:"63 °C inside",note:"Chop the salmon by hand into small pieces instead of mincing it, so the patties keep a good texture. Chill well so they hold together.",
+    ing:[["Patty: skinless salmon fillet",G(meat)],["Patty: breadcrumbs",G(meat*.1)],["Patty: egg, beaten",G(meat*.08)],["Patty: Dijon mustard",P1(meat*.01)+" g"],["Patty: fresh dill, chopped",G(meat*.02)],["Patty: salt",P1(meat*.008)+" g"]],
+    shape:"Patties: chop the salmon by hand into small pieces. Fold in the breadcrumbs, egg, mustard, dill and salt, then shape "+n+" patties of "+z+" g. Chill 20 minutes.",
+    cook:"Cook in a pan with a little oil over medium heat 3–4 minutes per side, until golden and opaque all through. Turn only once.",rest:""},
+   mushroom:{w:"portobello",flame:"Tender all through",note:"Wipe the caps instead of washing them, and pat them dry, so they brown instead of steaming.",
+    ing:[["Patty: large portobello mushroom caps",n+(n>1?" caps":" cap")],["Patty: olive oil",G(10*n)],["Patty: balsamic vinegar",G(8*n)],["Patty: garlic, crushed",P1(2*n)+" g"],["Patty: salt",P1(1*n)+" g"]],
+    shape:"Patties: remove the stems and wipe the caps. Marinate them in the oil, balsamic, garlic and salt for 15 minutes.",
+    cook:"Cook in a hot pan or on a grill 4–5 minutes per side, pressing once, until tender and well browned.",rest:""},
    bean:{w:"black bean",flame:"Crisp and hot through",note:"Mash only half the beans so the patties keep some bite. Chilling 20 minutes helps them hold together.",
     ing:[["Patty: canned black beans, drained",G(meat*.5)],["Patty: breadcrumbs or rolled oats",G(meat*.2)],["Patty: onion, grated",G(meat*.15)],["Patty: egg, beaten",G(meat*.12)],["Patty: smoked paprika",P1(meat*.008)+" g"],["Patty: ground cumin",P1(meat*.008)+" g"],["Patty: salt",P1(meat*.01)+" g"]],
     shape:"Patties: mash half the beans roughly with a fork, mix in everything else for the patties, and shape "+n+" patties of "+z+" g. Chill 20 minutes.",
     cook:"Cook in a pan with a little oil over medium heat 4 minutes per side, until crisp outside and hot through. Do not press on them.",rest:""}}[pt]||null;
-  const CH={cheddar:["Cheddar, sliced",20,"cheddar"],swiss:["Swiss cheese (Emmental or Gruyère), sliced",20,"Swiss"],blue:["Blue cheese, crumbled",15,"blue cheese"]}[ch];
-  const SC={classic:[["Sauce: mayonnaise",20],["Sauce: ketchup",10],["Sauce: mustard",4]],bbq:[["Sauce: BBQ sauce",25],["Sauce: mayonnaise",10]],chipotle:[["Sauce: mayonnaise",25],["Sauce: chipotle paste (or chipotles in adobo)",5],["Sauce: lime juice",4]],aioli:[["Sauce: mayonnaise",25],["Sauce: garlic, crushed",3],["Sauce: lemon juice",4]]}[sc]||[];
+  const CH={cheddar:["Cheddar, sliced",20,"cheddar"],swiss:["Swiss cheese (Emmental or Gruyère), sliced",20,"Swiss"],blue:["Blue cheese, crumbled",15,"blue cheese"],american:["American cheese slices",20,"American cheese"],pepperjack:["Pepper jack cheese, sliced",20,"pepper jack"]}[ch];
+  const SC={classic:[["Sauce: mayonnaise",20],["Sauce: ketchup",10],["Sauce: mustard",4]],bbq:[["Sauce: BBQ sauce",25],["Sauce: mayonnaise",10]],chipotle:[["Sauce: mayonnaise",25],["Sauce: chipotle paste (or chipotles in adobo)",5],["Sauce: lime juice",4]],aioli:[["Sauce: mayonnaise",25],["Sauce: garlic, crushed",3],["Sauce: lemon juice",4]],special:[["Sauce: mayonnaise",20],["Sauce: ketchup",10],["Sauce: pickle relish",8],["Sauce: mustard",3]]}[sc]||[];
   const TP={lettuce:["Lettuce leaves",15],tomato:["Tomato, sliced",30],onion:["Red onion, thinly sliced",15],pickles:["Chopped pickles",15],bacon:["Streaky bacon",30],egg:["Eggs, for frying",n+(n>1?" eggs":" egg")],avocado:["Ripe avocado, sliced",40],jalapeno:["Pickled jalapeños",8],caramel:["Onions, for caramelising",60]};
   const tops=Object.keys(TP).filter(has).map(k=>[TP[k][0],typeof TP[k][1]==="number"?G(TP[k][1]*n):TP[k][1]]);
   if(has("caramel"))tops.push(["Butter, for the onions",P1(5*n)+" g"]);
