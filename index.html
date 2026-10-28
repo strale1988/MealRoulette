@@ -2152,6 +2152,12 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
 })();
 
 
+/* ---- portrait only on phones: the lock is accepted when installed to the home screen (the manifest also says portrait); a normal browser tab ignores it ---- */
+(function(){
+  const lock=()=>{try{const o=screen.orientation;if(o&&o.lock&&matchMedia("(hover:none) and (pointer:coarse)").matches)o.lock("portrait").catch(()=>{})}catch(e){}};
+  lock();addEventListener("pointerdown",lock,{once:true});
+})();
+
 /* ---- shake to spin ---- */
 (function(){
   /* shake */
@@ -2181,7 +2187,7 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
     const OV=AR?["pot"].concat(Object.keys(window.__craftArts||{})).filter(k=>AR[k]&&!(window.__noMix||[]).includes(k)):[]; // the pizza logo itself is the 4th art
     if(AR&&OV.length){wheel.insertAdjacentHTML("beforeend",OV.map(k=>`<div class="art">${AR[k]}</div>`).join(""));overlays=[...wheel.querySelectorAll(":scope>.art")]}
     let cyc=null,rot=null,ci=-1,landed=false,spinLast=0;
-    wheel.insertAdjacentHTML("beforeend",`<div class="sp-orb">${window.__pizzaOrbit?__pizzaOrbit():""}</div>`);const orb=wheel.querySelector(":scope>.sp-orb");
+    const orb=null; /* no flying toppings on the start screen */
     const nA=()=>overlays.length+1,showArt=i=>{ci=i;if(i===0&&window.__pizzaSVG)pz.innerHTML=__pizzaSVG(false);pz.style.visibility=i===0?"visible":"hidden";orb&&orb.classList.toggle("off",i!==0);overlays.forEach((a,k)=>a.classList.toggle("on",k+1===i))};
     const cycStart=ms=>{if(!overlays.length||rm)return;clearInterval(cyc);ci=-1;const step=()=>showArt(window.__rndArt?__rndArt(nA(),ci):(ci+1)%nA());step();cyc=setInterval(step,ms||900)}; // random start, random swaps, never the same art twice in a row
     const cycStop=()=>{clearInterval(cyc);cyc=null;if(overlays.length&&!rm)showArt(window.__rndArt?__rndArt(nA(),ci):0);else{pz.style.visibility="";overlays.forEach(a=>a.classList.remove("on"))}}; // it finishes on a random spinner, every time

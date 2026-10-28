@@ -4,6 +4,41 @@
 (function(){
 "use strict";
 const {rg,G,ML,P1,eggs,hm,people}=window.CRAFTLIB;
+const cl=x=>{const v=P1(x);return v+(v===1?" clove":" cloves")}; // "1 clove", "2 cloves"
+const sl=x=>Math.max(.5,Math.round(x*.008*2)/2)+" g"; // salt at 0.8% of the liquid
+/* named soups and chilli: each returns {n,m,note,ing,st} for n people */
+const SOUPS={
+ tomato:n=>({n:"Tomato soup",m:"35 min",note:"Canned tomatoes give a deeper, sweeter soup than fresh ones outside summer. Serve with grilled cheese for dunking.",
+  ing:[["Butter or olive oil",G(10*n)],["Onion, chopped",G(60*n)],["Garlic",cl(.5*n)],["Canned whole tomatoes",G(200*n)],["Stock or water",G(150*n)],["Sugar (only if sharp)",P1(1*n)+" g"],["Cream (optional)",G(20*n)],["Fresh basil",G(2*n)],["Salt",sl(350*n)]],
+  st:["Soften the onion in the butter 6–8 minutes, until sweet and translucent. Add the garlic for 1 minute.","Add the tomatoes (crushing them), the stock and the sugar. Simmer 20 minutes.","Blend until smooth. Stir in the cream, if using, and reheat gently.","Season with salt and pepper and top with torn basil."]}),
+ noodle:n=>({n:"Chicken noodle soup",m:"45 min",note:"Add the noodles at the end so they do not turn soft and swell. If you are keeping leftovers, cook the noodles separately.",
+  ing:[["Chicken thighs or breast, skinless",G(100*n)],["Stock",G(400*n)],["Carrot, sliced",G(50*n)],["Celery, sliced",G(30*n)],["Onion, chopped",G(50*n)],["Olive oil",G(5*n)],["Egg noodles (dry)",G(25*n)],["Parsley, chopped",G(3*n)],["Lemon juice",P1(4*n)+" g"],["Salt",sl(400*n)]],
+  st:["Soften the onion, carrot and celery in the oil 6 minutes.","Add the stock and the chicken, bring to a gentle simmer and cook 18–20 minutes, until the chicken is cooked through (75 °C).","Lift out the chicken, shred it with two forks and return it to the pot.","Add the noodles and cook 6–8 minutes until tender.","Stir in the parsley and lemon juice. Season with salt and pepper."]}),
+ lentil:n=>({n:"Red lentil soup",m:"35 min",note:"Red lentils need no soaking and break down into a creamy soup without any cream. Blend half for a thicker texture.",
+  ing:[["Red lentils, rinsed",G(60*n)],["Oil or butter",G(10*n)],["Onion, chopped",G(60*n)],["Carrot, diced",G(50*n)],["Garlic",cl(.5*n)],["Ground cumin",P1(1.5*n)+" g"],["Stock or water",G(400*n)],["Lemon juice",P1(5*n)+" g"],["Salt",sl(400*n)]],
+  st:["Soften the onion and carrot in the oil 6 minutes. Add the garlic and cumin for 1 minute.","Add the lentils and the stock. Bring to a boil, then simmer 20–25 minutes, until the lentils are soft.","Blend part or all of the soup. Thin with water if needed.","Season with salt and finish with the lemon juice."]}),
+ mine:n=>({n:"Minestrone",m:"50 min",note:"Use whatever vegetables you have. Add a parmesan rind to the pot for extra flavour.",
+  ing:[["Olive oil",G(10*n)],["Onion, diced",G(40*n)],["Carrot, diced",G(40*n)],["Celery, diced",G(30*n)],["Courgette, diced",G(50*n)],["Potato, diced",G(50*n)],["Canned chopped tomatoes",G(80*n)],["Canned cannellini beans, drained",G(50*n)],["Small pasta",G(20*n)],["Stock",G(350*n)],["Parmesan, to serve",G(8*n)],["Salt",sl(400*n)]],
+  st:["Soften the onion, carrot and celery in the oil 8 minutes.","Add the potato, tomatoes and stock. Simmer 15 minutes.","Add the courgette, beans and pasta and cook 10 minutes more, until the pasta is tender.","Season with salt and pepper. Serve with parmesan and a drizzle of olive oil."]}),
+ chili:n=>({n:"Chilli con carne",m:"1 h 15 min",note:"Better the next day. Serve with rice, tortillas or baked potatoes. Freezes well for 3 months.",
+  ing:[["Beef mince",G(120*n)],["Onion, chopped",G(70*n)],["Garlic",cl(.75*n)],["Oil",G(8*n)],["Tomato purée",G(10*n)],["Canned chopped tomatoes",G(100*n)],["Canned kidney beans, drained",G(100*n)],["Chilli powder",P1(3*n)+" g"],["Ground cumin",P1(2*n)+" g"],["Smoked paprika",P1(2*n)+" g"],["Stock or water",G(80*n)],["Salt",P1(1.5*n)+" g"]],
+  st:["Soften the onion in the oil 6 minutes. Add the garlic and spices and stir 1 minute.","Add the mince and brown it well, breaking it up, about 8 minutes. Stir in the tomato purée for 1 minute.","Add the tomatoes and stock. Simmer on low heat, partly covered, 40 minutes, stirring now and then.","Add the beans and cook 10 minutes more, until thick. Taste and add salt, and more chilli if you like it hot."]})
+};
+/* rice dishes beyond the plain grains */
+const GRAINX=(s,n)=>{
+ if(s.t==="fried")return{title:"Egg fried rice for "+n,meta:[["clock","15 min"],["rice","Cooked rice "+G(200*n)],["flame","High heat"]],note:["Use cold, day-old rice: freshly cooked rice is too wet and turns to mush. Cook it, spread it on a tray and chill it."],
+  ing:[["Cooked cold rice (about "+G(75*n)+" dry)",G(200*n)],["Eggs",eggs(50*n)],["Oil",G(10*n)],["Spring onion, sliced",G(15*n)],["Garlic",cl(.5*n)],["Frozen peas and diced carrot",G(50*n)],["Soy sauce",G(12*n)],["Sesame oil",P1(3*n)+" g"],["White pepper","a pinch"]],
+  steps:["Break up the cold rice with your hands so there are no clumps.","Heat half the oil in a wok on high heat. Scramble the eggs 30 seconds and take them out.","Add the rest of the oil, then the garlic and white parts of the spring onion for 20 seconds. Add the peas and carrot for 1 minute.","Add the rice and stir-fry 3–4 minutes, pressing it against the wok, until hot and starting to crisp.","Return the egg, add the soy sauce and sesame oil and toss. Finish with the green spring onion."],
+  learn:["Cooked rice dries out in the fridge, and dry grains fry up separate and fluffy instead of sticky.","Keep the heat high and the batch small. A crowded pan steams the rice instead of frying it."]};
+ if(s.t==="pilaf")return{title:"Rice pilaf for "+n,meta:[["clock","30 min"],["rice","Dry "+G(75*n)],["jar","Pot with a lid"]],note:["Toasting the rice and noodles in butter gives pilaf its nutty flavour and keeps the grains separate."],
+  ing:[["Long-grain rice",G(75*n)],["Butter",G(10*n)],["Vermicelli, broken into short pieces",G(8*n)],["Onion, finely chopped",G(30*n)],["Hot stock",G(112*n)],["Bay leaf","1"],["Salt (taste the stock first)",P1(.8*n)+" g"]],
+  steps:["Rinse the rice until the water runs nearly clear. Drain well.","Melt the butter in a pot. Fry the vermicelli until golden brown, 1–2 minutes. Add the onion and soften 3 minutes.","Add the rice and stir 2 minutes until coated and slightly translucent.","Pour in the hot stock, add the bay leaf and salt and bring to a boil. Cover, turn the heat to the lowest setting and cook 12 minutes.","Rest, covered, 10 minutes. Fluff with a fork and remove the bay leaf."],
+  learn:["Pilaf is made across the Middle East, Central Asia and the Balkans, and each region has its own version.","Hot stock keeps the pot at a simmer so the rice cooks evenly."]};
+ return{title:"Sushi rice for "+n,meta:[["clock","50 min"],["rice","Dry "+G(80*n)],["jar","Makes enough for "+Math.max(1,Math.round(n*1.5))+" rolls or bowls"]],note:["Use short-grain or sushi rice. Long-grain rice will not stick together."],
+  ing:[["Sushi rice",G(80*n)],["Water",ML(88*n)],["Rice vinegar",G(15*n)],["Sugar",P1(6*n)+" g"],["Salt",P1(1.5*n)+" g"]],
+  steps:["Rinse the rice in cold water, swirling and draining, until the water runs almost clear. Drain and rest 20 minutes.","Cook the rice with the water in a covered pot: bring to a boil, then lowest heat 12 minutes. Do not lift the lid. Rest 10 minutes.","Warm the vinegar, sugar and salt until dissolved.","Tip the rice into a wide bowl, pour the vinegar mix over and fold with a cutting motion. Fan the rice while mixing so it cools quickly and turns glossy.","Cover with a damp cloth and use within 2 hours at room temperature."],
+  learn:["Short-grain rice has more starch, which is what makes it sticky enough to hold sushi together.","Cut and fold the vinegar through rather than stirring, which would crush the grains and turn them to paste."]};
+};
 Object.assign(window.CRAFTLIB.TOOLS,{
 burger:{title:"What are we flipping?",sub:"Pick your patty, cheese, sauce and toppings, or spin for a surprise.",
  spinLabel:"Spin a burger!",spinNote:"Stacking your burger…",
@@ -52,11 +87,12 @@ burger:{title:"What are we flipping?",sub:"Pick your patty, cheese, sauce and to
   return{title:n+" "+(CH?CH[2]+" ":"")+PT.w+" burger"+(n>1?"s":""),meta:[["clock","About 3 hours (buns)"],["burger","Patties "+G(meat)],["flame",PT.flame]],note:[PT.note],
    ing:PT.ing.concat([["Bun: flour",G(70*n)],["Bun: warm milk",G(40*n)],["Bun: egg",eggs(12*n)],["Bun: butter",G(8*n)],["Bun: sugar",P1(7*n)+" g"],["Bun: instant yeast",P1(Math.max(2,n)*.7)+" g"],["Bun: salt",P1(1.2*n)+" g"]],CH?[[CH[0],G(CH[1]*n)]]:[],SC.map(x=>[x[0],G(x[1]*n)]),tops),
    steps:st}}},
-soup:{title:"What are we simmering?",sub:"Stock from bones and scraps, or soup for your table.",
- ctl:[{k:"t",label:"Make",icon:"soup",def:"soup",tg:[["soup","Soup"],["stock","Stock"]]},
-  {k:"p",label:"People",icon:"users",def:null,step:[1,12,1,""],only:"soup"},{k:"y",label:"Style",icon:"soup",def:"brothy",tg:[["brothy","Brothy"],["creamy","Creamy"]],only:"soup"},
+soup:{title:"What are we simmering?",sub:"Stock, soups and chilli for your table.",
+ ctl:[{k:"t",label:"Make",icon:"soup",def:"soup",tg:[["soup","Soup"],["stock","Stock"],["tomato","Tomato soup"],["noodle","Chicken noodle soup"],["lentil","Red lentil soup"],["mine","Minestrone"],["chili","Chilli con carne"]]},
+  {k:"p",label:"People",icon:"users",def:null,step:[1,12,1,""],only:["soup","tomato","noodle","lentil","mine","chili"]},{k:"y",label:"Style",icon:"soup",def:"brothy",tg:[["brothy","Brothy"],["creamy","Creamy"]],only:"soup"},
   {k:"k",label:"Type",icon:"soup",def:"chicken",tg:[["chicken","Chicken"],["beef","Beef"],["veg","Vegetable"],["fish","Fish"]],only:"stock"},{k:"b",label:"Bones or scraps",icon:"ruler",def:1000,step:[500,3000,250,"g"],only:"stock"}],
  calc(s){
+  if(SOUPS[s.t]){const n=s.p||people,R=SOUPS[s.t](n);return{title:R.n+" for "+n,meta:[["clock",R.m],["soup","Serves "+n],["fridge","Fridge 4 days · freezer 3 months"]],note:[R.note],ing:R.ing,steps:R.st}}
   if(s.t==="stock"){const b=s.b,T={chicken:{n:"Chicken",w:2,h:"3 hours",r:""},beef:{n:"Beef",w:2,h:"6 hours",r:"Roast the bones at 220 °C for 30 minutes first for a deeper flavour. "},veg:{n:"Vegetable",w:1.5,h:"45 minutes",r:""},fish:{n:"Fish",w:1.5,h:"30 minutes",r:"Use bones from white fish only. "}}[s.k],wt=b*T.w;
    return{title:T.n+" stock",meta:[["clock",T.h],["jar","Makes about "+G(wt*.85)],["fridge","Fridge 4 days · freezer 3 months"]],note:["Do not add salt now. Season the dish you cook with it."],
     ing:[[s.k==="veg"?"Vegetable scraps":"Bones",G(b)],["Cold water",G(wt)],["Onion",G(b*.15)],["Carrot",G(b*.1)],["Celery",G(b*.08)],["Bay leaves",Math.max(1,Math.round(b/1000))+""],["Black peppercorns",P1(b/1000*3)+" g"]],
@@ -66,20 +102,21 @@ soup:{title:"What are we simmering?",sub:"Stock from bones and scraps, or soup f
    ing:[["Vegetables, chopped",G(250*n)],["Onion",G(50*n)],["Oil or butter",G(10*n)],["Stock",G(liq)]].concat(cr?[["Potato (makes it creamy)",G(80*n)],["Cream (optional)",G(20*n)]]:[["Small pasta, rice or beans (optional)",G(25*n)]]).concat([["Salt","about "+salt+" g"]]),
    steps:["Soften the onion in the oil 5 minutes.","Add the vegetables"+(cr?" and potato":"")+" and stir 3 minutes.","Add the stock, bring to a boil, then simmer 20–25 minutes until everything is tender.",cr?"Blend until smooth, stir in the cream and heat through.":"Add the pasta, rice or beans for the last 10 minutes.","Season with salt and pepper at the end."]}}},
 grill:{title:"What are we grilling?",sub:"Marinade amounts and cooking times by thickness.",
- ctl:[{k:"m",label:"Meat or fish",icon:"grill",def:"beef",tg:[["beef","Beef steak"],["pork","Pork chop"],["chicken","Chicken breast"],["lamb","Lamb chop"],["salmon","Salmon"],["prawn","Prawns"]]},
+ ctl:[{k:"m",label:"Meat or fish",icon:"grill",def:"beef",tg:[["beef","Beef steak"],["pork","Pork chop"],["chicken","Chicken breast"],["lamb","Lamb chop"],["salmon","Salmon"],["prawn","Prawns"],["thigh","Chicken thigh"],["tuna","Tuna steak"]]},
   {k:"d",label:"Doneness",icon:"flame",def:"mr",tg:[["rare","Rare"],["mr","Medium-rare"],["med","Medium"],["well","Well done"]],only:"beef"},
-  {k:"h",label:"Thickness",icon:"ruler",def:2.5,step:[1,5,.5,"cm"],only:["beef","pork","chicken","lamb","salmon"]},{k:"w",label:"Weight",icon:"ruler",def:1000,step:[250,2000,250,"g"]}],
+  {k:"h",label:"Thickness",icon:"ruler",def:2.5,step:[1,5,.5,"cm"],only:["beef","pork","chicken","lamb","salmon","thigh","tuna"]},{k:"w",label:"Weight",icon:"ruler",def:1000,step:[250,2000,250,"g"]}],
  calc(s){
   const D={rare:[1.2,"50 °C"],mr:[1.6,"55 °C"],med:[2,"60 °C"],well:[2.6,"71 °C"]}[s.d]||[1.6,"55 °C"],
-   M={beef:{n:"Beef steak",k:D[0],t:D[1],m:"2–8 hours"},pork:{n:"Pork chop",k:2.2,t:"63 °C",m:"2–6 hours"},chicken:{n:"Chicken breast",k:3.2,t:"74 °C",m:"2–6 hours"},lamb:{n:"Lamb chop",k:1.8,t:"57 °C",m:"2–8 hours"},salmon:{n:"Salmon",k:1.8,t:"55 °C",m:"30 minutes"},prawn:{n:"Prawns",k:null,t:"pink and curled",m:"30 minutes"}}[s.m],
+   M={beef:{n:"Beef steak",k:D[0],t:D[1],m:"2–8 hours"},pork:{n:"Pork chop",k:2.2,t:"63 °C",m:"2–6 hours"},chicken:{n:"Chicken breast",k:3.2,t:"74 °C",m:"2–6 hours"},lamb:{n:"Lamb chop",k:1.8,t:"57 °C",m:"2–8 hours"},salmon:{n:"Salmon",k:1.8,t:"55 °C",m:"30 minutes"},prawn:{n:"Prawns",k:null,t:"pink and curled",m:"30 minutes"},thigh:{n:"Chicken thigh (boneless)",k:2.4,t:"75 °C",m:"2–6 hours"},tuna:{n:"Tuna steak",k:1,t:"50 °C (seared, pink inside)",m:"30 minutes"}}[s.m],
    mins=M.k?Math.round(M.k*s.h*2)/2:2,w=s.w;
   return{title:M.n+(M.k?", "+s.h+" cm":""),meta:[["clock",mins+" min per side"],["flame","Inside: "+M.t],["grill","Rest 5 min"]],note:["Times are for a hot grill or pan and are a guide. A thermometer is the sure way."+(s.m==="chicken"&&s.h>3?" Butterfly thick breasts so they cook evenly.":"")],
-   ing:[["Oil",G(w*.05)],["Acid (lemon juice or vinegar)",G(w*.02)],["Salt",P1(w*.01)+" g"],["Honey or sugar",G(w*.01)],["Garlic",Math.max(1,Math.round(w/500))+" cloves"],["Herbs or spices",G(w*.005)]],
+   ing:[["Oil",G(w*.05)],["Acid (lemon juice or vinegar)",G(w*.02)],["Salt",P1(w*.01)+" g"],["Honey or sugar",G(w*.01)],["Garlic",cl(Math.max(1,Math.round(w/500)))],["Herbs or spices",G(w*.005)]],
    steps:["Whisk the marinade ingredients and coat the meat. Marinate in the fridge "+M.m+" (no longer, the acid turns it mushy).","Take it out 20 minutes before cooking and pat dry so it browns instead of steaming.","Cook "+mins+" minutes per side on a very hot grill or pan, turning once.","Check the inside reaches "+M.t+", then rest 5 minutes before cutting."]}}},
 grain:{title:"What are we cooking?",sub:"Rice and grains with exactly the right water.",
- ctl:[{k:"t",label:"Grain",icon:"rice",def:"white",tg:[["white","White rice"],["basmati","Basmati"],["brown","Brown rice"],["quinoa","Quinoa"],["couscous","Couscous"],["bulgur","Bulgur"],["barley","Pearl barley"],["polenta","Polenta"],["risotto","Risotto"]]},
+ ctl:[{k:"t",label:"Grain",icon:"rice",def:"white",tg:[["white","White rice"],["basmati","Basmati"],["brown","Brown rice"],["quinoa","Quinoa"],["couscous","Couscous"],["bulgur","Bulgur"],["barley","Pearl barley"],["polenta","Polenta"],["risotto","Risotto"],["fried","Egg fried rice"],["pilaf","Rice pilaf"],["sushi","Sushi rice"]]},
       {k:"p",label:"People",icon:"users",def:null,step:[1,12,1,""]}],
  calc(s){
+  if(["fried","pilaf","sushi"].includes(s.t))return GRAINX(s,s.p||people);
   const n=s.p||people,T={
    white:{n:"White rice",pp:75,w:1.5,m:12,r:10,tip:"Rinse until the water runs nearly clear."},basmati:{n:"Basmati rice",pp:75,w:1.5,m:10,r:5,tip:"Rinse well and soak 20 minutes if you have time."},
    brown:{n:"Brown rice",pp:75,w:2.25,m:40,r:10,tip:"Rinse first. It takes longer because of the bran."},quinoa:{n:"Quinoa",pp:60,w:2,m:15,r:5,tip:"Rinse in a sieve to wash off the bitter coating."},
@@ -103,12 +140,21 @@ grain:{title:"What are we cooking?",sub:"Rice and grains with exactly the right 
   return{title:T.n+" for "+n,meta:[["clock",T.m?T.m+" min"+(T.r?" + "+T.r+" rest":""):"5 min"],["rice","Dry "+G(d)],["jar","Pot of at least "+(Math.ceil(vol*4)/4).toFixed(2).replace(/\.?0+$/,"")+" L"]],
    note:["Ratio: "+T.w+" g water per 1 g dry grain. "+(s.t==="risotto"?"":T.tip)],ing,steps}}},
 noodle:{title:"What are we slurping?",sub:"Noodles and a stir-fry sauce from pantry staples.",
- ctl:[{k:"n",label:"Noodles",icon:"noodle",def:"egg",tg:[["egg","Egg noodles"],["ramen","Ramen"],["udon","Udon (fresh)"],["soba","Soba"],["rice","Rice noodles"]]},{k:"s",label:"Sauce",icon:"sauce",def:"soy",tg:[["soy","Savoury soy"],["sweet","Sticky sweet"],["peanut","Peanut"]]},{k:"p",label:"People",icon:"users",def:null,step:[1,12,1,""]}],
+ ctl:[{k:"n",label:"Noodles",icon:"noodle",def:"egg",tg:[["egg","Egg noodles"],["ramen","Ramen"],["udon","Udon (fresh)"],["soba","Soba"],["rice","Rice noodles"]]},{k:"s",label:"Sauce",icon:"sauce",def:"soy",tg:[["soy","Savoury soy"],["sweet","Sticky sweet"],["peanut","Peanut"],["pad","Pad Thai"],["teri","Teriyaki"]]},{k:"p",label:"People",icon:"users",def:null,step:[1,12,1,""]}],
  calc(s){
   const n=s.p||people,N={egg:["Egg noodles (dry)",80,4],ramen:["Ramen noodles (dry)",80,3],udon:["Udon noodles (fresh)",150,2],soba:["Soba noodles (dry)",80,5],rice:["Rice noodles (dry)",70,0]}[s.n],
-   S={soy:[["Soy sauce",15],["Rice vinegar",5],["Sugar",3],["Sesame oil",3],["Cornflour",3],["Water",20]],sweet:[["Soy sauce",15],["Honey",10],["Rice vinegar",5],["Garlic, grated",3],["Water",20]],peanut:[["Peanut butter",20],["Soy sauce",10],["Lime juice",8],["Chilli flakes",.5],["Water",20]]}[s.s];
+   S={soy:[["Soy sauce",15],["Rice vinegar",5],["Sugar",3],["Sesame oil",3],["Cornflour",3],["Water",20]],sweet:[["Soy sauce",15],["Honey",10],["Rice vinegar",5],["Garlic, grated",3],["Water",20]],peanut:[["Peanut butter",20],["Soy sauce",10],["Lime juice",8],["Chilli flakes",.5],["Water",20]],pad:[["Tamarind paste",10],["Fish sauce",10],["Sugar (palm sugar is best)",8],["Lime juice",5],["Water",15]],teri:[["Soy sauce",15],["Mirin (or 1 tsp extra sugar)",15],["Sugar",5],["Ginger, grated",2],["Water",15]]}[s.s];
   return{title:"Stir-fried noodles for "+n,meta:[["clock","20 min"],["noodle",N[0].split(" (")[0]+" "+G(N[1]*n)]],note:[s.n==="rice"?"Soak rice noodles in hot (not boiling) water 10–20 minutes until flexible, then drain.":"Cook the noodles "+N[2]+" minutes, then rinse in cold water so they do not stick."],
    ing:[[N[0],G(N[1]*n)],["Vegetables, sliced",G(150*n)],["Chicken, tofu or prawns",G(100*n)],["Garlic",Math.max(1,n)+" cloves"],["Ginger",G(5*n)],["Oil",G(10*n)]].concat(S.map(x=>["Sauce: "+x[0],x[1]<1?"a pinch":G(x[1]*n)])),
    steps:["Whisk the sauce ingredients in a bowl.","Heat the oil in a wok on high heat. Cook the protein 3–4 minutes, then take it out.","Stir-fry the garlic and ginger 20 seconds, then the vegetables 3–4 minutes.","Add the noodles, protein and sauce. Toss 1–2 minutes until glossy and hot."]}}}
+});
+Object.assign(window.CRAFTLIB.LEARN,{
+grill:{thigh:["Thighs have more fat and connective tissue than breast, so they stay juicy and forgive a few extra minutes. Cook them to 75 °C or higher.","Pat the surface dry before cooking so it browns instead of steaming."],
+ tuna:["Tuna is best seared hot and fast, leaving the middle rare. Cooking it through makes it dry.","Buy sushi-grade or very fresh tuna if you plan to eat it rare."]},
+soup:{tomato:["Simmering tomatoes breaks down their acidity and brings out sweetness. A pinch of sugar only helps if they are sharp.","Blend while hot, with the lid vented, to avoid splashes."],
+ noodle:["Simmering the chicken in the stock makes the stock richer as the soup cooks.","Noodles keep absorbing broth, so for leftovers store them separately."],
+ lentil:["Red lentils are split and have no skin, which is why they cook so fast and fall apart into a creamy soup.","Lemon juice at the end brightens a soup that can taste flat."],
+ mine:["Minestrone means 'big soup' in Italian, and it was traditionally made from whatever vegetables were in season.","Adding a parmesan rind while it simmers gives a deep, savoury background flavour."],
+ chili:["Frying the spices in oil for a minute before adding liquid unlocks their flavour.","Chilli powder blends vary a lot in heat. Start with the amount given, then add more at the end."]}
 });
 })();
