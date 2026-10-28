@@ -6,7 +6,7 @@
 const {rg,G,ML,P1,eggs,hm,people}=window.CRAFTLIB;
 Object.assign(window.CRAFTLIB.TOOLS,{
 cure:{title:"What are we curing?",sub:"Whole cuts and sausages, salt only the traditional way or with curing salt. Weigh everything.",
- ctl:[{k:"t",label:"Cure",icon:"fridge",def:"pancetta",tg:[["pancetta","Pancetta (belly)"],["guanciale","Guanciale (jowl)"],["lonza","Lonza (pork loin)"],["coppa","Coppa (pork neck)"],["bresaola","Bresaola (beef)"],["duck","Duck breast"],["gravlax","Gravlax (salmon)"],["kulen","Kulen (paprika sausage)"],["kobasica","Kobasica (dry sausage)"],["italian","Italian fresh sausage"],["brat","Bratwurst"],["cevapi","Ćevapi"],["jerky","Beef jerky"],["salami","Salami (dry, Italian-style)"],["snack","Snack sticks (smoked)"],["bacon","Bacon (home-cured belly)"]]},
+ ctl:[{k:"t",label:"Cure",icon:"fridge",def:"pancetta",tg:[["pancetta","Pancetta (belly)"],["guanciale","Guanciale (jowl)"],["lonza","Lonza (pork loin)"],["coppa","Coppa (pork neck)"],["bresaola","Bresaola (beef)"],["duck","Duck breast"],["gravlax","Gravlax (salmon)"],["kulen","Kulen (paprika sausage)"],["kobasica","Kobasica (dry sausage)"],["italian","Italian fresh sausage"],["brat","Bratwurst"],["cevapi","Ćevapi"],["jerky","Beef jerky"],["salami","Salami (dry, Italian-style)"],["snack","Snack sticks (smoked)"],["bier","Bierwurst (smoked, cooked)"],["bacon","Bacon (home-cured belly)"]]},
   {k:"m",label:"Salt",icon:"ruler",def:"plain",tg:[["plain","Salt only (traditional)"],["us","Curing salt, US #2"],["eu","Curing salt, EU (0.5% nitrite)"]],only:["pancetta","guanciale","lonza","coppa","bresaola","duck","kulen","kobasica","salami"]},
   {k:"w",label:"Meat weight",icon:"ruler",def:1000,step:[500,3000,250,"g"]}],
  calc(s){
@@ -18,6 +18,12 @@ cure:{title:"What are we curing?",sub:"Whole cuts and sausages, salt only the tr
    return{title:"Salami, "+G(w),meta:[["clock","Dry 4–8 weeks"],["fridge","Ready at "+G(w*.65)],["check","Loses about 35%"]],
     note:[m==="plain"?"Salt only is the traditional way: weigh exactly 2.8% of the meat, never by eye.":m==="us"?"Curing salt is poisonous in quantity. Weigh it to 0.1 g, label the tub and keep it away from children and the table salt. This amount is for US Cure #2 (6.25% nitrite).":"European nitrite curing salt replaces all the ordinary salt. Keep it labelled and away from children and the table salt.","Salami dries slowly, so it rewards patience and a cool, airy place. Keep everything cold while you work and use clean tools."],ing,
     steps:["Chill the meat, fat and grinder until the meat is almost frozen at the edges.","Grind the lean meat through a 6 mm plate, and dice the fat by hand into 4–5 mm cubes.","Mix the meat with the salt, spices, wine and culture. Add the fat last and mix just until it is evenly spread and sticky.","Fry a small patty to check the seasoning.","Stuff tightly into the casings, prick any air pockets with a needle and tie. Weigh each one and write it down.","If you used a culture, hang 24–48 hours at 20–24 °C and 85% humidity. Without one, go straight to the next step.","Hang at 12–15 °C and 75–80% humidity, with air moving gently. A little white mould is welcome.","Weigh weekly. It is ready at "+G(w*.65)+", after 4–8 weeks, when it feels firm all through."]}}
+  if(s.t==="bier")return{title:"Bierwurst, "+G(w),meta:[["clock","Rest overnight, then about 5 hours"],["fridge","Makes about "+G(w*1.05)],["check","Cook to 71 °C inside"]],
+   note:["Bierwurst is a smoked, cooked sausage that is sliced cold. For a sausage smoked at low temperatures the standard is Cure #1 (6.25% nitrite), at 2.5 g per kg of meat. Weigh it to 0.1 g, label it and keep it away from children and the table salt.","The name comes from the beer it is traditionally drunk with. There is no beer in the classic recipe, but a splash in place of the ice water is a fun touch."],
+   ing:[["Pork shoulder, about 20% fat, cubed",G(w*.6)],["Lean beef, cubed",G(w*.4)],["Fine salt, not iodised",P(1.8)],["Curing salt #1 (weigh to 0.1 g)",(Math.round(w*.0025*10)/10)+" g"],["Dextrose or sugar",P(.5)],["White pepper",P(.3)],["Garlic, crushed",P(.4)],["Mustard seed, crushed",P(.4)],["Ground coriander",P(.2)],["Ice-cold water (or beer)",G(w*.08)],["Large casings, 45–55 mm, soaked","about "+Math.max(1,Math.ceil(w/1500))+" m"]],
+   steps:["Chill the meat and grinder until the meat is almost frozen at the edges.","Grind the pork through a 6 mm plate, and the beef through a 4.5 mm plate.","Mix the meat with the salt, curing salt, spices and ice water and knead 3–5 minutes until sticky and it holds together. Fry a small patty and taste.","Cover and rest in the fridge overnight so the flavours settle.","Stuff into the soaked casings, twist or tie into 25 cm lengths and prick any air pockets.","Hang or lay on racks at room temperature for 1 hour so the casings dry.","In a smoker or oven: 55 °C for 1 hour, 65 °C for 1 hour with smoke, then 75–80 °C until the middle reaches 71 °C.","Dunk in ice water for a few minutes to stop the cooking, then leave at room temperature for 30 minutes so they darken.","Chill for a day. Slice thin and serve cold on rye bread with mustard and pickles."],
+   learn:["Cold meat and a good mix are what make the texture firm and sliceable instead of crumbly.","Cooking to 71 °C inside is what makes it safe, so go by the thermometer and not the clock."],
+   more:[["Bierwurst by 2 Guys & A Cooler","https://twoguysandacooler.com/bierwurst-german-beer-sausage/"]]};
   if(s.t==="snack")return{title:"Snack sticks, "+G(w),meta:[["clock","About 6 hours"],["fridge","Makes about "+G(w*.8)],["check","Cook to 71 °C inside"]],
    note:["Snack sticks are smoked at a low temperature and then cooked. For that kind of sausage the standard is Cure #1 (6.25% nitrite), at 2.5 g per kg of meat. Weigh it to 0.1 g, label it and keep it away from children and the table salt.","If you prefer salt only, cook them to 71 °C, keep them in the fridge and eat them within 3–4 days."],
    ing:[["Beef and pork, about 80% lean and 20% fat, ground fine",G(w)],["Fine salt, not iodised",P(1.8)],["Curing salt #1 (weigh to 0.1 g)",(Math.round(w*.0025*10)/10)+" g"],["Dextrose or sugar",P(.5)],["Black pepper",P(.4)],["Garlic powder",P(.4)],["Mustard seed",P(.4)],["Smoked paprika",P(.6)],["Ice-cold water",G(w*.1)],["Sheep casings, 19–21 mm, soaked","about "+G(w*.03)]],
@@ -137,5 +143,81 @@ cure:{pancetta:["Salt draws water out of the meat so bad bacteria cannot grow, w
  snack:["Snack sticks are thin, so they cook through and dry fast. The ice-cold water keeps the fat from smearing.","The wrinkled casings after the ice bath are normal. They plump up as they sit at room temperature."],
  bacon:["Bacon is a dry cure. Salt and sugar draw out water, and the belly firms up in the fridge.","A thicker belly needs longer in the cure, so go by thickness and not by the weight.","Slice it cold, and cook it slowly so the fat renders before it browns."],
  jerky:["Drying takes out the water so bacteria cannot grow. Thinner, leaner strips dry faster and keep better.","Jerky is not meant to be sticky or wet inside. If it is still soft in the middle, dry it for longer.","Eat it within a couple of weeks at room temperature, and refrigerate or freeze the rest."]}
+});
+/* ---- Fresh sausages for the grill, oven or smoker. Classic regional styles written from standard formulas (amounts are % of the meat weight);
+   the "More" links point to the 2 Guys & A Cooler posts that inspired some of the styles. ---- */
+const SAUS={
+ italian:{n:"Italian sausage",meat:"Pork shoulder, with its fat (about 75% lean, 25% fat), cubed",cs:"hog",salt:1.8,t:71,
+  sp:[["Fennel seeds, toasted and crushed",.9],["Black pepper, cracked",.4],["Garlic, minced",.7],["Sweet paprika",.6],["Fresh parsley, chopped",1]],liq:["Cold red wine",4],
+  note:"Fennel is what makes it taste Italian. For a hot version, add 0.3% chilli flakes.",
+  learn:["Toasting the fennel seeds first wakes up their sweetness.","Fat is flavour and juiciness: below about 20% fat the links turn dry."],
+  more:[["Italian truffle sausage by 2 Guys & A Cooler","https://twoguysandacooler.com/italian-fresh-truffle-sausage/"]]},
+ chorizo:{n:"Basque-style fresh chorizo",meat:"Pork shoulder, with its fat (about 80% lean, 20% fat), cubed",cs:"hog",salt:1.8,t:71,
+  sp:[["Sweet smoked paprika (pimentón dulce)",2],["Hot smoked paprika (pimentón picante)",.8],["Garlic, minced",1.2],["Dried oregano",.3],["Black pepper",.3]],liq:["Cold red wine",3],
+  note:"This is the fresh kind, which you cook before eating. The dry-cured Spanish chorizo needs a different process.",
+  learn:["Smoked paprika gives chorizo its red colour and smoky flavour. The colour deepens overnight in the fridge.","Smash a cooked link into a pan of beans or eggs and the paprika-red fat flavours everything."],
+  more:[["Basque chorizo by 2 Guys & A Cooler","https://twoguysandacooler.com/basque-chorizo/"]]},
+ merguez:{n:"Merguez",meat:"Lamb shoulder, with its fat (about 80% lean), cubed",cs:"sheep",salt:1.8,t:71,
+  sp:[["Harissa paste",4],["Garlic, minced",1],["Ground cumin",.6],["Ground coriander",.5],["Fennel seeds, crushed",.3],["Sweet paprika",1.2]],liq:["Cold water",3],
+  note:"Harissa gives the colour and the heat, so choose a mild or hot paste to taste.",
+  learn:["Merguez is a North African sausage, traditionally lamb, usually grilled and eaten in a baguette or with couscous.","Cold water helps the spices spread through the meat and keeps the sausage juicy."]},
+ breakfast:{n:"Breakfast sausage",meat:"Pork shoulder, with its fat (about 75% lean, 25% fat), cubed",cs:"sheep",salt:1.6,t:71,
+  sp:[["Rubbed dried sage",.6],["Black pepper",.4],["Dried thyme",.2],["Ground nutmeg",.1],["Brown sugar",1]],liq:["Cold water",5],
+  note:"Patties are the classic way, but thin sheep casings make tidy links.",
+  learn:["Sage is the signature flavour. Rubbed or dried sage is stronger than fresh, so use less.","A little sugar helps it brown and balances the salt."]},
+ potato:{n:"Norwegian-style potato sausage",meat:"Pork and beef mince, with fat (about 20% fat)",cs:"hog",salt:1.6,t:74,poach:true,
+  x:[["Potatoes, boiled until just tender, cooled and coarsely mashed",67],["Onion, finely chopped",18],["Pearl barley, cooked and cooled",22]],
+  sp:[["Ground allspice",.3],["Black pepper",.3],["Ground nutmeg",.15],["Ground ginger",.1]],liq:["Whole milk, cold",15],
+  mix:"Mix the meat, salt, spices and milk by hand until sticky. Fold in the potato, onion and barley gently until just combined. The mixture will be soft.",
+  note:"Poach before browning so the potato cooks all the way through.",
+  learn:["Potatoes and barley stretch the meat, which is how this thrifty sausage began.","Mash the potatoes only coarsely. Too fine and the sausage turns gluey."],
+  more:[["Norwegian potato sausage by 2 Guys & A Cooler","https://twoguysandacooler.com/norwegian-potato-sausage/"]]},
+ danish:{n:"Danish-style frying sausage",meat:"Pork shoulder and belly (about 70% lean, 30% fat), cubed",cs:"hog",salt:1.8,t:71,poach:true,fine:true,
+  sp:[["White pepper",.4],["Ground nutmeg",.2],["Ground coriander",.2],["Ground ginger",.1],["Dried marjoram",.2]],liq:["Ice-cold water or milk",12],
+  note:"A pale, mild frying sausage. Poaching first keeps it juicy, then you brown it.",
+  learn:["A fine grind and plenty of cold liquid give a tender, slightly bouncy bite, a little like a delicate bratwurst.","Never let the poaching water boil: it splits the casings."],
+  more:[["Ringrider pølse by 2 Guys & A Cooler","https://twoguysandacooler.com/ringrider-polse-grillmedister/"]]},
+ chicken:{n:"Chicken and apple sausage",meat:"Chicken thighs, skin on, boneless, cubed",cs:"sheep",salt:1.6,t:74,
+  x:[["Apple, peeled and finely diced",15],["Shallot, finely chopped",6]],
+  sp:[["Fresh sage, chopped",1],["Fresh thyme leaves",.3],["White pepper",.3],["Garlic, minced",.5]],liq:["Cold apple cider or water",4],
+  note:"Chicken is lean, so keep the skin on: it supplies the fat. Cook it to 74 °C.",
+  learn:["Skinless thighs make a drier sausage. The skin is what keeps it juicy.","Apple adds moisture and a little sweetness without making it taste like dessert."]}
+};
+const VARI={none:[],cheese:[["Mature cheddar, in 8 mm cubes, frozen",15],["Jalapeño, deseeded and finely chopped",6]],hot:[["Chilli flakes",.5],["Cayenne pepper",.2]],herb:[["Fresh parsley and chives, chopped",2],["Fresh thyme leaves",.3]],maple:[["Maple syrup",3],["Cooked streaky bacon, finely crumbled",8]],beer:[["Mustard, Dijon or grainy",1.5]]};
+const VLAB={cheese:"cheddar and jalapeño",hot:"extra heat",herb:"garden herbs",maple:"maple and bacon",beer:"beer and mustard"};
+const VNOTE={cheese:"Freeze the cheese cubes first so they stay in pieces instead of melting into the meat. A little leaking out while it cooks is the good part.",hot:"Fry a spoonful and taste, then add more chilli if you like.",herb:"Fresh herbs make the links bright and green. Eat within 2 days.",maple:"Add the bacon last so it stays in little pieces.",beer:"Use a lager or amber beer. Very hoppy beers turn bitter when cooked."};
+const qty=(w,pct)=>{const g=w*pct/100;return g<10?P1(g)+" g":G(g)};
+Object.assign(window.CRAFTLIB.TOOLS,{
+sausage:{title:"What are we stuffing?",sub:"Fresh sausages for the grill, oven or smoker, with variations to play with.",
+ names:["Italian sausage","Basque-style chorizo","Merguez","Breakfast sausage","Norwegian-style potato sausage","Danish-style frying sausage","Chicken and apple sausage"],
+ ctl:[{k:"t",label:"Sausage",icon:"fridge",def:"italian",tg:[["italian","Italian (fennel)"],["chorizo","Basque-style chorizo"],["merguez","Merguez (lamb)"],["breakfast","Breakfast sausage"],["potato","Norwegian-style potato sausage"],["danish","Danish-style frying sausage"],["chicken","Chicken and apple"]]},
+  {k:"f",label:"Shape",icon:"ruler",def:"links",tg:[["links","Links in casings"],["patties","Patties (no casing)"]]},
+  {k:"c",label:"Cook it",icon:"flame",def:"grill",tg:[["grill","Grilled"],["bake","Baked"],["smoke","Smoked"],["pan","Pan-fried"]]},
+  {k:"v",label:"Variation",icon:"spice",def:"none",tg:[["none","As written"],["cheese","Cheddar and jalapeño"],["hot","Extra heat"],["herb","Garden herbs"],["maple","Maple and bacon"],["beer","Beer and mustard"]]},
+  {k:"w",label:"Meat weight",icon:"ruler",def:1000,step:[500,3000,250,"g"]}],
+ calc(s){
+  const w=s.w,B=SAUS[s.t||"italian"],v=s.v||"none",pat=s.f==="patties",cook=s.c||"grill",VX=VARI[v]||[],tt=B.t+" °C";
+  const liq=v==="beer"?["Cold beer, instead of the "+B.liq[0].replace(/^(Cold|Ice-cold) /,"").toLowerCase(),6]:B.liq,xs=B.x||[];
+  const mass=w*(1+(xs.reduce((a,x)=>a+x[1],0)+liq[1]+VX.reduce((a,x)=>a+x[1],0))/100),salt=mass*B.salt/100;
+  const each=pat?(s.t==="breakfast"?60:90):(B.cs==="sheep"?60:110),count=Math.max(1,Math.round(mass/each));
+  const ing=[[B.meat,G(w)],...xs.map(x=>[x[0],G(w*x[1]/100)]),["Fine salt, not iodised",P1(salt)+" g"],...B.sp.map(x=>[x[0],qty(w,x[1])]),[liq[0],G(w*liq[1]/100)],...VX.map(x=>[x[0],qty(w,x[1])])];
+  if(!pat)ing.push([B.cs==="sheep"?"Sheep casings, 22–24 mm, soaked":"Hog casings, 32–35 mm, soaked","about "+Math.max(2,Math.ceil(mass/(B.cs==="sheep"?450:800)))+" m"]);
+  const COOK={
+   grill:pat?["8–10 min","Medium-high heat","Oil the grate. Grill the patties 4–5 minutes per side until "+tt+" inside."]:["20–25 min","Two-zone heat","Set the grill up with a hot side and a cooler side. Start the links over the cooler side with the lid closed for 10 minutes, then move them over direct medium heat for 8–10 minutes, turning, until browned and "+tt+" inside."],
+   bake:pat?["15–18 min","200 °C oven","Heat the oven to 200 °C. Bake the patties on a rack over a tray 15–18 minutes, flipping once, until "+tt+" inside."]:["25–30 min","200 °C oven","Heat the oven to 200 °C. Bake the links on a rack over a tray 20–25 minutes, turning once, until "+tt+" inside. For colour, finish 2 minutes under the grill."],
+   smoke:pat?["45–60 min","110–120 °C smoker","Set the smoker to 110–120 °C with a mild wood such as apple, cherry or oak. Smoke the patties 45–60 minutes until "+tt+" inside, then sear 1 minute per side."]:["60–90 min","110–120 °C smoker","Set the smoker to 110–120 °C with a mild wood such as apple, cherry or oak. Smoke the links 60–90 minutes until "+tt+" inside. Finish 2 minutes over hot coals or in a hot pan for a snappy skin."],
+   pan:pat?["10 min","Medium heat","Heat a pan over medium heat with a little oil. Cook the patties 4–5 minutes per side until "+tt+" inside."]:["15–20 min","Medium-low heat","Put the links in a cold pan with a splash of water, cover and cook over medium-low heat for 5 minutes. Uncover and brown 10–12 minutes, turning, until "+tt+" inside."]}[cook];
+  const steps=["Cube the meat and freeze it for 30 minutes until firm at the edges. Chill the grinder parts and the bowl too.","Grind through a "+(B.fine?"4.5":"6")+" mm plate into a chilled bowl.",
+   B.mix||"Add the salt, spices and cold liquid and mix by hand for 1–2 minutes until the meat turns sticky and clings to the bowl.",
+   ...(VX.length?["Fold in the "+VX.map(x=>x[0].split(",")[0].toLowerCase()).join(" and ")+" gently, just until spread."]:[]),
+   "Fry a small spoonful and taste. Adjust the salt and spices before you shape or stuff.",
+   pat?"Shape into "+count+" patties of about "+each+" g, 1.5 cm thick, with a shallow dimple in the middle so they stay flat. Chill 30 minutes.":"Soak the casings 30 minutes and rinse water through them. Stuff loosely, twist into links of about 12 cm ("+count+" in all) and prick any air pockets with a pin.",
+   ...(pat?[]:["Rest the links uncovered in the fridge for 2 hours or overnight so the casings dry and the flavours settle."]),
+   ...(B.poach&&!pat?["Poach gently in 80 °C water, never boiling, for 15 minutes. Lift out and pat dry."]:[]),
+   COOK[2],"Rest 3 minutes before serving."];
+  return{title:B.n+(v==="none"?"":" with "+VLAB[v])+", "+G(w)+" of meat",
+   meta:[["clock","Prep 45 min · cook "+COOK[0]],["flame",COOK[1]],["check","Cook to "+tt+" inside"],["fridge","Makes about "+count+(pat?" patties":" links")]],
+   note:[B.note,cook==="smoke"?"Fresh sausage is uncured, so smoke it hot (110 °C or more), not cold. Smoking at lower temperatures needs Cure #1 at 2.5 g per kg of meat: see Snack sticks in Charcuterie.":"",VNOTE[v]||"","Fresh sausage keeps 2 days in the fridge, or freeze it for up to 3 months. Weigh the salt: it is the one thing not to guess."].filter(Boolean),
+   ing,steps,learn:B.learn,more:B.more}}}
 });
 })();

@@ -1130,6 +1130,7 @@ ul.ing li .q{white-space:normal;text-align:right;flex:0 1 auto;max-width:52%;min
 <div id="tab-spice" class="tab" role="tabpanel" hidden></div>
 <div id="tab-frozen" class="tab" role="tabpanel" hidden></div>
 <div id="tab-cure" class="tab" role="tabpanel" hidden></div>
+<div id="tab-sausage" class="tab" role="tabpanel" hidden></div>
 <div id="tab-rub" class="tab" role="tabpanel" hidden></div>
 <div id="tab-bbq" class="tab" role="tabpanel" hidden></div>
 <div id="tab-cheese" class="tab" role="tabpanel" hidden></div>
@@ -1272,30 +1273,31 @@ let tab="cook",lastPlan=null;
    put <div id="tab-ID" class="tab" role="tabpanel" hidden></div> in the page, let ID.js fill it (like ferment.js) and set ready:1 here. ---------- */
 const UI={
  pizza:{icon:"pizza",grp:"Doughs and pasta",ready:1,chip:1,blurb:"Dough lab, sauces and toppings, scaled to your table"},
- bread:{icon:"bread",grp:"Doughs and pasta",ready:1,rec:1,chip:1,blurb:"Loaves, rolls and flatbreads",kw:"loaf sourdough focaccia rolls",plan:["Loaf calculator: flour, water, salt and yeast","Sourdough timing planner","Rolls, flatbreads and enriched doughs"]},
+ bread:{icon:"bread",grp:"Doughs and pasta",ready:1,rec:1,chip:1,blurb:"Loaves, rolls and flatbreads",kw:"loaf sourdough focaccia rolls naan bagel bagels",plan:["Loaf calculator: flour, water, salt and yeast","Sourdough timing planner","Rolls, flatbreads and enriched doughs"]},
  pasta:{icon:"pasta",grp:"Doughs and pasta",ready:1,rec:1,chip:1,blurb:"Fresh pasta, shapes and sauces",kw:"noodle spaghetti",plan:["Fresh pasta dough by eggs and flour","Shapes and cooking times","Sauces matched to the shape"]},
  dumpling:{icon:"dumpling",grp:"Doughs and pasta",ready:1,rec:1,blurb:"Wrappers, fillings and folds",kw:"gyoza wonton momo pierogi",plan:["Wrapper dough by hydration","Filling quantities per dumpling","Steam, boil or pan-fry times"]},
  burger:{icon:"burger",grp:"Mains",ready:1,rec:1,chip:1,blurb:"Patties, buns and sauces",plan:["Patty size and fat ratio for your table","Brioche and potato bun dough","Sauces and toppings that go together"]},
- soup:{icon:"soup",grp:"Mains",ready:1,rec:1,chip:1,blurb:"Stocks, broths and big pots",kw:"broth stock chowder",plan:["Stock from bones and scraps: water, salt and time","Soup thickness and seasoning guide","Big-batch scaling and freezing"]},
- grill:{icon:"grill",grp:"Mains",ready:1,rec:1,blurb:"Marinades, rubs and cooking times",kw:"bbq barbecue marinade",plan:["Marinade and brine amounts by weight","Cooking time by thickness and doneness","Rubs and glazes"]},
- grain:{icon:"rice",grp:"Mains",ready:1,rec:1,blurb:"Rice, risotto and grains with the right water",kw:"rice risotto quinoa couscous pilaf porridge",plan:["Water ratio and cook time by grain","Risotto and pilaf timing","Big batches that reheat well"]},
+ soup:{icon:"soup",grp:"Mains",ready:1,rec:1,chip:1,blurb:"Stocks, soups, minestrone and chilli",kw:"broth stock chowder tomato soup chicken noodle lentil minestrone chilli chili",plan:["Stock from bones and scraps: water, salt and time","Soup thickness and seasoning guide","Big-batch scaling and freezing"]},
+ grill:{icon:"grill",grp:"Mains",ready:1,rec:1,blurb:"Marinades, rubs and cooking times",kw:"bbq barbecue marinade chicken thigh tuna steak",plan:["Marinade and brine amounts by weight","Cooking time by thickness and doneness","Rubs and glazes"]},
+ grain:{icon:"rice",grp:"Mains",ready:1,rec:1,blurb:"Rice, risotto and grains with the right water",kw:"rice risotto quinoa couscous pilaf porridge fried rice sushi rice",plan:["Water ratio and cook time by grain","Risotto and pilaf timing","Big batches that reheat well"]},
  sandwich:{icon:"sandwich",grp:"Light and quick",ready:1,rec:1,blurb:"Sandwiches, wraps and toasties",kw:"wrap toastie panini burrito quesadilla",plan:["Fillings that balance: crunch, creamy, sharp","Wraps and toasties for a crowd","Lunchbox builds"]},
- salad:{icon:"salad",grp:"Light and quick",ready:1,rec:1,blurb:"Salads, slaws and bowls",kw:"slaw coleslaw bowl",plan:["Bowl builder: base, protein, crunch, dressing","Dressing ratios per serving","Salads that keep for tomorrow"]},
+ salad:{icon:"salad",grp:"Light and quick",ready:1,rec:1,blurb:"Salads, slaws and bowls",kw:"slaw coleslaw bowl caesar caprese potato salad",plan:["Bowl builder: base, protein, crunch, dressing","Dressing ratios per serving","Salads that keep for tomorrow"]},
  eggs:{icon:"egg",grp:"Light and quick",ready:1,rec:1,blurb:"Omelettes, pancakes, crepes and waffles",kw:"omelette omelet pancake crepe waffle frittata scrambled shakshuka",plan:["Batter ratios: flour, milk and eggs","Omelette and frittata sizes by pan","Cooking times by doneness"]},
  noodle:{icon:"noodle",grp:"Mains",ready:1,rec:1,blurb:"Noodle bowls and stir-fries with a sauce from the pantry",kw:"ramen udon soba stir fry lo mein",plan:["Stir-fry sauce ratios from pantry staples","Noodle cook times by type","Fast bowls for one"]},
- sauce:{icon:"sauce",grp:"Pantry and preserving",ready:1,rec:1,blurb:"Dressings, dips and pan sauces",kw:"dressing dip gravy pesto",plan:["Dressing ratios that always balance","Pan sauces from what is in the pan","Dips and spreads"]},
+ sauce:{icon:"sauce",grp:"Pantry and preserving",ready:1,rec:1,blurb:"Dressings, dips, pan sauces, tomato sauce and béchamel",kw:"dressing dip gravy pesto tomato sauce bechamel mayonnaise mayo guacamole",plan:["Dressing ratios that always balance","Pan sauces from what is in the pan","Dips and spreads"]},
  ferm:{icon:"ferm",grp:"Pantry and preserving",ready:1,blurb:"Pickles, kraut and kimchi with exact salt and timing",kw:"ferment pickle kimchi sauerkraut"},
  dairy:{icon:"dairy",grp:"Pantry and preserving",ready:1,rec:1,blurb:"Yogurt, kefir, cottage and cream cheese, kajmak and butter",kw:"yogurt yoghurt paneer labneh kefir ricotta cottage cream cheese kajmak butter",plan:["Yogurt: milk, starter, temperature and hours","Strained yogurt and labneh by thickness","Fresh cheeses from milk and acid"]},
  jam:{icon:"jam",grp:"Pantry and preserving",ready:1,rec:1,blurb:"Jams, compotes and quick fridge preserves",kw:"jam compote marmalade preserve",plan:["Fruit-to-sugar ratios and set point","Fridge jams versus properly canned jars","Compotes and fruit sauces"]},
  spice:{icon:"spice",grp:"Pantry and preserving",ready:1,rec:1,blurb:"Spice blends, rubs and pastes you make once and reuse",kw:"masala rub seasoning curry paste",plan:["Blends by the tablespoon, scaled to any batch","Curry pastes and marinades","How long each blend keeps"]},
  frozen:{icon:"icecream",grp:"Sweet and sips",ready:1,rec:1,blurb:"Ice cream, sorbet and ice lollies",kw:"icecream sorbet granita popsicle lolly",plan:["Sorbet from fruit: sugar balance for a soft scoop","Ice cream bases with and without a machine","Granita and lollies"]},
- cure:{icon:"fridge",grp:"Meat and smoke",ready:1,rec:1,blurb:"Pancetta, salami, bacon, sausages, ćevapi, snack sticks and jerky",kw:"charcuterie salami ham bacon cured dry cure nitrite sausage bratwurst cevapi cevapcici jerky snack sticks bacon",plan:[]},
+ cure:{icon:"fridge",grp:"Meat and smoke",ready:1,rec:1,blurb:"Pancetta, salami, bacon, bierwurst, ćevapi, snack sticks and jerky",kw:"bierwurst charcuterie salami ham bacon cured dry cure nitrite sausage bratwurst cevapi cevapcici jerky snack sticks bacon",plan:[]},
+ sausage:{icon:"grill",grp:"Meat and smoke",ready:1,rec:1,blurb:"Fresh sausages for the grill, oven or smoker, with variations",kw:"sausage links patties bratwurst chorizo merguez breakfast potato sausage banger snag grilled smoked baked",plan:[]},
  rub:{icon:"spice",grp:"Meat and smoke",ready:1,rec:1,blurb:"Dry rubs, marinades and brines for any meat",kw:"marinade brine seasoning bbq",plan:[]},
  bbq:{icon:"flame",grp:"Meat and smoke",ready:1,rec:1,blurb:"Low and slow: ribs, brisket, pulled pork, short ribs and turkey",kw:"barbecue smoker smoking ribs brisket",plan:[]},
  cheese:{icon:"dairy",grp:"Pantry and preserving",ready:1,rec:1,blurb:"Mozzarella, halloumi, feta, sir, queso fresco and gouda-style",kw:"mozzarella halloumi feta ricotta rennet sir farmer queso fresco gouda pressed",plan:[]},
  starter:{icon:"jar",grp:"Pantry and preserving",ready:1,rec:1,blurb:"Sourdough, kefir, kombucha, kvass, tepache, black garlic and shio koji",kw:"sourdough ginger bug kefir kombucha scoby kvass tepache black garlic koji shio",plan:[]},
- bake:{icon:"cupcake",grp:"Sweet and sips",ready:1,rec:1,blurb:"Cakes, cookies and tins sized right",kw:"cake cookie cookies",plan:["Scale a cake to any tin size","Cookie dough ratios","Baking times by tin and oven"]},
- drinks:{icon:"drinks",grp:"Sweet and sips",ready:1,rec:1,blurb:"Smoothies, cold brew and lemonade",kw:"smoothie coffee lemonade",plan:["Cold brew and tea ratios","Smoothies from your fridge","Syrups and lemonade by the jug"]}
+ bake:{icon:"cupcake",grp:"Sweet and sips",ready:1,rec:1,blurb:"Cakes, brownies, muffins, scones and cookies",kw:"cake cookie cookies brownie brownies banana bread muffin scone shortbread",plan:["Scale a cake to any tin size","Cookie dough ratios","Baking times by tin and oven"]},
+ drinks:{icon:"drinks",grp:"Sweet and sips",ready:1,rec:1,blurb:"Smoothies, cold brew, lemonade, hot chocolate and chai",kw:"smoothie coffee lemonade hot chocolate cocoa chai tea",plan:["Cold brew and tea ratios","Smoothies from your fridge","Syrups and lemonade by the jug"]}
 };
 Object.keys(UI).forEach(k=>{if(!K.CRAFTS.some(c=>c.id===k))console.error("Craft UI entry '"+k+"' has no tool in K.CRAFTS (kitchen.js)")});
 const TOOLS=K.CRAFTS.map(c=>{const u=UI[c.id]||{};return{id:c.id,name:c.name,icon:u.icon||"chef",grp:u.grp||"More",blurb:u.blurb||"",ready:u.ready||0,rec:u.rec||0,chip:u.chip||0,plan:u.plan||[],
