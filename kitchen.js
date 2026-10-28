@@ -67,7 +67,12 @@ K.CRAFTS=[
  {id:"spice",name:"Spice blends and pastes",words:null},
  {id:"bake",name:"Baking",words:null},
  {id:"frozen",name:"Frozen treats",words:/\b(ice cream|sorbet|granita|popsicles?|ice lollies|ice lolly)\b/i},
- {id:"drinks",name:"Drinks",words:null}
+ {id:"drinks",name:"Drinks",words:null},
+ {id:"cure",name:"Charcuterie and curing",words:null},
+ {id:"rub",name:"Rubs and marinades",words:null},
+ {id:"bbq",name:"BBQ and smoking",words:null},
+ {id:"cheese",name:"Cheese making",words:null},
+ {id:"starter",name:"Starters and cultures",words:null}
 ];
 K.craftOf=name=>{const n=String(name||""),c=K.CRAFTS.find(c=>c.words&&c.words.test(n)&&!(c.not&&c.not.test(n)));return c?c.id:""};
 
