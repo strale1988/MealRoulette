@@ -1587,7 +1587,7 @@ KITCHEN.add(
     "steps": [
       "Pat {chickpeas} dry, toss with oil and {paprika}, then roast at 220 °C for 15–20 minutes until crisp.",
       "Mix {yogurt}, {tahini} and {lemon} juice into a sauce. Dice {cucumber} and {tomato}.",
-      "Warm {pita-bread} and fill with chickpeas, vegetables and the yogurt-tahini sauce."
+      "Warm {pita-bread} and fill with {chickpeas}, vegetables and the yogurt-tahini sauce."
     ]
   },
   {
@@ -1653,7 +1653,7 @@ KITCHEN.add(
         220
       ],
       [
-        "green-peas",
+        "peas",
         150
       ],
       [
@@ -1684,7 +1684,7 @@ KITCHEN.add(
     "steps": [
       "Warm {olive-oil} in a saucepan and cook the chopped {garlic} for 30 seconds.",
       "Stir in {orzo} and gradually add hot {vegetable-stock}; simmer, stirring often, until nearly tender.",
-      "Add {green-peas} for the final 4 minutes. Stir in lemon zest and juice from {lemon}, grated {parmesan} and chopped {parsley}.",
+      "Add {peas} for the final 4 minutes. Stir in lemon zest and juice from {lemon}, grated {parmesan} and chopped {parsley}.",
       "Rest for 2 minutes and loosen with a splash of water if needed."
     ]
   },
@@ -1736,7 +1736,7 @@ KITCHEN.add(
       "Heat the oven to 220°C. Break {cauliflower} into florets and toss with {olive-oil}, {cumin}, salt and pepper.",
       "Roast the cauliflower for 20–25 minutes, adding drained {chickpeas} for the final 10 minutes.",
       "Cook {rice}. Mix {tahini}, lemon juice from {lemon}, grated {garlic} and enough water to make a pourable sauce.",
-      "Serve the rice topped with roasted cauliflower, chickpeas, {yogurt} and tahini sauce."
+      "Serve the rice topped with roasted cauliflower, {chickpeas}, {yogurt} and tahini sauce."
     ]
   },
   {
@@ -1747,7 +1747,7 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "pearl-barley",
+        "barley",
         200
       ],
       [
@@ -1780,7 +1780,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Rinse {pearl-barley}. Slice {mushrooms}, dice {onion} and mince {garlic}.",
+      "Rinse {barley}. Slice {mushrooms}, dice {onion} and mince {garlic}.",
       "Heat {olive-oil} in a deep skillet and brown the mushrooms in batches. Set aside.",
       "Cook the onion for 4 minutes, add garlic and {thyme}, then stir in the barley and {vegetable-stock}.",
       "Cover and simmer 25–30 minutes, stirring occasionally, until tender. Fold in the mushrooms and grated {parmesan}; season and serve."
@@ -1814,7 +1814,7 @@ KITCHEN.add(
         5
       ],
       [
-        "potato",
+        "potatoes",
         400
       ],
       [
@@ -1823,7 +1823,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat the oven to 200°C. Cut {potato} into small chunks and toss with half the {olive-oil}; roast for 15 minutes.",
+      "Heat the oven to 200°C. Cut {potatoes} into small chunks and toss with half the {olive-oil}; roast for 15 minutes.",
       "Mix {dijon-mustard}, {yogurt}, chopped {dill} and a squeeze of {lemon}.",
       "Place {salmon} on the tray, brush with the mustard mixture and bake for 10–12 minutes, until it flakes easily and is cooked through.",
       "Serve with the roasted potatoes and remaining lemon."
@@ -2148,7 +2148,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "pork-sausages",
+        "sausage",
         "8pc"
       ],
       [
@@ -2178,7 +2178,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat oven to 210 °C. Cut {potatoes} into wedges and slice {fennel} and {red-onion}.",
-      "Toss vegetables with {olive-oil}, rosemary, lemon zest and seasoning in a roasting tray. Nestle {pork-sausages} among them.",
+      "Toss vegetables with {olive-oil}, rosemary, lemon zest and seasoning in a roasting tray. Nestle {sausage} among them.",
       "Roast 35–40 minutes, turning vegetables once, until the sausages are browned and potatoes crisp. Squeeze over {lemon} juice to serve."
     ]
   },
@@ -2210,7 +2210,7 @@ KITCHEN.add(
         25
       ],
       [
-        "stock",
+        "vegetable-stock",
         500
       ],
       [
@@ -2224,7 +2224,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat oven to 200 °C. Put {cherry-tomatoes}, {feta}, {garlic}, {olive-oil} and {oregano} in a baking dish; roast 15 minutes.",
-      "Stir in {orzo} and hot {stock}. Bake 15–18 minutes, stirring once, until orzo is tender and most liquid absorbed.",
+      "Stir in {orzo} and hot {vegetable-stock}. Bake 15–18 minutes, stirring once, until orzo is tender and most liquid absorbed.",
       "Fold in {spinach} until wilted. Add a splash of hot water if needed, season and serve."
     ]
   },
@@ -2397,18 +2397,14 @@ KITCHEN.add(
   {
     "id": "everyday-apple-cinnamon-muffins",
     "name": "Everyday Apple Cinnamon Muffins",
-    "meal": "quick",
+    "meal": "morning,treat",
     "cuisine": "Everyday",
-    "time": 46,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "milk",
-        200
-      ],
-      [
-        "butter",
-        40
+        "flour",
+        250
       ],
       [
         "sugar",
@@ -2416,21 +2412,38 @@ KITCHEN.add(
       ],
       [
         "baking-powder",
-        5
+        8
+      ],
+      [
+        "cinnamon",
+        3
       ],
       [
         "salt",
         2
       ],
       [
-        "flour",
-        250
+        "milk",
+        200
+      ],
+      [
+        "butter",
+        60
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "apple",
+        "2pc"
       ]
     ],
     "steps": [
-      "Add the {milk} and {flour}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 190 °C and line a muffin tin. Melt {butter} and let it cool a little. Peel, core and dice {apple}.",
+      "Whisk {flour}, {sugar}, {baking-powder}, {cinnamon} and {salt} together in a large bowl.",
+      "Beat {eggs} with {milk} and the melted butter, pour into the dry mix and stir only until just combined. Fold in the apple.",
+      "Spoon into the tin and bake 20–22 minutes until risen, golden and a skewer comes out clean. Cool for 10 minutes before eating."
     ]
   },
   {

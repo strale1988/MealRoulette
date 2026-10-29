@@ -2083,11 +2083,11 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "tortillas",
-        6
+        "corn-tortillas",
+        "6pc"
       ],
       [
-        "corn",
+        "sweetcorn",
         250
       ],
       [
@@ -2120,9 +2120,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Char {corn} and sliced {red-pepper} in a hot skillet with {olive-oil}, turning until browned.",
+      "Char {sweetcorn} and sliced {red-pepper} in a hot skillet with {olive-oil}, turning until browned.",
       "Warm drained {black-beans} with {cumin} and a splash of water.",
-      "Fill warm {tortillas} with beans, corn and pepper.",
+      "Fill warm {corn-tortillas} with beans, corn and pepper.",
       "Mix {yogurt} with lime juice from {lime}; drizzle over tacos and finish with chopped {coriander}."
     ],
     "cuisine": "Mexican"
@@ -2151,7 +2151,7 @@ KITCHEN.add(
         8
       ],
       [
-        "corn",
+        "sweetcorn",
         120
       ],
       [
@@ -2163,8 +2163,8 @@ KITCHEN.add(
         "2pc"
       ],
       [
-        "tortillas",
-        3
+        "corn-tortillas",
+        "3pc"
       ],
       [
         "cumin",
@@ -2177,8 +2177,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Dice {onion} and cook in a little oil for 5 minutes. Add {garlic} and {cumin}.",
-      "Add {canned-tomatoes} and {vegetable-stock}; simmer for 10 minutes. Add {corn} and drained {black-beans} and cook another 5 minutes.",
-      "Cut {tortillas} into thin strips and toast in a dry pan until crisp.",
+      "Add {canned-tomatoes} and {vegetable-stock}; simmer for 10 minutes. Add {sweetcorn} and drained {black-beans} and cook another 5 minutes.",
+      "Cut {corn-tortillas} into thin strips and toast in a dry pan until crisp.",
       "Season soup with juice from {lime}. Serve with tortilla strips and chopped {coriander}."
     ],
     "cuisine": "Mexican"
@@ -2199,8 +2199,8 @@ KITCHEN.add(
         440
       ],
       [
-        "tortillas",
-        6
+        "corn-tortillas",
+        "6pc"
       ],
       [
         "canned-tomatoes",
@@ -2230,7 +2230,7 @@ KITCHEN.add(
     "steps": [
       "Heat the oven to 200°C. Cube {sweet-potato} and roast with {olive-oil}, {cumin} and {paprika} for 20 minutes.",
       "Mix roasted sweet potato with drained {black-beans} and half the grated {cheddar}.",
-      "Spoon filling into {tortillas}, roll and place seam-side down in a baking dish. Cover with {canned-tomatoes} mixed with diced {onion}.",
+      "Spoon filling into {corn-tortillas}, roll and place seam-side down in a baking dish. Cover with {canned-tomatoes} mixed with diced {onion}.",
       "Scatter remaining cheese on top and bake for 20 minutes until bubbling."
     ],
     "cuisine": "Mexican"
@@ -2244,7 +2244,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "poblano-peppers",
+        "poblano-pepper",
         4
       ],
       [
@@ -2281,7 +2281,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Char the {poblano-peppers} under a hot grill, turning until blistered. Cover 10 minutes, peel carefully and make a slit to remove seeds.",
+      "Char the {poblano-pepper} under a hot grill, turning until blistered. Cover 10 minutes, peel carefully and make a slit to remove seeds.",
       "Fill peppers with {monterey-jack} and secure the openings with toothpicks if needed.",
       "Blend {canned-tomatoes}, {onion} and {garlic}; simmer in {olive-oil} for 10 minutes and season with {salt}.",
       "Separate the {eggs}; whip whites to soft peaks and fold in yolks and {flour}. Coat peppers, pan-fry until golden and serve over tomato sauce."
@@ -2300,7 +2300,7 @@ KITCHEN.add(
         500
       ],
       [
-        "stock",
+        "chicken-stock",
         1200
       ],
       [
@@ -2316,11 +2316,11 @@ KITCHEN.add(
         2
       ],
       [
-        "tomatoes",
+        "tomato",
         250
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ],
       [
@@ -2328,8 +2328,8 @@ KITCHEN.add(
         3
       ],
       [
-        "tortillas",
-        4
+        "corn-tortillas",
+        "4pc"
       ],
       [
         "cilantro",
@@ -2337,10 +2337,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Poach the {chicken-breast} in {stock} until cooked; remove and shred, keeping the broth.",
-      "Cook diced {onion}, {garlic}, {tomatoes} and {bell-pepper} in a little oil until softened. Add {oregano} and pour in the broth.",
+      "Poach the {chicken-breast} in {chicken-stock} until cooked; remove and shred, keeping the broth.",
+      "Cook diced {onion}, {garlic}, {tomato} and {red-pepper} in a little oil until softened. Add {oregano} and pour in the broth.",
       "Simmer 15 minutes, then return shredded chicken and add juice of two {lime}. Adjust seasoning.",
-      "Cut {tortillas} into thin strips and bake or fry until crisp. Serve soup with tortilla strips, sliced remaining lime and {cilantro}."
+      "Cut {corn-tortillas} into thin strips and bake or fry until crisp. Serve soup with tortilla strips, sliced remaining lime and {cilantro}."
     ]
   },
   {
@@ -2356,7 +2356,7 @@ KITCHEN.add(
         300
       ],
       [
-        "stock",
+        "chicken-stock",
         900
       ],
       [
@@ -2376,8 +2376,8 @@ KITCHEN.add(
         "2pc"
       ],
       [
-        "tortillas",
-        3
+        "corn-tortillas",
+        "3pc"
       ],
       [
         "oregano",
@@ -2393,10 +2393,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Simmer {chicken-thigh} in {stock} until cooked; lift out, shred and reserve broth.",
+      "Simmer {chicken-thigh} in {chicken-stock} until cooked; lift out, shred and reserve broth.",
       "Fry sliced {onion} and {garlic} in {oil}; add diced {tomato} and {oregano}, cooking until soft.",
       "Add broth and shredded chicken; simmer 10 minutes and season.",
-      "Cut {tortillas} into strips and crisp in a skillet. Serve soup with lime juice and tortilla strips."
+      "Cut {corn-tortillas} into strips and crisp in a skillet. Serve soup with lime juice and tortilla strips."
     ]
   },
   {
@@ -2463,7 +2463,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "corn",
+        "sweetcorn",
         400
       ],
       [
@@ -2479,7 +2479,7 @@ KITCHEN.add(
         "1pc"
       ],
       [
-        "chilli",
+        "fresh-chilli",
         2
       ],
       [
@@ -2492,8 +2492,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Char {corn} in a hot dry skillet, stirring until kernels blister.",
-      "Mix {mayonnaise}, {sour-cream}, lime zest and juice, and {chilli}.",
+      "Char {sweetcorn} in a hot dry skillet, stirring until kernels blister.",
+      "Mix {mayonnaise}, {sour-cream}, lime zest and juice, and {fresh-chilli}.",
       "Fold sauce through hot corn, top with crumbled {cotija} and chopped {cilantro}."
     ]
   },
@@ -2522,7 +2522,7 @@ KITCHEN.add(
         "3pc"
       ],
       [
-        "dried-chilli",
+        "chilli-flakes",
         2
       ],
       [
@@ -2542,7 +2542,7 @@ KITCHEN.add(
         3
       ],
       [
-        "stock",
+        "chicken-stock",
         300
       ],
       [
@@ -2555,9 +2555,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Toast {dried-chilli} briefly in a dry pan, then soak in hot water for 10 minutes.",
+      "Toast {chilli-flakes} briefly in a dry pan, then soak in hot water for 10 minutes.",
       "Brown {chicken-thigh} in {oil}; set aside. Cook {onion} and {garlic} until soft, then add {tomato}, {cumin}, {cocoa}, {peanut-butter}, {sesame-seeds} and drained chilli.",
-      "Blend sauce smooth with {stock}; return to pan with chicken.",
+      "Blend sauce smooth with {chicken-stock}; return to pan with chicken.",
       "Cover and simmer 25–30 minutes until chicken is cooked and sauce is thick. Season."
     ]
   },
@@ -2625,7 +2625,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ],
       [
@@ -2667,7 +2667,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Simmer {tomatillos}, half the {onion}, {garlic} and {green-chilli} until soft. Blend with {coriander} and salt to make salsa verde.",
-      "Poach {chicken-thighs} until cooked, shred and mix with a spoonful of salsa. Warm {corn-tortillas} until pliable, fill with chicken and roll.",
+      "Poach {chicken-thigh} until cooked, shred and mix with a spoonful of salsa. Warm {corn-tortillas} until pliable, fill with chicken and roll.",
       "Arrange in a baking dish, cover with remaining salsa and {cheese}; bake at 200 °C for 15 minutes. Finish with {sour-cream} and sliced onion."
     ]
   },
@@ -2708,8 +2708,8 @@ KITCHEN.add(
         1
       ],
       [
-        "tortillas",
-        4
+        "corn-tortillas",
+        "4pc"
       ],
       [
         "cilantro",
@@ -2723,7 +2723,7 @@ KITCHEN.add(
     "steps": [
       "Mix {lime-juice}, minced {garlic}, {cumin}, {oregano}, {olive-oil} and {salt}; toss with {beef-strips} and marinate for 15 minutes.",
       "Sear beef in a very hot pan until browned. Char thick slices of {red-onion} alongside.",
-      "Serve in warmed {tortillas} with chopped {cilantro} and extra lime."
+      "Serve in warmed {corn-tortillas} with chopped {cilantro} and extra lime."
     ]
   },
   {
@@ -2857,7 +2857,7 @@ KITCHEN.add(
         40
       ],
       [
-        "egg",
+        "eggs",
         1
       ],
       [
@@ -2873,7 +2873,7 @@ KITCHEN.add(
         1
       ],
       [
-        "potato",
+        "potatoes",
         1
       ],
       [
@@ -2898,8 +2898,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Mix {beef-mince}, {rice}, {egg}, chopped {mint}, {cumin}, minced {garlic} and half the {salt}; form small meatballs.",
-      "Blend or finely chop {tomato}; simmer in {chicken-stock} for 8 minutes. Add diced {carrot} and {potato}.",
+      "Mix {beef-mince}, {rice}, {eggs}, chopped {mint}, {cumin}, minced {garlic} and half the {salt}; form small meatballs.",
+      "Blend or finely chop {tomato}; simmer in {chicken-stock} for 8 minutes. Add diced {carrot} and {potatoes}.",
       "Add meatballs and simmer 15 minutes, then add diced {zucchini} and cook 8 minutes more. Season with remaining {salt}."
     ]
   },
@@ -2912,7 +2912,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "shrimp",
+        "prawns",
         300
       ],
       [
@@ -2945,7 +2945,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Butterfly {shrimp} lengthways and arrange in a shallow dish. Pour over {lime-juice} and refrigerate 10–15 minutes until opaque at the edges.",
+      "Butterfly {prawns} lengthways and arrange in a shallow dish. Pour over {lime-juice} and refrigerate 10–15 minutes until opaque at the edges.",
       "Blend or finely mince {green-chilli}, {cilantro} and {salt} into the lime juice; toss with the shrimp.",
       "Add thinly sliced {cucumber} and {red-onion}; serve immediately with {avocado}. Keep chilled and use very fresh shrimp suitable for raw-style citrus curing."
     ]
@@ -3081,7 +3081,7 @@ KITCHEN.add(
         2
       ],
       [
-        "corn",
+        "sweetcorn",
         180
       ],
       [
@@ -3119,7 +3119,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Cook diced {onion} and {red-pepper} in {olive-oil} until softened; add {garlic} and {cumin}.",
-      "Add diced {zucchini} and {corn}; cook over medium-high heat until just tender and lightly charred.",
+      "Add diced {zucchini} and {sweetcorn}; cook over medium-high heat until just tender and lightly charred.",
       "Season with {salt}, crumble {cotija} over the top and finish with chopped {cilantro}."
     ]
   },
@@ -3250,8 +3250,8 @@ KITCHEN.add(
         4
       ],
       [
-        "tortillas",
-        4
+        "corn-tortillas",
+        "4pc"
       ],
       [
         "cilantro",
@@ -3261,7 +3261,7 @@ KITCHEN.add(
     "steps": [
       "Blend {chipotle-adobo}, {cumin}, {oregano}, {garlic}, {lime-juice}, {salt} and a little {beef-stock}.",
       "Place {beef-chuck} in a covered pot with the marinade, remaining stock and {bay-leaf}. Cook at 160 °C for 2–2½ hours until very tender.",
-      "Shred into the juices and serve in warm {tortillas} with {cilantro}."
+      "Shred into the juices and serve in warm {corn-tortillas} with {cilantro}."
     ]
   },
   {
@@ -3344,14 +3344,14 @@ KITCHEN.add(
         1
       ],
       [
-        "tortillas",
-        4
+        "corn-tortillas",
+        "4pc"
       ]
     ],
     "steps": [
       "Cook crumbled {chorizo} in a small ovenproof skillet until browned; remove excess fat if needed.",
       "Add sliced {onion} and {roasted-peppers}; cook until soft. Scatter {monterey-jack} over the top.",
-      "Broil until the cheese is fully melted and bubbling. Serve immediately with warm {tortillas}."
+      "Broil until the cheese is fully melted and bubbling. Serve immediately with warm {corn-tortillas}."
     ]
   },
   {
@@ -3375,7 +3375,7 @@ KITCHEN.add(
         150
       ],
       [
-        "corn",
+        "sweetcorn",
         100
       ],
       [
@@ -3412,7 +3412,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Brown {pork-mince} with diced {onion}; add chopped {tomato}, {black-beans}, {corn}, {chilli-powder}, {cumin} and half the {salt}. Simmer until thick.",
+      "Brown {pork-mince} with diced {onion}; add chopped {tomato}, {black-beans}, {sweetcorn}, {chilli-powder}, {cumin} and half the {salt}. Simmer until thick.",
       "Mix {cornmeal}, {baking-powder}, remaining salt and {milk} into a thick batter; fold in half the grated {cheddar}.",
       "Spread pork filling in a baking dish, top with cornmeal batter and remaining cheese, then bake at 190 °C for 25–30 minutes until set and golden."
     ]
@@ -3485,7 +3485,7 @@ KITCHEN.add(
     "serves": 8,
     "ing": [
       [
-        "corn",
+        "sweetcorn",
         400
       ],
       [
@@ -3518,7 +3518,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat the oven to 180 °C and grease a cake tin. Blend {corn}, {eggs}, {condensed-milk}, melted {butter} and {vanilla} until mostly smooth.",
+      "Heat the oven to 180 °C and grease a cake tin. Blend {sweetcorn}, {eggs}, {condensed-milk}, melted {butter} and {vanilla} until mostly smooth.",
       "Fold in {flour}, {baking-powder} and {salt}; pour into the tin.",
       "Bake 35–40 minutes until golden and a skewer comes out nearly clean. Cool before slicing."
     ]
@@ -3591,7 +3591,7 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ],
       [
@@ -3619,7 +3619,7 @@ KITCHEN.add(
         20
       ],
       [
-        "stock",
+        "chicken-stock",
         1000
       ],
       [
@@ -3640,7 +3640,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Simmer {chicken-thighs} in {stock} with {onion}, {garlic} and {salt} until cooked; remove, shred and discard the onion.",
+      "Simmer {chicken-thigh} in {chicken-stock} with {onion}, {garlic} and {salt} until cooked; remove, shred and discard the onion.",
       "Add diced {carrot}, {zucchini}, {chickpeas} and {chipotle-adobo}; simmer until vegetables are tender, about 12 minutes.",
       "Return the shredded chicken and warm through. Serve with {lime-juice}, diced {avocado} and chopped {cilantro}."
     ]
@@ -4111,7 +4111,7 @@ KITCHEN.add(
         2
       ],
       [
-        "stock",
+        "chicken-stock",
         450
       ],
       [
@@ -4130,7 +4130,7 @@ KITCHEN.add(
     "steps": [
       "Heat {oil} in a heavy pan and let the aromatics or spices become fragrant without browning.",
       "Add {chicken-thigh} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
+      "Add {chicken-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
       "Toast nuts and seeds, blend with chilli, tomato, cocoa and spices, then simmer with browned chicken until the sauce becomes dark, complex and velvety.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -4199,7 +4199,7 @@ KITCHEN.add(
         450
       ],
       [
-        "corn",
+        "sweetcorn",
         300
       ],
       [
@@ -4223,7 +4223,7 @@ KITCHEN.add(
         2
       ],
       [
-        "stock",
+        "vegetable-stock",
         900
       ],
       [
@@ -4244,8 +4244,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Simmer the {pork-shoulder} with half the {onion}, two cloves of {garlic}, {salt} and {stock} for 45–50 minutes until tender; lift out and shred.",
-      "Blend or finely chop {canned-tomatoes} with the remaining garlic, {chilli-powder} and {cumin}; fry the sauce briefly, then add it back to the broth with {corn}. Simmer 15 minutes.",
+      "Simmer the {pork-shoulder} with half the {onion}, two cloves of {garlic}, {salt} and {vegetable-stock} for 45–50 minutes until tender; lift out and shred.",
+      "Blend or finely chop {canned-tomatoes} with the remaining garlic, {chilli-powder} and {cumin}; fry the sauce briefly, then add it back to the broth with {sweetcorn}. Simmer 15 minutes.",
       "Return the shredded pork to the pot and heat through. Serve with shredded {cabbage}, sliced {radish} and wedges of {lime}."
     ]
   },
@@ -4258,7 +4258,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "poblano-peppers",
+        "poblano-pepper",
         4
       ],
       [
@@ -4307,7 +4307,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Char the {poblano-peppers} under a hot grill, turning until blistered. Cover 10 minutes, then peel carefully and slit to remove seeds.",
+      "Char the {poblano-pepper} under a hot grill, turning until blistered. Cover 10 minutes, then peel carefully and slit to remove seeds.",
       "Cook diced {onion} in {oil}; add {beef-mince} and brown. Stir in diced {apple}, diced {pear}, {raisins}, {cinnamon} and {salt}; cook until the fruit softens and the filling is fairly dry. Fill the peppers.",
       "Blend {walnuts} with {cream} and a splash of water to make a thick sauce. Spoon over the filled peppers and scatter {pomegranate-seeds} on top. Serve warm or at room temperature."
     ]
@@ -4368,7 +4368,7 @@ KITCHEN.add(
     "steps": [
       "Simmer the {pork-shoulder} with half the {onion}, {salt} and water until tender; shred finely. Warm the {beans} and mash lightly.",
       "Cook the remaining diced onion and {garlic} in {oil}; add {canned-tomatoes}, {chilli-powder}, {cumin} and {vinegar}. Simmer 12 minutes, then blend smooth.",
-      "Split the {bread-rolls}, spread with beans and fill with shredded pork. Spoon the hot tomato-chilli sauce over the sandwich just before serving."
+      "Split the {bread-rolls}, spread with {beans} and fill with shredded pork. Spoon the hot tomato-chilli sauce over the sandwich just before serving."
     ]
   }
 ]

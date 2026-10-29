@@ -34,7 +34,7 @@ KITCHEN.add(
         3
       ],
       [
-        "stock",
+        "chicken-stock",
         450
       ],
       [
@@ -60,7 +60,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat {oil} in a soup pot and soften {garlic} and {ginger} without browning.",
-      "Add {stock} and {noodles}, simmering gently until the main ingredient is tender.",
+      "Add {chicken-stock} and {noodles}, simmering gently until the main ingredient is tender.",
       "Build a ginger-garlic broth, cook the chicken and vegetables until tender, then add noodles only for the final minutes so they do not over-soften.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -270,7 +270,7 @@ KITCHEN.add(
         2
       ],
       [
-        "stock",
+        "vegetable-stock",
         450
       ],
       [
@@ -288,7 +288,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat {oil} in a soup pot and soften {onion} and {garlic} without browning.",
-      "Add {stock} and {chickpeas}, simmering gently until the main ingredient is tender.",
+      "Add {vegetable-stock} and {chickpeas}, simmering gently until the main ingredient is tender.",
       "Soak the mixed legumes if dried, cook until tender, then temper cumin, ginger and garlic in oil and stir the aromatic mixture into the broth.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -592,7 +592,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ],
       [
@@ -618,7 +618,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thighs} and {rice}; stir well so the ingredients are evenly coated.",
+      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
       "Add the {soy-sauce} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
     ]
   },
@@ -647,7 +647,7 @@ KITCHEN.add(
         2
       ],
       [
-        "carrots",
+        "carrot",
         1
       ],
       [
@@ -675,7 +675,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ],
       [
@@ -701,7 +701,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thighs} and {rice}; stir to combine.",
+      "Add the {chicken-thigh} and {rice}; stir to combine.",
       "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
     ]
   },
@@ -726,7 +726,7 @@ KITCHEN.add(
         2
       ],
       [
-        "carrots",
+        "carrot",
         1
       ],
       [
@@ -738,7 +738,7 @@ KITCHEN.add(
         2
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ]
     ],
@@ -758,7 +758,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "carrots",
+        "carrot",
         1
       ],
       [
@@ -770,7 +770,7 @@ KITCHEN.add(
         2
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ],
       [
@@ -792,7 +792,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {carrots} and {rice}; stir to combine.",
+      "Add the {carrot} and {rice}; stir to combine.",
       "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
       "Season with {salt} to taste and serve."
     ]
@@ -806,7 +806,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ],
       [
@@ -832,7 +832,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thighs} and {rice}; stir to combine.",
+      "Add the {chicken-thigh} and {rice}; stir to combine.",
       "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
     ]
   },
@@ -857,7 +857,7 @@ KITCHEN.add(
         2
       ],
       [
-        "carrots",
+        "carrot",
         1
       ],
       [
@@ -869,7 +869,7 @@ KITCHEN.add(
         2
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ]
     ],
@@ -889,7 +889,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "carrots",
+        "carrot",
         1
       ],
       [
@@ -901,7 +901,7 @@ KITCHEN.add(
         2
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ],
       [
@@ -923,7 +923,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {carrots} and {rice}; stir to combine.",
+      "Add the {carrot} and {rice}; stir to combine.",
       "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
       "Season with {salt} to taste and serve."
     ]
@@ -937,7 +937,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ],
       [
@@ -963,7 +963,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thighs} and {rice}; stir to combine.",
+      "Add the {chicken-thigh} and {rice}; stir to combine.",
       "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
     ]
   },
@@ -988,7 +988,7 @@ KITCHEN.add(
         2
       ],
       [
-        "carrots",
+        "carrot",
         1
       ],
       [
@@ -1000,7 +1000,7 @@ KITCHEN.add(
         2
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ]
     ],

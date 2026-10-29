@@ -1166,7 +1166,7 @@ KITCHEN.add(
         400
       ],
       [
-        "green-peas",
+        "peas",
         180
       ],
       [
@@ -1192,7 +1192,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Dice {zucchini} and {onion}. Cook onion in {olive-oil} for 4 minutes.",
-      "Add courgette and {vegetable-stock}; simmer 10 minutes until soft. Add {green-peas} and cook for 3 minutes.",
+      "Add courgette and {vegetable-stock}; simmer 10 minutes until soft. Add {peas} and cook for 3 minutes.",
       "Blend with chopped {mint} until smooth, adding water if needed. Season well.",
       "Serve warm or chilled with a spoonful of {yogurt}."
     ]
@@ -1258,7 +1258,7 @@ KITCHEN.add(
         1
       ],
       [
-        "carrots",
+        "carrot",
         1
       ],
       [
@@ -1280,7 +1280,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Cook {soba-noodles} according to packet directions, rinse under cold water and drain well.",
-      "Boil or steam {edamame} until tender. Cut {cucumber} and {carrots} into thin matchsticks.",
+      "Boil or steam {edamame} until tender. Cut {cucumber} and {carrot} into thin matchsticks.",
       "Whisk {soy-sauce}, {rice-vinegar} and {sesame-oil} into a dressing.",
       "Toss noodles, edamame and vegetables with dressing; finish with {sesame-seeds}."
     ]

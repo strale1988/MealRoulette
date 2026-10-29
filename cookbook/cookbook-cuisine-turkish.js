@@ -1376,7 +1376,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "eggplant",
+        "aubergine",
         4
       ],
       [
@@ -1384,7 +1384,7 @@ KITCHEN.add(
         2
       ],
       [
-        "tomatoes",
+        "tomato",
         350
       ],
       [
@@ -1409,8 +1409,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat oven to 190 °C. Halve the {eggplant} lengthwise and score the flesh. Brush with some {olive-oil} and roast cut-side down for 25 minutes.",
-      "Cook sliced {onion} slowly in remaining oil until soft. Add minced {garlic}, chopped {tomatoes}, {sugar} and {salt}; simmer 10 minutes.",
+      "Heat oven to 190 °C. Halve the {aubergine} lengthwise and score the flesh. Brush with some {olive-oil} and roast cut-side down for 25 minutes.",
+      "Cook sliced {onion} slowly in remaining oil until soft. Add minced {garlic}, chopped {tomato}, {sugar} and {salt}; simmer 10 minutes.",
       "Turn eggplant cut-side up and press a hollow into each half. Spoon in the onion-tomato mixture.",
       "Cover loosely and bake 25–30 minutes until very tender. Cool to room temperature and finish with chopped {parsley}."
     ]
@@ -1424,7 +1424,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "flatbread-dough",
+        "flatbread",
         400
       ],
       [
@@ -1436,7 +1436,7 @@ KITCHEN.add(
         "1pc"
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         "1pc"
       ],
       [
@@ -1465,8 +1465,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Finely mince {tomato}, {bell-pepper}, {onion}, {garlic} and {parsley}; mix with {beef-mince}, {paprika}, {cumin} and {olive-oil}.",
-      "Divide {flatbread-dough} into four pieces and roll very thin.",
+      "Finely mince {tomato}, {red-pepper}, {onion}, {garlic} and {parsley}; mix with {beef-mince}, {paprika}, {cumin} and {olive-oil}.",
+      "Divide {flatbread} into four pieces and roll very thin.",
       "Spread a thin layer of meat mixture edge to edge. Bake on a preheated tray at 240 °C for 7–9 minutes until crisp and beef is cooked.",
       "Serve rolled with lemon and fresh herbs if available."
     ]
@@ -1500,7 +1500,7 @@ KITCHEN.add(
         3
       ],
       [
-        "stock",
+        "beef-stock",
         300
       ],
       [
@@ -1529,7 +1529,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Brown cubes of {lamb}; add diced {onion} and {garlic}, then chopped {tomato} and {stock}. Cover and simmer until lamb is tender, about 50–60 minutes.",
+      "Brown cubes of {lamb}; add diced {onion} and {garlic}, then chopped {tomato} and {beef-stock}. Cover and simmer until lamb is tender, about 50–60 minutes.",
       "Char {aubergine} under a grill or over a flame until soft; peel and mash the flesh.",
       "Make a thick sauce with {butter}, {flour} and {milk}; stir in aubergine and {cheddar}. Season with {salt} and {black-pepper}, and serve lamb stew over the purée."
     ]
@@ -1543,7 +1543,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "filo-pastry",
+        "phyllo-pastry",
         250
       ],
       [
@@ -1555,7 +1555,7 @@ KITCHEN.add(
         120
       ],
       [
-        "egg",
+        "eggs",
         1
       ],
       [
@@ -1577,7 +1577,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Wilt {spinach}, squeeze completely dry and chop. Mix with crumbled {feta}, {dill} and {black-pepper}.",
-      "Whisk {egg}, {yogurt} and {olive-oil}. Brush each sheet of {filo-pastry} with the mixture, add filling and roll or fold into parcels.",
+      "Whisk {eggs}, {yogurt} and {olive-oil}. Brush each sheet of {phyllo-pastry} with the mixture, add filling and roll or fold into parcels.",
       "Bake at 190 °C for 20–25 minutes until crisp and deep golden."
     ]
   },
@@ -1614,7 +1614,7 @@ KITCHEN.add(
         25
       ],
       [
-        "stock",
+        "beef-stock",
         650
       ],
       [
@@ -1636,7 +1636,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Mix {beef-mince} with {bulgur-fine}, half the grated {onion}, {cumin} and {salt}; roll into small meatballs.",
-      "Soften remaining {onion} in {oil}; stir in {tomato-paste}. Add {stock}, diced {potatoes} and {carrot}; simmer 10 minutes.",
+      "Soften remaining {onion} in {oil}; stir in {tomato-paste}. Add {beef-stock}, diced {potatoes} and {carrot}; simmer 10 minutes.",
       "Add meatballs and simmer gently for 15–18 minutes until cooked through. Finish with chopped {parsley}."
     ]
   },

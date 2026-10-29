@@ -14,7 +14,7 @@ KITCHEN.add(
         450
       ],
       [
-        "stock",
+        "vegetable-stock",
         700
       ],
       [
@@ -31,7 +31,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Finely chop {spinach} and simmer in {stock} until soft and silky.",
+      "Finely chop {spinach} and simmer in {vegetable-stock} until soft and silky.",
       "Fry sliced {garlic} briefly in {oil} until fragrant, taking care not to burn it.",
       "Stir garlic oil into the greens, season and finish with {lemon-juice}."
     ]
@@ -76,7 +76,7 @@ KITCHEN.add(
         400
       ],
       [
-        "tomatoes",
+        "tomato",
         300
       ],
       [
@@ -88,7 +88,7 @@ KITCHEN.add(
         2
       ],
       [
-        "stock",
+        "vegetable-stock",
         400
       ],
       [
@@ -97,8 +97,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Soften {onion} and {garlic}; add {tomatoes} and simmer to a thick base.",
-      "Add {okra} and {stock}; cook gently until tender without stirring too vigorously.",
+      "Soften {onion} and {garlic}; add {tomato} and simmer to a thick base.",
+      "Add {okra} and {vegetable-stock}; cook gently until tender without stirring too vigorously.",
       "Season and finish with {lemon-juice}."
     ]
   },
@@ -146,7 +146,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         500
       ],
       [
@@ -154,7 +154,7 @@ KITCHEN.add(
         1
       ],
       [
-        "tomatoes",
+        "tomato",
         300
       ],
       [
@@ -171,8 +171,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Add the {chicken-thighs} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomatoes} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
+      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
     ]
   },
   {
@@ -184,7 +184,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "tomatoes",
+        "tomato",
         300
       ],
       [
@@ -215,8 +215,8 @@ KITCHEN.add(
     "steps": [
       "Warm the {oil} in a heavy pan and soften the {peanut-butter} until fragrant.",
       "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {tomatoes} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomatoes} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
+      "Add the {tomato} and {rice}; stir well so the ingredients are evenly coated.",
+      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
       "Season with {salt} to taste and serve hot."
     ]
   },
@@ -249,7 +249,7 @@ KITCHEN.add(
         3
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         500
       ],
       [
@@ -257,7 +257,7 @@ KITCHEN.add(
         1
       ],
       [
-        "tomatoes",
+        "tomato",
         300
       ]
     ],
@@ -265,7 +265,7 @@ KITCHEN.add(
       "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
       "Stir in the {ginger} and cook briefly to release its aroma.",
       "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomatoes} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
+      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
       "Season with {salt} to taste and serve hot."
     ]
   },
@@ -282,7 +282,7 @@ KITCHEN.add(
         1
       ],
       [
-        "tomatoes",
+        "tomato",
         300
       ],
       [
@@ -305,7 +305,7 @@ KITCHEN.add(
     "steps": [
       "Stir in the {ginger} and cook briefly to release its aroma.",
       "Add the {onion} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomatoes} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
     ]
   },
   {
@@ -341,7 +341,7 @@ KITCHEN.add(
         3
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         500
       ]
     ],
@@ -362,7 +362,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         500
       ],
       [
@@ -370,7 +370,7 @@ KITCHEN.add(
         1
       ],
       [
-        "tomatoes",
+        "tomato",
         300
       ],
       [
@@ -397,8 +397,8 @@ KITCHEN.add(
     "steps": [
       "Warm the {oil} in a heavy pan and soften the {onion} until fragrant.",
       "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thighs} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomatoes} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
+      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
     ]
   },
   {
@@ -410,7 +410,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "tomatoes",
+        "tomato",
         300
       ],
       [
@@ -437,8 +437,8 @@ KITCHEN.add(
     "steps": [
       "Warm the {oil} in a heavy pan and soften the {peanut-butter} until fragrant.",
       "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {tomatoes} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomatoes} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Add the {tomato} and {rice}; stir well so the ingredients are evenly coated.",
+      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
     ]
   },
   {
@@ -470,7 +470,7 @@ KITCHEN.add(
         3
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         500
       ],
       [
@@ -495,7 +495,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         500
       ],
       [
@@ -503,7 +503,7 @@ KITCHEN.add(
         1
       ],
       [
-        "tomatoes",
+        "tomato",
         300
       ],
       [
@@ -520,8 +520,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Add the {chicken-thighs} and {rice}; stir to combine.",
-      "Add the {tomatoes} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Add the {chicken-thigh} and {rice}; stir to combine.",
+      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
     ]
   },
   {
@@ -557,7 +557,7 @@ KITCHEN.add(
         3
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         500
       ]
     ],
@@ -590,7 +590,7 @@ KITCHEN.add(
         3
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         500
       ],
       [
@@ -598,7 +598,7 @@ KITCHEN.add(
         1
       ],
       [
-        "tomatoes",
+        "tomato",
         300
       ],
       [
@@ -612,7 +612,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomatoes} with a little water if needed, then cook gently until tender and the flavours come together.",
+      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
       "Season with {salt} to taste and serve."
     ]
   },
@@ -625,7 +625,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         500
       ],
       [
@@ -633,7 +633,7 @@ KITCHEN.add(
         1
       ],
       [
-        "tomatoes",
+        "tomato",
         300
       ],
       [
@@ -650,8 +650,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Add the {chicken-thighs} and {rice}; stir to combine.",
-      "Add the {tomatoes} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Add the {chicken-thigh} and {rice}; stir to combine.",
+      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
     ]
   },
   {
@@ -687,7 +687,7 @@ KITCHEN.add(
         3
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         500
       ]
     ],
@@ -720,7 +720,7 @@ KITCHEN.add(
         3
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         500
       ],
       [
@@ -728,7 +728,7 @@ KITCHEN.add(
         1
       ],
       [
-        "tomatoes",
+        "tomato",
         300
       ],
       [
@@ -742,7 +742,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomatoes} with a little water if needed, then cook gently until tender and the flavours come together.",
+      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
       "Season with {salt} to taste and serve."
     ]
   },
@@ -755,7 +755,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         500
       ],
       [
@@ -763,7 +763,7 @@ KITCHEN.add(
         1
       ],
       [
-        "tomatoes",
+        "tomato",
         300
       ],
       [
@@ -780,8 +780,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Add the {chicken-thighs} and {rice}; stir to combine.",
-      "Add the {tomatoes} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Add the {chicken-thigh} and {rice}; stir to combine.",
+      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
     ]
   },
   {
@@ -817,7 +817,7 @@ KITCHEN.add(
         3
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         500
       ]
     ],

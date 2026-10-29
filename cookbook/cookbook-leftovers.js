@@ -1330,7 +1330,7 @@ KITCHEN.add(
         80
       ],
       [
-        "green-peas",
+        "peas",
         80
       ],
       [
@@ -1353,7 +1353,7 @@ KITCHEN.add(
     "steps": [
       "Use rice that was cooled promptly and kept refrigerated; break up any clumps.",
       "Beat {eggs}. Heat a little oil in a wok or wide pan and scramble the eggs until just set; transfer to a plate.",
-      "Stir-fry diced {carrot}, {green-peas} and chopped {garlic} for 3 minutes. Add {left-rice} and fry until piping hot.",
+      "Stir-fry diced {carrot}, {peas} and chopped {garlic} for 3 minutes. Add {left-rice} and fry until piping hot.",
       "Return the eggs to the pan and toss with {soy-sauce}, {sesame-oil} and sliced {spring-onion}."
     ]
   },
@@ -1408,7 +1408,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "left-roasted-vegetables",
+        "left-veg",
         300
       ],
       [
@@ -1442,9 +1442,9 @@ KITCHEN.add(
     ],
     "steps": [
       "Put {couscous} in a bowl and pour over boiling {vegetable-stock}. Cover for 5 minutes, then fluff with a fork.",
-      "Warm {left-roasted-vegetables} and {chickpeas} until hot throughout.",
+      "Warm {left-veg} and {chickpeas} until hot throughout.",
       "Toss couscous with {olive-oil}, lemon juice from {lemon} and chopped {parsley}.",
-      "Serve topped with the vegetables, chickpeas and {yogurt}."
+      "Serve topped with the vegetables, {chickpeas} and {yogurt}."
     ]
   },
   {
@@ -1467,7 +1467,7 @@ KITCHEN.add(
         700
       ],
       [
-        "corn",
+        "sweetcorn",
         120
       ],
       [
@@ -1483,8 +1483,8 @@ KITCHEN.add(
         2
       ],
       [
-        "tortillas",
-        2
+        "flour-tortillas",
+        "2pc"
       ],
       [
         "lime",
@@ -1493,9 +1493,9 @@ KITCHEN.add(
     ],
     "steps": [
       "Dice {onion} and cook in a little oil for 5 minutes. Add {cumin} and stir briefly.",
-      "Add {canned-tomatoes}, {vegetable-stock}, {corn} and drained {black-beans}; simmer for 12 minutes.",
+      "Add {canned-tomatoes}, {vegetable-stock}, {sweetcorn} and drained {black-beans}; simmer for 12 minutes.",
       "Stir in shredded {left-chicken} and simmer until piping hot.",
-      "Cut {tortillas} into strips and toast in a dry pan. Serve the soup with tortilla strips and lime juice from {lime}."
+      "Cut {flour-tortillas} into strips and toast in a dry pan. Serve the soup with tortilla strips and lime juice from {lime}."
     ]
   },
   {
@@ -1506,7 +1506,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "left-mashed-potatoes",
+        "left-potatoes",
         350
       ],
       [
@@ -1535,7 +1535,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Mix {left-mashed-potatoes} with grated {cheddar}, sliced {spring-onion}, {flour} and {eggs}.",
+      "Mix {left-potatoes} with grated {cheddar}, sliced {spring-onion}, {flour} and {eggs}.",
       "Shape into 6 small patties. If the mixture is very soft, chill for 10 minutes.",
       "Heat {olive-oil} in a skillet and fry patties for 3–4 minutes per side until crisp and heated through.",
       "Serve with {yogurt} seasoned with salt and pepper."
@@ -1596,7 +1596,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "left-roast-meat",
+        "left-beef",
         350
       ],
       [
@@ -1620,7 +1620,7 @@ KITCHEN.add(
         15
       ],
       [
-        "left-mashed-potatoes",
+        "left-potatoes",
         500
       ],
       [
@@ -1629,9 +1629,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat the oven to 200°C. Chop {left-roast-meat} into small pieces. Dice {onion} and {carrot}.",
+      "Heat the oven to 200°C. Chop {left-beef} into small pieces. Dice {onion} and {carrot}.",
       "Cook onion and carrot in a little oil for 6 minutes. Stir in {flour}, then gradually add {vegetable-stock}; simmer until thickened.",
-      "Fold in the meat and {peas}, transfer to a baking dish and spread {left-mashed-potatoes} over the top. Dot with {butter}.",
+      "Fold in the meat and {peas}, transfer to a baking dish and spread {left-potatoes} over the top. Dot with {butter}.",
       "Bake for 20–25 minutes until bubbling and golden. Reheat leftovers thoroughly."
     ]
   },
@@ -1643,7 +1643,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "left-roasted-vegetables",
+        "left-veg",
         250
       ],
       [
@@ -1668,7 +1668,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Whisk {eggs} with {milk}, salt and pepper. Chop larger pieces of {left-roasted-vegetables}.",
+      "Whisk {eggs} with {milk}, salt and pepper. Chop larger pieces of {left-veg}.",
       "Warm {olive-oil} in an ovenproof skillet and spread vegetables evenly across the base.",
       "Pour in the eggs and cook on low until the edges begin to set. Crumble {feta} over the top.",
       "Finish under a grill until the centre is set, then scatter with {parsley}."
@@ -1723,8 +1723,8 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "cooked-rice",
-        450
+        "rice",
+        150
       ],
       [
         "chicken-stock",
@@ -1752,7 +1752,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Bring {chicken-stock} and grated {ginger} to a simmer. Add {cooked-rice}, breaking up any clumps.",
+      "Bring {chicken-stock} and grated {ginger} to a simmer. Add cooked {rice}, breaking up any clumps.",
       "Simmer 15 minutes, stirring often, until rice breaks down and the soup becomes porridge-like; add water if too thick.",
       "Add thinly sliced {chicken-breast} and simmer until fully cooked, about 5 minutes.",
       "Season with {soy-sauce}; serve with sliced {spring-onion} and a few drops of {sesame-oil}."

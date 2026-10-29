@@ -123,12 +123,12 @@ KITCHEN.add(
         20
       ],
       [
-        "chilli",
+        "fresh-chilli",
         1
       ]
     ],
     "steps": [
-      "Soften sliced {onion} and {chilli} in a little oil.",
+      "Soften sliced {onion} and {fresh-chilli} in a little oil.",
       "Add {coconut-milk} and simmer gently for 5 minutes.",
       "Add {prawns} and cook just until opaque; finish with {lemon-juice}."
     ]

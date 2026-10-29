@@ -984,7 +984,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         900
       ],
       [
@@ -996,7 +996,7 @@ KITCHEN.add(
         4
       ],
       [
-        "chili",
+        "fresh-chilli",
         2
       ],
       [
@@ -1017,8 +1017,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat the oven to 220 °C. Crush the {garlic} and {chili}; mix with {paprika}, {olive-oil}, {red-wine-vinegar}, zest and juice of the {lemon}, and {salt}.",
-      "Slash the {chicken-thighs} lightly and coat thoroughly with the piri-piri marinade. Rest 15 minutes if time allows.",
+      "Heat the oven to 220 °C. Crush the {garlic} and {fresh-chilli}; mix with {paprika}, {olive-oil}, {red-wine-vinegar}, zest and juice of the {lemon}, and {salt}.",
+      "Slash the {chicken-thigh} lightly and coat thoroughly with the piri-piri marinade. Rest 15 minutes if time allows.",
       "Arrange skin-side up on a tray and roast for 35–45 minutes, basting once, until deeply browned and cooked through.",
       "Rest 5 minutes and spoon over the tray juices. Serve with rice, salad or roasted potatoes."
     ]
@@ -1048,7 +1048,7 @@ KITCHEN.add(
         "3pc"
       ],
       [
-        "heavy-cream",
+        "cream",
         250
       ],
       [
@@ -1075,7 +1075,7 @@ KITCHEN.add(
     "steps": [
       "If using salted cod, soak and change water as needed until desalted. Poach gently in {milk} until it flakes; reserve the milk.",
       "Cut {potatoes} into small cubes and fry or roast until just golden. Soften sliced {onion} and {garlic} in {olive-oil}; fold in flaked cod and potatoes.",
-      "Make a sauce with {butter}, {flour} and reserved milk, then stir in {heavy-cream} and {nutmeg}. Combine with the cod mixture, bake at 200 °C for 20–25 minutes until bubbling and golden."
+      "Make a sauce with {butter}, {flour} and reserved milk, then stir in {cream} and {nutmeg}. Combine with the cod mixture, bake at 200 °C for 20–25 minutes until bubbling and golden."
     ]
   },
   {
@@ -1217,15 +1217,15 @@ KITCHEN.add(
         150
       ],
       [
-        "ale",
+        "beer",
         150
       ],
       [
-        "stock",
+        "beef-stock",
         100
       ],
       [
-        "chili",
+        "fresh-chilli",
         1
       ],
       [
@@ -1240,7 +1240,7 @@ KITCHEN.add(
     "steps": [
       "Sear {beef-strips} quickly with {oil} and {salt}; grill {sausages} until browned.",
       "Layer {bread} with beef, {ham} and sliced sausage; top with the remaining bread and cover with {cheddar}. Grill until the cheese melts.",
-      "Simmer {canned-tomatoes}, {ale}, {stock} and {chili} for 10 minutes, then blend until smooth. Pour the hot sauce over the sandwich and serve immediately."
+      "Simmer {canned-tomatoes}, {beer}, {beef-stock} and {fresh-chilli} for 10 minutes, then blend until smooth. Pour the hot sauce over the sandwich and serve immediately."
     ]
   },
   {
@@ -1393,7 +1393,7 @@ KITCHEN.add(
         250
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         300
       ],
       [
@@ -1413,7 +1413,7 @@ KITCHEN.add(
         1
       ],
       [
-        "stock",
+        "chicken-stock",
         1200
       ],
       [
@@ -1426,7 +1426,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Put {pork-shoulder}, {chicken-thighs}, {sausages}, {bay-leaf} and {salt} in a large pot with {stock}; bring to a gentle simmer and skim the surface.",
+      "Put {pork-shoulder}, {chicken-thigh}, {sausages}, {bay-leaf} and {salt} in a large pot with {chicken-stock}; bring to a gentle simmer and skim the surface.",
       "Simmer until the meats are nearly tender, about 60 minutes. Add {potatoes}, {carrot}, {turnip} and wedges of {cabbage}.",
       "Cook until all vegetables are tender and the meats are fully cooked. Slice and serve the meats with the vegetables and a ladle of broth."
     ]
@@ -1468,7 +1468,7 @@ KITCHEN.add(
         100
       ],
       [
-        "stock",
+        "fish-stock",
         600
       ],
       [
@@ -1486,7 +1486,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Soften chopped {onion} and {garlic} in {olive-oil}; add {canned-tomatoes} and cook 5 minutes.",
-      "Stir in {rice}, pour in {white-wine} and {stock}, and simmer, stirring occasionally, until the rice is nearly tender and still quite brothy.",
+      "Stir in {rice}, pour in {white-wine} and {fish-stock}, and simmer, stirring occasionally, until the rice is nearly tender and still quite brothy.",
       "Add {prawns} and {mussels}; cook until the prawns are pink and the mussels open. Discard unopened mussels, season with {salt} and finish with {cilantro}."
     ]
   },
@@ -1503,7 +1503,7 @@ KITCHEN.add(
         250
       ],
       [
-        "farmer-cheese",
+        "cottage-cheese",
         250
       ],
       [
@@ -1533,7 +1533,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Line small tart moulds with {shortcrust-pastry} and chill.",
-      "Beat {farmer-cheese} with {sugar}, {eggs}, {cinnamon}, {flour} and a little grated {lemon} zest until smooth.",
+      "Beat {cottage-cheese} with {sugar}, {eggs}, {cinnamon}, {flour} and a little grated {lemon} zest until smooth.",
       "Fill the pastry shells and bake at 190 °C for 22–28 minutes until the tops are golden and lightly cracked. Cool before unmoulding."
     ]
   },

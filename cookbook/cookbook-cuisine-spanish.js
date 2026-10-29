@@ -1348,7 +1348,7 @@ KITCHEN.add(
     "steps": [
       "Warm {olive-oil} in a skillet and gently cook sliced {garlic} until fragrant but not browned.",
       "Add {smoked-paprika} and {cumin}; stir for 15 seconds. Add drained {chickpeas} and a splash of water.",
-      "Fold in {spinach} in batches and cook until wilted. Lightly mash some chickpeas to thicken.",
+      "Fold in {spinach} in batches and cook until wilted. Lightly mash some {chickpeas} to thicken.",
       "Finish with lemon juice from {lemon}, season and serve with {bread}."
     ],
     "cuisine": "Spanish"
@@ -1510,7 +1510,7 @@ KITCHEN.add(
         100
       ],
       [
-        "smoked-bacon",
+        "bacon",
         80
       ],
       [
@@ -1530,7 +1530,7 @@ KITCHEN.add(
         1
       ],
       [
-        "stock",
+        "vegetable-stock",
         600
       ],
       [
@@ -1539,8 +1539,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "If using dried beans, soak and pre-cook until nearly tender. Slice {chorizo}, {smoked-sausage} and {smoked-bacon}.",
-      "Add beans, meats, {onion}, {garlic}, {paprika}, {bay-leaf} and {stock} to a heavy pot.",
+      "If using dried beans, soak and pre-cook until nearly tender. Slice {chorizo}, {smoked-sausage} and {bacon}.",
+      "Add beans, meats, {onion}, {garlic}, {paprika}, {bay-leaf} and {vegetable-stock} to a heavy pot.",
       "Simmer gently 50–60 minutes until creamy and the beans are tender; remove bay leaf and season with {salt}."
     ]
   },
@@ -1714,7 +1714,7 @@ KITCHEN.add(
         120
       ],
       [
-        "chilli",
+        "fresh-chilli",
         1
       ],
       [
@@ -1727,7 +1727,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Pat {cod} dry and season lightly with {salt}. Thinly slice {garlic} and cut {chilli} into rings.",
+      "Pat {cod} dry and season lightly with {salt}. Thinly slice {garlic} and cut {fresh-chilli} into rings.",
       "Warm {olive-oil} in a skillet; gently cook garlic and chilli until fragrant, then remove them. Add cod skin-side down and cook gently, tilting the pan to baste with oil.",
       "Turn the fish carefully and continue cooking until flaky. Remove the pan from heat and swirl the oil and fish gelatin together until a glossy emulsion forms; garnish with {parsley}."
     ]
@@ -1796,7 +1796,7 @@ KITCHEN.add(
         60
       ],
       [
-        "chilli",
+        "fresh-chilli",
         1
       ],
       [
@@ -1817,7 +1817,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Thinly slice {garlic} and {chilli}. Warm {olive-oil} in a small skillet over medium-low heat and cook garlic until fragrant, not browned.",
+      "Thinly slice {garlic} and {fresh-chilli}. Warm {olive-oil} in a small skillet over medium-low heat and cook garlic until fragrant, not browned.",
       "Add {prawns} and {salt}; turn and cook 2–3 minutes until just pink.",
       "Remove from the heat, add {lemon-juice} and chopped {parsley}, and serve sizzling with {bread} to mop up the oil."
     ]
@@ -1955,7 +1955,7 @@ KITCHEN.add(
         "1pc"
       ],
       [
-        "stock",
+        "fish-stock",
         450
       ],
       [
@@ -1982,7 +1982,7 @@ KITCHEN.add(
     "steps": [
       "Rinse {rice} if it is uncooked; prepare the other ingredients while it drains.",
       "Heat {olive-oil} and soften {onion} and {garlic}, then cook the main filling until fragrant.",
-      "Combine the ingredients with {stock} and cook covered until the rice is tender and the liquid is absorbed.",
+      "Combine the ingredients with {fish-stock} and cook covered until the rice is tender and the liquid is absorbed.",
       "Sear squid and garlic, toast rice in the pan, add fish stock and squid ink if available, then cook without stirring until the rice is tender and the bottom lightly toasted.",
       "Finish with a little {lemon} if needed, taste for seasoning and serve while the texture is at its best."
     ]
@@ -2020,7 +2020,7 @@ KITCHEN.add(
         3
       ],
       [
-        "stock",
+        "fish-stock",
         450
       ],
       [

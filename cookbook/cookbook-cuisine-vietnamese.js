@@ -26,7 +26,7 @@ KITCHEN.add(
         12
       ],
       [
-        "carrots",
+        "carrot",
         1
       ],
       [
@@ -51,7 +51,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Slice {carrots} into matchsticks and toss with {rice-vinegar} and {sugar}; set aside to quick-pickle.",
+      "Slice {carrot} into matchsticks and toss with {rice-vinegar} and {sugar}; set aside to quick-pickle.",
       "Slice {pork-tenderloin} thinly and toss with {soy-sauce} and {fish-sauce}. Sear in a hot pan until browned and cooked through.",
       "Split and lightly toast the {baguette}; spread with {mayonnaise}.",
       "Fill with pork, pickled carrot, sliced {cucumber} and {cilantro}. Serve immediately."
@@ -1318,7 +1318,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "ground-pork",
+        "pork-mince",
         450
       ],
       [
@@ -1342,7 +1342,7 @@ KITCHEN.add(
         2
       ],
       [
-        "carrots",
+        "carrot",
         2
       ],
       [
@@ -1359,10 +1359,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Mix half the {fish-sauce}, minced {garlic} and a teaspoon of {sugar} into the {ground-pork}; shape into small patties.",
+      "Mix half the {fish-sauce}, minced {garlic} and a teaspoon of {sugar} into the {pork-mince}; shape into small patties.",
       "Cook remaining {sugar} in a small pan until amber, carefully add 60 ml water and the remaining fish sauce and lime juice; stir to make a dressing.",
       "Grill or pan-sear pork patties until browned and cooked through. Prepare {rice-noodles} according to packet instructions.",
-      "Serve noodles with pork, ribbons of {carrots}, sliced {cucumber}, {mint} and {cilantro}; spoon over the sweet-sour dressing."
+      "Serve noodles with pork, ribbons of {carrot}, sliced {cucumber}, {mint} and {cilantro}; spoon over the sweet-sour dressing."
     ]
   },
   {
@@ -1390,7 +1390,7 @@ KITCHEN.add(
         4
       ],
       [
-        "shrimp",
+        "prawns",
         250
       ],
       [
@@ -1416,7 +1416,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Whisk {rice-flour}, {coconut-milk}, {water}, {turmeric} and sliced {spring-onion} into a thin batter; rest 15 minutes.",
-      "Sear the {shrimp} in a lightly oiled nonstick skillet until just pink. Remove and keep warm.",
+      "Sear the {prawns} in a lightly oiled nonstick skillet until just pink. Remove and keep warm.",
       "Pour a thin layer of batter into the hot pan, scatter shrimp and {bean-sprouts} over one half, cover briefly, then uncover and cook until the base is crisp. Fold in half.",
       "Serve pancakes with {lettuce} leaves and a dipping sauce made from {fish-sauce}, lime juice and water."
     ]
@@ -1490,7 +1490,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "salmon-fillet",
+        "salmon",
         350
       ],
       [
@@ -1524,7 +1524,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Melt {brown-sugar} in a small pan with 1 tablespoon water until syrupy; carefully add {fish-sauce}, {ginger} and {garlic}.",
-      "Add {salmon-fillet} and spoon sauce over the fish. Simmer gently, turning once, until cooked and the sauce becomes a dark glaze.",
+      "Add {salmon} and spoon sauce over the fish. Simmer gently, turning once, until cooked and the sauce becomes a dark glaze.",
       "Finish with {lime-juice}, {spring-onion} and {black-pepper}; serve with rice and greens."
     ]
   },
@@ -1569,7 +1569,7 @@ KITCHEN.add(
         20
       ],
       [
-        "neutral-oil",
+        "oil",
         15
       ],
       [
@@ -1579,7 +1579,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Cut {white-fish} into chunks and marinate with {turmeric}, grated {ginger}, {fish-sauce} and {rice-vinegar} for 10 minutes.",
-      "Cook {rice-vermicelli}. Pan-sear fish in {neutral-oil} until golden and just cooked.",
+      "Cook {rice-vermicelli}. Pan-sear fish in {oil} until golden and just cooked.",
       "Add lengths of {spring-onion} and chopped {dill} to the pan for the last minute. Serve over noodles with {peanuts} scattered on top."
     ]
   },
@@ -1616,7 +1616,7 @@ KITCHEN.add(
         10
       ],
       [
-        "chilli",
+        "fresh-chilli",
         1
       ],
       [
@@ -1624,7 +1624,7 @@ KITCHEN.add(
         3
       ],
       [
-        "neutral-oil",
+        "oil",
         20
       ],
       [
@@ -1633,8 +1633,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cut {aubergine} into chunky batons. Sear in {neutral-oil} until browned and almost tender; work in batches if needed.",
-      "Mix {soy-sauce}, {brown-sugar}, {rice-vinegar}, minced {garlic}, grated {ginger} and sliced {chilli}.",
+      "Cut {aubergine} into chunky batons. Sear in {oil} until browned and almost tender; work in batches if needed.",
+      "Mix {soy-sauce}, {brown-sugar}, {rice-vinegar}, minced {garlic}, grated {ginger} and sliced {fresh-chilli}.",
       "Pour sauce over eggplant and simmer until glossy and tender. Garnish with {spring-onion} and {sesame-seeds}; serve with rice."
     ]
   },
@@ -1651,7 +1651,7 @@ KITCHEN.add(
         350
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ],
       [
@@ -1693,7 +1693,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Toss {beef-strips} with {soy-sauce}, {fish-sauce}, {sugar} and crushed {garlic}; marinate 10 minutes.",
-      "Heat {oil} in a very hot skillet and sear beef in batches until browned. Add wedges of {red-onion} and strips of {bell-pepper}; toss briefly.",
+      "Heat {oil} in a very hot skillet and sear beef in batches until browned. Add wedges of {red-onion} and strips of {red-pepper}; toss briefly.",
       "Serve over {lettuce} with sliced {tomato} and finish with {lime-juice}."
     ]
   },
@@ -1734,7 +1734,7 @@ KITCHEN.add(
         25
       ],
       [
-        "stock",
+        "fish-stock",
         900
       ],
       [
@@ -1756,7 +1756,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Cook {rice-vermicelli} separately and drain. Soften sliced {onion} in {oil}; add wedges of {tomato} and cook until juicy.",
-      "Pour in {stock}, season with {fish-sauce}, and simmer 10 minutes. Mix {crabmeat} and chopped {prawns} with beaten {eggs}; spoon small portions into the simmering broth to set into soft seafood curds.",
+      "Pour in {fish-stock}, season with {fish-sauce}, and simmer 10 minutes. Mix {crabmeat} and chopped {prawns} with beaten {eggs}; spoon small portions into the simmering broth to set into soft seafood curds.",
       "Add cubes of {tofu} and warm through. Serve broth over noodles with {spring-onion} and {lime-juice}."
     ]
   },
@@ -1789,7 +1789,7 @@ KITCHEN.add(
         100
       ],
       [
-        "shallots",
+        "shallot",
         2
       ],
       [
@@ -1810,7 +1810,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Whisk {rice-flour}, {cornstarch} and {water} into a thin batter and rest 20 minutes. Cook {pork-mince} with chopped {shallots} and sliced {shiitake-mushrooms}; season with {fish-sauce} and {black-pepper}.",
+      "Whisk {rice-flour}, {cornstarch} and {water} into a thin batter and rest 20 minutes. Cook {pork-mince} with chopped {shallot} and sliced {shiitake-mushrooms}; season with {fish-sauce} and {black-pepper}.",
       "Brush a non-stick skillet with {oil}, pour in a thin layer of batter and cover briefly until just set. Slide the rice sheet onto a plate, add filling and roll gently.",
       "Repeat with remaining batter and filling. Serve warm with chopped {cilantro} and dipping sauce."
     ]
@@ -1883,7 +1883,7 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "beef-stew-meat",
+        "beef-chuck",
         500
       ],
       [
@@ -1915,7 +1915,7 @@ KITCHEN.add(
         25
       ],
       [
-        "stock",
+        "beef-stock",
         800
       ],
       [
@@ -1936,8 +1936,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Toss {beef-stew-meat} with {chinese-five-spice} and {salt}. Brown in {oil}; add chopped {onion} and {garlic}.",
-      "Add bruised {lemongrass}, {star-anise}, {tomato-paste}, {fish-sauce} and {stock}; cover and simmer 70 minutes.",
+      "Toss {beef-chuck} with {chinese-five-spice} and {salt}. Brown in {oil}; add chopped {onion} and {garlic}.",
+      "Add bruised {lemongrass}, {star-anise}, {tomato-paste}, {fish-sauce} and {beef-stock}; cover and simmer 70 minutes.",
       "Add sliced {carrot} and simmer 20–25 minutes until tender. Serve with warm {bread-rolls} for dipping."
     ]
   },

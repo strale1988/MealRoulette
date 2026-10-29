@@ -2844,8 +2844,8 @@ KITCHEN.add(
         300
       ],
       [
-        "tortillas",
-        2
+        "flour-tortillas",
+        "2pc"
       ],
       [
         "lettuce",
@@ -2879,8 +2879,8 @@ KITCHEN.add(
     "steps": [
       "Drain {chickpeas}, pat dry and toss with {olive-oil}, {paprika}, salt and pepper. Roast at 220°C for 15 minutes or pan-fry until crisp.",
       "Mix {yogurt} with lemon juice from {lemon}, salt and pepper.",
-      "Chop {lettuce}, {tomato} and {cucumber}. Warm {tortillas}.",
-      "Fill tortillas with salad and crispy chickpeas, drizzle with yogurt sauce and roll tightly."
+      "Chop {lettuce}, {tomato} and {cucumber}. Warm {flour-tortillas}.",
+      "Fill tortillas with salad and crispy {chickpeas}, drizzle with yogurt sauce and roll tightly."
     ]
   },
   {
@@ -2891,8 +2891,8 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "tortillas",
-        2
+        "flour-tortillas",
+        "2pc"
       ],
       [
         "halloumi",
@@ -2927,7 +2927,7 @@ KITCHEN.add(
       "Slice {red-pepper} and cook in {olive-oil} until soft and lightly charred.",
       "Slice {halloumi} and sear in a hot dry pan for 1–2 minutes per side.",
       "Mix {yogurt} with lemon juice from {lemon} and chopped {mint}.",
-      "Warm {tortillas}; fill with {lettuce}, peppers and halloumi. Add yogurt sauce and roll."
+      "Warm {flour-tortillas}; fill with {lettuce}, peppers and halloumi. Add yogurt sauce and roll."
     ]
   },
   {
@@ -2951,7 +2951,7 @@ KITCHEN.add(
         1
       ],
       [
-        "eggplant",
+        "aubergine",
         1
       ],
       [
@@ -2976,7 +2976,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat oven to 220 °C. Slice {zucchini}, {red-pepper} and {eggplant}; toss with {olive-oil} and roast 20–25 minutes until browned.",
+      "Heat oven to 220 °C. Slice {zucchini}, {red-pepper} and {aubergine}; toss with {olive-oil} and roast 20–25 minutes until browned.",
       "Blend {feta}, {yogurt} and juice from the {lemon} until spreadable.",
       "Split and toast the {ciabatta}; spread both sides with whipped feta.",
       "Layer roasted vegetables and {basil} into the sandwich. Press gently, slice and serve warm."
@@ -3015,8 +3015,8 @@ KITCHEN.add(
         20
       ],
       [
-        "tortillas",
-        2
+        "flour-tortillas",
+        "2pc"
       ],
       [
         "lettuce",
@@ -3034,7 +3034,7 @@ KITCHEN.add(
     "steps": [
       "Whisk {flour}, {milk} and {paprika}; coat florets of {cauliflower} and roast at 220 °C for 20 minutes, turning once.",
       "Melt {butter} and stir in {sriracha}; toss the roasted cauliflower in the sauce.",
-      "Mix {yogurt} with crumbled {feta}. Fill {tortillas} with {lettuce}, spicy cauliflower and feta yogurt."
+      "Mix {yogurt} with crumbled {feta}. Fill {flour-tortillas} with {lettuce}, spicy cauliflower and feta yogurt."
     ]
   },
   {
@@ -3058,7 +3058,7 @@ KITCHEN.add(
         3
       ],
       [
-        "coriander-ground",
+        "ground-coriander",
         3
       ],
       [
@@ -3099,7 +3099,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Mix half the {yogurt}, {cumin}, {coriander-ground}, {paprika}, minced half the {garlic}, {lemon-juice}, {olive-oil} and {salt}; coat sliced {chicken-thigh}.",
+      "Mix half the {yogurt}, {cumin}, {ground-coriander}, {paprika}, minced half the {garlic}, {lemon-juice}, {olive-oil} and {salt}; coat sliced {chicken-thigh}.",
       "Sear or grill chicken until browned and cooked through. Mix the remaining {yogurt} with remaining crushed {garlic} and a little lemon juice.",
       "Fill warm {flatbread} with chicken, shredded {lettuce}, sliced {tomato}, {red-onion} and garlic yogurt."
     ]

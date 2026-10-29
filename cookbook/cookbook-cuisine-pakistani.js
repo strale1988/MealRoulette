@@ -10,7 +10,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "beef-stew-meat",
+        "beef-chuck",
         450
       ],
       [
@@ -30,7 +30,7 @@ KITCHEN.add(
         3
       ],
       [
-        "coriander-ground",
+        "ground-coriander",
         3
       ],
       [
@@ -38,7 +38,7 @@ KITCHEN.add(
         3
       ],
       [
-        "stock",
+        "beef-stock",
         450
       ],
       [
@@ -64,8 +64,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {beef-stew-meat} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
+      "Add {beef-chuck} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
+      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
       "Brown the beef, bloom the ground spices in the fat and braise very slowly until spoon-tender; use a little flour slurry at the end for the traditional silky gravy.",
       "Finish with a little {lemon} if needed, taste for seasoning and serve while the texture is at its best."
     ]
@@ -139,7 +139,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "beef-stew-meat",
+        "beef-chuck",
         450
       ],
       [
@@ -171,7 +171,7 @@ KITCHEN.add(
         3
       ],
       [
-        "stock",
+        "beef-stock",
         450
       ],
       [
@@ -189,8 +189,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {beef-stew-meat} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
+      "Add {beef-chuck} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
+      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
       "Cook beef, barley and lentils together at a low simmer, stirring and mashing periodically until the grains and meat form a thick porridge; finish with ginger and fried onion if desired.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -236,7 +236,7 @@ KITCHEN.add(
         5
       ],
       [
-        "stock",
+        "beef-stock",
         450
       ],
       [
@@ -255,7 +255,7 @@ KITCHEN.add(
     "steps": [
       "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
       "Add {lamb} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
+      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
       "Brown the lamb with onion and ginger, cook the tomato-spice masala until glossy, then add potatoes and simmer until both meat and potatoes are tender.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -289,7 +289,7 @@ KITCHEN.add(
         1
       ],
       [
-        "coriander-ground",
+        "ground-coriander",
         3
       ],
       [
@@ -354,7 +354,7 @@ KITCHEN.add(
         5
       ],
       [
-        "stock",
+        "beef-stock",
         450
       ],
       [
@@ -373,7 +373,7 @@ KITCHEN.add(
     "steps": [
       "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
       "Add {lamb} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
+      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
       "Braise lamb with the spice base until tender, then fold in chopped greens and cook until they melt into the sauce without losing all their colour.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -480,7 +480,7 @@ KITCHEN.add(
         5
       ],
       [
-        "stock",
+        "chicken-stock",
         450
       ],
       [
@@ -499,8 +499,8 @@ KITCHEN.add(
     "steps": [
       "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
       "Add {chicken-thigh} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Cook the onion-tomato masala until the oil separates, add chickpeas and chicken, then simmer until the sauce thickens and the chickpeas absorb the spices.",
+      "Add {chicken-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
+      "Cook the onion-tomato masala until the oil separates, add {chickpeas} and chicken, then simmer until the sauce thickens and the {chickpeas} absorb the spices.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
   },
@@ -629,7 +629,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ],
       [
@@ -655,7 +655,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thighs} and {rice}; stir well so the ingredients are evenly coated.",
+      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
       "Add the {soy-sauce} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
     ]
   },
@@ -684,7 +684,7 @@ KITCHEN.add(
         2
       ],
       [
-        "carrots",
+        "carrot",
         1
       ],
       [
@@ -712,7 +712,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ],
       [
@@ -738,7 +738,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thighs} and {rice}; stir to combine.",
+      "Add the {chicken-thigh} and {rice}; stir to combine.",
       "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
     ]
   },
@@ -763,7 +763,7 @@ KITCHEN.add(
         2
       ],
       [
-        "carrots",
+        "carrot",
         1
       ],
       [
@@ -775,7 +775,7 @@ KITCHEN.add(
         2
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ]
     ],
@@ -795,7 +795,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "carrots",
+        "carrot",
         1
       ],
       [
@@ -807,7 +807,7 @@ KITCHEN.add(
         2
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ],
       [
@@ -829,7 +829,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {carrots} and {rice}; stir to combine.",
+      "Add the {carrot} and {rice}; stir to combine.",
       "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
       "Season with {salt} to taste and serve."
     ]
@@ -843,7 +843,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ],
       [
@@ -869,7 +869,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thighs} and {rice}; stir to combine.",
+      "Add the {chicken-thigh} and {rice}; stir to combine.",
       "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
     ]
   },
@@ -894,7 +894,7 @@ KITCHEN.add(
         2
       ],
       [
-        "carrots",
+        "carrot",
         1
       ],
       [
@@ -906,7 +906,7 @@ KITCHEN.add(
         2
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ]
     ],
@@ -926,7 +926,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "carrots",
+        "carrot",
         1
       ],
       [
@@ -938,7 +938,7 @@ KITCHEN.add(
         2
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ],
       [
@@ -960,7 +960,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {carrots} and {rice}; stir to combine.",
+      "Add the {carrot} and {rice}; stir to combine.",
       "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
       "Season with {salt} to taste and serve."
     ]
@@ -974,7 +974,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ],
       [
@@ -1000,7 +1000,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thighs} and {rice}; stir to combine.",
+      "Add the {chicken-thigh} and {rice}; stir to combine.",
       "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
     ]
   },
@@ -1025,7 +1025,7 @@ KITCHEN.add(
         2
       ],
       [
-        "carrots",
+        "carrot",
         1
       ],
       [
@@ -1037,7 +1037,7 @@ KITCHEN.add(
         2
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ]
     ],

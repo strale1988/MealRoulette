@@ -37,12 +37,12 @@ KITCHEN.add(
         8
       ],
       [
-        "potato",
+        "potatoes",
         350
       ]
     ],
     "steps": [
-      "Heat the oven to 200°C. Cut {potato} into small wedges, toss with half the {olive-oil} and roast for 15 minutes.",
+      "Heat the oven to 200°C. Cut {potatoes} into small wedges, toss with half the {olive-oil} and roast for 15 minutes.",
       "Place {cod} in a baking dish. Scatter chopped {tomato}, {olives} and minced {garlic} around it.",
       "Drizzle with remaining oil and lemon juice from {lemon}. Bake for 10–12 minutes until the fish flakes easily.",
       "Finish with chopped {parsley} and serve with the potatoes."

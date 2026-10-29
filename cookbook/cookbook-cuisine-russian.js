@@ -22,7 +22,7 @@ KITCHEN.add(
         "1pc"
       ],
       [
-        "stock",
+        "beef-stock",
         450
       ],
       [
@@ -53,7 +53,7 @@ KITCHEN.add(
     "steps": [
       "Heat {butter} in a heavy pan; soften {onion}.",
       "Add {beef-strips} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
+      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
       "Sear beef quickly in batches and set aside; make a mushroom-onion pan sauce, temper the sour cream off the boil and return the beef only long enough to warm through.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -71,7 +71,7 @@ KITCHEN.add(
         200
       ],
       [
-        "beef-stew-meat",
+        "beef-chuck",
         450
       ],
       [
@@ -87,7 +87,7 @@ KITCHEN.add(
         "1pc"
       ],
       [
-        "stock",
+        "beef-stock",
         450
       ],
       [
@@ -117,7 +117,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat {oil} in a soup pot and soften {onion} without browning.",
-      "Add {stock} and {cabbage}, simmering gently until the main ingredient is tender.",
+      "Add {beef-stock} and {cabbage}, simmering gently until the main ingredient is tender.",
       "Simmer the beef in stock until tender, then add cabbage and potatoes; finish with dill and a spoon of sour cream at the table.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -195,7 +195,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "farmer-cheese",
+        "cottage-cheese",
         200
       ],
       [
@@ -236,8 +236,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare {farmer-cheese} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {farmer-cheese} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
+      "Prepare {cottage-cheese} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
+      "Cook {cottage-cheese} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
       "Drain the cheese well and mix gently with egg, sugar and just enough flour to bind; form small thick cakes and pan-fry slowly so the centres cook without burning the crust.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -515,7 +515,7 @@ KITCHEN.add(
         "1pc"
       ],
       [
-        "stock",
+        "vegetable-stock",
         450
       ],
       [

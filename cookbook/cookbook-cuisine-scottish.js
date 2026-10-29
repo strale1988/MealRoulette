@@ -61,7 +61,7 @@ KITCHEN.add(
         300
       ],
       [
-        "pearl-barley",
+        "barley",
         70
       ],
       [
@@ -81,7 +81,7 @@ KITCHEN.add(
         1
       ],
       [
-        "stock",
+        "beef-stock",
         900
       ],
       [
@@ -102,7 +102,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Put {lamb-shoulder}, {pearl-barley}, {stock}, {thyme} and {bay-leaf} in a pot and bring to a gentle simmer.",
+      "Put {lamb-shoulder}, {barley}, {beef-stock}, {thyme} and {bay-leaf} in a pot and bring to a gentle simmer.",
       "Skim if needed; add diced {carrot}, {swede}, {leek} and {onion}. Simmer gently for 75–85 minutes until the lamb and barley are tender.",
       "Remove the bay leaf, shred the lamb into the broth and season with {salt} and {black-pepper}."
     ]
@@ -160,7 +160,7 @@ KITCHEN.add(
         1
       ],
       [
-        "stock",
+        "chicken-stock",
         450
       ],
       [
@@ -190,7 +190,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat {oil} in a soup pot and soften {leek} without browning.",
-      "Add {stock} and {chicken-thigh}, simmering gently until the main ingredient is tender.",
+      "Add {chicken-stock} and {chicken-thigh}, simmering gently until the main ingredient is tender.",
       "Simmer chicken with leeks and barley until tender, shred the meat and return it to the clear broth; finish with parsley and generous black pepper.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -292,7 +292,7 @@ KITCHEN.add(
         350
       ],
       [
-        "left-roast-meat",
+        "left-beef",
         350
       ],
       [
@@ -469,7 +469,7 @@ KITCHEN.add(
         2
       ],
       [
-        "stock",
+        "beef-stock",
         450
       ],
       [

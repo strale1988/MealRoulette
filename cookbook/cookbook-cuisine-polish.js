@@ -1013,7 +1013,7 @@ KITCHEN.add(
         180
       ],
       [
-        "egg",
+        "eggs",
         "1pc"
       ],
       [
@@ -1021,7 +1021,7 @@ KITCHEN.add(
         450
       ],
       [
-        "farmer-cheese",
+        "cottage-cheese",
         180
       ],
       [
@@ -1042,8 +1042,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Boil the {potatoes} until tender and mash with {farmer-cheese}, salt and pepper.",
-      "Mix {flour}, {water}, {egg} and a pinch of salt into a soft dough. Knead briefly, cover and rest 20 minutes.",
+      "Boil the {potatoes} until tender and mash with {cottage-cheese}, salt and pepper.",
+      "Mix {flour}, {water}, {eggs} and a pinch of salt into a soft dough. Knead briefly, cover and rest 20 minutes.",
       "Roll thinly, cut circles, fill each with potato-cheese mixture and seal the edges firmly.",
       "Boil in batches until the pierogi float, then cook 2 minutes more. Serve with {onion} slowly fried in {butter}."
     ]
@@ -1089,7 +1089,7 @@ KITCHEN.add(
         2
       ],
       [
-        "stock",
+        "vegetable-stock",
         500
       ],
       [
@@ -1100,7 +1100,7 @@ KITCHEN.add(
     "steps": [
       "Cut the {pork-shoulder} and {smoked-sausage} into chunks. Brown the pork in a heavy pot.",
       "Add the chopped {onion} and {mushrooms}; cook until softened, then stir in the {tomato-paste}.",
-      "Add the {sauerkraut}, shredded {cabbage}, {bay-leaf}, {black-pepper} and {stock}.",
+      "Add the {sauerkraut}, shredded {cabbage}, {bay-leaf}, {black-pepper} and {vegetable-stock}.",
       "Cover and simmer very gently for 75–90 minutes, stirring occasionally, until rich and tender. Remove bay leaves before serving."
     ]
   },
@@ -1113,15 +1113,15 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "white-sausage",
+        "sausage",
         300
       ],
       [
-        "stock",
+        "vegetable-stock",
         800
       ],
       [
-        "sour-rye-starter",
+        "sourdough-starter",
         250
       ],
       [
@@ -1154,9 +1154,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Simmer {white-sausage} in {stock} with {bay-leaf} for 15 minutes; remove sausage and slice.",
+      "Simmer {sausage} in {vegetable-stock} with {bay-leaf} for 15 minutes; remove sausage and slice.",
       "Add diced {potatoes}, {onion} and {garlic}; cook until potatoes are tender.",
-      "Stir in {sour-rye-starter} and {marjoram}; simmer 5 minutes. Temper {cream} with hot soup, stir it in and return sausage to the pot.",
+      "Stir in {sourdough-starter} and {marjoram}; simmer 5 minutes. Temper {cream} with hot soup, stir it in and return sausage to the pot.",
       "Serve with halved hard-boiled {eggs}."
     ]
   },
@@ -1185,7 +1185,7 @@ KITCHEN.add(
         150
       ],
       [
-        "smoked-bacon",
+        "bacon",
         70
       ],
       [
@@ -1209,13 +1209,13 @@ KITCHEN.add(
         2
       ],
       [
-        "stock",
+        "vegetable-stock",
         350
       ]
     ],
     "steps": [
-      "Brown cubed {pork-shoulder}, sliced {smoked-sausage} and {smoked-bacon} in a heavy pot. Add diced {onion} and cook until softened.",
-      "Stir in shredded {cabbage}, drained {sauerkraut}, {tomato-paste}, chopped {dried-apricots}, {bay-leaf}, {allspice} and {stock}.",
+      "Brown cubed {pork-shoulder}, sliced {smoked-sausage} and {bacon} in a heavy pot. Add diced {onion} and cook until softened.",
+      "Stir in shredded {cabbage}, drained {sauerkraut}, {tomato-paste}, chopped {dried-apricots}, {bay-leaf}, {allspice} and {vegetable-stock}.",
       "Cover and simmer gently for 75–90 minutes, stirring occasionally, until rich and tender. Remove bay leaf before serving."
     ]
   },
@@ -1228,7 +1228,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "sour-rye-starter",
+        "sourdough-starter",
         250
       ],
       [
@@ -1248,7 +1248,7 @@ KITCHEN.add(
         2
       ],
       [
-        "stock",
+        "vegetable-stock",
         650
       ],
       [
@@ -1277,8 +1277,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Simmer {sausages}, diced {potatoes}, {onion}, {garlic}, {bay-leaf} and {stock} until potatoes are tender.",
-      "Stir in {sour-rye-starter} gradually and simmer 5–8 minutes; add {marjoram} and {horseradish}.",
+      "Simmer {sausages}, diced {potatoes}, {onion}, {garlic}, {bay-leaf} and {vegetable-stock} until potatoes are tender.",
+      "Stir in {sourdough-starter} gradually and simmer 5–8 minutes; add {marjoram} and {horseradish}.",
       "Temper {sour-cream} with hot soup and stir back in without boiling. Serve with halved cooked {eggs}. Season with {salt}."
     ]
   },
@@ -1346,7 +1346,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "ground-pork",
+        "pork-mince",
         300
       ],
       [
@@ -1366,7 +1366,7 @@ KITCHEN.add(
         1
       ],
       [
-        "stock",
+        "vegetable-stock",
         450
       ],
       [
@@ -1391,8 +1391,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Soak {stale-bread} in {milk}; mix with {ground-pork}, {eggs}, half the finely chopped {onion}, {salt} and {black-pepper}. Form small meatballs.",
-      "Simmer the remaining {onion} in {stock}; add meatballs and poach gently for 12–15 minutes until cooked.",
+      "Soak {stale-bread} in {milk}; mix with {pork-mince}, {eggs}, half the finely chopped {onion}, {salt} and {black-pepper}. Form small meatballs.",
+      "Simmer the remaining {onion} in {vegetable-stock}; add meatballs and poach gently for 12–15 minutes until cooked.",
       "Whisk {flour} into {cream} with a little hot broth, stir into the pot and simmer until the sauce thickens. Finish with chopped {dill}."
     ]
   },
@@ -1405,7 +1405,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "small-pasta",
+        "pasta",
         180
       ],
       [
@@ -1417,7 +1417,7 @@ KITCHEN.add(
         180
       ],
       [
-        "smoked-bacon",
+        "bacon",
         100
       ],
       [
@@ -1442,7 +1442,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cook {small-pasta} until just tender and drain. Fry diced {smoked-bacon} until rendered, then add chopped {onion} and {mushrooms}.",
+      "Cook {pasta} until just tender and drain. Fry diced {bacon} until rendered, then add chopped {onion} and {mushrooms}.",
       "Add shredded {cabbage}, {caraway}, {salt} and {black-pepper}; cook until the cabbage is soft and lightly caramelised.",
       "Toss in the pasta and {butter}; fry together for 2–3 minutes so the flavours combine."
     ]
@@ -1515,7 +1515,7 @@ KITCHEN.add(
     "serves": 8,
     "ing": [
       [
-        "farmer-cheese",
+        "cottage-cheese",
         600
       ],
       [
@@ -1553,7 +1553,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Crush {digestive-biscuits} and mix with half the melted {butter}; press into the base of a lined springform tin.",
-      "Beat {farmer-cheese} with {sugar}, remaining {butter}, {eggs}, {flour}, {vanilla} and a little grated {lemon} zest until smooth. Fold in {raisins}.",
+      "Beat {cottage-cheese} with {sugar}, remaining {butter}, {eggs}, {flour}, {vanilla} and a little grated {lemon} zest until smooth. Fold in {raisins}.",
       "Pour over the base and bake at 160 °C for 55–65 minutes until just set. Cool slowly in the switched-off oven before chilling."
     ]
   },
@@ -1586,7 +1586,7 @@ KITCHEN.add(
         20
       ],
       [
-        "stock",
+        "vegetable-stock",
         120
       ],
       [
@@ -1605,7 +1605,7 @@ KITCHEN.add(
     "steps": [
       "Score the skin of {duck-breast}, season with {salt}, {black-pepper} and {marjoram}. Start skin-side down in a cold pan and render until golden.",
       "Turn the duck, cook 2 minutes, then finish in a 190 °C oven until cooked to your preference; rest.",
-      "Cook sliced {apple} and {onion} in {butter} in the duck pan. Add {stock} and {lemon-juice}, simmer to a light sauce and serve with sliced duck."
+      "Cook sliced {apple} and {onion} in {butter} in the duck pan. Add {vegetable-stock} and {lemon-juice}, simmer to a light sauce and serve with sliced duck."
     ]
   },
   {
@@ -1755,7 +1755,7 @@ KITCHEN.add(
         3
       ],
       [
-        "stock",
+        "vegetable-stock",
         1000
       ],
       [
@@ -1768,7 +1768,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Rinse {yellow-split-peas}. Add to {stock} with {bay-leaf} and simmer 35 minutes, skimming as needed.",
+      "Rinse {yellow-split-peas}. Add to {vegetable-stock} with {bay-leaf} and simmer 35 minutes, skimming as needed.",
       "Add diced {potatoes}, {carrot}, {onion}, {garlic} and sliced {smoked-sausage}; simmer until all is tender.",
       "Stir in {marjoram}, {salt} and {black-pepper}. Mash a few potatoes into the broth to thicken, then serve hot."
     ]
@@ -1798,7 +1798,7 @@ KITCHEN.add(
         3
       ],
       [
-        "stock",
+        "vegetable-stock",
         350
       ],
       [
@@ -1820,7 +1820,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Season slices of {pork-shoulder} with {salt}, {black-pepper} and {paprika}; brown in {oil}.",
-      "Add sliced {onion} and cook until golden. Stir in {mustard}, {bay-leaf} and {stock}.",
+      "Add sliced {onion} and cook until golden. Stir in {mustard}, {bay-leaf} and {vegetable-stock}.",
       "Cover and braise gently for 55–60 minutes until fork-tender; reduce the sauce briefly before serving."
     ]
   },
@@ -1853,7 +1853,7 @@ KITCHEN.add(
         20
       ],
       [
-        "stock",
+        "vegetable-stock",
         120
       ],
       [
@@ -1872,7 +1872,7 @@ KITCHEN.add(
     "steps": [
       "Score the skin of {duck-breast}; season with {salt}, {black-pepper} and {marjoram}. Start skin-side down in a cold pan and render until crisp and golden.",
       "Turn the duck and finish in a 190 °C oven until cooked to your preference; rest before slicing.",
-      "Cook sliced {apple} and {onion} in {butter} in the same pan. Add {stock} and {lemon-juice}, simmer to a light sauce and serve over the duck."
+      "Cook sliced {apple} and {onion} in {butter} in the same pan. Add {vegetable-stock} and {lemon-juice}, simmer to a light sauce and serve over the duck."
     ]
   },
   {
@@ -1900,7 +1900,7 @@ KITCHEN.add(
         400
       ],
       [
-        "farmer-cheese",
+        "cottage-cheese",
         250
       ],
       [
@@ -1921,7 +1921,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Boil {potatoes} until tender, mash and mix with crumbled {farmer-cheese}, sautéed {onion}, salt and pepper.",
+      "Boil {potatoes} until tender, mash and mix with crumbled {cottage-cheese}, sautéed {onion}, salt and pepper.",
       "Mix {flour}, {water}, {eggs} and a pinch of salt into a soft dough; rest 20 minutes.",
       "Roll thin, cut circles, add filling and seal edges firmly.",
       "Boil in salted water until pierogi float, then cook 2 minutes more; serve with browned {butter} and onion."

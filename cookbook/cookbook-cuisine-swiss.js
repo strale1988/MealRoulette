@@ -30,7 +30,7 @@ KITCHEN.add(
         150
       ],
       [
-        "stock",
+        "beef-stock",
         450
       ],
       [
@@ -57,7 +57,7 @@ KITCHEN.add(
     "steps": [
       "Heat {butter} in a heavy pan; soften {shallot}.",
       "Add {beef-strips} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
+      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
       "Sear the veal quickly in batches and set aside; sauté mushrooms and shallot, deglaze with white wine, reduce with stock and cream, then return the veal briefly.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -96,7 +96,7 @@ KITCHEN.add(
       ],
       [
         "bread",
-        "4 slices"
+        "4pc"
       ],
       [
         "black-pepper",
@@ -187,7 +187,7 @@ KITCHEN.add(
         70
       ],
       [
-        "smoked-bacon",
+        "bacon",
         120
       ],
       [
@@ -207,7 +207,7 @@ KITCHEN.add(
         350
       ],
       [
-        "stock",
+        "vegetable-stock",
         450
       ],
       [
@@ -233,7 +233,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat {oil} in a soup pot and soften {leek} without browning.",
-      "Add {stock} and {barley}, simmering gently until the main ingredient is tender.",
+      "Add {vegetable-stock} and {barley}, simmering gently until the main ingredient is tender.",
       "Sweat diced vegetables and bacon, stir in barley, add stock and simmer until the grains are tender; finish with a small splash of cream and parsley.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -247,7 +247,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "cabbage-leaves",
+        "cabbage",
         100
       ],
       [
@@ -263,7 +263,7 @@ KITCHEN.add(
         250
       ],
       [
-        "smoked-bacon",
+        "bacon",
         120
       ],
       [
@@ -279,7 +279,7 @@ KITCHEN.add(
         150
       ],
       [
-        "stock",
+        "vegetable-stock",
         450
       ],
       [
@@ -297,7 +297,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat the oven to 190 °C and lightly grease a baking dish or line a tray.",
-      "Prepare {cabbage-leaves} with the other listed ingredients, layer or shape the mixture evenly and season it well.",
+      "Prepare {cabbage} with the other listed ingredients, layer or shape the mixture evenly and season it well.",
       "Make a thick herb batter with chopped bacon, wrap spoonfuls in blanched leaves and arrange snugly in a baking dish; add a little stock and cream and bake covered until set.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]

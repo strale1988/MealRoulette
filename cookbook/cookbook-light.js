@@ -1170,7 +1170,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "salmon-fillet",
+        "salmon",
         300
       ],
       [
@@ -1199,7 +1199,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cook the {rice}. Heat oven to 200 °C and place {salmon-fillet} on a lined tray with {olive-oil}, salt and pepper.",
+      "Cook the {rice}. Heat oven to 200 °C and place {salmon} on a lined tray with {olive-oil}, salt and pepper.",
       "Roast salmon 10–14 minutes, depending on thickness, until just opaque and flaky.",
       "Grate or finely dice {cucumber}; mix with {yogurt}, chopped {dill} and lemon juice from half the {lemon}.",
       "Serve salmon over rice with cucumber yogurt and remaining lemon wedges."
@@ -1218,7 +1218,7 @@ KITCHEN.add(
         250
       ],
       [
-        "carrots",
+        "carrot",
         2
       ],
       [
@@ -1248,7 +1248,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Rinse {green-lentils} and simmer in water until tender but intact, 20–25 minutes; drain well.",
-      "Finely dice {carrots}, {celery} and {red-onion}. Add to the warm lentils so they soften slightly.",
+      "Finely dice {carrot}, {celery} and {red-onion}. Add to the warm lentils so they soften slightly.",
       "Whisk {dijon-mustard}, {red-wine-vinegar} and {olive-oil} into a dressing.",
       "Toss lentils with dressing and chopped {parsley}; season and serve warm or at room temperature."
     ]
@@ -1582,7 +1582,7 @@ KITCHEN.add(
       "Cut {carrot} into batons, toss with half the {olive-oil}, {cumin} and {salt}; roast at 210 °C until caramelized.",
       "Cook {lentils} until tender but intact; drain and cool slightly.",
       "Mix {yogurt} with {lemon} juice and chopped {mint}.",
-      "Toss lentils with carrots, remaining oil and {parsley}; serve with yogurt dressing."
+      "Toss {lentils} with carrots, remaining oil and {parsley}; serve with yogurt dressing."
     ]
   }
 ]

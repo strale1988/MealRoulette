@@ -322,11 +322,11 @@ KITCHEN.add(
         3
       ],
       [
-        "coriander-ground",
+        "ground-coriander",
         3
       ],
       [
-        "stock",
+        "fish-stock",
         450
       ],
       [
@@ -349,7 +349,7 @@ KITCHEN.add(
     "steps": [
       "Rinse {rice} if it is uncooked; prepare the other ingredients while it drains.",
       "Heat {olive-oil} and soften {onion}, then cook the main filling until fragrant.",
-      "Combine the ingredients with {stock} and cook covered until the rice is tender and the liquid is absorbed.",
+      "Combine the ingredients with {fish-stock} and cook covered until the rice is tender and the liquid is absorbed.",
       "Brown onions deeply to colour the stock, toast the rice with cumin and coriander, then cook it in the onion stock and serve with separately seared fish and lemon.",
       "Finish with a little {lemon} if needed, taste for seasoning and serve while the texture is at its best."
     ]
@@ -487,7 +487,7 @@ KITCHEN.add(
         "1pc"
       ],
       [
-        "stock",
+        "chicken-stock",
         450
       ],
       [
@@ -518,8 +518,8 @@ KITCHEN.add(
     "steps": [
       "Heat {oil} in a heavy pan; soften {onion}.",
       "Add {chicken-thigh} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Brown chicken with onion and warm spices, simmer until tender, then cook pearl couscous in the seasoned stock and fold through chickpeas before serving.",
+      "Add {chicken-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
+      "Brown chicken with onion and warm spices, simmer until tender, then cook pearl couscous in the seasoned stock and fold through {chickpeas} before serving.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
   },

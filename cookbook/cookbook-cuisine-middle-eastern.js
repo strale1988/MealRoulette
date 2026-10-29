@@ -1587,7 +1587,7 @@ KITCHEN.add(
     "steps": [
       "Heat the oven to 220 °C. Cut {cauliflower} into florets and toss with {olive-oil} and {cumin}. Roast 25 minutes until browned.",
       "Warm drained {chickpeas} in a pan with a splash of water and a pinch of salt.",
-      "Whisk {tahini}, {lemon} juice, crushed {garlic} and enough water to make a pourable sauce. Serve cauliflower and chickpeas with the sauce and {parsley}."
+      "Whisk {tahini}, {lemon} juice, crushed {garlic} and enough water to make a pourable sauce. Serve cauliflower and {chickpeas} with the sauce and {parsley}."
     ]
   },
   {
@@ -1690,7 +1690,7 @@ KITCHEN.add(
       "Tear {flatbread} into pieces and toast until crisp.",
       "Chop {cucumber}, {tomato}, {lettuce} and {radish}; rinse and drain {chickpeas}.",
       "Whisk lemon juice from {lemon}, {olive-oil}, {sumac}, salt and pepper.",
-      "Toss vegetables and chickpeas with the dressing, then add toasted flatbread and chopped {mint} just before serving."
+      "Toss vegetables and {chickpeas} with the dressing, then add toasted flatbread and chopped {mint} just before serving."
     ],
     "cuisine": "Middle Eastern"
   },
@@ -1727,7 +1727,7 @@ KITCHEN.add(
         45
       ],
       [
-        "stock",
+        "vegetable-stock",
         700
       ],
       [
@@ -1738,7 +1738,7 @@ KITCHEN.add(
     "steps": [
       "Rinse the {lentils} and simmer in water for 10–12 minutes until partly tender; drain.",
       "Slice the {onion} thinly. Fry slowly in {olive-oil} until deep brown and crisp; remove half for topping.",
-      "Add {cumin} and {coriander} to the remaining onions, then stir in {rice}, lentils and {stock}. Cover and simmer 18–20 minutes until tender.",
+      "Add {cumin} and {coriander} to the remaining onions, then stir in {rice}, {lentils} and {vegetable-stock}. Cover and simmer 18–20 minutes until tender.",
       "Rest covered 10 minutes, fluff gently and top with reserved crispy onions. Serve with {yogurt}."
     ]
   },
@@ -1751,7 +1751,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         800
       ],
       [
@@ -1784,7 +1784,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat oven to 210 °C. Toss {chicken-thighs} with {olive-oil}, half the {sumac}, {allspice} and {salt}. Roast 30–35 minutes until cooked.",
+      "Heat oven to 210 °C. Toss {chicken-thigh} with {olive-oil}, half the {sumac}, {allspice} and {salt}. Roast 30–35 minutes until cooked.",
       "Slice {onion} thinly and cook slowly in a generous splash of olive oil until soft and golden, about 20 minutes.",
       "Stir remaining sumac through the onions and toast the {pine-nuts} in a dry pan until golden.",
       "Spread onions over warm {flatbread}, top with chicken and pine nuts, and spoon over roasting juices."
@@ -1807,7 +1807,7 @@ KITCHEN.add(
         400
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         "1pc"
       ],
       [
@@ -1836,7 +1836,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cook diced {onion} and sliced {bell-pepper} in {olive-oil} until soft.",
+      "Cook diced {onion} and sliced {red-pepper} in {olive-oil} until soft.",
       "Add minced {garlic}, {cumin} and {paprika}; stir 30 seconds, then add chopped {tomato} and {salt}.",
       "Simmer until thick and saucy, about 10 minutes. Make four wells and crack in {eggs}.",
       "Cover and cook gently until whites are set and yolks remain soft."
@@ -1851,7 +1851,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ],
       [
@@ -1888,7 +1888,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cook {chicken-thighs} with a splash of water until tender; shred. Slowly cook sliced {red-onion} in {olive-oil} until soft and golden.",
+      "Cook {chicken-thigh} with a splash of water until tender; shred. Slowly cook sliced {red-onion} in {olive-oil} until soft and golden.",
       "Mix chicken with onions, {sumac}, {allspice}, {lemon-juice} and {salt}. Toast {pine-nuts} and fold most through the filling.",
       "Fill {flatbread}, roll tightly and bake seam-side down at 200 °C for 10–12 minutes until crisp. Scatter remaining pine nuts over the top."
     ]
@@ -1902,11 +1902,11 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "basmati-rice",
+        "rice",
         300
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         500
       ],
       [
@@ -1934,7 +1934,7 @@ KITCHEN.add(
         2
       ],
       [
-        "stock",
+        "chicken-stock",
         600
       ],
       [
@@ -1951,8 +1951,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Season {chicken-thighs} with {cumin}, {cinnamon}, {allspice} and {salt}; brown in a pot and set aside. Fry or roast slices of {aubergine} and florets of {cauliflower} until golden.",
-      "Layer chicken, vegetables, sliced {onion} and rinsed {basmati-rice} in a deep pot. Pour in hot {stock} just to cover.",
+      "Season {chicken-thigh} with {cumin}, {cinnamon}, {allspice} and {salt}; brown in a pot and set aside. Fry or roast slices of {aubergine} and florets of {cauliflower} until golden.",
+      "Layer chicken, vegetables, sliced {onion} and rinsed {rice} in a deep pot. Pour in hot {chicken-stock} just to cover.",
       "Cover and simmer gently until rice is tender and liquid absorbed, 30–35 minutes. Rest 10 minutes, invert onto a platter and serve with {yogurt}."
     ]
   },
@@ -2334,7 +2334,7 @@ KITCHEN.add(
         100
       ],
       [
-        "stock",
+        "chicken-stock",
         450
       ],
       [

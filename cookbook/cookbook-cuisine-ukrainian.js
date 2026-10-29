@@ -10,7 +10,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "beef-stew-meat",
+        "beef-chuck",
         450
       ],
       [
@@ -38,7 +38,7 @@ KITCHEN.add(
         20
       ],
       [
-        "stock",
+        "beef-stock",
         450
       ],
       [
@@ -64,7 +64,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat {oil} in a soup pot and soften {onion} without browning.",
-      "Add {stock} and {beef-stew-meat}, simmering gently until the main ingredient is tender.",
+      "Add {beef-stock} and {beef-chuck}, simmering gently until the main ingredient is tender.",
       "Cook the beef until tender; add beetroot and tomato paste first to preserve the deep colour, then add cabbage and potatoes and simmer until just soft.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -78,7 +78,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "cabbage-leaves",
+        "cabbage",
         100
       ],
       [
@@ -102,7 +102,7 @@ KITCHEN.add(
         200
       ],
       [
-        "stock",
+        "vegetable-stock",
         450
       ],
       [
@@ -250,7 +250,7 @@ KITCHEN.add(
         80
       ],
       [
-        "smoked-bacon",
+        "bacon",
         120
       ],
       [
@@ -290,7 +290,7 @@ KITCHEN.add(
         "2pc"
       ],
       [
-        "farmer-cheese",
+        "cottage-cheese",
         200
       ],
       [
@@ -316,7 +316,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Whisk the batter until smooth and let it rest briefly so the flour hydrates.",
-      "Cook {farmer-cheese} in a lightly greased pan over medium heat, turning or folding once the surface sets.",
+      "Cook {cottage-cheese} in a lightly greased pan over medium heat, turning or folding once the surface sets.",
       "Cook very thin crêpes, mix farmer cheese with sugar and vanilla, roll the filling inside each crêpe and bake briefly in butter until warmed through.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -442,7 +442,7 @@ KITCHEN.add(
         "1pc"
       ],
       [
-        "stock",
+        "vegetable-stock",
         450
       ],
       [
@@ -472,7 +472,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat {oil} in a soup pot and soften {onion} without browning.",
-      "Add {stock} and {spinach}, simmering gently until the main ingredient is tender.",
+      "Add {vegetable-stock} and {spinach}, simmering gently until the main ingredient is tender.",
       "Simmer potatoes and vegetables in stock until tender, add greens at the end for a bright tang, then ladle over chopped boiled egg and finish with sour cream.",
       "Finish with a little {lemon} if needed, taste for seasoning and serve while the texture is at its best."
     ]

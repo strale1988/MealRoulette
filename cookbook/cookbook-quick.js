@@ -1073,7 +1073,7 @@ KITCHEN.add(
     "steps": [
       "Drain {tuna} and {white-beans}. Thinly slice {red-onion} and dice {cucumber}.",
       "Whisk lemon juice from {lemon} with {olive-oil}, salt and black pepper.",
-      "Gently toss the tuna, beans, onion and cucumber with the dressing and chopped {parsley}. Rest 5 minutes before serving."
+      "Gently toss the {tuna}, beans, onion and cucumber with the dressing and chopped {parsley}. Rest 5 minutes before serving."
     ]
   },
   {
@@ -1168,7 +1168,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "green-peas",
+        "peas",
         200
       ],
       [
@@ -1198,7 +1198,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Toast the {bread}.",
-      "Warm {butter} in a small pan and gently cook chopped {garlic} for 30 seconds. Add {green-peas} and 2 tablespoons of water; cook until tender.",
+      "Warm {butter} in a small pan and gently cook chopped {garlic} for 30 seconds. Add {peas} and 2 tablespoons of water; cook until tender.",
       "Mash half the peas with lemon juice from {lemon}, chopped {mint}, salt and pepper. Spoon over toast.",
       "Top with remaining peas and crumbled {feta}."
     ]
@@ -1211,8 +1211,8 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "tortillas",
-        4
+        "flour-tortillas",
+        "4pc"
       ],
       [
         "black-beans",
@@ -1245,7 +1245,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Drain and mash {black-beans} roughly with {cumin}, {smoked-paprika} and a pinch of salt.",
-      "Dice {red-pepper}. Spread beans over half of each {tortillas}, add pepper and grated {cheddar}, then fold closed.",
+      "Dice {red-pepper}. Spread beans over half of each {flour-tortillas}, add pepper and grated {cheddar}, then fold closed.",
       "Brush a skillet lightly with {olive-oil} and cook each quesadilla for 2–3 minutes per side until crisp and the cheese melts.",
       "Cut into wedges and serve with {yogurt}."
     ]
@@ -1306,7 +1306,7 @@ KITCHEN.add(
         200
       ],
       [
-        "miso",
+        "miso-paste",
         25
       ],
       [
@@ -1333,7 +1333,7 @@ KITCHEN.add(
     "steps": [
       "Cook the {noodles} according to the packet; reserve a little cooking water.",
       "Melt {butter} in a skillet and gently cook minced {garlic} for 30 seconds.",
-      "Stir in {miso}, {soy-sauce} and a splash of noodle water until glossy. Toss noodles through the sauce.",
+      "Stir in {miso-paste}, {soy-sauce} and a splash of noodle water until glossy. Toss noodles through the sauce.",
       "Finish with sliced {spring-onion} and {sesame-seeds}; serve immediately."
     ]
   },
@@ -1380,9 +1380,9 @@ KITCHEN.add(
     ],
     "steps": [
       "Drain and dry the {chickpeas}. Toss with {cumin}, {paprika} and half the {olive-oil}.",
-      "Pan-fry chickpeas over medium-high heat for 8–10 minutes until crisp in spots.",
+      "Pan-fry {chickpeas} over medium-high heat for 8–10 minutes until crisp in spots.",
       "Mix {yogurt} with lemon juice and a pinch of salt. Dice the {cucumber}.",
-      "Warm {pita-bread}, fill with chickpeas and cucumber, and spoon over lemon yogurt."
+      "Warm {pita-bread}, fill with {chickpeas} and cucumber, and spoon over lemon yogurt."
     ]
   },
   {
@@ -1405,7 +1405,7 @@ KITCHEN.add(
         25
       ],
       [
-        "miso",
+        "miso-paste",
         20
       ],
       [
@@ -1424,7 +1424,7 @@ KITCHEN.add(
     "steps": [
       "Cook {noodles} according to the packet and reserve a little cooking water.",
       "Sauté sliced {mushrooms} in a hot pan until browned. Add {butter} and {garlic}; cook 30 seconds.",
-      "Stir {miso} and {soy-sauce} with a splash of noodle water, add noodles and toss until glossy. Top with {spring-onion}."
+      "Stir {miso-paste} and {soy-sauce} with a splash of noodle water, add noodles and toss until glossy. Top with {spring-onion}."
     ]
   },
   {
@@ -1474,7 +1474,7 @@ KITCHEN.add(
     "steps": [
       "Prepare {couscous} according to its packet. Rinse and drain {chickpeas}; toss with {olive-oil} and {paprika}.",
       "Pan-fry slices of {halloumi} until golden on both sides.",
-      "Dice {cucumber} and {tomato}; toss with lemon juice from {lemon} and chopped {parsley}. Serve over couscous with chickpeas and halloumi."
+      "Dice {cucumber} and {tomato}; toss with lemon juice from {lemon} and chopped {parsley}. Serve over couscous with {chickpeas} and halloumi."
     ]
   },
   {
@@ -1576,7 +1576,7 @@ KITCHEN.add(
     "steps": [
       "Drain {tuna} and {white-beans}. Mix with finely sliced {red-onion}, {lemon-juice}, {olive-oil}, {capers}, chopped {parsley} and {black-pepper}.",
       "Toast {bread} until crisp.",
-      "Pile the tuna-bean mixture onto toast and serve immediately."
+      "Pile the mixture onto toast and serve immediately."
     ]
   },
   {

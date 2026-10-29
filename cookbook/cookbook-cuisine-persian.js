@@ -902,7 +902,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         700
       ],
       [
@@ -918,7 +918,7 @@ KITCHEN.add(
         70
       ],
       [
-        "stock",
+        "chicken-stock",
         500
       ],
       [
@@ -940,8 +940,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Pulse the {walnuts} into a fine meal, taking care not to turn them into butter.",
-      "Brown the {chicken-thighs} in {olive-oil}; remove. Soften the chopped {onion} in the same pot.",
-      "Stir in the walnuts and {stock}, return the chicken, cover and simmer gently for 40 minutes.",
+      "Brown the {chicken-thigh} in {olive-oil}; remove. Soften the chopped {onion} in the same pot.",
+      "Stir in the walnuts and {chicken-stock}, return the chicken, cover and simmer gently for 40 minutes.",
       "Add the {pomegranate-molasses}, {sugar}, {salt} and {black-pepper}. Simmer uncovered for 15–20 minutes until glossy and tender; serve with rice."
     ]
   },
@@ -1068,7 +1068,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "basmati-rice",
+        "rice",
         180
       ],
       [
@@ -1113,7 +1113,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Rinse and parboil {basmati-rice} until nearly tender; drain. Bloom {saffron} in a tablespoon of hot water.",
+      "Rinse and parboil {rice} until nearly tender; drain. Bloom {saffron} in a tablespoon of hot water.",
       "Brown {chicken-thigh} with sliced {onion}, {turmeric} and {salt}; add a splash of water, cover and cook until tender.",
       "Sauté {barberries} briefly in {butter} with {sugar} and {lemon-juice}. Steam the rice with saffron and remaining butter, then top with barberries and chopped {pistachios}; serve with chicken."
     ]
@@ -1127,11 +1127,11 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "basmati-rice",
+        "rice",
         300
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         350
       ],
       [
@@ -1164,7 +1164,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Parboil {basmati-rice} in salted water until the grains are flexible but still firm; drain. Cook chopped {onion} with {chicken-thighs}, a little water and {salt} until the chicken is tender, then shred and season with {lemon-juice}.",
+      "Parboil {rice} in salted water until the grains are flexible but still firm; drain. Cook chopped {onion} with {chicken-thigh}, a little water and {salt} until the chicken is tender, then shred and season with {lemon-juice}.",
       "Bloom {saffron} in 2 tbsp hot water. Mix {yogurt}, {eggs}, saffron and half the melted {butter}; fold in one-third of the rice.",
       "Butter a deep ovenproof pan with remaining {butter}, press in the saffron rice, add chicken, then remaining rice. Cover tightly and bake at 190 °C for 50–55 minutes until the bottom forms a golden crust."
     ]
@@ -1222,7 +1222,7 @@ KITCHEN.add(
         3
       ],
       [
-        "stock",
+        "vegetable-stock",
         900
       ],
       [
@@ -1239,7 +1239,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Soften sliced {onion} in half the {oil}; add {garlic} and {turmeric}. Stir in {chickpeas}, {kidney-beans}, {lentils} and {stock}; simmer until the lentils are tender.",
+      "Soften sliced {onion} in half the {oil}; add {garlic} and {turmeric}. Stir in {chickpeas}, {kidney-beans}, {lentils} and {vegetable-stock}; simmer until the {lentils} are tender.",
       "Add chopped {spinach}, {parsley}, {cilantro} and {dill}; simmer 10 minutes, then add {noodles} and cook until tender. Season with {salt}.",
       "Fry the remaining onion in remaining {oil} until crisp. Serve the soup with {yogurt} and the crisp onions on top."
     ]
@@ -1281,7 +1281,7 @@ KITCHEN.add(
         3
       ],
       [
-        "stock",
+        "beef-stock",
         400
       ],
       [
@@ -1299,7 +1299,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Brown cubes of {lamb-shoulder} in {oil}; add diced {onion} and cook 5 minutes. Stir in {turmeric} and {salt}.",
-      "Add {stock} and {dried-lime}; cover and simmer 35 minutes. Sauté sliced {celery} with chopped {parsley} and {mint} until lightly golden.",
+      "Add {beef-stock} and {dried-lime}; cover and simmer 35 minutes. Sauté sliced {celery} with chopped {parsley} and {mint} until lightly golden.",
       "Stir celery and herbs into the lamb and simmer 20–25 minutes until tender. Finish with {lemon-juice} and adjust seasoning."
     ]
   },
@@ -1312,7 +1312,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         500
       ],
       [
@@ -1346,7 +1346,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Bloom {saffron} in 1 tbsp hot water. Mix with {yogurt}, grated {onion}, {lemon-juice}, {olive-oil} and {salt}.",
-      "Cut {chicken-thighs} into large pieces and marinate for at least 30 minutes. Thread onto skewers.",
+      "Cut {chicken-thigh} into large pieces and marinate for at least 30 minutes. Thread onto skewers.",
       "Grill or broil, turning often, until charred in spots and cooked through. Grill the {tomato} alongside and serve with rice."
     ]
   },
@@ -1359,7 +1359,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "beef-stew-meat",
+        "beef-chuck",
         350
       ],
       [
@@ -1387,7 +1387,7 @@ KITCHEN.add(
         1
       ],
       [
-        "stock",
+        "beef-stock",
         500
       ],
       [
@@ -1404,8 +1404,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Soak {yellow-split-peas} for 20 minutes, then drain. Brown {beef-stew-meat} and chopped {onion} in {oil}.",
-      "Stir in {tomato-paste}, {turmeric} and {cinnamon}; add split peas, {dried-lime}, {stock} and {salt}. Cover and simmer until beef and peas are tender, about 55 minutes.",
+      "Soak {yellow-split-peas} for 20 minutes, then drain. Brown {beef-chuck} and chopped {onion} in {oil}.",
+      "Stir in {tomato-paste}, {turmeric} and {cinnamon}; add split peas, {dried-lime}, {beef-stock} and {salt}. Cover and simmer until beef and peas are tender, about 55 minutes.",
       "Cut {potatoes} into thin matchsticks and fry or roast until crisp. Serve the stew topped with potatoes and rice."
     ]
   },
@@ -1450,7 +1450,7 @@ KITCHEN.add(
         1
       ],
       [
-        "stock",
+        "beef-stock",
         250
       ],
       [
@@ -1468,7 +1468,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Brown {lamb-mince} with diced {onion} in {oil}, breaking the meat into small pieces. Add {garlic}, {turmeric} and {cinnamon}.",
-      "Stir in {tomato-paste}, {canned-tomatoes}, {stock} and {salt}; simmer 20 minutes. Trim the {okra} and add it whole.",
+      "Stir in {tomato-paste}, {canned-tomatoes}, {beef-stock} and {salt}; simmer 20 minutes. Trim the {okra} and add it whole.",
       "Simmer gently 15–20 minutes until the okra is tender but intact. Finish with {lemon-juice} and serve with steamed rice."
     ]
   },
@@ -1630,7 +1630,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "basmati-rice",
+        "rice",
         180
       ],
       [
@@ -1659,7 +1659,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Rinse {basmati-rice} if it is uncooked; prepare the other ingredients while it drains.",
+      "Rinse {rice} if it is uncooked; prepare the other ingredients while it drains.",
       "Warm the cooking fat and season the main ingredients before adding the grain.",
       "Combine the ingredients with {yogurt} and cook covered until the rice is tender and the liquid is absorbed.",
       "Parboil rinsed rice, spread a yogurt-saffron layer over the base of an oiled pot, mound rice above it and steam over low heat until a crisp crust forms underneath.",
@@ -1675,7 +1675,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "basmati-rice",
+        "rice",
         180
       ],
       [
@@ -1703,7 +1703,7 @@ KITCHEN.add(
         40
       ],
       [
-        "stock",
+        "chicken-stock",
         450
       ],
       [
@@ -1720,9 +1720,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Rinse {basmati-rice} if it is uncooked; prepare the other ingredients while it drains.",
+      "Rinse {rice} if it is uncooked; prepare the other ingredients while it drains.",
       "Heat {butter} and soften {onion}, then cook the main filling until fragrant.",
-      "Combine the ingredients with {stock} and cook covered until the rice is tender and the liquid is absorbed.",
+      "Combine the ingredients with {chicken-stock} and cook covered until the rice is tender and the liquid is absorbed.",
       "Cook the rice until nearly tender, steam with saffron butter and separately sauté barberries with a little sugar; roast or braise the chicken with onion and serve over the rice with toasted almonds.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]

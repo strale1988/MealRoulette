@@ -10,7 +10,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         700
       ],
       [
@@ -31,7 +31,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Season {chicken-thighs}; cut {sweet-potato}, {potatoes} and {carrot} into large chunks.",
+      "Season {chicken-thigh}; cut {sweet-potato}, {potatoes} and {carrot} into large chunks.",
       "Layer chicken and vegetables in a covered roasting dish with a splash of water.",
       "Cover tightly and roast at 170°C until everything is tender; add {cabbage} for the final 20 minutes."
     ]

@@ -10,11 +10,11 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "ground-beef",
+        "beef-mince",
         350
       ],
       [
-        "ground-pork",
+        "pork-mince",
         250
       ],
       [
@@ -42,7 +42,7 @@ KITCHEN.add(
         20
       ],
       [
-        "stock",
+        "beef-stock",
         450
       ],
       [
@@ -51,9 +51,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Soak {breadcrumbs} in {milk}. Finely grate the {onion}; mix with {ground-beef}, {ground-pork}, {eggs}, salt and pepper.",
+      "Soak {breadcrumbs} in {milk}. Finely grate the {onion}; mix with {beef-mince}, {pork-mince}, {eggs}, salt and pepper.",
       "Shape into small meatballs. Brown in batches in a skillet with a little {butter}; remove.",
-      "Melt remaining butter, stir in {flour} and cook 1 minute. Gradually whisk in {stock}; simmer until smooth.",
+      "Melt remaining butter, stir in {flour} and cook 1 minute. Gradually whisk in {beef-stock}; simmer until smooth.",
       "Stir in {cream}, return meatballs and simmer 8–10 minutes until cooked through. Serve with potatoes and lingonberry jam if available."
     ]
   },
@@ -66,7 +66,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "salmon-fillet",
+        "salmon",
         500
       ],
       [
@@ -107,7 +107,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Pat {salmon-fillet} dry. Mix {salt}, {sugar}, {black-pepper} and finely chopped {dill}; press all over the fish.",
+      "Pat {salmon} dry. Mix {salt}, {sugar}, {black-pepper} and finely chopped {dill}; press all over the fish.",
       "Wrap tightly and refrigerate under a light weight for 24–36 hours, turning once. Scrape off excess cure and slice thinly.",
       "Whisk {dijon-mustard}, {honey}, {lemon-juice} and {oil} for the sauce. Serve the gravlax with {rye-bread} and extra dill."
     ]
@@ -168,7 +168,7 @@ KITCHEN.add(
         250
       ],
       [
-        "smoked-bacon",
+        "bacon",
         180
       ],
       [
@@ -192,7 +192,7 @@ KITCHEN.add(
         1
       ],
       [
-        "stock",
+        "vegetable-stock",
         1000
       ],
       [
@@ -205,8 +205,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Rinse {yellow-split-peas} and simmer in {stock} with {bay-leaf} for 35 minutes, skimming as needed.",
-      "Add diced {smoked-bacon}, {onion}, {carrot}, {thyme} and {marjoram}. Simmer until the peas soften and thicken the soup, 25–30 minutes more.",
+      "Rinse {yellow-split-peas} and simmer in {vegetable-stock} with {bay-leaf} for 35 minutes, skimming as needed.",
+      "Add diced {bacon}, {onion}, {carrot}, {thyme} and {marjoram}. Simmer until the peas soften and thicken the soup, 25–30 minutes more.",
       "Season with {salt}; serve with a small spoon of {mustard} on the side."
     ]
   },
@@ -274,7 +274,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "ground-beef",
+        "beef-mince",
         300
       ],
       [
@@ -315,7 +315,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Keep the {ground-beef}, {cream} and {egg-yolks} very cold. Mix gently with {breadcrumbs}, {salt} and {white-pepper} until just combined; shape into two soft patties.",
+      "Keep the {beef-mince}, {cream} and {egg-yolks} very cold. Mix gently with {breadcrumbs}, {salt} and {white-pepper} until just combined; shape into two soft patties.",
       "Pan-fry gently in half the {butter} over medium-low heat until golden and cooked through, turning carefully.",
       "Boil {potatoes} and mash with remaining {butter} and {milk}. Serve patties with the mash and warm {peas}."
     ]
@@ -592,7 +592,7 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "beef-stew-meat",
+        "beef-chuck",
         550
       ],
       [
@@ -612,7 +612,7 @@ KITCHEN.add(
         2
       ],
       [
-        "stock",
+        "beef-stock",
         750
       ],
       [
@@ -637,8 +637,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Brown cubes of {beef-stew-meat} in {butter}; add sliced {onion} and cook until softened.",
-      "Sprinkle over {flour}; stir well, then add {stock}, {allspice}, {bay-leaf}, {salt} and {black-pepper}. Cover and simmer gently for 70 minutes.",
+      "Brown cubes of {beef-chuck} in {butter}; add sliced {onion} and cook until softened.",
+      "Sprinkle over {flour}; stir well, then add {beef-stock}, {allspice}, {bay-leaf}, {salt} and {black-pepper}. Cover and simmer gently for 70 minutes.",
       "Add sliced {carrot} and cook another 20–25 minutes until tender. Serve with boiled {potatoes}."
     ]
   },
@@ -710,7 +710,7 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         450
       ],
       [
@@ -718,7 +718,7 @@ KITCHEN.add(
         2
       ],
       [
-        "smoked-bacon",
+        "bacon",
         120
       ],
       [
@@ -747,9 +747,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cook {rice} according to package instructions. Cut {chicken-thighs} into bite-size pieces, season with {salt} and {black-pepper}, and brown in a skillet.",
+      "Cook {rice} according to package instructions. Cut {chicken-thigh} into bite-size pieces, season with {salt} and {black-pepper}, and brown in a skillet.",
       "Place chicken in a baking dish. Slice {banana} over it; mix {cream} with {sweet-chilli-sauce} and pour on top.",
-      "Scatter chopped {smoked-bacon} and {peanuts} over the dish. Bake at 200 °C for 20–25 minutes until bubbling and chicken is cooked. Serve with rice."
+      "Scatter chopped {bacon} and {peanuts} over the dish. Bake at 200 °C for 20–25 minutes until bubbling and chicken is cooked. Serve with rice."
     ]
   },
   {
@@ -812,7 +812,7 @@ KITCHEN.add(
         350
       ],
       [
-        "smoked-bacon",
+        "bacon",
         150
       ],
       [
@@ -841,7 +841,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Fry chopped {smoked-bacon} until browned; remove and keep warm. Cook sliced {onion} in the rendered fat until soft.",
+      "Fry chopped {bacon} until browned; remove and keep warm. Cook sliced {onion} in the rendered fat until soft.",
       "Add drained {pinto-beans}, {brown-sugar}, {vinegar}, {mustard} and {black-pepper}; simmer until glossy and the sauce coats the beans.",
       "Stir in {butter} and return the bacon to the pan. Serve with rye bread or potatoes."
     ]
@@ -1044,7 +1044,7 @@ KITCHEN.add(
     "ing": [
       [
         "rye-bread",
-        "4 slices"
+        "4pc"
       ],
       [
         "wholemeal-flour",
@@ -1175,7 +1175,7 @@ KITCHEN.add(
         120
       ],
       [
-        "smoked-bacon",
+        "bacon",
         120
       ],
       [
@@ -1215,7 +1215,7 @@ KITCHEN.add(
         350
       ],
       [
-        "left-roast-meat",
+        "left-beef",
         350
       ],
       [

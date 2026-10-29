@@ -1105,7 +1105,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "carrots",
+        "carrot",
         400
       ],
       [
@@ -1134,7 +1134,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat oven to 210 °C. Toss {carrots} with a little {olive-oil} and roast 25 minutes until tender and caramelized.",
+      "Heat oven to 210 °C. Toss {carrot} with a little {olive-oil} and roast 25 minutes until tender and caramelized.",
       "Blend roasted carrots with drained {chickpeas}, {tahini}, juice of the {lemon}, {garlic} and {cumin}.",
       "Add cold water a tablespoon at a time until creamy, then adjust salt and lemon.",
       "Serve with a drizzle of {olive-oil} and vegetables or flatbread."

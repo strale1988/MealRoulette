@@ -721,7 +721,7 @@ KITCHEN.add(
     "steps": [
       "Heat the oven to 220 °C. Cut {carrot} into batons and toss with {olive-oil} and {ras-el-hanout}. Roast 20 minutes until caramelized.",
       "Prepare {couscous} according to the package directions and fluff with a fork. Warm drained {chickpeas}.",
-      "Fold carrots and chickpeas through the couscous with {lemon} juice and chopped {mint}. Serve with {yogurt}."
+      "Fold carrots and {chickpeas} through the couscous with {lemon} juice and chopped {mint}. Serve with {yogurt}."
     ]
   },
   {
@@ -808,7 +808,7 @@ KITCHEN.add(
         3
       ],
       [
-        "coriander-ground",
+        "ground-coriander",
         3
       ],
       [
@@ -822,7 +822,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Dice {onion}, {carrot} and {celery}; mince {garlic}.",
-      "Cook vegetables in a little olive oil for 6 minutes. Add {cumin}, {coriander-ground}, {paprika} and garlic.",
+      "Cook vegetables in a little olive oil for 6 minutes. Add {cumin}, {ground-coriander}, {paprika} and garlic.",
       "Stir in rinsed {brown-lentils}, {canned-tomatoes} and {vegetable-stock}. Bring to a boil, then simmer 25 minutes until lentils are tender.",
       "Season and add water if you prefer a thinner stew."
     ],
@@ -1211,11 +1211,11 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "eggplant",
+        "aubergine",
         600
       ],
       [
-        "tomatoes",
+        "tomato",
         350
       ],
       [
@@ -1248,7 +1248,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cube the {eggplant}; chop the {tomatoes} and {garlic}.",
+      "Cube the {aubergine}; chop the {tomato} and {garlic}.",
       "Sauté eggplant in the {olive-oil} until golden and softened, adding a splash of water if needed.",
       "Add tomatoes, garlic, {cumin}, {paprika} and {salt}. Cook uncovered 15–20 minutes, mashing gently as it softens.",
       "Finish with juice from the {lemon} and chopped {cilantro}. Serve warm or chilled with flatbread."
@@ -1295,7 +1295,7 @@ KITCHEN.add(
         25
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         "1pc"
       ],
       [
@@ -1305,7 +1305,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Chop {cilantro}, {parsley} and {garlic}; mix with {lemon} juice, {cumin}, {paprika} and {olive-oil}.",
-      "Arrange sliced {bell-pepper} and {tomato} in a baking dish; place {white-fish} on top.",
+      "Arrange sliced {red-pepper} and {tomato} in a baking dish; place {white-fish} on top.",
       "Spread chermoula over fish and vegetables. Bake at 200 °C for 15–20 minutes, until fish flakes easily."
     ]
   },
@@ -1318,7 +1318,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         "6pc"
       ],
       [
@@ -1354,7 +1354,7 @@ KITCHEN.add(
         "1pc"
       ],
       [
-        "stock",
+        "chicken-stock",
         300
       ],
       [
@@ -1367,8 +1367,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Brown {chicken-thighs} in {olive-oil}; remove. Cook sliced {onion} until soft, then add {garlic}, {ginger}, {cumin}, {turmeric} and {cinnamon}.",
-      "Return chicken and add {stock}. Cover and simmer 35–40 minutes until nearly tender.",
+      "Brown {chicken-thigh} in {olive-oil}; remove. Cook sliced {onion} until soft, then add {garlic}, {ginger}, {cumin}, {turmeric} and {cinnamon}.",
+      "Return chicken and add {chicken-stock}. Cover and simmer 35–40 minutes until nearly tender.",
       "Stir in {olives} and chopped rind of {preserved-lemon}; simmer uncovered 10 minutes to reduce the sauce. Finish with {coriander}."
     ]
   },
@@ -1472,7 +1472,7 @@ KITCHEN.add(
         900
       ],
       [
-        "small-pasta",
+        "pasta",
         50
       ],
       [
@@ -1486,8 +1486,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Cook diced {onion} and {celery} in {olive-oil}; add {cumin}, {cinnamon} and chopped {tomato}.",
-      "Add {chickpeas}, {lentils} and {vegetable-stock}; simmer 30 minutes until lentils are tender.",
-      "Add {small-pasta} and cook until tender. Finish with chopped {coriander}, {parsley} and {salt}."
+      "Add {chickpeas}, {lentils} and {vegetable-stock}; simmer 30 minutes until {lentils} are tender.",
+      "Add {pasta} and cook until tender. Finish with chopped {coriander}, {parsley} and {salt}."
     ]
   },
   {
@@ -1538,7 +1538,7 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         450
       ],
       [
@@ -1566,11 +1566,11 @@ KITCHEN.add(
         1
       ],
       [
-        "stock",
+        "chicken-stock",
         250
       ],
       [
-        "filo-pastry",
+        "phyllo-pastry",
         200
       ],
       [
@@ -1587,9 +1587,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Simmer {chicken-thighs} with chopped {onion}, {ginger}, {cinnamon}, {saffron}, {salt} and {stock} until cooked. Shred chicken and reduce the sauce.",
+      "Simmer {chicken-thigh} with chopped {onion}, {ginger}, {cinnamon}, {saffron}, {salt} and {chicken-stock} until cooked. Shred chicken and reduce the sauce.",
       "Beat {eggs} into the reduced sauce over low heat until softly scrambled and thick. Stir in the chicken and chopped {almonds}.",
-      "Layer buttered sheets of {filo-pastry} in a pie dish, add filling and fold over. Brush with remaining {butter} and bake at 190 °C for 25–30 minutes. Dust lightly with {icing-sugar} before serving."
+      "Layer buttered sheets of {phyllo-pastry} in a pie dish, add filling and fold over. Brush with remaining {butter} and bake at 190 °C for 25–30 minutes. Dust lightly with {icing-sugar} before serving."
     ]
   },
   {
@@ -1695,7 +1695,7 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         500
       ],
       [
@@ -1723,7 +1723,7 @@ KITCHEN.add(
         1
       ],
       [
-        "stock",
+        "chicken-stock",
         700
       ],
       [
@@ -1741,8 +1741,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Soften sliced {onion} in {olive-oil}; add {ginger}, {turmeric}, {fenugreek}, {saffron} and {salt}.",
-      "Add {chicken-thighs}, {lentils} and {stock}; simmer covered until the chicken is tender and lentils are soft, 45–50 minutes.",
-      "Tear {flatbread} into strips and spread in a deep serving dish. Spoon the chicken, lentils and broth over the bread so it absorbs the sauce."
+      "Add {chicken-thigh}, {lentils} and {chicken-stock}; simmer covered until the chicken is tender and {lentils} are soft, 45–50 minutes.",
+      "Tear {flatbread} into strips and spread in a deep serving dish. Spoon the chicken, {lentils} and broth over the bread so it absorbs the sauce."
     ]
   },
   {
@@ -1896,13 +1896,13 @@ KITCHEN.add(
         2
       ],
       [
-        "stock",
+        "beef-stock",
         250
       ]
     ],
     "steps": [
       "Mix crushed {garlic}, {cumin}, {paprika}, softened {butter}, {olive-oil}, {lemon-juice}, {salt} and {black-pepper} into a paste. Rub all over {lamb-shoulder}.",
-      "Place in a roasting dish with {stock}, cover tightly and roast at 160 °C for 1 hour 45 minutes, basting once or twice.",
+      "Place in a roasting dish with {beef-stock}, cover tightly and roast at 160 °C for 1 hour 45 minutes, basting once or twice.",
       "Uncover, raise the oven to 220 °C and roast 15–20 minutes until browned. Rest 15 minutes before pulling or slicing."
     ]
   },
@@ -1995,7 +1995,7 @@ KITCHEN.add(
         "1pc"
       ],
       [
-        "stock",
+        "chicken-stock",
         450
       ],
       [

@@ -75,7 +75,7 @@ KITCHEN.add(
         1
       ],
       [
-        "stock",
+        "fish-stock",
         450
       ],
       [
@@ -105,7 +105,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat {butter} in a soup pot and soften {leek} without browning.",
-      "Add {stock} and {white-fish}, simmering gently until the main ingredient is tender.",
+      "Add {fish-stock} and {white-fish}, simmering gently until the main ingredient is tender.",
       "Make a light butter-flour base and whisk in stock and cream; simmer root vegetables until tender, then poach fish gently in the finished soup.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -127,11 +127,11 @@ KITCHEN.add(
         120
       ],
       [
-        "smoked-bacon",
+        "bacon",
         120
       ],
       [
-        "stock",
+        "vegetable-stock",
         450
       ],
       [
@@ -203,7 +203,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "beef-stew-meat",
+        "beef-chuck",
         450
       ],
       [
@@ -223,7 +223,7 @@ KITCHEN.add(
         "1pc"
       ],
       [
-        "stock",
+        "beef-stock",
         450
       ],
       [
@@ -245,8 +245,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat {oil} in a heavy pan; soften {onion}.",
-      "Add {beef-stew-meat} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
+      "Add {beef-chuck} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
+      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
       "Brown beef, add root vegetables and stock, and simmer slowly until tender; lightly mash a few potato pieces into the broth to make the stew naturally thick.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -424,7 +424,7 @@ KITCHEN.add(
         400
       ],
       [
-        "stock",
+        "beef-stock",
         450
       ],
       [
@@ -458,7 +458,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Prepare the vegetables and bring the cooking liquid to a gentle simmer.",
-      "Add {stock} and {lamb}, simmering gently until the main ingredient is tender.",
+      "Add {beef-stock} and {lamb}, simmering gently until the main ingredient is tender.",
       "Simmer lamb gently and skim the broth, then add small, evenly cut vegetables and cook until just tender; keep the broth clear and serve the meat in the soup.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]

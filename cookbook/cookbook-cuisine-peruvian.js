@@ -471,7 +471,7 @@ KITCHEN.add(
     "steps": [
       "Boil {potatoes} until tender, drain and mash until smooth. Let cool, then season with {lime} juice, salt and a little oil.",
       "Mix drained {tuna} with {mayonnaise} and finely diced {red-onion}. Slice {avocado}.",
-      "Layer half the seasoned potato into a small dish, add tuna and avocado, then top with remaining potato. Chill briefly before slicing."
+      "Layer half the seasoned potato into a small dish, add {tuna} and avocado, then top with remaining potato. Chill briefly before slicing."
     ]
   },
   {
@@ -1005,7 +1005,7 @@ KITCHEN.add(
         40
       ],
       [
-        "stock",
+        "chicken-stock",
         350
       ],
       [
@@ -1014,7 +1014,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Poach the {chicken-breast} in simmering {stock} until cooked through; reserve the liquid and shred the chicken.",
+      "Poach the {chicken-breast} in simmering {chicken-stock} until cooked through; reserve the liquid and shred the chicken.",
       "Soak the {bread} in {evaporated-milk}, then blend with the {walnuts} until smooth.",
       "Cook the chopped {onion} and {garlic} until soft. Stir in the {aji-amarillo-paste}, then add the bread mixture and 250 ml reserved stock.",
       "Simmer gently until creamy, fold in the chicken and {parmesan}, and season with {salt}. Serve with rice and boiled potatoes if desired."
@@ -1069,7 +1069,7 @@ KITCHEN.add(
       "Boil the {potatoes} until tender, drain and rice or mash while hot until smooth.",
       "Mix the warm potato with juice from the {lime}, {aji-amarillo-paste}, {olive-oil} and {salt}; cool until easy to handle.",
       "Mix the {tuna} with {mayonnaise} and finely diced {red-onion}. Slice the {avocado}.",
-      "Layer seasoned potato, avocado and tuna in a small ring mould or shape into compact stacks. Chill 20 minutes and unmould carefully."
+      "Layer seasoned potato, avocado and {tuna} in a small ring mould or shape into compact stacks. Chill 20 minutes and unmould carefully."
     ]
   },
   {
@@ -1113,7 +1113,7 @@ KITCHEN.add(
         40
       ],
       [
-        "stock",
+        "chicken-stock",
         350
       ],
       [
@@ -1126,7 +1126,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Poach {chicken-breast} in {stock} until cooked; shred and reserve the broth. Soak {bread} in {milk}.",
+      "Poach {chicken-breast} in {chicken-stock} until cooked; shred and reserve the broth. Soak {bread} in {milk}.",
       "Cook diced {onion} and {garlic} until soft. Stir in {aji-amarillo-paste}; add soaked bread, {walnuts} and enough broth to blend into a creamy sauce.",
       "Simmer sauce 8 minutes, stir in shredded chicken and {parmesan}. Serve over {rice} with hard-boiled {eggs}."
     ]
@@ -1140,7 +1140,7 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "beef-stew-meat",
+        "beef-chuck",
         500
       ],
       [
@@ -1160,15 +1160,15 @@ KITCHEN.add(
         20
       ],
       [
-        "ale",
+        "beer",
         150
       ],
       [
-        "stock",
+        "beef-stock",
         350
       ],
       [
-        "green-peas",
+        "peas",
         100
       ],
       [
@@ -1189,9 +1189,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Blend {cilantro} with a splash of water into a green paste. Brown {beef-stew-meat} in {oil}, then add chopped {onion} and {garlic}.",
-      "Stir in {aji-amarillo-paste}, {cumin} and the cilantro paste. Add {ale} and {stock}; cover and braise until the beef is tender, about 75 minutes.",
-      "Add diced {carrot} and {green-peas} for the final 15 minutes. Season with {salt} and serve with rice and beans."
+      "Blend {cilantro} with a splash of water into a green paste. Brown {beef-chuck} in {oil}, then add chopped {onion} and {garlic}.",
+      "Stir in {aji-amarillo-paste}, {cumin} and the cilantro paste. Add {beer} and {beef-stock}; cover and braise until the beef is tender, about 75 minutes.",
+      "Add diced {carrot} and {peas} for the final 15 minutes. Season with {salt} and serve with rice and beans."
     ]
   },
   {
@@ -1270,7 +1270,7 @@ KITCHEN.add(
         120
       ],
       [
-        "corn",
+        "sweetcorn",
         100
       ],
       [
@@ -1307,7 +1307,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Rinse and cook {quinoa} until tender; cool. Blanch {green-beans} and {corn} until just tender, then refresh in cold water.",
+      "Rinse and cook {quinoa} until tender; cool. Blanch {green-beans} and {sweetcorn} until just tender, then refresh in cold water.",
       "Combine with diced {tomato}, thinly sliced {red-onion}, chopped {black-olives} and crumbled {feta}.",
       "Dress with {lime-juice}, {olive-oil}, chopped {parsley} and {salt}; chill briefly before serving."
     ]
@@ -1522,7 +1522,7 @@ KITCHEN.add(
         12
       ],
       [
-        "chili",
+        "fresh-chilli",
         1
       ],
       [
@@ -1548,7 +1548,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Season {pork-tenderloin} with {cumin}, {paprika} and {salt}; sear in {oil} and cook through, then slice thinly.",
-      "Toss thinly sliced {red-onion} with {lime-juice}, chopped {cilantro} and finely chopped {chili}; let stand 10 minutes.",
+      "Toss thinly sliced {red-onion} with {lime-juice}, chopped {cilantro} and finely chopped {fresh-chilli}; let stand 10 minutes.",
       "Split and toast {bread-rolls}, spread with {mayonnaise}, layer in pork and finish with salsa criolla."
     ]
   },
@@ -1593,7 +1593,7 @@ KITCHEN.add(
         50
       ],
       [
-        "stock",
+        "fish-stock",
         180
       ],
       [
@@ -1607,7 +1607,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Boil diced {potatoes} until just tender. Soften diced {onion} in {oil}; add {garlic} and {aji-amarillo-paste}.",
-      "Stir in chopped {tomato} and {stock}; simmer 8 minutes. Add {prawns} and cook until just pink.",
+      "Stir in chopped {tomato} and {fish-stock}; simmer 8 minutes. Add {prawns} and cook until just pink.",
       "Reduce heat and stir in {evaporated-milk}, crumbled {feta} and the cooked potatoes. Season with {salt} and warm gently without boiling."
     ]
   },
@@ -1620,7 +1620,7 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "corn",
+        "sweetcorn",
         500
       ],
       [
@@ -1653,7 +1653,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Pulse {corn} with {milk} until coarse and creamy. Fold in melted {butter}, {sugar}, crumbled {feta}, finely diced {onion}, {paprika} and {salt}.",
+      "Pulse {sweetcorn} with {milk} until coarse and creamy. Fold in melted {butter}, {sugar}, crumbled {feta}, finely diced {onion}, {paprika} and {salt}.",
       "Spoon the mixture into clean corn husks if available, or into small parchment parcels; fold securely closed.",
       "Steam over simmering water for 35–40 minutes until set. Rest 5 minutes before opening and serving."
     ]
@@ -1753,7 +1753,7 @@ KITCHEN.add(
     "steps": [
       "Prepare and measure all ingredients, then heat the pan or pot over medium heat.",
       "Cook {potatoes} with the seasonings until the dish reaches its intended texture and the flavours meld.",
-      "Mash cooled potatoes with lime and aji amarillo until smooth, layer with tuna mayonnaise and avocado, then press into a mould and chill before slicing.",
+      "Mash cooled potatoes with lime and aji amarillo until smooth, layer with {tuna} mayonnaise and avocado, then press into a mould and chill before slicing.",
       "Finish with a little {lime-juice} if needed, taste for seasoning and serve while the texture is at its best."
     ]
   },
@@ -1775,7 +1775,7 @@ KITCHEN.add(
       ],
       [
         "bread",
-        "4 slices"
+        "4pc"
       ],
       [
         "milk",
@@ -1798,7 +1798,7 @@ KITCHEN.add(
         3
       ],
       [
-        "stock",
+        "chicken-stock",
         450
       ],
       [
@@ -1821,7 +1821,7 @@ KITCHEN.add(
     "steps": [
       "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
       "Add {chicken-thigh} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
+      "Add {chicken-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
       "Poach and shred chicken, blend soaked bread with milk, walnuts and yellow chilli, then simmer with onion and stock until creamy; serve over rice.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -1867,7 +1867,7 @@ KITCHEN.add(
         100
       ],
       [
-        "stock",
+        "vegetable-stock",
         400
       ],
       [
@@ -1885,7 +1885,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Blend {cilantro} with a splash of water. Season the {duck-breast} with {cumin} and {salt}; brown skin-side down in a heavy pan, then turn and set aside.",
-      "Cook diced {onion}, {red-pepper} and crushed {garlic} in the rendered fat with {oil} if needed. Stir in the {rice}, blended coriander, {white-wine} and {stock}.",
+      "Cook diced {onion}, {red-pepper} and crushed {garlic} in the rendered fat with {oil} if needed. Stir in the {rice}, blended coriander, {white-wine} and {vegetable-stock}.",
       "Return duck to the pan, cover and simmer gently 25–30 minutes until rice is tender and duck is cooked. Stir in {peas} for the last 5 minutes; rest covered before serving."
     ]
   },
@@ -1930,7 +1930,7 @@ KITCHEN.add(
         3
       ],
       [
-        "stock",
+        "vegetable-stock",
         500
       ],
       [
@@ -1944,7 +1944,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Brown cubed {pork-shoulder} in {oil}. Add diced {onion} and crushed {garlic}; cook until fragrant.",
-      "Stir in {cumin}, {paprika}, chopped {canned-tomatoes}, diced {potatoes} and {stock}. Cover and simmer 30 minutes.",
+      "Stir in {cumin}, {paprika}, chopped {canned-tomatoes}, diced {potatoes} and {vegetable-stock}. Cover and simmer 30 minutes.",
       "Grind or finely chop {peanuts}, stir into the stew and simmer 10–15 minutes until thick and the pork is tender. Season with {salt}."
     ]
   },
@@ -1985,7 +1985,7 @@ KITCHEN.add(
         35
       ],
       [
-        "stock",
+        "fish-stock",
         100
       ],
       [
@@ -2003,7 +2003,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Season the {white-fish} with {salt} and {black-pepper}, dust lightly with {flour}, and pan-fry in {oil} until golden and cooked through. Set aside.",
-      "Slice the {red-onion} and {red-chilli}. Cook the onion briefly in the remaining oil, stir in {cumin}, {vinegar} and {stock}, and simmer 3 minutes until the onion softens but keeps some bite.",
+      "Slice the {red-onion} and {red-chilli}. Cook the onion briefly in the remaining oil, stir in {cumin}, {vinegar} and {fish-stock}, and simmer 3 minutes until the onion softens but keeps some bite.",
       "Pour the hot onion sauce over the fish and finish with {lime} juice. Serve warm or chilled after resting 15 minutes for the flavours to mingle."
     ]
   },
@@ -2024,7 +2024,7 @@ KITCHEN.add(
         250
       ],
       [
-        "tomato-passata",
+        "passata",
         300
       ],
       [
@@ -2062,7 +2062,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Cook the {pasta} in salted water until al dente. Dice the {onion}, grate the {carrot} and crush the {garlic}.",
-      "Brown the {beef-mince} in {oil}; add onion, carrot and garlic and cook 5 minutes. Stir in {tomato-passata}, {bay-leaf} and {oregano}; simmer 20 minutes.",
+      "Brown the {beef-mince} in {oil}; add onion, carrot and garlic and cook 5 minutes. Stir in {passata}, {bay-leaf} and {oregano}; simmer 20 minutes.",
       "Remove the bay leaf, season with {salt}, toss the pasta through the sauce and serve with grated {parmesan}."
     ]
   },

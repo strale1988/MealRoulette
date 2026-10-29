@@ -1187,7 +1187,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "wide-rice-noodles",
+        "rice-noodles",
         250
       ],
       [
@@ -1224,7 +1224,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Soak or prepare the {wide-rice-noodles} according to the packet. Mix {soy-sauce}, {oyster-sauce} and {sugar}.",
+      "Soak or prepare the {rice-noodles} according to the packet. Mix {soy-sauce}, {oyster-sauce} and {sugar}.",
       "Slice the {chicken-breast}; mince {garlic}; cut {chinese-broccoli} into bite-size pieces.",
       "Heat a wok until very hot. Add oil and garlic, then chicken; stir-fry until nearly cooked. Push aside and scramble the {eggs}.",
       "Add noodles, broccoli and sauce. Toss over high heat until noodles char lightly at the edges and broccoli is tender-crisp."
@@ -1263,7 +1263,7 @@ KITCHEN.add(
         15
       ],
       [
-        "chilli",
+        "fresh-chilli",
         2
       ],
       [
@@ -1278,7 +1278,7 @@ KITCHEN.add(
     "steps": [
       "Toast {rice} in a dry pan until golden; cool and grind coarsely.",
       "Cook {chicken-mince} in a splash of water, breaking it up, until fully cooked.",
-      "Off the heat, toss with {fish-sauce}, lime juice, sliced {red-onion}, {chilli}, chopped {mint}, {cilantro} and toasted rice powder.",
+      "Off the heat, toss with {fish-sauce}, lime juice, sliced {red-onion}, {fresh-chilli}, chopped {mint}, {cilantro} and toasted rice powder.",
       "Spoon into {lettuce} leaves and serve immediately."
     ]
   },
@@ -1291,11 +1291,11 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "beef-stew-meat",
+        "beef-chuck",
         500
       ],
       [
-        "massaman-curry-paste",
+        "massaman-paste",
         45
       ],
       [
@@ -1328,8 +1328,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Fry {massaman-curry-paste} in a spoonful of thick {coconut-milk} until fragrant.",
-      "Add cubed {beef-stew-meat}; stir to coat, then add remaining coconut milk and 250 ml water.",
+      "Fry {massaman-paste} in a spoonful of thick {coconut-milk} until fragrant.",
+      "Add cubed {beef-chuck}; stir to coat, then add remaining coconut milk and 250 ml water.",
       "Cover and simmer gently until beef is nearly tender, about 60 minutes. Add {potatoes} and {onion}; cook until tender.",
       "Season with {fish-sauce}, {tamarind} and {brown-sugar}; finish with {peanuts}."
     ]
@@ -1375,13 +1375,13 @@ KITCHEN.add(
         "2pc"
       ],
       [
-        "chilli",
+        "fresh-chilli",
         2
       ]
     ],
     "steps": [
       "Shred {green-papaya} into thin strips; cut {green-beans} into short lengths.",
-      "Pound {garlic} and {chilli} in a mortar, then add {brown-sugar}, {fish-sauce} and lime juice.",
+      "Pound {garlic} and {fresh-chilli} in a mortar, then add {brown-sugar}, {fish-sauce} and lime juice.",
       "Lightly bruise beans in the dressing, add shredded papaya and chopped {tomato}, and toss thoroughly.",
       "Top with {peanuts} and serve immediately."
     ]
@@ -1462,7 +1462,7 @@ KITCHEN.add(
         35
       ],
       [
-        "chilli",
+        "fresh-chilli",
         2
       ],
       [
@@ -1480,7 +1480,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Bring {chicken-stock} to a simmer with bruised {lemongrass}, sliced {fresh-galangal} and zest from {lime}; simmer 5 minutes.",
-      "Add sliced {mushrooms}, chopped {tomato} and {chilli}; simmer until tender. Add {prawns} and cook just until pink.",
+      "Add sliced {mushrooms}, chopped {tomato} and {fresh-chilli}; simmer until tender. Add {prawns} and cook just until pink.",
       "Season with {fish-sauce} and {lime-juice}; remove tough aromatics if desired and finish with {cilantro}."
     ]
   },
@@ -1548,7 +1548,7 @@ KITCHEN.add(
         350
       ],
       [
-        "egg",
+        "eggs",
         1
       ],
       [
@@ -1568,7 +1568,7 @@ KITCHEN.add(
         10
       ],
       [
-        "neutral-oil",
+        "oil",
         25
       ],
       [
@@ -1581,9 +1581,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Finely chop or pulse {white-fish} with {egg}, {red-curry-paste}, {fish-sauce} and {sugar} until sticky.",
+      "Finely chop or pulse {white-fish} with {eggs}, {red-curry-paste}, {fish-sauce} and {sugar} until sticky.",
       "Fold in finely sliced {green-beans}; shape into small flat cakes.",
-      "Pan-fry in {neutral-oil} for 3–4 minutes per side until golden and cooked through. Serve with {lime-juice} and sliced {cucumber}."
+      "Pan-fry in {oil} for 3–4 minutes per side until golden and cooked through. Serve with {lime-juice} and sliced {cucumber}."
     ]
   },
   {
@@ -1595,7 +1595,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "wide-rice-noodles",
+        "rice-noodles",
         220
       ],
       [
@@ -1607,11 +1607,11 @@ KITCHEN.add(
         3
       ],
       [
-        "chilli",
+        "fresh-chilli",
         2
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ],
       [
@@ -1635,7 +1635,7 @@ KITCHEN.add(
         15
       ],
       [
-        "neutral-oil",
+        "oil",
         15
       ],
       [
@@ -1644,8 +1644,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Soak or cook {wide-rice-noodles} until pliable. Stir together {oyster-sauce}, {soy-sauce}, {fish-sauce} and {sugar}.",
-      "Stir-fry {pork-mince} in {neutral-oil}; add {garlic}, {chilli}, sliced {bell-pepper} and {green-beans}.",
+      "Soak or cook {rice-noodles} until pliable. Stir together {oyster-sauce}, {soy-sauce}, {fish-sauce} and {sugar}.",
+      "Stir-fry {pork-mince} in {oil}; add {garlic}, {fresh-chilli}, sliced {red-pepper} and {green-beans}.",
       "Add noodles and sauce; toss over very high heat until glossy and cooked. Turn off heat and fold in {basil}."
     ]
   },
@@ -1690,7 +1690,7 @@ KITCHEN.add(
         15
       ],
       [
-        "chilli",
+        "fresh-chilli",
         1
       ],
       [
@@ -1698,14 +1698,14 @@ KITCHEN.add(
         8
       ],
       [
-        "neutral-oil",
+        "oil",
         15
       ]
     ],
     "steps": [
       "Toast {peanuts} in a dry pan until golden; set aside.",
-      "Stir-fry sliced {chicken-breast} in {neutral-oil} until nearly cooked. Add {garlic}, {onion} and {red-pepper}; cook until crisp-tender.",
-      "Add {oyster-sauce}, {soy-sauce}, {honey}, sliced {chilli} and {spring-onion}. Toss with peanuts and serve with rice."
+      "Stir-fry sliced {chicken-breast} in {oil} until nearly cooked. Add {garlic}, {onion} and {red-pepper}; cook until crisp-tender.",
+      "Add {oyster-sauce}, {soy-sauce}, {honey}, sliced {fresh-chilli} and {spring-onion}. Toss with peanuts and serve with rice."
     ]
   },
   {
@@ -1717,8 +1717,8 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "cooked-rice",
-        350
+        "rice",
+        115
       ],
       [
         "prawns",
@@ -1757,7 +1757,7 @@ KITCHEN.add(
         10
       ],
       [
-        "neutral-oil",
+        "oil",
         15
       ],
       [
@@ -1766,7 +1766,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Use cold {cooked-rice}. Heat {neutral-oil}; scramble {eggs} and set aside. Sear {prawns} until pink.",
+      "Use cold cooked {rice}. Heat {oil}; scramble {eggs} and set aside. Sear {prawns} until pink.",
       "Add diced {onion}, {garlic}, {pineapple} and {curry-powder}; stir-fry briefly.",
       "Add rice, {soy-sauce}, {fish-sauce}, eggs and {peanuts}; toss until hot. Garnish with {spring-onion}."
     ]
@@ -1808,7 +1808,7 @@ KITCHEN.add(
         10
       ],
       [
-        "chilli",
+        "fresh-chilli",
         1
       ],
       [
@@ -1822,7 +1822,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Toast dry {rice} until golden, then grind coarsely to make a fragrant powder.",
-      "Sear chopped {oyster-mushrooms} in a hot pan until browned; remove and toss with {lime-juice}, {fish-sauce}, {sugar}, sliced {red-onion} and {chilli}.",
+      "Sear chopped {oyster-mushrooms} in a hot pan until browned; remove and toss with {lime-juice}, {fish-sauce}, {sugar}, sliced {red-onion} and {fresh-chilli}.",
       "Fold in {mint}, {cilantro} and toasted rice powder. Spoon into {lettuce} cups and serve immediately."
     ]
   },
@@ -1863,14 +1863,14 @@ KITCHEN.add(
         8
       ],
       [
-        "neutral-oil",
+        "oil",
         10
       ]
     ],
     "steps": [
       "Slice {pork-shoulder} thinly. Mix {coconut-milk}, {soy-sauce}, {fish-sauce}, {brown-sugar}, crushed {garlic} and chopped {coriander}.",
       "Marinate pork for at least 20 minutes, then thread onto soaked skewers.",
-      "Grill or broil, turning often and brushing with {neutral-oil}, until lightly charred and cooked through."
+      "Grill or broil, turning often and brushing with {oil}, until lightly charred and cooked through."
     ]
   },
   {
@@ -1882,7 +1882,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ],
       [
@@ -1902,7 +1902,7 @@ KITCHEN.add(
         4
       ],
       [
-        "stock",
+        "chicken-stock",
         350
       ],
       [
@@ -1914,7 +1914,7 @@ KITCHEN.add(
         20
       ],
       [
-        "pickled-onions",
+        "pickled-red-onions",
         40
       ],
       [
@@ -1927,9 +1927,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Fry {red-curry-paste} and {curry-powder} in {oil} until fragrant. Add {chicken-thighs} and coat in the paste.",
-      "Pour in {coconut-milk} and {stock}; simmer 20–25 minutes until the chicken is tender. Season with {fish-sauce} and {lime-juice}.",
-      "Cook {egg-pasta} separately. Serve noodles in the curry broth topped with {pickled-onions} and {chilli-flakes}."
+      "Fry {red-curry-paste} and {curry-powder} in {oil} until fragrant. Add {chicken-thigh} and coat in the paste.",
+      "Pour in {coconut-milk} and {chicken-stock}; simmer 20–25 minutes until the chicken is tender. Season with {fish-sauce} and {lime-juice}.",
+      "Cook {egg-pasta} separately. Serve noodles in the curry broth topped with {pickled-red-onions} and {chilli-flakes}."
     ]
   },
   {
