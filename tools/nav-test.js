@@ -7,7 +7,7 @@ const srv=http.createServer((q,r)=>{const f=path.join(root,decodeURIComponent(q.
 (async()=>{await new Promise(r=>srv.listen(0,r));const url='http://localhost:'+srv.address().port+'/index.html',b=await chromium.launch(),bad=[];
  for(const w of [320,390,768,1280]){
   const p=await b.newPage({viewport:{width:w,height:800}});p.on('pageerror',e=>bad.push(w+'px: script error: '+e.message.slice(0,160)));
-  try{await p.goto(url,{waitUntil:'load'});await p.waitForFunction(()=>window.KITCHEN&&KITCHEN.recipes.length&&!document.querySelector('.splash'),null,{timeout:20000})}catch(e){bad.push(w+'px: page did not finish loading');await p.close();continue}
+  try{await p.goto(url,{waitUntil:'load'});await p.waitForFunction(()=>window.KITCHEN&&KITCHEN.recipes.length&&window.__home&&__home.up(),null,{timeout:20000});await p.evaluate(()=>document.getElementById('spgo').click());await p.waitForTimeout(450)}catch(e){bad.push(w+'px: page did not finish loading');await p.close();continue}
   const r=await p.evaluate(async()=>{const o=[],vis=id=>!document.getElementById('tab-'+id).hidden,nav=[...document.querySelectorAll('#tabs button')];
    if(nav.length!==3)o.push('expected 3 menu buttons, found '+nav.length);
    nav.forEach(n=>{const b=n.getBoundingClientRect();if(b.right>innerWidth+1||b.left<-1||b.width<40)o.push('menu button "'+n.textContent.trim()+'" does not fit')});

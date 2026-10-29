@@ -12,7 +12,7 @@ KITCHEN.ingredients([
 ["beef-mince","beef mince","meat","protein",250,26,"meat","mince,minced beef,ground beef,beef",0,"p:beef"],
 ["beef-strips","beef strips","meat","protein",200,26,"meat","steak,beef steak,beef,stir fry beef",0,"p:beef"],
 ["pork","pork loin","meat","protein",190,25,"meat pork","pork,pork chop,pork steak",0,"p:pork"],
-["lamb","lamb","meat","protein",230,25,"meat","lamb mince,lamb leg",0,"p:lamb"],
+["lamb","lamb","meat","protein",230,25,"meat","lamb leg",0,"p:lamb"],
 ["salmon","salmon fillet","meat","protein",208,20,"fish","salmon,trout",150,"p:salmon"],
 ["white-fish","white fish fillet","meat","protein",90,20,"fish","cod,haddock,hake,white fish,fish",150,"p:cod"],
 ["prawns","prawns","meat","protein",85,18,"shell","prawn,shrimp",0,"p:prawns"],
@@ -1655,4 +1655,14 @@ KITCHEN.ingredients([
 ["holy-trinity-mix","holy trinity mix","other","flavour",30,1,"","onion celery bell pepper mix",0,""],
 ["frozen-mirepoix","frozen mirepoix","other","flavour",35,1,"","frozen diced onion carrot celery",0,""],
 ["frozen-sofrito","frozen sofrito","other","flavour",40,1,"","frozen sofrito mix",0,""],
+// ---- added to match ids the cookbooks already use
+["cheese","cheese","dairy","dairy",350,24,"dairy","cheese,grated cheese,melting cheese,hard cheese,table cheese",0,""],
+["tomatillos","tomatillos","veg","veg",32,1,"","tomatillo,husk tomato,green tomatillo",35,""],
+["sponge-cake","sponge cake","bake","baking",350,5,"gluten dairy egg","sponge,savoiardi,ladyfingers,madeira cake,victoria sponge",0,""],
+["lamb-mince","lamb mince","meat","protein",283,17,"meat","minced lamb,ground lamb",0,"p:lamb"],
+["chicken-mince","chicken mince","meat","protein",143,17,"meat","minced chicken,ground chicken",0,""],
+["bread-rolls","bread rolls","grain","carb",270,9,"gluten","roll,bread roll,crusty roll,bun,bolillo,telera",60,"c:bread"],
+["okonomiyaki-sauce","okonomiyaki sauce","sauce","sauce",120,1,"gluten","okonomi sauce,tonkatsu sauce",0,""],
+["dried-black-eyed-peas","dried black-eyed peas","grain","protein",336,23,"dried:30","dry black eyed peas,dried cowpeas",0,""],
+["green-papaya","green papaya","veg","veg",43,0.5,"","unripe papaya,papaya green",0,""],
 ]);

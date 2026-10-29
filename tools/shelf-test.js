@@ -12,7 +12,7 @@ const WIDTHS=[320,360,414,480,640,768,900,1024,1280,1440,1920];
   const p=await b.newPage({viewport:{width:WIDTHS[0],height:900},colorScheme:theme});
   p.on('pageerror',e=>bad.push(theme+': script error: '+e.message.slice(0,200)));
   const t0=Date.now();
-  try{await p.goto(url,{timeout:20000,waitUntil:'load'});await p.waitForFunction(()=>window.KITCHEN&&KITCHEN.recipes.length&&!document.querySelector('.splash'),null,{timeout:20000})}
+  try{await p.goto(url,{timeout:20000,waitUntil:'load'});await p.waitForFunction(()=>window.KITCHEN&&KITCHEN.recipes.length&&window.__home&&__home.up(),null,{timeout:20000});await p.evaluate(()=>document.getElementById('spgo').click());await p.waitForTimeout(450)}
   catch(e){bad.push(theme+': page did not finish loading (frozen?)');await p.close();continue}
   await p.evaluate(()=>setTab('kit'));
   for(const w of WIDTHS){

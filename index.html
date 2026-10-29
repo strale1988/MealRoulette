@@ -2620,16 +2620,22 @@ function unitsOf(list,tight){
   return u;
 }
 const uw=x=>(x.k==="lean"?x.w+x.ex:x.w)+(x.ov||0); // ov: the room a continent's wooden frame takes
-function rowsOf(list,tight,avail,units){
+function rowsOf(list,tight,avail,units,scOf){
   const W=avail?avail-(matchMedia("(max-width:420px)").matches?30:42):(box.clientWidth||360)-(matchMedia("(max-width:420px)").matches?24:36),rows=[[]];let used=0;
   const us=units||unitsOf(list,tight);
-  us.forEach((x,i)=>{const w=uw(x),nx=us[i+1],need=(x.dv&&!x.en&&nx)||(nx&&nx.en)?w+uw(nx):w;if(used+need>W&&rows[rows.length-1].length){rows.push([]);used=0}rows[rows.length-1].push(x);used+=w});
-  return rows.map(r=>arrange(r,W));
+  // on the one-long-shelf view a row that starts in the middle of a continent opens a "· cont." compartment with its own wooden walls: count that room too (it used to be forgotten, so rows overflowed)
+  const wall=units?(matchMedia("(max-width:420px)").matches?36:40):0;
+  us.forEach((x,i)=>{let w=uw(x),nx=us[i+1],need=(x.dv&&!x.en&&nx)||(nx&&nx.en)?w+uw(nx):w;if(used+need>W&&rows[rows.length-1].length){rows.push([]);used=0}
+    if(wall&&!x.ov&&!rows[rows.length-1].length){w+=wall;need+=wall}
+    rows[rows.length-1].push(x);used+=w});
+  // when arrange() has to stand piles up again it needs the same room for the compartment walls (one set per continent in the row, they overlap by 14px)
+  const extraOf=r=>{if(!wall||!scOf)return 0;const n=new Set(r.map(scOf)).size;return wall+Math.max(0,n-1)*(wall-14)};
+  return rows.map(r=>arrange(r,W,extraOf(r)));
 }
 // a row starts and ends with a standing book; leaning books rest on a standing neighbour, piles sit in between
-function arrange(row,W){
+function arrange(row,W,extra=0){
   // a row needs a standing book at both ends: with fewer than two, stand everything up if it still fits
-  if(row.filter(x=>x.k==="up").length<2&&row.length>1){const all=row.flatMap(x=>x.k==="stack"?x.bs.map(b=>({k:"up",b,w:b.w})):[x.dv?x:{k:"up",b:x.b,w:x.w}]);if(all.reduce((t,x)=>t+x.w,0)<=W||!row.some(x=>x.k==="up"))row=all}
+  if(row.filter(x=>x.k==="up").length<2&&row.length>1){const all=row.flatMap(x=>x.k==="stack"?x.bs.map(b=>({k:"up",b,w:b.w})):[x.dv?x:{k:"up",b:x.b,w:x.w}]);if(all.reduce((t,x)=>t+x.w,0)<=W-extra||!row.some(x=>x.k==="up"))row=all}
   let ups=row.filter(x=>x.k==="up");
   if(ups.length<2){row.forEach(x=>{if(x.k==="lean")x.k="up"});ups=row.filter(x=>x.k==="up")}
   if(ups.length>=2){const f=ups[0],l=ups[ups.length-1];row=[f,...row.filter(x=>x!==f&&x!==l),l]}
@@ -2679,7 +2685,7 @@ function paintShelf(){
     const BS={},SI={},named=new Set();shs.forEach(s=>{SI[s.id]=s;s.books.forEach(b=>BS[b.name]=s.id)});
     const scOf=x=>x.sc||BS[(x.b||x.bs[0]).name];
     const secs=r=>{const g=[];r.forEach(x=>{const id=scOf(x),l=g[g.length-1];if(l&&l.id===id)l.u.push(x);else g.push({id,u:[x]})});return g.map(s=>{const c=SI[s.id];const first=!named.has(s.id);named.add(s.id);return `<div class="sec" role="group" aria-label="${esc(c.name)}, ${c.books.length} cookbooks"${first?` style="min-width:${c.name.length*10+34}px"`:""}><i class="wt${first?"":" cont"}" title="${esc(c.name)}">${esc(first?c.name:c.name+" · cont.")}</i><i class="wd l"></i><i class="wd r"></i>${s.u.map(unitHTML).join("")}</div>`}).join("")};
-    box.innerHTML=`<div class="shelf">${rowsOf(null,false,0,units).map(r=>`<div class="shrow cs">${secs(r)}</div><div class="plank"></div>`).join("")}</div>`
+    box.innerHTML=`<div class="shelf">${rowsOf(null,false,0,units,scOf).map(r=>`<div class="shrow cs">${secs(r)}</div><div class="plank"></div>`).join("")}</div>`
      +`<p class="shelfhint">${list.length} cookbooks, grouped by continent. Tap a spine to open the book.${note}</p>`;
     fit();
     box.querySelectorAll(".bk").forEach(b=>b.onclick=()=>{cur=b.dataset.b;q="";mf="";paintShelf();goTop()});

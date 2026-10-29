@@ -13,7 +13,7 @@ K.ROLES=["protein","carb","veg","fruit","dairy","fat","flavour","herb","sauce","
 // names the generator (engine.js) has flavours for; a recipe's cuisine should be one of these
 K.CUISINES=["Italian","Mexican","Indian","Thai","Chinese","Japanese","Korean","Greek","Middle Eastern","French","Spanish","Balkan","Moroccan","Vietnamese","Caribbean","Turkish","Hungarian","Indonesian","Peruvian","Cajun","Persian","German","Polish","Ethiopian","Portuguese"];
 // meal keys used by the app; recipe files may use the friendly names on the left
-K.MEAL={extra:"Extra",pantry:"Extra",drink:"Extra",component:"Extra",morning:"Breakfast",wake:"Breakfast",breakfast:"Breakfast",bite:"Snack",snack:"Snack",big:"Main",main:"Main",lunch:"Main",dinner:"Main",treat:"Dessert",dessert:"Dessert"};
+K.MEAL={extra:"Extra",pantry:"Extra",drink:"Extra",component:"Extra",morning:"Breakfast",wake:"Breakfast",breakfast:"Breakfast",bite:"Snack",snack:"Snack",big:"Main",main:"Main",lunch:"Main",dinner:"Main",treat:"Dessert",dessert:"Dessert",sweet:"Dessert",bake:"Dessert",light:"Snack",side:"Snack",quick:"Main",fancy:"Main"};
 // flags: meat fish shell dairy egg gluten nuts soy pork alcohol honey (diets) · pantry (assumed at home) · canned (ready to eat) · dried:N (needs N+ minutes) · sub:group (swappable)
 const FLAGS=new Set("meat fish shell dairy egg gluten nuts soy pork alcohol honey pantry canned".split(" "));
 const SWEET=["sugar","cocoa","vanilla","baking-powder","maple-syrup","honey"];
