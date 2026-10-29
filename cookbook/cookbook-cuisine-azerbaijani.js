@@ -100,7 +100,7 @@ KITCHEN.add(
         1
       ],
       [
-        "stock",
+        "beef-stock",
         1000
       ],
       [
@@ -111,7 +111,7 @@ KITCHEN.add(
     "steps": [
       "Make a firm dough with {flour} and {water}; rest, roll thin and cut into small squares.",
       "Mix {beef-mince} with finely chopped {onion}, salt and pepper; place tiny portions on dough and seal.",
-      "Simmer dumplings in {stock} until cooked; garnish with {parsley}."
+      "Simmer dumplings in {beef-stock} until cooked; garnish with {parsley}."
     ]
   },
   {
@@ -123,7 +123,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         700
       ],
       [
@@ -145,7 +145,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Finely chop {walnuts} and {red-onion}; season with salt, pepper and {lemon-juice}.",
-      "Spread the walnut mixture under the skin of {chicken-thighs} or use as a topping in a baking dish.",
+      "Spread the walnut mixture under the skin of {chicken-thigh} or use as a topping in a baking dish.",
       "Brush with {oil} and roast at 190°C until browned and cooked through."
     ]
   },
@@ -158,7 +158,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "beef-stew-meat",
+        "beef-chuck",
         450
       ],
       [
@@ -166,7 +166,7 @@ KITCHEN.add(
         1
       ],
       [
-        "carrots",
+        "carrot",
         2
       ],
       [
@@ -184,8 +184,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-stew-meat} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {carrots} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Add the {beef-chuck} and {rice}; stir well so the ingredients are evenly coated.",
+      "Add the {carrot} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
     ]
   },
   {
@@ -197,7 +197,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "carrots",
+        "carrot",
         2
       ],
       [
@@ -228,7 +228,7 @@ KITCHEN.add(
     "steps": [
       "Warm the {oil} in a heavy pan and soften the {rice} until fragrant.",
       "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {carrots} and {rice}; stir well so the ingredients are evenly coated.",
+      "Add the {carrot} and {rice}; stir well so the ingredients are evenly coated.",
       "Add the {potatoes} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
       "Season with {salt} to taste and serve hot."
     ]
@@ -262,7 +262,7 @@ KITCHEN.add(
         3
       ],
       [
-        "beef-stew-meat",
+        "beef-chuck",
         450
       ],
       [
@@ -270,7 +270,7 @@ KITCHEN.add(
         1
       ],
       [
-        "carrots",
+        "carrot",
         2
       ]
     ],
@@ -294,7 +294,7 @@ KITCHEN.add(
         1
       ],
       [
-        "carrots",
+        "carrot",
         2
       ],
       [
@@ -353,7 +353,7 @@ KITCHEN.add(
         3
       ],
       [
-        "beef-stew-meat",
+        "beef-chuck",
         450
       ]
     ],
@@ -374,7 +374,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "beef-stew-meat",
+        "beef-chuck",
         450
       ],
       [
@@ -382,7 +382,7 @@ KITCHEN.add(
         1
       ],
       [
-        "carrots",
+        "carrot",
         2
       ],
       [
@@ -409,8 +409,8 @@ KITCHEN.add(
     "steps": [
       "Warm the {oil} in a heavy pan and soften the {onion} until fragrant.",
       "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-stew-meat} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {carrots} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Add the {beef-chuck} and {rice}; stir well so the ingredients are evenly coated.",
+      "Add the {carrot} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
     ]
   },
   {
@@ -422,7 +422,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "carrots",
+        "carrot",
         2
       ],
       [
@@ -449,7 +449,7 @@ KITCHEN.add(
     "steps": [
       "Warm the {oil} in a heavy pan and soften the {rice} until fragrant.",
       "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {carrots} and {rice}; stir well so the ingredients are evenly coated.",
+      "Add the {carrot} and {rice}; stir well so the ingredients are evenly coated.",
       "Add the {potatoes} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
     ]
   },
@@ -482,7 +482,7 @@ KITCHEN.add(
         3
       ],
       [
-        "beef-stew-meat",
+        "beef-chuck",
         450
       ],
       [
@@ -506,7 +506,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "beef-stew-meat",
+        "beef-chuck",
         450
       ],
       [
@@ -514,7 +514,7 @@ KITCHEN.add(
         1
       ],
       [
-        "carrots",
+        "carrot",
         2
       ],
       [
@@ -532,7 +532,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-stew-meat} and {rice}; stir to combine.",
+      "Add the {beef-chuck} and {rice}; stir to combine.",
       "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
     ]
   },
@@ -569,7 +569,7 @@ KITCHEN.add(
         3
       ],
       [
-        "beef-stew-meat",
+        "beef-chuck",
         450
       ]
     ],
@@ -602,7 +602,7 @@ KITCHEN.add(
         3
       ],
       [
-        "beef-stew-meat",
+        "beef-chuck",
         450
       ],
       [
@@ -610,7 +610,7 @@ KITCHEN.add(
         1
       ],
       [
-        "carrots",
+        "carrot",
         2
       ],
       [
@@ -637,7 +637,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "beef-stew-meat",
+        "beef-chuck",
         450
       ],
       [
@@ -645,7 +645,7 @@ KITCHEN.add(
         1
       ],
       [
-        "carrots",
+        "carrot",
         2
       ],
       [
@@ -663,7 +663,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-stew-meat} and {rice}; stir to combine.",
+      "Add the {beef-chuck} and {rice}; stir to combine.",
       "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
     ]
   },
@@ -700,7 +700,7 @@ KITCHEN.add(
         3
       ],
       [
-        "beef-stew-meat",
+        "beef-chuck",
         450
       ]
     ],
@@ -733,7 +733,7 @@ KITCHEN.add(
         3
       ],
       [
-        "beef-stew-meat",
+        "beef-chuck",
         450
       ],
       [
@@ -741,7 +741,7 @@ KITCHEN.add(
         1
       ],
       [
-        "carrots",
+        "carrot",
         2
       ],
       [
@@ -768,7 +768,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "beef-stew-meat",
+        "beef-chuck",
         450
       ],
       [
@@ -776,7 +776,7 @@ KITCHEN.add(
         1
       ],
       [
-        "carrots",
+        "carrot",
         2
       ],
       [
@@ -794,7 +794,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-stew-meat} and {rice}; stir to combine.",
+      "Add the {beef-chuck} and {rice}; stir to combine.",
       "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
     ]
   },
@@ -831,7 +831,7 @@ KITCHEN.add(
         3
       ],
       [
-        "beef-stew-meat",
+        "beef-chuck",
         450
       ]
     ],

@@ -336,7 +336,7 @@ KITCHEN.add(
         3
       ],
       [
-        "scotch-bonnet",
+        "habanero-pepper",
         "1pc"
       ],
       [
@@ -344,7 +344,7 @@ KITCHEN.add(
         350
       ],
       [
-        "stock",
+        "vegetable-stock",
         500
       ],
       [
@@ -355,7 +355,7 @@ KITCHEN.add(
     "steps": [
       "Toss {goat-meat} with {curry-powder}, minced {garlic}, {ginger}, thyme and salt; marinate at least 30 minutes.",
       "Brown meat in {oil} in batches. Add sliced {onion} and cook until softened.",
-      "Add {stock} and {scotch-bonnet} whole, cover and simmer gently 1½–2 hours until tender. Add potato chunks for the final 25 minutes; remove the pepper before serving if desired."
+      "Add {vegetable-stock} and {habanero-pepper} whole, cover and simmer gently 1½–2 hours until tender. Add potato chunks for the final 25 minutes; remove the pepper before serving if desired."
     ]
   },
   {
@@ -383,11 +383,11 @@ KITCHEN.add(
         1
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ],
       [
-        "chilli",
+        "fresh-chilli",
         1
       ],
       [
@@ -409,7 +409,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Soak and cook {salt-cod} according to package directions; flake carefully and remove bones.",
-      "Soften sliced {onion}, {bell-pepper} and {chilli} in {oil}; add chopped {tomato} and {thyme}, then cook until juicy.",
+      "Soften sliced {onion}, {red-pepper} and {fresh-chilli} in {oil}; add chopped {tomato} and {thyme}, then cook until juicy.",
       "Fold in the fish and gently stir through beaten {eggs} until softly set. Season with {black-pepper} and serve with {bread}."
     ]
   },
@@ -422,7 +422,7 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "beef-stew-meat",
+        "beef-chuck",
         700
       ],
       [
@@ -450,7 +450,7 @@ KITCHEN.add(
         3
       ],
       [
-        "scotch-bonnet",
+        "habanero-pepper",
         1
       ],
       [
@@ -458,7 +458,7 @@ KITCHEN.add(
         25
       ],
       [
-        "stock",
+        "beef-stock",
         600
       ],
       [
@@ -475,8 +475,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Brown {beef-stew-meat} in {oil}; add chopped {onion}, {garlic} and {ginger}.",
-      "Stir in {allspice}, {thyme}, {soy-sauce}, {tomato-paste}, {stock} and a whole {scotch-bonnet}. Cover and braise at a low simmer for 2 hours until very tender.",
+      "Brown {beef-chuck} in {oil}; add chopped {onion}, {garlic} and {ginger}.",
+      "Stir in {allspice}, {thyme}, {soy-sauce}, {tomato-paste}, {beef-stock} and a whole {habanero-pepper}. Cover and braise at a low simmer for 2 hours until very tender.",
       "Add drained {white-beans} and simmer 15 minutes. Remove the scotch bonnet, taste and adjust {salt}; serve with rice."
     ]
   },
@@ -489,7 +489,7 @@ KITCHEN.add(
     "serves": 8,
     "ing": [
       [
-        "coconut",
+        "fresh-coconut-meat",
         250
       ],
       [
@@ -519,7 +519,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Bring {brown-sugar} and {water} to a boil, stirring until dissolved. Add finely chopped {ginger}, {vanilla} and {salt}.",
-      "Stir in {coconut} and simmer, stirring constantly, until the mixture is sticky and most liquid has evaporated.",
+      "Stir in {fresh-coconut-meat} and simmer, stirring constantly, until the mixture is sticky and most liquid has evaporated.",
       "Stir in {lime-juice}; drop spoonfuls onto parchment and let cool until firm."
     ]
   },
@@ -536,7 +536,7 @@ KITCHEN.add(
         400
       ],
       [
-        "scotch-bonnet",
+        "habanero-pepper",
         1
       ],
       [
@@ -569,7 +569,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Toss cleaned {prawns} with chopped {scotch-bonnet}, crushed {garlic}, {thyme}, {paprika}, {lime-juice} and {salt}.",
+      "Toss cleaned {prawns} with chopped {habanero-pepper}, crushed {garlic}, {thyme}, {paprika}, {lime-juice} and {salt}.",
       "Heat {oil} in a wide pan and sear the prawns 1–2 minutes per side. Add {water}, cover and steam briefly until fully pink and cooked.",
       "Reduce the spicy juices to a glaze and serve immediately with lime and rice."
     ]
@@ -671,7 +671,7 @@ KITCHEN.add(
         3
       ],
       [
-        "scotch-bonnet",
+        "habanero-pepper",
         "1pc"
       ],
       [
@@ -685,7 +685,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Season {white-fish} with {lime} juice and {salt}. Simmer {coconut-milk} in a wide pan until slightly thickened.",
-      "Add sliced {onion}, crushed {garlic}, chopped {tomato}, {thyme} and {scotch-bonnet} (whole for milder heat). Cook 5 minutes.",
+      "Add sliced {onion}, crushed {garlic}, chopped {tomato}, {thyme} and {habanero-pepper} (whole for milder heat). Cook 5 minutes.",
       "Add fish pieces and poach gently for 7–9 minutes until opaque. Remove the Scotch bonnet if desired and serve with rice or boiled green banana."
     ]
   },
@@ -750,12 +750,9 @@ KITCHEN.add(
       ],
       [
         "red-pepper",
-        100
+        180
       ],
-      [
-        "green-pepper",
-        80
-      ],
+      
       [
         "garlic",
         "3pc"
@@ -791,7 +788,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Season {white-fish} with {lime} juice and {salt}; pan-fry in {oil} until lightly golden, then set aside.",
-      "In the same pan cook sliced {onion}, {red-pepper}, {green-pepper} and crushed {garlic}. Add chopped {tomato}, {soy-sauce}, {brown-sugar} and {thyme}; simmer until saucy.",
+      "In the same pan cook sliced {onion}, {red-pepper}, {red-pepper} and crushed {garlic}. Add chopped {tomato}, {soy-sauce}, {brown-sugar} and {thyme}; simmer until saucy.",
       "Return fish to the pan and cook gently for 5 minutes so it absorbs the sauce without breaking apart."
     ]
   },
@@ -824,7 +821,7 @@ KITCHEN.add(
         "2pc"
       ],
       [
-        "scotch-bonnet",
+        "habanero-pepper",
         "1pc"
       ],
       [
@@ -842,7 +839,7 @@ KITCHEN.add(
     ],
     "steps": [
       "If using salted {salt-cod}, soak and rinse thoroughly, then simmer briefly and flake. Cook sliced {onion} and crushed {garlic} in {oil}.",
-      "Add chopped {collard-greens}, {tomato}, {thyme} and {scotch-bonnet}; cook until the greens soften.",
+      "Add chopped {collard-greens}, {tomato}, {thyme} and {habanero-pepper}; cook until the greens soften.",
       "Fold in flaked fish and {black-pepper}; cook 4–5 minutes more, remove the Scotch bonnet and serve hot."
     ]
   },
@@ -883,7 +880,7 @@ KITCHEN.add(
         25
       ],
       [
-        "stock",
+        "beef-stock",
         100
       ],
       [
@@ -904,7 +901,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cook diced {onion} and {garlic} in {oil}; add {beef-mince}, {curry-powder}, {allspice} and {salt}; brown thoroughly. Stir in {breadcrumbs} and {stock} and simmer until the filling is thick; cool.",
+      "Cook diced {onion} and {garlic} in {oil}; add {beef-mince}, {curry-powder}, {allspice} and {salt}; brown thoroughly. Stir in {breadcrumbs} and {beef-stock} and simmer until the filling is thick; cool.",
       "Knead {turmeric} into the {shortcrust-pastry} until evenly coloured. Roll out and cut circles; spoon filling onto one side of each, fold and crimp.",
       "Brush with beaten {eggs} and bake at 200 °C for 20–25 minutes until golden."
     ]
@@ -922,7 +919,7 @@ KITCHEN.add(
         400
       ],
       [
-        "scotch-bonnet",
+        "habanero-pepper",
         "1pc"
       ],
       [
@@ -959,7 +956,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Mix chopped {scotch-bonnet}, {allspice}, {thyme}, crushed {garlic}, sliced {spring-onion}, {lime} juice, {brown-sugar}, {oil} and {salt}.",
+      "Mix chopped {habanero-pepper}, {allspice}, {thyme}, crushed {garlic}, sliced {spring-onion}, {lime} juice, {brown-sugar}, {oil} and {salt}.",
       "Cut {pork-shoulder} into cubes and coat thoroughly in the jerk marinade. Thread onto skewers; marinate at least 20 minutes.",
       "Grill or roast at 220 °C for 12–16 minutes, turning regularly, until browned and cooked through."
     ]
@@ -973,7 +970,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         450
       ],
       [
@@ -985,7 +982,7 @@ KITCHEN.add(
         250
       ],
       [
-        "tomatoes",
+        "tomato",
         250
       ],
       [
@@ -993,13 +990,13 @@ KITCHEN.add(
         2
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ]
     ],
     "steps": [
-      "Add the {chicken-thighs} and {black-beans}; stir to combine.",
-      "Add the {tomatoes} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
+      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
     ]
   },
   {
@@ -1011,7 +1008,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "tomatoes",
+        "tomato",
         250
       ],
       [
@@ -1019,7 +1016,7 @@ KITCHEN.add(
         2
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ],
       [
@@ -1042,8 +1039,8 @@ KITCHEN.add(
     "steps": [
       "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
       "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomatoes} and turn to coat in the seasoning.",
-      "Add the {tomatoes} with a little water if needed, then cook gently until tender and the flavours come together.",
+      "Add the {tomato} and turn to coat in the seasoning.",
+      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
       "Season with {salt} to taste and serve."
     ]
   },
@@ -1072,7 +1069,7 @@ KITCHEN.add(
         3
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         450
       ],
       [
@@ -1084,14 +1081,14 @@ KITCHEN.add(
         250
       ],
       [
-        "tomatoes",
+        "tomato",
         250
       ]
     ],
     "steps": [
       "Warm the {oil} in a pan and soften the {lime} until fragrant.",
       "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomatoes} with a little water if needed, then cook gently until tender and the flavours come together.",
+      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
       "Season with {salt} to taste and serve."
     ]
   }

@@ -34,7 +34,7 @@ KITCHEN.add(
         25
       ],
       [
-        "stock",
+        "beef-stock",
         250
       ],
       [
@@ -65,7 +65,7 @@ KITCHEN.add(
     "steps": [
       "Boil peeled {potatoes} until tender, then mash with {butter}, {milk} and half the {salt}.",
       "Brown {lamb-mince} in {oil}; add diced {onion} and {carrot} and cook 6 minutes.",
-      "Stir in {tomato-paste}, {thyme} and {stock}; simmer 15 minutes, add {peas}, and season.",
+      "Stir in {tomato-paste}, {thyme} and {beef-stock}; simmer 15 minutes, add {peas}, and season.",
       "Spread into a baking dish, top with mash and bake at 200 °C for 25–30 minutes until golden."
     ]
   },
@@ -98,7 +98,7 @@ KITCHEN.add(
         100
       ],
       [
-        "stock",
+        "beef-stock",
         250
       ],
       [
@@ -133,7 +133,7 @@ KITCHEN.add(
     "steps": [
       "Boil {potatoes} until soft; mash with {milk}, {butter} and half the {cheddar}.",
       "Brown {beef-mince} in {oil}, then add diced {onion} and {carrot}. Cook until softened.",
-      "Stir in {tomato-paste}, {stock} and {peas}; simmer until thick and season.",
+      "Stir in {tomato-paste}, {beef-stock} and {peas}; simmer until thick and season.",
       "Place the filling in a dish, cover with mash, scatter remaining {cheddar} and bake at 200 °C for 25 minutes."
     ]
   },
@@ -166,7 +166,7 @@ KITCHEN.add(
         "2pc"
       ],
       [
-        "stock",
+        "vegetable-stock",
         300
       ],
       [
@@ -190,7 +190,7 @@ KITCHEN.add(
       "Whisk {flour}, {eggs}, {milk} and {salt} into a smooth batter; rest 20 minutes.",
       "Heat {oil} in a metal baking dish at 220 °C, add {sausages} and roast 10 minutes.",
       "Pour batter around the sausages and bake 25–30 minutes without opening the oven.",
-      "For gravy, slowly brown sliced {onion} in {butter}, stir in {mustard} and {stock}, then simmer until glossy."
+      "For gravy, slowly brown sliced {onion} in {butter}, stir in {mustard} and {vegetable-stock}, then simmer until glossy."
     ]
   },
   {
@@ -266,7 +266,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "beef-stew-meat",
+        "beef-chuck",
         600
       ],
       [
@@ -282,11 +282,11 @@ KITCHEN.add(
         150
       ],
       [
-        "ale",
+        "beer",
         330
       ],
       [
-        "stock",
+        "beef-stock",
         250
       ],
       [
@@ -306,7 +306,7 @@ KITCHEN.add(
         2
       ],
       [
-        "egg",
+        "eggs",
         "1pc"
       ],
       [
@@ -315,10 +315,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Toss {beef-stew-meat} with {flour} and brown in {oil} in batches.",
+      "Toss {beef-chuck} with {flour} and brown in {oil} in batches.",
       "Add sliced {onion}, {carrot} and {mushrooms}; cook 5 minutes.",
-      "Pour in {ale} and {stock}, add {thyme}, cover and simmer gently for 1 hour 45 minutes until tender; cool the filling.",
-      "Spoon into a pie dish, cover with {puff-pastry}, seal and brush with beaten {egg}. Bake at 200 °C for 25–30 minutes."
+      "Pour in {beer} and {beef-stock}, add {thyme}, cover and simmer gently for 1 hour 45 minutes until tender; cool the filling.",
+      "Spoon into a pie dish, cover with {puff-pastry}, seal and brush with beaten {eggs}. Bake at 200 °C for 25–30 minutes."
     ]
   },
   {
@@ -376,7 +376,7 @@ KITCHEN.add(
         500
       ],
       [
-        "beef-stew-meat",
+        "beef-chuck",
         250
       ],
       [
@@ -396,7 +396,7 @@ KITCHEN.add(
         25
       ],
       [
-        "egg",
+        "eggs",
         "1pc"
       ],
       [
@@ -409,9 +409,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Dice {beef-stew-meat}, {potatoes}, {swede} and {onion} very finely; season well.",
+      "Dice {beef-chuck}, {potatoes}, {swede} and {onion} very finely; season well.",
       "Divide {shortcrust-pastry} into four rounds. Add filling and a little {butter} to each centre.",
-      "Fold over, crimp the edges firmly and brush with beaten {egg}.",
+      "Fold over, crimp the edges firmly and brush with beaten {eggs}.",
       "Bake at 200 °C for 40–45 minutes until deep golden and the beef is cooked through."
     ]
   },
@@ -531,7 +531,7 @@ KITCHEN.add(
         150
       ],
       [
-        "stock",
+        "beef-stock",
         400
       ],
       [
@@ -560,7 +560,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Layer sliced {onion} and {carrot} in a casserole, then add {lamb}, {thyme}, {worcestershire-sauce} and {stock}.",
+      "Layer sliced {onion} and {carrot} in a casserole, then add {lamb}, {thyme}, {worcestershire-sauce} and {beef-stock}.",
       "Cover with overlapping thin slices of {potatoes}; dot with {butter} and season.",
       "Cover and bake at 160 °C for 1 hour 45 minutes.",
       "Uncover, raise oven to 200 °C and bake another 25–30 minutes until the potato top is crisp."
@@ -651,7 +651,7 @@ KITCHEN.add(
         "2pc"
       ],
       [
-        "stock",
+        "vegetable-stock",
         300
       ],
       [
@@ -674,7 +674,7 @@ KITCHEN.add(
     "steps": [
       "Roast or pan-fry {sausages} until browned and cooked through.",
       "Boil {potatoes} until tender; mash with {milk}, half the {butter} and seasoning.",
-      "Cook sliced {onion} slowly in remaining {butter} until golden. Stir in {flour}, then gradually add {stock} and {mustard}.",
+      "Cook sliced {onion} slowly in remaining {butter} until golden. Stir in {flour}, then gradually add {vegetable-stock} and {mustard}.",
       "Simmer gravy until thick and serve over the mash with sausages."
     ]
   },
@@ -774,7 +774,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "beef-stew-meat",
+        "beef-chuck",
         600
       ],
       [
@@ -786,7 +786,7 @@ KITCHEN.add(
         "2pc"
       ],
       [
-        "ale",
+        "beer",
         300
       ],
       [
@@ -819,8 +819,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Brown {beef-stew-meat} in {oil} in batches. Add sliced {onion} and {carrot} and cook until softened.",
-      "Stir in {flour}, then gradually add {ale} and {beef-stock}. Add {thyme}, season, cover and simmer gently 90–110 minutes until tender; cool.",
+      "Brown {beef-chuck} in {oil} in batches. Add sliced {onion} and {carrot} and cook until softened.",
+      "Stir in {flour}, then gradually add {beer} and {beef-stock}. Add {thyme}, season, cover and simmer gently 90–110 minutes until tender; cool.",
       "Heat oven to 200 °C. Spoon filling into a pie dish, cover with {puff-pastry}, seal and cut a steam vent. Bake 30–35 minutes until deeply golden."
     ]
   },
@@ -845,7 +845,7 @@ KITCHEN.add(
         "1pc"
       ],
       [
-        "pickled-onions",
+        "pickled-red-onions",
         60
       ],
       [
@@ -867,7 +867,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Slice {cheddar}, {apple}, {tomato} and {cucumber}.",
-      "Arrange with {pickled-onions} and {chutney} on a board. Serve with thick slices of {bread} and {butter}."
+      "Arrange with {pickled-red-onions} and {chutney} on a board. Serve with thick slices of {bread} and {butter}."
     ]
   },
   {
@@ -946,7 +946,7 @@ KITCHEN.add(
         15
       ],
       [
-        "ale",
+        "beer",
         60
       ],
       [
@@ -963,7 +963,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Melt {butter} in a small pan, stir in {flour}, then gradually whisk in {ale} to make a thick sauce.",
+      "Melt {butter} in a small pan, stir in {flour}, then gradually whisk in {beer} to make a thick sauce.",
       "Stir in grated {cheddar}, {dijon-mustard}, {worcestershire-sauce} and {black-pepper} until smooth.",
       "Toast the {bread}, spread with the cheese mixture and grill until bubbling and golden."
     ]
@@ -1048,7 +1048,7 @@ KITCHEN.add(
         120
       ],
       [
-        "stock",
+        "beef-stock",
         900
       ],
       [
@@ -1069,7 +1069,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cover {lamb-shoulder} with {stock}, add {bay-leaf} and simmer gently for 45 minutes.",
+      "Cover {lamb-shoulder} with {beef-stock}, add {bay-leaf} and simmer gently for 45 minutes.",
       "Add chunks of {carrot}, {swede} and {potatoes}; simmer 25 minutes, then add sliced {leek} and cook until all vegetables are tender.",
       "Remove the bay leaf, season with {salt} and {black-pepper}, and serve with chopped {parsley}."
     ]
@@ -1134,7 +1134,7 @@ KITCHEN.add(
         180
       ],
       [
-        "smoked-bacon",
+        "bacon",
         120
       ],
       [
@@ -1150,7 +1150,7 @@ KITCHEN.add(
         1
       ],
       [
-        "stock",
+        "vegetable-stock",
         900
       ],
       [
@@ -1164,7 +1164,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Rinse {yellow-split-peas}. Soften diced {onion}, {carrot} and {celery} in a pot with a splash of water.",
-      "Add diced {smoked-bacon}, {yellow-split-peas}, {stock} and {thyme}; simmer 60–70 minutes, stirring occasionally, until the peas soften.",
+      "Add diced {bacon}, {yellow-split-peas}, {vegetable-stock} and {thyme}; simmer 60–70 minutes, stirring occasionally, until the peas soften.",
       "Blend part of the soup for body, season with {black-pepper} and serve hot."
     ]
   },
@@ -1177,7 +1177,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         500
       ],
       [
@@ -1214,7 +1214,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Season {chicken-thighs} with {salt}, {black-pepper} and {thyme}; roast at 200 °C until the juices run clear and the skin is crisp.",
+      "Season {chicken-thigh} with {salt}, {black-pepper} and {thyme}; roast at 200 °C until the juices run clear and the skin is crisp.",
       "Simmer {milk} with quartered {onion} and {sage} for 10 minutes, then remove the onion. Stir in fine crumbs from {bread} and simmer until thick; finish with {butter}.",
       "Rest the chicken for 5 minutes and serve with the warm bread sauce."
     ]
@@ -1248,7 +1248,7 @@ KITCHEN.add(
         1
       ],
       [
-        "egg",
+        "eggs",
         1
       ],
       [
@@ -1267,7 +1267,7 @@ KITCHEN.add(
     "steps": [
       "Season {pork-mince} with {thyme}, {sage}, {nutmeg}, {mustard}, {salt} and {black-pepper}.",
       "Line two small deep tins with {shortcrust-pastry}, pack in the pork filling and cover with pastry lids. Crimp the edges and cut a small steam hole.",
-      "Brush with beaten {egg} and bake at 190 °C for 45–50 minutes until golden and the filling is cooked through. Cool before slicing."
+      "Brush with beaten {eggs} and bake at 190 °C for 45–50 minutes until golden and the filling is cooked through. Cool before slicing."
     ]
   },
   {
@@ -1299,13 +1299,13 @@ KITCHEN.add(
         20
       ],
       [
-        "egg",
+        "eggs",
         1
       ]
     ],
     "steps": [
       "Line a small tart tin with {shortcrust-pastry} and chill while the oven heats to 180 °C.",
-      "Warm {maple-syrup} with {butter} and {lemon-juice}; stir in fine crumbs from {stale-bread}, then mix in beaten {egg}.",
+      "Warm {maple-syrup} with {butter} and {lemon-juice}; stir in fine crumbs from {stale-bread}, then mix in beaten {eggs}.",
       "Fill the pastry case and bake for 25–30 minutes until set and golden. Allow to cool slightly before serving."
     ]
   },
@@ -1338,7 +1338,7 @@ KITCHEN.add(
         65
       ],
       [
-        "egg",
+        "eggs",
         2
       ],
       [
@@ -1352,7 +1352,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Line a small tart tin with {shortcrust-pastry}; prick the base and bake with weights at 180 °C for 12 minutes.",
-      "Spread {jam} over the base. Cream {butter} and {sugar}, beat in {egg} and {vanilla-extract}, then fold in {ground-almonds}.",
+      "Spread {jam} over the base. Cream {butter} and {sugar}, beat in {eggs} and {vanilla-extract}, then fold in {ground-almonds}.",
       "Spread the almond filling over the jam and bake for 25–30 minutes. Cool and dust with {icing-sugar}."
     ]
   },
@@ -1436,14 +1436,14 @@ KITCHEN.add(
         10
       ],
       [
-        "egg",
+        "eggs",
         1
       ]
     ],
     "steps": [
       "Melt {butter}, then stir in {raisins}, {brown-sugar}, {cinnamon} and {orange-juice}; cool the filling.",
       "Cut {puff-pastry} into rounds, add a spoonful of filling to each, fold and seal, then turn seam-side down and flatten slightly.",
-      "Brush with beaten {egg}, make a few small cuts on top and bake at 200 °C for 15–18 minutes until crisp and golden."
+      "Brush with beaten {eggs}, make a few small cuts on top and bake at 200 °C for 15–18 minutes until crisp and golden."
     ]
   },
   {
@@ -1549,7 +1549,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "beef-stew-meat",
+        "beef-chuck",
         450
       ],
       [
@@ -1561,7 +1561,7 @@ KITCHEN.add(
         1
       ],
       [
-        "stock",
+        "beef-stock",
         500
       ],
       [
@@ -1569,7 +1569,7 @@ KITCHEN.add(
         10
       ],
       [
-        "ale",
+        "beer",
         100
       ],
       [
@@ -1594,8 +1594,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Season {beef-stew-meat} with {salt} and {black-pepper}, dust lightly with {flour} and brown in {oil}.",
-      "Add sliced {onion} and {carrot}; stir in {dijon-mustard}, {ale}, {stock} and {thyme}. Bring to a simmer.",
+      "Season {beef-chuck} with {salt} and {black-pepper}, dust lightly with {flour} and brown in {oil}.",
+      "Add sliced {onion} and {carrot}; stir in {dijon-mustard}, {beer}, {beef-stock} and {thyme}. Bring to a simmer.",
       "Cover and cook gently on the hob or at 160 °C for 90 minutes, until the beef is tender and the sauce has reduced."
     ]
   },
@@ -2282,7 +2282,7 @@ KITCHEN.add(
         400
       ],
       [
-        "left-roast-meat",
+        "left-beef",
         250
       ],
       [
@@ -2309,7 +2309,7 @@ KITCHEN.add(
     "steps": [
       "Dice and boil {potatoes} until just tender; drain and let steam-dry.",
       "Soften diced {onion} in {butter}, add potatoes and brown in a wide pan.",
-      "Fold in chopped {left-roast-meat}, {mustard} and {black-pepper}; press down and crisp the underside.",
+      "Fold in chopped {left-beef}, {mustard} and {black-pepper}; press down and crisp the underside.",
       "Serve with fried {eggs}."
     ]
   },
@@ -2369,7 +2369,7 @@ KITCHEN.add(
         250
       ],
       [
-        "carrots",
+        "carrot",
         2
       ],
       [
@@ -2385,7 +2385,7 @@ KITCHEN.add(
         25
       ],
       [
-        "stock",
+        "vegetable-stock",
         500
       ],
       [
@@ -2407,8 +2407,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat oven to 200 °C. Boil {potatoes} until tender, then mash with {butter}, {milk} and salt.",
-      "Dice {carrots}, {celery} and {onion}; sauté until softened. Stir in {tomato-paste} and {lentils}.",
-      "Add {stock} and simmer 25–30 minutes until lentils are tender and the filling is thick. Stir in {peas}.",
+      "Dice {carrot}, {celery} and {onion}; sauté until softened. Stir in {tomato-paste} and {lentils}.",
+      "Add {vegetable-stock} and simmer 25–30 minutes until {lentils} are tender and the filling is thick. Stir in {peas}.",
       "Spread filling in a baking dish, top with mashed potato and rough up the surface with a fork. Bake 20–25 minutes until golden."
     ]
   },
@@ -2433,7 +2433,7 @@ KITCHEN.add(
         5
       ],
       [
-        "ale",
+        "beer",
         250
       ],
       [

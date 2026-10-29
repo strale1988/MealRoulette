@@ -954,7 +954,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         650
       ],
       [
@@ -986,14 +986,14 @@ KITCHEN.add(
         12
       ],
       [
-        "chili",
+        "fresh-chilli",
         1
       ]
     ],
     "steps": [
-      "Cut the {chicken-thighs} into strips. Mix {soy-sauce}, juice of half the {lime}, minced {garlic} and {coriander}; marinate chicken for 15 minutes.",
+      "Cut the {chicken-thigh} into strips. Mix {soy-sauce}, juice of half the {lime}, minced {garlic} and {coriander}; marinate chicken for 15 minutes.",
       "Thread chicken onto skewers. Grill or broil, turning, until lightly charred and cooked through.",
-      "Whisk {peanut-butter}, {coconut-milk}, {brown-sugar}, {chili} and remaining lime juice in a small saucepan. Warm gently, adding water if needed.",
+      "Whisk {peanut-butter}, {coconut-milk}, {brown-sugar}, {fresh-chilli} and remaining lime juice in a small saucepan. Warm gently, adding water if needed.",
       "Serve satay with peanut sauce, cucumber and steamed rice."
     ]
   },
@@ -1022,7 +1022,7 @@ KITCHEN.add(
         "3pc"
       ],
       [
-        "firm-tofu",
+        "tofu",
         250
       ],
       [
@@ -1042,14 +1042,14 @@ KITCHEN.add(
         10
       ],
       [
-        "chili",
+        "fresh-chilli",
         1
       ]
     ],
     "steps": [
       "Boil {potatoes} until tender; steam {green-beans} and blanch {bean-sprouts} briefly. Boil the {eggs} for 8–9 minutes.",
-      "Pan-fry cubed {firm-tofu} until golden on all sides.",
-      "Whisk {peanut-butter} with juice of the {lime}, {soy-sauce}, {brown-sugar}, minced {chili} and enough warm water to make a pourable sauce.",
+      "Pan-fry cubed {tofu} until golden on all sides.",
+      "Whisk {peanut-butter} with juice of the {lime}, {soy-sauce}, {brown-sugar}, minced {fresh-chilli} and enough warm water to make a pourable sauce.",
       "Arrange vegetables, tofu and halved eggs on a platter. Spoon over peanut sauce and serve at room temperature."
     ]
   },
@@ -1062,7 +1062,7 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         500
       ],
       [
@@ -1103,7 +1103,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cut {chicken-thighs} into strips and marinate with {soy-sauce}, {turmeric}, {coriander}, minced {garlic} and {oil} for 15 minutes. Thread onto skewers.",
+      "Cut {chicken-thigh} into strips and marinate with {soy-sauce}, {turmeric}, {coriander}, minced {garlic} and {oil} for 15 minutes. Thread onto skewers.",
       "Whisk {peanut-butter}, {coconut-milk}, {brown-sugar}, lime juice from {lime} and a splash of water in a saucepan; warm gently until smooth.",
       "Grill or pan-sear chicken skewers 8–10 minutes, turning until cooked through. Serve with peanut sauce and extra lime."
     ]
@@ -1133,7 +1133,7 @@ KITCHEN.add(
         10
       ],
       [
-        "egg",
+        "eggs",
         1
       ],
       [
@@ -1162,7 +1162,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Mix {beef-mince} with minced {garlic}, grated {ginger}, {egg}, {cornstarch} and {salt}; form small meatballs.",
+      "Mix {beef-mince} with minced {garlic}, grated {ginger}, {eggs}, {cornstarch} and {salt}; form small meatballs.",
       "Bring {beef-stock} to a simmer and cook meatballs for 10–12 minutes until cooked through. Add shredded {cabbage} for the final 3 minutes.",
       "Cook {rice-vermicelli} separately, divide between bowls, ladle over broth and meatballs, then garnish with {spring-onion} and {soy-sauce}."
     ]
@@ -1208,14 +1208,14 @@ KITCHEN.add(
         3
       ],
       [
-        "shallots",
+        "shallot",
         15
       ]
     ],
     "steps": [
       "Rinse {rice} until the water runs mostly clear. Mix {coconut-milk}, {water}, {turmeric} and {salt}.",
       "Add rice, bruised {lemongrass}, sliced {ginger} and {bay-leaf} to a pot; pour over the coconut mixture.",
-      "Bring to a gentle boil, cover and cook on low until tender, about 15 minutes. Rest 10 minutes, remove aromatics, fluff and garnish with crisp-fried {shallots}."
+      "Bring to a gentle boil, cover and cook on low until tender, about 15 minutes. Rest 10 minutes, remove aromatics, fluff and garnish with crisp-fried {shallot}."
     ]
   },
   {
@@ -1227,7 +1227,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         500
       ],
       [
@@ -1247,7 +1247,7 @@ KITCHEN.add(
         10
       ],
       [
-        "coriander-ground",
+        "ground-coriander",
         3
       ],
       [
@@ -1263,7 +1263,7 @@ KITCHEN.add(
         2
       ],
       [
-        "stock",
+        "chicken-stock",
         180
       ],
       [
@@ -1276,9 +1276,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Blend {onion}, {garlic}, {ginger}, {coriander-ground} and {turmeric} with a splash of water.",
-      "Fry the paste in {oil} until fragrant; add bruised {lemongrass}, {bay-leaf} and {chicken-thighs}. Turn to coat.",
-      "Pour in {stock} and {coconut-milk}; simmer gently for 25–30 minutes until the chicken is cooked and the sauce creamy. Season with {salt}."
+      "Blend {onion}, {garlic}, {ginger}, {ground-coriander} and {turmeric} with a splash of water.",
+      "Fry the paste in {oil} until fragrant; add bruised {lemongrass}, {bay-leaf} and {chicken-thigh}. Turn to coat.",
+      "Pour in {chicken-stock} and {coconut-milk}; simmer gently for 25–30 minutes until the chicken is cooked and the sauce creamy. Season with {salt}."
     ]
   },
   {
@@ -1290,7 +1290,7 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "corn",
+        "sweetcorn",
         1
       ],
       [
@@ -1310,7 +1310,7 @@ KITCHEN.add(
         20
       ],
       [
-        "shallots",
+        "shallot",
         2
       ],
       [
@@ -1335,8 +1335,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Pound {shallots}, {garlic} and {coriander-seeds} into a rough paste. Bring {water} to a simmer and stir in the paste and {tamarind-paste}.",
-      "Add sliced {corn}, diced {zucchini} and {green-beans}; simmer until nearly tender, about 15 minutes.",
+      "Pound {shallot}, {garlic} and {coriander-seeds} into a rough paste. Bring {water} to a simmer and stir in the paste and {tamarind-paste}.",
+      "Add sliced {sweetcorn}, diced {zucchini} and {green-beans}; simmer until nearly tender, about 15 minutes.",
       "Add quartered {tomato}, {salt} and {sugar}; simmer 5 more minutes and serve as a tangy soup with rice."
     ]
   },
@@ -1413,7 +1413,7 @@ KITCHEN.add(
       ],
       [
         "oil",
-        30
+        280
       ],
       [
         "beef-mince",
@@ -1439,15 +1439,12 @@ KITCHEN.add(
         "salt",
         3
       ],
-      [
-        "neutral-oil",
-        250
-      ]
+      
     ],
     "steps": [
       "Mix {flour}, {water}, a pinch of {salt} and half the {oil}; knead into a soft dough and rest 20 minutes.",
       "Brown {beef-mince} with chopped {onion} and {curry-powder}; cool, then mix with {eggs} and sliced {spring-onion}.",
-      "Stretch the dough thin on an oiled surface, place filling in the centre, fold into a square and shallow-fry in {neutral-oil} until crisp and golden on both sides."
+      "Stretch the dough thin on an oiled surface, place filling in the centre, fold into a square and shallow-fry in {oil} until crisp and golden on both sides."
     ]
   },
   {
@@ -1498,11 +1495,11 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         700
       ],
       [
-        "shallots",
+        "shallot",
         4
       ],
       [
@@ -1526,7 +1523,7 @@ KITCHEN.add(
         4
       ],
       [
-        "chilli",
+        "fresh-chilli",
         2
       ],
       [
@@ -1547,8 +1544,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Blend {shallots}, {garlic}, {ginger}, {fresh-galangal}, {lemongrass}, {turmeric}, {chilli} and {coriander-seeds} with {oil} into a thick spice paste.",
-      "Rub the paste and {salt} over {chicken-thighs}; cover and marinate at least 30 minutes.",
+      "Blend {shallot}, {garlic}, {ginger}, {fresh-galangal}, {lemongrass}, {turmeric}, {fresh-chilli} and {coriander-seeds} with {oil} into a thick spice paste.",
+      "Rub the paste and {salt} over {chicken-thigh}; cover and marinate at least 30 minutes.",
       "Cover tightly in a baking dish and roast at 170 °C for 60 minutes, then uncover and roast at 210 °C for 15–20 minutes until browned and cooked through. Finish with {lime-juice}."
     ]
   },
@@ -1569,7 +1566,7 @@ KITCHEN.add(
         100
       ],
       [
-        "egg",
+        "eggs",
         1
       ],
       [
@@ -1593,7 +1590,7 @@ KITCHEN.add(
         20
       ],
       [
-        "chilli",
+        "fresh-chilli",
         1
       ],
       [
@@ -1602,9 +1599,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Finely mince {cod} with {garlic} and {salt}; mix in {egg}, {tapioca-pearls} and {water} to make a firm paste.",
+      "Finely mince {cod} with {garlic} and {salt}; mix in {eggs}, {tapioca-pearls} and {water} to make a firm paste.",
       "Shape into small oval cakes and gently simmer in water until firm and floating, about 8 minutes; drain and pan-fry until golden if desired.",
-      "Mix {vinegar}, {sugar}, finely chopped {chilli} and 2 tbsp water for the dip. Serve fish cakes with diced {cucumber} and the sharp sauce."
+      "Mix {vinegar}, {sugar}, finely chopped {fresh-chilli} and 2 tbsp water for the dip. Serve fish cakes with diced {cucumber} and the sharp sauce."
     ]
   },
   {
@@ -1695,7 +1692,7 @@ KITCHEN.add(
         2
       ],
       [
-        "stock",
+        "vegetable-stock",
         450
       ],
       [
@@ -1714,7 +1711,7 @@ KITCHEN.add(
     "steps": [
       "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
       "Add {coconut-milk} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
+      "Add {vegetable-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
       "Soften onion and garlic in oil, add turmeric and firm vegetables, then simmer gently in coconut milk and stock; add tofu near the end and keep the vegetables tender without letting the coconut sauce split.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]

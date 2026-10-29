@@ -10,7 +10,7 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "firm-tofu",
+        "tofu",
         450
       ],
       [
@@ -47,7 +47,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cook the {rice}. Press {firm-tofu} dry and cut into cubes; toss with {cornstarch}.",
+      "Cook the {rice}. Press {tofu} dry and cut into cubes; toss with {cornstarch}.",
       "Pan-fry tofu in oil until crisp and golden on most sides. Steam {broccoli} until bright green and tender-crisp.",
       "Simmer {soy-sauce}, {mirin}, {brown-sugar} and grated {ginger} until slightly reduced. Add tofu and toss to coat.",
       "Serve tofu and broccoli over rice, spoon over extra sauce and sprinkle with {sesame-seeds}."
@@ -1343,11 +1343,11 @@ KITCHEN.add(
         700
       ],
       [
-        "miso",
+        "miso-paste",
         35
       ],
       [
-        "corn",
+        "sweetcorn",
         180
       ],
       [
@@ -1373,8 +1373,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Cook {noodles} according to the packet and drain.",
-      "Sauté sliced {mushrooms} and {garlic} in half the {butter} until browned. Add {corn}.",
-      "Warm {vegetable-stock}; whisk in {miso} and {soy-sauce} until dissolved. Do not boil vigorously after adding miso.",
+      "Sauté sliced {mushrooms} and {garlic} in half the {butter} until browned. Add {sweetcorn}.",
+      "Warm {vegetable-stock}; whisk in {miso-paste} and {soy-sauce} until dissolved. Do not boil vigorously after adding miso.",
       "Divide noodles and broth between bowls. Top with corn and mushrooms, remaining butter and sliced {spring-onion}."
     ],
     "cuisine": "Japanese"
@@ -1575,7 +1575,7 @@ KITCHEN.add(
         12
       ],
       [
-        "stock",
+        "chicken-stock",
         450
       ],
       [
@@ -1586,7 +1586,7 @@ KITCHEN.add(
     "steps": [
       "Cook {rice}. Flatten {chicken-breast} to even thickness and coat in {flour}, beaten {eggs} and {panko}.",
       "Shallow-fry chicken until crisp and cooked through; rest before slicing.",
-      "Cook diced {onion}, {carrot} and {potatoes} in a little {oil}; add {curry-powder} and {stock}. Simmer until vegetables are tender and sauce thickens.",
+      "Cook diced {onion}, {carrot} and {potatoes} in a little {oil}; add {curry-powder} and {chicken-stock}. Simmer until vegetables are tender and sauce thickens.",
       "Slice chicken and serve over rice with curry sauce."
     ]
   },
@@ -1626,7 +1626,7 @@ KITCHEN.add(
     "steps": [
       "Rinse and cook {sushi-rice}; while warm, season lightly with {rice-vinegar} and {salt}. Cool until comfortable to handle.",
       "Mix drained {tuna} with {mayonnaise}.",
-      "Wet hands, lightly salt them, flatten a scoop of rice, add tuna filling and shape into triangles.",
+      "Wet hands, lightly salt them, flatten a scoop of rice, add {tuna} filling and shape into triangles.",
       "Wrap with strips of {nori} shortly before serving."
     ]
   },
@@ -1639,11 +1639,11 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "eggplant",
+        "aubergine",
         500
       ],
       [
-        "miso",
+        "miso-paste",
         45
       ],
       [
@@ -1668,9 +1668,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Halve {eggplant} lengthways and score the flesh in a crosshatch; brush with {oil}.",
+      "Halve {aubergine} lengthways and score the flesh in a crosshatch; brush with {oil}.",
       "Roast cut-side up at 200 °C for 20–25 minutes until soft.",
-      "Mix {miso}, {mirin} and {sugar}; spread over the aubergine and grill 2–3 minutes until bubbling.",
+      "Mix {miso-paste}, {mirin} and {sugar}; spread over the aubergine and grill 2–3 minutes until bubbling.",
       "Top with {sesame-seeds} and sliced {spring-onion}."
     ]
   },
@@ -1687,7 +1687,7 @@ KITCHEN.add(
         "2pc"
       ],
       [
-        "stock",
+        "fish-stock",
         300
       ],
       [
@@ -1712,7 +1712,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Whisk {eggs} gently with cooled {stock}, {soy-sauce} and {mirin}; strain for a silky custard.",
+      "Whisk {eggs} gently with cooled {fish-stock}, {soy-sauce} and {mirin}; strain for a silky custard.",
       "Divide sliced {shiitake-mushrooms} and {prawns} between heatproof cups; pour egg mixture over them.",
       "Cover each cup and steam over barely simmering water for 12–15 minutes until just set with a slight wobble.",
       "Garnish with {spring-onion} and serve warm."
@@ -1845,7 +1845,7 @@ KITCHEN.add(
         30
       ],
       [
-        "egg",
+        "eggs",
         3
       ],
       [
@@ -1869,7 +1869,7 @@ KITCHEN.add(
         6
       ],
       [
-        "neutral-oil",
+        "oil",
         250
       ],
       [
@@ -1878,9 +1878,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Pound {pork} to an even thickness. Coat in {flour}, beaten {egg} and {panko}; shallow-fry in {neutral-oil} until golden and cooked through.",
+      "Pound {pork} to an even thickness. Coat in {flour}, beaten {eggs} and {panko}; shallow-fry in {oil} until golden and cooked through.",
       "Simmer sliced {onion} with {soy-sauce}, {mirin}, {sugar} and 100 ml water until soft. Slice the cutlet and lay it over the onion.",
-      "Pour over remaining beaten {egg}, cover briefly until just set, then serve over cooked {rice} with {spring-onion}."
+      "Pour over remaining beaten {eggs}, cover briefly until just set, then serve over cooked {rice} with {spring-onion}."
     ]
   },
   {
@@ -1916,13 +1916,13 @@ KITCHEN.add(
         12
       ],
       [
-        "neutral-oil",
+        "oil",
         10
       ]
     ],
     "steps": [
       "Simmer {soy-sauce}, {mirin}, {rice-wine} and {sugar} until slightly syrupy; reserve half for serving.",
-      "Thread bite-sized {chicken-thigh} and chunks of {spring-onion} onto skewers; brush lightly with {neutral-oil}.",
+      "Thread bite-sized {chicken-thigh} and chunks of {spring-onion} onto skewers; brush lightly with {oil}.",
       "Grill or broil, turning and brushing frequently with tare, until the chicken is cooked and lightly charred. Serve with reserved glaze."
     ]
   },
@@ -1935,7 +1935,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "firm-tofu",
+        "tofu",
         350
       ],
       [
@@ -1963,13 +1963,13 @@ KITCHEN.add(
         2
       ],
       [
-        "neutral-oil",
+        "oil",
         250
       ]
     ],
     "steps": [
-      "Drain {firm-tofu} well and cut into cubes; pat dry and dust with {cornstarch}.",
-      "Heat {neutral-oil} and fry tofu until crisp and pale golden; drain on a rack.",
+      "Drain {tofu} well and cut into cubes; pat dry and dust with {cornstarch}.",
+      "Heat {oil} and fry tofu until crisp and pale golden; drain on a rack.",
       "Warm {vegetable-stock}, {soy-sauce} and {mirin}. Place tofu in shallow bowls, pour broth around it and garnish with grated {ginger} and sliced {spring-onion}."
     ]
   },
@@ -2010,7 +2010,7 @@ KITCHEN.add(
         150
       ],
       [
-        "neutral-oil",
+        "oil",
         10
       ],
       [
@@ -2020,7 +2020,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Cook {rice}. Mix grated {ginger}, {soy-sauce}, {mirin}, {rice-wine} and {sugar}.",
-      "Sear thin slices of {pork} in {neutral-oil} until lightly browned; pour in the ginger sauce and cook until glossy and the pork is cooked.",
+      "Sear thin slices of {pork} in {oil} until lightly browned; pour in the ginger sauce and cook until glossy and the pork is cooked.",
       "Serve with finely shredded {cabbage} and rice, spooning the pan sauce over the pork."
     ]
   },
@@ -2336,14 +2336,14 @@ KITCHEN.add(
         20
       ],
       [
-        "neutral-oil",
+        "oil",
         15
       ]
     ],
     "steps": [
       "Finely chop {cabbage}, salt lightly and squeeze dry. Mix with {pork-mince}, grated {ginger}, {garlic}, {soy-sauce} and {sesame-oil}.",
       "Place a teaspoon of filling on each {dumpling-skins}, moisten the edges, fold and pleat to seal.",
-      "Pan-fry in {neutral-oil} until browned underneath, add a splash of water and cover to steam 5–6 minutes. Serve with {rice-vinegar} and extra soy for dipping."
+      "Pan-fry in {oil} until browned underneath, add a splash of water and cover to steam 5–6 minutes. Serve with {rice-vinegar} and extra soy for dipping."
     ]
   },
   {
@@ -2387,13 +2387,13 @@ KITCHEN.add(
         60
       ],
       [
-        "neutral-oil",
+        "oil",
         8
       ]
     ],
     "steps": [
       "Cook {rice}. Simmer {chicken-mince} with grated {ginger}, {soy-sauce}, {mirin} and {sugar}, breaking it into fine crumbles until cooked.",
-      "Whisk {eggs} and softly scramble in {neutral-oil}; keep the curds small. Warm {peas} briefly.",
+      "Whisk {eggs} and softly scramble in {oil}; keep the curds small. Warm {peas} briefly.",
       "Arrange rice in bowls and top in separate sections with chicken, egg and {peas}."
     ]
   },
@@ -2430,7 +2430,7 @@ KITCHEN.add(
         120
       ],
       [
-        "neutral-oil",
+        "oil",
         300
       ],
       [
@@ -2441,7 +2441,7 @@ KITCHEN.add(
     "steps": [
       "Cut {carrot}, {onion} and {sweet-potato} into thin matchsticks.",
       "Mix {flour} and {cornstarch} with cold {sparkling-water} just until combined; fold in the vegetables.",
-      "Drop small loose clusters into hot {neutral-oil} and fry until crisp and golden. Drain and serve with {soy-sauce} diluted with a little water."
+      "Drop small loose clusters into hot {oil} and fry until crisp and golden. Drain and serve with {soy-sauce} diluted with a little water."
     ]
   },
   {
@@ -2587,7 +2587,7 @@ KITCHEN.add(
         12
       ],
       [
-        "stock",
+        "beef-stock",
         400
       ],
       [
@@ -2597,7 +2597,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Brown {beef-strips} in {oil}; add sliced {onion} and cook until softened.",
-      "Add cubed {potatoes}, sliced {carrot}, {stock}, {soy-sauce}, {mirin} and {sugar}. Bring to a simmer.",
+      "Add cubed {potatoes}, sliced {carrot}, {beef-stock}, {soy-sauce}, {mirin} and {sugar}. Bring to a simmer.",
       "Cover and cook 20–25 minutes until the vegetables are tender and the broth slightly reduced."
     ]
   },
@@ -2614,7 +2614,7 @@ KITCHEN.add(
         350
       ],
       [
-        "firm-tofu",
+        "tofu",
         200
       ],
       [
@@ -2622,7 +2622,7 @@ KITCHEN.add(
         "3pc"
       ],
       [
-        "stock",
+        "fish-stock",
         1000
       ],
       [
@@ -2643,8 +2643,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Peel {turnip} and cut into thick rounds; parboil 10 minutes. Boil and peel {eggs}; cut {firm-tofu} into large cubes.",
-      "Simmer {stock} with {soy-sauce}, {mirin}, {sugar},  and {fish-sauce} for 5 minutes; remove kombu if desired.",
+      "Peel {turnip} and cut into thick rounds; parboil 10 minutes. Boil and peel {eggs}; cut {tofu} into large cubes.",
+      "Simmer {fish-stock} with {soy-sauce}, {mirin}, {sugar},  and {fish-sauce} for 5 minutes; remove kombu if desired.",
       "Add daikon, tofu and eggs. Simmer gently for 35–40 minutes, allowing the broth to infuse, then serve hot."
     ]
   },
@@ -2772,7 +2772,7 @@ KITCHEN.add(
         35
       ],
       [
-        "stock",
+        "vegetable-stock",
         450
       ],
       [
@@ -2781,7 +2781,7 @@ KITCHEN.add(
       ],
       [
         "nori",
-        "2 sheets"
+        5
       ],
       [
         "salt",
@@ -2821,7 +2821,7 @@ KITCHEN.add(
       ],
       [
         "nori",
-        "2 sheets"
+        5
       ],
       [
         "sesame-seeds",

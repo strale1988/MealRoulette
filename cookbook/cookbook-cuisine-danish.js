@@ -11,7 +11,7 @@ KITCHEN.add(
     "ing": [
       [
         "rye-bread",
-        "4 slices"
+        "4pc"
       ],
       [
         "fresh-beetroot",
@@ -158,7 +158,7 @@ KITCHEN.add(
         100
       ],
       [
-        "egg",
+        "eggs",
         "1pc"
       ],
       [
@@ -194,7 +194,7 @@ KITCHEN.add(
         350
       ],
       [
-        "smoked-bacon",
+        "bacon",
         120
       ],
       [
@@ -258,7 +258,7 @@ KITCHEN.add(
         2
       ],
       [
-        "stock",
+        "vegetable-stock",
         450
       ],
       [

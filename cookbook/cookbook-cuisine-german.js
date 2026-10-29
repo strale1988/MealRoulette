@@ -1121,7 +1121,7 @@ KITCHEN.add(
         15
       ],
       [
-        "stock",
+        "beef-stock",
         350
       ],
       [
@@ -1139,7 +1139,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Mix {red-wine-vinegar}, {red-wine}, sliced {onion}, {carrot}, {allspice} and {bay-leaf}; marinate {beef-chuck} overnight in the refrigerator, turning occasionally.",
-      "Remove and dry the beef, reserving the marinade. Brown in {oil}, then add the marinade, {stock}, {brown-sugar} and {salt}.",
+      "Remove and dry the beef, reserving the marinade. Brown in {oil}, then add the marinade, {beef-stock}, {brown-sugar} and {salt}.",
       "Cover and braise at 160 °C for about 2 hours until tender. Remove beef, strain the liquid and thicken with {flour} mixed with cold water."
     ]
   },
@@ -1152,7 +1152,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "cabbage-leaves",
+        "cabbage",
         6
       ],
       [
@@ -1168,7 +1168,7 @@ KITCHEN.add(
         1
       ],
       [
-        "egg",
+        "eggs",
         1
       ],
       [
@@ -1176,7 +1176,7 @@ KITCHEN.add(
         3
       ],
       [
-        "stock",
+        "beef-stock",
         400
       ],
       [
@@ -1197,9 +1197,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Blanch {cabbage-leaves} until flexible. Mix {beef-mince}, cooked {rice}, diced {onion}, {egg}, {paprika}, {salt} and {black-pepper}.",
+      "Blanch {cabbage} until flexible. Mix {beef-mince}, cooked {rice}, diced {onion}, {eggs}, {paprika}, {salt} and {black-pepper}.",
       "Divide filling among leaves, fold in the sides and roll tightly. Brown rolls seam-side down in {butter}.",
-      "Stir {tomato-paste} into {stock}, pour around the rolls, cover and simmer gently for 35–40 minutes until cooked through."
+      "Stir {tomato-paste} into {beef-stock}, pour around the rolls, cover and simmer gently for 35–40 minutes until cooked through."
     ]
   },
   {
@@ -1211,7 +1211,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "ground-beef",
+        "beef-mince",
         300
       ],
       [
@@ -1231,7 +1231,7 @@ KITCHEN.add(
         1
       ],
       [
-        "stock",
+        "beef-stock",
         600
       ],
       [
@@ -1260,8 +1260,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Soak {stale-bread} in {milk}; mix with {ground-beef}, half the chopped {onion}, {eggs}, {salt} and {black-pepper}. Form small meatballs.",
-      "Simmer the remaining {onion} with {stock}; gently poach meatballs for 12–15 minutes until cooked. Lift them out and keep warm.",
+      "Soak {stale-bread} in {milk}; mix with {beef-mince}, half the chopped {onion}, {eggs}, {salt} and {black-pepper}. Form small meatballs.",
+      "Simmer the remaining {onion} with {beef-stock}; gently poach meatballs for 12–15 minutes until cooked. Lift them out and keep warm.",
       "Whisk {flour} with a little cold water and stir into the broth; add {cream}, {capers} and {lemon-juice}. Simmer until lightly thickened and return meatballs to the sauce."
     ]
   },
@@ -1278,7 +1278,7 @@ KITCHEN.add(
         300
       ],
       [
-        "ground-beef",
+        "beef-mince",
         250
       ],
       [
@@ -1306,7 +1306,7 @@ KITCHEN.add(
         1
       ],
       [
-        "stock",
+        "beef-stock",
         900
       ],
       [
@@ -1319,9 +1319,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Soak {stale-bread} in a little water and squeeze dry. Mix with {ground-beef}, chopped {spinach}, {onion}, {eggs}, {mustard}, {nutmeg}, {salt} and {black-pepper}.",
+      "Soak {stale-bread} in a little water and squeeze dry. Mix with {beef-mince}, chopped {spinach}, {onion}, {eggs}, {mustard}, {nutmeg}, {salt} and {black-pepper}.",
       "Place small mounds of filling on {egg-pasta} sheets, moisten the edges and fold into sealed rectangular parcels.",
-      "Simmer gently in {stock} for 10–12 minutes until cooked. Serve in broth or slice and pan-fry the cooked parcels."
+      "Simmer gently in {beef-stock} for 10–12 minutes until cooked. Serve in broth or slice and pan-fry the cooked parcels."
     ]
   },
   {
@@ -1589,7 +1589,7 @@ KITCHEN.add(
         25
       ],
       [
-        "stock",
+        "beef-stock",
         100
       ],
       [
@@ -1607,7 +1607,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Boil {potatoes} and {fresh-beetroot} separately until tender; peel and dice the beetroot.",
-      "Cook chopped {onion} with {beef-mince} until browned. Add {stock}, {pickles} chopped finely and the beetroot; simmer 5 minutes.",
+      "Cook chopped {onion} with {beef-mince} until browned. Add {beef-stock}, {pickles} chopped finely and the beetroot; simmer 5 minutes.",
       "Mash the potatoes with {butter}, fold through the beef-beet mixture and season with {salt} and {black-pepper}. Serve topped with fried {eggs}."
     ]
   },
@@ -1679,7 +1679,7 @@ KITCHEN.add(
         1
       ],
       [
-        "stock",
+        "vegetable-stock",
         900
       ],
       [
@@ -1708,7 +1708,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Soften sliced {leek}, diced {carrot} and {celery} in {oil}. Add cubed {potatoes}, {stock} and {marjoram}.",
+      "Soften sliced {leek}, diced {carrot} and {celery} in {oil}. Add cubed {potatoes}, {vegetable-stock} and {marjoram}.",
       "Simmer until the potatoes are tender, then mash some against the side of the pot to thicken the soup.",
       "Add sliced {smoked-sausage} and {cream}; warm through and season with {salt} and {black-pepper}."
     ]

@@ -1159,7 +1159,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Cook {pasta} until al dente and reserve a little cooking water.",
-      "Warm {olive-oil} in a pan; add {garlic}, {oregano} and drained {chickpeas}. Cook for 3 minutes, gently crushing a few chickpeas.",
+      "Warm {olive-oil} in a pan; add {garlic}, {oregano} and drained {chickpeas}. Cook for 3 minutes, gently crushing a few {chickpeas}.",
       "Add {spinach}, lemon zest and {lemon} juice. Toss with pasta, loosening with cooking water, and crumble {feta} over the top."
     ]
   },
@@ -1265,7 +1265,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "potato",
+        "potatoes",
         700
       ],
       [
@@ -1290,7 +1290,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat the oven to 200°C. Cut {potato} into wedges and place in a roasting dish.",
+      "Heat the oven to 200°C. Cut {potatoes} into wedges and place in a roasting dish.",
       "Whisk juice from {lemon} with {olive-oil}, minced {garlic}, {oregano}, salt and pepper. Pour over potatoes and toss.",
       "Add {vegetable-stock}; roast for 40–45 minutes, turning once, until tender and browned.",
       "Serve hot with extra lemon if desired."
@@ -1378,7 +1378,7 @@ KITCHEN.add(
         15
       ],
       [
-        "filo-pastry",
+        "phyllo-pastry",
         250
       ],
       [
@@ -1392,7 +1392,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Wilt the {spinach}, cool and squeeze out as much liquid as possible. Chop and mix with crumbled {feta}, {eggs}, sliced {spring-onion}, {dill} and {black-pepper}.",
-      "Heat the oven to 190 °C. Brush a baking dish with {olive-oil}; layer in half the {filo-pastry}, brushing each sheet lightly with oil.",
+      "Heat the oven to 190 °C. Brush a baking dish with {olive-oil}; layer in half the {phyllo-pastry}, brushing each sheet lightly with oil.",
       "Spread the spinach filling evenly, then layer the remaining filo on top, brushing with oil and tucking the edges in.",
       "Score the top into portions and bake 35–40 minutes until crisp and deeply golden. Rest 10 minutes before cutting."
     ]
@@ -1410,7 +1410,7 @@ KITCHEN.add(
         800
       ],
       [
-        "carrots",
+        "carrot",
         2
       ],
       [
@@ -1422,7 +1422,7 @@ KITCHEN.add(
         1
       ],
       [
-        "tomatoes",
+        "tomato",
         400
       ],
       [
@@ -1438,7 +1438,7 @@ KITCHEN.add(
         1
       ],
       [
-        "stock",
+        "vegetable-stock",
         900
       ],
       [
@@ -1447,8 +1447,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Dice the {carrots}, {celery} and {onion}. Soften them in half the {olive-oil} for 8 minutes.",
-      "Stir in {tomato-paste}, then add {tomatoes}, {white-beans}, {bay-leaf} and {stock}.",
+      "Dice the {carrot}, {celery} and {onion}. Soften them in half the {olive-oil} for 8 minutes.",
+      "Stir in {tomato-paste}, then add {tomato}, {white-beans}, {bay-leaf} and {vegetable-stock}.",
       "Simmer 25–30 minutes until the vegetables are tender and the broth is rich. Mash a few beans against the side to thicken slightly.",
       "Remove the bay leaf, stir in chopped {parsley} and remaining olive oil, and season to taste. Serve with crusty bread."
     ]
@@ -1526,7 +1526,7 @@ KITCHEN.add(
         "1pc"
       ],
       [
-        "tomato-passata",
+        "passata",
         350
       ],
       [
@@ -1555,7 +1555,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cook {pasta} until just under al dente. Brown {beef-mince} with diced {onion}; add {tomato-passata} and {cinnamon}, simmer 15 minutes.",
+      "Cook {pasta} until just under al dente. Brown {beef-mince} with diced {onion}; add {passata} and {cinnamon}, simmer 15 minutes.",
       "Make béchamel: melt {butter}, stir in {flour}, then gradually whisk in {milk}; simmer until thick. Cool slightly, then whisk in {eggs} and half the {parmesan}.",
       "Layer pasta and meat sauce in a baking dish, cover with béchamel and remaining cheese. Bake at 180 °C for 35–40 minutes until golden; rest 15 minutes before slicing."
     ]
@@ -1577,7 +1577,7 @@ KITCHEN.add(
         100
       ],
       [
-        "egg",
+        "eggs",
         1
       ],
       [
@@ -1607,7 +1607,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Grate {zucchini}, salt lightly and leave 10 minutes; squeeze out as much liquid as possible.",
-      "Mix zucchini with crumbled {feta}, {egg}, {flour}, chopped {dill}, {mint}, sliced {spring-onion} and {black-pepper}.",
+      "Mix zucchini with crumbled {feta}, {eggs}, {flour}, chopped {dill}, {mint}, sliced {spring-onion} and {black-pepper}.",
       "Drop spoonfuls into hot {olive-oil}; flatten slightly and fry 2–3 minutes per side until golden. Drain and serve with yogurt."
     ]
   },
@@ -1620,7 +1620,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "filo-pastry",
+        "phyllo-pastry",
         220
       ],
       [
@@ -1662,7 +1662,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Warm {milk} with half the {sugar} and {vanilla-extract}; whisk in {semolina} and cook until thick. Off heat, whisk in {eggs} and lemon zest from {lemon}.",
-      "Layer sheets of {filo-pastry} in a buttered dish, brushing each with melted {butter}; add the cooled custard and fold pastry over the top.",
+      "Layer sheets of {phyllo-pastry} in a buttered dish, brushing each with melted {butter}; add the cooled custard and fold pastry over the top.",
       "Bake at 180 °C for 35–40 minutes. Simmer remaining {sugar}, {water}, {cinnamon} and a strip of lemon zest into a light syrup; pour over the hot pie and cool before cutting."
     ]
   },
@@ -1683,7 +1683,7 @@ KITCHEN.add(
         40
       ],
       [
-        "egg",
+        "eggs",
         1
       ],
       [
@@ -1699,7 +1699,7 @@ KITCHEN.add(
         1
       ],
       [
-        "tomato-passata",
+        "passata",
         300
       ],
       [
@@ -1724,8 +1724,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Soak {stale-bread}, squeeze dry and mix with {beef-mince}, {egg}, minced {garlic}, {cumin}, {cinnamon}, {salt} and {black-pepper}. Shape into oblong meatballs.",
-      "Brown meatballs in {olive-oil} and set aside. Cook chopped {onion} in the same pan, then add {tomato-passata} and a splash of water.",
+      "Soak {stale-bread}, squeeze dry and mix with {beef-mince}, {eggs}, minced {garlic}, {cumin}, {cinnamon}, {salt} and {black-pepper}. Shape into oblong meatballs.",
+      "Brown meatballs in {olive-oil} and set aside. Cook chopped {onion} in the same pan, then add {passata} and a splash of water.",
       "Return meatballs and simmer gently for 20 minutes until cooked through. Finish with chopped {parsley}; serve over rice or potatoes."
     ]
   },
@@ -1836,8 +1836,8 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "chickpeas",
-        300
+        "dried-chickpeas",
+        200
       ],
       [
         "onion",
@@ -1877,7 +1877,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Soak {chickpeas} overnight and drain. Put in a covered ovenproof pot with sliced {onion}, {garlic}, {rosemary}, {bay-leaf}, {olive-oil} and {water}.",
+      "Soak {dried-chickpeas} overnight and drain. Put in a covered ovenproof pot with sliced {onion}, {garlic}, {rosemary}, {bay-leaf}, {olive-oil} and {water}.",
       "Cover and bake at 160 °C for 2 hours or until the chickpeas are very tender, adding water if needed.",
       "Season with {salt} and {black-pepper}; finish with {lemon-juice} and a little olive oil."
     ]

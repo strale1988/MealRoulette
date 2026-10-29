@@ -18,7 +18,7 @@ KITCHEN.add(
         350
       ],
       [
-        "corn",
+        "sweetcorn",
         120
       ],
       [
@@ -98,7 +98,7 @@ KITCHEN.add(
         1
       ],
       [
-        "smoked-bacon",
+        "bacon",
         120
       ],
       [
@@ -178,13 +178,10 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "corn",
-        120
-      ],
-      [
         "sweetcorn",
-        120
+        240
       ],
+      
       [
         "cornmeal",
         120
@@ -208,7 +205,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Whisk the batter until smooth and let it rest briefly so the flour hydrates.",
-      "Cook {corn} in a lightly greased pan over medium heat, turning or folding once the surface sets.",
+      "Cook {sweetcorn} in a lightly greased pan over medium heat, turning or folding once the surface sets.",
       "Blend part of the corn with milk, fold in whole kernels and cornmeal to make a thick batter, then griddle small cakes slowly and sandwich with cheese while hot.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -234,7 +231,7 @@ KITCHEN.add(
         2
       ],
       [
-        "corn",
+        "sweetcorn",
         120
       ],
       [
@@ -242,7 +239,7 @@ KITCHEN.add(
         150
       ],
       [
-        "stock",
+        "chicken-stock",
         450
       ],
       [
@@ -272,7 +269,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat {oil} in a soup pot and soften {onion} and {garlic} without browning.",
-      "Add {stock} and {chicken-thigh}, simmering gently until the main ingredient is tender.",
+      "Add {chicken-stock} and {chicken-thigh}, simmering gently until the main ingredient is tender.",
       "Start with chicken and stock, then add dense vegetables in stages so each finishes tender; leave the plantain in large chunks and finish with plenty of fresh cilantro.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -403,7 +400,7 @@ KITCHEN.add(
       ],
       [
         "bread",
-        "4 slices"
+        "4pc"
       ],
       [
         "butter",
@@ -442,7 +439,7 @@ KITCHEN.add(
         120
       ],
       [
-        "farmer-cheese",
+        "cottage-cheese",
         200
       ],
       [
@@ -478,7 +475,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "farmer-cheese",
+        "cottage-cheese",
         200
       ],
       [
@@ -515,8 +512,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare {farmer-cheese} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {farmer-cheese} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
+      "Prepare {cottage-cheese} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
+      "Cook {cottage-cheese} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
       "Knead cheese, flour and egg into a smooth dough, roll small balls and fry in moderately warm oil so they expand and cook through before the surface gets too dark.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -530,7 +527,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         300
       ],
       [
@@ -566,7 +563,7 @@ KITCHEN.add(
         2
       ],
       [
-        "stock",
+        "chicken-stock",
         350
       ],
       [
@@ -579,8 +576,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Season diced {chicken-thighs} and {pork-shoulder} with {cumin} and {salt}; brown in {oil}. Add chopped {onion}, {garlic} and {canned-tomatoes}.",
-      "Stir in rinsed {rice}, {peas}, diced {carrot} and {stock}; simmer 5 minutes until the liquid begins to absorb.",
+      "Season diced {chicken-thigh} and {pork-shoulder} with {cumin} and {salt}; brown in {oil}. Add chopped {onion}, {garlic} and {canned-tomatoes}.",
+      "Stir in rinsed {rice}, {peas}, diced {carrot} and {chicken-stock}; simmer 5 minutes until the liquid begins to absorb.",
       "Divide the mixture among heatproof covered parcels or small ramekins, add a splash of water if dry, cover tightly and bake at 180 °C for 45–55 minutes until the rice is tender and meat cooked through."
     ]
   },
@@ -597,7 +594,7 @@ KITCHEN.add(
         220
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         250
       ],
       [
@@ -605,7 +602,7 @@ KITCHEN.add(
         200
       ],
       [
-        "tomatoes",
+        "tomato",
         180
       ],
       [
@@ -625,7 +622,7 @@ KITCHEN.add(
         80
       ],
       [
-        "stock",
+        "chicken-stock",
         700
       ],
       [
@@ -646,8 +643,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cut the {chicken-thighs} and {pork} into small pieces. Brown in {oil}; add diced {onion}, {red-pepper} and crushed {garlic}.",
-      "Stir in chopped {tomatoes}, {cumin}, {rice}, {peas} and {stock}. Bring to a simmer, then cook uncovered over low heat for 25–30 minutes, stirring regularly.",
+      "Cut the {chicken-thigh} and {pork} into small pieces. Brown in {oil}; add diced {onion}, {red-pepper} and crushed {garlic}.",
+      "Stir in chopped {tomato}, {cumin}, {rice}, {peas} and {chicken-stock}. Bring to a simmer, then cook uncovered over low heat for 25–30 minutes, stirring regularly.",
       "Keep the rice loose and creamy by adding a little hot water if needed. Check the meat is cooked through, season with {salt} and finish with {cilantro}."
     ]
   },
@@ -664,8 +661,8 @@ KITCHEN.add(
         700
       ],
       [
-        "cooked-rice",
-        250
+        "rice",
+        85
       ],
       [
         "peas",
@@ -707,7 +704,7 @@ KITCHEN.add(
     "steps": [
       "Mix crushed {garlic}, {cumin}, {paprika}, {orange-juice}, {oil}, {salt} and {black-pepper}; rub over the {pork-shoulder}. Marinate for at least 30 minutes.",
       "Place pork in a covered roasting dish with sliced {onion} and a splash of water. Roast at 170 °C for about 75 minutes, turning once, until tender; uncover for the last 15 minutes.",
-      "Fold {cooked-rice} with warmed {peas} and some pan juices. Shred or slice the pork and serve over the rice."
+      "Fold cooked {rice} with warmed {peas} and some pan juices. Shred or slice the pork and serve over the rice."
     ]
   },
   {
@@ -770,7 +767,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "corn",
+        "sweetcorn",
         300
       ],
       [
@@ -799,7 +796,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Blend or finely pulse the {corn} with {milk}, {butter}, {sugar} and {salt}. Stir in {cornmeal} and grated {cheese} to make a thick batter.",
+      "Blend or finely pulse the {sweetcorn} with {milk}, {butter}, {sugar} and {salt}. Stir in {cornmeal} and grated {cheese} to make a thick batter.",
       "Spoon into small greased ramekins or muffin cups and cover loosely with foil to retain moisture.",
       "Bake at 180 °C for 20–25 minutes until set and lightly golden at the edges. Rest for 5 minutes before unmoulding."
     ]
@@ -813,7 +810,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         450
       ],
       [
@@ -825,7 +822,7 @@ KITCHEN.add(
         250
       ],
       [
-        "tomatoes",
+        "tomato",
         250
       ],
       [
@@ -833,13 +830,13 @@ KITCHEN.add(
         2
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ]
     ],
     "steps": [
-      "Add the {chicken-thighs} and {black-beans}; stir to combine.",
-      "Add the {tomatoes} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
+      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
     ]
   },
   {
@@ -851,7 +848,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "tomatoes",
+        "tomato",
         250
       ],
       [
@@ -859,7 +856,7 @@ KITCHEN.add(
         2
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ],
       [
@@ -882,8 +879,8 @@ KITCHEN.add(
     "steps": [
       "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
       "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomatoes} and turn to coat in the seasoning.",
-      "Add the {tomatoes} with a little water if needed, then cook gently until tender and the flavours come together.",
+      "Add the {tomato} and turn to coat in the seasoning.",
+      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
       "Season with {salt} to taste and serve."
     ]
   },
@@ -912,7 +909,7 @@ KITCHEN.add(
         3
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         450
       ],
       [
@@ -924,14 +921,14 @@ KITCHEN.add(
         250
       ],
       [
-        "tomatoes",
+        "tomato",
         250
       ]
     ],
     "steps": [
       "Warm the {oil} in a pan and soften the {lime} until fragrant.",
       "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomatoes} with a little water if needed, then cook gently until tender and the flavours come together.",
+      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
       "Season with {salt} to taste and serve."
     ]
   },
@@ -948,7 +945,7 @@ KITCHEN.add(
         3
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         450
       ],
       [
@@ -960,7 +957,7 @@ KITCHEN.add(
         250
       ],
       [
-        "tomatoes",
+        "tomato",
         250
       ],
       [
@@ -970,7 +967,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomatoes} with a little water if needed, then cook gently until tender and the flavours come together.",
+      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
       "Season with {salt} to taste and serve."
     ]
   },
@@ -987,7 +984,7 @@ KITCHEN.add(
         250
       ],
       [
-        "tomatoes",
+        "tomato",
         250
       ],
       [
@@ -995,7 +992,7 @@ KITCHEN.add(
         2
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ],
       [
@@ -1012,10 +1009,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {tomatoes} until fragrant.",
+      "Warm the {oil} in a pan and soften the {tomato} until fragrant.",
       "Stir in the {cilantro} and cook briefly to release its aroma.",
       "Add the {rice} and {rice}; stir to combine.",
-      "Add the {tomatoes} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
     ]
   }
 ]

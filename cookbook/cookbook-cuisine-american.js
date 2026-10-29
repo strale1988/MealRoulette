@@ -14,7 +14,7 @@ KITCHEN.add(
         300
       ],
       [
-        "smoked-bacon",
+        "bacon",
         80
       ],
       [
@@ -38,7 +38,7 @@ KITCHEN.add(
         120
       ],
       [
-        "stock",
+        "fish-stock",
         450
       ],
       [
@@ -59,8 +59,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Dice the {smoked-bacon} and cook until it renders. Add diced {onion} and {celery}; cook until soft.",
-      "Stir in {flour} and {butter} to coat the vegetables, then gradually whisk in {stock} and {milk}. Add cubed {potatoes} and simmer 15–18 minutes until tender.",
+      "Dice the {bacon} and cook until it renders. Add diced {onion} and {celery}; cook until soft.",
+      "Stir in {flour} and {butter} to coat the vegetables, then gradually whisk in {fish-stock} and {milk}. Add cubed {potatoes} and simmer 15–18 minutes until tender.",
       "Add the {clams} and {cream}; heat gently for 3–4 minutes without boiling. Season with {salt} and {black-pepper}."
     ]
   },
@@ -136,7 +136,7 @@ KITCHEN.add(
         "1pc"
       ],
       [
-        "green-pepper",
+        "red-pepper",
         100
       ],
       [
@@ -157,7 +157,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Slice the {onion} and {green-pepper}. Sear the {beef-strips} in a hot skillet with {oil}, seasoning with {salt} and {black-pepper}.",
+      "Slice the {onion} and {red-pepper}. Sear the {beef-strips} in a hot skillet with {oil}, seasoning with {salt} and {black-pepper}.",
       "Add onion and pepper and cook until softened and the beef is browned. Chop the beef into smaller pieces in the pan.",
       "Pile into warmed {bread-rolls}, top with {provolone} and cover briefly until the cheese melts."
     ]
@@ -348,11 +348,11 @@ KITCHEN.add(
         180
       ],
       [
-        "pork-sausages",
+        "sausage",
         180
       ],
       [
-        "tomato-passata",
+        "passata",
         220
       ],
       [
@@ -377,8 +377,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Oil a deep round pan with {olive-oil} and press in the {pizza-dough}, pushing it up the sides. Remove the {pork-sausages} from their casings and crumble.",
-      "Layer {mozzarella} in the dough, scatter over the sausage, then cover with {tomato-passata} mixed with crushed {garlic}, {oregano} and {salt}.",
+      "Oil a deep round pan with {olive-oil} and press in the {pizza-dough}, pushing it up the sides. Remove the {sausage} from their casings and crumble.",
+      "Layer {mozzarella} in the dough, scatter over the sausage, then cover with {passata} mixed with crushed {garlic}, {oregano} and {salt}.",
       "Bake at 220 °C for 25–30 minutes until the crust is browned and the centre is bubbling. Finish with grated {parmesan} and rest 10 minutes before cutting."
     ]
   },
@@ -438,7 +438,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         500
       ],
       [
@@ -479,7 +479,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Marinate the {chicken-thighs} in {buttermilk} and half the {salt} for 20 minutes. Mix {flour}, {paprika} and {garlic-powder} in a shallow dish.",
+      "Marinate the {chicken-thigh} in {buttermilk} and half the {salt} for 20 minutes. Mix {flour}, {paprika} and {garlic-powder} in a shallow dish.",
       "Dredge the chicken in seasoned flour and fry in hot {oil} until crisp and cooked through. Drain on a rack.",
       "Carefully mix 3 tablespoons of hot frying oil with {cayenne}, {brown-sugar} and remaining {salt}; brush lightly over the chicken. Serve in {bread-rolls} or with pickles."
     ]
@@ -497,11 +497,11 @@ KITCHEN.add(
         200
       ],
       [
-        "corn",
+        "sweetcorn",
         200
       ],
       [
-        "green-pepper",
+        "red-pepper",
         100
       ],
       [
@@ -530,8 +530,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Dice the {onion} and {green-pepper}. Melt {butter} in a skillet, add the vegetables and cook 5 minutes until soft.",
-      "Stir in drained {beans} and {corn}; cook 6–8 minutes until hot. Add {cream}, {salt} and {black-pepper}.",
+      "Dice the {onion} and {red-pepper}. Melt {butter} in a skillet, add the vegetables and cook 5 minutes until soft.",
+      "Stir in drained {beans} and {sweetcorn}; cook 6–8 minutes until hot. Add {cream}, {salt} and {black-pepper}.",
       "Simmer until lightly creamy, then finish with chopped {parsley}."
     ]
   },

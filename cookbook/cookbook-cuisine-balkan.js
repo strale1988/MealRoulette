@@ -1433,11 +1433,11 @@ KITCHEN.add(
     "serves": 6,
     "ing": [
       [
-        "sauerkraut-leaves",
+        "sauerkraut",
         12
       ],
       [
-        "ground-pork",
+        "pork-mince",
         500
       ],
       [
@@ -1461,18 +1461,18 @@ KITCHEN.add(
         30
       ],
       [
-        "stock",
+        "vegetable-stock",
         700
       ],
       [
-        "smoked-ribs",
+        "pork-ribs",
         250
       ]
     ],
     "steps": [
-      "Mix {ground-pork} with rinsed {rice}, finely chopped {onion}, {paprika} and {black-pepper}.",
-      "Separate {sauerkraut-leaves}; trim thick ribs. Place a spoonful of filling on each leaf, fold sides in and roll tightly.",
-      "Line a heavy pot with any torn leaves and {smoked-ribs}. Pack rolls seam-side down, then stir {tomato-paste} into {stock} and pour over.",
+      "Mix {pork-mince} with rinsed {rice}, finely chopped {onion}, {paprika} and {black-pepper}.",
+      "Separate {sauerkraut}; trim thick ribs. Place a spoonful of filling on each leaf, fold sides in and roll tightly.",
+      "Line a heavy pot with any torn leaves and {pork-ribs}. Pack rolls seam-side down, then stir {tomato-paste} into {vegetable-stock} and pour over.",
       "Cover and simmer very gently for 75–90 minutes, adding water if needed. Rest 10 minutes before serving."
     ]
   },
@@ -1529,7 +1529,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "filo-pastry",
+        "phyllo-pastry",
         300
       ],
       [
@@ -1577,7 +1577,7 @@ KITCHEN.add(
         450
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         "2pc"
       ],
       [
@@ -1606,7 +1606,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat oven to 210 °C. Toss potato wedges, sliced {bell-pepper} and {onion} with {oil}, {paprika} and {salt}.",
+      "Heat oven to 210 °C. Toss potato wedges, sliced {red-pepper} and {onion} with {oil}, {paprika} and {salt}.",
       "Mix {ajvar} with crushed {garlic}; coat {chicken-thigh} thoroughly.",
       "Arrange chicken over vegetables and roast 30–35 minutes, turning vegetables once, until chicken reaches 74 °C."
     ]
@@ -1620,7 +1620,7 @@ KITCHEN.add(
     "serves": 5,
     "ing": [
       [
-        "sauerkraut-leaves",
+        "sauerkraut",
         "12pc"
       ],
       [
@@ -1648,18 +1648,18 @@ KITCHEN.add(
         25
       ],
       [
-        "smoked-bacon",
+        "bacon",
         100
       ],
       [
-        "stock",
+        "beef-stock",
         700
       ]
     ],
     "steps": [
       "Mix {pork-mince}, {beef-mince}, rinsed {rice}, finely diced {onion} and {paprika}.",
-      "Separate {sauerkraut-leaves}; trim thick ribs. Place filling on each leaf, fold sides in and roll tightly.",
-      "Layer rolls in a heavy pot with {smoked-bacon}. Stir {tomato-paste} into {stock}, pour over to nearly cover and simmer very gently 2 hours, topping up liquid if needed."
+      "Separate {sauerkraut}; trim thick ribs. Place filling on each leaf, fold sides in and roll tightly.",
+      "Layer rolls in a heavy pot with {bacon}. Stir {tomato-paste} into {beef-stock}, pour over to nearly cover and simmer very gently 2 hours, topping up liquid if needed."
     ]
   },
   {
@@ -1687,7 +1687,7 @@ KITCHEN.add(
         120
       ],
       [
-        "egg",
+        "eggs",
         "1pc"
       ],
       [
@@ -1700,7 +1700,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Mix {flour}, {yeast}, {yogurt}, {water}, {egg} and {salt} into a sticky soft dough. Cover and rise 30 minutes.",
+      "Mix {flour}, {yeast}, {yogurt}, {water}, {eggs} and {salt} into a sticky soft dough. Cover and rise 30 minutes.",
       "Heat {oil} in a deep pan to 175 °C. Wet a spoon, scoop small portions of dough and carefully drop them into the oil.",
       "Fry in batches, turning, until puffed and deep golden, about 3–4 minutes. Drain well and serve with cheese or kajmak."
     ]
@@ -1714,11 +1714,11 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "white-beans",
-        350
+        "dried-white-beans",
+        200
       ],
       [
-        "smoked-ribs",
+        "pork-ribs",
         250
       ],
       [
@@ -1759,7 +1759,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Simmer {white-beans} with {smoked-ribs} and {bay-leaf} until the beans begin to soften; cooking time depends on whether beans were pre-soaked.",
+      "Simmer {dried-white-beans} with {pork-ribs} and {bay-leaf} until the beans begin to soften, about 45 minutes. Soak the beans overnight first and drain them.",
       "Add diced {onion}, {carrot} and {garlic}; continue simmering until beans are tender and meat is soft.",
       "For a light roux, warm {oil}, stir in {flour} and {paprika}, then whisk into the stew. Simmer 5 minutes and season with {salt} and {black-pepper}."
     ]
@@ -1891,7 +1891,7 @@ KITCHEN.add(
         3
       ],
       [
-        "chilli",
+        "fresh-chilli",
         1
       ],
       [
@@ -1909,7 +1909,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Roast {red-pepper} until blistered, cover to steam, then peel and slice.",
-      "Brown bite-size {pork-shoulder} in {oil}; add sliced {onion} and {garlic}. Stir in {paprika}, chopped {tomato}, {chilli} and {salt}.",
+      "Brown bite-size {pork-shoulder} in {oil}; add sliced {onion} and {garlic}. Stir in {paprika}, chopped {tomato}, {fresh-chilli} and {salt}.",
       "Simmer covered until pork is tender and sauce thick. Fold in roasted peppers and cook 5 more minutes; finish with {parsley}."
     ]
   },

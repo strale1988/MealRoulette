@@ -69,7 +69,7 @@ KITCHEN.add(
         300
       ],
       [
-        "pork-sausages",
+        "sausage",
         180
       ],
       [
@@ -107,7 +107,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Cut {potatoes} into chunky fries, dry well and fry in hot {oil} until crisp. Drain.",
-      "Sear {beef-strips} in a hot skillet; add sliced {pork-sausages}, {onion}, {red-pepper} and {cumin}, and cook until browned.",
+      "Sear {beef-strips} in a hot skillet; add sliced {sausage}, {onion}, {red-pepper} and {cumin}, and cook until browned.",
       "Pile the fries onto a platter, top with the meat mixture, chopped {tomato} and sliced {jalapeno}. Season with {salt}."
     ]
   },
@@ -120,7 +120,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "beef-stew-meat",
+        "beef-chuck",
         300
       ],
       [
@@ -144,7 +144,7 @@ KITCHEN.add(
         "2pc"
       ],
       [
-        "stock",
+        "beef-stock",
         900
       ],
       [
@@ -165,7 +165,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Brown the {beef-stew-meat} in {oil}; add diced {onion}, {carrot} and crushed {garlic}. Stir in {cumin} and {stock}; simmer 35 minutes.",
+      "Brown the {beef-chuck} in {oil}; add diced {onion}, {carrot} and crushed {garlic}. Stir in {cumin} and {beef-stock}; simmer 35 minutes.",
       "Blend {peanuts} with a ladle of hot broth until smooth. Stir into the pot with cubed {potatoes}.",
       "Simmer 20 minutes, stirring frequently so the peanuts do not catch, until the beef and potatoes are tender. Season with {salt} and garnish with {parsley}."
     ]
@@ -183,7 +183,7 @@ KITCHEN.add(
         500
       ],
       [
-        "corn",
+        "sweetcorn",
         250
       ],
       [
@@ -203,7 +203,7 @@ KITCHEN.add(
         4
       ],
       [
-        "stock",
+        "vegetable-stock",
         1000
       ],
       [
@@ -225,7 +225,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Cut the {pork-shoulder} into chunks and brown in {oil}. Add diced {onion}, crushed {garlic}, {cumin}, {chilli-powder} and {oregano}; cook 2 minutes.",
-      "Add {stock} and simmer gently for 60 minutes until the pork is tender. Stir in {corn} and simmer 15 minutes more.",
+      "Add {vegetable-stock} and simmer gently for 60 minutes until the pork is tender. Stir in {sweetcorn} and simmer 15 minutes more.",
       "Season with {salt} and serve with {lime} wedges."
     ]
   },
@@ -238,7 +238,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         600
       ],
       [
@@ -266,7 +266,7 @@ KITCHEN.add(
         2
       ],
       [
-        "stock",
+        "chicken-stock",
         500
       ],
       [
@@ -283,8 +283,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Brown the {chicken-thighs} in {oil}; add sliced {onion}, crushed {garlic}, {cumin} and {chilli-powder}.",
-      "Blend {peanuts} with a little {stock} to make a smooth paste. Add to the pot with remaining {stock} and cubed {potatoes}; cover and simmer 25 minutes.",
+      "Brown the {chicken-thigh} in {oil}; add sliced {onion}, crushed {garlic}, {cumin} and {chilli-powder}.",
+      "Blend {peanuts} with a little {chicken-stock} to make a smooth paste. Add to the pot with remaining {chicken-stock} and cubed {potatoes}; cover and simmer 25 minutes.",
       "Add {peas} and cook until the chicken is fully cooked and potatoes tender. Season with {salt}; serve with rice if desired."
     ]
   },
@@ -297,7 +297,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "corn",
+        "sweetcorn",
         350
       ],
       [
@@ -326,13 +326,13 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Blend {corn} coarsely with {milk}, {butter}, {sugar} and {salt}. Stir in {cornmeal} and grated {cheese}.",
+      "Blend {sweetcorn} coarsely with {milk}, {butter}, {sugar} and {salt}. Stir in {cornmeal} and grated {cheese}.",
       "Spoon into greased ramekins or small heatproof cups; cover with foil. Place in a deep tray and add hot water halfway up the sides.",
       "Bake at 180 °C for 25–30 minutes until the mixture is set. Rest 5 minutes before serving."
     ]
   },
   {
-    "id": "bo-salteñas-inspired-baked-hand-pies",
+    "id": "bo-saltenas-inspired-baked-hand-pies",
     "name": "Salteñas-inspired Bolivian juicy beef and vegetable hand pies",
     "meal": "big",
     "cuisine": "Bolivian",
@@ -376,7 +376,7 @@ KITCHEN.add(
         3
       ],
       [
-        "stock",
+        "beef-stock",
         120
       ],
       [
@@ -393,7 +393,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cook {onion} in a little oil; add {beef-mince}, {cumin}, {paprika} and {salt} and brown. Add diced {potatoes}, {carrot}, {peas}, {canned-tomatoes} and {stock}; simmer until vegetables soften and filling is thick.",
+      "Cook {onion} in a little oil; add {beef-mince}, {cumin}, {paprika} and {salt} and brown. Add diced {potatoes}, {carrot}, {peas}, {canned-tomatoes} and {beef-stock}; simmer until vegetables soften and filling is thick.",
       "Stir {gelatin} into a little hot liquid from the filling, then fold back in. Chill the filling until firm and cool.",
       "Cut {puff-pastry} into rounds, add filling, seal carefully and brush with beaten {eggs}. Bake at 200 °C for 20–25 minutes until deep golden."
     ]
@@ -407,7 +407,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         450
       ],
       [
@@ -419,7 +419,7 @@ KITCHEN.add(
         250
       ],
       [
-        "tomatoes",
+        "tomato",
         250
       ],
       [
@@ -427,13 +427,13 @@ KITCHEN.add(
         2
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ]
     ],
     "steps": [
-      "Add the {chicken-thighs} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomatoes} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
+      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
     ]
   },
   {
@@ -449,7 +449,7 @@ KITCHEN.add(
         250
       ],
       [
-        "tomatoes",
+        "tomato",
         250
       ],
       [
@@ -457,7 +457,7 @@ KITCHEN.add(
         2
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ],
       [
@@ -474,10 +474,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomatoes} until fragrant.",
+      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
       "Stir in the {cilantro} and cook briefly to release its aroma.",
       "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomatoes} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
     ]
   },
   {
@@ -493,7 +493,7 @@ KITCHEN.add(
         2
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ],
       [
@@ -513,7 +513,7 @@ KITCHEN.add(
         3
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         450
       ],
       [
@@ -522,7 +522,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {bell-pepper} until fragrant.",
+      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
       "Stir in the {cilantro} and cook briefly to release its aroma.",
       "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
       "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
@@ -538,7 +538,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         450
       ],
       [
@@ -550,7 +550,7 @@ KITCHEN.add(
         250
       ],
       [
-        "tomatoes",
+        "tomato",
         250
       ],
       [
@@ -558,13 +558,13 @@ KITCHEN.add(
         2
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ]
     ],
     "steps": [
-      "Add the {chicken-thighs} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomatoes} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
+      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
     ]
   },
   {
@@ -580,7 +580,7 @@ KITCHEN.add(
         250
       ],
       [
-        "tomatoes",
+        "tomato",
         250
       ],
       [
@@ -588,7 +588,7 @@ KITCHEN.add(
         2
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ],
       [
@@ -605,10 +605,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomatoes} until fragrant.",
+      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
       "Stir in the {cilantro} and cook briefly to release its aroma.",
       "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomatoes} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
     ]
   },
   {
@@ -620,7 +620,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         450
       ],
       [
@@ -632,7 +632,7 @@ KITCHEN.add(
         250
       ],
       [
-        "tomatoes",
+        "tomato",
         250
       ],
       [
@@ -640,13 +640,13 @@ KITCHEN.add(
         2
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ]
     ],
     "steps": [
-      "Add the {chicken-thighs} and {black-beans}; stir to combine.",
-      "Add the {tomatoes} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
+      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
     ]
   },
   {
@@ -658,7 +658,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "tomatoes",
+        "tomato",
         250
       ],
       [
@@ -666,7 +666,7 @@ KITCHEN.add(
         2
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ],
       [
@@ -689,8 +689,8 @@ KITCHEN.add(
     "steps": [
       "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
       "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomatoes} and turn to coat in the seasoning.",
-      "Add the {tomatoes} with a little water if needed, then cook gently until tender and the flavours come together.",
+      "Add the {tomato} and turn to coat in the seasoning.",
+      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
       "Season with {salt} to taste and serve."
     ]
   },
@@ -719,7 +719,7 @@ KITCHEN.add(
         3
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         450
       ],
       [
@@ -731,14 +731,14 @@ KITCHEN.add(
         250
       ],
       [
-        "tomatoes",
+        "tomato",
         250
       ]
     ],
     "steps": [
       "Warm the {oil} in a pan and soften the {lime} until fragrant.",
       "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomatoes} with a little water if needed, then cook gently until tender and the flavours come together.",
+      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
       "Season with {salt} to taste and serve."
     ]
   },
@@ -755,7 +755,7 @@ KITCHEN.add(
         3
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         450
       ],
       [
@@ -767,7 +767,7 @@ KITCHEN.add(
         250
       ],
       [
-        "tomatoes",
+        "tomato",
         250
       ],
       [
@@ -777,7 +777,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomatoes} with a little water if needed, then cook gently until tender and the flavours come together.",
+      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
       "Season with {salt} to taste and serve."
     ]
   },
@@ -794,7 +794,7 @@ KITCHEN.add(
         250
       ],
       [
-        "tomatoes",
+        "tomato",
         250
       ],
       [
@@ -802,7 +802,7 @@ KITCHEN.add(
         2
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ],
       [
@@ -819,10 +819,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {tomatoes} until fragrant.",
+      "Warm the {oil} in a pan and soften the {tomato} until fragrant.",
       "Stir in the {cilantro} and cook briefly to release its aroma.",
       "Add the {rice} and {rice}; stir to combine.",
-      "Add the {tomatoes} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
     ]
   },
   {
@@ -834,7 +834,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ],
       [
@@ -854,7 +854,7 @@ KITCHEN.add(
         3
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         450
       ],
       [
@@ -868,7 +868,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Warm the {oil} in a pan and soften the {cilantro} until fragrant.",
-      "Add the {bell-pepper} and {black-beans}; stir to combine.",
+      "Add the {red-pepper} and {black-beans}; stir to combine.",
       "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
       "Season with {salt} to taste and serve."
     ]
@@ -890,7 +890,7 @@ KITCHEN.add(
         3
       ],
       [
-        "chicken-thighs",
+        "chicken-thigh",
         450
       ],
       [
@@ -902,14 +902,14 @@ KITCHEN.add(
         250
       ],
       [
-        "tomatoes",
+        "tomato",
         250
       ]
     ],
     "steps": [
       "Warm the {oil} in a pan and soften the {salt} until fragrant.",
       "Add the {oil} and {black-beans}; stir to combine.",
-      "Add the {tomatoes} with a little water if needed, then cook gently until tender and the flavours come together.",
+      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
       "Season with {salt} to taste and serve."
     ]
   },
@@ -930,7 +930,7 @@ KITCHEN.add(
         250
       ],
       [
-        "tomatoes",
+        "tomato",
         250
       ],
       [
@@ -938,7 +938,7 @@ KITCHEN.add(
         2
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ],
       [
@@ -953,7 +953,7 @@ KITCHEN.add(
     "steps": [
       "Stir in the {cilantro} and cook briefly to release its aroma.",
       "Add the {black-beans} and {black-beans}; stir to combine.",
-      "Add the {tomatoes} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
     ]
   }
 ]

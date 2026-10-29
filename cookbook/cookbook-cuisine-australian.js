@@ -319,7 +319,7 @@ KITCHEN.add(
     "ing": [
       [
         "bread",
-        "4 slices"
+        "4pc"
       ],
       [
         "butter",

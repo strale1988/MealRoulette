@@ -45,7 +45,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         700
       ],
       [
@@ -62,7 +62,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Simmer {chicken-thighs} in {water} until falling apart; remove bones and shred meat.",
+      "Simmer {chicken-thigh} in {water} until falling apart; remove bones and shred meat.",
       "Stir in {wholemeal-flour} gradually and cook over very low heat, stirring frequently.",
       "Beat until the wheat and chicken form a thick, smooth porridge; serve with melted {butter}."
     ]
@@ -80,7 +80,7 @@ KITCHEN.add(
         250
       ],
       [
-        "tomatoes",
+        "tomato",
         250
       ],
       [
@@ -102,7 +102,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Pour boiling water over {bulgur} and cover until tender; drain excess.",
-      "Mix {tomatoes}, {tomato-paste}, chopped {red-onion} and {lemon-juice}.",
+      "Mix {tomato}, {tomato-paste}, chopped {red-onion} and {lemon-juice}.",
       "Fold sauce into bulgur and add chopped {parsley}; serve warm or at room temperature."
     ]
   },

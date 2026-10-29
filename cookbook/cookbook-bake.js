@@ -982,7 +982,7 @@ KITCHEN.add(
         3
       ],
       [
-        "egg",
+        "eggs",
         1
       ],
       [
@@ -993,7 +993,7 @@ KITCHEN.add(
     "steps": [
       "Mix {flour}, {yeast}, {milk}, {sugar}, half the {butter}, {cardamom} and {salt}; knead until smooth. Let rise until doubled.",
       "Mix remaining softened {butter} with {cinnamon} and a spoonful of sugar. Roll dough into a rectangle, spread filling, fold and cut into strips; twist into knots.",
-      "Brush with beaten {egg} and bake at 190 °C for 15–18 minutes until golden."
+      "Brush with beaten {eggs} and bake at 190 °C for 15–18 minutes until golden."
     ]
   },
   {

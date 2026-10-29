@@ -1235,7 +1235,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "corn",
+        "sweetcorn",
         250
       ],
       [
@@ -1277,7 +1277,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Melt {butter} and cook diced {onion}, {red-pepper} and {celery} until softened. Add {garlic} and {cajun-seasoning}.",
-      "Add {corn} and {cream}; simmer 5 minutes until creamy.",
+      "Add {sweetcorn} and {cream}; simmer 5 minutes until creamy.",
       "Add {prawns} and cook 3–4 minutes until opaque. Finish with {parsley} and serve with rice or cornbread."
     ]
   },
@@ -1298,7 +1298,7 @@ KITCHEN.add(
         1
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ],
       [
@@ -1314,7 +1314,7 @@ KITCHEN.add(
         300
       ],
       [
-        "stock",
+        "fish-stock",
         250
       ],
       [
@@ -1339,8 +1339,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Soften diced {onion}, {bell-pepper} and {celery} in {oil}; add {garlic} and cook 1 minute.",
-      "Stir in {canned-tomatoes}, {stock}, {cajun-seasoning} and {bay-leaf}. Simmer 12 minutes to make a thick, peppery broth.",
+      "Soften diced {onion}, {red-pepper} and {celery} in {oil}; add {garlic} and cook 1 minute.",
+      "Stir in {canned-tomatoes}, {fish-stock}, {cajun-seasoning} and {bay-leaf}. Simmer 12 minutes to make a thick, peppery broth.",
       "Nestle in {white-fish}, cover and simmer gently until flaky, 8–10 minutes. Finish with chopped {parsley} and {salt}."
     ]
   },
@@ -1353,7 +1353,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "beef-stew-meat",
+        "beef-chuck",
         400
       ],
       [
@@ -1365,7 +1365,7 @@ KITCHEN.add(
         1
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ],
       [
@@ -1377,7 +1377,7 @@ KITCHEN.add(
         250
       ],
       [
-        "stock",
+        "beef-stock",
         350
       ],
       [
@@ -1402,8 +1402,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Dust {beef-stew-meat} with {flour} and {cajun-seasoning}; brown in a heavy pan. Add diced {onion}, {bell-pepper} and {celery}.",
-      "Add {canned-tomatoes} and {stock}; cover and braise 50–55 minutes until tender.",
+      "Dust {beef-chuck} with {flour} and {cajun-seasoning}; brown in a heavy pan. Add diced {onion}, {red-pepper} and {celery}.",
+      "Add {canned-tomatoes} and {beef-stock}; cover and braise 50–55 minutes until tender.",
       "Simmer {cornmeal} in 500 ml water with {milk} and {salt}, stirring until thick and creamy; finish with {butter}. Serve the beef stew over grits."
     ]
   },
@@ -1483,7 +1483,7 @@ KITCHEN.add(
         150
       ],
       [
-        "green-peas",
+        "peas",
         100
       ],
       [
@@ -1514,7 +1514,7 @@ KITCHEN.add(
     "steps": [
       "Dice {potatoes} and pan-fry in half the {butter} until crisp and cooked through.",
       "Season {chicken-breast} with {salt} and {black-pepper}; sear until golden and cooked through. In the same pan, sauté {mushrooms} and {garlic} in remaining {butter}.",
-      "Add {green-peas}, crisp potatoes and chopped {parsley}; toss together and finish with {lemon-juice}."
+      "Add {peas}, crisp potatoes and chopped {parsley}; toss together and finish with {lemon-juice}."
     ]
   },
   {
@@ -1542,7 +1542,7 @@ KITCHEN.add(
         1
       ],
       [
-        "green-pepper",
+        "red-pepper",
         1
       ],
       [
@@ -1567,7 +1567,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Finely dice {celery} and {green-pepper}; soften in {butter}. Fold in {crabmeat}, {sweetcorn}, {cream}, {mustard} and {cajun-seasoning}.",
+      "Finely dice {celery} and {red-pepper}; soften in {butter}. Fold in {crabmeat}, {sweetcorn}, {cream}, {mustard} and {cajun-seasoning}.",
       "Spoon the mixture onto slices of {bread} and scatter with {cheddar}.",
       "Grill for 4–6 minutes until bubbling and golden; serve hot."
     ]
@@ -1593,7 +1593,7 @@ KITCHEN.add(
         400
       ],
       [
-        "corn",
+        "sweetcorn",
         2
       ],
       [
@@ -1623,7 +1623,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Bring a large pot of water to a boil with {cajun-seasoning}, {bay-leaf}, halved {lemon}, {garlic} and {salt}.",
-      "Add halved {potatoes} and cook 10 minutes; add pieces of {corn} and sliced {andouille-sausage}, then simmer until potatoes are nearly tender.",
+      "Add halved {potatoes} and cook 10 minutes; add pieces of {sweetcorn} and sliced {andouille-sausage}, then simmer until potatoes are nearly tender.",
       "Add {prawns} and cook 2–3 minutes until pink. Drain, toss with melted {butter} and a little extra seasoning, and serve family-style."
     ]
   },
@@ -1652,7 +1652,7 @@ KITCHEN.add(
         "1pc"
       ],
       [
-        "stock",
+        "vegetable-stock",
         450
       ],
       [
@@ -1696,12 +1696,12 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "pork-sausages",
+        "sausage",
         250
       ],
       [
-        "cooked-rice",
-        250
+        "rice",
+        85
       ],
       [
         "onion",
@@ -1712,7 +1712,7 @@ KITCHEN.add(
         70
       ],
       [
-        "green-pepper",
+        "red-pepper",
         80
       ],
       [
@@ -1737,8 +1737,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Remove the {pork-sausages} from their casings and cook with diced {onion}, {celery}, {green-pepper} and {garlic} until fully cooked. Stir in {cajun-seasoning}.",
-      "Mix the sausage mixture with {cooked-rice}; cool until firm enough to shape. Roll into small balls, dip in beaten {eggs}, then coat in {breadcrumbs}.",
+      "Remove the {sausage} from their casings and cook with diced {onion}, {celery}, {red-pepper} and {garlic} until fully cooked. Stir in {cajun-seasoning}.",
+      "Mix the sausage mixture with cooked {rice}; cool until firm enough to shape. Roll into small balls, dip in beaten {eggs}, then coat in {breadcrumbs}.",
       "Shallow-fry in hot {oil}, turning, until crisp and piping hot in the centre. Drain on paper and serve with hot sauce if desired."
     ]
   },

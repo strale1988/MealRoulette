@@ -840,7 +840,7 @@ KITCHEN.add(
         400
       ],
       [
-        "carrots",
+        "carrot",
         250
       ],
       [
@@ -873,7 +873,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cut the {cabbage}, {potatoes} and {carrots} into bite-size pieces.",
+      "Cut the {cabbage}, {potatoes} and {carrot} into bite-size pieces.",
       "Soften the chopped {onion} in {olive-oil}; add {garlic}, {turmeric} and {cumin}.",
       "Add the vegetables, {water} and {salt}. Cover and simmer gently for 25–30 minutes, stirring occasionally.",
       "Uncover for the last few minutes so excess liquid evaporates; serve as a vegetable-rich side or with rice."
@@ -916,7 +916,7 @@ KITCHEN.add(
         25
       ],
       [
-        "stock",
+        "vegetable-stock",
         700
       ],
       [
@@ -927,7 +927,7 @@ KITCHEN.add(
     "steps": [
       "Cook finely diced {onion} in a dry pan over low heat until soft, stirring often.",
       "Add {oil}, minced {garlic}, grated {ginger}, {berbere} and {tomato-paste}; fry 2 minutes.",
-      "Add rinsed {red-lentils} and {stock}; simmer 25–30 minutes, stirring until thick and tender.",
+      "Add rinsed {red-lentils} and {vegetable-stock}; simmer 25–30 minutes, stirring until thick and tender.",
       "Season with {salt} and serve with flatbread or rice."
     ]
   },
@@ -1136,7 +1136,7 @@ KITCHEN.add(
         300
       ],
       [
-        "beef-stew-meat",
+        "beef-chuck",
         350
       ],
       [
@@ -1156,7 +1156,7 @@ KITCHEN.add(
         3
       ],
       [
-        "stock",
+        "beef-stock",
         350
       ],
       [
@@ -1169,8 +1169,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Brown {beef-stew-meat} in {oil}; add sliced {onion}, {garlic} and {ginger}.",
-      "Stir in {berbere} and {stock}, cover and simmer until the beef is tender, about 35 minutes.",
+      "Brown {beef-chuck} in {oil}; add sliced {onion}, {garlic} and {ginger}.",
+      "Stir in {berbere} and {beef-stock}, cover and simmer until the beef is tender, about 35 minutes.",
       "Add chopped {collard-greens} and cook uncovered until tender. Season with {salt} and serve with flatbread or rice."
     ]
   },

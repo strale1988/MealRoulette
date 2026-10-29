@@ -45,7 +45,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         800
       ],
       [
@@ -66,7 +66,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Mix {coconut-milk}, {lemon-juice}, crushed {garlic} and {thyme}; coat {chicken-thighs}.",
+      "Mix {coconut-milk}, {lemon-juice}, crushed {garlic} and {thyme}; coat {chicken-thigh}.",
       "Marinate 30 minutes, then wrap tightly in baking paper and foil.",
       "Bake at 190°C until cooked through and tender; unwrap and brown briefly."
     ]

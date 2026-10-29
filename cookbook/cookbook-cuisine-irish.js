@@ -148,7 +148,7 @@ KITCHEN.add(
         350
       ],
       [
-        "smoked-bacon",
+        "bacon",
         120
       ],
       [
@@ -160,7 +160,7 @@ KITCHEN.add(
         "1pc"
       ],
       [
-        "stock",
+        "vegetable-stock",
         450
       ],
       [
@@ -183,7 +183,7 @@ KITCHEN.add(
     "steps": [
       "Heat {oil} in a heavy pan; soften {onion}.",
       "Add {sausages} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
+      "Add {vegetable-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
       "Layer browned sausages, bacon, potatoes and onion in a pot, add stock just to cover and simmer very gently without stirring so the potatoes stay in layers.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -357,7 +357,7 @@ KITCHEN.add(
         150
       ],
       [
-        "stock",
+        "fish-stock",
         450
       ],
       [
@@ -379,7 +379,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat {butter} in a soup pot and soften {leek} without browning.",
-      "Add {stock} and {white-fish}, simmering gently until the main ingredient is tender.",
+      "Add {fish-stock} and {white-fish}, simmering gently until the main ingredient is tender.",
       "Sweat leek in butter, add potatoes and stock until nearly tender, then poach the fish in milk and cream just until it flakes; fold in parsley at the end.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -445,7 +445,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "smoked-bacon",
+        "bacon",
         120
       ],
       [
@@ -487,7 +487,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat {butter} in a heavy pan and let the aromatics or spices become fragrant without browning.",
-      "Add {smoked-bacon} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
+      "Add {bacon} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
       "Add {milk} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
       "Simmer the bacon until tender and cook cabbage separately in a little of the cooking liquor; make a simple parsley white sauce and serve with boiled potatoes.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."

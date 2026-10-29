@@ -347,7 +347,7 @@ KITCHEN.add(
         3
       ],
       [
-        "smoked-bacon",
+        "bacon",
         120
       ],
       [
@@ -460,7 +460,7 @@ KITCHEN.add(
         200
       ],
       [
-        "smoked-bacon",
+        "bacon",
         120
       ],
       [
@@ -480,7 +480,7 @@ KITCHEN.add(
         10
       ],
       [
-        "stock",
+        "vegetable-stock",
         450
       ],
       [
@@ -499,7 +499,7 @@ KITCHEN.add(
     "steps": [
       "Rinse {rice} if it is uncooked; prepare the other ingredients while it drains.",
       "Heat {oil} and soften {onion} and {garlic}, then cook the main filling until fragrant.",
-      "Combine the ingredients with {stock} and cook covered until the rice is tender and the liquid is absorbed.",
+      "Combine the ingredients with {vegetable-stock} and cook covered until the rice is tender and the liquid is absorbed.",
       "Cook rice with stock, fold in already-cooked beans and crisp bacon, then add the cheese off the heat so it softens without disappearing.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -533,7 +533,7 @@ KITCHEN.add(
         20
       ],
       [
-        "stock",
+        "beef-stock",
         450
       ],
       [
@@ -701,7 +701,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         600
       ],
       [
@@ -721,7 +721,7 @@ KITCHEN.add(
         200
       ],
       [
-        "stock",
+        "chicken-stock",
         250
       ],
       [
@@ -746,8 +746,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Season the {chicken-thighs} with {paprika} and {salt}. Slice the {okra}, dice the {onion} and crush the {garlic}.",
-      "Brown chicken in {oil}; add onion and cook 5 minutes. Stir in garlic and {canned-tomatoes}, then pour in {stock}.",
+      "Season the {chicken-thigh} with {paprika} and {salt}. Slice the {okra}, dice the {onion} and crush the {garlic}.",
+      "Brown chicken in {oil}; add onion and cook 5 minutes. Stir in garlic and {canned-tomatoes}, then pour in {chicken-stock}.",
       "Cover and simmer 25 minutes. Add the okra and cook uncovered for 10–12 minutes until tender and the sauce has thickened. Finish with {lime} juice and {parsley}."
     ]
   },
@@ -764,8 +764,8 @@ KITCHEN.add(
         300
       ],
       [
-        "cooked-rice",
-        400
+        "rice",
+        135
       ],
       [
         "onion",
@@ -780,7 +780,7 @@ KITCHEN.add(
         "2pc"
       ],
       [
-        "tomatoes",
+        "tomato",
         180
       ],
       [
@@ -802,8 +802,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Slice the {onion} and {red-pepper}; mince the {garlic}. Season the {beef-strips} with {salt} and {black-pepper}.",
-      "Brown the beef in {oil} over high heat. Add onion and pepper, cook 4 minutes, then stir in garlic and chopped {tomatoes}.",
-      "Fold in {cooked-rice} and cook until steaming hot, breaking up clumps. Finish with {parsley}; add a splash of water if the pan looks dry."
+      "Brown the beef in {oil} over high heat. Add onion and pepper, cook 4 minutes, then stir in garlic and chopped {tomato}.",
+      "Fold in cooked {rice} and cook until steaming hot, breaking up clumps. Finish with {parsley}; add a splash of water if the pan looks dry."
     ]
   },
   {
@@ -823,7 +823,7 @@ KITCHEN.add(
         350
       ],
       [
-        "tomatoes",
+        "tomato",
         200
       ],
       [
@@ -831,7 +831,7 @@ KITCHEN.add(
         100
       ],
       [
-        "corn",
+        "sweetcorn",
         100
       ],
       [
@@ -860,8 +860,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Soften the diced {onion} in {olive-oil}; add chopped {tomatoes}, {peas}, {corn}, flaked {tuna}, sliced {green-olives} and {salt}. Cook 5 minutes.",
-      "Bring {vegetable-stock} to a simmer and gradually stir in {cornmeal}, then fold in the vegetable and tuna mixture. Cook, stirring, until thick and cohesive.",
+      "Soften the diced {onion} in {olive-oil}; add chopped {tomato}, {peas}, {sweetcorn}, flaked {tuna}, sliced {green-olives} and {salt}. Cook 5 minutes.",
+      "Bring {vegetable-stock} to a simmer and gradually stir in {cornmeal}, then fold in the vegetable and {tuna} mixture. Cook, stirring, until thick and cohesive.",
       "Pack into a lightly oiled ring mould or small bowl, press firmly and let stand 10 minutes. Turn out and garnish with {parsley}; serve warm or at room temperature."
     ]
   },
@@ -916,8 +916,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Season the {pork} with {salt} and {black-pepper}; pan-fry in a little {oil} until cooked through and browned.",
-      "Mash half the {beans} with their cooking liquid and stir in {cornmeal} gradually to make a thick, soft bean purée. Keep warm.",
-      "Sauté sliced {collard-greens} with minced {garlic} in {oil}. Fry the {eggs}; serve the pork with the bean mixture, greens and eggs."
+      "Mash half the {beans} with their cooking liquid and stir in {cornmeal} gradually to make a thick, soft {beans} purée. Keep warm.",
+      "Sauté sliced {collard-greens} with minced {garlic} in {oil}. Fry the {eggs}; serve the pork with the {beans} mixture, greens and eggs."
     ]
   },
   {
@@ -929,7 +929,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "corn",
+        "sweetcorn",
         350
       ],
       [
@@ -958,7 +958,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Blend or finely process the {corn} with {milk}, {butter}, {sugar}, {salt} and {eggs} until mostly smooth.",
+      "Blend or finely process the {sweetcorn} with {milk}, {butter}, {sugar}, {salt} and {eggs} until mostly smooth.",
       "Fold in grated {cheese}; spoon the mixture into greased muffin cups or a small baking dish.",
       "Bake at 180 °C for 25–30 minutes until set and lightly golden. Rest for 10 minutes before serving."
     ]
@@ -996,7 +996,7 @@ KITCHEN.add(
         150
       ],
       [
-        "stock",
+        "vegetable-stock",
         750
       ],
       [
@@ -1018,7 +1018,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Cut the {pork-shoulder} into bite-sized pieces and season with {salt}. Brown in {oil}; add diced {onion} and {carrot} and cook 5 minutes.",
-      "Stir in crushed {garlic}, {canned-tomatoes}, {stock} and {bay-leaf}. Simmer 30 minutes until the pork begins to soften.",
+      "Stir in crushed {garlic}, {canned-tomatoes}, {vegetable-stock} and {bay-leaf}. Simmer 30 minutes until the pork begins to soften.",
       "Whisk {cornmeal} with a little cold water, then stir into the pot. Simmer 15–20 minutes, stirring often, until the stew is creamy and the pork is tender. Finish with {parsley}."
     ]
   },
@@ -1031,7 +1031,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         450
       ],
       [
@@ -1043,7 +1043,7 @@ KITCHEN.add(
         250
       ],
       [
-        "tomatoes",
+        "tomato",
         250
       ],
       [
@@ -1051,13 +1051,13 @@ KITCHEN.add(
         2
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ]
     ],
     "steps": [
-      "Add the {chicken-thighs} and {black-beans}; stir to combine.",
-      "Add the {tomatoes} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
+      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
     ]
   }
 ]

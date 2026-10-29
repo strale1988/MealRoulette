@@ -885,7 +885,7 @@ KITCHEN.add(
         300
       ],
       [
-        "ground-beef",
+        "beef-mince",
         350
       ],
       [
@@ -893,7 +893,7 @@ KITCHEN.add(
         200
       ],
       [
-        "carrots",
+        "carrot",
         2
       ],
       [
@@ -923,7 +923,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Cook the {rice}. Mix {gochujang} with a little water and a teaspoon of {sesame-oil} to make a spoonable sauce.",
-      "Cook the {ground-beef} with half the {soy-sauce} and minced {garlic} until browned. Sauté sliced {mushrooms} and julienned {carrots} separately.",
+      "Cook the {beef-mince} with half the {soy-sauce} and minced {garlic} until browned. Sauté sliced {mushrooms} and julienned {carrot} separately.",
       "Wilt the {spinach} and season lightly with the remaining {soy-sauce} and a few drops of sesame oil. Fry the {eggs} sunny-side up.",
       "Divide rice among bowls and arrange beef and vegetables in separate sections. Top each with an egg and serve with gochujang sauce to taste."
     ]
@@ -1312,7 +1312,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "corn",
+        "sweetcorn",
         250
       ],
       [
@@ -1341,7 +1341,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Drain {corn} well and mix with {mayonnaise}, {sugar}, sliced {spring-onion} and {black-pepper}.",
+      "Drain {sweetcorn} well and mix with {mayonnaise}, {sugar}, sliced {spring-onion} and {black-pepper}.",
       "Warm {butter} in a small ovenproof skillet; add corn mixture and spread evenly.",
       "Cover with {mozzarella} and broil until melted, golden and bubbling. Serve hot as a side dish."
     ]
@@ -1477,7 +1477,7 @@ KITCHEN.add(
         80
       ],
       [
-        "firm-tofu",
+        "tofu",
         180
       ],
       [
@@ -1510,7 +1510,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Mix {gochujang}, {gochugaru}, {soy-sauce} and minced {garlic}. Arrange chopped {kimchi}, sliced {sausages}, {bacon} and cubed {firm-tofu} in a shallow pot.",
+      "Mix {gochujang}, {gochugaru}, {soy-sauce} and minced {garlic}. Arrange chopped {kimchi}, sliced {sausages}, {bacon} and cubed {tofu} in a shallow pot.",
       "Add {chicken-stock} and the seasoning paste; bring to a simmer and cook for 10 minutes.",
       "Add {noodles} and sliced {spring-onion}; simmer until noodles are tender and everything is hot."
     ]
@@ -1524,7 +1524,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "firm-tofu",
+        "tofu",
         300
       ],
       [
@@ -1549,7 +1549,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Blend {firm-tofu}, toasted {sesame-seeds}, {water} and {salt} until very smooth; chill thoroughly.",
+      "Blend {tofu}, toasted {sesame-seeds}, {water} and {salt} until very smooth; chill thoroughly.",
       "Cook {noodles}, rinse under cold water and drain well. Slice {cucumber} into fine strips.",
       "Divide noodles into bowls, pour over the chilled tofu-sesame broth and top with cucumber. Serve very cold."
     ]
@@ -1587,7 +1587,7 @@ KITCHEN.add(
         25
       ],
       [
-        "stock",
+        "fish-stock",
         500
       ],
       [
@@ -1605,7 +1605,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat {sesame-oil}; fry chopped {garlic}, {kimchi} and {gochugaru} for 2 minutes.",
-      "Add {stock} and {soy-sauce}; simmer 8 minutes. Gently add {tofu} in large spoonfuls and {prawns}; simmer until prawns are cooked.",
+      "Add {fish-stock} and {soy-sauce}; simmer 8 minutes. Gently add {tofu} in large spoonfuls and {prawns}; simmer until prawns are cooked.",
       "Crack {eggs} into the bubbling stew, cover until just set and finish with sliced {spring-onion}."
     ]
   },
@@ -1638,13 +1638,13 @@ KITCHEN.add(
         8
       ],
       [
-        "neutral-oil",
+        "oil",
         10
       ]
     ],
     "steps": [
       "Beat {eggs} with {salt}; stir in finely diced {carrot} and sliced {spring-onion}.",
-      "Lightly oil a non-stick skillet with {neutral-oil}; pour in a thin layer of egg. When nearly set, roll it to one side and pour in another thin layer.",
+      "Lightly oil a non-stick skillet with {oil}; pour in a thin layer of egg. When nearly set, roll it to one side and pour in another thin layer.",
       "Continue rolling the omelette in stages until all egg is used; cook briefly on each side to set. Brush with {sesame-oil}, rest and slice into rounds."
     ]
   },

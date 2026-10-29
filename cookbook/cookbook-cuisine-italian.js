@@ -2388,7 +2388,7 @@ KITCHEN.add(
         440
       ],
       [
-        "small-pasta",
+        "pasta",
         120
       ],
       [
@@ -2422,8 +2422,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Cook diced {onion} in {olive-oil} for 5 minutes. Add {garlic} and {rosemary}.",
-      "Add {canned-tomatoes}, {chickpeas} and {vegetable-stock}; simmer for 10 minutes. Mash a few chickpeas to thicken the broth.",
-      "Add {small-pasta} and cook until tender, adding water if the soup becomes too thick.",
+      "Add {canned-tomatoes}, {chickpeas} and {vegetable-stock}; simmer for 10 minutes. Mash a few {chickpeas} to thicken the broth.",
+      "Add {pasta} and cook until tender, adding water if the soup becomes too thick.",
       "Serve with grated {parmesan} and black pepper."
     ],
     "cuisine": "Italian"
@@ -2483,7 +2483,7 @@ KITCHEN.add(
         220
       ],
       [
-        "green-peas",
+        "peas",
         180
       ],
       [
@@ -2515,7 +2515,7 @@ KITCHEN.add(
       "Keep {vegetable-stock} hot in a saucepan. Finely dice {onion}.",
       "Cook onion in half the {butter} until soft. Add {arborio-rice} and stir for 1 minute.",
       "Add {white-wine} and stir until absorbed. Add hot stock a ladle at a time, stirring often, until rice is creamy and tender, about 18 minutes.",
-      "Stir in {green-peas} for the final 4 minutes, then finish with remaining {butter}, grated {parmesan} and chopped {mint}."
+      "Stir in {peas} for the final 4 minutes, then finish with remaining {butter}, grated {parmesan} and chopped {mint}."
     ],
     "cuisine": "Italian"
   },
@@ -2531,7 +2531,7 @@ KITCHEN.add(
         350
       ],
       [
-        "potato",
+        "potatoes",
         180
       ],
       [
@@ -2556,7 +2556,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat the oven and a baking tray to 240°C. Slice {potato} very thinly and toss with half the {olive-oil}, chopped {rosemary} and a pinch of salt.",
+      "Heat the oven and a baking tray to 240°C. Slice {potatoes} very thinly and toss with half the {olive-oil}, chopped {rosemary} and a pinch of salt.",
       "Stretch {pizza-dough} into a thin round. Brush with remaining oil and rub lightly with cut {garlic}.",
       "Scatter over mozzarella, arrange potato slices and finish with grated {parmesan}.",
       "Bake on the hot tray for 10–14 minutes until the crust is browned and potato is tender."
@@ -2588,7 +2588,7 @@ KITCHEN.add(
         120
       ],
       [
-        "stock",
+        "vegetable-stock",
         1000
       ],
       [
@@ -2605,7 +2605,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {stock} in a saucepan and steep the {saffron} in a small ladleful. Finely chop the {onion}.",
+      "Warm the {vegetable-stock} in a saucepan and steep the {saffron} in a small ladleful. Finely chop the {onion}.",
       "Cook onion gently in half the {butter} until translucent. Add {arborio-rice} and toast 2 minutes, stirring.",
       "Pour in {white-wine}; stir until absorbed. Add hot stock a ladle at a time, stirring often and waiting for each addition to absorb.",
       "After 16–18 minutes, when creamy and al dente, stir in saffron liquid, remaining butter and {parmesan}. Rest 2 minutes and serve."
@@ -2620,7 +2620,7 @@ KITCHEN.add(
     "serves": 6,
     "ing": [
       [
-        "eggplant",
+        "aubergine",
         900
       ],
       [
@@ -2653,7 +2653,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Slice the {eggplant} into 1 cm rounds, salt lightly and leave 20 minutes; pat dry. Heat the oven to 200 °C.",
+      "Slice the {aubergine} into 1 cm rounds, salt lightly and leave 20 minutes; pat dry. Heat the oven to 200 °C.",
       "Simmer {canned-tomatoes} with minced {garlic}, salt and a little {olive-oil} for 15 minutes; stir in torn {basil}.",
       "Brush eggplant with oil and roast on trays for 20 minutes until tender and lightly browned.",
       "Layer tomato sauce, eggplant, {mozzarella} and {parmesan} in a baking dish. Repeat and bake 25–30 minutes until bubbling. Rest 15 minutes before serving."
@@ -2676,7 +2676,7 @@ KITCHEN.add(
         250
       ],
       [
-        "stock",
+        "vegetable-stock",
         700
       ],
       [
@@ -2709,7 +2709,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm {stock} in a saucepan. Sauté sliced {mushrooms} in half the {butter} and set aside.",
+      "Warm {vegetable-stock} in a saucepan. Sauté sliced {mushrooms} in half the {butter} and set aside.",
       "Soften diced {onion} in {olive-oil}; add {garlic} and {arborio-rice}, stirring until grains turn translucent at the edges.",
       "Pour in {white-wine} and let it evaporate. Add warm stock a ladle at a time, stirring often, until rice is creamy and just tender, about 18 minutes.",
       "Fold in mushrooms, remaining {butter}, grated {parmesan} and chopped {parsley}."
@@ -2748,7 +2748,7 @@ KITCHEN.add(
         25
       ],
       [
-        "stock",
+        "chicken-stock",
         180
       ],
       [
@@ -2767,7 +2767,7 @@ KITCHEN.add(
     "steps": [
       "Slice {chicken-breast} horizontally into thin cutlets; season and dust with {flour}.",
       "Sear in {olive-oil} and half the {butter} for 3–4 minutes per side until cooked; set aside.",
-      "Add {stock}, lemon juice and {capers} to the pan; simmer 3 minutes, scraping up browned bits.",
+      "Add {chicken-stock}, lemon juice and {capers} to the pan; simmer 3 minutes, scraping up browned bits.",
       "Whisk in remaining {butter}, return chicken briefly to the sauce and finish with {parsley}."
     ]
   },
@@ -2808,7 +2808,7 @@ KITCHEN.add(
         250
       ],
       [
-        "stock",
+        "vegetable-stock",
         900
       ],
       [
@@ -2830,7 +2830,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Soften diced {onion}, {carrot} and {celery} in {olive-oil} for 8 minutes. Add {garlic}.",
-      "Add diced {zucchini}, chopped {tomato} and {stock}; simmer 15 minutes.",
+      "Add diced {zucchini}, chopped {tomato} and {vegetable-stock}; simmer 15 minutes.",
       "Stir in drained {cannellini-beans} and {pasta}; simmer until pasta is tender, adding water if needed.",
       "Serve with {basil} and grated {parmesan}."
     ]
@@ -2848,7 +2848,7 @@ KITCHEN.add(
         250
       ],
       [
-        "stock",
+        "vegetable-stock",
         650
       ],
       [
@@ -2885,7 +2885,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cook diced {onion} in {butter}; stir in {arborio-rice}, then gradually add hot {stock} until creamy and tender. Stir in {parmesan} and cool completely.",
+      "Cook diced {onion} in {butter}; stir in {arborio-rice}, then gradually add hot {vegetable-stock} until creamy and tender. Stir in {parmesan} and cool completely.",
       "Enclose a cube of {mozzarella} in a handful of cold risotto and shape into balls.",
       "Coat each ball in {flour}, beaten {eggs} and {breadcrumbs}.",
       "Fry in hot {oil} until deep golden and hot throughout; drain well."
@@ -2944,7 +2944,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "veal-shanks",
+        "veal-shank",
         "4pc"
       ],
       [
@@ -2957,7 +2957,7 @@ KITCHEN.add(
       ],
       [
         "celery",
-        "2stalk"
+        "2pc"
       ],
       [
         "onion",
@@ -2968,11 +2968,11 @@ KITCHEN.add(
         200
       ],
       [
-        "tomato-passata",
+        "passata",
         250
       ],
       [
-        "stock",
+        "beef-stock",
         400
       ],
       [
@@ -2993,8 +2993,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Dust {veal-shanks} lightly with {flour}. Brown in {olive-oil} in a heavy casserole; remove.",
-      "Cook diced {carrot}, {celery} and {onion} until soft. Add {white-wine}, scraping the base, then add {tomato-passata} and {stock}. Return the shanks, cover and braise gently 1½–2 hours until tender.",
+      "Dust {veal-shank} lightly with {flour}. Brown in {olive-oil} in a heavy casserole; remove.",
+      "Cook diced {carrot}, {celery} and {onion} until soft. Add {white-wine}, scraping the base, then add {passata} and {beef-stock}. Return the shanks, cover and braise gently 1½–2 hours until tender.",
       "Mix finely chopped {parsley}, grated {lemon} zest and minced {garlic}. Scatter this gremolata over the meat just before serving."
     ]
   },
@@ -3011,7 +3011,7 @@ KITCHEN.add(
         400
       ],
       [
-        "small-pasta",
+        "pasta",
         120
       ],
       [
@@ -3020,7 +3020,7 @@ KITCHEN.add(
       ],
       [
         "celery",
-        "1stalk"
+        "1pc"
       ],
       [
         "onion",
@@ -3031,11 +3031,11 @@ KITCHEN.add(
         "2pc"
       ],
       [
-        "tomato-passata",
+        "passata",
         200
       ],
       [
-        "stock",
+        "vegetable-stock",
         900
       ],
       [
@@ -3049,8 +3049,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Dice {carrot}, {celery} and {onion}; cook in {olive-oil} for 8 minutes. Add {garlic} and {rosemary} and stir briefly.",
-      "Add {tomato-passata}, {white-beans} and {stock}. Simmer 15 minutes, mashing a few beans to thicken.",
-      "Add {small-pasta} and cook until tender, adding extra water if needed. Season and finish with olive oil."
+      "Add {passata}, {white-beans} and {vegetable-stock}. Simmer 15 minutes, mashing a few beans to thicken.",
+      "Add {pasta} and cook until tender, adding extra water if needed. Season and finish with olive oil."
     ]
   },
   {
@@ -3062,7 +3062,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         "6pc"
       ],
       [
@@ -3078,7 +3078,7 @@ KITCHEN.add(
         "3pc"
       ],
       [
-        "tomato-passata",
+        "passata",
         400
       ],
       [
@@ -3099,9 +3099,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Brown {chicken-thighs} in {olive-oil} on all sides; transfer to a plate.",
+      "Brown {chicken-thigh} in {olive-oil} on all sides; transfer to a plate.",
       "Cook sliced {onion} and {red-pepper} until softened. Add {garlic}, then pour in {white-wine} and reduce by half.",
-      "Add {tomato-passata}, {olives} and {oregano}. Return chicken, cover and simmer 30–35 minutes until cooked through and tender."
+      "Add {passata}, {olives} and {oregano}. Return chicken, cover and simmer 30–35 minutes until cooked through and tender."
     ]
   },
   {
@@ -3233,7 +3233,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Warm {olive-oil} with minced {garlic}; add {passata} and {salt} and simmer for 10 minutes. Stir in torn {basil}.",
-      "Boil {gnocchi} until they float, drain and toss with the tomato sauce.",
+      "Boil {gnocchi} until they float, drain and toss with the {passata}.",
       "Transfer to a baking dish, top with {mozzarella} and {parmesan}, and bake at 220 °C for 10–12 minutes until bubbling."
     ]
   },
@@ -3450,7 +3450,7 @@ KITCHEN.add(
         80
       ],
       [
-        "egg",
+        "eggs",
         1
       ],
       [
@@ -3487,7 +3487,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Flatten {chicken-breast} to an even thickness; season with {salt} and {black-pepper}. Coat with {flour}, beaten {egg} and {breadcrumbs}.",
+      "Flatten {chicken-breast} to an even thickness; season with {salt} and {black-pepper}. Coat with {flour}, beaten {eggs} and {breadcrumbs}.",
       "Pan-fry in {olive-oil} until golden on both sides; transfer to a baking dish and spoon over {passata} mixed with {oregano}.",
       "Top with {mozzarella} and {parmesan}; bake at 200 °C for 12–15 minutes until the chicken is cooked through and cheese is bubbling."
     ]
@@ -3506,12 +3506,9 @@ KITCHEN.add(
       ],
       [
         "red-pepper",
-        1
+        2
       ],
-      [
-        "green-pepper",
-        1
-      ],
+      
       [
         "onion",
         1
@@ -3534,7 +3531,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Brown sliced {sausage} in {olive-oil}; add strips of {red-pepper}, {green-pepper} and {onion} and cook until soft.",
+      "Brown sliced {sausage} in {olive-oil}; add strips of {red-pepper}, {red-pepper} and {onion} and cook until soft.",
       "Season with {oregano}. Split the {ciabatta} and fill with the sausage mixture and slices of {mozzarella}.",
       "Toast in a press or hot pan until the bread is crisp and the cheese melts."
     ]
@@ -3615,11 +3612,11 @@ KITCHEN.add(
         25
       ],
       [
-        "egg",
+        "eggs",
         1
       ],
       [
-        "small-pasta",
+        "pasta",
         80
       ],
       [
@@ -3654,7 +3651,7 @@ KITCHEN.add(
     "steps": [
       "Mix {chicken-mince}, {breadcrumbs}, {parmesan}, half the {parsley}, {salt} and {black-pepper}; roll into small meatballs.",
       "Simmer diced {carrot} and {onion} in {chicken-stock} for 8 minutes. Add meatballs and cook 10 minutes.",
-      "Add {small-pasta} and cook until tender; stir in {spinach} until wilted. Finish with beaten {egg} drizzled slowly into the simmering soup and remaining {parsley}."
+      "Add {pasta} and cook until tender; stir in {spinach} until wilted. Finish with beaten {eggs} drizzled slowly into the simmering soup and remaining {parsley}."
     ]
   },
   {
@@ -3760,7 +3757,7 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "veal-shanks",
+        "veal-shank",
         500
       ],
       [
@@ -3805,9 +3802,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Simmer {veal-shanks} gently with {carrot}, {celery}, {onion}, {bay-leaf} and enough water to cover until tender, 40–45 minutes. Cool in the broth, then slice thinly.",
+      "Simmer {veal-shank} gently with {carrot}, {celery}, {onion}, {bay-leaf} and enough water to cover until tender, 40–45 minutes. Cool in the broth, then slice thinly.",
       "Blend {tuna}, {mayonnaise}, {capers}, {anchovies} and {lemon-juice} into a smooth sauce; thin with a spoon of cooking broth if needed.",
-      "Arrange veal slices on a platter, spoon over the tuna sauce and chill at least 30 minutes. Finish with extra capers."
+      "Arrange veal slices on a platter, spoon over the {tuna} sauce and chill at least 30 minutes. Finish with extra capers."
     ]
   },
   {
@@ -4011,7 +4008,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Warm {garlic} and {rosemary} in {olive-oil}; add {canned-tomatoes} and {chilli-flakes}.",
-      "Add {chickpeas} and {vegetable-stock}; simmer 15 minutes, mashing a few chickpeas to thicken.",
+      "Add {chickpeas} and {vegetable-stock}; simmer 15 minutes, mashing a few {chickpeas} to thicken.",
       "Add {pasta} and cook until tender, adding water if needed. Season with {salt} and serve with olive oil."
     ]
   },
@@ -4079,7 +4076,7 @@ KITCHEN.add(
     "serves": 6,
     "ing": [
       [
-        "ziti",
+        "pasta",
         450
       ],
       [
@@ -4112,7 +4109,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat oven to 200 °C. Cook {ziti} 2 minutes less than packet directions; drain.",
+      "Heat oven to 200 °C. Cook {pasta} 2 minutes less than packet directions; drain.",
       "Warm {olive-oil} and cook minced {garlic} briefly. Add {canned-tomatoes} and simmer 12 minutes; season and stir in torn {basil}.",
       "Toss pasta with most of the sauce and spoon half into a baking dish. Dot with {ricotta} and {mozzarella}; add remaining pasta and sauce.",
       "Top with remaining mozzarella and {parmesan}. Bake 20–25 minutes until bubbling and browned. Rest 5 minutes."
@@ -4544,7 +4541,7 @@ KITCHEN.add(
         80
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         1
       ],
       [
@@ -4623,7 +4620,7 @@ KITCHEN.add(
     "steps": [
       "Heat {olive-oil} in a wok or large skillet; stir-fry {onion} with the main ingredients.",
       "Toss the noodles through the sauce over high heat so they absorb the seasoning without turning soft.",
-      "Soften onion and fennel in olive oil, add sardines and a pinch of saffron, then fold in raisins and pine nuts; toss with pasta and finish with toasted breadcrumbs and lemon.",
+      "Soften onion and fennel in olive oil, add {sardines} and a pinch of saffron, then fold in raisins and pine nuts; toss with pasta and finish with toasted breadcrumbs and lemon.",
       "Finish with a little {lemon} if needed, taste for seasoning and serve while the texture is at its best."
     ]
   }

@@ -1723,11 +1723,11 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "firm-tofu",
+        "tofu",
         500
       ],
       [
-        "ground-pork",
+        "pork-mince",
         180
       ],
       [
@@ -1743,7 +1743,7 @@ KITCHEN.add(
         15
       ],
       [
-        "stock",
+        "vegetable-stock",
         250
       ],
       [
@@ -1759,15 +1759,15 @@ KITCHEN.add(
         2
       ],
       [
-        "sichuan-pepper",
+        "sichuan-peppercorns",
         3
       ]
     ],
     "steps": [
-      "Cut the {firm-tofu} into cubes and mince {garlic} and {ginger}. Mix {cornstarch} with 2 tablespoons cold water.",
-      "Brown {ground-pork} in a hot wok. Add garlic, ginger and {doubanjiang}; fry until fragrant and red.",
-      "Add {stock}, {soy-sauce} and tofu. Simmer gently for 6–8 minutes so the tofu absorbs the sauce.",
-      "Stir in the cornstarch slurry and simmer until glossy. Finish with crushed {sichuan-pepper} and sliced {spring-onion}; serve with rice."
+      "Cut the {tofu} into cubes and mince {garlic} and {ginger}. Mix {cornstarch} with 2 tablespoons cold water.",
+      "Brown {pork-mince} in a hot wok. Add garlic, ginger and {doubanjiang}; fry until fragrant and red.",
+      "Add {vegetable-stock}, {soy-sauce} and tofu. Simmer gently for 6–8 minutes so the tofu absorbs the sauce.",
+      "Stir in the cornstarch slurry and simmer until glossy. Finish with crushed {sichuan-peppercorns} and sliced {spring-onion}; serve with rice."
     ]
   },
   {
@@ -1831,7 +1831,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "eggplant",
+        "aubergine",
         500
       ],
       [
@@ -1855,7 +1855,7 @@ KITCHEN.add(
         10
       ],
       [
-        "chilli",
+        "fresh-chilli",
         2
       ],
       [
@@ -1872,9 +1872,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cut {eggplant} into batons and pan-fry in {oil} until browned and soft; work in batches.",
+      "Cut {aubergine} into batons and pan-fry in {oil} until browned and soft; work in batches.",
       "Mix {soy-sauce}, {rice-vinegar}, {sugar}, {cornstarch} and 100 ml water.",
-      "Fry minced {garlic}, {ginger} and {chilli} for 30 seconds; return aubergine and add sauce.",
+      "Fry minced {garlic}, {ginger} and {fresh-chilli} for 30 seconds; return aubergine and add sauce.",
       "Simmer until glossy and thick, then finish with sliced {spring-onion}."
     ]
   },
@@ -1895,7 +1895,7 @@ KITCHEN.add(
         180
       ],
       [
-        "stock",
+        "vegetable-stock",
         700
       ],
       [
@@ -1907,7 +1907,7 @@ KITCHEN.add(
         25
       ],
       [
-        "chilli",
+        "fresh-chilli",
         2
       ],
       [
@@ -1928,7 +1928,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Bring {stock} to a simmer with sliced {mushrooms}, {ginger} and {chilli}; cook 5 minutes.",
+      "Bring {vegetable-stock} to a simmer with sliced {mushrooms}, {ginger} and {fresh-chilli}; cook 5 minutes.",
       "Add cubed {tofu}, {soy-sauce} and {rice-vinegar}.",
       "Stir {cornstarch} with cold water, add to the soup and simmer until lightly thickened.",
       "Drizzle in beaten {eggs} while stirring gently to form ribbons; garnish with {spring-onion}."
@@ -2014,7 +2014,7 @@ KITCHEN.add(
         10
       ],
       [
-        "neutral-oil",
+        "oil",
         20
       ],
       [
@@ -2025,7 +2025,7 @@ KITCHEN.add(
     "steps": [
       "Set {white-fish} on a heatproof plate and scatter julienned {ginger} over it. Steam over simmering water 8–12 minutes depending on thickness, until it flakes.",
       "Carefully pour off excess liquid. Scatter finely sliced {spring-onion} over the fish.",
-      "Heat {neutral-oil} until shimmering and carefully pour over the aromatics. Drizzle with {soy-sauce}, {rice-wine} and {sesame-oil}; serve immediately."
+      "Heat {oil} until shimmering and carefully pour over the aromatics. Drizzle with {soy-sauce}, {rice-wine} and {sesame-oil}; serve immediately."
     ]
   },
   {
@@ -2120,13 +2120,13 @@ KITCHEN.add(
         2
       ],
       [
-        "neutral-oil",
+        "oil",
         15
       ]
     ],
     "steps": [
       "Cook {noodles} until just tender, drain and toss with {sesame-oil}.",
-      "Stir-fry sliced {chicken-breast} in {neutral-oil} until nearly cooked; add {garlic}, shredded {cabbage} and sliced {spring-onion}.",
+      "Stir-fry sliced {chicken-breast} in {oil} until nearly cooked; add {garlic}, shredded {cabbage} and sliced {spring-onion}.",
       "Add noodles, {soy-sauce}, {oyster-sauce} and {bean-sprouts}; toss over high heat until hot and lightly charred."
     ]
   },
@@ -2139,7 +2139,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "wide-rice-noodles",
+        "rice-noodles",
         220
       ],
       [
@@ -2171,7 +2171,7 @@ KITCHEN.add(
         2
       ],
       [
-        "neutral-oil",
+        "oil",
         20
       ],
       [
@@ -2180,8 +2180,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Soak or cook {wide-rice-noodles} according to the packet and drain well.",
-      "Sear {beef-strips} in very hot {neutral-oil}; add {garlic} and the white parts of {spring-onion}.",
+      "Soak or cook {rice-noodles} according to the packet and drain well.",
+      "Sear {beef-strips} in very hot {oil}; add {garlic} and the white parts of {spring-onion}.",
       "Add noodles, {dark-soy-sauce}, {soy-sauce}, {oyster-sauce} and {sugar}; toss carefully until coated. Fold through {bean-sprouts} and green onion tops just before serving."
     ]
   },
@@ -2269,7 +2269,7 @@ KITCHEN.add(
         8
       ],
       [
-        "neutral-oil",
+        "oil",
         35
       ],
       [
@@ -2278,7 +2278,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Slice {spring-onion} into long strips. Warm {neutral-oil} in a pan and fry scallions slowly until deeply golden and fragrant.",
+      "Slice {spring-onion} into long strips. Warm {oil} in a pan and fry scallions slowly until deeply golden and fragrant.",
       "Stir {soy-sauce}, {dark-soy-sauce} and {sugar} into the scallion oil.",
       "Cook {noodles}, drain, then toss with the scallion sauce. Finish with {sesame-seeds} and extra scallions."
     ]
@@ -2308,7 +2308,7 @@ KITCHEN.add(
         4
       ],
       [
-        "chilli",
+        "fresh-chilli",
         1
       ],
       [
@@ -2320,14 +2320,14 @@ KITCHEN.add(
         3
       ],
       [
-        "neutral-oil",
+        "oil",
         350
       ]
     ],
     "steps": [
       "Pat {squid} very dry and cut into rings. Mix {cornstarch}, half the {salt} and {white-pepper}; coat the squid lightly.",
-      "Fry in batches in hot {neutral-oil} for 1–2 minutes until crisp; drain well.",
-      "Pour off all but a little oil, then quickly fry chopped {garlic}, {chilli} and {spring-onion}. Toss in the squid and remaining salt and serve immediately."
+      "Fry in batches in hot {oil} for 1–2 minutes until crisp; drain well.",
+      "Pour off all but a little oil, then quickly fry chopped {garlic}, {fresh-chilli} and {spring-onion}. Toss in the squid and remaining salt and serve immediately."
     ]
   },
   {
@@ -2394,7 +2394,7 @@ KITCHEN.add(
         10
       ],
       [
-        "chilli",
+        "fresh-chilli",
         1
       ],
       [
@@ -2406,7 +2406,7 @@ KITCHEN.add(
         10
       ],
       [
-        "neutral-oil",
+        "oil",
         20
       ],
       [
@@ -2415,8 +2415,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Trim {green-beans} and pat dry. Stir-fry in {neutral-oil} over high heat until blistered and tender; remove.",
-      "Add {pork-mince} and cook until browned. Stir in chopped {garlic}, {ginger}, {chilli} and {doubanjiang}.",
+      "Trim {green-beans} and pat dry. Stir-fry in {oil} over high heat until blistered and tender; remove.",
+      "Add {pork-mince} and cook until browned. Stir in chopped {garlic}, {ginger}, {fresh-chilli} and {doubanjiang}.",
       "Return beans, add {soy-sauce} and {sugar}, and toss over high heat until the seasoning coats the beans."
     ]
   },
@@ -2465,13 +2465,13 @@ KITCHEN.add(
         2
       ],
       [
-        "neutral-oil",
+        "oil",
         15
       ]
     ],
     "steps": [
       "Separate crisp leaves from {lettuce}. Finely chop {shiitake-mushrooms} and {celery}.",
-      "Heat {neutral-oil}; cook {pork-mince} until browned, then add {ginger}, {garlic}, mushrooms and celery.",
+      "Heat {oil}; cook {pork-mince} until browned, then add {ginger}, {garlic}, mushrooms and celery.",
       "Stir in {hoisin-sauce} and {soy-sauce}; cook until glossy. Spoon into lettuce leaves and garnish with {spring-onion}."
     ]
   },
@@ -2504,7 +2504,7 @@ KITCHEN.add(
         15
       ],
       [
-        "neutral-oil",
+        "oil",
         20
       ],
       [
@@ -2515,7 +2515,7 @@ KITCHEN.add(
     "steps": [
       "Place {white-fish} on a heatproof plate; top with half the sliced {ginger} and drizzle with {rice-wine}.",
       "Steam for 8–12 minutes, depending on thickness, until the fish flakes easily. Carefully pour off excess liquid.",
-      "Top with remaining {ginger} and sliced {spring-onion}. Heat {neutral-oil} until shimmering and pour over the aromatics; finish with {soy-sauce} and {sugar}."
+      "Top with remaining {ginger} and sliced {spring-onion}. Heat {oil} until shimmering and pour over the aromatics; finish with {soy-sauce} and {sugar}."
     ]
   },
   {
@@ -2527,7 +2527,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "firm-tofu",
+        "tofu",
         350
       ],
       [
@@ -2567,12 +2567,12 @@ KITCHEN.add(
         8
       ],
       [
-        "neutral-oil",
+        "oil",
         15
       ]
     ],
     "steps": [
-      "Cut {firm-tofu} into cubes and brown lightly in {neutral-oil}; set aside.",
+      "Cut {tofu} into cubes and brown lightly in {oil}; set aside.",
       "Fry sliced {shiitake-mushrooms}, {ginger} and {garlic}. Add {dark-soy-sauce}, {soy-sauce}, {rice-wine}, {sugar} and {vegetable-stock}.",
       "Return tofu and simmer for 15 minutes. Stir {cornstarch} with cold water, add a little to thicken the sauce and cook until glossy."
     ]
@@ -2606,7 +2606,7 @@ KITCHEN.add(
         8
       ],
       [
-        "chilli",
+        "fresh-chilli",
         1
       ],
       [
@@ -2620,7 +2620,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Smash {cucumber} lightly with the flat side of a knife, then cut into bite-sized pieces.",
-      "Mix crushed {garlic}, {black-vinegar}, {soy-sauce}, {sesame-oil}, {sugar} and finely sliced {chilli}.",
+      "Mix crushed {garlic}, {black-vinegar}, {soy-sauce}, {sesame-oil}, {sugar} and finely sliced {fresh-chilli}.",
       "Toss cucumber with the dressing and leave for 5–10 minutes. Sprinkle with {sesame-seeds} before serving."
     ]
   },
@@ -2676,7 +2676,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "shrimp",
+        "prawns",
         220
       ],
       [
@@ -2717,7 +2717,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Chop {shrimp} and mix with grated {ginger}, half the {spring-onion}, {soy-sauce} and {sesame-oil}. Wrap small portions in {dumpling-skins}.",
+      "Chop {prawns} and mix with grated {ginger}, half the {spring-onion}, {soy-sauce} and {sesame-oil}. Wrap small portions in {dumpling-skins}.",
       "Bring {chicken-stock} to a simmer; cook wontons for 3–5 minutes until the filling is opaque.",
       "Cook {noodles} separately, divide into bowls, add {bok-choy} to the broth for 2 minutes and ladle over. Garnish with remaining {spring-onion} and {white-pepper}."
     ]
@@ -2763,7 +2763,7 @@ KITCHEN.add(
         8
       ],
       [
-        "neutral-oil",
+        "oil",
         25
       ],
       [
@@ -2772,7 +2772,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cut {aubergine} into long batons. Sear in {neutral-oil} in batches until browned and tender; set aside.",
+      "Cut {aubergine} into long batons. Sear in {oil} in batches until browned and tender; set aside.",
       "Fry {garlic}, {ginger} and {doubanjiang} briefly. Add {soy-sauce}, {black-vinegar}, {sugar} and 100 ml water.",
       "Return eggplant and simmer 3 minutes. Add {cornstarch} mixed with a little cold water and stir until glossy; garnish with {spring-onion}."
     ]
@@ -2786,7 +2786,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         400
       ],
       [
@@ -2823,7 +2823,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Slice {chicken-thighs} and {shiitake-mushrooms}. Toss with grated {ginger}, {soy-sauce}, {rice-wine}, {sesame-oil}, {cornstarch} and {white-pepper}.",
+      "Slice {chicken-thigh} and {shiitake-mushrooms}. Toss with grated {ginger}, {soy-sauce}, {rice-wine}, {sesame-oil}, {cornstarch} and {white-pepper}.",
       "Arrange in a shallow heatproof dish and steam for 20–25 minutes until the chicken is cooked through.",
       "Garnish with finely sliced {spring-onion}; spoon the juices over the chicken before serving with rice."
     ]
@@ -2873,12 +2873,12 @@ KITCHEN.add(
         10
       ],
       [
-        "neutral-oil",
+        "oil",
         10
       ]
     ],
     "steps": [
-      "Season {chicken-breast} lightly and pan-cook in {neutral-oil}; rest, then slice thinly.",
+      "Season {chicken-breast} lightly and pan-cook in {oil}; rest, then slice thinly.",
       "Shred {cabbage} and {carrot}; cut {cucumber} into matchsticks and place in a bowl.",
       "Whisk {soy-sauce}, {rice-vinegar}, {honey} and {sesame-oil}; toss through the vegetables with chicken and finish with {sesame-seeds}."
     ]
@@ -2928,14 +2928,14 @@ KITCHEN.add(
         8
       ],
       [
-        "neutral-oil",
+        "oil",
         250
       ]
     ],
     "steps": [
       "Stir-fry shredded {cabbage}, {carrot}, sliced {shiitake-mushrooms}, {bean-sprouts}, {ginger} and {garlic} until just tender. Season with {soy-sauce} and cool completely.",
       "Place filling on each {dumpling-skins}, fold sides in and roll tightly; seal the edge with a little {cornstarch} mixed with water.",
-      "Fry in hot {neutral-oil} until crisp and golden, turning once. Drain well and serve hot."
+      "Fry in hot {oil} until crisp and golden, turning once. Drain well and serve hot."
     ]
   },
   {
@@ -2983,7 +2983,7 @@ KITCHEN.add(
         8
       ],
       [
-        "neutral-oil",
+        "oil",
         20
       ],
       [
@@ -3030,7 +3030,7 @@ KITCHEN.add(
         15
       ],
       [
-        "egg",
+        "eggs",
         1
       ],
       [
@@ -3038,7 +3038,7 @@ KITCHEN.add(
         250
       ],
       [
-        "stock",
+        "vegetable-stock",
         600
       ],
       [
@@ -3047,8 +3047,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Mix {pork-mince}, chopped {water-chestnuts}, {spring-onion}, {ginger}, {soy-sauce}, {cornstarch}, {egg} and {sesame-oil}. Shape into 4 large balls.",
-      "Brown meatballs in a skillet, then transfer to a pot with {stock}. Cover and simmer gently for 35 minutes until cooked through.",
+      "Mix {pork-mince}, chopped {water-chestnuts}, {spring-onion}, {ginger}, {soy-sauce}, {cornstarch}, {eggs} and {sesame-oil}. Shape into 4 large balls.",
+      "Brown meatballs in a skillet, then transfer to a pot with {vegetable-stock}. Cover and simmer gently for 35 minutes until cooked through.",
       "Add {chinese-broccoli} and simmer until tender. Serve meatballs with greens and broth over rice."
     ]
   },

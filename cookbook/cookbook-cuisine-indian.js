@@ -2189,7 +2189,7 @@ KITCHEN.add(
         350
       ],
       [
-        "potato",
+        "potatoes",
         250
       ],
       [
@@ -2226,7 +2226,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cut {cauliflower} into florets and cube {potato}. Dice {onion}; grate {ginger} and {garlic}.",
+      "Cut {cauliflower} into florets and cube {potatoes}. Dice {onion}; grate {ginger} and {garlic}.",
       "Heat {oil} and toast {cumin} briefly. Add onion and cook until golden, then stir in ginger, garlic, {turmeric} and {garam-masala}.",
       "Add potato, {tomato} and a splash of water. Cover and cook for 10 minutes, then add cauliflower.",
       "Cook covered for 12–15 minutes until vegetables are tender, stirring gently and adding water if needed."
@@ -2269,7 +2269,7 @@ KITCHEN.add(
         3
       ],
       [
-        "coriander-ground",
+        "ground-coriander",
         3
       ],
       [
@@ -2282,7 +2282,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cook diced {onion} in a little oil until soft. Add chopped {garlic}, grated {ginger}, {cumin} and {coriander-ground}; stir for 30 seconds.",
+      "Cook diced {onion} in a little oil until soft. Add chopped {garlic}, grated {ginger}, {cumin} and {ground-coriander}; stir for 30 seconds.",
       "Add chopped {tomato} and cook until pulpy. Stir in drained {chickpeas} and {coconut-milk}; simmer for 10 minutes.",
       "Fold in {spinach} in batches until wilted. Add {garam-masala}, season and simmer for another 3 minutes.",
       "Serve with rice or flatbread."
@@ -2297,7 +2297,7 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "basmati-rice",
+        "rice",
         220
       ],
       [
@@ -2313,7 +2313,7 @@ KITCHEN.add(
         100
       ],
       [
-        "green-peas",
+        "peas",
         100
       ],
       [
@@ -2342,9 +2342,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Rinse {basmati-rice} until the water runs mostly clear. Dice {carrot} and {onion}.",
+      "Rinse {rice} until the water runs mostly clear. Dice {carrot} and {onion}.",
       "Heat {oil} and toast {cumin} and {cardamom}. Add onion, {garlic} and {ginger}; cook for 3 minutes.",
-      "Stir in carrot, {green-peas} and rice. Add {coconut-milk}, {water} and salt; bring to a simmer.",
+      "Stir in carrot, {peas} and rice. Add {coconut-milk}, {water} and salt; bring to a simmer.",
       "Cover and cook on low for 15 minutes. Rest covered for 5 minutes, then fluff gently."
     ],
     "cuisine": "Indian"
@@ -2366,7 +2366,7 @@ KITCHEN.add(
         1
       ],
       [
-        "tomatoes",
+        "tomato",
         400
       ],
       [
@@ -2390,7 +2390,7 @@ KITCHEN.add(
         5
       ],
       [
-        "chili",
+        "fresh-chilli",
         1
       ],
       [
@@ -2400,13 +2400,13 @@ KITCHEN.add(
     ],
     "steps": [
       "Finely chop the {onion}; grate {ginger} and mince {garlic}.",
-      "Cook onion in oil until golden. Add ginger, garlic, {cumin}, {coriander} and {chili}; stir 30 seconds.",
-      "Add {tomatoes} and cook until thick and jammy. Add drained {chickpeas} and 250 ml water; simmer 15–20 minutes.",
-      "Stir in {garam-masala} and juice of the {lemon}. Lightly mash some chickpeas to thicken and serve with rice or flatbread."
+      "Cook onion in oil until golden. Add ginger, garlic, {cumin}, {coriander} and {fresh-chilli}; stir 30 seconds.",
+      "Add {tomato} and cook until thick and jammy. Add drained {chickpeas} and 250 ml water; simmer 15–20 minutes.",
+      "Stir in {garam-masala} and juice of the {lemon}. Lightly mash some {chickpeas} to thicken and serve with rice or flatbread."
     ]
   },
   {
-    "id": "world-indian-pal ak-paneer",
+    "id": "world-indian-palak-paneer",
     "name": "Indian palak paneer spinach and cheese curry",
     "meal": "big",
     "cuisine": "Indian",
@@ -2426,7 +2426,7 @@ KITCHEN.add(
         1
       ],
       [
-        "tomatoes",
+        "tomato",
         200
       ],
       [
@@ -2457,7 +2457,7 @@ KITCHEN.add(
     "steps": [
       "Blanch the {spinach} for 1 minute, cool quickly and blend to a smooth purée.",
       "Cube the {paneer} and lightly brown in a little oil; set aside. Cook chopped {onion} until soft, then add {garlic}, {ginger} and {cumin}.",
-      "Add {tomatoes} and cook until reduced. Stir in spinach purée and {garam-masala}; simmer gently for 5 minutes.",
+      "Add {tomato} and cook until reduced. Stir in spinach purée and {garam-masala}; simmer gently for 5 minutes.",
       "Fold in paneer and {cream}, warm through without boiling hard, and season to taste. Serve with naan or rice."
     ]
   },
@@ -2482,7 +2482,7 @@ KITCHEN.add(
         1
       ],
       [
-        "tomatoes",
+        "tomato",
         250
       ],
       [
@@ -2513,7 +2513,7 @@ KITCHEN.add(
     "steps": [
       "Cut {potatoes} into small cubes and divide the {cauliflower} into florets.",
       "Heat oil in a wide pan; add {cumin}, then chopped {onion}, {garlic} and {ginger}. Cook until fragrant.",
-      "Add {turmeric}, {coriander}, potatoes and cauliflower; toss well. Add {tomatoes} and 100 ml water, cover and cook 18–22 minutes, stirring carefully.",
+      "Add {turmeric}, {coriander}, potatoes and cauliflower; toss well. Add {tomato} and 100 ml water, cover and cook 18–22 minutes, stirring carefully.",
       "Uncover to evaporate excess liquid and finish with chopped {cilantro}. The vegetables should be tender but not mushy."
     ]
   },
@@ -2526,7 +2526,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "basmati-rice",
+        "rice",
         250
       ],
       [
@@ -2579,7 +2579,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Rinse {basmati-rice}; soak for 15 minutes, then drain.",
+      "Rinse {rice}; soak for 15 minutes, then drain.",
       "Fry sliced {onion} in {oil} until golden; reserve a handful for topping. Add diced {potatoes}, {carrot}, {peas}, {cumin}, {cinnamon} and {garam-masala}.",
       "Stir in {yogurt} and {salt}, add rice and enough water to just cover. Add {saffron} dissolved in a spoon of warm water.",
       "Cover tightly and cook on low for 18–20 minutes. Rest 10 minutes, fluff and top with fried onion and {mint}."
@@ -2657,7 +2657,7 @@ KITCHEN.add(
         150
       ],
       [
-        "tandoori-spice",
+        "tandoori-masala",
         12
       ],
       [
@@ -2682,7 +2682,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Mix 60 g {yogurt}, {tandoori-spice}, crushed {garlic}, half the {lemon} juice and a pinch of {salt}. Coat {salmon} and marinate 15 minutes.",
+      "Mix 60 g {yogurt}, {tandoori-masala}, crushed {garlic}, half the {lemon} juice and a pinch of {salt}. Coat {salmon} and marinate 15 minutes.",
       "Grate {cucumber}, squeeze dry and mix with remaining {yogurt}, chopped {mint} and lemon juice.",
       "Roast salmon at 220 °C for 10–14 minutes depending on thickness, until just cooked. Serve with raita."
     ]
@@ -2696,7 +2696,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         600
       ],
       [
@@ -2716,7 +2716,7 @@ KITCHEN.add(
         "4pc"
       ],
       [
-        "coconut",
+        "desiccated-coconut",
         30
       ],
       [
@@ -2741,8 +2741,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Dry-toast {coriander-seeds}, {cumin}, {black-pepper} and {coconut} until fragrant; grind to a coarse powder.",
-      "Brown diced {chicken-thighs} in {oil}. Add sliced {onion} and cook until golden, then stir in grated {ginger} and crushed {garlic}.",
+      "Dry-toast {coriander-seeds}, {cumin}, {black-pepper} and {desiccated-coconut} until fragrant; grind to a coarse powder.",
+      "Brown diced {chicken-thigh} in {oil}. Add sliced {onion} and cook until golden, then stir in grated {ginger} and crushed {garlic}.",
       "Add chopped {tomato}, {chilli-powder} and the ground spice mix with a splash of water. Cover and simmer 25–30 minutes until the chicken is cooked and the sauce thick."
     ]
   },
@@ -2783,11 +2783,11 @@ KITCHEN.add(
         40
       ],
       [
-        "pav-bhaji-masala",
+        "garam-masala",
         12
       ],
       [
-        "chilli",
+        "fresh-chilli",
         1
       ],
       [
@@ -2801,7 +2801,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Boil {potatoes}, {cauliflower}, {peas} and {carrot} until soft; drain and roughly mash.",
-      "Melt half the {butter} in a wide pan. Cook diced {onion}, add chopped {tomato}, {chilli} and {pav-bhaji-masala}; cook until saucy.",
+      "Melt half the {butter} in a wide pan. Cook diced {onion}, add chopped {tomato}, {fresh-chilli} and {garam-masala}; cook until saucy.",
       "Add the vegetables and mash vigorously in the pan with a splash of water. Simmer 10 minutes and finish with remaining butter and {lemon} juice. Toast {bread-rolls} with butter and serve alongside."
     ]
   },
@@ -2928,7 +2928,7 @@ KITCHEN.add(
     "serves": 3,
     "ing": [
       [
-        "eggplant",
+        "aubergine",
         "2pc"
       ],
       [
@@ -2965,7 +2965,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prick {eggplant} and roast over a gas flame or under a hot grill, turning until the skin is charred and the flesh collapses. Cool, peel and mash.",
+      "Prick {aubergine} and roast over a gas flame or under a hot grill, turning until the skin is charred and the flesh collapses. Cool, peel and mash.",
       "Heat {oil}; add {cumin}, then cook diced {onion} until golden. Add {garlic}, {ginger} and {green-chilli}, followed by chopped {tomato}.",
       "Cook until thick, fold in the mashed aubergine and simmer 8 minutes. Finish with chopped {coriander}."
     ]
@@ -3003,7 +3003,7 @@ KITCHEN.add(
         3
       ],
       [
-        "coriander-ground",
+        "ground-coriander",
         4
       ],
       [
@@ -3023,7 +3023,7 @@ KITCHEN.add(
         1
       ],
       [
-        "stock",
+        "beef-stock",
         300
       ],
       [
@@ -3037,8 +3037,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Brown {lamb} in {oil} in batches; set aside. Cook sliced {onion} until golden, then add grated {ginger} and crushed {garlic}.",
-      "Stir in {coriander-ground}, {cumin}, {paprika}, crushed {cardamom} and {cinnamon}; add chopped {tomato} and cook until thick.",
-      "Return lamb, add {stock} and simmer covered until tender, 60–75 minutes. Lower the heat and stir in whisked {yogurt}; season with {salt} and simmer gently without boiling."
+      "Stir in {ground-coriander}, {cumin}, {paprika}, crushed {cardamom} and {cinnamon}; add chopped {tomato} and cook until thick.",
+      "Return lamb, add {beef-stock} and simmer covered until tender, 60–75 minutes. Lower the heat and stir in whisked {yogurt}; season with {salt} and simmer gently without boiling."
     ]
   },
   {
@@ -3086,7 +3086,7 @@ KITCHEN.add(
         3
       ],
       [
-        "coriander-ground",
+        "ground-coriander",
         4
       ],
       [
@@ -3099,7 +3099,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Soften sliced {onion} in {oil}; add {ginger}, {garlic}, {cumin}, {coriander-ground} and crushed {cardamom}.",
+      "Soften sliced {onion} in {oil}; add {ginger}, {garlic}, {cumin}, {ground-coriander} and crushed {cardamom}.",
       "Add bite-sized {chicken-thigh} and brown lightly. Stir in {ground-almonds}, then add {yogurt} gradually and a splash of water.",
       "Cover and simmer for 20 minutes until the chicken is cooked. Stir in {cream}, season with {salt} and warm through gently."
     ]
@@ -3145,7 +3145,7 @@ KITCHEN.add(
         3
       ],
       [
-        "coriander-ground",
+        "ground-coriander",
         4
       ],
       [
@@ -3166,7 +3166,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cook chopped {onion} in {oil} until soft; add {garlic}, {ginger}, {turmeric}, {cumin}, {coriander-ground} and chopped {red-chilli}.",
+      "Cook chopped {onion} in {oil} until soft; add {garlic}, {ginger}, {turmeric}, {cumin}, {ground-coriander} and chopped {red-chilli}.",
       "Add chopped {tomato}, {coconut-milk} and {tamarind-paste}; simmer for 10 minutes to develop a tangy sauce.",
       "Add {prawns} and cook just until pink and opaque, 3–5 minutes. Season with {salt} and serve with rice."
     ]
@@ -3220,7 +3220,7 @@ KITCHEN.add(
         25
       ],
       [
-        "stock",
+        "vegetable-stock",
         250
       ],
       [
@@ -3235,7 +3235,7 @@ KITCHEN.add(
     "steps": [
       "Blend or crush {garlic}, {ginger}, {red-wine-vinegar}, {chilli-powder}, {cumin}, {paprika} and {cinnamon} into a paste; toss with cubed {pork-shoulder}.",
       "Brown sliced {onion} in {oil}; add the marinated pork and cook until well coloured. Stir in {tomato-paste}.",
-      "Add {stock}, cover and simmer for 50–60 minutes until the pork is tender and the sauce is rich. Season with {salt}."
+      "Add {vegetable-stock}, cover and simmer for 50–60 minutes until the pork is tender and the sauce is rich. Season with {salt}."
     ]
   },
   {
@@ -3338,7 +3338,7 @@ KITCHEN.add(
         3
       ],
       [
-        "coriander-ground",
+        "ground-coriander",
         4
       ],
       [
@@ -3360,7 +3360,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Hard-boil {eggs}, cool, peel and score lightly.",
-      "Cook diced {onion} in {oil} until golden; add {ginger}, {garlic}, {cumin}, {coriander-ground} and {turmeric}. Add chopped {tomato} and cook until pulpy.",
+      "Cook diced {onion} in {oil} until golden; add {ginger}, {garlic}, {cumin}, {ground-coriander} and {turmeric}. Add chopped {tomato} and cook until pulpy.",
       "Stir in {yogurt} slowly with a splash of water, simmer until thick, then add eggs and {garam-masala}. Warm through and season with {salt}."
     ]
   },
@@ -3382,12 +3382,9 @@ KITCHEN.add(
       ],
       [
         "red-pepper",
-        1
+        2
       ],
-      [
-        "green-pepper",
-        1
-      ],
+      
       [
         "ginger",
         10
@@ -3397,7 +3394,7 @@ KITCHEN.add(
         2
       ],
       [
-        "tandoori-spice",
+        "tandoori-masala",
         8
       ],
       [
@@ -3414,8 +3411,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Mix {yogurt}, grated {ginger}, crushed {garlic}, {tandoori-spice}, {lemon-juice}, {oil} and {salt}.",
-      "Cut {paneer}, {red-pepper} and {green-pepper} into chunks and coat with the marinade. Thread onto skewers.",
+      "Mix {yogurt}, grated {ginger}, crushed {garlic}, {tandoori-masala}, {lemon-juice}, {oil} and {salt}.",
+      "Cut {paneer}, {red-pepper} and {red-pepper} into chunks and coat with the marinade. Thread onto skewers.",
       "Grill or roast at 220 °C for 12–15 minutes, turning once, until lightly charred at the edges."
     ]
   },
@@ -3629,7 +3626,7 @@ KITCHEN.add(
         3
       ],
       [
-        "coriander-ground",
+        "ground-coriander",
         4
       ],
       [
@@ -3651,7 +3648,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Brown {beef-mince} in {oil}; add diced {onion} and cook until softened.",
-      "Stir in {ginger}, {garlic}, {cumin} and {coriander-ground}. Add chopped {tomato}, cover and simmer until the tomatoes break down.",
+      "Stir in {ginger}, {garlic}, {cumin} and {ground-coriander}. Add chopped {tomato}, cover and simmer until the tomatoes break down.",
       "Add {peas}, {garam-masala} and a splash of water; simmer 8 minutes. Season with {salt} and finish with chopped {coriander}."
     ]
   },
@@ -3696,7 +3693,7 @@ KITCHEN.add(
         3
       ],
       [
-        "coriander-ground",
+        "ground-coriander",
         4
       ],
       [
@@ -3714,7 +3711,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Brown pieces of {chicken-thigh} in {oil}, then remove and set aside. Cook sliced {onion} until golden.",
-      "Add {ginger}, {garlic}, {cumin} and {coriander-ground}; add chopped {tomato} and cook until thick. Return chicken and add a splash of water.",
+      "Add {ginger}, {garlic}, {cumin} and {ground-coriander}; add chopped {tomato} and cook until thick. Return chicken and add a splash of water.",
       "Cover and simmer 20 minutes until cooked. Lower the heat, stir in {yogurt}, crushed {dried-fenugreek-leaves} and {garam-masala}; season with {salt}."
     ]
   },
@@ -4097,7 +4094,7 @@ KITCHEN.add(
         180
       ],
       [
-        "neutral-oil",
+        "oil",
         25
       ],
       [
@@ -4111,7 +4108,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Soak {mustard-seeds} in warm water for 10 minutes, then blend with {green-chilli}, {mustard}, {turmeric} and a splash of water into a paste.",
-      "Rub {white-fish} with {salt} and a little {turmeric}; sear quickly in hot {neutral-oil} and set aside.",
+      "Rub {white-fish} with {salt} and a little {turmeric}; sear quickly in hot {oil} and set aside.",
       "Add chopped {tomato} and mustard paste to the pan with {water}; simmer 5 minutes. Return fish and cook gently until flaky."
     ]
   },
@@ -4283,7 +4280,7 @@ KITCHEN.add(
     "steps": [
       "Whisk the batter until smooth and let it rest briefly so the flour hydrates.",
       "Cook {green-lentils} in a lightly greased pan over medium heat, turning or folding once the surface sets.",
-      "Soak green lentils, blend with ginger, chilli and cumin into a thin batter, then spread directly on a hot oiled pan and cook until crisp.",
+      "Soak {green-lentils}, blend with ginger, chilli and cumin into a thin batter, then spread directly on a hot oiled pan and cook until crisp.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
   }

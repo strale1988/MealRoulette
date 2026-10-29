@@ -190,7 +190,7 @@ KITCHEN.add(
     "serves": 6,
     "ing": [
       [
-        "salmon-fillet",
+        "salmon",
         650
       ],
       [
@@ -214,7 +214,7 @@ KITCHEN.add(
         1
       ],
       [
-        "egg",
+        "eggs",
         "1pc"
       ],
       [
@@ -224,8 +224,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat oven to 200 °C. Wilt {spinach}, cool and squeeze very dry; mix with {cream-cheese}, chopped {dill}, lemon zest and {black-pepper}.",
-      "Roll {puff-pastry} on a lined tray. Place half the spinach mixture in the centre, set {salmon-fillet} on top and spread with remaining mixture.",
-      "Fold pastry over the salmon and seal the edges. Turn seam-side down and score the top lightly. Brush with beaten {egg}.",
+      "Roll {puff-pastry} on a lined tray. Place half the spinach mixture in the centre, set {salmon} on top and spread with remaining mixture.",
+      "Fold pastry over the salmon and seal the edges. Turn seam-side down and score the top lightly. Brush with beaten {eggs}.",
       "Bake 30–35 minutes until deeply golden and the salmon is just cooked. Rest 8 minutes before slicing."
     ]
   },
@@ -250,7 +250,7 @@ KITCHEN.add(
         180
       ],
       [
-        "shallots",
+        "shallot",
         2
       ],
       [
@@ -270,15 +270,15 @@ KITCHEN.add(
         20
       ],
       [
-        "egg",
+        "eggs",
         "1pc"
       ]
     ],
     "steps": [
-      "Finely chop {mushrooms}, {chestnuts} and {shallots}. Cook in a wide skillet until all moisture evaporates and the mixture is concentrated.",
+      "Finely chop {mushrooms}, {chestnuts} and {shallot}. Cook in a wide skillet until all moisture evaporates and the mixture is concentrated.",
       "Add minced {garlic} and {thyme}; cook 1 minute. Wilt in {spinach}, then cool completely and stir in {mustard}.",
       "Lay the mixture down the centre of {puff-pastry}, fold into a tight parcel and seal underneath. Chill 15 minutes.",
-      "Brush with beaten {egg}, score decoratively and bake at 200 °C for 35–40 minutes until crisp and golden. Rest 10 minutes before cutting."
+      "Brush with beaten {eggs}, score decoratively and bake at 200 °C for 35–40 minutes until crisp and golden. Rest 10 minutes before cutting."
     ]
   },
   {
@@ -1544,7 +1544,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "potato",
+        "potatoes",
         650
       ],
       [
@@ -1577,7 +1577,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat the oven to 190°C. Butter a baking dish with {butter}. Slice {potato} thinly and wash and slice {leek}.",
+      "Heat the oven to 190°C. Butter a baking dish with {butter}. Slice {potatoes} thinly and wash and slice {leek}.",
       "Warm {cream}, {milk}, crushed {garlic} and {thyme} in a saucepan; do not boil. Season well.",
       "Layer potato and leek in the dish, pour over the cream mixture and cover with foil. Bake 30 minutes.",
       "Remove foil, top with grated {gruyere} and bake another 20–25 minutes until golden and tender."
@@ -1593,7 +1593,7 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "eggplant",
+        "aubergine",
         400
       ],
       [
@@ -1601,11 +1601,11 @@ KITCHEN.add(
         400
       ],
       [
-        "bell-pepper",
+        "red-pepper",
         2
       ],
       [
-        "tomatoes",
+        "tomato",
         500
       ],
       [
@@ -1630,9 +1630,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cut {eggplant}, {zucchini} and {bell-pepper} into even chunks; chop {onion} and {garlic}.",
+      "Cut {aubergine}, {zucchini} and {red-pepper} into even chunks; chop {onion} and {garlic}.",
       "Brown eggplant in batches in some {olive-oil}; set aside. Sauté zucchini and peppers separately until lightly golden.",
-      "Soften onion and garlic in the remaining oil. Add chopped {tomatoes} and {thyme}; simmer 10 minutes.",
+      "Soften onion and garlic in the remaining oil. Add chopped {tomato} and {thyme}; simmer 10 minutes.",
       "Return all vegetables to the pot and simmer gently 20–25 minutes until tender but distinct. Finish with torn {basil}."
     ]
   },
@@ -1689,7 +1689,7 @@ KITCHEN.add(
     "serves": 6,
     "ing": [
       [
-        "apples",
+        "apple",
         700
       ],
       [
@@ -1710,7 +1710,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Peel, quarter and core {apples}; toss with a little {lemon} juice.",
+      "Peel, quarter and core {apple}; toss with a little {lemon} juice.",
       "Melt {sugar} in an ovenproof skillet until amber; carefully add {butter} and swirl.",
       "Arrange apples tightly in caramel, rounded side down. Cook 8–10 minutes until they begin to soften.",
       "Cover with {puff-pastry}, tuck edges in and bake at 200 °C for 25–30 minutes. Rest 5 minutes, then carefully invert onto a plate."
@@ -1772,17 +1772,14 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "chicken-thighs",
+        "chicken-thigh",
         450
       ],
       [
         "red-pepper",
-        1
+        2
       ],
-      [
-        "green-pepper",
-        1
-      ],
+      
       [
         "onion",
         1
@@ -1817,7 +1814,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Brown {chicken-thighs} in {olive-oil}; remove and set aside. Cook sliced {onion}, {red-pepper} and {green-pepper} until soft.",
+      "Brown {chicken-thigh} in {olive-oil}; remove and set aside. Cook sliced {onion}, {red-pepper} and {red-pepper} until soft.",
       "Add {garlic}, {paprika} and chopped {tomato}; cook until saucy. Pour in {white-wine} and simmer 2 minutes.",
       "Return chicken, cover and simmer 25–30 minutes until cooked. Add {black-olives}, season with {salt} and serve with rice or bread."
     ]
@@ -1843,7 +1840,7 @@ KITCHEN.add(
         2
       ],
       [
-        "smoked-bacon",
+        "bacon",
         100
       ],
       [
@@ -1863,7 +1860,7 @@ KITCHEN.add(
         20
       ],
       [
-        "stock",
+        "vegetable-stock",
         500
       ],
       [
@@ -1880,8 +1877,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Brown chunks of {pork-shoulder}, {sausages} and {smoked-bacon} in {olive-oil}; set aside.",
-      "Cook diced {carrot} and {onion}; add {garlic}, {tomato-paste}, {white-beans}, {stock} and {thyme}. Return the browned meat.",
+      "Brown chunks of {pork-shoulder}, {sausages} and {bacon} in {olive-oil}; set aside.",
+      "Cook diced {carrot} and {onion}; add {garlic}, {tomato-paste}, {white-beans}, {vegetable-stock} and {thyme}. Return the browned meat.",
       "Cover and bake at 160 °C for 70 minutes until tender. Scatter {breadcrumbs} over the surface and bake uncovered for 15 minutes more."
     ]
   },
@@ -1894,7 +1891,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "veal-shanks",
+        "veal-shank",
         450
       ],
       [
@@ -1914,7 +1911,7 @@ KITCHEN.add(
         150
       ],
       [
-        "stock",
+        "beef-stock",
         700
       ],
       [
@@ -1947,7 +1944,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Simmer {veal-shanks} gently in {stock} with {bay-leaf}, {carrot}, {onion} and {leek} for 60–70 minutes until tender; skim as needed.",
+      "Simmer {veal-shank} gently in {beef-stock} with {bay-leaf}, {carrot}, {onion} and {leek} for 60–70 minutes until tender; skim as needed.",
       "Cook {mushrooms} in a little {butter}. Strain the cooking liquid and reserve the vegetables and veal. Make a roux with remaining {butter} and {flour}, then whisk in the stock to make a smooth sauce.",
       "Stir in {cream} and {lemon-juice}; return the veal and vegetables, season with {salt} and {white-pepper}, and warm gently without boiling."
     ]
@@ -2024,7 +2021,7 @@ KITCHEN.add(
         30
       ],
       [
-        "egg",
+        "eggs",
         1
       ],
       [
@@ -2050,7 +2047,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Butterfly {chicken-breast} and gently flatten. Layer {ham} and {emmental} inside; fold closed and secure with toothpicks if needed. Season with {salt} and {black-pepper}.",
-      "Coat in {flour}, beaten {egg} and {breadcrumbs}. Pan-fry in {oil} and {butter} until golden on both sides.",
+      "Coat in {flour}, beaten {eggs} and {breadcrumbs}. Pan-fry in {oil} and {butter} until golden on both sides.",
       "Transfer to a 180 °C oven for 12–15 minutes until the chicken is fully cooked and the cheese melts. Rest before serving."
     ]
   },
@@ -2067,7 +2064,7 @@ KITCHEN.add(
         450
       ],
       [
-        "smoked-bacon",
+        "bacon",
         120
       ],
       [
@@ -2092,7 +2089,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Boil {potatoes} until just tender, drain and slice. Fry diced {smoked-bacon} with sliced {onion} until golden.",
+      "Boil {potatoes} until just tender, drain and slice. Fry diced {bacon} with sliced {onion} until golden.",
       "Layer potatoes and bacon mixture in a small baking dish; pour over {white-wine} and {cream}, season with {black-pepper}.",
       "Top with slices of {gruyere} rind-side up and bake at 200 °C for 20–25 minutes until bubbling and golden."
     ]
@@ -2169,7 +2166,7 @@ KITCHEN.add(
         50
       ],
       [
-        "egg",
+        "eggs",
         1
       ],
       [
@@ -2187,7 +2184,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Roll {puff-pastry} onto a tray and score a border. Slice {zucchini} thinly and toss with {olive-oil} and {thyme}.",
-      "Mix {goat-cheese}, {cream}, {egg} and {black-pepper}; spread within the pastry border. Arrange zucchini slices over the top.",
+      "Mix {goat-cheese}, {cream}, {eggs} and {black-pepper}; spread within the pastry border. Arrange zucchini slices over the top.",
       "Bake at 200 °C for 25–30 minutes until puffed and golden, with tender zucchini."
     ]
   },
@@ -2302,7 +2299,7 @@ KITCHEN.add(
         200
       ],
       [
-        "small-pasta",
+        "pasta",
         100
       ],
       [
@@ -2332,7 +2329,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Bring {vegetable-stock} to a simmer; add diced {carrot} and {potatoes}. Cook 10 minutes, then add chopped {green-beans}, {zucchini} and {white-beans}.",
-      "Simmer until vegetables are tender, add {small-pasta} and cook according to its timing. Season with {salt}.",
+      "Simmer until vegetables are tender, add {pasta} and cook according to its timing. Season with {salt}.",
       "Pound {basil} and {garlic} with {olive-oil} and grated {parmesan} into a rough pistou. Stir a spoon into each bowl just before serving."
     ]
   },
@@ -2576,7 +2573,7 @@ KITCHEN.add(
         350
       ],
       [
-        "smoked-bacon",
+        "bacon",
         120
       ],
       [

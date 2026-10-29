@@ -74,7 +74,7 @@ KITCHEN.add(
         3
       ],
       [
-        "coriander-ground",
+        "ground-coriander",
         3
       ],
       [
@@ -105,7 +105,7 @@ KITCHEN.add(
     "steps": [
       "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
       "Add {vinegar} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Cook beans until soft, mash a portion for body, and stir in toasted walnuts, coriander, garlic and vinegar; finish with a generous handful of cilantro.",
+      "Cook {beans} until soft, mash a portion for body, and stir in toasted walnuts, coriander, garlic and vinegar; finish with a generous handful of cilantro.",
       "Finish with a little {vinegar} if needed, taste for seasoning and serve while the texture is at its best."
     ]
   },
@@ -146,7 +146,7 @@ KITCHEN.add(
         3
       ],
       [
-        "stock",
+        "beef-stock",
         450
       ],
       [
@@ -165,7 +165,7 @@ KITCHEN.add(
     "steps": [
       "Heat {oil} in a heavy pan; soften {garlic}.",
       "Add {lamb} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
+      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
       "Braise lamb gently with white wine, garlic and a generous mix of fresh herbs; add chilli late and reduce the cooking liquor to a fragrant, light sauce.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -179,7 +179,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "beef-stew-meat",
+        "beef-chuck",
         450
       ],
       [
@@ -203,11 +203,11 @@ KITCHEN.add(
         1
       ],
       [
-        "stock",
+        "beef-stock",
         450
       ],
       [
-        "coriander-ground",
+        "ground-coriander",
         3
       ],
       [
@@ -225,7 +225,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat {oil} in a soup pot and soften {garlic} without browning.",
-      "Add {stock} and {beef-stew-meat}, simmering gently until the main ingredient is tender.",
+      "Add {beef-stock} and {beef-chuck}, simmering gently until the main ingredient is tender.",
       "Simmer beef until tender, add rice and tomato, then stir in finely ground walnuts and crushed garlic for a thick, aromatic broth with a little heat.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -303,7 +303,7 @@ KITCHEN.add(
         3
       ],
       [
-        "coriander-ground",
+        "ground-coriander",
         3
       ],
       [

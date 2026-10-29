@@ -947,11 +947,11 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "bell-pepper",
+        "red-pepper",
         600
       ],
       [
-        "tomatoes",
+        "tomato",
         500
       ],
       [
@@ -980,7 +980,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Slice the {bell-pepper}, {onion} and {smoked-sausage}; roughly chop the {tomatoes}.",
+      "Slice the {red-pepper}, {onion} and {smoked-sausage}; roughly chop the {tomato}.",
       "Warm the {olive-oil} and cook the onion until soft. Add sausage and {paprika}, stirring briefly so the spice does not burn.",
       "Add peppers, tomatoes and {salt}. Cover and simmer 20 minutes until saucy but the peppers still hold their shape.",
       "For a richer finish, crack in the {eggs}, cover and cook until set, or serve the stew with crusty bread."
@@ -1007,7 +1007,7 @@ KITCHEN.add(
         5
       ],
       [
-        "stock",
+        "chicken-stock",
         180
       ],
       [
@@ -1037,7 +1037,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Whisk {flour}, half the {eggs}, {milk} and a pinch of {salt}; cook thin crêpes in a lightly oiled pan.",
-      "Cook the chopped {onion} in a little {oil}, add diced {chicken-thigh} and {paprika}, then pour in {stock}; simmer until cooked and finely shred the chicken.",
+      "Cook the chopped {onion} in a little {oil}, add diced {chicken-thigh} and {paprika}, then pour in {chicken-stock}; simmer until cooked and finely shred the chicken.",
       "Fill the crêpes with chicken and fold. Stir some pan sauce into {sour-cream}, spoon over the crêpes and bake at 190 °C for 12 minutes."
     ]
   },
@@ -1070,7 +1070,7 @@ KITCHEN.add(
         2
       ],
       [
-        "stock",
+        "vegetable-stock",
         300
       ],
       [
@@ -1088,7 +1088,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Brown cubes of {pork-shoulder} in {oil}, then add chopped {onion} and cook until softened.",
-      "Stir in {paprika} and {caraway}; add drained {sauerkraut} and {stock}. Cover and simmer 55–60 minutes until tender.",
+      "Stir in {paprika} and {caraway}; add drained {sauerkraut} and {vegetable-stock}. Cover and simmer 55–60 minutes until tender.",
       "Season with {salt} and serve with a generous spoon of {sour-cream}."
     ]
   },
@@ -1584,7 +1584,7 @@ KITCHEN.add(
         100
       ],
       [
-        "stock",
+        "vegetable-stock",
         450
       ],
       [
@@ -1607,7 +1607,7 @@ KITCHEN.add(
     "steps": [
       "Heat {oil} in a heavy pan; soften {onion}.",
       "Add {pork} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
+      "Add {vegetable-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
       "Brown pork slices, soften onion and mushrooms with paprika, add stock and simmer until tender; stir in sour cream off the boil and thicken lightly with flour.",
       "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
@@ -1637,7 +1637,7 @@ KITCHEN.add(
         100
       ],
       [
-        "smoked-bacon",
+        "bacon",
         120
       ],
       [

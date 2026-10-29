@@ -18,7 +18,7 @@ KITCHEN.add(
         160
       ],
       [
-        "stock",
+        "vegetable-stock",
         300
       ],
       [
@@ -52,7 +52,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Cut the {potatoes} into thick fries, rinse and dry thoroughly. Fry in hot {oil} until crisp and golden; drain and season with {salt}.",
-      "For the gravy, soften finely diced {onion} in {butter}. Stir in {flour} for 1 minute, then whisk in {stock} and {worcestershire-sauce}. Simmer until glossy and season with {black-pepper}.",
+      "For the gravy, soften finely diced {onion} in {butter}. Stir in {flour} for 1 minute, then whisk in {vegetable-stock} and {worcestershire-sauce}. Simmer until glossy and season with {black-pepper}.",
       "Place hot fries in a serving dish, scatter over {cheese}, and pour over the hot gravy just before serving."
     ]
   },
@@ -101,7 +101,7 @@ KITCHEN.add(
         1
       ],
       [
-        "stock",
+        "beef-stock",
         100
       ],
       [
@@ -115,7 +115,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Boil the {potatoes} until tender and mash. Cook diced {onion} and crushed {garlic} in a pan, add {pork-mince} and {beef-mince}, and brown thoroughly.",
-      "Stir in {cinnamon}, {nutmeg}, {ground-cloves}, {salt} and {stock}. Simmer until almost dry; fold through the mashed potato and cool.",
+      "Stir in {cinnamon}, {nutmeg}, {ground-cloves}, {salt} and {beef-stock}. Simmer until almost dry; fold through the mashed potato and cool.",
       "Line a pie dish with {shortcrust-pastry}, add the filling, top with pastry and seal. Brush with beaten {eggs} and bake at 200 °C for 35–40 minutes until golden."
     ]
   },
@@ -230,7 +230,7 @@ KITCHEN.add(
         250
       ],
       [
-        "smoked-bacon",
+        "bacon",
         180
       ],
       [
@@ -250,7 +250,7 @@ KITCHEN.add(
         "1pc"
       ],
       [
-        "stock",
+        "vegetable-stock",
         1200
       ],
       [
@@ -267,8 +267,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Rinse the {yellow-split-peas}. Dice the {carrot}, {celery}, {onion} and {smoked-bacon}.",
-      "Combine all ingredients with {stock}, {bay-leaf} and {thyme} in a pot. Bring to a boil, skim, then simmer gently for 60 minutes, stirring occasionally.",
+      "Rinse the {yellow-split-peas}. Dice the {carrot}, {celery}, {onion} and {bacon}.",
+      "Combine all ingredients with {vegetable-stock}, {bay-leaf} and {thyme} in a pot. Bring to a boil, skim, then simmer gently for 60 minutes, stirring occasionally.",
       "Remove the bay leaf; mash some of the peas against the side of the pot to thicken. Season with {salt} and {black-pepper}, adding hot water if it becomes too thick."
     ]
   },
@@ -281,7 +281,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "salmon-fillet",
+        "salmon",
         350
       ],
       [
@@ -311,7 +311,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat the oven to 200 °C. Whisk {maple-syrup}, {dijon-mustard} and {soy-sauce} together.",
-      "Place the {salmon-fillet} on a lined tray, season with {salt} and {black-pepper}, and brush with the glaze. Roast for 12–15 minutes, brushing once more halfway through.",
+      "Place the {salmon} on a lined tray, season with {salt} and {black-pepper}, and brush with the glaze. Roast for 12–15 minutes, brushing once more halfway through.",
       "Serve with wedges of {lemon} and spoon any tray glaze over the fish."
     ]
   },
@@ -371,7 +371,7 @@ KITCHEN.add(
         400
       ],
       [
-        "smoked-bacon",
+        "bacon",
         100
       ],
       [
@@ -404,7 +404,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Dice the {smoked-bacon} and {onion}; cook in an ovenproof pot until the bacon renders and the onion softens.",
+      "Dice the {bacon} and {onion}; cook in an ovenproof pot until the bacon renders and the onion softens.",
       "Stir in drained {white-beans}, {maple-syrup}, {tomato-paste}, {mustard}, {vinegar}, {black-pepper} and {water}.",
       "Cover and bake at 170 °C for 35 minutes, then uncover for 10 minutes until the sauce is thick and glossy."
     ]
