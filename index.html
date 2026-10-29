@@ -309,8 +309,8 @@ ol li,ul.ing li{-webkit-tap-highlight-color:transparent}ol li{cursor:pointer}ol 
 /* ---- readability + adaptability pass ---- */
 :root{--pink:#ffd2c7;--acct:#c0301b;--hero:#1f7d50}
 /* one speed rule for every spinner (pot, pizza, jar, home wheel): one turn takes --rev, one bounce --bob */
-:root{--rev:3.6s;--bob:1.6s} /* idle: slow and calm */
-.splash.spinning,.reel.on,.pzreel.on,.fmreel{--rev:2.4s;--bob:1.1s} /* while a spin is running: quick, as before */
+:root{--rev:7s;--bob:3s} /* idle: slow and calm */
+.splash.spinning,.reel.on,.pzreel.on,.fmreel{--rev:1.6s;--bob:.8s} /* while a spin is running: fast */
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]){--acc:#e0432a;--acct:#ff8f74;--pink:#5a2a22;--mint:#1f3a2c}}
 :root[data-theme=dark]{--acc:#e0432a;--acct:#ff8f74;--pink:#5a2a22;--mint:#1f3a2c}
 .buy2{background:var(--pink);color:var(--ink)}.ok2{background:var(--mint);color:var(--ink)}
@@ -408,7 +408,7 @@ a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
 .cl-stats{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 12px}.cl-stats div{flex:1;min-width:84px;text-align:center;border:var(--bw) solid var(--ink);border-radius:16px;padding:10px 6px;background:var(--soft)}.cl-stats b{display:block;font:800 28px/1 Bricolage,sans-serif}.cl-stats span{font-size:12px;color:var(--mute)}
 .cl-days{display:flex;gap:6px;margin:0 0 12px}.cl-days i{flex:1;height:26px;border-radius:8px;border:2px solid var(--ink);background:var(--card);display:flex;align-items:center;justify-content:center;font:700 11px "DM Sans",sans-serif;font-style:normal;color:var(--mute)}.cl-days i.on{background:var(--acc2);color:#fff}
 .cl-list{list-style:none;margin:0;padding:0;display:grid;gap:6px}.cl-list li{display:flex;justify-content:space-between;gap:10px;font-size:14px}.cl-list li span{color:var(--mute);white-space:nowrap}
-.kbd{display:none;text-align:center;font-size:12px;color:var(--mute);margin:6px 0 0}.kbd kbd{font:700 11px "DM Sans",sans-serif;border:1.5px solid var(--ink);border-radius:6px;padding:1px 6px;background:var(--card)}
+.kbd{display:none;text-align:center;font-size:12px;color:var(--mute);margin:6px 0 0}.kbd kbd,.shakehint kbd{font:700 11px "DM Sans",sans-serif;border:1.5px solid var(--ink);border-radius:6px;padding:1px 6px;background:var(--card)}
 @media (hover:hover) and (min-width:760px){.kbd{display:block}}
 @media print{
  body{background:#fff!important;color:#000!important}
@@ -463,7 +463,7 @@ html{scrollbar-gutter:stable}html:has(.splash:not(.out)){overflow:hidden}
 .splash.ready .sp-go{opacity:1;pointer-events:auto;transform:none}.splash.ready .sp-go:hover{transform:translateY(-2px)}.splash.ready .sp-go:active{transform:translateY(1px)}
 .sp-go:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 .sp-wheel{position:relative;width:var(--D);aspect-ratio:1;margin-top:18px;transition:transform .25s cubic-bezier(.3,.7,.2,1);animation:spPop .4s cubic-bezier(.2,.9,.3,1.15) backwards}
-.sp-pizza{will-change:transform;display:block;width:100%;height:100%;padding:0;border:0;border-radius:50%;background:none;cursor:default;animation:spLoad 1.2s cubic-bezier(.2,.7,.2,1) both;-webkit-tap-highlight-color:transparent}
+.sp-pizza{will-change:transform;display:block;width:100%;height:100%;padding:0;border:0;border-radius:50%;background:none;cursor:default;animation:spLoad 2.4s cubic-bezier(.2,.7,.2,1) both;-webkit-tap-highlight-color:transparent}
 .sp-pizza svg{display:block;width:102%;height:102%;margin:-1%}
 .sp-pizza:focus-visible{outline:4px solid var(--acc);outline-offset:6px}
 .splash.ready .sp-pizza:not(:disabled){cursor:pointer}
@@ -917,6 +917,23 @@ html{background:var(--bg);touch-action:manipulation}
 ul.ing li>span:first-child{min-width:0;overflow-wrap:anywhere}
 ul.ing li .q{white-space:normal;text-align:right;flex:0 1 auto;max-width:52%;min-width:0;overflow-wrap:anywhere}
 .shakehint{flex:0 0 100%;order:-1;margin:-2px 0 2px;text-align:center;font:600 12px "DM Sans",system-ui,sans-serif;color:var(--mute)}
+/* v104: desktop, recipe that came from the start wheel: only the recipe, as a centred card with a close button (like the phone) */
+html.homeres{overflow:hidden}
+@media (min-width:960px){
+ html.homeres .tab.resmode:not([hidden]){position:fixed;inset:0;z-index:90;display:flex;padding:28px;overflow:auto;background:rgba(20,12,8,.52);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);animation:hrIn .22s ease}
+ html.homeres .tab.resmode>.hl,html.homeres .tab.resmode>.hl+p,html.homeres .tab.resmode>.pzseg,html.homeres .tab.resmode .side{display:none!important}
+ html.homeres .tab.resmode>.cols:not([hidden]){display:block;width:min(720px,100%);margin:auto}
+ html.homeres .tab.resmode .hero .heroback{display:grid!important}
+ html.homeres .tab.resmode .hero:has(.heroback) .ht,html.homeres .tab.resmode .hero:has(.heroback)>h2{padding-right:44px}
+ html.homeres .tab.resmode .card{box-shadow:0 18px 50px rgba(0,0,0,.35),var(--sh,3px 3px 0 var(--ink))}
+ html.homeres .tab.resmode .ph,html.homeres .tab.resmode .fav{display:none}
+ @keyframes hrIn{from{opacity:0}to{opacity:1}}
+ @keyframes hrCard{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+ html.homeres .tab.resmode .card{animation:hrCard .3s cubic-bezier(.2,.9,.3,1.1)}
+ .shakehint.kb{display:block}
+}
+.shakehint.kb{display:none}
+
 /* craft tool panels: the option chips and their labels sit centred, like the spin button under them */
 [data-ctl] .tg{justify-content:center}[data-ctl] .lab{justify-content:center}
 </style>
@@ -2148,7 +2165,7 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
   document.addEventListener("keydown",e=>{
     if(e.metaKey||e.ctrlKey||e.altKey||e.defaultPrevented)return;
     const el=e.target;if(el&&el.closest&&el.closest("input,textarea,select,button,a,[contenteditable],[role=listbox]"))return;
-    if(document.querySelector(".cookov")||(window.__home&&window.__home.up()))return;
+    if(document.querySelector(".cookov")||(window.__home&&window.__home.up())||document.documentElement.classList.contains("homeres"))return;
     const k=e.key.toLowerCase(),tabs=["cook","craft","kit"];
     if(k>="1"&&k<="3"){setTab(tabs[+k-1]);return}
     if(tab==="cook"){if(k==="s"){const b=$("spin");if(b&&!b.disabled)b.click()}else if(k==="w"){const b=$("remix");if(b&&!b.disabled)b.click()}}
@@ -2193,7 +2210,7 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
     let cyc=null,rot=null,ci=-1,landed=false,spinLast=0;
     const orb=null; /* no flying toppings on the start screen */
     const nA=()=>overlays.length+1,showArt=i=>{ci=i;if(i===0&&window.__pizzaSVG)pz.innerHTML=__pizzaSVG(false);pz.style.visibility=i===0?"visible":"hidden";orb&&orb.classList.toggle("off",i!==0);overlays.forEach((a,k)=>a.classList.toggle("on",k+1===i))};
-    const cycStart=ms=>{if(!overlays.length||rm)return;clearInterval(cyc);ci=-1;const step=()=>showArt(window.__rndArt?__rndArt(nA(),ci):(ci+1)%nA());step();cyc=setInterval(step,ms||900)}; // random start, random swaps, never the same art twice in a row
+    const cycStart=ms=>{if(!overlays.length||rm)return;clearInterval(cyc);ci=-1;const step=()=>showArt(window.__rndArt?__rndArt(nA(),ci):(ci+1)%nA());step();cyc=setInterval(step,ms||1400)}; // random start, random swaps, never the same art twice in a row
     const cycStop=()=>{clearInterval(cyc);cyc=null;if(overlays.length&&!rm)showArt(window.__rndArt?__rndArt(nA(),ci):0);else{pz.style.visibility="";overlays.forEach(a=>a.classList.remove("on"))}}; // it finishes on a random spinner, every time
     (window.__spinHooks=window.__spinHooks||[]).push(()=>{if(landed||!sp.classList.contains("spinning")||!overlays.length||rm)return;const n=performance.now();if(n-spinLast>=(window.__artStep||620)){spinLast=n;showArt(window.__rndArt?__rndArt(nA(),ci):0)}});
     cycStart(); // the loading wheel cycles through the same spinners as Cook, then settles on a random one
@@ -2202,7 +2219,8 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
     /* the start wheel mixes the app's spinners: add a kind here (e.g. burger) and it joins the roulette */
     const KINDS=[{w:4,go:i=>{setTab("cook");run("spin",true,i)}},{w:1,art:"wedge",go:i=>{setTab("pizza");pzRun("spin",i)}}];
     const pick=()=>{let r=Math.random()*KINDS.reduce((t,k)=>t+k.w,0);return KINDS.find(k=>(r-=k.w)<0)||KINDS[0]};
-    const H=window.__home={from:false,
+    let _from=false;
+    const H=window.__home={
       up:()=>sp.isConnected&&ready&&!sp.classList.contains("out"),
       hide(){sp.classList.add("out");sp.inert=true;go.tabIndex=-1},
       show(now){busy=false;H.roll=false;sp.classList.remove("spinning");cycStop();sp.inert=false;if(now)sp.classList.add("nofade");sp.classList.remove("out","ready");hint.classList.remove("tick");hint.style.animation="";hintHtml=mkHint();hint.innerHTML=hintHtml;void sp.offsetWidth;sp.classList.add("ready");go.tabIndex=0;scrollTo({top:0});if(now)requestAnimationFrame(()=>requestAnimationFrame(()=>sp.classList.remove("nofade")))},
@@ -2222,6 +2240,7 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
           setTimeout(fire,650)};
         mrSpinNames(hint,names(),land); // same name ticker as the Cook spinner
       }};
+    Object.defineProperty(H,"from",{configurable:true,enumerable:true,get:()=>_from,set:v=>{_from=!!v;document.documentElement.classList.toggle("homeres",_from)}}); // desktop: a recipe from the wheel shows alone, as a centred card
     const makeReady=()=>{
       if(ready||!sp.isConnected)return;ready=true;cycStop();
       const txt="Tap anywhere for a random recipe";
@@ -2236,13 +2255,25 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
       if(t.matches("#again,.pzagain")){if(H.again()){e.stopImmediatePropagation();e.preventDefault()}}else H.roll=false},true); // using Spin or Remix yourself switches this off
     sp.addEventListener("click",e=>{if(e.target.closest&&e.target.closest("#spgo"))return;H.spin()}); // tap anywhere
     document.addEventListener("keydown",e=>{if(!H.up()||e.metaKey||e.ctrlKey||e.altKey)return;if(e.target.closest&&e.target.closest("#spgo"))return;const k=e.key.toLowerCase();if(k==="enter"||k===" "||k==="s"){e.preventDefault();H.spin()}});
+    document.addEventListener("keydown",e=>{ // recipe card from the start wheel: S rolls the wheel again, Esc closes
+      if(!document.documentElement.classList.contains("homeres")||e.metaKey||e.ctrlKey||e.altKey||e.defaultPrevented)return;
+      if(document.querySelector(".cookov,.reel.on,.pzreel.on"))return;
+      const t=e.target;if(t&&t.closest&&t.closest("input,textarea,select,[contenteditable]"))return;
+      const k=e.key.toLowerCase();
+      if(k==="s"){e.preventDefault();H.again()}
+      else if(k==="escape"){const x=document.querySelector(".tab.resmode:not([hidden]) .heroback");if(x){e.preventDefault();x.click()}}
+    });
+    document.addEventListener("click",e=>{ // click outside the card closes it
+      if(!document.documentElement.classList.contains("homeres"))return;
+      const t=e.target;if(t&&t.classList&&t.classList.contains("tab")&&t.classList.contains("resmode")){const x=t.querySelector(".heroback");if(x)x.click()}
+    });
     go.onclick=e=>{e.stopPropagation();H.from=false;H.hide()};
     {const L=["Rummage through the kitchen","Raid the pantry","Peek in the fridge","Pull up a stool","Come hungry, stay curious","Stir things up yourself","Sneak into the kitchen","Snoop around the cookbook","Taste the full menu","Open the recipe vault"],gl=document.getElementById("spgl");
       if(gl){let n=Math.floor(Math.random()*L.length);gl.textContent=L[n];gl.style.transition="opacity .25s ease";
         setInterval(()=>{if(!H.up()||sp.classList.contains("spinning")||document.hidden)return;gl.style.opacity="0";setTimeout(()=>{n=(n+1+Math.floor(Math.random()*(L.length-1)))%L.length;gl.textContent=L[n];gl.style.opacity="1"},260)},3800)}}
     const a=!rm&&pz.getAnimations?pz.getAnimations()[0]:null;
     (a?a.finished.catch(()=>{}):Promise.resolve()).then(()=>setTimeout(makeReady,rm?200:120));
-    setTimeout(makeReady,2500); // safety net
+    setTimeout(makeReady,3800); // safety net
   }}
   const grid=document.querySelector("#kz-setup .kgrid");
   if(grid){
@@ -2842,7 +2873,8 @@ const _t=window.__tidyRow;if(!_t)return;
 window.__tidyRow=function(row,icon){
   const r=_t.apply(this,arguments);
   try{const a=row&&row.querySelector(".spinagain");if(a){row.querySelectorAll(".shakehint").forEach(x=>x.remove());
-    if("DeviceMotionEvent" in window&&matchMedia("(hover:none)").matches&&JSON.parse(localStorage.getItem("mr-shake")||"null")===1){const p=document.createElement("p");p.className="shakehint";p.textContent="Or shake your phone";a.after(p)}}}catch(e){}
+    if("DeviceMotionEvent" in window&&matchMedia("(hover:none)").matches&&JSON.parse(localStorage.getItem("mr-shake")||"null")===1){const p=document.createElement("p");p.className="shakehint";p.textContent="Or shake your phone";a.after(p)}
+    if(document.documentElement.classList.contains("homeres")&&matchMedia("(hover:hover)").matches){const p=document.createElement("p");p.className="shakehint kb";p.innerHTML="Press <kbd>S</kbd> for another, <kbd>Esc</kbd> to close";a.after(p)}}}catch(e){}
   try{const a=row&&row.querySelector(".spinagain"),c=row&&row.closest(".card");
     if(a&&c&&c.querySelector(".meta use[href='#i-wand']"))a.innerHTML=I("wand")+"Whisk again"}catch(e){console.error(e)}
   return r;
