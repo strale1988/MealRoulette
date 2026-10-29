@@ -598,6 +598,9 @@ footer{margin-top:28px;padding-top:12px}
 @media (max-width:959px){
  #tab-pizza.resmode>.hl,#tab-pizza.resmode>.hl+p,#tab-pizza.resmode>.pzseg,#tab-pizza.resmode #pz-build .side{display:none}
  #tab-pizza:not(.resmode) #pzout{display:none}
+ .crafttab.resmode>.hl,.crafttab.resmode>.hl+p,.crafttab.resmode .side{display:none}
+ .crafttab:not(.resmode) .heroback{display:none}
+ .crafttab:not(.resmode) .hero:has(.heroback)>h2{padding-right:0}
  #tab-ferm.resmode>.hl,#tab-ferm.resmode>.hl+p,#tab-ferm.resmode .side{display:none}
  #tab-ferm:not(.resmode) .heroback{display:none}
  #tab-ferm:not(.resmode) .hero:has(.heroback)>h2{padding-right:0}
@@ -2236,7 +2239,7 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
     const KINDS=[...["Main","Breakfast","Snack","Dessert"].map(m=>({w:1,go:i=>{window.__plainRoll(m);setTab("cook");run("spin",true,i)}})),{w:1,art:"wedge",go:i=>{setTab("pizza");pzRun("spin",i)}}];
     /* the Craft meals and treats are on the wheel too (burgers, pasta, noodles, soups...): each opens its own tool and spins a random build */
     const CRAFTK=["burger","pasta","noodle","soup","salad","sandwich","dumpling","eggs","grain","bake","frozen"];
-    const kinds=()=>KINDS.concat(window.__spinCraft?CRAFTK.filter(id=>window.__craftHas(id)).map(id=>({w:1,go:i=>{window.__home.from=false;setTab(id);window.__spinCraft(id,i)}})):[]);
+    const kinds=()=>KINDS.concat(window.__spinCraft?CRAFTK.filter(id=>window.__craftHas(id)).map(id=>({w:1,go:i=>{setTab(id);window.__spinCraft(id,i)}})):[]);
     const pick=()=>{const KS=kinds();let r=Math.random()*KS.reduce((t,k)=>t+k.w,0);return KS.find(k=>(r-=k.w)<0)||KS[0]};
     let _from=false;
     const H=window.__home={
@@ -2245,7 +2248,7 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
       show(now){busy=false;H.roll=false;sp.classList.remove("spinning");cycStop();sp.inert=false;if(now)sp.classList.add("nofade");sp.classList.remove("out","ready");hint.classList.remove("tick");hint.style.animation="";hintHtml=mkHint();hint.innerHTML=hintHtml;void sp.offsetWidth;sp.classList.add("ready");go.tabIndex=0;scrollTo({top:0});if(now)requestAnimationFrame(()=>requestAnimationFrame(()=>sp.classList.remove("nofade")))},
       open(){ // the logo in the top left brings you back to this screen
         if(!sp.isConnected||!ready||document.querySelector(".cookov"))return false;
-        H.from=false;H.show(true);try{window.__leaveCook&&window.__leaveCook();window.__leavePizza&&window.__leavePizza();window.__leaveFerm&&window.__leaveFerm();setTab("cook")}catch(e){console.error(e)}return true},
+        H.from=false;H.show(true);try{window.__leaveCook&&window.__leaveCook();window.__leavePizza&&window.__leavePizza();window.__leaveFerm&&window.__leaveFerm();window.__leaveCraft&&window.__leaveCraft();setTab("cook")}catch(e){console.error(e)}return true},
       spin(){
         if(busy||!H.up())return;busy=true;sp.classList.add("spinning");const k=pick();
         const fire=()=>{cycStop();if(rot){const r=rot;rot=null;setTimeout(()=>r.cancel(),500)}H.from=true;H.roll=true;try{k.go(true)}catch(e){console.error(e)}H.hide();busy=false};
@@ -2269,7 +2272,7 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
     };
     /* a recipe that came from the start wheel keeps rolling the wheel: "Again" (or a shake) picks a new kind at random, instead of repeating whichever kind it landed on */
     H.roll=false;
-    H.again=()=>{if(!H.roll||!H.from||busy)return false;try{window.__leaveCook&&__leaveCook();window.__leavePizza&&__leavePizza();H.show(true);setTimeout(()=>H.spin(),60)}catch(e){console.error(e)}return true}; // "Again" runs the start wheel again: random spinners to the end, then it lands on its pick
+    H.again=()=>{if(!H.roll||!H.from||busy)return false;try{window.__leaveCook&&__leaveCook();window.__leavePizza&&__leavePizza();window.__leaveCraft&&__leaveCraft();H.show(true);setTimeout(()=>H.spin(),60)}catch(e){console.error(e)}return true}; // "Again" runs the start wheel again: random spinners to the end, then it lands on its pick
     document.addEventListener("click",e=>{const t=e.target.closest&&e.target.closest("#again,.pzagain,#spin,#remix,#pzspin,#pzremix");if(!t)return;
       if(t.matches("#again,.pzagain")){if(H.again()){e.stopImmediatePropagation();e.preventDefault()}}else{H.roll=false;window.__plain=false}},true); // using Spin or Remix yourself switches this off
     sp.addEventListener("click",e=>{if(e.target.closest&&e.target.closest("#spgo"))return;H.spin()}); // tap anywhere

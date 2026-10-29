@@ -217,7 +217,15 @@ const SPIN={
 const CRAFT_ARTS={burger:BURGER_ART,pasta:PASTA_ART};
 Object.keys(SPIN).forEach(id=>{if(TOOLS[id])CRAFT_ARTS[id]=SCENES[id]?SCENES[id](SPIN[id][3]):emojiArt(SPIN[id][2],SPIN[id][3],SPIN[id][4],SPIN[id][5])});
 window.__craftArts=CRAFT_ARTS;
-window.__spinCraft=(id,instant)=>spinTool(id,instant);window.__craftHas=id=>!!(TOOLS[id]&&TOOLS[id].spin); // the start wheel can land on these
+window.__craftHas=id=>!!(TOOLS[id]&&TOOLS[id].spin);
+/* a build that came from the start wheel opens as a result screen, like a cookbook recipe: only the card, with a close button in its header (the card on desktop, the full screen on a phone) */
+let resOn=null;
+const smallScr=()=>matchMedia("(max-width:959px)").matches,XB='<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+const resLeave=()=>{if(!resOn)return;const r=document.getElementById("tab-"+resOn);resOn=null;if(r)r.classList.remove("resmode");const H=window.__home;if(H&&H.from){if(!H.open())H.from=false}scrollTo({top:0})};
+const resBack=()=>{if(history.state&&history.state.mrres)history.back();else resLeave()};
+addEventListener("popstate",()=>{if(resOn)resLeave()});
+window.__spinCraft=(id,instant)=>{const root=document.getElementById("tab-"+id);if(!root)return;root.classList.add("crafttab","resmode");resOn=id;if(smallScr()){try{history.pushState({mrres:1},"")}catch(e){}}scrollTo({top:0});spinTool(id,instant)};
+window.__leaveCraft=()=>{if(!resOn)return;const r=document.getElementById("tab-"+resOn);resOn=null;if(r)r.classList.remove("resmode");window.__nav&&__nav.drop()};
 const autoSpin=T=>s=>{T.ctl.forEach(c=>{if(c.tg)s[c.k]=c.tg[Math.floor(Math.random()*c.tg.length)][0]})}; // a random option for every choice; amounts and people stay as set
 Object.keys(TOOLS).forEach(id=>{const T=TOOLS[id],sp=SPIN[id];
  if(!T.name){const kc=((window.KITCHEN&&window.KITCHEN.CRAFTS)||[]).find(c=>c.id===id);T.name=kc?kc.name:T.title} // the card name from kitchen.js, used in "Search ... recipes"
@@ -259,6 +267,8 @@ function drawFavs(id){
  el.onclick=e=>{const b=e.target.closest("button[data-fi]");if(!b)return;const x=f[+b.dataset.fi];if(!x)return;Object.assign(cfg(id),x.s);save();draw(id);const c=root.querySelector(".card");if(c)c.scrollIntoView({behavior:"smooth",block:"start"})};
 }
 function decorate(id,T,r,root,s){
+ root.classList.add("crafttab");
+ try{const h=root.querySelector("[data-out] .hero");if(h&&!h.querySelector(".heroback")){const b=document.createElement("button");b.type="button";b.className="heroback";b.setAttribute("aria-label","Close");b.title="Close";b.innerHTML=XB;b.onclick=resBack;h.append(b)}}catch(e){console.error(e)}
  const row=root.querySelector("[data-out] .row");if(!row)return;
  const go=row.querySelector("[data-a=start]"),sv=row.querySelector(".pzsave"),sh=row.querySelector("[data-a=share]"),sig=JSON.stringify(s);
  go.onclick=()=>{if(window.__cook)window.__cook({title:r.title,steps:r.steps,list:r.ing})};
