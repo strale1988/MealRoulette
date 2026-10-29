@@ -942,6 +942,10 @@ ul.ing li .q{white-space:normal;text-align:right;flex:0 1 auto;max-width:52%;min
 
 /* craft tool panels: the option chips and their labels sit centred, like the spin button under them */
 [data-ctl] .tg{justify-content:center}[data-ctl] .lab{justify-content:center}
+/* phones stay upright: where the browser allows it the screen is locked to portrait, otherwise a sideways phone just asks to be turned back */
+@media (orientation:landscape) and (max-height:500px) and (pointer:coarse){
+ body::after{content:"Turn your phone upright";position:fixed;inset:0;z-index:99999;display:grid;place-items:center;background:var(--bg);color:var(--ink);font:800 clamp(20px,5vw,30px) Bricolage,"DM Sans",system-ui,sans-serif;text-align:center;padding:24px}
+}
 </style>
 </head>
 <body>
@@ -2920,5 +2924,6 @@ Promise.all(FILES.map(function(f){return load(f)})).then(function(){
 })();
 
 </script>
+<script>try{if(screen.orientation&&screen.orientation.lock)screen.orientation.lock("portrait").catch(function(){})}catch(e){}</script>
 </body>
 </html>
