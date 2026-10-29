@@ -284,24 +284,24 @@ KITCHEN.add(
     "name": "Scottish stovies with potato, onion and leftover roast meat",
     "meal": "big",
     "cuisine": "Scottish",
-    "time": 50,
+    "time": 60,
     "serves": 2,
     "ing": [
       [
         "potatoes",
-        350
+        500
       ],
       [
         "left-beef",
-        350
+        250
       ],
       [
         "onion",
-        "1pc"
+        "2pc"
       ],
       [
         "beef-stock",
-        450
+        200
       ],
       [
         "butter",
@@ -309,7 +309,7 @@ KITCHEN.add(
       ],
       [
         "bay-leaf",
-        2
+        1
       ],
       [
         "salt",
@@ -321,11 +321,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {butter} in a heavy pan; soften {onion}.",
-      "Add {potatoes} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Layer sliced potatoes and onion with shreds of roast meat, add only a little stock and cover to cook slowly until the potatoes collapse at the edges.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Peel {potatoes} and slice 5 mm thick; slice {onion}; shred {left-beef} into small pieces.",
+      "Melt {butter} in a heavy pot with a lid and soften the onion for 8 minutes without browning.",
+      "Layer in half the potatoes, then the beef, {salt}, {black-pepper} and {bay-leaf}, and finish with the remaining potatoes.",
+      "Pour in {beef-stock}, cover tightly and cook on low heat for 40 minutes, shaking the pot now and then rather than stirring, until the potatoes soften and collapse at the edges.",
+      "Uncover for 5 minutes to let the extra liquid cook off, remove the bay leaf and serve."
     ]
   },
   {
@@ -572,24 +572,28 @@ KITCHEN.add(
     "name": "Scottish Haggis-Inspired Mince and Oats",
     "meal": "big",
     "cuisine": "Scottish",
-    "time": 32,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "cheese",
-        100
+        "lamb-mince",
+        500
       ],
       [
-        "mushrooms",
-        150
+        "oats",
+        90
       ],
       [
-        "butter",
-        20
+        "onion",
+        "1pc"
       ],
       [
-        "parsley",
-        10
+        "beef-stock",
+        250
+      ],
+      [
+        "nutmeg",
+        1
       ],
       [
         "black-pepper",
@@ -597,19 +601,27 @@ KITCHEN.add(
       ],
       [
         "salt",
-        3
+        4
       ],
       [
         "potatoes",
-        400
+        500
+      ],
+      [
+        "swede",
+        300
+      ],
+      [
+        "butter",
+        40
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Peel {potatoes} and {swede}, cut into chunks and boil in separate pots of salted water for 20–25 minutes until soft.",
+      "Meanwhile, melt a quarter of the {butter} in a wide pan and soften chopped {onion} for 5 minutes. Add {lamb-mince} and brown for 8 minutes, breaking it up.",
+      "Stir in {oats}, {nutmeg}, {black-pepper} and half of the {salt}, then pour in {beef-stock}. Simmer for 15–20 minutes until thick and moist.",
+      "Drain the potatoes and swede and mash together with the remaining {butter} and {salt}.",
+      "Serve the mince in bowls with the mash on the side."
     ]
   },
   {
@@ -701,46 +713,33 @@ KITCHEN.add(
   {
     "id": "scottish-cranachan-inspired-berry-cream",
     "name": "Scottish Cranachan-Inspired Berry Cream",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Scottish",
-    "time": 53,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "cheese",
-        100
+        "raspberries",
+        300
       ],
       [
-        "mushrooms",
-        150
+        "whipping-cream",
+        300
       ],
       [
-        "butter",
-        20
+        "oats",
+        50
       ],
       [
-        "parsley",
-        10
-      ],
-      [
-        "black-pepper",
-        2
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "potatoes",
-        400
+        "honey",
+        40
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Toast {oats} in a dry frying pan over medium heat for 3–4 minutes, stirring, until golden and nutty. Tip onto a plate to cool.",
+      "Whip {whipping-cream} to soft peaks, then fold in {honey}.",
+      "Lightly crush half of the {raspberries} with a fork.",
+      "Layer cream, crushed raspberries and toasted oats in four glasses, finishing with whole raspberries and a sprinkle of oats. Serve straight away or chill up to 2 hours."
     ]
   },
   {
@@ -832,46 +831,37 @@ KITCHEN.add(
   {
     "id": "scottish-apple-and-cinnamon-bake",
     "name": "Scottish Apple and Cinnamon Bake",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Scottish",
-    "time": 38,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "cheese",
-        100
+        "apple",
+        "4pc"
       ],
       [
-        "mushrooms",
-        150
+        "oats",
+        60
       ],
       [
         "butter",
-        20
+        40
       ],
       [
-        "parsley",
-        10
+        "honey",
+        40
       ],
       [
-        "black-pepper",
-        2
-      ],
-      [
-        "salt",
+        "cinnamon",
         3
-      ],
-      [
-        "potatoes",
-        400
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 180 °C. Core {apple} without cutting through the base and stand them in a baking dish.",
+      "Mix {oats}, softened {butter}, {honey} and {cinnamon} into a paste and pack it into the centre of each apple.",
+      "Bake for 35–40 minutes until the apples are soft and the oat filling is golden.",
+      "Spoon the pan juices over the apples and serve warm."
     ]
   }
 ]

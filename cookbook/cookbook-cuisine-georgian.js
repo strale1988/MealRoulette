@@ -139,15 +139,15 @@ KITCHEN.add(
       ],
       [
         "green-chilli",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "beef-stock",
-        450
+        150
       ],
       [
         "salt",
@@ -163,11 +163,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {garlic}.",
-      "Add {lamb} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Braise lamb gently with white wine, garlic and a generous mix of fresh herbs; add chilli late and reduce the cooking liquor to a fragrant, light sauce.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cut {lamb} into 3 cm chunks and dry them well. Crush {garlic}, chop {parsley}, {mint} and {cilantro}, and slice {green-chilli} thinly.",
+      "Heat {oil} in a heavy pot and brown the lamb in two batches for 5 minutes each, then return it all to the pot with {salt} and {black-pepper}.",
+      "Add the garlic and stir for 1 minute. Pour in {white-wine}, bring to a boil and let it bubble for 5 minutes to cook off the sharpness.",
+      "Add {beef-stock}, cover and simmer gently for 1 hour, until the lamb is tender.",
+      "Stir in the parsley, mint, cilantro and chilli and simmer uncovered for 10 minutes, until the liquid is reduced to a light, bright green sauce. Taste for salt and serve."
     ]
   },
   {
@@ -339,7 +339,7 @@ KITCHEN.add(
     "name": "Chakhokhbili (Georgian chicken and tomato herb stew)",
     "meal": "big",
     "cuisine": "Georgian",
-    "time": 45,
+    "time": 55,
     "serves": 2,
     "ing": [
       [
@@ -348,15 +348,15 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "3pc"
       ],
       [
         "onion",
-        "1pc"
+        "2pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "cilantro",
@@ -368,7 +368,7 @@ KITCHEN.add(
       ],
       [
         "red-chilli",
-        1
+        "1pc"
       ],
       [
         "white-wine",
@@ -388,11 +388,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {chicken-thigh} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {tomato} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Brown chicken in a dry pan, add onion and tomato and simmer until the sauce forms naturally; fold in chopped herbs at the end for a fresh finish.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Season {chicken-thigh} with {salt} and {black-pepper}. Slice {onion}, chop {tomato}, crush {garlic} and chop the chilli and herbs.",
+      "Heat {oil} in a wide pan and brown the chicken for 4–5 minutes per side. Lift it out onto a plate.",
+      "Soften {onion} in the same pan for 8 minutes, add garlic and {red-chilli} for 1 minute, then pour in {white-wine} and let it reduce by half.",
+      "Add {tomato}, return the chicken, cover and simmer for 25 minutes, until the chicken is tender and the tomatoes have melted into a thick sauce.",
+      "Stir in {cilantro} and {parsley} just before serving so they stay fresh and green."
     ]
   },
   {
@@ -563,44 +563,49 @@ KITCHEN.add(
     "name": "Georgian Khachapuri-Inspired Cheese Bread",
     "meal": "big",
     "cuisine": "Georgian",
-    "time": 37,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "eggs",
-        3
+        "flour",
+        300
       ],
       [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
-      ],
-      [
-        "parsley",
-        10
-      ],
-      [
-        "black-pepper",
-        2
+        "baking-powder",
+        6
       ],
       [
         "salt",
         3
+      ],
+      [
+        "greek-yogurt",
+        150
+      ],
+      [
+        "mozzarella",
+        150
+      ],
+      [
+        "feta",
+        100
+      ],
+      [
+        "eggs",
+        "3pc"
+      ],
+      [
+        "butter",
+        20
       ]
     ],
     "steps": [
-      "Warm the {butter} in a heavy pan and soften the {cheese} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {eggs} and {eggs}; stir well so the ingredients are evenly coated.",
-      "Add the {mushrooms} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Heat the oven to 230 °C. Mix {flour}, {baking-powder} and {salt}, add {greek-yogurt} and knead for 5 minutes into a soft dough. Cover and rest for 15 minutes.",
+      "Grate {mozzarella}, crumble {feta} and mix them with one of the {eggs}.",
+      "Divide the dough in two and roll each piece into an oval about 25 cm long. Roll the long edges inward to make a boat shape and pinch the ends closed.",
+      "Fill both boats with the cheese mixture and bake for 15 minutes until the crust is golden and the cheese is melted.",
+      "Make a well in the centre of each, crack in an egg, and bake for 3–4 minutes more until the white is just set and the yolk still runny.",
+      "Drop {butter} onto each, stir the egg and butter into the cheese at the table and tear off the crust to dip."
     ]
   },
   {
@@ -647,44 +652,48 @@ KITCHEN.add(
     "name": "Georgian Eggplant Rolls with Walnut",
     "meal": "big",
     "cuisine": "Georgian",
-    "time": 32,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "cheese",
+        "aubergine",
+        "2pc"
+      ],
+      [
+        "walnuts",
         100
       ],
       [
-        "mushrooms",
-        150
+        "garlic",
+        "2pc"
       ],
       [
-        "butter",
-        20
+        "cilantro",
+        15
       ],
       [
-        "parsley",
-        10
+        "vinegar",
+        15
       ],
       [
-        "black-pepper",
+        "oil",
+        40
+      ],
+      [
+        "paprika",
         2
       ],
       [
         "salt",
         3
-      ],
-      [
-        "potatoes",
-        400
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 220 °C. Slice {aubergine} lengthways into 7 mm slices, sprinkle with half of the {salt} and rest for 15 minutes, then pat dry.",
+      "Brush both sides of the slices with {oil}, lay on trays and bake for 20 minutes, turning once, until soft and golden. Let them cool.",
+      "Blitz {walnuts}, {garlic}, half of the {cilantro}, {vinegar}, {paprika} and the remaining salt with a few tablespoons of warm water into a thick, spreadable paste.",
+      "Spread a spoonful of paste on each aubergine slice, roll it up and place seam-side down on a plate.",
+      "Chop the remaining cilantro and scatter over the rolls. Serve at room temperature."
     ]
   },
   {
@@ -776,46 +785,45 @@ KITCHEN.add(
   {
     "id": "georgian-herbed-cheese-omelette",
     "name": "Georgian Herbed Cheese Omelette",
-    "meal": "big",
+    "meal": "morning,big",
     "cuisine": "Georgian",
-    "time": 53,
+    "time": 25,
     "serves": 4,
     "ing": [
       [
-        "cheese",
-        100
+        "eggs",
+        "8pc"
       ],
       [
-        "mushrooms",
-        150
+        "mozzarella",
+        120
       ],
       [
-        "butter",
-        20
-      ],
-      [
-        "parsley",
+        "cilantro",
         10
       ],
       [
-        "black-pepper",
-        2
+        "onion",
+        "1pc"
+      ],
+      [
+        "butter",
+        30
       ],
       [
         "salt",
-        3
+        2
       ],
       [
-        "potatoes",
-        400
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Finely dice {onion}, chop {cilantro} and tear {mozzarella} into small pieces. Beat {eggs} with {salt} and {black-pepper}.",
+      "Melt half of the {butter} in a large non-stick pan and cook the onion for 6 minutes until soft and translucent. Tip it into the eggs with the cilantro.",
+      "Melt the remaining butter, pour in the egg mixture and cook over medium-low heat for 3–4 minutes, lifting the edges so uncooked egg runs underneath.",
+      "When nearly set, scatter the mozzarella over, cover for 1–2 minutes until it melts, then fold in half and cut into four portions."
     ]
   },
   {
@@ -909,27 +917,35 @@ KITCHEN.add(
     "name": "Georgian Roasted Root Vegetables",
     "meal": "big",
     "cuisine": "Georgian",
-    "time": 38,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "cheese",
-        100
+        "potatoes",
+        400
       ],
       [
-        "mushrooms",
-        150
+        "carrot",
+        250
       ],
       [
-        "butter",
-        20
+        "beetroot",
+        250
       ],
       [
-        "parsley",
-        10
+        "oil",
+        40
       ],
       [
-        "black-pepper",
+        "walnuts",
+        50
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "ground-coriander",
         2
       ],
       [
@@ -937,16 +953,15 @@ KITCHEN.add(
         3
       ],
       [
-        "potatoes",
-        400
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 210 °C. Peel {potatoes}, {carrot} and {beetroot} and cut into 3 cm pieces.",
+      "Toss the vegetables with half of the {oil}, {salt} and {black-pepper} on a large tray and roast for 40 minutes, turning once, until tender and browned at the edges.",
+      "Meanwhile crush {walnuts} and {garlic} to a coarse paste with {ground-coriander} and the remaining oil.",
+      "Toss the hot vegetables with the walnut paste and serve warm."
     ]
   }
 ]

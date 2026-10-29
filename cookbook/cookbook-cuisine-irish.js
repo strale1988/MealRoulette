@@ -173,7 +173,7 @@ KITCHEN.add(
       ],
       [
         "salt",
-        3
+        2
       ],
       [
         "oil",
@@ -181,11 +181,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion}.",
-      "Add {sausages} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {vegetable-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Layer browned sausages, bacon, potatoes and onion in a pot, add stock just to cover and simmer very gently without stirring so the potatoes stay in layers.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Slice {onion}, peel {potatoes} and cut into 1 cm slices, and cut {bacon} into 3 cm pieces.",
+      "Heat {oil} in a heavy pot and brown {sausages} and bacon lightly for 5–6 minutes; they do not need to cook through. Remove and cut the sausages in half.",
+      "Layer the onion, bacon and sausages in the pot, cover with the sliced potatoes and season with {black-pepper}.",
+      "Pour in {vegetable-stock} until it just covers the meat, bring to a bare simmer, cover and cook very gently for 45 minutes without stirring, until the potatoes are tender and the broth is slightly thickened.",
+      "Taste, add {salt} if needed, and sprinkle with chopped {parsley} before serving."
     ]
   },
   {
@@ -450,7 +450,7 @@ KITCHEN.add(
       ],
       [
         "cabbage",
-        200
+        300
       ],
       [
         "potatoes",
@@ -462,7 +462,7 @@ KITCHEN.add(
       ],
       [
         "flour",
-        120
+        25
       ],
       [
         "milk",
@@ -474,11 +474,11 @@ KITCHEN.add(
       ],
       [
         "mustard",
-        15
+        5
       ],
       [
         "salt",
-        3
+        2
       ],
       [
         "black-pepper",
@@ -486,11 +486,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {butter} in a heavy pan and let the aromatics or spices become fragrant without browning.",
-      "Add {bacon} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {milk} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Simmer the bacon until tender and cook cabbage separately in a little of the cooking liquor; make a simple parsley white sauce and serve with boiled potatoes.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Put {bacon} in a pot, cover with cold water and bring to a simmer. Cook gently for 30 minutes, then keep the cooking liquid.",
+      "Peel {potatoes} and boil in salted water for 20 minutes until tender; drain and keep warm.",
+      "Cut {cabbage} into wedges and cook in the bacon liquid for 8–10 minutes until just tender. Lift out and drain.",
+      "Melt {butter} in a small pan, stir in {flour} for 1 minute, then whisk in {milk} gradually. Simmer 5 minutes until thick, then stir in chopped {parsley}, {mustard}, {salt} and {black-pepper}.",
+      "Slice the bacon and serve it with the cabbage and potatoes, with the parsley sauce poured over."
     ]
   },
   {
@@ -605,27 +605,47 @@ KITCHEN.add(
     "name": "Irish Beef and Guinness-Style Stew",
     "meal": "big",
     "cuisine": "Irish",
-    "time": 32,
+    "time": 150,
     "serves": 4,
     "ing": [
       [
-        "cheese",
-        100
+        "beef-chuck",
+        600
       ],
       [
-        "mushrooms",
-        150
+        "onion",
+        "2pc"
       ],
       [
-        "butter",
+        "carrot",
+        200
+      ],
+      [
+        "potatoes",
+        400
+      ],
+      [
+        "beef-stock",
+        400
+      ],
+      [
+        "beer",
+        250
+      ],
+      [
+        "flour",
+        30
+      ],
+      [
+        "oil",
         20
       ],
       [
-        "parsley",
-        10
+        "bay-leaf",
+        2
       ],
       [
-        "black-pepper",
+        "thyme",
         2
       ],
       [
@@ -633,16 +653,16 @@ KITCHEN.add(
         3
       ],
       [
-        "potatoes",
-        400
+        "black-pepper",
+        2
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Cut {beef-chuck} into 3 cm cubes, dry them and toss with {flour}, {salt} and {black-pepper}. Slice {onion}; peel {carrot} and {potatoes} and cut into large chunks.",
+      "Heat {oil} in a heavy casserole and brown the beef in batches, 3–4 minutes per side. Set aside.",
+      "Soften {onion} in the same pot for 5 minutes, then pour in {beer} and scrape up the browned bits. Simmer for 3 minutes.",
+      "Return the beef, add {beef-stock}, {bay-leaf} and {thyme}. Cover and simmer on very low heat for 1 hour 30 minutes, until the beef is nearly tender.",
+      "Add {carrot} and {potatoes} and cook 30 minutes more, until the vegetables are soft and the gravy coats a spoon. Remove the bay leaves and serve."
     ]
   },
   {
@@ -734,46 +754,41 @@ KITCHEN.add(
   {
     "id": "irish-apple-crumble",
     "name": "Irish Apple Crumble",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Irish",
-    "time": 53,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "cheese",
-        100
+        "apple",
+        "4pc"
       ],
       [
-        "mushrooms",
+        "flour",
         150
       ],
       [
         "butter",
-        20
+        100
       ],
       [
-        "parsley",
-        10
+        "sugar",
+        90
       ],
       [
-        "black-pepper",
+        "oats",
+        30
+      ],
+      [
+        "cinnamon",
         2
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "potatoes",
-        400
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 180 °C. Peel, core and slice {apple} and toss with {cinnamon} and half of the {sugar} in a baking dish.",
+      "Rub cold {butter}, cut into cubes, into {flour} with your fingertips until it looks like coarse crumbs.",
+      "Stir in {oats} and the remaining sugar, then scatter the crumble evenly over the apples without pressing it down.",
+      "Bake for 40 minutes until the top is golden and the fruit juices bubble at the edges. Rest 10 minutes before serving."
     ]
   },
   {
@@ -865,46 +880,37 @@ KITCHEN.add(
   {
     "id": "irish-apple-and-cinnamon-bake",
     "name": "Irish Apple and Cinnamon Bake",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Irish",
-    "time": 38,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
+        "apple",
+        "4pc"
       ],
       [
         "butter",
-        20
+        40
       ],
       [
-        "parsley",
-        10
+        "brown-sugar",
+        40
       ],
       [
-        "black-pepper",
-        2
-      ],
-      [
-        "salt",
+        "cinnamon",
         3
       ],
       [
-        "potatoes",
-        400
+        "oats",
+        40
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 190 °C. Core {apple} and cut into thick wedges; lay them in a baking dish.",
+      "Melt {butter} and mix it with {brown-sugar}, {cinnamon} and {oats} until crumbly.",
+      "Spoon the oat mixture over the apples and bake for 30–35 minutes until the apples are soft and the topping is golden and crisp.",
+      "Cool for 5 minutes and serve warm."
     ]
   }
 ]

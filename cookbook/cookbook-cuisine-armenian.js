@@ -187,46 +187,45 @@ KITCHEN.add(
   {
     "id": "armenian-herb-omelette",
     "name": "Armenian Herb Omelette",
-    "meal": "big",
+    "meal": "morning,big",
     "cuisine": "Armenian",
-    "time": 37,
+    "time": 25,
     "serves": 4,
     "ing": [
       [
         "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
+        "8pc"
       ],
       [
         "parsley",
+        15
+      ],
+      [
+        "dill",
         10
       ],
       [
-        "black-pepper",
-        2
+        "spring-onion",
+        "3pc"
+      ],
+      [
+        "butter",
+        30
       ],
       [
         "salt",
-        3
+        2
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a heavy pan and soften the {cheese} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {eggs} and {eggs}; stir well so the ingredients are evenly coated.",
-      "Add the {mushrooms} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Finely chop {parsley}, {dill} and {spring-onion}; you want about two generous handfuls of greens.",
+      "Beat {eggs} with {salt} and {black-pepper}, then stir in the herbs and spring onion.",
+      "Melt {butter} in a 24 cm non-stick pan over medium-low heat and pour in the mixture. Cook for 6–7 minutes, covered, until the edges are set and the top is just firm.",
+      "Slide the omelette onto a plate, flip it back into the pan and cook 2 minutes more until golden. Cut into wedges and serve warm or at room temperature."
     ]
   },
   {
@@ -234,47 +233,68 @@ KITCHEN.add(
     "name": "Lahmajun Flatbreads",
     "meal": "big",
     "cuisine": "Armenian",
-    "time": 44,
+    "time": 90,
     "serves": 4,
     "ing": [
       [
-        "mushrooms",
-        150
+        "flour",
+        300
       ],
       [
-        "butter",
-        20
-      ],
-      [
-        "parsley",
-        10
-      ],
-      [
-        "black-pepper",
-        2
+        "yeast",
+        5
       ],
       [
         "salt",
-        3
+        4
       ],
       [
-        "potatoes",
-        400
+        "oil",
+        15
+      ],
+      [
+        "lamb-mince",
+        250
       ],
       [
         "onion",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "tomato-paste",
+        30
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "parsley",
+        15
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "black-pepper",
         1
       ],
       [
-        "eggs",
-        3
+        "lemon",
+        "1pc"
       ]
     ],
     "steps": [
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {mushrooms} and {potatoes}; stir well so the ingredients are evenly coated.",
-      "Add the {parsley} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Mix {flour}, {yeast}, half of the {salt} and {oil} with about 180 ml warm water. Knead for 8 minutes until smooth, cover and let rise for 45 minutes.",
+      "Meanwhile, finely chop {onion}, {tomato}, {garlic} and {parsley} (keep a little parsley back). Mix them with {lamb-mince}, {tomato-paste}, {paprika}, {black-pepper} and the remaining salt into a loose paste.",
+      "Heat the oven to 250 °C with a baking tray inside. Divide the dough into 4 balls and roll each into a thin oval about 25 cm long.",
+      "Spread a thin layer of topping to the edges of each oval. Bake on the hot tray for 8–10 minutes until the edges are crisp and the meat is cooked.",
+      "Scatter the reserved parsley, squeeze {lemon} over and serve rolled up with extra wedges."
     ]
   },
   {
@@ -282,39 +302,47 @@ KITCHEN.add(
     "name": "Armenian Potato and Herb Salad",
     "meal": "big",
     "cuisine": "Armenian",
-    "time": 51,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "onion",
-        1
+        "potatoes",
+        600
       ],
       [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
+        "spring-onion",
+        "4pc"
       ],
       [
         "parsley",
+        15
+      ],
+      [
+        "dill",
         10
+      ],
+      [
+        "olive-oil",
+        40
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a heavy pan and soften the {eggs} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {onion} and {eggs}; stir well so the ingredients are evenly coated.",
-      "Add the {cheese} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Boil {potatoes} whole in salted water for 20–25 minutes until a knife slides in easily. Drain, peel while still warm and cut into 2 cm chunks.",
+      "Slice {spring-onion} and chop {parsley} and {dill}.",
+      "Whisk {olive-oil} with the juice of {lemon}, {salt} and {black-pepper}.",
+      "Toss the warm potatoes with the dressing so they soak it up, then fold in the herbs and spring onion. Serve warm or cold."
     ]
   },
   {
@@ -322,44 +350,57 @@ KITCHEN.add(
     "name": "Manti with Yogurt Garlic Sauce",
     "meal": "big",
     "cuisine": "Armenian",
-    "time": 58,
+    "time": 80,
     "serves": 4,
     "ing": [
       [
-        "cheese",
-        100
+        "flour",
+        250
       ],
       [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
-      ],
-      [
-        "parsley",
-        10
-      ],
-      [
-        "black-pepper",
-        2
+        "eggs",
+        "1pc"
       ],
       [
         "salt",
-        3
+        4
       ],
       [
-        "potatoes",
-        400
+        "beef-mince",
+        250
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "black-pepper",
+        1
+      ],
+      [
+        "greek-yogurt",
+        250
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "butter",
+        40
+      ],
+      [
+        "paprika",
+        3
       ]
     ],
     "steps": [
-      "Warm the {butter} in a heavy pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir well so the ingredients are evenly coated.",
-      "Add the {butter} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Mix {flour}, {eggs} and half of the {salt} with about 100 ml water and knead for 8 minutes into a firm dough. Cover and rest for 30 minutes.",
+      "Grate {onion} and mix it with {beef-mince}, {black-pepper} and the remaining salt.",
+      "Roll the dough 2 mm thin, cut into 5 cm squares, put a small spoonful of filling on each and pinch the corners together to make little pouches.",
+      "Boil the manti in batches in salted water for 8–10 minutes until they float and the filling is cooked.",
+      "Crush {garlic} into {greek-yogurt}. Melt {butter} with {paprika} until sizzling.",
+      "Serve the manti with the garlic yogurt spooned over and the paprika butter drizzled on top."
     ]
   },
   {
@@ -367,31 +408,31 @@ KITCHEN.add(
     "name": "Armenian Stuffed Peppers",
     "meal": "big",
     "cuisine": "Armenian",
-    "time": 65,
+    "time": 75,
     "serves": 4,
     "ing": [
       [
-        "potatoes",
-        400
+        "red-pepper",
+        "4pc"
+      ],
+      [
+        "beef-mince",
+        250
+      ],
+      [
+        "rice",
+        60
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
-        "eggs",
-        3
+        "canned-tomatoes",
+        200
       ],
       [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
+        "tomato-paste",
         20
       ],
       [
@@ -399,15 +440,24 @@ KITCHEN.add(
         10
       ],
       [
+        "oil",
+        20
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
         "black-pepper",
-        2
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a heavy pan and soften the {onion} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {potatoes} and {potatoes}; stir well so the ingredients are evenly coated.",
-      "Add the {eggs} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Slice the tops off {red-pepper} and scoop out the seeds, keeping the tops as lids.",
+      "Fry chopped {onion} in {oil} for 5 minutes. Cool slightly, then mix with {beef-mince}, {rice}, chopped {parsley}, half of the {salt} and {black-pepper}.",
+      "Fill the peppers about three-quarters full (the rice swells) and put the lids on.",
+      "Stand the peppers snugly in a pot. Stir {canned-tomatoes}, {tomato-paste}, the remaining salt and 100 ml water and pour around them.",
+      "Cover and simmer on low heat for 45–50 minutes until the rice and meat are cooked through. Serve with the sauce."
     ]
   },
   {
@@ -415,83 +465,93 @@ KITCHEN.add(
     "name": "Apricot Chicken with Rice",
     "meal": "big",
     "cuisine": "Armenian",
-    "time": 36,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "eggs",
-        3
+        "chicken-thigh",
+        600
       ],
       [
-        "cheese",
-        100
+        "dried-apricots",
+        80
       ],
       [
-        "mushrooms",
-        150
+        "rice",
+        200
       ],
       [
-        "butter",
-        20
-      ],
-      [
-        "parsley",
-        10
-      ],
-      [
-        "black-pepper",
-        2
-      ]
-    ],
-    "steps": [
-      "Warm the {butter} in a heavy pan and soften the {cheese} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {eggs} and {eggs}; stir well so the ingredients are evenly coated.",
-      "Add the {mushrooms} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "gata-sweet-pastry",
-    "name": "Gata Sweet Pastry",
-    "meal": "big",
-    "cuisine": "Armenian",
-    "time": 43,
-    "serves": 4,
-    "ing": [
-      [
-        "mushrooms",
-        150
+        "onion",
+        "1pc"
       ],
       [
         "butter",
-        20
+        30
       ],
       [
-        "parsley",
-        10
-      ],
-      [
-        "black-pepper",
+        "cinnamon",
         2
+      ],
+      [
+        "chicken-stock",
+        400
       ],
       [
         "salt",
         3
       ],
       [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
+        "black-pepper",
         1
       ]
     ],
     "steps": [
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {mushrooms} and {potatoes}; stir well so the ingredients are evenly coated.",
-      "Add the {parsley} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Season {chicken-thigh} with {salt} and {black-pepper}. Slice {onion} and halve {dried-apricots}.",
+      "Melt {butter} in a wide pan and brown the chicken for 5 minutes per side. Remove.",
+      "Soften the onion in the same pan for 5 minutes, then stir in {rice} and {cinnamon} for 1 minute.",
+      "Pour in {chicken-stock}, add the apricots and nestle the chicken on top. Cover and cook on low heat for 25 minutes until the rice has absorbed the liquid and the chicken is cooked through.",
+      "Rest, covered, for 5 minutes, then fluff the rice and serve."
+    ]
+  },
+  {
+    "id": "gata-sweet-pastry",
+    "name": "Gata Sweet Pastry",
+    "meal": "treat",
+    "cuisine": "Armenian",
+    "time": 70,
+    "serves": 4,
+    "ing": [
+      [
+        "flour",
+        400
+      ],
+      [
+        "butter",
+        200
+      ],
+      [
+        "sugar",
+        120
+      ],
+      [
+        "eggs",
+        "2pc"
+      ],
+      [
+        "greek-yogurt",
+        100
+      ],
+      [
+        "baking-powder",
+        5
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 180 °C. Make the filling by rubbing 50 g of {butter}, 50 g of {flour} and 50 g of {sugar} together into soft crumbs.",
+      "For the dough, melt 100 g of the butter and mix with {greek-yogurt}, one of the {eggs}, 40 g of the sugar and {baking-powder}. Stir in 250 g of the flour to make a soft dough.",
+      "Roll the dough into a 30 cm round, spread the filling over the centre, fold the edges up and over to enclose it, and flatten gently into a 22 cm disc.",
+      "Place on a lined tray, score the top in a lattice or spiral, and brush with the second egg beaten.",
+      "Bake for 30–35 minutes until deep golden. Cool for 15 minutes before cutting into wedges."
     ]
   },
   {
@@ -536,46 +596,41 @@ KITCHEN.add(
   {
     "id": "armenian-herbed-cheese-omelette",
     "name": "Armenian Herbed Cheese Omelette",
-    "meal": "big",
+    "meal": "morning,big",
     "cuisine": "Armenian",
-    "time": 32,
+    "time": 20,
     "serves": 4,
     "ing": [
       [
-        "cheese",
+        "eggs",
+        "8pc"
+      ],
+      [
+        "feta",
         100
       ],
       [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
+        "tomato",
+        "2pc"
       ],
       [
         "parsley",
         10
       ],
       [
+        "butter",
+        30
+      ],
+      [
         "black-pepper",
-        2
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "potatoes",
-        400
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Dice {tomato}, crumble {feta} and chop {parsley}. Beat {eggs} with {black-pepper}; the feta is salty, so no extra salt is needed.",
+      "Melt half of the {butter} in a non-stick pan and soften the tomato for 3 minutes.",
+      "Add the remaining butter, pour in the eggs and cook over medium heat for 3–4 minutes, lifting the edges, until almost set.",
+      "Scatter the feta and parsley over, cover for 1–2 minutes until the feta softens, then fold and cut into four."
     ]
   },
   {
@@ -669,44 +724,55 @@ KITCHEN.add(
     "name": "Armenian Roasted Root Vegetables",
     "meal": "big",
     "cuisine": "Armenian",
-    "time": 53,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "cheese",
-        100
+        "potatoes",
+        400
       ],
       [
-        "mushrooms",
-        150
+        "carrot",
+        250
       ],
       [
-        "butter",
-        20
+        "onion",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "4pc"
+      ],
+      [
+        "olive-oil",
+        40
+      ],
+      [
+        "paprika",
+        3
       ],
       [
         "parsley",
         10
       ],
       [
-        "black-pepper",
-        2
+        "lemon",
+        "1pc"
       ],
       [
         "salt",
         3
       ],
       [
-        "potatoes",
-        400
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 210 °C. Peel {potatoes} and {carrot} and cut into 3 cm pieces; cut {onion} into wedges and leave {garlic} unpeeled.",
+      "Toss everything with {olive-oil}, {paprika}, {salt} and {black-pepper} on a large tray.",
+      "Roast for 40–45 minutes, turning once, until tender and browned at the edges.",
+      "Squeeze the juice of {lemon} over the hot vegetables, scatter chopped {parsley} and serve."
     ]
   },
   {
@@ -800,44 +866,47 @@ KITCHEN.add(
     "name": "Armenian Dill Fish with Potatoes",
     "meal": "big",
     "cuisine": "Armenian",
-    "time": 38,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "cheese",
-        100
+        "white-fish",
+        500
       ],
       [
-        "mushrooms",
-        150
+        "potatoes",
+        500
+      ],
+      [
+        "dill",
+        15
+      ],
+      [
+        "lemon",
+        "1pc"
       ],
       [
         "butter",
-        20
+        30
       ],
       [
-        "parsley",
-        10
-      ],
-      [
-        "black-pepper",
-        2
+        "onion",
+        "1pc"
       ],
       [
         "salt",
         3
       ],
       [
-        "potatoes",
-        400
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 200 °C. Peel {potatoes} and slice 4 mm thick; slice {onion} thinly.",
+      "Layer the potatoes and onion in a buttered dish, dot with half of the {butter}, season with half of the {salt} and cover with foil. Bake for 25 minutes until nearly tender.",
+      "Season {white-fish} with the remaining salt and {black-pepper}, lay it over the potatoes and top with chopped {dill}, slices of {lemon} and the remaining butter.",
+      "Bake uncovered for 12–15 minutes until the fish flakes easily. Serve straight from the dish."
     ]
   }
 ]

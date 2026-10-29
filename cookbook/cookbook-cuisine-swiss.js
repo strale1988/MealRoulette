@@ -15,7 +15,7 @@ KITCHEN.add(
       ],
       [
         "mushrooms",
-        150
+        200
       ],
       [
         "shallot",
@@ -31,11 +31,11 @@ KITCHEN.add(
       ],
       [
         "beef-stock",
-        450
+        100
       ],
       [
         "flour",
-        120
+        15
       ],
       [
         "butter",
@@ -55,11 +55,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {butter} in a heavy pan; soften {shallot}.",
-      "Add {beef-strips} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Sear the veal quickly in batches and set aside; sauté mushrooms and shallot, deglaze with white wine, reduce with stock and cream, then return the veal briefly.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Toss {beef-strips} with {flour}, {salt} and {black-pepper}. Finely chop {shallot} and slice {mushrooms}.",
+      "Melt half of the {butter} in a wide pan over high heat and sear the meat in two batches for 1–2 minutes each, then set aside.",
+      "Add the remaining butter, cook the shallot for 2 minutes, then the mushrooms for 6 minutes until golden.",
+      "Pour in {white-wine} and boil for 3 minutes until reduced by half, then add {beef-stock} and {cream} and simmer for 4 minutes until lightly thickened.",
+      "Return the meat and its juices and warm for 1–2 minutes; do not boil or it toughens. Scatter chopped {parsley} and serve."
     ]
   },
   {
@@ -590,44 +590,48 @@ KITCHEN.add(
     "name": "Swiss Cheese Fondue-Inspired Potatoes",
     "meal": "big",
     "cuisine": "Swiss",
-    "time": 37,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "eggs",
-        3
+        "potatoes",
+        800
       ],
       [
-        "cheese",
+        "swiss-cheese",
+        200
+      ],
+      [
+        "white-wine",
         100
       ],
       [
-        "mushrooms",
-        150
+        "garlic",
+        "1pc"
       ],
       [
-        "butter",
-        20
-      ],
-      [
-        "parsley",
+        "flour",
         10
       ],
       [
-        "black-pepper",
-        2
+        "nutmeg",
+        1
       ],
       [
-        "salt",
-        3
+        "black-pepper",
+        1
+      ],
+      [
+        "butter",
+        15
       ]
     ],
     "steps": [
-      "Warm the {butter} in a heavy pan and soften the {cheese} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {eggs} and {eggs}; stir well so the ingredients are evenly coated.",
-      "Add the {mushrooms} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Boil {potatoes} in their skins in salted water for 20 minutes until tender. Drain, halve and toss with {butter} in a warm serving dish.",
+      "Grate {swiss-cheese} and toss it with {flour}.",
+      "Halve {garlic} and rub it around a saucepan, then discard it. Warm {white-wine} in the pan until steaming but not boiling.",
+      "Add the cheese a handful at a time, stirring in a figure of eight until each addition melts and the sauce is smooth, about 5 minutes.",
+      "Season with {nutmeg} and {black-pepper}, pour over the potatoes and serve at once."
     ]
   },
   {
@@ -674,44 +678,52 @@ KITCHEN.add(
     "name": "Swiss Onion Tart",
     "meal": "big",
     "cuisine": "Swiss",
-    "time": 32,
+    "time": 80,
     "serves": 4,
     "ing": [
       [
-        "cheese",
-        100
+        "shortcrust-pastry",
+        250
       ],
       [
-        "mushrooms",
-        150
+        "onion",
+        "4pc"
       ],
       [
         "butter",
-        20
+        30
       ],
       [
-        "parsley",
-        10
+        "eggs",
+        "2pc"
       ],
       [
-        "black-pepper",
-        2
+        "cream",
+        150
+      ],
+      [
+        "swiss-cheese",
+        60
+      ],
+      [
+        "nutmeg",
+        1
       ],
       [
         "salt",
-        3
+        2
       ],
       [
-        "potatoes",
-        400
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 200 °C. Roll out {shortcrust-pastry}, line a 24 cm tart tin, prick the base and blind-bake with baking paper and weights for 10 minutes.",
+      "Slice {onion} thinly and cook in {butter} over low heat for 20 minutes, stirring often, until soft and golden but not browned.",
+      "Whisk {eggs} with {cream}, {nutmeg}, {salt} and {black-pepper}. Grate {swiss-cheese}.",
+      "Spread the onions over the pastry, pour over the custard and scatter the cheese on top.",
+      "Bake for 30 minutes until just set in the middle and golden. Rest 10 minutes before slicing."
     ]
   },
   {
@@ -803,46 +815,45 @@ KITCHEN.add(
   {
     "id": "swiss-herbed-cheese-omelette",
     "name": "Swiss Herbed Cheese Omelette",
-    "meal": "big",
+    "meal": "morning,big",
     "cuisine": "Swiss",
-    "time": 53,
+    "time": 20,
     "serves": 4,
     "ing": [
       [
-        "cheese",
+        "eggs",
+        "8pc"
+      ],
+      [
+        "cream",
+        40
+      ],
+      [
+        "swiss-cheese",
         100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
       ],
       [
         "parsley",
         10
       ],
       [
-        "black-pepper",
-        2
+        "butter",
+        30
       ],
       [
         "salt",
-        3
+        2
       ],
       [
-        "potatoes",
-        400
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Grate {swiss-cheese} and chop {parsley}. Beat {eggs} with {cream}, {salt} and {black-pepper}.",
+      "Melt a quarter of the {butter} in a non-stick pan over medium heat and pour in a quarter of the eggs.",
+      "Stir the edges inward for 1 minute until nearly set, scatter a quarter of the cheese and parsley over one half and fold.",
+      "Slide onto a plate and repeat three more times with the remaining butter and eggs."
     ]
   },
   {
@@ -936,44 +947,50 @@ KITCHEN.add(
     "name": "Swiss Roasted Root Vegetables",
     "meal": "big",
     "cuisine": "Swiss",
-    "time": 38,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "cheese",
-        100
+        "potatoes",
+        400
       ],
       [
-        "mushrooms",
-        150
+        "carrot",
+        250
       ],
       [
-        "butter",
-        20
+        "parsnip",
+        200
       ],
       [
-        "parsley",
-        10
+        "onion",
+        "1pc"
       ],
       [
-        "black-pepper",
-        2
+        "oil",
+        30
+      ],
+      [
+        "rosemary",
+        3
+      ],
+      [
+        "swiss-cheese",
+        50
       ],
       [
         "salt",
         3
       ],
       [
-        "potatoes",
-        400
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 210 °C. Peel {potatoes}, {carrot}, {parsnip} and {onion} and cut into 3 cm pieces.",
+      "Toss with {oil}, {rosemary}, {salt} and {black-pepper} on a large tray and roast for 40 minutes, turning once, until golden.",
+      "Grate {swiss-cheese} over the vegetables and return to the oven for 5 minutes until melted and bubbling. Serve hot."
     ]
   }
 ]

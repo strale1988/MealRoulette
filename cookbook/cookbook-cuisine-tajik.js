@@ -197,44 +197,52 @@ KITCHEN.add(
     "name": "Tajik Osh Plov",
     "meal": "big",
     "cuisine": "Tajik",
-    "time": 37,
+    "time": 95,
     "serves": 4,
     "ing": [
       [
-        "carrot",
-        2
+        "lamb",
+        400
       ],
       [
         "rice",
-        250
+        300
       ],
       [
-        "potatoes",
-        2
+        "carrot",
+        400
       ],
       [
-        "cumin",
-        3
+        "onion",
+        "2pc"
       ],
       [
         "garlic",
-        2
+        "1pc"
+      ],
+      [
+        "cumin",
+        5
+      ],
+      [
+        "chickpeas",
+        240
       ],
       [
         "oil",
-        20
+        80
       ],
       [
         "salt",
-        3
+        5
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {rice} until fragrant.",
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {carrot} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {potatoes} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Cut {lamb} into 3 cm pieces, slice {onion} into half-moons and cut {carrot} into thick matchsticks. Rinse {rice} until the water runs clear and soak it for 20 minutes.",
+      "Heat {oil} in a heavy pot until shimmering and brown the lamb for 10 minutes. Add the onion and cook for 8 minutes until deep golden.",
+      "Add the carrot, {cumin} and half of the {salt}; cook 8 minutes, then add 300 ml water, cover and simmer for 30 minutes.",
+      "Drain the rice and spread it over the meat without stirring. Scatter {chickpeas} on top, tuck in the whole head of {garlic}, add the remaining salt and hot water to 1.5 cm above the rice.",
+      "Cook uncovered on high heat until the water is absorbed, then cover and steam on the lowest heat for 20 minutes. Mix gently and serve."
     ]
   },
   {
@@ -242,47 +250,47 @@ KITCHEN.add(
     "name": "Tajik Sambusa Hand Pies",
     "meal": "big",
     "cuisine": "Tajik",
-    "time": 44,
+    "time": 85,
     "serves": 4,
     "ing": [
       [
-        "potatoes",
-        2
+        "flour",
+        300
+      ],
+      [
+        "butter",
+        60
+      ],
+      [
+        "salt",
+        5
+      ],
+      [
+        "lamb-mince",
+        300
+      ],
+      [
+        "onion",
+        "2pc"
       ],
       [
         "cumin",
         3
       ],
       [
-        "garlic",
-        2
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
+        "black-pepper",
         1
       ],
       [
-        "carrot",
-        2
+        "eggs",
+        "1pc"
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {cumin} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir well so the ingredients are evenly coated.",
-      "Add the {garlic} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Rub {butter} into {flour} and 2 g of the {salt}, then add about 120 ml cold water and knead into a firm dough. Rest for 30 minutes.",
+      "Finely chop {onion} and mix with {lamb-mince}, {cumin}, {black-pepper} and the remaining salt.",
+      "Heat the oven to 200 °C. Roll the dough 2 mm thin and cut 12 cm rounds. Put a spoonful of filling in the centre, fold three sides up to form a triangle and pinch the seams.",
+      "Place on a lined tray and brush with beaten {eggs}. Bake for 25 minutes until deep golden and the filling is cooked through. Serve hot."
     ]
   },
   {
@@ -329,23 +337,23 @@ KITCHEN.add(
     "name": "Pumpkin Sambusa",
     "meal": "big",
     "cuisine": "Tajik",
-    "time": 58,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "puff-pastry",
+        320
       ],
       [
-        "potatoes",
-        2
+        "pumpkin",
+        400
+      ],
+      [
+        "onion",
+        "1pc"
       ],
       [
         "cumin",
-        3
-      ],
-      [
-        "garlic",
         2
       ],
       [
@@ -357,16 +365,19 @@ KITCHEN.add(
         3
       ],
       [
-        "beef-chuck",
-        450
+        "black-pepper",
+        1
+      ],
+      [
+        "eggs",
+        "1pc"
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {potatoes} until fragrant.",
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {cumin} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Heat the oven to 200 °C. Dice {pumpkin} into 1 cm cubes and finely chop {onion}.",
+      "Cook the onion in {oil} for 4 minutes, add the pumpkin, {cumin}, {salt} and {black-pepper}, cover and cook for 10–12 minutes until soft. Mash lightly and cool.",
+      "Roll out {puff-pastry}, cut into 10 cm squares, put a spoonful of filling on each and fold into triangles, pressing the edges with a fork.",
+      "Brush with beaten {eggs} and bake on a lined tray for 20 minutes until puffed and golden."
     ]
   },
   {
@@ -374,87 +385,107 @@ KITCHEN.add(
     "name": "Tajik Chickpea and Carrot Stew",
     "meal": "big",
     "cuisine": "Tajik",
-    "time": 65,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
+        "chickpeas",
+        480
       ],
       [
         "carrot",
-        2
+        300
       ],
       [
-        "rice",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "potatoes",
-        2
+        "garlic",
+        "3pc"
       ],
       [
         "cumin",
         3
       ],
       [
-        "garlic",
+        "ground-coriander",
         2
       ],
       [
+        "tomato-paste",
+        30
+      ],
+      [
         "oil",
-        20
+        30
+      ],
+      [
+        "vegetable-stock",
+        400
+      ],
+      [
+        "cilantro",
+        15
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {onion} until fragrant.",
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {carrot} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Chop {onion}, slice {carrot} into 1 cm coins, crush {garlic} and drain {chickpeas}.",
+      "Heat {oil} in a pot and cook the onion and carrot for 8 minutes. Add the garlic, {cumin}, {ground-coriander} and {tomato-paste} and stir for 2 minutes.",
+      "Add {chickpeas}, {vegetable-stock} and {salt}, cover and simmer for 20 minutes until the carrots are tender and the sauce is thick.",
+      "Finish with the juice of {lemon} and chopped {cilantro}. Serve hot."
     ]
   },
   {
     "id": "herbed-yogurt-cucumber-salad",
     "name": "Herbed Yogurt Cucumber Salad",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Tajik",
-    "time": 36,
+    "time": 10,
     "serves": 4,
     "ing": [
       [
-        "carrot",
-        2
+        "yogurt",
+        400
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
+        "cucumber",
+        "2pc"
       ],
       [
         "garlic",
-        2
+        "1pc"
       ],
       [
-        "oil",
-        20
+        "dill",
+        15
+      ],
+      [
+        "mint",
+        10
+      ],
+      [
+        "olive-oil",
+        15
+      ],
+      [
+        "salt",
+        2
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {rice} until fragrant.",
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {carrot} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {potatoes} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Grate or finely dice {cucumber}, sprinkle with half of the {salt} and let it drain for 5 minutes, then squeeze out the excess liquid.",
+      "Crush {garlic} with the remaining salt and stir into {yogurt}.",
+      "Fold in the cucumber, chopped {dill} and {mint}.",
+      "Spoon into a bowl, drizzle with {olive-oil} and serve chilled."
     ]
   },
   {
@@ -462,43 +493,44 @@ KITCHEN.add(
     "name": "Tajik Dried Fruit Rice",
     "meal": "big",
     "cuisine": "Tajik",
-    "time": 43,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "potatoes",
+        "rice",
+        250
+      ],
+      [
+        "carrot",
+        200
+      ],
+      [
+        "raisins",
+        60
+      ],
+      [
+        "dried-apricots",
+        60
+      ],
+      [
+        "butter",
+        40
+      ],
+      [
+        "cinnamon",
         2
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "garlic",
-        2
-      ],
-      [
-        "oil",
-        20
       ],
       [
         "salt",
         3
-      ],
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {cumin} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir well so the ingredients are evenly coated.",
-      "Add the {garlic} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Rinse {rice} until the water runs clear. Grate {carrot} and chop {dried-apricots}; rinse {raisins}.",
+      "Melt {butter} in a heavy pot and cook the carrot for 6 minutes until soft and sweet.",
+      "Add the rice, {cinnamon} and {salt} and stir for 1 minute, then pour in 450 ml water and bring to a boil.",
+      "Scatter the apricots and raisins over the top, cover and cook on the lowest heat for 15 minutes, then rest off the heat for 10 minutes.",
+      "Fluff gently and serve warm."
     ]
   },
   {
@@ -545,44 +577,48 @@ KITCHEN.add(
     "name": "Tajik Pumpkin and Herb Dumplings",
     "meal": "big",
     "cuisine": "Tajik",
-    "time": 32,
+    "time": 80,
     "serves": 4,
     "ing": [
       [
-        "rice",
+        "flour",
         250
       ],
       [
-        "potatoes",
-        2
+        "salt",
+        4
       ],
       [
-        "cumin",
-        3
+        "pumpkin",
+        350
       ],
       [
-        "garlic",
-        2
+        "onion",
+        "1pc"
+      ],
+      [
+        "parsley",
+        15
       ],
       [
         "oil",
-        20
+        40
       ],
       [
-        "salt",
-        3
+        "tomato",
+        "2pc"
       ],
       [
-        "beef-chuck",
-        450
+        "garlic",
+        "2pc"
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {potatoes} until fragrant.",
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Mix {flour} and half of the {salt} with about 120 ml warm water and knead into a smooth dough. Rest for 30 minutes.",
+      "Grate {pumpkin} and finely chop {onion}. Fry both in half of the {oil} for 10 minutes until soft and dry; stir in chopped {parsley} and the remaining salt and cool.",
+      "Roll the dough 2 mm thin, cut 8 cm rounds, fill and pinch into half-moons.",
+      "Meanwhile make the sauce: soften crushed {garlic} in the remaining oil for 1 minute, add chopped {tomato} and cook for 10 minutes into a thick sauce.",
+      "Boil the dumplings in salted water in batches for 5 minutes after they float, drain and serve with the warm tomato sauce."
     ]
   },
   {
@@ -676,44 +712,60 @@ KITCHEN.add(
     "name": "Tajik Spiced Potato and Beef Skillet",
     "meal": "big",
     "cuisine": "Tajik",
-    "time": 53,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "lamb-mince",
+        350
       ],
       [
         "potatoes",
-        2
+        500
       ],
       [
-        "cumin",
-        3
+        "tomato",
+        "3pc"
+      ],
+      [
+        "onion",
+        "1pc"
       ],
       [
         "garlic",
+        "2pc"
+      ],
+      [
+        "ground-coriander",
+        3
+      ],
+      [
+        "cumin",
         2
       ],
       [
         "oil",
-        20
+        30
+      ],
+      [
+        "parsley",
+        10
       ],
       [
         "salt",
         3
       ],
       [
-        "beef-chuck",
-        450
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {potatoes} until fragrant.",
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Peel {potatoes} and cut into 2 cm cubes; chop {onion} and {tomato}; crush {garlic}.",
+      "Heat {oil} in a deep skillet and cook the onion for 5 minutes. Add {lamb-mince} and brown for 8 minutes, breaking it up.",
+      "Stir in garlic, {ground-coriander}, {cumin}, {salt} and {black-pepper} for 1 minute, then add the tomatoes and cook 5 minutes until they collapse.",
+      "Add the potatoes and 150 ml water, cover and simmer for 25 minutes until the potatoes are tender and the sauce is thick.",
+      "Scatter chopped {parsley} and serve from the pan."
     ]
   },
   {
@@ -807,7 +859,7 @@ KITCHEN.add(
     "name": "Tajik Apricot Rice with Nuts",
     "meal": "big",
     "cuisine": "Tajik",
-    "time": 38,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
@@ -815,36 +867,31 @@ KITCHEN.add(
         250
       ],
       [
-        "potatoes",
-        2
+        "dried-apricots",
+        80
       ],
       [
-        "cumin",
-        3
+        "almonds",
+        40
       ],
       [
-        "garlic",
-        2
+        "turmeric",
+        1
       ],
       [
-        "oil",
-        20
+        "butter",
+        40
       ],
       [
         "salt",
         3
-      ],
-      [
-        "beef-chuck",
-        450
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {potatoes} until fragrant.",
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Rinse {rice} until the water runs clear. Chop {dried-apricots} and roughly chop {almonds}.",
+      "Melt half of the {butter} in a pot and toast the almonds for 2 minutes until golden; set aside.",
+      "Stir in the rice, {turmeric} and {salt} for 1 minute, add 450 ml water, bring to a boil, cover and cook on the lowest heat for 15 minutes.",
+      "Scatter the apricots over, re-cover and rest 10 minutes. Fluff with the remaining butter and fold in the almonds."
     ]
   }
 ]

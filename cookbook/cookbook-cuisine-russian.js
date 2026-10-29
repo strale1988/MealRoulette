@@ -15,7 +15,7 @@ KITCHEN.add(
       ],
       [
         "mushrooms",
-        150
+        200
       ],
       [
         "onion",
@@ -23,19 +23,19 @@ KITCHEN.add(
       ],
       [
         "beef-stock",
-        450
+        150
       ],
       [
         "sour-cream",
-        100
+        150
       ],
       [
         "mustard",
-        15
+        10
       ],
       [
         "flour",
-        120
+        15
       ],
       [
         "butter",
@@ -51,11 +51,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {butter} in a heavy pan; soften {onion}.",
-      "Add {beef-strips} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Sear beef quickly in batches and set aside; make a mushroom-onion pan sauce, temper the sour cream off the boil and return the beef only long enough to warm through.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Toss {beef-strips} with {salt} and {black-pepper}. Slice {onion} and {mushrooms}.",
+      "Melt half of the {butter} in a wide pan over high heat and sear the beef in two batches for 1–2 minutes per side, so it stays pink inside. Set aside.",
+      "Add the remaining butter and cook the onion for 4 minutes, then the mushrooms for 6 minutes until golden.",
+      "Stir in {flour} and {mustard} for 1 minute, then add {beef-stock} and simmer for 4–5 minutes until slightly thickened.",
+      "Turn the heat to low, stir in {sour-cream} (do not boil, or it will split), return the beef with its juices and warm through for 2 minutes. Serve hot."
     ]
   },
   {
@@ -586,44 +586,60 @@ KITCHEN.add(
     "name": "Russian Cabbage and Mushroom Pirozhki",
     "meal": "big",
     "cuisine": "Russian",
-    "time": 37,
+    "time": 120,
     "serves": 4,
     "ing": [
       [
-        "eggs",
-        3
+        "flour",
+        300
       ],
       [
-        "cheese",
-        100
+        "yeast",
+        7
+      ],
+      [
+        "milk",
+        150
+      ],
+      [
+        "eggs",
+        "2pc"
+      ],
+      [
+        "butter",
+        50
+      ],
+      [
+        "cabbage",
+        300
       ],
       [
         "mushrooms",
         150
       ],
       [
-        "butter",
-        20
+        "onion",
+        "1pc"
       ],
       [
-        "parsley",
+        "dill",
         10
       ],
       [
-        "black-pepper",
-        2
+        "salt",
+        4
       ],
       [
-        "salt",
-        3
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a heavy pan and soften the {cheese} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {eggs} and {eggs}; stir well so the ingredients are evenly coated.",
-      "Add the {mushrooms} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Warm {milk} until lukewarm and stir in {yeast}. Mix with {flour}, half of the {salt}, one of the {eggs} and 20 g melted {butter}; knead for 8 minutes until smooth. Cover and let rise for 1 hour until doubled.",
+      "Finely chop {onion}, shred {cabbage} and chop {mushrooms}. Melt the remaining butter and cook the onion for 5 minutes, then the cabbage for 12 minutes until soft and lightly golden.",
+      "Add the mushrooms and cook 6 minutes until the moisture has evaporated. Stir in chopped {dill}, {black-pepper} and the remaining salt, then cool completely.",
+      "Heat the oven to 200 °C. Divide the dough into 12 pieces, flatten each into a 10 cm round, spoon in filling, pinch the edges shut and place seam-side down on a tray. Rest 20 minutes.",
+      "Beat the second of the {eggs}, brush it over the pirozhki and bake for 18–20 minutes until deep golden."
     ]
   },
   {
@@ -668,46 +684,46 @@ KITCHEN.add(
   {
     "id": "russian-syrniki-cheese-pancakes",
     "name": "Russian Syrniki Cheese Pancakes",
-    "meal": "big",
+    "meal": "morning,treat",
     "cuisine": "Russian",
-    "time": 32,
+    "time": 25,
     "serves": 4,
     "ing": [
       [
-        "cheese",
-        100
+        "cottage-cheese",
+        400
       ],
       [
-        "mushrooms",
-        150
+        "eggs",
+        "1pc"
       ],
       [
-        "butter",
-        20
+        "flour",
+        60
       ],
       [
-        "parsley",
-        10
-      ],
-      [
-        "black-pepper",
-        2
+        "sugar",
+        30
       ],
       [
         "salt",
-        3
+        1
       ],
       [
-        "potatoes",
-        400
+        "butter",
+        30
+      ],
+      [
+        "sour-cream",
+        100
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Drain {cottage-cheese} in a sieve for 10 minutes, pressing out excess liquid, then mash it smooth in a bowl.",
+      "Mix in {eggs}, {sugar}, {salt} and about two-thirds of the {flour} to make a soft dough that holds its shape.",
+      "With floured hands shape into 8 thick patties and dust them with the remaining flour.",
+      "Melt {butter} in a frying pan over medium-low heat and fry the patties for 3 minutes per side until deep golden and set in the middle.",
+      "Serve warm with {sour-cream}."
     ]
   },
   {
@@ -799,46 +815,49 @@ KITCHEN.add(
   {
     "id": "russian-herbed-cheese-omelette",
     "name": "Russian Herbed Cheese Omelette",
-    "meal": "big",
+    "meal": "morning,big",
     "cuisine": "Russian",
-    "time": 53,
+    "time": 20,
     "serves": 4,
     "ing": [
       [
+        "eggs",
+        "8pc"
+      ],
+      [
+        "sour-cream",
+        40
+      ],
+      [
         "cheese",
-        100
+        80
       ],
       [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
-      ],
-      [
-        "parsley",
+        "dill",
         10
       ],
       [
-        "black-pepper",
-        2
+        "spring-onion",
+        "3pc"
+      ],
+      [
+        "butter",
+        30
       ],
       [
         "salt",
-        3
+        2
       ],
       [
-        "potatoes",
-        400
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Slice {spring-onion}, chop {dill} and grate {cheese}. Beat {eggs} with {sour-cream}, {salt} and {black-pepper} until smooth.",
+      "Melt half of the {butter} in a non-stick pan and soften the spring onion for 2 minutes.",
+      "Pour in half of the eggs and cook gently for 3 minutes, lifting the edges, until nearly set. Scatter half of the cheese and dill and fold over.",
+      "Repeat with the remaining butter and eggs, then cut the omelettes in half to serve four."
     ]
   },
   {
@@ -932,44 +951,51 @@ KITCHEN.add(
     "name": "Russian Roasted Root Vegetables",
     "meal": "big",
     "cuisine": "Russian",
-    "time": 38,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "cheese",
+        "potatoes",
+        400
+      ],
+      [
+        "carrot",
+        250
+      ],
+      [
+        "beetroot",
+        200
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "sour-cream",
         100
       ],
       [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
-      ],
-      [
-        "parsley",
+        "dill",
         10
-      ],
-      [
-        "black-pepper",
-        2
       ],
       [
         "salt",
         3
       ],
       [
-        "potatoes",
-        400
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 210 °C. Peel {potatoes}, {carrot}, {beetroot} and {onion} and cut into 3 cm pieces.",
+      "Toss with {oil}, {salt} and {black-pepper} and roast for 40–45 minutes, turning once, until tender and caramelised.",
+      "Stir chopped {dill} into {sour-cream} with a pinch of salt.",
+      "Serve the hot vegetables with the dill cream spooned over."
     ]
   }
 ]

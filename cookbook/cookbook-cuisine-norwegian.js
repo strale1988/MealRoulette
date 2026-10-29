@@ -15,35 +15,31 @@ KITCHEN.add(
       ],
       [
         "cabbage",
-        200
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "water",
-        350
-      ],
-      [
-        "salt",
-        3
+        400
       ],
       [
         "potatoes",
         350
       ],
       [
-        "oil",
-        15
+        "black-pepper",
+        2
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "water",
+        350
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan and let the aromatics or spices become fragrant without browning.",
-      "Add {lamb} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {water} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Layer lamb and cabbage wedges in a heavy pot with whole black pepper, add just enough water to create steam and braise gently until the meat is tender.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cut {cabbage} into thick wedges, keeping a little core on each so they hold together, and cut {lamb} into large pieces on the bone or 5 cm chunks.",
+      "Layer the lamb and cabbage in a heavy pot, sprinkling {salt} and whole {black-pepper} between the layers and finishing with a layer of cabbage.",
+      "Pour in {water}, bring to a boil, skim off any foam, then cover and simmer on the lowest heat for 90 minutes, without stirring, until the lamb is falling-off-the-bone tender.",
+      "Meanwhile peel {potatoes}, cut into even pieces and boil in salted water for 20 minutes until a knife slides in; drain.",
+      "Serve the lamb and cabbage in deep bowls with the cooking broth spooned over and the boiled potatoes alongside."
     ]
   },
   {
@@ -244,11 +240,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion}.",
-      "Add {beef-chuck} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Brown beef, add root vegetables and stock, and simmer slowly until tender; lightly mash a few potato pieces into the broth to make the stew naturally thick.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cut {beef-chuck} into 2 cm cubes and dry them with paper towel; peel {potatoes}, {carrot} and {swede} and cut into 2 cm pieces; dice {onion}.",
+      "Heat {oil} in a heavy pot and brown the beef in two batches for 6–8 minutes, until deeply coloured on all sides.",
+      "Return all the beef to the pot, add {onion} and soften for 4 minutes, then pour in {beef-stock} and add {bay-leaf}. Cover and simmer gently for 1 hour.",
+      "Add {swede}, {carrot} and {potatoes} and simmer, partly covered, for 25–30 minutes until all the vegetables are tender.",
+      "Press a few potato pieces against the side of the pot to mash them into the broth so the stew thickens naturally. Season with {salt} and {black-pepper}, remove the bay leaf and serve."
     ]
   },
   {
@@ -551,44 +547,48 @@ KITCHEN.add(
     "name": "Norwegian Fårikål-Inspired Lamb and Cabbage",
     "meal": "big",
     "cuisine": "Norwegian",
-    "time": 37,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "eggs",
-        3
+        "lamb",
+        600
       ],
       [
-        "cheese",
-        100
+        "savoy-cabbage",
+        600
       ],
       [
-        "mushrooms",
-        150
+        "potatoes",
+        500
       ],
       [
         "butter",
         20
       ],
       [
-        "parsley",
-        10
+        "flour",
+        20
+      ],
+      [
+        "salt",
+        4
       ],
       [
         "black-pepper",
         2
       ],
       [
-        "salt",
-        3
+        "water",
+        400
       ]
     ],
     "steps": [
-      "Warm the {butter} in a heavy pan and soften the {cheese} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {eggs} and {eggs}; stir well so the ingredients are evenly coated.",
-      "Add the {mushrooms} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Cut {lamb} into 3 cm cubes; slice {savoy-cabbage} into thick wedges and peel and quarter {potatoes}.",
+      "Melt {butter} in a wide heavy pot and brown the lamb for 6 minutes. Sprinkle over {flour} and stir for 1 minute.",
+      "Pour in {water} a little at a time, stirring so no lumps form, then add {salt} and {black-pepper}. Cover and simmer for 25 minutes.",
+      "Lay the cabbage and {potatoes} over the lamb, cover and cook for 25 minutes more, until the lamb is tender and the potatoes are soft.",
+      "Check the seasoning and serve straight from the pot, spooning the thickened broth over everything."
     ]
   },
   {
@@ -635,15 +635,15 @@ KITCHEN.add(
     "name": "Norwegian Potato Flatbread",
     "meal": "big",
     "cuisine": "Norwegian",
-    "time": 32,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "cheese",
-        100
+        "potatoes",
+        600
       ],
       [
-        "mushrooms",
+        "flour",
         150
       ],
       [
@@ -651,28 +651,17 @@ KITCHEN.add(
         20
       ],
       [
-        "parsley",
-        10
-      ],
-      [
-        "black-pepper",
-        2
-      ],
-      [
         "salt",
-        3
-      ],
-      [
-        "potatoes",
-        400
+        4
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Peel {potatoes}, cut into chunks and boil in lightly salted water for 20 minutes until very soft. Drain well and mash completely smooth.",
+      "Spread the mash on a plate and let it cool for 20 minutes; the dough must be cool to the touch or it will stick.",
+      "Mix in {flour} and {salt} and knead briefly into a soft, slightly tacky dough. Divide into 8 balls.",
+      "Roll each ball out as thin as you can into a round about 20 cm across, using extra flour on the board only as needed.",
+      "Cook each round in a dry, hot frying pan for 1–2 minutes per side until pale brown flecks appear. Stack under a clean cloth to keep them soft.",
+      "Brush the warm flatbreads with melted {butter}, fold them and serve."
     ]
   },
   {
@@ -764,46 +753,42 @@ KITCHEN.add(
   {
     "id": "norwegian-herbed-cheese-omelette",
     "name": "Norwegian Herbed Cheese Omelette",
-    "meal": "big",
+    "meal": "morning,big",
     "cuisine": "Norwegian",
-    "time": 53,
+    "time": 20,
     "serves": 4,
     "ing": [
       [
+        "eggs",
+        "8pc"
+      ],
+      [
         "cheese",
         100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
       ],
       [
         "parsley",
         10
       ],
       [
-        "black-pepper",
-        2
+        "butter",
+        30
       ],
       [
         "salt",
-        3
+        2
       ],
       [
-        "potatoes",
-        400
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Grate {cheese} and chop {parsley}. Beat {eggs} with {salt}, {black-pepper} and half of the parsley until just combined.",
+      "Melt a quarter of the {butter} in a non-stick pan over medium heat until it foams.",
+      "Pour in a quarter of the egg mixture and stir the edges toward the centre for about 1 minute, until softly set with a little liquid left on top.",
+      "Scatter a quarter of the cheese over one half, cook 1 minute more, then fold the omelette over and slide it onto a warm plate.",
+      "Repeat for three more omelettes, then finish them with the remaining parsley."
     ]
   },
   {
@@ -897,27 +882,35 @@ KITCHEN.add(
     "name": "Norwegian Roasted Root Vegetables",
     "meal": "big",
     "cuisine": "Norwegian",
-    "time": 38,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "cheese",
-        100
+        "potatoes",
+        400
       ],
       [
-        "mushrooms",
-        150
+        "carrot",
+        250
+      ],
+      [
+        "parsnip",
+        250
+      ],
+      [
+        "swede",
+        250
+      ],
+      [
+        "oil",
+        30
       ],
       [
         "butter",
-        20
+        25
       ],
       [
-        "parsley",
-        10
-      ],
-      [
-        "black-pepper",
+        "thyme",
         2
       ],
       [
@@ -925,16 +918,15 @@ KITCHEN.add(
         3
       ],
       [
-        "potatoes",
-        400
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 220 °C. Peel {potatoes}, {carrot}, {parsnip} and {swede} and cut into 3 cm pieces, keeping them similar in size.",
+      "Toss the vegetables on a large tray with {oil}, {salt}, {black-pepper} and {thyme}. Spread in a single layer so they roast rather than steam.",
+      "Roast for 30 minutes, turning once halfway, until the edges begin to brown.",
+      "Dot with {butter} and roast for 10–15 minutes more until caramelised and tender in the middle. Serve hot."
     ]
   }
 ]

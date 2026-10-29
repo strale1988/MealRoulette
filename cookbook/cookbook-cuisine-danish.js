@@ -501,44 +501,43 @@ KITCHEN.add(
     "name": "Danish Smørrebrød with Egg and Dill",
     "meal": "big",
     "cuisine": "Danish",
-    "time": 37,
+    "time": 25,
     "serves": 4,
     "ing": [
       [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
+        "rye-bread",
+        "4pc"
       ],
       [
         "butter",
-        20
+        25
       ],
       [
-        "parsley",
+        "eggs",
+        "4pc"
+      ],
+      [
+        "mayonnaise",
+        40
+      ],
+      [
+        "dill",
         10
       ],
       [
-        "black-pepper",
+        "salt",
         2
       ],
       [
-        "salt",
-        3
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a heavy pan and soften the {cheese} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {eggs} and {eggs}; stir well so the ingredients are evenly coated.",
-      "Add the {mushrooms} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Lower {eggs} into boiling water and cook for 8 minutes, then cool under cold running water, peel and slice.",
+      "Butter each slice of {rye-bread} with {butter} right to the edges; this stops the topping soaking in.",
+      "Spread a layer of {mayonnaise} over the butter and arrange the sliced egg on top.",
+      "Chop {dill} and scatter it over the eggs with {salt} and {black-pepper}. Serve open-faced, with a knife and fork."
     ]
   },
   {
@@ -585,44 +584,47 @@ KITCHEN.add(
     "name": "Danish Red Cabbage with Apples",
     "meal": "big",
     "cuisine": "Danish",
-    "time": 32,
+    "time": 65,
     "serves": 4,
     "ing": [
       [
-        "cheese",
-        100
+        "red-cabbage",
+        700
       ],
       [
-        "mushrooms",
-        150
+        "apple",
+        "2pc"
       ],
       [
         "butter",
-        20
+        30
       ],
       [
-        "parsley",
-        10
+        "sugar",
+        30
       ],
       [
-        "black-pepper",
-        2
+        "vinegar",
+        40
+      ],
+      [
+        "cloves",
+        1
       ],
       [
         "salt",
         3
       ],
       [
-        "potatoes",
-        400
+        "water",
+        100
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Remove the tough core from {red-cabbage} and shred it finely. Peel, core and slice {apple}.",
+      "Melt {butter} in a wide pot, add the cabbage and stir for 5 minutes until it starts to wilt and shine.",
+      "Add the apple, {sugar}, {vinegar}, {cloves}, {salt} and {water}; stir well, cover and simmer on low heat for 45 minutes, stirring occasionally, until the cabbage is silky.",
+      "Uncover and cook for 5 minutes to reduce the liquid to a glaze. Taste and add a splash more vinegar or pinch more sugar if the sweet–sour balance needs it. Remove the cloves before serving."
     ]
   },
   {
@@ -714,46 +716,49 @@ KITCHEN.add(
   {
     "id": "danish-herbed-cheese-omelette",
     "name": "Danish Herbed Cheese Omelette",
-    "meal": "big",
+    "meal": "morning,big",
     "cuisine": "Danish",
-    "time": 53,
+    "time": 25,
     "serves": 4,
     "ing": [
       [
-        "cheese",
-        100
+        "eggs",
+        "8pc"
+      ],
+      [
+        "milk",
+        60
       ],
       [
         "mushrooms",
         150
       ],
       [
+        "cheese",
+        100
+      ],
+      [
         "butter",
-        20
+        30
       ],
       [
         "parsley",
         10
       ],
       [
-        "black-pepper",
+        "salt",
         2
       ],
       [
-        "salt",
-        3
-      ],
-      [
-        "potatoes",
-        400
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Slice {mushrooms}, grate {cheese} and chop {parsley}. Whisk {eggs} with {milk}, {salt} and {black-pepper}.",
+      "Melt a third of the {butter} in a frying pan and fry the mushrooms over high heat for 5 minutes until golden and dry; tip onto a plate.",
+      "Wipe the pan, melt half of the remaining butter and pour in half the egg mixture. Stir the edges inward for 1 minute, then leave 1–2 minutes until nearly set.",
+      "Scatter half the mushrooms, half the cheese and half the parsley over one side, fold the omelette over and slide it out. Repeat with the rest, then cut each omelette in half to serve four."
     ]
   },
   {
@@ -847,27 +852,31 @@ KITCHEN.add(
     "name": "Danish Roasted Root Vegetables",
     "meal": "big",
     "cuisine": "Danish",
-    "time": 38,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "cheese",
-        100
+        "potatoes",
+        400
       ],
       [
-        "mushrooms",
-        150
+        "carrot",
+        250
       ],
       [
-        "butter",
-        20
+        "beetroot",
+        250
       ],
       [
-        "parsley",
-        10
+        "oil",
+        30
       ],
       [
-        "black-pepper",
+        "honey",
+        15
+      ],
+      [
+        "thyme",
         2
       ],
       [
@@ -875,16 +884,15 @@ KITCHEN.add(
         3
       ],
       [
-        "potatoes",
-        400
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 210 °C. Scrub {potatoes}, peel {carrot} and {beetroot}, and cut everything into 3 cm pieces.",
+      "Toss the potatoes and carrot with {oil}, {salt}, {black-pepper} and {thyme} on a large tray; keep the beetroot on a separate tray corner or toss it in separately so it does not stain the rest.",
+      "Roast for 30 minutes, turning once, until golden at the edges.",
+      "Drizzle with {honey}, toss and roast 10 minutes more until glazed and tender. Serve hot."
     ]
   }
 ]

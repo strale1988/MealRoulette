@@ -189,44 +189,43 @@ KITCHEN.add(
     "name": "Turkmen Dograma-Inspired Soup",
     "meal": "big",
     "cuisine": "Turkmen",
-    "time": 37,
+    "time": 110,
     "serves": 4,
     "ing": [
       [
-        "carrot",
+        "lamb",
+        400
+      ],
+      [
+        "flatbread",
+        200
+      ],
+      [
+        "onion",
+        "2pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "cilantro",
+        15
+      ],
+      [
+        "black-pepper",
         2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "garlic",
-        2
-      ],
-      [
-        "oil",
-        20
       ],
       [
         "salt",
-        3
+        4
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {rice} until fragrant.",
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {carrot} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {potatoes} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Put {lamb} in a pot with 1.2 litres of cold water, bring to a boil, skim, add half of the {salt} and simmer gently for 1 hour 20 minutes until very tender.",
+      "Lift out the lamb, shred the meat off the bones and keep the broth hot.",
+      "Tear {flatbread} into bite-sized pieces and divide among four deep bowls. Thinly slice {onion} and dice {tomato}.",
+      "Ladle the hot broth over the bread so it softens, then top with the shredded lamb, raw onion, tomato, chopped {cilantro}, {black-pepper} and the remaining salt."
     ]
   },
   {
@@ -234,47 +233,48 @@ KITCHEN.add(
     "name": "Turkmen Gutap Herb Flatbreads",
     "meal": "big",
     "cuisine": "Turkmen",
-    "time": 44,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "garlic",
-        2
-      ],
-      [
-        "oil",
-        20
+        "flour",
+        300
       ],
       [
         "salt",
         3
       ],
       [
-        "beef-chuck",
-        450
+        "spinach",
+        100
       ],
       [
-        "onion",
-        1
+        "dill",
+        15
       ],
       [
-        "carrot",
-        2
+        "cilantro",
+        15
+      ],
+      [
+        "spring-onion",
+        "3pc"
+      ],
+      [
+        "feta",
+        100
+      ],
+      [
+        "oil",
+        30
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {cumin} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir well so the ingredients are evenly coated.",
-      "Add the {garlic} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Mix {flour} and the {salt} with about 150 ml warm water and knead into a smooth dough. Cover and rest for 30 minutes.",
+      "Finely chop {spinach}, {dill}, {cilantro} and {spring-onion} and mix with crumbled {feta}; the feta supplies the salt.",
+      "Divide the dough into 6 balls and roll each into a very thin 22 cm round. Spread filling over half, fold the other half over and press the edges to seal.",
+      "Cook each gutap in a dry hot pan for 2–3 minutes per side until blistered and golden.",
+      "Brush with {oil} and cut into wedges to serve."
     ]
   },
   {
@@ -321,44 +321,39 @@ KITCHEN.add(
     "name": "Turkmen Pumpkin and Rice",
     "meal": "big",
     "cuisine": "Turkmen",
-    "time": 58,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
         "rice",
-        250
+        200
       ],
       [
-        "potatoes",
-        2
+        "pumpkin",
+        500
       ],
       [
-        "cumin",
-        3
-      ],
-      [
-        "garlic",
-        2
+        "onion",
+        "1pc"
       ],
       [
         "oil",
-        20
+        30
+      ],
+      [
+        "cumin",
+        2
       ],
       [
         "salt",
-        3
-      ],
-      [
-        "beef-chuck",
-        450
+        4
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {potatoes} until fragrant.",
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {cumin} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Peel {pumpkin} and cut into 2 cm cubes. Finely chop {onion} and rinse {rice}.",
+      "Heat {oil} in a heavy pot and cook the onion for 5 minutes, then add the pumpkin, {cumin} and {salt} and stir for 5 minutes.",
+      "Add the rice and 500 ml water, bring to a boil, cover and cook on low heat for 20 minutes until the rice is tender and the pumpkin has softened into it.",
+      "Rest 5 minutes, stir gently and serve."
     ]
   },
   {
@@ -366,87 +361,103 @@ KITCHEN.add(
     "name": "Lamb and Chickpea Stew",
     "meal": "big",
     "cuisine": "Turkmen",
-    "time": 65,
+    "time": 120,
     "serves": 4,
     "ing": [
       [
-        "beef-chuck",
-        450
+        "lamb",
+        500
+      ],
+      [
+        "chickpeas",
+        480
       ],
       [
         "onion",
-        1
+        "2pc"
       ],
       [
         "carrot",
-        2
+        "2pc"
       ],
       [
-        "rice",
-        250
+        "tomato-paste",
+        30
       ],
       [
-        "potatoes",
-        2
+        "garlic",
+        "3pc"
       ],
       [
         "cumin",
         3
       ],
       [
-        "garlic",
-        2
+        "oil",
+        30
       ],
       [
-        "oil",
-        20
+        "beef-stock",
+        600
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {onion} until fragrant.",
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {carrot} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Cut {lamb} into 3 cm pieces, chop {onion}, slice {carrot} and crush {garlic}. Drain {chickpeas}.",
+      "Heat {oil} in a heavy pot and brown the lamb in two batches. Add the onion and cook 5 minutes.",
+      "Stir in garlic, {cumin} and {tomato-paste} for 2 minutes, then pour in {beef-stock}, season with {salt} and {black-pepper}, cover and simmer for 1 hour.",
+      "Add the carrot and {chickpeas} and simmer for 30 minutes until the lamb is tender and the stew is thick. Serve hot."
     ]
   },
   {
     "id": "turkmen-tomato-cucumber-salad",
     "name": "Turkmen Tomato Cucumber Salad",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Turkmen",
-    "time": 36,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "carrot",
-        2
+        "tomato",
+        "4pc"
       ],
       [
-        "rice",
-        250
+        "cucumber",
+        "2pc"
       ],
       [
-        "potatoes",
-        2
+        "red-onion",
+        "1pc"
       ],
       [
-        "cumin",
+        "cilantro",
+        15
+      ],
+      [
+        "olive-oil",
+        30
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "salt",
         3
-      ],
-      [
-        "garlic",
-        2
-      ],
-      [
-        "oil",
-        20
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {rice} until fragrant.",
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {carrot} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {potatoes} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Cut {tomato} into wedges, slice {cucumber} into half-moons and slice {red-onion} very thinly.",
+      "Combine in a bowl and sprinkle with {salt}; let stand for 5 minutes so the tomatoes release their juice.",
+      "Dress with {olive-oil} and the juice of {lemon}.",
+      "Fold in chopped {cilantro} and serve immediately."
     ]
   },
   {
@@ -454,43 +465,60 @@ KITCHEN.add(
     "name": "Spiced Beef Noodle Soup",
     "meal": "big",
     "cuisine": "Turkmen",
-    "time": 43,
+    "time": 90,
     "serves": 4,
     "ing": [
       [
-        "potatoes",
-        2
+        "beef-chuck",
+        350
+      ],
+      [
+        "noodles",
+        200
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
       ],
       [
         "cumin",
         3
       ],
       [
-        "garlic",
-        2
+        "paprika",
+        3
+      ],
+      [
+        "black-pepper",
+        1
       ],
       [
         "oil",
         20
       ],
       [
+        "beef-stock",
+        1000
+      ],
+      [
+        "parsley",
+        10
+      ],
+      [
         "salt",
         3
-      ],
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {cumin} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir well so the ingredients are evenly coated.",
-      "Add the {garlic} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Cut {beef-chuck} into 2 cm cubes and chop {onion}; crush {garlic}.",
+      "Heat {oil} in a pot and brown the beef for 8 minutes. Add the onion and cook 4 minutes, then stir in garlic, {cumin}, {paprika} and {black-pepper} for 1 minute.",
+      "Pour in {beef-stock} and {salt}, cover and simmer for 1 hour until the beef is tender.",
+      "Cook {noodles} in the simmering soup for the time on the packet, usually 4–6 minutes.",
+      "Ladle into bowls and top with chopped {parsley}."
     ]
   },
   {
@@ -537,44 +565,40 @@ KITCHEN.add(
     "name": "Turkmen Pumpkin and Herb Dumplings",
     "meal": "big",
     "cuisine": "Turkmen",
-    "time": 32,
+    "time": 80,
     "serves": 4,
     "ing": [
       [
-        "rice",
+        "flour",
         250
       ],
       [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "garlic",
-        2
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
         "salt",
-        3
+        4
       ],
       [
-        "beef-chuck",
-        450
+        "pumpkin",
+        300
+      ],
+      [
+        "dill",
+        15
+      ],
+      [
+        "butter",
+        30
+      ],
+      [
+        "onion",
+        "1pc"
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {potatoes} until fragrant.",
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Mix {flour} and half of the {salt} with about 110 ml warm water and knead until smooth. Rest for 30 minutes.",
+      "Grate {pumpkin} and mix with chopped {dill} and the remaining salt; squeeze out excess juice.",
+      "Roll the dough 2 mm thin, cut 8 cm rounds, fill with the pumpkin mixture and pinch into half-moons.",
+      "Boil in salted water in batches for 5 minutes after they float, then drain.",
+      "Fry sliced {onion} in {butter} for 8 minutes until golden, add the dumplings and toss for 2 minutes. Serve hot."
     ]
   },
   {
@@ -668,44 +692,52 @@ KITCHEN.add(
     "name": "Turkmen Spiced Potato and Beef Skillet",
     "meal": "big",
     "cuisine": "Turkmen",
-    "time": 53,
+    "time": 70,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "beef-mince",
+        350
       ],
       [
         "potatoes",
-        2
+        600
+      ],
+      [
+        "onion",
+        "2pc"
+      ],
+      [
+        "tomato",
+        "2pc"
       ],
       [
         "cumin",
         3
       ],
       [
-        "garlic",
-        2
+        "oil",
+        30
       ],
       [
-        "oil",
-        20
+        "parsley",
+        10
       ],
       [
         "salt",
         3
       ],
       [
-        "beef-chuck",
-        450
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {potatoes} until fragrant.",
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 200 °C. Peel {potatoes} and slice 4 mm thick; slice {onion} and {tomato}.",
+      "Brown {beef-mince} in {oil} in an oven-safe skillet for 8 minutes with half of the onion, {cumin}, {salt} and {black-pepper}. Tip into a bowl.",
+      "Layer half of the potatoes in the skillet, then the mince, then the remaining onion and the tomato slices, finishing with the remaining potatoes.",
+      "Pour in 100 ml water, cover with foil and bake for 35 minutes, then uncover and bake 10 minutes until the top is golden.",
+      "Scatter chopped {parsley} and serve from the skillet."
     ]
   },
   {
@@ -799,7 +831,7 @@ KITCHEN.add(
     "name": "Turkmen Apricot Rice with Nuts",
     "meal": "big",
     "cuisine": "Turkmen",
-    "time": 38,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
@@ -807,36 +839,31 @@ KITCHEN.add(
         250
       ],
       [
-        "potatoes",
+        "dried-apricots",
+        80
+      ],
+      [
+        "pine-nuts",
+        30
+      ],
+      [
+        "butter",
+        40
+      ],
+      [
+        "cinnamon",
         2
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "garlic",
-        2
-      ],
-      [
-        "oil",
-        20
       ],
       [
         "salt",
         3
-      ],
-      [
-        "beef-chuck",
-        450
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {potatoes} until fragrant.",
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Rinse {rice} until the water runs clear. Chop {dried-apricots}.",
+      "Melt half of the {butter} in a pot, toast {pine-nuts} for 2 minutes until golden and set aside.",
+      "Add the rice, {cinnamon} and {salt}, stir for 1 minute, pour in 450 ml water, bring to a boil, cover and cook on the lowest heat for 15 minutes.",
+      "Scatter the apricots over and rest, covered, for 10 minutes. Fluff with the remaining butter and top with the pine nuts."
     ]
   }
 ]

@@ -573,44 +573,48 @@ KITCHEN.add(
     "name": "Ukrainian Varenyky Potato Dumplings",
     "meal": "big",
     "cuisine": "Ukrainian",
-    "time": 37,
+    "time": 90,
     "serves": 4,
     "ing": [
       [
+        "flour",
+        300
+      ],
+      [
         "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
-      ],
-      [
-        "parsley",
-        10
-      ],
-      [
-        "black-pepper",
-        2
+        "1pc"
       ],
       [
         "salt",
-        3
+        4
+      ],
+      [
+        "potatoes",
+        450
+      ],
+      [
+        "onion",
+        "2pc"
+      ],
+      [
+        "butter",
+        40
+      ],
+      [
+        "black-pepper",
+        1
+      ],
+      [
+        "sour-cream",
+        100
       ]
     ],
     "steps": [
-      "Warm the {butter} in a heavy pan and soften the {cheese} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {eggs} and {eggs}; stir well so the ingredients are evenly coated.",
-      "Add the {mushrooms} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Mix {flour}, {eggs} and half of the {salt} with about 150 ml warm water and knead for 8 minutes into a smooth, elastic dough. Cover and rest for 30 minutes.",
+      "Peel {potatoes}, boil for 20 minutes until soft, drain and mash. Fry chopped {onion} in half of the {butter} for 12 minutes until golden and mix into the mash with {black-pepper} and the remaining salt. Let it cool.",
+      "Roll the dough out 2 mm thin, cut 8 cm rounds, put a spoonful of filling on each, fold into half-moons and pinch the edges tightly shut.",
+      "Boil in batches in salted water; once they float, cook 4–5 minutes more. Lift out with a slotted spoon.",
+      "Toss the dumplings with the remaining butter and serve with {sour-cream}."
     ]
   },
   {
@@ -657,44 +661,57 @@ KITCHEN.add(
     "name": "Ukrainian Holubtsi Cabbage Rolls",
     "meal": "big",
     "cuisine": "Ukrainian",
-    "time": 32,
+    "time": 110,
     "serves": 4,
     "ing": [
       [
-        "cheese",
+        "cabbage",
+        800
+      ],
+      [
+        "beef-mince",
+        300
+      ],
+      [
+        "rice",
+        80
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "carrot",
         100
       ],
       [
-        "mushrooms",
-        150
+        "canned-tomatoes",
+        400
       ],
       [
-        "butter",
-        20
-      ],
-      [
-        "parsley",
-        10
-      ],
-      [
-        "black-pepper",
+        "bay-leaf",
         2
       ],
       [
-        "salt",
-        3
+        "oil",
+        20
       ],
       [
-        "potatoes",
-        400
+        "salt",
+        4
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Cut out the core of {cabbage} and simmer the whole head in boiling water for 5–8 minutes, peeling off the outer leaves as they soften until you have 10–12 large leaves. Shave down thick ribs and chop any leftover cabbage.",
+      "Finely chop {onion} and grate {carrot}. Fry both in {oil} for 6 minutes until soft; set half aside for the sauce.",
+      "Mix half of the vegetables with {beef-mince}, {rice}, half of the {salt} and {black-pepper}.",
+      "Put a heaped spoonful of filling on each leaf, fold in the sides and roll up tightly. Pack the rolls seam-side down in a pot lined with the chopped cabbage.",
+      "Stir the reserved vegetables with {canned-tomatoes}, {bay-leaf} and the remaining salt and pour over the rolls; add a little water so they are almost covered.",
+      "Cover and simmer gently for 1 hour until the rice and meat are cooked through. Serve with the sauce."
     ]
   },
   {
@@ -786,46 +803,41 @@ KITCHEN.add(
   {
     "id": "ukrainian-herbed-cheese-omelette",
     "name": "Ukrainian Herbed Cheese Omelette",
-    "meal": "big",
+    "meal": "morning,big",
     "cuisine": "Ukrainian",
-    "time": 53,
+    "time": 20,
     "serves": 4,
     "ing": [
       [
-        "cheese",
-        100
+        "eggs",
+        "8pc"
       ],
       [
-        "mushrooms",
-        150
+        "cottage-cheese",
+        120
       ],
       [
-        "butter",
-        20
-      ],
-      [
-        "parsley",
+        "dill",
         10
       ],
       [
-        "black-pepper",
-        2
+        "butter",
+        30
       ],
       [
         "salt",
-        3
+        2
       ],
       [
-        "potatoes",
-        400
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Chop {dill} and beat {eggs} with {salt} and {black-pepper}.",
+      "Melt half of the {butter} in a non-stick pan over medium heat and pour in half of the eggs.",
+      "Cook for 2–3 minutes, lifting the edges, until nearly set. Spoon half of the {cottage-cheese} and half of the dill over one side and fold.",
+      "Slide out, then repeat with the rest and cut each omelette in half to serve four."
     ]
   },
   {
@@ -919,44 +931,51 @@ KITCHEN.add(
     "name": "Ukrainian Roasted Root Vegetables",
     "meal": "big",
     "cuisine": "Ukrainian",
-    "time": 38,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "cheese",
-        100
+        "potatoes",
+        400
       ],
       [
-        "mushrooms",
-        150
+        "carrot",
+        250
       ],
       [
-        "butter",
-        20
+        "parsnip",
+        200
       ],
       [
-        "parsley",
+        "onion",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "4pc"
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "dill",
         10
-      ],
-      [
-        "black-pepper",
-        2
       ],
       [
         "salt",
         3
       ],
       [
-        "potatoes",
-        400
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 210 °C. Peel {potatoes}, {carrot}, {parsnip} and {onion}; cut into 3 cm pieces, keeping the onion in wedges.",
+      "Toss with {oil}, {salt}, {black-pepper} and unpeeled {garlic} cloves on a large tray.",
+      "Roast for 40–45 minutes, turning once, until golden and tender.",
+      "Squeeze the soft garlic from its skins, mash into the vegetables, scatter chopped {dill} and serve."
     ]
   }
 ]

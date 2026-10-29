@@ -197,44 +197,48 @@ KITCHEN.add(
     "name": "Uzbek Manti Dumplings",
     "meal": "big",
     "cuisine": "Uzbek",
-    "time": 37,
+    "time": 90,
     "serves": 4,
     "ing": [
       [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "garlic",
-        2
-      ],
-      [
-        "oil",
-        20
+        "flour",
+        300
       ],
       [
         "salt",
-        3
+        4
+      ],
+      [
+        "lamb",
+        300
+      ],
+      [
+        "onion",
+        "3pc"
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "black-pepper",
+        1
+      ],
+      [
+        "butter",
+        30
+      ],
+      [
+        "sour-cream",
+        100
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {rice} until fragrant.",
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {carrot} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {potatoes} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Mix {flour} and half of the {salt} with about 140 ml warm water and knead for 8 minutes. Cover and rest for 30 minutes.",
+      "Chop {lamb} by hand into 5 mm pieces and dice {onion} finely. Mix with {cumin}, {black-pepper} and the remaining salt; the onions keep the filling juicy.",
+      "Roll the dough 2 mm thin, cut 10 cm squares, put a spoonful of filling in each and pinch the corners together over it.",
+      "Steam the manti in an oiled steamer, with space between them, for 40 minutes.",
+      "Brush with melted {butter} and serve with {sour-cream}."
     ]
   },
   {
@@ -242,47 +246,68 @@ KITCHEN.add(
     "name": "Lagman-Style Uzbek Noodles",
     "meal": "big",
     "cuisine": "Uzbek",
-    "time": 44,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "potatoes",
-        2
+        "beef-strips",
+        300
       ],
       [
-        "cumin",
-        3
+        "noodles",
+        250
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "red-pepper",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "2pc"
       ],
       [
         "garlic",
+        "3pc"
+      ],
+      [
+        "cumin",
         2
       ],
       [
-        "oil",
+        "tomato-paste",
         20
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "beef-stock",
+        250
+      ],
+      [
+        "cilantro",
+        15
       ],
       [
         "salt",
         3
       ],
       [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
+        "black-pepper",
         1
-      ],
-      [
-        "carrot",
-        2
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {cumin} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir well so the ingredients are evenly coated.",
-      "Add the {garlic} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Slice {onion}, {red-pepper} and {tomato}; crush {garlic}.",
+      "Heat {oil} in a wide pan and sear {beef-strips} over high heat for 3 minutes. Add the onion and red pepper and cook 5 minutes.",
+      "Stir in garlic, {cumin} and {tomato-paste}, then add the tomato, {beef-stock}, {salt} and {black-pepper} and simmer for 15 minutes into a thick sauce.",
+      "Cook {noodles} in boiling water as the packet directs and drain.",
+      "Pour the sauce over the noodles, scatter chopped {cilantro} and toss at the table."
     ]
   },
   {
@@ -327,46 +352,41 @@ KITCHEN.add(
   {
     "id": "uzbek-achichuk-tomato-salad",
     "name": "Uzbek Achichuk Tomato Salad",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Uzbek",
-    "time": 58,
+    "time": 20,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "tomato",
+        "4pc"
       ],
       [
-        "potatoes",
-        2
+        "red-onion",
+        "1pc"
       ],
       [
-        "cumin",
-        3
+        "green-chilli",
+        "1pc"
       ],
       [
-        "garlic",
-        2
-      ],
-      [
-        "oil",
-        20
+        "cilantro",
+        15
       ],
       [
         "salt",
-        3
+        2
       ],
       [
-        "beef-chuck",
-        450
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {potatoes} until fragrant.",
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {cumin} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Slice {red-onion} into very thin half-moons and soak in cold water for 10 minutes to soften its sharpness; drain well.",
+      "Slice {tomato} very thinly and finely chop {green-chilli}.",
+      "Layer the tomatoes and onion on a plate, scatter the chilli, and season with {salt} and {black-pepper}. Let it stand for 10 minutes so the juices run.",
+      "Top with chopped {cilantro} and serve as a side with rice or grilled meat."
     ]
   },
   {
@@ -374,47 +394,56 @@ KITCHEN.add(
     "name": "Dimlama Vegetable and Beef Stew",
     "meal": "big",
     "cuisine": "Uzbek",
-    "time": 65,
+    "time": 150,
     "serves": 4,
     "ing": [
       [
         "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
+        400
       ],
       [
         "potatoes",
-        2
+        400
       ],
       [
-        "cumin",
-        3
+        "carrot",
+        "2pc"
       ],
       [
-        "garlic",
-        2
+        "cabbage",
+        300
+      ],
+      [
+        "onion",
+        "2pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "red-pepper",
+        "1pc"
       ],
       [
         "oil",
-        20
+        30
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {onion} until fragrant.",
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {carrot} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Cut {beef-chuck} into 4 cm pieces. Slice {onion} into rings, thickly slice {carrot}, quarter {potatoes}, cut {cabbage} into wedges and slice {tomato} and {red-pepper}.",
+      "Heat {oil} in a wide heavy pot and brown the beef for 8 minutes. Cover with half of the onion and sprinkle with a little of the {salt} and {black-pepper}.",
+      "Layer, without stirring: carrots, potatoes, cabbage, red pepper, the remaining onion and finally the tomato slices, seasoning each layer lightly.",
+      "Add 100 ml water, cover tightly and cook on the lowest heat for 1 hour 45 minutes. Do not stir; the vegetables cook in the steam and the meat juices.",
+      "Serve each portion with the juices from the bottom of the pot."
     ]
   },
   {
@@ -422,39 +451,48 @@ KITCHEN.add(
     "name": "Uzbek Pumpkin Soup",
     "meal": "big",
     "cuisine": "Uzbek",
-    "time": 36,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "carrot",
-        2
+        "pumpkin",
+        700
       ],
       [
-        "rice",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "potatoes",
-        2
+        "butter",
+        30
+      ],
+      [
+        "vegetable-stock",
+        800
       ],
       [
         "cumin",
-        3
-      ],
-      [
-        "garlic",
         2
       ],
       [
-        "oil",
-        20
+        "black-pepper",
+        1
+      ],
+      [
+        "salt",
+        2
+      ],
+      [
+        "sour-cream",
+        80
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {rice} until fragrant.",
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {carrot} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {potatoes} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Peel {pumpkin} and cut into 3 cm cubes; chop {onion}.",
+      "Melt {butter} in a pot and cook the onion for 5 minutes. Add the pumpkin and {cumin} and stir for 3 minutes.",
+      "Add {vegetable-stock}, cover and simmer for 20 minutes until the pumpkin is very soft.",
+      "Blend until smooth, season with {salt} and {black-pepper}, and reheat gently.",
+      "Serve in bowls with a spoonful of {sour-cream}."
     ]
   },
   {
@@ -462,43 +500,48 @@ KITCHEN.add(
     "name": "Uzbek Chickpea and Rice Pilaf",
     "meal": "big",
     "cuisine": "Uzbek",
-    "time": 43,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "potatoes",
-        2
+        "rice",
+        250
       ],
       [
-        "cumin",
-        3
+        "chickpeas",
+        240
       ],
       [
-        "garlic",
-        2
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "beef-chuck",
-        450
+        "carrot",
+        200
       ],
       [
         "onion",
-        1
+        "1pc"
+      ],
+      [
+        "garlic",
+        "4pc"
+      ],
+      [
+        "cumin",
+        4
+      ],
+      [
+        "oil",
+        60
+      ],
+      [
+        "salt",
+        4
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {cumin} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir well so the ingredients are evenly coated.",
-      "Add the {garlic} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Rinse {rice} and leave it in cold water for 20 minutes. Slice {onion} and cut {carrot} into matchsticks.",
+      "Heat {oil} in a heavy pot, cook the onion for 8 minutes until golden, then add the carrot and {cumin} and cook 6 minutes.",
+      "Add half of the {salt} and 200 ml water, cover and simmer for 10 minutes.",
+      "Drain the rice and spread it over the vegetables. Drain {chickpeas} and scatter them on top, tuck in the whole {garlic} cloves, add the remaining salt and hot water to 1.5 cm above the rice.",
+      "Cook uncovered until the water is absorbed, then cover and steam on the lowest heat for 20 minutes. Mix gently and serve."
     ]
   },
   {
@@ -545,44 +588,52 @@ KITCHEN.add(
     "name": "Uzbek Pumpkin and Herb Dumplings",
     "meal": "big",
     "cuisine": "Uzbek",
-    "time": 32,
+    "time": 75,
     "serves": 4,
     "ing": [
       [
-        "rice",
+        "flour",
         250
       ],
       [
-        "potatoes",
-        2
+        "eggs",
+        "1pc"
       ],
       [
-        "cumin",
-        3
+        "salt",
+        4
       ],
       [
-        "garlic",
-        2
+        "pumpkin",
+        300
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "dill",
+        15
       ],
       [
         "oil",
         20
       ],
       [
-        "salt",
-        3
+        "yogurt",
+        150
       ],
       [
-        "beef-chuck",
-        450
+        "garlic",
+        "1pc"
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {potatoes} until fragrant.",
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Mix {flour}, {eggs} and half of the {salt} with about 90 ml water and knead into a firm dough. Rest 30 minutes.",
+      "Grate {pumpkin}, finely chop {onion} and cook both in {oil} for 10 minutes until soft and dry. Stir in half of the chopped {dill} and the remaining salt; cool.",
+      "Roll the dough 2 mm thin, cut 6 cm rounds, fill and pinch into little dumplings.",
+      "Boil in salted water in batches for 5 minutes after they float; drain.",
+      "Crush {garlic} into {yogurt}, spoon over the dumplings and finish with the remaining dill."
     ]
   },
   {
@@ -676,44 +727,52 @@ KITCHEN.add(
     "name": "Uzbek Spiced Potato and Beef Skillet",
     "meal": "big",
     "cuisine": "Uzbek",
-    "time": 53,
+    "time": 70,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "beef-chuck",
+        400
       ],
       [
         "potatoes",
-        2
+        600
+      ],
+      [
+        "onion",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "4pc"
       ],
       [
         "cumin",
         3
       ],
       [
-        "garlic",
+        "coriander-seeds",
         2
       ],
       [
         "oil",
-        20
+        60
       ],
       [
         "salt",
-        3
+        4
       ],
       [
-        "beef-chuck",
-        450
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {potatoes} until fragrant.",
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Cut {beef-chuck} into 3 cm cubes. Peel {potatoes} and cut into 3 cm chunks. Slice {onion}.",
+      "Heat half of the {oil} in a wide heavy pan and fry the potatoes for 15 minutes, turning, until golden. Remove.",
+      "Add the remaining oil and brown the beef for 10 minutes, then add the onion and cook 6 minutes.",
+      "Stir in {cumin}, crushed {coriander-seeds}, {salt} and {black-pepper}, add 150 ml water and the whole {garlic} cloves, cover and simmer for 25 minutes.",
+      "Return the potatoes, cover and cook 10 minutes more until the beef is tender and the potatoes have absorbed the juices."
     ]
   },
   {
@@ -807,7 +866,7 @@ KITCHEN.add(
     "name": "Uzbek Apricot Rice with Nuts",
     "meal": "big",
     "cuisine": "Uzbek",
-    "time": 38,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
@@ -815,36 +874,31 @@ KITCHEN.add(
         250
       ],
       [
-        "potatoes",
-        2
+        "dried-apricots",
+        80
       ],
       [
-        "cumin",
-        3
+        "almonds",
+        40
       ],
       [
-        "garlic",
-        2
+        "saffron",
+        0.5
       ],
       [
-        "oil",
-        20
+        "butter",
+        40
       ],
       [
         "salt",
         3
-      ],
-      [
-        "beef-chuck",
-        450
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {potatoes} until fragrant.",
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Steep {saffron} in 3 tablespoons of hot water for 10 minutes. Rinse {rice}, chop {dried-apricots} and roughly chop {almonds}.",
+      "Melt half of the {butter} in a pot and toast the almonds for 2 minutes; set aside.",
+      "Add the rice and {salt}, stir for 1 minute, then add 450 ml water and the saffron water. Bring to a boil, cover and cook on the lowest heat for 15 minutes.",
+      "Scatter the apricots over, re-cover and rest 10 minutes. Fluff with the remaining butter and top with the almonds."
     ]
   }
 ]
