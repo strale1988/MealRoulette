@@ -57,7 +57,7 @@ KITCHEN.add(
     "name": "Lu rou fan (Taiwanese braised pork rice)",
     "meal": "big",
     "cuisine": "Taiwanese",
-    "time": 75,
+    "time": 85,
     "serves": 2,
     "ing": [
       [
@@ -78,11 +78,11 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "star-anise",
-        100
+        2
       ],
       [
         "water",
@@ -102,7 +102,7 @@ KITCHEN.add(
       ],
       [
         "salt",
-        3
+        1
       ],
       [
         "black-pepper",
@@ -114,11 +114,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {shallot} and {garlic}.",
-      "Add {pork-belly} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {water} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Dice pork belly small and render until lightly golden, add soy sauces, shallot, garlic and star anise, then braise until the sauce is glossy and spoon over rice with a marinated egg.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Boil {eggs} for 8 minutes, cool and peel. Cut {pork-belly} into 1 cm strips. Slice {shallot} thinly and crush {garlic}.",
+      "Fry the shallots in {oil} over medium heat for 8 minutes until crisp and golden; lift half out. Add the pork and brown for 6 minutes, then garlic for 1 minute.",
+      "Stir in {soy-sauce}, {dark-soy-sauce}, {brown-sugar}, {star-anise}, {black-pepper}, {salt} and {water}; add the eggs.",
+      "Cover and simmer very gently for 1 hour until the pork is tender and the sauce is thick and glossy.",
+      "Cook {rice} in 360 ml water, covered, on low heat for 15 minutes and serve topped with pork, sauce, an egg and the crisp shallots."
     ]
   },
   {
@@ -588,7 +588,7 @@ KITCHEN.add(
     "ing": [
       [
         "oyster-mushrooms",
-        100
+        250
       ],
       [
         "soy-sauce",
@@ -596,51 +596,42 @@ KITCHEN.add(
       ],
       [
         "dark-soy-sauce",
-        15
+        10
       ],
       [
         "sesame-oil",
-        10
+        15
       ],
       [
         "garlic",
-        3
+        "6pc"
       ],
       [
         "ginger",
-        12
+        20
       ],
       [
         "basil",
-        10
+        15
       ],
       [
         "sugar",
-        35
-      ],
-      [
-        "water",
-        350
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
+        10
       ],
       [
         "oil",
         15
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {garlic} and {ginger}.",
-      "Add {oyster-mushrooms} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {water} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Fry garlic and ginger in sesame oil, add mushrooms and soy sauces and reduce until glossy; toss basil through only once the pan is off the heat.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Tear {oyster-mushrooms} into strips. Slice {ginger} and leave {garlic} cloves whole.",
+      "Heat {sesame-oil} with {oil} in a wok, fry the ginger and garlic for 2 minutes until golden, then add the mushrooms and fry on high heat for 5 minutes until browned.",
+      "Add {soy-sauce}, {dark-soy-sauce}, {sugar} and {black-pepper} and cook 4 minutes until the sauce reduces to a sticky glaze.",
+      "Toss in {basil} off the heat until it wilts and serve at once."
     ]
   },
   {
@@ -726,91 +717,91 @@ KITCHEN.add(
     "name": "Taiwanese Popcorn Chicken",
     "meal": "big",
     "cuisine": "Taiwanese",
-    "time": 32,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
-      ],
-      [
-        "garlic",
-        2
-      ],
-      [
-        "spring-onion",
-        2
-      ],
-      [
-        "carrot",
-        1
-      ],
-      [
-        "sesame-oil",
-        10
-      ],
-      [
-        "salt",
-        2
-      ],
-      [
         "chicken-thigh",
-        400
-      ]
-    ],
-    "steps": [
-      "Warm the {sesame-oil} in a pan and soften the {garlic} until fragrant.",
-      "Add the {ginger} and turn to coat in the seasoning.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "taiwanese-scallion-pancakes",
-    "name": "Taiwanese Scallion Pancakes",
-    "meal": "big",
-    "cuisine": "Taiwanese",
-    "time": 39,
-    "serves": 4,
-    "ing": [
-      [
-        "carrot",
-        1
+        600
       ],
       [
-        "sesame-oil",
-        10
-      ],
-      [
-        "salt",
-        2
-      ],
-      [
-        "chicken-thigh",
-        400
-      ],
-      [
-        "rice",
-        250
+        "cornstarch",
+        80
       ],
       [
         "soy-sauce",
         25
       ],
       [
-        "ginger",
-        10
+        "garlic",
+        "3pc"
       ],
       [
-        "garlic",
+        "black-pepper",
         2
+      ],
+      [
+        "sugar",
+        5
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "basil",
+        20
+      ],
+      [
+        "oil",
+        300
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {carrot} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Cut {chicken-thigh} into 2.5 cm pieces. Mix with {soy-sauce}, crushed {garlic}, {black-pepper}, {sugar}, {salt} and {eggs}; marinate 20 minutes.",
+      "Toss the chicken in {cornstarch} so each piece is thickly coated.",
+      "Heat {oil} in a deep pan to 180 °C and fry in batches for 4 minutes until golden and crisp; drain.",
+      "Fry {basil} leaves for 20 seconds until crisp, and toss with the hot chicken and a pinch more salt."
+    ]
+  },
+  {
+    "id": "taiwanese-scallion-pancakes",
+    "name": "Taiwanese Scallion Pancakes",
+    "meal": "morning,bite",
+    "cuisine": "Taiwanese",
+    "time": 50,
+    "serves": 4,
+    "ing": [
+      [
+        "flour",
+        300
+      ],
+      [
+        "spring-onion",
+        "6pc"
+      ],
+      [
+        "oil",
+        60
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "sesame-oil",
+        10
+      ]
+    ],
+    "steps": [
+      "Mix {flour} with 160 ml boiling water and half of the {salt}, stir, then knead for 5 minutes until smooth. Rest, covered, for 30 minutes.",
+      "Slice {spring-onion}. Divide the dough into 4, roll each into a very thin round, brush with {sesame-oil}, sprinkle with spring onion and the remaining salt.",
+      "Roll up into a log, coil into a snail and flatten with a rolling pin into a 15 cm disc.",
+      "Pan-fry each in {oil} over medium heat for 3 minutes per side until golden and flaky. Cut into wedges and serve hot."
     ]
   },
   {
@@ -857,43 +848,50 @@ KITCHEN.add(
     "name": "Taiwanese Ginger Garlic Noodle Bowl",
     "meal": "big",
     "cuisine": "Taiwanese",
-    "time": 53,
+    "time": 25,
     "serves": 4,
     "ing": [
       [
+        "egg-noodles",
+        250
+      ],
+      [
         "ginger",
-        10
+        20
       ],
       [
         "garlic",
-        2
+        "4pc"
       ],
       [
         "spring-onion",
-        2
+        "4pc"
       ],
       [
-        "carrot",
-        1
+        "soy-sauce",
+        30
       ],
       [
         "sesame-oil",
-        10
+        15
       ],
       [
-        "salt",
-        2
+        "pak-choi",
+        150
       ],
       [
-        "chicken-thigh",
-        400
+        "sugar",
+        5
+      ],
+      [
+        "chilli-flakes",
+        1
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a pan and soften the {garlic} until fragrant.",
-      "Add the {ginger} and turn to coat in the seasoning.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Cook {egg-noodles} in boiling water as the packet directs, adding {pak-choi} for the last 2 minutes; drain and keep a splash of cooking water.",
+      "Grate {ginger}, crush {garlic}, slice {spring-onion}. Mix them with {soy-sauce}, {sesame-oil}, {sugar} and {chilli-flakes}.",
+      "Toss the hot noodles and pak choi with the sauce and a splash of the cooking water until glossy. Serve at once."
     ]
   },
   {
@@ -901,47 +899,62 @@ KITCHEN.add(
     "name": "Taiwanese Soy and Sesame Tofu",
     "meal": "big",
     "cuisine": "Taiwanese",
-    "time": 60,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "carrot",
-        1
-      ],
-      [
-        "sesame-oil",
-        10
-      ],
-      [
-        "salt",
-        2
-      ],
-      [
-        "chicken-thigh",
+        "tofu",
         400
       ],
       [
-        "rice",
-        250
+        "soy-sauce",
+        30
       ],
       [
-        "soy-sauce",
-        25
+        "sesame-oil",
+        15
+      ],
+      [
+        "sesame-seeds",
+        10
+      ],
+      [
+        "garlic",
+        "3pc"
       ],
       [
         "ginger",
         10
       ],
       [
-        "garlic",
-        2
+        "spring-onion",
+        "3pc"
+      ],
+      [
+        "basil",
+        10
+      ],
+      [
+        "brown-sugar",
+        10
+      ],
+      [
+        "rice-vinegar",
+        10
+      ],
+      [
+        "cornstarch",
+        20
+      ],
+      [
+        "oil",
+        40
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {carrot} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Press {tofu} for 10 minutes, cube and toss with {cornstarch}. Fry in {oil} for 8 minutes until golden; lift out.",
+      "Fry crushed {garlic} and grated {ginger} for 30 seconds, add {soy-sauce}, {brown-sugar}, {rice-vinegar} and 60 ml water and simmer 1 minute.",
+      "Return the tofu and toss to glaze, then add {basil}, {sesame-oil}, {sesame-seeds} and sliced {spring-onion} off the heat."
     ]
   },
   {
@@ -988,43 +1001,59 @@ KITCHEN.add(
     "name": "Taiwanese Coconut Vegetable Curry",
     "meal": "big",
     "cuisine": "Taiwanese",
-    "time": 38,
+    "time": 40,
     "serves": 4,
     "ing": [
+      [
+        "sweet-potato",
+        300
+      ],
+      [
+        "carrot",
+        "2pc"
+      ],
+      [
+        "cabbage",
+        200
+      ],
+      [
+        "coconut-milk",
+        300
+      ],
+      [
+        "curry-powder",
+        12
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
       [
         "ginger",
         10
       ],
       [
-        "garlic",
-        2
-      ],
-      [
-        "spring-onion",
-        2
-      ],
-      [
-        "carrot",
-        1
-      ],
-      [
-        "sesame-oil",
+        "soy-sauce",
         10
+      ],
+      [
+        "oil",
+        20
       ],
       [
         "salt",
         2
-      ],
-      [
-        "chicken-thigh",
-        400
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a pan and soften the {garlic} until fragrant.",
-      "Add the {ginger} and turn to coat in the seasoning.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Cut {sweet-potato} and {carrot} into 2.5 cm chunks and shred {cabbage}. Chop {onion}, crush {garlic}, grate {ginger}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic, ginger and {curry-powder} for 1 minute.",
+      "Add the sweet potato, carrot, {coconut-milk}, {soy-sauce}, {salt} and 100 ml water; simmer for 12 minutes.",
+      "Add the cabbage and cook 8 minutes until all the vegetables are tender and the sauce is thick."
     ]
   }
 ]

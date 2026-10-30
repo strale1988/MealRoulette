@@ -6,7 +6,7 @@ KITCHEN.add(
     "name": "Nihari (slow-braised beef with warming spices)",
     "meal": "big",
     "cuisine": "Pakistani",
-    "time": 180,
+    "time": 190,
     "serves": 2,
     "ing": [
       [
@@ -19,11 +19,11 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
-        12
+        20
       ],
       [
         "cumin",
@@ -43,7 +43,7 @@ KITCHEN.add(
       ],
       [
         "flour",
-        120
+        25
       ],
       [
         "lemon",
@@ -51,7 +51,7 @@ KITCHEN.add(
       ],
       [
         "oil",
-        15
+        40
       ],
       [
         "salt",
@@ -63,11 +63,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {beef-chuck} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Brown the beef, bloom the ground spices in the fat and braise very slowly until spoon-tender; use a little flour slurry at the end for the traditional silky gravy.",
-      "Finish with a little {lemon} if needed, taste for seasoning and serve while the texture is at its best."
+      "Cut {beef-chuck} into 4 cm chunks. Slice {onion}; crush {garlic}; cut half of the {ginger} into thin matchsticks and grate the rest.",
+      "Heat {oil} in a heavy pot and fry the onion for 12 minutes until deep golden. Add garlic, grated ginger, {cumin}, {ground-coriander}, {paprika}, {salt} and {black-pepper} and stir for 2 minutes.",
+      "Add the beef and brown for 8 minutes, then pour in {beef-stock} and 200 ml water. Cover and simmer on the lowest heat for 2 hours 15 minutes until the beef is melting-tender.",
+      "Whisk {flour} with 100 ml cold water until smooth, stir it into the pot and simmer 10 minutes until the gravy is glossy and thick.",
+      "Serve topped with the ginger matchsticks and a squeeze of {lemon}."
     ]
   },
   {
@@ -135,7 +135,7 @@ KITCHEN.add(
     "name": "Haleem (slow-cooked beef, lentil and barley porridge)",
     "meal": "big",
     "cuisine": "Pakistani",
-    "time": 150,
+    "time": 190,
     "serves": 2,
     "ing": [
       [
@@ -148,11 +148,11 @@ KITCHEN.add(
       ],
       [
         "red-lentils",
-        180
+        80
       ],
       [
         "green-lentils",
-        180
+        80
       ],
       [
         "onion",
@@ -160,7 +160,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -176,7 +176,7 @@ KITCHEN.add(
       ],
       [
         "oil",
-        15
+        40
       ],
       [
         "salt",
@@ -188,11 +188,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {beef-chuck} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Cook beef, barley and lentils together at a low simmer, stirring and mashing periodically until the grains and meat form a thick porridge; finish with ginger and fried onion if desired.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cut {beef-chuck} into 4 cm chunks. Slice {onion}. Rinse {barley}, {red-lentils} and {green-lentils} together.",
+      "Heat {oil} in a heavy pot and fry the onion for 12 minutes until dark golden; lift out half for garnish. Add crushed {garlic}, grated {ginger}, {cumin}, {salt} and {black-pepper} to the pot for 1 minute.",
+      "Add the beef, {beef-stock} and 400 ml water, cover and simmer for 1 hour 15 minutes.",
+      "Add the barley and lentils and simmer for 50 minutes more, stirring often, until everything is very soft.",
+      "Beat the stew hard with a wooden spoon (or mash with a potato masher) until the meat shreds into a thick, smooth porridge. Serve topped with the reserved fried onion."
     ]
   },
   {
@@ -200,7 +200,7 @@ KITCHEN.add(
     "name": "Aloo gosht (Pakistani meat and potato curry)",
     "meal": "big",
     "cuisine": "Pakistani",
-    "time": 75,
+    "time": 80,
     "serves": 2,
     "ing": [
       [
@@ -253,11 +253,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {lamb} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Brown the lamb with onion and ginger, cook the tomato-spice masala until glossy, then add potatoes and simmer until both meat and potatoes are tender.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cut {lamb} into 3 cm pieces, slice {onion}, chop {tomato}, crush {garlic}, grate {ginger} and cut {potatoes} into 3 cm chunks.",
+      "Heat {oil} in a heavy pot and fry the onion for 10 minutes until golden. Add garlic, ginger, {cumin}, {salt} and {black-pepper} for 1 minute.",
+      "Add the lamb and brown for 6 minutes, then the tomato and cook 5 minutes until it collapses.",
+      "Pour in {beef-stock}, cover and simmer for 35 minutes. Add the potatoes and cook 20 minutes more until tender.",
+      "Stir in {garam-masala} and simmer uncovered for 5 minutes to thicken the gravy."
     ]
   },
   {
@@ -306,11 +306,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {garlic} and {ginger}.",
-      "Add {chicken-thigh} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {tomato} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Cook chicken uncovered in a wide karahi-style pan so the tomato sauce reduces quickly; add ginger matchsticks and green chilli near the end for a fresh aroma.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cut {chicken-thigh} into 4 cm pieces. Chop {tomato}, crush {garlic}, cut {ginger} into matchsticks and slice {green-chilli}.",
+      "Heat {oil} in a karahi or wok over high heat. Add the chicken and sear for 5 minutes, then the garlic and half of the ginger for 1 minute.",
+      "Add the tomato, {ground-coriander}, {salt} and {black-pepper} and cook on medium-high heat for 15 minutes, stirring, until the tomatoes break down and the oil separates.",
+      "Cover and cook 5 minutes until the chicken is tender. Finish with the green chilli and remaining ginger and serve straight from the pan."
     ]
   },
   {
@@ -318,7 +317,7 @@ KITCHEN.add(
     "name": "Saag gosht (lamb cooked with leafy greens)",
     "meal": "big",
     "cuisine": "Pakistani",
-    "time": 90,
+    "time": 100,
     "serves": 2,
     "ing": [
       [
@@ -371,11 +370,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {lamb} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Braise lamb with the spice base until tender, then fold in chopped greens and cook until they melt into the sauce without losing all their colour.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cut {lamb} into 3 cm pieces. Slice {onion}; crush {garlic}; grate {ginger}; blanch {spinach} in boiling water for 1 minute, drain and chop finely.",
+      "Heat {oil} in a heavy pot and fry the onion for 10 minutes until golden. Add garlic, ginger, {cumin}, {turmeric}, {salt} and {black-pepper} for 1 minute.",
+      "Add the lamb and brown for 6 minutes, then {beef-stock}. Cover and simmer for 50 minutes until the lamb is tender.",
+      "Stir in the spinach and simmer uncovered for 10 minutes until the gravy is thick and dark green. Finish with {garam-masala}."
     ]
   },
   {
@@ -383,7 +381,7 @@ KITCHEN.add(
     "name": "Dum ka qeema (slow-steamed spiced minced beef)",
     "meal": "big",
     "cuisine": "Pakistani",
-    "time": 45,
+    "time": 50,
     "serves": 2,
     "ing": [
       [
@@ -432,11 +430,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {beef-mince} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {yogurt} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Combine the mince with yogurt and toasted spices, cover tightly and cook over low heat so it steams in its own juices; uncover to reduce any excess moisture.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Slice {onion}, crush {garlic} and grate {ginger}.",
+      "Heat {oil} in a heavy pot and fry the onion for 10 minutes until golden. Add garlic, ginger, {cumin}, {cardamom}, {salt} and {black-pepper} for 1 minute.",
+      "Add {beef-mince} and brown for 8 minutes, breaking it up, then whisk {yogurt} and stir it in, a spoonful at a time.",
+      "Cover tightly and cook on the lowest heat (dum) for 20 minutes until the mince is tender and the oil has risen to the surface.",
+      "Stir in {garam-masala} and serve."
     ]
   },
   {
@@ -444,7 +442,7 @@ KITCHEN.add(
     "name": "Murgh cholay (chicken and chickpea curry)",
     "meal": "big",
     "cuisine": "Pakistani",
-    "time": 50,
+    "time": 55,
     "serves": 2,
     "ing": [
       [
@@ -497,11 +495,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {chicken-thigh} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {chicken-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Cook the onion-tomato masala until the oil separates, add {chickpeas} and chicken, then simmer until the sauce thickens and the {chickpeas} absorb the spices.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cut {chicken-thigh} into 3 cm pieces. Drain {chickpeas}. Slice {onion}, chop {tomato}, crush {garlic}, grate {ginger}.",
+      "Heat {oil} in a heavy pot and fry the onion for 8 minutes until golden. Add garlic, ginger, {cumin}, {salt} and {black-pepper} for 1 minute, then the tomato for 6 minutes.",
+      "Add the chicken and brown for 5 minutes, then pour in {chicken-stock}. Cover and simmer for 20 minutes.",
+      "Add {chickpeas} and {garam-masala} and simmer uncovered for 10 minutes until the gravy is thick."
     ]
   },
   {
@@ -664,43 +661,67 @@ KITCHEN.add(
     "name": "Pakistani Chana Masala",
     "meal": "big",
     "cuisine": "Pakistani",
-    "time": 37,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "soy-sauce",
-        25
+        "chickpeas",
+        480
       ],
       [
-        "ginger",
-        10
+        "onion",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "3pc"
       ],
       [
         "garlic",
+        "3pc"
+      ],
+      [
+        "ginger",
+        15
+      ],
+      [
+        "cumin",
         2
       ],
       [
-        "spring-onion",
+        "ground-coriander",
         2
       ],
       [
-        "carrot",
-        1
+        "garam-masala",
+        4
       ],
       [
-        "sesame-oil",
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "cilantro",
         10
       ],
       [
+        "oil",
+        30
+      ],
+      [
         "salt",
-        2
+        3
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a heavy pan and soften the {ginger} until fragrant.",
-      "Add the {soy-sauce} and turn to coat in the seasoning.",
-      "Add the {garlic} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Drain {chickpeas}. Chop {onion} and {tomato}; crush {garlic}; grate {ginger}; slice {green-chilli}.",
+      "Cook the onion in {oil} for 8 minutes until golden, add garlic, ginger, {cumin}, {ground-coriander} and chilli for 1 minute.",
+      "Add the tomato and {salt} and cook for 8 minutes until jammy.",
+      "Add {chickpeas} and 150 ml water and simmer for 12 minutes, mashing a few to thicken. Stir in {garam-masala}, the juice of {lemon} and chopped {cilantro}."
     ]
   },
   {
@@ -747,43 +768,67 @@ KITCHEN.add(
     "name": "Pakistani Seekh Kebab",
     "meal": "big",
     "cuisine": "Pakistani",
-    "time": 32,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "beef-mince",
+        500
+      ],
+      [
+        "onion",
+        "1pc"
       ],
       [
         "garlic",
+        "3pc"
+      ],
+      [
+        "ginger",
+        15
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "cumin",
         2
       ],
       [
-        "spring-onion",
+        "ground-coriander",
         2
       ],
       [
-        "carrot",
-        1
+        "garam-masala",
+        4
       ],
       [
-        "sesame-oil",
+        "cilantro",
+        15
+      ],
+      [
+        "mint",
         10
       ],
       [
-        "salt",
-        2
+        "yogurt",
+        100
       ],
       [
-        "chicken-thigh",
-        400
+        "oil",
+        20
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a pan and soften the {garlic} until fragrant.",
-      "Add the {ginger} and turn to coat in the seasoning.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Grate {onion} and squeeze out all the liquid. Finely chop {green-chilli}, {cilantro} and half of the {mint}; crush {garlic}; grate {ginger}.",
+      "Knead {beef-mince} with the onion, garlic, ginger, chilli, herbs, {cumin}, {ground-coriander}, {garam-masala} and {salt} for 3 minutes until sticky. Rest 20 minutes.",
+      "Mould the mixture around 8 skewers into 12 cm sausages, brush with {oil}, and grill or pan-sear over high heat for 12–15 minutes, turning, until browned and cooked through.",
+      "Stir the remaining chopped {mint} into {yogurt} and serve alongside."
     ]
   },
   {
@@ -791,47 +836,58 @@ KITCHEN.add(
     "name": "Pakistani Daal Tadka",
     "meal": "big",
     "cuisine": "Pakistani",
-    "time": 39,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "carrot",
-        1
-      ],
-      [
-        "sesame-oil",
-        10
-      ],
-      [
-        "salt",
-        2
-      ],
-      [
-        "chicken-thigh",
-        400
-      ],
-      [
-        "rice",
+        "red-lentils",
         250
       ],
       [
-        "soy-sauce",
-        25
+        "onion",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "4pc"
       ],
       [
         "ginger",
         10
       ],
       [
-        "garlic",
+        "turmeric",
         2
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "chilli-flakes",
+        1
+      ],
+      [
+        "butter",
+        30
+      ],
+      [
+        "cilantro",
+        10
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {carrot} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Rinse {red-lentils}. Simmer with 750 ml water, {turmeric}, chopped {onion}, chopped {tomato}, grated {ginger} and {salt} for 22 minutes until soft and thick; whisk smooth.",
+      "For the tadka, melt {butter} in a small pan until sizzling, add {cumin} for 20 seconds, then sliced {garlic} until golden (about 1 minute) and {chilli-flakes} for 10 seconds.",
+      "Pour the sizzling tadka over the dal, scatter chopped {cilantro} and serve."
     ]
   },
   {
@@ -878,43 +934,59 @@ KITCHEN.add(
     "name": "Pakistani Soy and Sesame Tofu",
     "meal": "big",
     "cuisine": "Pakistani",
-    "time": 53,
+    "time": 30,
     "serves": 4,
     "ing": [
+      [
+        "tofu",
+        400
+      ],
+      [
+        "soy-sauce",
+        30
+      ],
+      [
+        "sesame-oil",
+        15
+      ],
+      [
+        "sesame-seeds",
+        15
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
       [
         "ginger",
         10
       ],
       [
-        "garlic",
-        2
+        "green-chilli",
+        "1pc"
       ],
       [
         "spring-onion",
-        2
+        "3pc"
       ],
       [
-        "carrot",
-        1
+        "cornstarch",
+        20
       ],
       [
-        "sesame-oil",
+        "oil",
+        40
+      ],
+      [
+        "vinegar",
         10
-      ],
-      [
-        "salt",
-        2
-      ],
-      [
-        "chicken-thigh",
-        400
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a pan and soften the {garlic} until fragrant.",
-      "Add the {ginger} and turn to coat in the seasoning.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Press {tofu} for 10 minutes, cut into 2 cm cubes and toss with {cornstarch}.",
+      "Fry in {oil} in a wide pan over medium-high heat for 8 minutes, turning, until crisp on all sides. Lift out.",
+      "Fry crushed {garlic}, grated {ginger} and sliced {green-chilli} for 1 minute, then add {soy-sauce}, {vinegar} and 50 ml water.",
+      "Return the tofu and toss until glazed, then finish with {sesame-oil}, {sesame-seeds} and sliced {spring-onion}."
     ]
   },
   {
@@ -922,47 +994,60 @@ KITCHEN.add(
     "name": "Pakistani Chicken with Scallion Rice",
     "meal": "big",
     "cuisine": "Pakistani",
-    "time": 60,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "carrot",
-        1
-      ],
-      [
-        "sesame-oil",
-        10
-      ],
-      [
-        "salt",
-        2
-      ],
-      [
         "chicken-thigh",
-        400
+        600
       ],
       [
         "rice",
         250
       ],
       [
-        "soy-sauce",
-        25
+        "spring-onion",
+        "4pc"
       ],
       [
         "ginger",
-        10
+        15
       ],
       [
         "garlic",
+        "3pc"
+      ],
+      [
+        "cumin",
         2
+      ],
+      [
+        "garam-masala",
+        3
+      ],
+      [
+        "chicken-stock",
+        450
+      ],
+      [
+        "cilantro",
+        10
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {carrot} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Season {chicken-thigh} with {salt} and half of the {garam-masala}. Slice {spring-onion}; crush {garlic}; grate {ginger}. Rinse {rice}.",
+      "Brown the chicken in {oil} for 5 minutes per side. Remove.",
+      "Cook half of the spring onion, garlic, ginger and {cumin} in the pot for 2 minutes, then stir in the rice for 1 minute.",
+      "Add {chicken-stock} and the remaining garam masala, nestle the chicken on top, cover and cook on low heat for 22 minutes.",
+      "Rest 5 minutes and scatter the remaining spring onion and chopped {cilantro}."
     ]
   },
   {
@@ -1007,45 +1092,48 @@ KITCHEN.add(
   {
     "id": "pakistani-sesame-cucumber-salad",
     "name": "Pakistani Sesame Cucumber Salad",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Pakistani",
-    "time": 38,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "cucumber",
+        "2pc"
       ],
       [
-        "garlic",
+        "yogurt",
+        100
+      ],
+      [
+        "sesame-seeds",
+        15
+      ],
+      [
+        "cumin",
         2
       ],
       [
-        "spring-onion",
-        2
+        "lemon",
+        "1pc"
       ],
       [
-        "carrot",
-        1
-      ],
-      [
-        "sesame-oil",
+        "cilantro",
         10
+      ],
+      [
+        "green-chilli",
+        "1pc"
       ],
       [
         "salt",
         2
-      ],
-      [
-        "chicken-thigh",
-        400
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a pan and soften the {garlic} until fragrant.",
-      "Add the {ginger} and turn to coat in the seasoning.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Dice {cucumber}, finely chop {green-chilli} and {cilantro}. Toast {sesame-seeds} and {cumin} in a dry pan for 1 minute.",
+      "Whisk {yogurt} with the juice of {lemon} and {salt}.",
+      "Fold the cucumber, chilli and cilantro into the yogurt and scatter the toasted seeds and cumin on top."
     ]
   }
 ]

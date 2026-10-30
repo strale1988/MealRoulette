@@ -192,32 +192,52 @@ KITCHEN.add(
     "name": "Tiguadege Na-Inspired Peanut Stew",
     "meal": "big",
     "cuisine": "Malian",
-    "time": 37,
+    "time": 70,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        300
+        "chicken-thigh",
+        600
       ],
       [
         "peanut-butter",
-        50
+        100
       ],
       [
-        "rice",
+        "tomato",
+        "2pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "sweet-potato",
         250
       ],
       [
-        "spinach",
-        150
+        "carrot",
+        "2pc"
       ],
       [
-        "ginger",
-        10
+        "cabbage",
+        200
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "chicken-stock",
+        600
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
@@ -225,11 +245,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {peanut-butter} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {tomato} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Season {chicken-thigh} with {salt}. Chop {onion} and {tomato}; crush {garlic}; cut {sweet-potato}, {carrot} and {cabbage} into large chunks.",
+      "Brown the chicken in {oil} for 4 minutes per side. Add the onion, garlic, tomato and {green-chilli} and cook 8 minutes.",
+      "Whisk {peanut-butter} into {chicken-stock} until smooth and pour in. Cover and simmer for 20 minutes.",
+      "Add the sweet potato, carrot and cabbage and simmer for 25 minutes until tender and the stew is thick. Serve hot."
     ]
   },
   {
@@ -237,48 +256,51 @@ KITCHEN.add(
     "name": "Malian Millet and Vegetable Bowl",
     "meal": "big",
     "cuisine": "Malian",
-    "time": 44,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "rice",
+        "millet",
         250
       ],
       [
-        "spinach",
-        150
+        "carrot",
+        "2pc"
       ],
       [
-        "ginger",
-        10
+        "cabbage",
+        200
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "tomato",
+        "1pc"
+      ],
+      [
+        "cumin",
+        2
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Toast {millet} in a dry pan for 3 minutes, then simmer in 500 ml water with half of the {salt}, covered, for 20 minutes until soft and fluffy.",
+      "Slice {carrot}, shred {cabbage}, chop {onion} and {tomato}, crush {garlic}.",
+      "Cook the onion in {oil} for 4 minutes, add garlic and {cumin}, then the carrot for 5 minutes, the cabbage for 5 minutes and the tomato for 3 minutes with the remaining salt.",
+      "Spoon the millet into bowls and top with the vegetables."
     ]
   },
   {
@@ -325,44 +347,51 @@ KITCHEN.add(
     "name": "Okra and Tomato Sauce with Rice",
     "meal": "big",
     "cuisine": "Malian",
-    "time": 58,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
+        "okra",
+        300
+      ],
+      [
+        "tomato",
+        "3pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "tomato-paste",
+        30
+      ],
+      [
+        "green-chilli",
+        "1pc"
       ],
       [
         "rice",
         250
       ],
       [
-        "spinach",
-        150
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {spinach} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Cook {rice} in 500 ml water with a pinch of {salt}, covered, on low heat for 15 minutes.",
+      "Slice {okra}, chop {onion} and {tomato}, crush {garlic}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic, {green-chilli}, {tomato-paste} and tomato and cook 10 minutes.",
+      "Add the okra, 100 ml water and the remaining salt, cover and simmer for 12 minutes until tender and the sauce is silky. Serve over the rice."
     ]
   },
   {
@@ -370,47 +399,63 @@ KITCHEN.add(
     "name": "Malian Spiced Fish",
     "meal": "big",
     "cuisine": "Malian",
-    "time": 65,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        500
+        "white-fish",
+        600
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "tomato",
-        300
+        "2pc"
       ],
       [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
+        "garlic",
+        "2pc"
       ],
       [
         "ginger",
         10
       ],
       [
+        "cumin",
+        2
+      ],
+      [
+        "paprika",
+        2
+      ],
+      [
+        "black-pepper",
+        1
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "parsley",
+        10
+      ],
+      [
         "oil",
-        20
+        40
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {onion} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Rub {white-fish} with {cumin}, {paprika}, {black-pepper}, crushed {garlic}, grated {ginger} and half of the {salt}; rest 15 minutes.",
+      "Fry the fish in half of the {oil} for 3–4 minutes per side until golden and flaking. Remove.",
+      "Cook sliced {onion} in the remaining oil for 6 minutes, add chopped {tomato} and the remaining salt and cook 6 minutes until jammy.",
+      "Spoon the onion-tomato sauce over the fish, squeeze over {lemon} and scatter chopped {parsley}."
     ]
   },
   {
@@ -418,39 +463,42 @@ KITCHEN.add(
     "name": "Sweet Potato and Peanut Soup",
     "meal": "big",
     "cuisine": "Malian",
-    "time": 36,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        300
+        "sweet-potato",
+        600
       ],
       [
-        "peanut-butter",
-        50
+        "peanuts",
+        80
       ],
       [
-        "rice",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "spinach",
-        150
+        "garlic",
+        "2pc"
       ],
       [
-        "ginger",
-        10
+        "vegetable-stock",
+        900
       ],
       [
-        "oil",
-        20
+        "cumin",
+        2
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {peanut-butter} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {tomato} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Toast {peanuts} in a dry pan for 4 minutes. Peel {sweet-potato} and cut into chunks; chop {onion}; crush {garlic}.",
+      "Simmer the sweet potato, onion, garlic, {cumin} and {vegetable-stock} for 20 minutes until soft.",
+      "Add the peanuts and {salt} and blend until smooth and creamy. Reheat gently and serve."
     ]
   },
   {
@@ -458,44 +506,51 @@ KITCHEN.add(
     "name": "Malian Bean and Greens Stew",
     "meal": "big",
     "cuisine": "Malian",
-    "time": 43,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "black-eyed-peas",
+        480
       ],
       [
         "spinach",
-        150
+        300
       ],
       [
-        "ginger",
-        10
+        "onion",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "peanut-butter",
+        30
+      ],
+      [
+        "green-chilli",
+        "1pc"
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {ginger} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Drain {black-eyed-peas}. Chop {spinach}, {onion} and {tomato}; crush {garlic}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic, {green-chilli} and tomato for 6 minutes.",
+      "Add {black-eyed-peas}, the spinach, 100 ml water and {salt}, cover and cook for 12 minutes.",
+      "Stir in {peanut-butter} and simmer 5 minutes until the stew is thick and rich."
     ]
   },
   {
@@ -541,44 +596,46 @@ KITCHEN.add(
     "name": "Malian Tomato and Bean Stew",
     "meal": "big",
     "cuisine": "Malian",
-    "time": 32,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
+        "black-beans",
+        480
+      ],
+      [
+        "tomato",
+        "3pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
         "peanut-butter",
-        50
+        30
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "ginger",
-        10
+        "green-chilli",
+        "1pc"
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Drain {black-beans}. Chop {onion} and {tomato}; crush {garlic}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic, {green-chilli} and tomato and cook 10 minutes until thick.",
+      "Add {black-beans}, 100 ml water and {salt}, simmer for 10 minutes, then stir in {peanut-butter} and cook 3 minutes more. Serve hot."
     ]
   },
   {
@@ -671,44 +728,46 @@ KITCHEN.add(
     "name": "Malian Peanut and Sweet Potato Soup",
     "meal": "big",
     "cuisine": "Malian",
-    "time": 53,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
+        "sweet-potato",
+        500
+      ],
+      [
         "peanut-butter",
-        50
+        70
       ],
       [
-        "rice",
-        250
+        "millet",
+        60
       ],
       [
-        "spinach",
-        150
+        "onion",
+        "1pc"
       ],
       [
-        "ginger",
-        10
+        "garlic",
+        "2pc"
       ],
       [
-        "oil",
+        "tomato-paste",
         20
+      ],
+      [
+        "vegetable-stock",
+        900
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Peel {sweet-potato} and cut into 3 cm chunks. Chop {onion}; crush {garlic}.",
+      "Simmer the onion, garlic, {tomato-paste}, sweet potato, {millet} and {vegetable-stock} for 25 minutes until the millet is soft and the sweet potato is tender.",
+      "Whisk {peanut-butter} with a ladle of broth, stir in with {salt} and simmer 8 minutes. The millet makes the soup thick and hearty."
     ]
   },
   {
@@ -801,24 +860,36 @@ KITCHEN.add(
     "name": "Malian Ginger Lentil Curry",
     "meal": "big",
     "cuisine": "Malian",
-    "time": 38,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
+        "green-lentils",
         250
       ],
       [
-        "spinach",
-        150
+        "ginger",
+        25
       ],
       [
-        "ginger",
-        10
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "tomato-paste",
+        20
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "black-pepper",
+        1
       ],
       [
         "oil",
@@ -827,18 +898,12 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Rinse {green-lentils}. Chop {onion}; crush {garlic}; grate {ginger}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic, ginger, {cumin}, {black-pepper} and {tomato-paste} for 2 minutes.",
+      "Add the lentils and 600 ml water and simmer for 28 minutes until tender, adding {salt} at the end. Serve hot."
     ]
   }
 ]

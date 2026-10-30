@@ -382,43 +382,56 @@ KITCHEN.add(
     "name": "Surinamese Roti with Potato Curry",
     "meal": "big",
     "cuisine": "Surinamese",
-    "time": 37,
+    "time": 75,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "flour",
+        300
       ],
       [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
+        "baking-powder",
+        5
       ],
       [
         "oil",
-        20
+        40
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "potatoes",
+        600
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "curry-powder",
+        12
+      ],
+      [
+        "green-beans",
+        150
+      ],
+      [
+        "coconut-milk",
+        150
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Mix {flour}, {baking-powder} and half of the {salt} with 25 g of the {oil} and about 170 ml warm water into a soft dough. Knead 5 minutes and rest 30 minutes.",
+      "Peel {potatoes} and cut into 2.5 cm chunks; chop {onion}, crush {garlic} and trim {green-beans}.",
+      "Heat the remaining oil, cook the onion for 5 minutes, add garlic and {curry-powder} for 1 minute, then the potatoes, remaining salt and 200 ml water. Simmer for 15 minutes.",
+      "Add the green beans and {coconut-milk} and simmer for 8 minutes until the potatoes are tender and the sauce is thick.",
+      "Divide the dough into 4, roll each into a thin 22 cm round and cook in a dry hot pan for 1–2 minutes per side until blistered. Serve with the curry."
     ]
   },
   {
@@ -426,48 +439,60 @@ KITCHEN.add(
     "name": "Surinamese Peanut Soup",
     "meal": "big",
     "cuisine": "Surinamese",
-    "time": 44,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "plantain",
+        "chicken-thigh",
+        400
+      ],
+      [
+        "peanut-butter",
+        80
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "potatoes",
+        250
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "thyme",
         2
       ],
       [
-        "red-pepper",
-        1
+        "tomato",
+        "1pc"
       ],
       [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
+        "chicken-stock",
+        1000
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Chop {onion}, {tomato}; crush {garlic}; dice {carrot} and {potatoes}.",
+      "Simmer {chicken-thigh} in {chicken-stock} with the onion, garlic, {thyme} and the whole {green-chilli} for 25 minutes. Lift out the chicken and shred it.",
+      "Whisk {peanut-butter} with a ladle of hot broth until smooth and stir it back into the pot.",
+      "Add the carrot, potatoes, tomato and {salt} and simmer for 15 minutes until the vegetables are tender and the soup is thick.",
+      "Return the chicken, remove the chilli and serve hot."
     ]
   },
   {
@@ -513,7 +538,7 @@ KITCHEN.add(
     "name": "Surinamese Nasi Goreng",
     "meal": "big",
     "cuisine": "Surinamese",
-    "time": 58,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
@@ -521,35 +546,56 @@ KITCHEN.add(
         250
       ],
       [
-        "tomato",
+        "chicken-thigh",
         250
       ],
       [
-        "plantain",
-        2
+        "eggs",
+        "3pc"
       ],
       [
-        "red-pepper",
-        1
+        "onion",
+        "1pc"
       ],
       [
-        "cilantro",
+        "garlic",
+        "3pc"
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "spring-onion",
+        "3pc"
+      ],
+      [
+        "soy-sauce",
+        40
+      ],
+      [
+        "ginger",
         10
       ],
       [
-        "lime",
-        1
+        "green-chilli",
+        "1pc"
       ],
       [
         "oil",
-        20
+        40
+      ],
+      [
+        "salt",
+        2
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Cook {rice} in 500 ml water with {salt}, covered, on low heat for 15 minutes, then spread on a tray to cool for 20 minutes.",
+      "Dice {chicken-thigh}, chop {onion}, grate {carrot}, crush {garlic}, grate {ginger}, slice {green-chilli} and {spring-onion}.",
+      "Heat half of the {oil} in a wok and scramble {eggs} for 1 minute; remove.",
+      "Heat the remaining oil, stir-fry the chicken for 5 minutes, then the onion, carrot, garlic, ginger and chilli for 3 minutes.",
+      "Add the rice and {soy-sauce} and toss on high heat for 4 minutes. Fold in the eggs and spring onion and serve."
     ]
   },
   {
@@ -557,48 +603,64 @@ KITCHEN.add(
     "name": "Surinamese Spiced Fish and Rice",
     "meal": "big",
     "cuisine": "Surinamese",
-    "time": 65,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "plantain",
-        2
+        "white-fish",
+        600
       ],
       [
-        "red-pepper",
-        1
+        "rice",
+        250
       ],
       [
-        "cilantro",
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "ginger",
         10
       ],
       [
+        "turmeric",
+        2
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
         "lime",
-        1
+        "1pc"
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Rub {white-fish} with {turmeric}, the juice of half of the {lime} and half of the {salt}; rest 10 minutes.",
+      "Heat half of the {oil} in a pan and fry the fish for 3 minutes per side. Remove.",
+      "In a pot, cook chopped {onion}, crushed {garlic}, grated {ginger} and {cumin} in the remaining oil for 5 minutes, add chopped {tomato} and {green-chilli} for 3 minutes.",
+      "Stir in {rice}, 500 ml water and the remaining salt, cover and cook on low heat for 15 minutes.",
+      "Lay the fish over the rice, re-cover for 5 minutes, and finish with the remaining lime juice."
     ]
   },
   {
@@ -644,92 +706,94 @@ KITCHEN.add(
     "name": "Surinamese Plantain and Peanut Bowl",
     "meal": "big",
     "cuisine": "Surinamese",
-    "time": 32,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        250
-      ],
-      [
         "plantain",
-        2
+        "3pc"
       ],
       [
-        "red-pepper",
-        1
+        "peanuts",
+        60
       ],
       [
-        "cilantro",
-        10
+        "tomato",
+        "2pc"
+      ],
+      [
+        "red-onion",
+        "1pc"
       ],
       [
         "lime",
-        1
+        "1pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
       ],
       [
         "oil",
-        20
+        60
       ],
       [
         "salt",
-        3
+        2
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomato} and turn to coat in the seasoning.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Toast {peanuts} in a dry pan for 3–4 minutes, cool and crush roughly.",
+      "Dice {tomato} and {red-onion}, chop {green-chilli}, and mix with the juice of {lime} and half of the {salt}.",
+      "Slice the ripe {plantain} on a diagonal and fry in {oil} for 2–3 minutes per side until deep golden; sprinkle with the remaining salt.",
+      "Pile the plantain into bowls, spoon over the tomato salsa and top with the crushed peanuts."
     ]
   },
   {
     "id": "surinamese-tomato-cucumber-salad",
     "name": "Surinamese Tomato Cucumber Salad",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Surinamese",
-    "time": 39,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "cilantro",
-        10
+        "tomato",
+        "4pc"
+      ],
+      [
+        "cucumber",
+        "2pc"
+      ],
+      [
+        "red-onion",
+        "1pc"
       ],
       [
         "lime",
-        1
+        "1pc"
       ],
       [
-        "oil",
-        20
+        "vinegar",
+        15
+      ],
+      [
+        "sugar",
+        5
+      ],
+      [
+        "green-chilli",
+        "1pc"
       ],
       [
         "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
+        2
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Slice {tomato} and {cucumber}, thinly slice {red-onion} and finely chop {green-chilli}.",
+      "Whisk the juice of {lime} with {vinegar}, {sugar} and {salt} until the sugar dissolves.",
+      "Toss everything together and rest 10 minutes before serving."
     ]
   },
   {
@@ -776,131 +840,153 @@ KITCHEN.add(
     "name": "Surinamese Chicken with Tomato and Peppers",
     "meal": "big",
     "cuisine": "Surinamese",
-    "time": 53,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "chicken-thigh",
+        600
       ],
       [
         "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "3pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "ginger",
+        15
+      ],
+      [
+        "soy-sauce",
+        20
+      ],
+      [
+        "brown-sugar",
         10
       ],
       [
-        "lime",
-        1
+        "green-chilli",
+        "1pc"
       ],
       [
         "oil",
         20
+      ],
+      [
+        "salt",
+        2
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Marinate {chicken-thigh} with {soy-sauce}, crushed {garlic}, grated {ginger} and {salt} for 20 minutes.",
+      "Brown the chicken in {oil} for 5 minutes per side. Remove.",
+      "Cook sliced {onion}, {red-pepper} and {green-chilli} for 5 minutes, add chopped {tomato}, {brown-sugar} and 100 ml water.",
+      "Return the chicken, cover and simmer for 25 minutes until tender and the sauce is thick and glossy."
     ]
   },
   {
     "id": "surinamese-sweet-plantain-cakes",
     "name": "Surinamese Sweet Plantain Cakes",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Surinamese",
-    "time": 60,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "red-pepper",
+        "plantain",
+        "3pc"
+      ],
+      [
+        "flour",
+        60
+      ],
+      [
+        "peanuts",
+        30
+      ],
+      [
+        "sugar",
+        15
+      ],
+      [
+        "cinnamon",
         1
       ],
       [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
+        "salt",
         1
       ],
       [
         "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
+        60
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {cilantro} until fragrant.",
-      "Add the {red-pepper} and {black-beans}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Toast {peanuts} in a dry pan for 3 minutes and chop finely.",
+      "Mash the very ripe {plantain} until nearly smooth and stir in {flour}, the peanuts, {sugar}, {cinnamon} and {salt}.",
+      "Heat {oil} in a frying pan over medium heat and fry 8 heaped spoonfuls, flattening slightly, for 3 minutes per side until golden. Serve warm."
     ]
   },
   {
     "id": "surinamese-lime-cabbage-slaw",
     "name": "Surinamese Lime Cabbage Slaw",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Surinamese",
-    "time": 31,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "oil",
-        20
+        "cabbage",
+        400
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "green-beans",
+        100
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "vinegar",
+        40
+      ],
+      [
+        "sugar",
+        10
+      ],
+      [
+        "ginger",
+        10
+      ],
+      [
+        "green-chilli",
+        "1pc"
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {salt} until fragrant.",
-      "Add the {oil} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Shred {cabbage} finely, grate {carrot}, cut {green-beans} into thin slices and blanch them in boiling water for 1 minute; drain and cool.",
+      "Grate {ginger}, finely chop {green-chilli} and whisk with {vinegar}, the juice of {lime}, {sugar} and {salt} until the sugar dissolves.",
+      "Toss the vegetables with the dressing and rest for 20 minutes. Serve cold."
     ]
   },
   {

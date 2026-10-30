@@ -196,32 +196,52 @@ KITCHEN.add(
     "name": "Cameroonian Chicken Pepper Stew",
     "meal": "big",
     "cuisine": "Cameroonian",
-    "time": 37,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
+        "chicken-thigh",
+        700
+      ],
+      [
         "tomato",
-        300
+        "3pc"
       ],
       [
-        "peanut-butter",
-        50
+        "onion",
+        "1pc"
       ],
       [
-        "rice",
-        250
+        "red-pepper",
+        "1pc"
       ],
       [
-        "spinach",
-        150
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
       ],
       [
         "ginger",
-        10
+        15
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "thyme",
+        2
+      ],
+      [
+        "chicken-stock",
+        300
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
@@ -229,11 +249,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {peanut-butter} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {tomato} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Blend {tomato}, {red-pepper}, {green-chilli}, {garlic} and {ginger} into a coarse paste. Season {chicken-thigh} with {salt}, {thyme} and half of the {paprika}.",
+      "Heat {oil} in a heavy pot and brown the chicken for 5 minutes per side. Remove.",
+      "Cook chopped {onion} for 5 minutes, add the blended paste and the remaining paprika and fry for 10 minutes until the oil separates.",
+      "Add {chicken-stock}, return the chicken, cover and simmer for 30 minutes until tender and the stew is thick and fiery red."
     ]
   },
   {
@@ -241,48 +260,52 @@ KITCHEN.add(
     "name": "Corn Fufu with Vegetable Soup",
     "meal": "big",
     "cuisine": "Cameroonian",
-    "time": 44,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "rice",
+        "cornmeal",
         250
       ],
       [
         "spinach",
-        150
+        300
       ],
       [
-        "ginger",
-        10
+        "tomato",
+        "2pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "vegetable-stock",
+        600
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Chop {onion}, {tomato}, {green-chilli}; crush {garlic}; chop {spinach}.",
+      "Heat {oil} in a pot, cook the onion for 5 minutes, add garlic, chilli and tomato for 6 minutes, then {vegetable-stock} and {salt}. Simmer 10 minutes, add the spinach and cook 5 minutes.",
+      "For the fufu, mix half of the {cornmeal} with 150 ml cold water, bring 500 ml water to a boil and whisk in the slurry. Cook 3 minutes.",
+      "Reduce the heat and beat in the remaining cornmeal a little at a time with a wooden spoon, stirring hard for 8–10 minutes until it forms a smooth, stiff dough.",
+      "Shape into balls with wet hands and serve with the soup."
     ]
   },
   {
@@ -329,44 +352,68 @@ KITCHEN.add(
     "name": "Cameroonian Jollof Rice",
     "meal": "big",
     "cuisine": "Cameroonian",
-    "time": 58,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
-      ],
-      [
         "rice",
-        250
+        300
       ],
       [
-        "spinach",
-        150
+        "tomato",
+        "3pc"
+      ],
+      [
+        "tomato-paste",
+        40
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "red-pepper",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
       ],
       [
         "ginger",
         10
       ],
       [
+        "curry-powder",
+        5
+      ],
+      [
+        "thyme",
+        2
+      ],
+      [
+        "bay-leaf",
+        2
+      ],
+      [
+        "chicken-stock",
+        500
+      ],
+      [
         "oil",
-        20
+        40
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {spinach} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Blend {tomato}, {red-pepper}, {garlic} and {ginger} until smooth.",
+      "Heat {oil} in a heavy pot, cook chopped {onion} for 5 minutes, add {tomato-paste} and fry for 3 minutes.",
+      "Pour in the blended mixture and cook for 15 minutes until it has reduced and darkened and the oil floats on top. Stir in {curry-powder}, {thyme}, {bay-leaf} and {salt}.",
+      "Add {rice} and {chicken-stock}, stir once, cover tightly and cook on the lowest heat for 25 minutes.",
+      "Rest 10 minutes, remove the bay leaves and fluff."
     ]
   },
   {
@@ -374,47 +421,51 @@ KITCHEN.add(
     "name": "Plantain and Bean Pot",
     "meal": "big",
     "cuisine": "Cameroonian",
-    "time": 65,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        500
+        "black-eyed-peas",
+        480
       ],
       [
-        "onion",
-        1
+        "plantain",
+        "2pc"
       ],
       [
         "tomato",
-        300
+        "2pc"
       ],
       [
-        "peanut-butter",
-        50
+        "onion",
+        "1pc"
       ],
       [
-        "rice",
-        250
+        "garlic",
+        "2pc"
       ],
       [
-        "spinach",
-        150
+        "paprika",
+        2
       ],
       [
-        "ginger",
-        10
+        "green-chilli",
+        "1pc"
       ],
       [
         "oil",
-        20
+        30
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {onion} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Drain {black-eyed-peas}. Peel the ripe {plantain} and cut into 2 cm chunks. Chop {onion}, {tomato} and {green-chilli}; crush {garlic}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic, {paprika}, chilli and tomato for 6 minutes.",
+      "Add {black-eyed-peas}, 150 ml water and {salt} and simmer for 10 minutes.",
+      "Add the plantain and cook for 12 minutes until soft and the sauce is thick, stirring gently."
     ]
   },
   {
@@ -422,39 +473,59 @@ KITCHEN.add(
     "name": "Spiced Fish with Tomato Sauce",
     "meal": "big",
     "cuisine": "Cameroonian",
-    "time": 36,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
+        "white-fish",
+        600
+      ],
+      [
         "tomato",
-        300
+        "4pc"
       ],
       [
-        "peanut-butter",
-        50
+        "onion",
+        "1pc"
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
+        "garlic",
+        "3pc"
       ],
       [
         "ginger",
         10
       ],
       [
+        "paprika",
+        3
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "cilantro",
+        10
+      ],
+      [
         "oil",
-        20
+        30
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {peanut-butter} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {tomato} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Rub {white-fish} with {paprika}, {cumin}, half of the {salt} and the juice of {lime}; rest 15 minutes.",
+      "Fry the fish in half of the {oil} for 2–3 minutes per side until golden; remove.",
+      "Cook chopped {onion} in the remaining oil for 5 minutes, add crushed {garlic} and grated {ginger}, then chopped {tomato} and the remaining salt. Simmer for 12 minutes into a thick sauce.",
+      "Nestle the fish in the sauce and cook gently for 5 minutes. Scatter chopped {cilantro} and serve."
     ]
   },
   {
@@ -462,7 +533,7 @@ KITCHEN.add(
     "name": "Coconut Greens and Rice",
     "meal": "big",
     "cuisine": "Cameroonian",
-    "time": 43,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
@@ -471,35 +542,42 @@ KITCHEN.add(
       ],
       [
         "spinach",
-        150
+        300
+      ],
+      [
+        "coconut-milk",
+        250
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
       ],
       [
         "ginger",
         10
       ],
       [
+        "green-chilli",
+        "1pc"
+      ],
+      [
         "oil",
-        20
+        15
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {ginger} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Chop {onion}, crush {garlic}, grate {ginger} and chop {spinach}.",
+      "Cook the onion in {oil} for 4 minutes, add garlic, ginger and {green-chilli} for 1 minute.",
+      "Add {rice}, {coconut-milk}, 250 ml water and {salt}, bring to a boil, cover and cook on the lowest heat for 18 minutes.",
+      "Fold the spinach through the hot rice, cover for 5 minutes until wilted, then fluff and serve."
     ]
   },
   {
@@ -545,44 +623,50 @@ KITCHEN.add(
     "name": "Cameroonian Tomato and Bean Stew",
     "meal": "big",
     "cuisine": "Cameroonian",
-    "time": 32,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
+        "black-eyed-peas",
+        480
       ],
       [
-        "rice",
-        250
+        "tomato",
+        "4pc"
       ],
       [
-        "spinach",
-        150
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
       ],
       [
         "ginger",
         10
       ],
       [
+        "paprika",
+        3
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Drain {black-eyed-peas}. Blend {tomato}, {garlic}, {ginger} and {green-chilli} smooth.",
+      "Cook chopped {onion} in {oil} for 5 minutes, add {paprika} and the blended tomato, and fry for 12 minutes until thick and oily.",
+      "Add {black-eyed-peas}, 100 ml water and {salt} and simmer for 12 minutes, mashing a few to thicken. Serve hot."
     ]
   },
   {
@@ -675,44 +759,55 @@ KITCHEN.add(
     "name": "Cameroonian Peanut and Sweet Potato Soup",
     "meal": "big",
     "cuisine": "Cameroonian",
-    "time": 53,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
+        "sweet-potato",
+        600
+      ],
+      [
         "peanut-butter",
-        50
+        70
       ],
       [
-        "rice",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "spinach",
-        150
+        "garlic",
+        "2pc"
       ],
       [
         "ginger",
-        10
+        15
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "vegetable-stock",
+        900
       ],
       [
         "oil",
-        20
+        15
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Peel {sweet-potato} and cut into 3 cm chunks. Chop {onion} and {tomato}; crush {garlic}; grate {ginger}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic, ginger, {green-chilli} and tomato for 4 minutes.",
+      "Add the sweet potato and {vegetable-stock}, simmer for 18 minutes until soft.",
+      "Whisk {peanut-butter} with a ladle of hot broth, stir it in with {salt} and simmer 8 minutes. Blend half for a thick, rustic soup."
     ]
   },
   {
@@ -805,24 +900,36 @@ KITCHEN.add(
     "name": "Cameroonian Ginger Lentil Curry",
     "meal": "big",
     "cuisine": "Cameroonian",
-    "time": 38,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
+        "red-lentils",
         250
       ],
       [
-        "spinach",
-        150
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
       ],
       [
         "ginger",
-        10
+        20
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "turmeric",
+        2
+      ],
+      [
+        "green-chilli",
+        "1pc"
       ],
       [
         "oil",
@@ -831,18 +938,12 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Rinse {red-lentils}. Chop {onion} and {tomato}; crush {garlic}; grate {ginger}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic, ginger, {turmeric} and {green-chilli} for 2 minutes, then the tomato for 4 minutes.",
+      "Add the lentils, 700 ml water and {salt}, bring to a boil and simmer for 20 minutes, stirring often, until soft and creamy. Serve hot."
     ]
   }
 ]

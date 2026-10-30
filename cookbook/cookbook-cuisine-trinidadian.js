@@ -500,68 +500,56 @@ KITCHEN.add(
     "name": "Trinidadian Pelau Chicken Rice",
     "meal": "big",
     "cuisine": "Trinidadian",
-    "time": 37,
+    "time": 70,
     "serves": 4,
     "ing": [
+      [
+        "chicken-thigh",
+        600
+      ],
       [
         "rice",
         250
       ],
       [
-        "tomato",
-        250
+        "kidney-beans",
+        240
       ],
       [
-        "plantain",
+        "coconut-milk",
+        200
+      ],
+      [
+        "brown-sugar",
+        15
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "spring-onion",
+        "3pc"
+      ],
+      [
+        "thyme",
         2
       ],
       [
-        "red-pepper",
-        1
+        "green-chilli",
+        "1pc"
       ],
       [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "trinidadian-callaloo-style-greens",
-    "name": "Trinidadian Callaloo-Style Greens",
-    "meal": "big",
-    "cuisine": "Trinidadian",
-    "time": 44,
-    "serves": 4,
-    "ing": [
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
+        "chicken-stock",
+        300
       ],
       [
         "oil",
@@ -570,22 +558,70 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Season {chicken-thigh} with {salt}, {thyme} and crushed {garlic}; marinate 20 minutes. Dice {onion} and {carrot}, slice {spring-onion}.",
+      "Heat {oil} in a heavy pot, stir in {brown-sugar} until dark amber, then brown the chicken for 4 minutes per side.",
+      "Add the onion, carrot and {green-chilli} and cook 4 minutes, then stir in {rice} and {kidney-beans} (drained).",
+      "Pour in {coconut-milk} and {chicken-stock}, bring to a boil, cover and cook on the lowest heat for 25 minutes.",
+      "Fold in the spring onion, rest 5 minutes, remove the chilli and serve."
+    ]
+  },
+  {
+    "id": "trinidadian-callaloo-style-greens",
+    "name": "Trinidadian Callaloo-Style Greens",
+    "meal": "big",
+    "cuisine": "Trinidadian",
+    "time": 40,
+    "serves": 4,
+    "ing": [
+      [
+        "spinach",
+        500
+      ],
+      [
+        "okra",
+        150
+      ],
+      [
+        "coconut-milk",
+        250
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "thyme",
+        2
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "butter",
+        20
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
+        1
+      ]
+    ],
+    "steps": [
+      "Chop {spinach} and slice {okra}. Chop {onion} and crush {garlic}.",
+      "Melt {butter} in a pot and cook the onion for 4 minutes, add garlic, {thyme} and the whole {green-chilli} for 1 minute.",
+      "Add the spinach, okra, {coconut-milk}, {salt} and 200 ml water, cover and simmer for 20 minutes until the okra is tender.",
+      "Remove the chilli and blend or whisk vigorously until thick and smooth, season with {black-pepper} and serve."
     ]
   },
   {
@@ -669,32 +705,40 @@ KITCHEN.add(
     "name": "Trinidadian Pumpkin Talkari",
     "meal": "big",
     "cuisine": "Trinidadian",
-    "time": 32,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        250
+        "pumpkin",
+        700
       ],
       [
-        "plantain",
-        2
+        "onion",
+        "1pc"
       ],
       [
-        "red-pepper",
-        1
+        "garlic",
+        "3pc"
       ],
       [
-        "cilantro",
+        "curry-powder",
+        8
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "ginger",
         10
       ],
       [
-        "lime",
-        1
+        "cilantro",
+        15
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
@@ -702,11 +746,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomato} and turn to coat in the seasoning.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Peel {pumpkin} and cut into 3 cm chunks. Chop {onion}; crush {garlic}; grate {ginger}; slice {green-chilli}.",
+      "Heat {oil} in a wide pan and cook the onion for 5 minutes, add garlic, ginger, chilli and {curry-powder} and stir for 1 minute.",
+      "Add the pumpkin, {salt} and 100 ml water, cover and cook for 20 minutes, stirring occasionally, until it softens and partly collapses.",
+      "Mash roughly, stir in chopped {cilantro} and serve."
     ]
   },
   {
@@ -714,47 +757,55 @@ KITCHEN.add(
     "name": "Trinidadian Tamarind Glazed Fish",
     "meal": "big",
     "cuisine": "Trinidadian",
-    "time": 39,
+    "time": 30,
     "serves": 4,
     "ing": [
+      [
+        "white-fish",
+        600
+      ],
+      [
+        "tamarind-paste",
+        40
+      ],
+      [
+        "brown-sugar",
+        20
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "ginger",
+        10
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
       [
         "cilantro",
         10
       ],
       [
-        "lime",
-        1
-      ],
-      [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Season {white-fish} with {salt} and the juice of half of the {lime}. Mix {tamarind-paste}, {brown-sugar}, crushed {garlic}, grated {ginger}, chopped {green-chilli} and 60 ml water into a glaze.",
+      "Heat {oil} in a wide pan and sear the fish for 3 minutes per side until golden. Remove.",
+      "Pour the glaze into the pan and simmer for 3 minutes until syrupy, then return the fish and spoon it over for 1–2 minutes.",
+      "Finish with the remaining lime juice and chopped {cilantro}."
     ]
   },
   {
@@ -801,131 +852,137 @@ KITCHEN.add(
     "name": "Trinidadian Chicken with Tomato and Peppers",
     "meal": "big",
     "cuisine": "Trinidadian",
-    "time": 53,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "chicken-thigh",
+        600
       ],
       [
         "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "3pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "curry-powder",
         10
       ],
       [
-        "lime",
-        1
+        "thyme",
+        2
+      ],
+      [
+        "green-chilli",
+        "1pc"
       ],
       [
         "oil",
         20
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Rub {chicken-thigh} with {curry-powder}, {salt} and crushed {garlic}; marinate 20 minutes.",
+      "Heat {oil} in a heavy pot and brown the chicken for 5 minutes per side. Remove.",
+      "Cook sliced {onion}, {red-pepper} and {green-chilli} for 5 minutes, add {thyme} and chopped {tomato} with 150 ml water.",
+      "Return the chicken, cover and simmer for 25 minutes until tender and the sauce is thick."
     ]
   },
   {
     "id": "trinidadian-sweet-plantain-cakes",
     "name": "Trinidadian Sweet Plantain Cakes",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Trinidadian",
-    "time": 60,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "red-pepper",
+        "plantain",
+        "2pc"
+      ],
+      [
+        "sweet-potato",
+        200
+      ],
+      [
+        "flour",
+        60
+      ],
+      [
+        "cinnamon",
         1
+      ],
+      [
+        "nutmeg",
+        1
+      ],
+      [
+        "brown-sugar",
+        15
+      ],
+      [
+        "oil",
+        60
+      ]
+    ],
+    "steps": [
+      "Boil {sweet-potato} (peeled and cubed) for 15 minutes until soft, drain and mash with the very ripe, peeled {plantain} until nearly smooth.",
+      "Stir in {flour}, {cinnamon}, {nutmeg} and {brown-sugar}.",
+      "Heat {oil} in a frying pan over medium heat and fry 8 heaped spoonfuls, flattening slightly, for 3 minutes per side until golden. Serve warm."
+    ]
+  },
+  {
+    "id": "trinidadian-lime-cabbage-slaw",
+    "name": "Trinidadian Lime Cabbage Slaw",
+    "meal": "bite",
+    "cuisine": "Trinidadian",
+    "time": 15,
+    "serves": 4,
+    "ing": [
+      [
+        "cabbage",
+        400
+      ],
+      [
+        "cucumber",
+        "1pc"
+      ],
+      [
+        "lime",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "1pc"
       ],
       [
         "cilantro",
         10
       ],
       [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {cilantro} until fragrant.",
-      "Add the {red-pepper} and {black-beans}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "trinidadian-lime-cabbage-slaw",
-    "name": "Trinidadian Lime Cabbage Slaw",
-    "meal": "big",
-    "cuisine": "Trinidadian",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a pan and soften the {salt} until fragrant.",
-      "Add the {oil} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Shred {cabbage} finely and slice {cucumber} thinly. Crush {garlic} with {salt} into a paste.",
+      "Mix the garlic paste with the juice of {lime} and toss through the cabbage and cucumber.",
+      "Fold in chopped {cilantro}, rest 10 minutes and serve cold."
     ]
   },
   {

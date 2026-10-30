@@ -486,68 +486,56 @@ KITCHEN.add(
     "name": "Caribbean Coconut Fish Curry",
     "meal": "big",
     "cuisine": "Caribbean",
-    "time": 37,
+    "time": 45,
     "serves": 4,
     "ing": [
+      [
+        "white-fish",
+        600
+      ],
+      [
+        "coconut-milk",
+        400
+      ],
       [
         "rice",
         250
       ],
       [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "ginger",
+        15
+      ],
+      [
+        "curry-powder",
+        15
+      ],
+      [
         "tomato",
-        250
+        "2pc"
       ],
       [
-        "plantain",
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "thyme",
         2
       ],
       [
-        "red-pepper",
-        1
+        "lime",
+        "1pc"
       ],
       [
         "cilantro",
         10
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "caribbean-rice-and-peas",
-    "name": "Caribbean Rice and Peas",
-    "meal": "big",
-    "cuisine": "Caribbean",
-    "time": 44,
-    "serves": 4,
-    "ing": [
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
       ],
       [
         "oil",
@@ -556,22 +544,66 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Cook {rice} in 500 ml water with a pinch of {salt}, covered, on low heat for 15 minutes.",
+      "Chop {onion} and {tomato}; crush {garlic}; grate {ginger}; slice {green-chilli}. Cut {white-fish} into 4 cm chunks.",
+      "Heat {oil} in a wide pan, cook the onion for 5 minutes, then add garlic, ginger, {curry-powder} and {thyme} and stir for 1 minute. Add the tomato and chilli for 3 minutes.",
+      "Pour in {coconut-milk} and the remaining salt, simmer for 8 minutes, then add the fish and poach gently for 6–8 minutes until it flakes.",
+      "Finish with the juice of {lime} and chopped {cilantro} and serve over the rice."
+    ]
+  },
+  {
+    "id": "caribbean-rice-and-peas",
+    "name": "Caribbean Rice and Peas",
+    "meal": "big",
+    "cuisine": "Caribbean",
+    "time": 40,
+    "serves": 4,
+    "ing": [
+      [
+        "rice",
+        250
+      ],
+      [
+        "kidney-beans",
+        480
+      ],
+      [
+        "coconut-milk",
+        400
+      ],
+      [
+        "spring-onion",
+        "3pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "thyme",
+        2
+      ],
+      [
+        "allspice",
+        2
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "salt",
+        3
+      ]
+    ],
+    "steps": [
+      "Drain {kidney-beans}. Slice {spring-onion} and crush {garlic}.",
+      "In a pot, combine {coconut-milk}, 250 ml water, {kidney-beans}, spring onion, garlic, {thyme}, {allspice}, the whole {green-chilli} and {salt}. Bring to a boil.",
+      "Stir in {rice}, return to a boil, then cover and cook on the lowest heat for 20 minutes.",
+      "Rest 5 minutes, remove the chilli and fluff with a fork before serving."
     ]
   },
   {
@@ -617,28 +649,48 @@ KITCHEN.add(
     "name": "Caribbean Brown Stew Chicken",
     "meal": "big",
     "cuisine": "Caribbean",
-    "time": 32,
+    "time": 65,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        250
+        "chicken-thigh",
+        700
       ],
       [
-        "plantain",
-        2
+        "onion",
+        "1pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
-        10
+        "tomato",
+        "2pc"
       ],
       [
-        "lime",
-        1
+        "carrot",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "thyme",
+        2
+      ],
+      [
+        "allspice",
+        2
+      ],
+      [
+        "brown-sugar",
+        15
+      ],
+      [
+        "soy-sauce",
+        20
       ],
       [
         "oil",
@@ -647,14 +699,17 @@ KITCHEN.add(
       [
         "salt",
         3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomato} and turn to coat in the seasoning.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Season {chicken-thigh} with {salt}, {black-pepper}, {thyme}, {allspice}, crushed {garlic} and {soy-sauce}; marinate for 30 minutes.",
+      "Heat {oil} in a heavy pot, stir in {brown-sugar} until dark amber, then brown the chicken for 5 minutes per side.",
+      "Add sliced {onion}, {red-pepper}, {carrot} and chopped {tomato} with 200 ml water.",
+      "Cover and simmer for 30 minutes until the chicken is tender and the gravy is dark and glossy."
     ]
   },
   {
@@ -662,47 +717,55 @@ KITCHEN.add(
     "name": "Caribbean Pineapple Glazed Pork",
     "meal": "big",
     "cuisine": "Caribbean",
-    "time": 39,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "cilantro",
-        10
+        "pork",
+        600
+      ],
+      [
+        "pineapple",
+        250
+      ],
+      [
+        "brown-sugar",
+        30
+      ],
+      [
+        "soy-sauce",
+        30
+      ],
+      [
+        "ginger",
+        15
+      ],
+      [
+        "garlic",
+        "3pc"
       ],
       [
         "lime",
-        1
+        "1pc"
       ],
       [
         "oil",
         20
       ],
       [
+        "black-pepper",
+        1
+      ],
+      [
         "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
+        2
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Cut {pork} into 3 cm cubes and season with {salt} and {black-pepper}. Cut {pineapple} into chunks; grate {ginger} and crush {garlic}.",
+      "Mix {brown-sugar}, {soy-sauce}, ginger, garlic and the juice of {lime} into a glaze.",
+      "Heat {oil} in a wide pan over high heat and sear the pork for 6–7 minutes until browned.",
+      "Add the pineapple and glaze and cook for 5–6 minutes, turning, until the sauce is syrupy and coats the pork. Serve hot."
     ]
   },
   {
@@ -749,131 +812,141 @@ KITCHEN.add(
     "name": "Caribbean Chicken with Tomato and Peppers",
     "meal": "big",
     "cuisine": "Caribbean",
-    "time": 53,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "chicken-thigh",
+        600
       ],
       [
         "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "3pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "thyme",
+        2
+      ],
+      [
+        "hot-sauce",
+        10
+      ],
+      [
+        "lime",
+        "1pc"
       ],
       [
         "cilantro",
         10
       ],
       [
-        "lime",
-        1
-      ],
-      [
         "oil",
         20
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Marinate {chicken-thigh} with {hot-sauce}, the juice of {lime}, {thyme}, crushed {garlic} and {salt} for 20 minutes.",
+      "Brown the chicken in {oil} for 5 minutes per side. Remove.",
+      "Cook sliced {onion} and {red-pepper} for 5 minutes, add chopped {tomato} and 100 ml water.",
+      "Return the chicken, cover and simmer for 25 minutes. Scatter chopped {cilantro} and serve."
     ]
   },
   {
     "id": "caribbean-sweet-plantain-cakes",
     "name": "Caribbean Sweet Plantain Cakes",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Caribbean",
-    "time": 60,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "red-pepper",
+        "plantain",
+        "2pc"
+      ],
+      [
+        "banana",
+        "1pc"
+      ],
+      [
+        "flour",
+        60
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "cinnamon",
         1
+      ],
+      [
+        "sugar",
+        15
+      ],
+      [
+        "oil",
+        60
+      ]
+    ],
+    "steps": [
+      "Mash the very ripe {plantain} and {banana} together until nearly smooth. Stir in {flour}, {eggs}, {cinnamon} and {sugar}.",
+      "Heat {oil} in a frying pan over medium heat and fry 8 heaped spoonfuls, flattening slightly, for 3 minutes per side until deep golden.",
+      "Drain and serve warm."
+    ]
+  },
+  {
+    "id": "caribbean-lime-cabbage-slaw",
+    "name": "Caribbean Lime Cabbage Slaw",
+    "meal": "bite",
+    "cuisine": "Caribbean",
+    "time": 15,
+    "serves": 4,
+    "ing": [
+      [
+        "cabbage",
+        400
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "mango",
+        "1pc"
+      ],
+      [
+        "lime",
+        "2pc"
       ],
       [
         "cilantro",
         10
       ],
       [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {cilantro} until fragrant.",
-      "Add the {red-pepper} and {black-beans}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "caribbean-lime-cabbage-slaw",
-    "name": "Caribbean Lime Cabbage Slaw",
-    "meal": "big",
-    "cuisine": "Caribbean",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a pan and soften the {salt} until fragrant.",
-      "Add the {oil} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Shred {cabbage} finely, grate {carrot} and cut the firm {mango} into thin strips.",
+      "Toss the cabbage with {salt} and the juice of {lime} and massage for 1 minute.",
+      "Fold in the carrot, mango and chopped {cilantro}, rest 10 minutes and serve cold."
     ]
   },
   {

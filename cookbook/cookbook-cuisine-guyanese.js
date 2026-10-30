@@ -362,43 +362,60 @@ KITCHEN.add(
     "name": "Guyanese Pepperpot-Inspired Beef Stew",
     "meal": "big",
     "cuisine": "Guyanese",
-    "time": 37,
+    "time": 170,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "beef-chuck",
+        700
       ],
       [
-        "tomato",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "plantain",
+        "garlic",
+        "3pc"
+      ],
+      [
+        "cinnamon",
         2
       ],
       [
-        "red-pepper",
+        "cloves",
         1
       ],
       [
-        "cilantro",
+        "thyme",
+        2
+      ],
+      [
+        "brown-sugar",
+        20
+      ],
+      [
+        "soy-sauce",
+        20
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "ginger",
         10
       ],
       [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Cut {beef-chuck} into 4 cm cubes. Chop {onion}, crush {garlic}, grate {ginger}.",
+      "Put the beef in a heavy pot with the onion, garlic, ginger, {cinnamon}, {cloves}, {thyme}, {salt} and 500 ml water. Bring to a boil and skim.",
+      "Stir in {brown-sugar} and {soy-sauce} for a dark, sweet-savoury colour and add the whole {green-chilli}.",
+      "Cover and simmer on very low heat for 2 hours 15 minutes until the beef is falling apart and the sauce is dark and thick.",
+      "Remove the chilli, taste and serve; it improves overnight."
     ]
   },
   {
@@ -406,48 +423,51 @@ KITCHEN.add(
     "name": "Guyanese Coconut Choka",
     "meal": "big",
     "cuisine": "Guyanese",
-    "time": 44,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "plantain",
-        2
+        "aubergine",
+        "2pc"
       ],
       [
-        "red-pepper",
-        1
+        "tomato",
+        "2pc"
       ],
       [
-        "cilantro",
-        10
+        "onion",
+        "1pc"
       ],
       [
-        "lime",
-        1
+        "garlic",
+        "3pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "coconut-milk",
+        100
       ],
       [
         "oil",
         20
       ],
       [
+        "cilantro",
+        10
+      ],
+      [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Heat the oven to 230 °C. Prick {aubergine} and roast with whole {tomato} on a tray for 30 minutes until blackened and collapsing.",
+      "Peel the skin from both and mash the flesh together.",
+      "Heat {oil} in a pan and cook chopped {onion}, crushed {garlic} and chopped {green-chilli} for 6 minutes. Stir in the mash and {salt}.",
+      "Pour in {coconut-milk} and simmer 5 minutes until thick. Scatter chopped {cilantro} and serve."
     ]
   },
   {
@@ -493,92 +513,87 @@ KITCHEN.add(
     "name": "Guyanese Garlic Pork",
     "meal": "big",
     "cuisine": "Guyanese",
-    "time": 58,
+    "time": 110,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "pork-shoulder",
+        700
       ],
       [
-        "tomato",
-        250
+        "garlic",
+        "8pc"
       ],
       [
-        "plantain",
+        "vinegar",
+        40
+      ],
+      [
+        "thyme",
         2
       ],
       [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
+        "red-chilli",
+        "1pc"
       ],
       [
         "oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "guyanese-cassava-and-coconut-bake",
-    "name": "Guyanese Cassava and Coconut Bake",
-    "meal": "big",
-    "cuisine": "Guyanese",
-    "time": 65,
-    "serves": 4,
-    "ing": [
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
+        30
       ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Cut {pork-shoulder} into 3 cm cubes. Crush {garlic} and mix with {vinegar}, {thyme}, chopped {red-chilli}, {salt} and {black-pepper}; coat the pork and marinate for at least 2 hours.",
+      "Put the pork and marinade in a pot with 100 ml water, cover and simmer for 1 hour 15 minutes until tender.",
+      "Uncover and cook until the liquid has evaporated, about 10 minutes.",
+      "Add {oil} and fry the pork for 8–10 minutes, turning, until golden and sticky. Serve hot."
+    ]
+  },
+  {
+    "id": "guyanese-cassava-and-coconut-bake",
+    "name": "Guyanese Cassava and Coconut Bake",
+    "meal": "treat",
+    "cuisine": "Guyanese",
+    "time": 90,
+    "serves": 4,
+    "ing": [
+      [
+        "cassava",
+        600
+      ],
+      [
+        "coconut-milk",
+        250
+      ],
+      [
+        "brown-sugar",
+        80
+      ],
+      [
+        "butter",
+        30
+      ],
+      [
+        "cinnamon",
+        2
+      ],
+      [
+        "nutmeg",
+        1
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 180 °C and butter a 20 cm dish. Peel {cassava}, remove the woody core and grate finely.",
+      "Mix the grated cassava with {coconut-milk}, {brown-sugar}, {cinnamon}, {nutmeg} and melted {butter}.",
+      "Spoon into the dish and smooth the top. Bake for 55–60 minutes until firm, golden and slightly chewy.",
+      "Cool completely before cutting into squares; it sets as it cools."
     ]
   },
   {
@@ -624,28 +639,44 @@ KITCHEN.add(
     "name": "Guyanese Split Pea Soup",
     "meal": "big",
     "cuisine": "Guyanese",
-    "time": 32,
+    "time": 80,
     "serves": 4,
     "ing": [
       [
-        "tomato",
+        "split-peas",
         250
       ],
       [
-        "plantain",
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "pumpkin",
+        200
+      ],
+      [
+        "flour",
+        100
+      ],
+      [
+        "thyme",
         2
       ],
       [
-        "red-pepper",
-        1
+        "cumin",
+        2
       ],
       [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
+        "vegetable-stock",
+        1000
       ],
       [
         "oil",
@@ -657,11 +688,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomato} and turn to coat in the seasoning.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Rinse {split-peas}. Chop {onion}, crush {garlic}, dice {carrot} and {pumpkin}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic, {cumin} and {thyme}, then {split-peas} and {vegetable-stock}. Simmer for 40 minutes until the peas break down.",
+      "Add the carrot and pumpkin and simmer 15 minutes.",
+      "Mix {flour} with {salt} and about 60 ml water into a stiff dough; roll small spinners between your palms and drop them in. Simmer 8 minutes until cooked and the soup is thick."
     ]
   },
   {
@@ -669,16 +699,36 @@ KITCHEN.add(
     "name": "Guyanese Plantain and Beans",
     "meal": "big",
     "cuisine": "Guyanese",
-    "time": 39,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "cilantro",
-        10
+        "kidney-beans",
+        480
       ],
       [
-        "lime",
-        1
+        "plantain",
+        "2pc"
+      ],
+      [
+        "coconut-milk",
+        200
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "thyme",
+        2
+      ],
+      [
+        "green-chilli",
+        "1pc"
       ],
       [
         "oil",
@@ -687,29 +737,13 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Drain {kidney-beans}. Peel the green {plantain} and cut into 2 cm rounds. Chop {onion} and crush {garlic}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic and {thyme} for 1 minute.",
+      "Add the plantain, {coconut-milk}, 150 ml water, the whole {green-chilli} and {salt}. Simmer for 15 minutes until the plantain is nearly tender.",
+      "Add {kidney-beans} and simmer for 10 minutes until the sauce is creamy. Remove the chilli and serve."
     ]
   },
   {
@@ -756,131 +790,141 @@ KITCHEN.add(
     "name": "Guyanese Chicken with Tomato and Peppers",
     "meal": "big",
     "cuisine": "Guyanese",
-    "time": 53,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "chicken-thigh",
+        600
       ],
       [
         "tomato",
-        250
+        "2pc"
       ],
       [
-        "plantain",
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "thyme",
         2
       ],
       [
-        "red-pepper",
-        1
+        "spring-onion",
+        "3pc"
       ],
       [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
+        "green-chilli",
+        "1pc"
       ],
       [
         "oil",
         20
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Toast {cumin} in a dry pan for 1 minute. Rub it over {chicken-thigh} with {salt}, {thyme} and crushed {garlic}; marinate 20 minutes.",
+      "Brown the chicken in {oil} for 5 minutes per side. Remove.",
+      "Cook sliced {onion}, {green-chilli} and {spring-onion} for 4 minutes, add chopped {tomato} and 150 ml water.",
+      "Return the chicken, cover and simmer for 25 minutes until tender and the sauce is thick."
     ]
   },
   {
     "id": "guyanese-sweet-plantain-cakes",
     "name": "Guyanese Sweet Plantain Cakes",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Guyanese",
-    "time": 60,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "red-pepper",
+        "plantain",
+        "3pc"
+      ],
+      [
+        "oats",
+        50
+      ],
+      [
+        "flour",
+        40
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "cinnamon",
         1
       ],
       [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
+        "sugar",
+        15
       ],
       [
         "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
+        60
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {cilantro} until fragrant.",
-      "Add the {red-pepper} and {black-beans}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Mash the very ripe {plantain} until nearly smooth and stir in {oats}, {flour}, {eggs}, {cinnamon} and {sugar}. Rest 5 minutes.",
+      "Heat {oil} in a frying pan over medium heat and fry 8 heaped spoonfuls, flattening slightly, for 3 minutes per side until golden.",
+      "Drain and serve warm."
     ]
   },
   {
     "id": "guyanese-lime-cabbage-slaw",
     "name": "Guyanese Lime Cabbage Slaw",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Guyanese",
-    "time": 31,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "oil",
-        20
+        "cabbage",
+        400
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "red-onion",
+        "1pc"
+      ],
+      [
+        "lime",
+        "2pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "sugar",
+        5
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {salt} until fragrant.",
-      "Add the {oil} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Shred {cabbage} finely, grate {carrot}, slice {red-onion} thinly and finely chop {green-chilli}.",
+      "Whisk the juice of {lime} with {sugar} and {salt}.",
+      "Toss everything together, rest for 10 minutes and serve cold."
     ]
   },
   {

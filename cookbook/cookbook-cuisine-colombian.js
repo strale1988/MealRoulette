@@ -181,7 +181,6 @@ KITCHEN.add(
         "sweetcorn",
         240
       ],
-      
       [
         "cornmeal",
         120
@@ -844,28 +843,32 @@ KITCHEN.add(
     "name": "Colombian Chicken with Tomato and Peppers",
     "meal": "big",
     "cuisine": "Colombian",
-    "time": 32,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
+        "chicken-thigh",
+        600
+      ],
+      [
         "tomato",
-        250
+        "4pc"
       ],
       [
-        "plantain",
-        2
+        "spring-onion",
+        "4pc"
       ],
       [
-        "red-pepper",
-        1
+        "garlic",
+        "3pc"
+      ],
+      [
+        "cumin",
+        3
       ],
       [
         "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
+        15
       ],
       [
         "oil",
@@ -874,62 +877,58 @@ KITCHEN.add(
       [
         "salt",
         3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomato} and turn to coat in the seasoning.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Season {chicken-thigh} with {salt}, {black-pepper} and half of the {cumin}. Chop {tomato} and {spring-onion} and crush {garlic}.",
+      "Make the hogao: heat half of the {oil} in a wide pan and cook the spring onion for 3 minutes, add garlic and the remaining cumin for 1 minute, then the tomato and cook 8 minutes until jammy.",
+      "In a second pan, heat the remaining oil and brown the chicken for 5 minutes per side.",
+      "Add the chicken to the hogao with 100 ml water, cover and simmer for 20 minutes until cooked through and the sauce is thick.",
+      "Stir in chopped {cilantro} and serve."
     ]
   },
   {
     "id": "colombian-sweet-plantain-cakes",
     "name": "Colombian Sweet Plantain Cakes",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Colombian",
-    "time": 39,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "cilantro",
-        10
+        "plantain",
+        "3pc"
       ],
       [
-        "lime",
+        "cheese",
+        100
+      ],
+      [
+        "flour",
+        60
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "salt",
         1
       ],
       [
         "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
+        80
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Peel the very ripe {plantain} and slice lengthways into 8 slices. Boil for 3 minutes until just tender, drain and pat dry.",
+      "Fry the slices in {oil} over medium heat for 1–2 minutes per side until lightly golden; drain.",
+      "Slice {cheese} thinly and sandwich a piece between two slices of plantain, pressing the edges together. Beat {eggs} with {flour}, {salt} and about 60 ml water into a thick batter.",
+      "Dip each sandwich in the batter and fry in the same oil for 2–3 minutes per side until crisp and golden. Drain and serve hot."
     ]
   },
   {
@@ -976,43 +975,47 @@ KITCHEN.add(
     "name": "Colombian Corn and Cheese Bake",
     "meal": "big",
     "cuisine": "Colombian",
-    "time": 53,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "sweetcorn",
+        300
       ],
       [
-        "tomato",
-        250
+        "cornmeal",
+        60
       ],
       [
-        "plantain",
-        2
+        "eggs",
+        "2pc"
       ],
       [
-        "red-pepper",
-        1
+        "cheese",
+        120
       ],
       [
-        "cilantro",
-        10
+        "milk",
+        100
       ],
       [
-        "lime",
-        1
+        "butter",
+        30
       ],
       [
-        "oil",
+        "sugar",
         20
+      ],
+      [
+        "salt",
+        2
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Heat the oven to 180 °C and butter a 20 cm dish. Blend {sweetcorn} with {milk}, {eggs}, {sugar} and {salt} until fairly smooth.",
+      "Stir in {cornmeal} and melted {butter}, then let the batter stand 10 minutes so the cornmeal softens.",
+      "Cube {cheese} and fold in two-thirds of it. Pour into the dish and top with the rest.",
+      "Bake for 35–40 minutes until set and golden at the edges. Serve warm."
     ]
   }
 ]

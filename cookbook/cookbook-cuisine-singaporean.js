@@ -6,7 +6,7 @@ KITCHEN.add(
     "name": "Hainanese chicken rice with ginger-scallion oil",
     "meal": "big",
     "cuisine": "Singaporean",
-    "time": 55,
+    "time": 60,
     "serves": 2,
     "ing": [
       [
@@ -59,11 +59,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Rinse {rice} if it is uncooked; prepare the other ingredients while it drains.",
-      "Heat {oil} and soften {garlic} and {ginger}, then cook the main filling until fragrant.",
-      "Combine the ingredients with {chicken-stock} and cook covered until the rice is tender and the liquid is absorbed.",
-      "Poach chicken gently in seasoned stock, use the stock to cook rice with ginger and garlic, then slice the chicken and serve with cucumber and a ginger-scallion oil.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Poach {chicken-thigh} in simmering {chicken-stock} with half of the {ginger} (sliced) for 20 minutes until cooked through. Lift out, plunge into cold water for 2 minutes and drain; keep the stock.",
+      "Fry crushed {garlic} and the remaining grated ginger in {oil} for 1 minute, add {rice} for 2 minutes, then cook it in 300 ml of the hot poaching stock with {salt}, covered, on low heat for 15 minutes.",
+      "Slice {spring-onion} and mix with a little hot oil and {black-pepper}. Slice {cucumber}.",
+      "Slice the chicken and drizzle with {soy-sauce} and {sesame-oil}. Serve over the rice with the cucumber and spring onion relish."
     ]
   },
   {
@@ -80,15 +79,15 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "red-chilli",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -108,7 +107,7 @@ KITCHEN.add(
       ],
       [
         "sugar",
-        35
+        20
       ],
       [
         "oil",
@@ -124,11 +123,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {garlic} and {ginger}.",
-      "Add {crabmeat} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {tomato} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Fry chilli, ginger and garlic until fragrant, add tomato and sambal to make a sweet-hot sauce, fold in crab and finish by streaming beaten egg through the simmering sauce.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Blend {tomato}, {red-chilli}, {garlic} and {ginger} into a coarse paste.",
+      "Heat {oil} in a wok and fry the paste with {sambal-oelek} for 5 minutes until thick and fragrant.",
+      "Add {soy-sauce}, {sugar}, {salt}, {black-pepper} and 100 ml water; simmer for 5 minutes into a glossy sauce.",
+      "Fold in {crabmeat} and warm for 3 minutes. Beat {eggs} and drizzle them in slowly while stirring gently to make soft ribbons. Serve at once."
     ]
   },
   {
@@ -176,7 +174,7 @@ KITCHEN.add(
     "name": "Singapore fish curry with coconut milk and tamarind",
     "meal": "big",
     "cuisine": "Singaporean",
-    "time": 35,
+    "time": 40,
     "serves": 2,
     "ing": [
       [
@@ -193,11 +191,11 @@ KITCHEN.add(
       ],
       [
         "red-curry-paste",
-        120
+        40
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "okra",
@@ -205,7 +203,7 @@ KITCHEN.add(
       ],
       [
         "aubergine",
-        1
+        "1pc"
       ],
       [
         "fish-stock",
@@ -225,11 +223,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan and let the aromatics or spices become fragrant without browning.",
-      "Add {white-fish} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {fish-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Fry the curry paste until fragrant, add coconut milk, stock and tamarind, then simmer vegetables before adding fish so it poaches gently without breaking.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat {oil} in a pot and fry {red-curry-paste} for 3 minutes until fragrant.",
+      "Add {fish-stock}, {tamarind-paste}, quartered {tomato}, {aubergine} (in chunks) and {salt}; simmer for 10 minutes.",
+      "Add {okra} and {coconut-milk} and simmer 5 minutes.",
+      "Add {white-fish} in large pieces and poach gently for 8 minutes until it flakes. Season with {black-pepper} and serve."
     ]
   },
   {
@@ -610,32 +607,44 @@ KITCHEN.add(
     "name": "Singaporean Laksa Noodle Soup",
     "meal": "big",
     "cuisine": "Singaporean",
-    "time": 37,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "soy-sauce",
-        25
+        "rice-noodles",
+        250
       ],
       [
-        "ginger",
-        10
+        "laksa-paste",
+        60
       ],
       [
-        "garlic",
-        2
+        "coconut-milk",
+        400
       ],
       [
-        "spring-onion",
-        2
+        "fish-stock",
+        600
       ],
       [
-        "carrot",
-        1
+        "prawns",
+        300
       ],
       [
-        "sesame-oil",
-        10
+        "bean-sprouts",
+        100
+      ],
+      [
+        "eggs",
+        "2pc"
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "oil",
+        20
       ],
       [
         "salt",
@@ -643,10 +652,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a heavy pan and soften the {ginger} until fragrant.",
-      "Add the {soy-sauce} and turn to coat in the seasoning.",
-      "Add the {garlic} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Boil {eggs} for 8 minutes, cool, peel and halve.",
+      "Fry {laksa-paste} in {oil} for 3 minutes, add {fish-stock} and simmer 10 minutes, then stir in {coconut-milk} and {salt} and simmer 5 minutes.",
+      "Cover {rice-noodles} with hot water for 8 minutes, drain, and divide into bowls with {bean-sprouts}.",
+      "Add {prawns} to the soup and cook 3 minutes until pink.",
+      "Ladle over the noodles, top with the egg and serve with {lime} wedges."
     ]
   },
   {
@@ -693,91 +703,95 @@ KITCHEN.add(
     "name": "Singaporean Char Kway Teow-Style Noodles",
     "meal": "big",
     "cuisine": "Singaporean",
-    "time": 32,
+    "time": 25,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "rice-noodles",
+        300
       ],
       [
-        "garlic",
-        2
+        "prawns",
+        200
+      ],
+      [
+        "eggs",
+        "2pc"
+      ],
+      [
+        "bean-sprouts",
+        150
       ],
       [
         "spring-onion",
-        2
+        "4pc"
       ],
       [
-        "carrot",
-        1
+        "garlic",
+        "4pc"
       ],
       [
-        "sesame-oil",
+        "soy-sauce",
+        30
+      ],
+      [
+        "dark-soy-sauce",
+        15
+      ],
+      [
+        "sambal-oelek",
         10
       ],
       [
-        "salt",
-        2
+        "oil",
+        50
       ],
       [
-        "chicken-thigh",
-        400
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a pan and soften the {garlic} until fragrant.",
-      "Add the {ginger} and turn to coat in the seasoning.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Cover {rice-noodles} with hot water for 8 minutes until pliable; drain. Crush {garlic}, slice {spring-onion}. Mix {soy-sauce}, {dark-soy-sauce} and {sambal-oelek}.",
+      "Heat half of the {oil} in a very hot wok and fry the garlic for 15 seconds, then {prawns} for 2 minutes. Push aside, crack in {eggs} and scramble for 1 minute.",
+      "Add the remaining oil and noodles, pour in the sauce and toss on maximum heat for 3 minutes.",
+      "Add {bean-sprouts}, spring onion and {black-pepper} and toss for 1 minute so the sprouts stay crunchy. Serve at once."
     ]
   },
   {
     "id": "singaporean-kaya-toast",
     "name": "Singaporean Kaya Toast",
-    "meal": "big",
+    "meal": "morning,treat",
     "cuisine": "Singaporean",
-    "time": 39,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "carrot",
-        1
+        "bread",
+        "8pc"
       ],
       [
-        "sesame-oil",
-        10
+        "coconut-milk",
+        200
       ],
       [
-        "salt",
-        2
+        "eggs",
+        "4pc"
       ],
       [
-        "chicken-thigh",
-        400
+        "sugar",
+        100
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "soy-sauce",
-        25
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "garlic",
-        2
+        "butter",
+        60
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {carrot} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Whisk {eggs} with {sugar} in a heatproof bowl until smooth, then stir in {coconut-milk}.",
+      "Set the bowl over a pan of barely simmering water and cook, stirring constantly, for 25 minutes until it thickens into a glossy jam; cool.",
+      "Toast {bread} until crisp and golden.",
+      "Spread half of the toast generously with kaya, sandwich with slices of cold {butter} and the remaining toast, and serve."
     ]
   },
   {
@@ -824,43 +838,55 @@ KITCHEN.add(
     "name": "Singaporean Soy and Sesame Tofu",
     "meal": "big",
     "cuisine": "Singaporean",
-    "time": 53,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "ginger",
+        "tofu",
+        400
+      ],
+      [
+        "soy-sauce",
+        30
+      ],
+      [
+        "dark-soy-sauce",
         10
-      ],
-      [
-        "garlic",
-        2
-      ],
-      [
-        "spring-onion",
-        2
-      ],
-      [
-        "carrot",
-        1
       ],
       [
         "sesame-oil",
         10
       ],
       [
-        "salt",
-        2
+        "garlic",
+        "3pc"
       ],
       [
-        "chicken-thigh",
-        400
+        "ginger",
+        10
+      ],
+      [
+        "spring-onion",
+        "3pc"
+      ],
+      [
+        "sugar",
+        10
+      ],
+      [
+        "cornstarch",
+        20
+      ],
+      [
+        "oil",
+        40
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a pan and soften the {garlic} until fragrant.",
-      "Add the {ginger} and turn to coat in the seasoning.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Press {tofu} for 10 minutes, cube and toss in half of the {cornstarch}. Fry in {oil} for 8 minutes until golden; lift out.",
+      "Fry crushed {garlic} and grated {ginger} for 30 seconds, then add {soy-sauce}, {dark-soy-sauce}, {sugar} and 100 ml water.",
+      "Mix the remaining cornstarch with a splash of water, stir it in and simmer 1 minute until glossy.",
+      "Return the tofu, toss to coat and finish with {sesame-oil} and sliced {spring-onion}."
     ]
   },
   {
@@ -872,43 +898,51 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "carrot",
-        1
-      ],
-      [
-        "sesame-oil",
-        10
-      ],
-      [
-        "salt",
-        2
-      ],
-      [
         "chicken-thigh",
-        400
+        600
       ],
       [
         "rice",
         250
       ],
       [
-        "soy-sauce",
-        25
+        "spring-onion",
+        "5pc"
       ],
       [
         "ginger",
-        10
+        20
       ],
       [
         "garlic",
+        "3pc"
+      ],
+      [
+        "soy-sauce",
+        20
+      ],
+      [
+        "sesame-oil",
+        10
+      ],
+      [
+        "chicken-stock",
+        700
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
         2
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {carrot} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Poach {chicken-thigh} in simmering {chicken-stock} with half of the {ginger} (sliced) for 20 minutes until cooked through. Lift out, plunge into cold water and drain; keep the stock.",
+      "Fry crushed {garlic} in 15 g of the {oil} for 1 minute, add {rice} for 2 minutes, then cook in 450 ml of the hot stock with {salt}, covered, on low heat for 15 minutes.",
+      "Slice {spring-onion}, mix with the remaining grated ginger and hot oil to make a relish.",
+      "Slice the chicken, drizzle with {soy-sauce} and {sesame-oil} and serve over the rice with the relish."
     ]
   },
   {
@@ -953,45 +987,48 @@ KITCHEN.add(
   {
     "id": "singaporean-sesame-cucumber-salad",
     "name": "Singaporean Sesame Cucumber Salad",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Singaporean",
-    "time": 38,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
-      ],
-      [
-        "garlic",
-        2
-      ],
-      [
-        "spring-onion",
-        2
-      ],
-      [
-        "carrot",
-        1
+        "cucumber",
+        "2pc"
       ],
       [
         "sesame-oil",
         10
       ],
       [
-        "salt",
-        2
+        "rice-vinegar",
+        15
       ],
       [
-        "chicken-thigh",
-        400
+        "soy-sauce",
+        10
+      ],
+      [
+        "sesame-seeds",
+        10
+      ],
+      [
+        "garlic",
+        "1pc"
+      ],
+      [
+        "sugar",
+        5
+      ],
+      [
+        "sambal-oelek",
+        5
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a pan and soften the {garlic} until fragrant.",
-      "Add the {ginger} and turn to coat in the seasoning.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Slice {cucumber} thinly. Crush {garlic}.",
+      "Whisk {sesame-oil}, {rice-vinegar}, {soy-sauce}, {sugar}, {sambal-oelek} and the garlic until the sugar dissolves.",
+      "Toss with the cucumber, scatter {sesame-seeds} and chill 10 minutes before serving."
     ]
   }
 ]

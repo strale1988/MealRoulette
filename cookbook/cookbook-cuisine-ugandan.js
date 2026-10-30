@@ -188,93 +188,95 @@ KITCHEN.add(
     "name": "Matoke-Inspired Plantain Stew",
     "meal": "big",
     "cuisine": "Ugandan",
-    "time": 37,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
+        "plantain",
+        "4pc"
+      ],
+      [
         "tomato",
-        300
+        "3pc"
       ],
       [
-        "peanut-butter",
-        50
+        "onion",
+        "1pc"
       ],
       [
-        "rice",
-        250
+        "garlic",
+        "2pc"
       ],
       [
-        "spinach",
-        150
-      ],
-      [
-        "ginger",
-        10
+        "carrot",
+        "1pc"
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {peanut-butter} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {tomato} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Oil your hands lightly, peel the green {plantain} and cut into 3 cm chunks. Chop {onion} and {tomato}; crush {garlic}; dice {carrot}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic and carrot for 3 minutes, then the tomato for 6 minutes.",
+      "Add the plantain, 250 ml water, {salt} and {black-pepper}, cover and simmer for 25 minutes until the plantain is soft and the sauce is thick.",
+      "Mash a few pieces against the pot to thicken it and serve hot."
     ]
   },
   {
     "id": "ugandan-rolex-style-egg-wrap",
     "name": "Ugandan Rolex-Style Egg Wrap",
-    "meal": "big",
+    "meal": "morning,big",
     "cuisine": "Ugandan",
-    "time": 44,
+    "time": 25,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "eggs",
+        "6pc"
       ],
       [
-        "spinach",
-        150
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
+        "flatbread",
+        240
       ],
       [
         "tomato",
-        300
+        "1pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "cabbage",
+        100
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        2
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Finely chop {onion}, {tomato} and shred {cabbage}. Beat {eggs} with {salt} and {black-pepper}.",
+      "Warm {flatbread} in a dry pan, one piece at a time, and keep wrapped in a cloth.",
+      "Heat a quarter of the {oil} in a pan, cook a quarter of the vegetables for 2 minutes, pour in a quarter of the eggs and cook 2 minutes into a thin omelette.",
+      "Lay the omelette on a flatbread, roll up tightly and repeat three more times. Serve hot."
     ]
   },
   {
@@ -321,24 +323,36 @@ KITCHEN.add(
     "name": "Luwombo-Inspired Chicken Pot",
     "meal": "big",
     "cuisine": "Ugandan",
-    "time": 58,
+    "time": 90,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
+        "chicken-thigh",
+        700
       ],
       [
-        "rice",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "spinach",
-        150
+        "tomato",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "3pc"
       ],
       [
         "ginger",
-        10
+        15
+      ],
+      [
+        "peanut-butter",
+        40
+      ],
+      [
+        "chicken-stock",
+        200
       ],
       [
         "oil",
@@ -347,18 +361,13 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {spinach} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Chop {onion} and {tomato}; crush {garlic}; grate {ginger}. Whisk {peanut-butter} into {chicken-stock}.",
+      "Brown {chicken-thigh} in {oil} in an ovenproof pot for 4 minutes per side. Add the onion, garlic, ginger, tomato and {salt}.",
+      "Pour in the peanut stock, cover with foil under the lid so it is tightly sealed, and cook on the lowest heat or at 160 °C for 1 hour 15 minutes.",
+      "Serve the chicken in the thick, steamed sauce."
     ]
   },
   {
@@ -366,108 +375,28 @@ KITCHEN.add(
     "name": "Ugandan Peanut Greens",
     "meal": "big",
     "cuisine": "Ugandan",
-    "time": 65,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
+        "kale",
         500
       ],
       [
+        "peanut-butter",
+        80
+      ],
+      [
         "onion",
-        1
+        "1pc"
       ],
       [
         "tomato",
-        300
+        "1pc"
       ],
       [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {onion} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "cassava-and-bean-bowl",
-    "name": "Cassava and Bean Bowl",
-    "meal": "big",
-    "cuisine": "Ugandan",
-    "time": 36,
-    "serves": 4,
-    "ing": [
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {peanut-butter} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {tomato} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "ugandan-spiced-rice",
-    "name": "Ugandan Spiced Rice",
-    "meal": "big",
-    "cuisine": "Ugandan",
-    "time": 43,
-    "serves": 4,
-    "ing": [
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "ginger",
-        10
+        "garlic",
+        "2pc"
       ],
       [
         "oil",
@@ -476,22 +405,121 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {ginger} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Shred {kale}. Chop {onion} and {tomato}; crush {garlic}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic and tomato for 5 minutes.",
+      "Add the kale, 150 ml water and {salt}, cover and cook for 15 minutes until tender.",
+      "Whisk {peanut-butter} with a ladle of the liquid, stir in and simmer 8 minutes until creamy."
+    ]
+  },
+  {
+    "id": "cassava-and-bean-bowl",
+    "name": "Cassava and Bean Bowl",
+    "meal": "big",
+    "cuisine": "Ugandan",
+    "time": 50,
+    "serves": 4,
+    "ing": [
+      [
+        "yuca-frozen",
+        500
+      ],
+      [
+        "kidney-beans",
+        480
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        3
+      ]
+    ],
+    "steps": [
+      "Boil {yuca-frozen} in salted water for 20–25 minutes until tender; drain.",
+      "Drain {kidney-beans}. Chop {onion} and {tomato}; crush {garlic}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic and tomato for 6 minutes, then {kidney-beans}, 100 ml water and {salt}; simmer 12 minutes.",
+      "Serve the yuca in bowls with the bean stew spooned over."
+    ]
+  },
+  {
+    "id": "ugandan-spiced-rice",
+    "name": "Ugandan Spiced Rice",
+    "meal": "big",
+    "cuisine": "Ugandan",
+    "time": 45,
+    "serves": 4,
+    "ing": [
+      [
+        "rice",
+        300
+      ],
+      [
+        "onion",
+        "2pc"
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "peas",
+        100
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "cardamom",
+        1
+      ],
+      [
+        "cinnamon",
+        1
+      ],
+      [
+        "cloves",
+        1
+      ],
+      [
+        "vegetable-stock",
+        500
+      ],
+      [
+        "oil",
+        40
+      ],
+      [
+        "salt",
+        3
+      ]
+    ],
+    "steps": [
+      "Rinse {rice}. Slice {onion}, grate {carrot}, crush {garlic}.",
+      "Cook the onion in {oil} for 10 minutes until golden, add garlic, {cumin}, {cardamom}, {cinnamon} and {cloves} for 1 minute.",
+      "Add the carrot and rice and stir for 1 minute, then {vegetable-stock} and {salt}. Cover and cook on the lowest heat for 15 minutes.",
+      "Scatter {peas} on top, cover for 5 minutes, rest 5 minutes and fluff."
     ]
   },
   {
@@ -537,44 +565,46 @@ KITCHEN.add(
     "name": "Ugandan Tomato and Bean Stew",
     "meal": "big",
     "cuisine": "Ugandan",
-    "time": 32,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
+        "black-beans",
+        480
       ],
       [
-        "rice",
-        250
+        "tomato",
+        "3pc"
       ],
       [
-        "spinach",
-        150
+        "onion",
+        "1pc"
       ],
       [
-        "ginger",
+        "garlic",
+        "2pc"
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "cilantro",
         10
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Drain {black-beans}. Chop {onion} and {tomato}; crush {garlic}; dice {carrot}.",
+      "Cook the onion and carrot in {oil} for 6 minutes, add garlic and tomato for 8 minutes.",
+      "Add {black-beans}, 100 ml water and {salt} and simmer for 12 minutes. Stir in chopped {cilantro} and serve."
     ]
   },
   {
@@ -667,44 +697,47 @@ KITCHEN.add(
     "name": "Ugandan Peanut and Sweet Potato Soup",
     "meal": "big",
     "cuisine": "Ugandan",
-    "time": 53,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
+        "sweet-potato",
+        500
+      ],
+      [
         "peanut-butter",
-        50
+        60
       ],
       [
-        "rice",
-        250
+        "tomato",
+        "2pc"
       ],
       [
-        "spinach",
-        150
+        "onion",
+        "1pc"
       ],
       [
-        "ginger",
-        10
+        "garlic",
+        "2pc"
       ],
       [
-        "oil",
-        20
+        "green-beans",
+        100
+      ],
+      [
+        "vegetable-stock",
+        900
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Peel {sweet-potato} and cut into chunks. Chop {onion} and {tomato}; crush {garlic}; trim and cut {green-beans}.",
+      "Simmer the sweet potato, onion, tomato, garlic and {vegetable-stock} for 20 minutes until soft.",
+      "Whisk {peanut-butter} with a ladle of broth, stir in with {salt} and simmer 5 minutes.",
+      "Add {green-beans} and cook 5 minutes until just tender. Serve hot."
     ]
   },
   {
@@ -797,24 +830,40 @@ KITCHEN.add(
     "name": "Ugandan Ginger Lentil Curry",
     "meal": "big",
     "cuisine": "Ugandan",
-    "time": 38,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
+        "red-lentils",
         250
       ],
       [
-        "spinach",
-        150
+        "ginger",
+        25
       ],
       [
-        "ginger",
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "curry-powder",
+        5
+      ],
+      [
+        "cilantro",
         10
+      ],
+      [
+        "lemon",
+        "1pc"
       ],
       [
         "oil",
@@ -823,18 +872,13 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Rinse {red-lentils}. Chop {onion} and {tomato}; crush {garlic}; grate {ginger}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic, ginger and {curry-powder} for 2 minutes, then the tomato for 4 minutes.",
+      "Add the lentils, 700 ml water and {salt}, simmer for 20 minutes until soft and thick.",
+      "Finish with the juice of {lemon} and chopped {cilantro}."
     ]
   }
 ]

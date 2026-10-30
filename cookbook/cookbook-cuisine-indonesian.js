@@ -1438,8 +1438,7 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      
+      ]
     ],
     "steps": [
       "Mix {flour}, {water}, a pinch of {salt} and half the {oil}; knead into a soft dough and rest 20 minutes.",
@@ -1652,7 +1651,7 @@ KITCHEN.add(
     "name": "Sayur lodeh (Indonesian coconut vegetable stew)",
     "meal": "big",
     "cuisine": "Indonesian",
-    "time": 35,
+    "time": 40,
     "serves": 2,
     "ing": [
       [
@@ -1709,11 +1708,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {coconut-milk} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {vegetable-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Soften onion and garlic in oil, add turmeric and firm vegetables, then simmer gently in coconut milk and stock; add tofu near the end and keep the vegetables tender without letting the coconut sauce split.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cut {aubergine}, {carrot} and {cabbage} into bite-sized pieces and trim {green-beans}. Cut {tofu} into cubes.",
+      "Blend {onion}, {garlic}, {turmeric} and {black-pepper} with a little {vegetable-stock} into a paste.",
+      "Fry the paste in {oil} for 4 minutes until fragrant, then add the remaining {vegetable-stock}, {salt}, the carrot and aubergine, and simmer for 10 minutes.",
+      "Add the green beans, cabbage and tofu and cook 6 minutes.",
+      "Stir in {coconut-milk} and warm gently for 4 minutes without boiling hard. Serve with rice."
     ]
   },
   {

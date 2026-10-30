@@ -316,45 +316,41 @@ KITCHEN.add(
   {
     "id": "chipa-style-cheese-bites",
     "name": "Chipa-Style Cheese Bites",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Paraguayan",
-    "time": 37,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "cassava-flour",
+        300
       ],
       [
-        "tomato",
-        250
+        "cheese",
+        200
       ],
       [
-        "plantain",
-        2
+        "eggs",
+        "2pc"
       ],
       [
-        "red-pepper",
-        1
+        "butter",
+        60
       ],
       [
-        "cilantro",
-        10
+        "milk",
+        60
       ],
       [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
+        "salt",
+        4
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Heat the oven to 220 °C. Grate {cheese}.",
+      "Mix {cassava-flour}, cheese and {salt}. Rub in softened {butter}, then add {eggs} and {milk} and knead into a soft dough that holds together.",
+      "Roll into 3 cm balls and place on a lined tray, spaced apart.",
+      "Bake for 18–20 minutes until puffed and golden. Serve warm."
     ]
   },
   {
@@ -362,48 +358,63 @@ KITCHEN.add(
     "name": "Paraguayan Beef and Cassava Stew",
     "meal": "big",
     "cuisine": "Paraguayan",
-    "time": 44,
+    "time": 120,
     "serves": 4,
     "ing": [
       [
-        "plantain",
-        2
+        "beef-chuck",
+        500
+      ],
+      [
+        "yuca-frozen",
+        500
+      ],
+      [
+        "onion",
+        "1pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
-        10
+        "garlic",
+        "3pc"
       ],
       [
-        "lime",
-        1
+        "tomato",
+        "2pc"
+      ],
+      [
+        "beef-stock",
+        600
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "oregano",
+        2
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Cut {beef-chuck} into 3 cm cubes. Chop {onion}, {red-pepper} and {tomato}; crush {garlic}.",
+      "Brown the beef in {oil} in two batches. Add the onion and pepper and cook 5 minutes, then garlic, {paprika}, {oregano} and tomato for 4 minutes.",
+      "Add {beef-stock}, {salt} and {black-pepper}, cover and simmer for 1 hour 15 minutes.",
+      "Add {yuca-frozen} and cook for 25–30 minutes until the yuca is tender and the broth is thick. Serve hot."
     ]
   },
   {
@@ -449,43 +460,60 @@ KITCHEN.add(
     "name": "Paraguayan Chicken Rice",
     "meal": "big",
     "cuisine": "Paraguayan",
-    "time": 58,
+    "time": 55,
     "serves": 4,
     "ing": [
+      [
+        "chicken-thigh",
+        600
+      ],
       [
         "rice",
         250
       ],
       [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "onion",
+        "1pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
+        "garlic",
+        "2pc"
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "chicken-stock",
+        500
+      ],
+      [
+        "parsley",
         10
       ],
       [
-        "lime",
-        1
+        "oil",
+        30
       ],
       [
-        "oil",
-        20
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Season {chicken-thigh} with {salt}, {black-pepper} and half of the {paprika}. Dice {onion} and {red-pepper}; crush {garlic}.",
+      "Heat {oil} in a wide pan and brown the chicken for 5 minutes per side. Remove.",
+      "Cook the onion and pepper for 5 minutes, add garlic and the remaining paprika, then stir in {rice} for 1 minute.",
+      "Add {chicken-stock}, nestle the chicken in, cover and cook on low heat for 25 minutes. Rest 5 minutes.",
+      "Scatter chopped {parsley} and serve."
     ]
   },
   {
@@ -493,48 +521,43 @@ KITCHEN.add(
     "name": "Paraguayan Corn and Cheese Bake",
     "meal": "big",
     "cuisine": "Paraguayan",
-    "time": 65,
+    "time": 70,
     "serves": 4,
     "ing": [
       [
-        "plantain",
-        2
+        "cornmeal",
+        250
       ],
       [
-        "red-pepper",
-        1
+        "cheese",
+        200
       ],
       [
-        "cilantro",
-        10
+        "onion",
+        "2pc"
       ],
       [
-        "lime",
-        1
+        "eggs",
+        "3pc"
       ],
       [
-        "oil",
-        20
+        "milk",
+        250
+      ],
+      [
+        "butter",
+        60
       ],
       [
         "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
+        4
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Heat the oven to 200 °C and butter a 22 cm baking dish. Finely chop {onion} and cook it in half of the {butter} for 8 minutes until very soft.",
+      "Beat {eggs} with the remaining melted butter, {milk} and {salt}, then stir in {cornmeal} to make a loose batter.",
+      "Grate {cheese} and fold it in with the onion.",
+      "Pour into the dish and bake for 35–40 minutes until set and golden. Cool 10 minutes and cut into squares."
     ]
   },
   {
@@ -578,46 +601,40 @@ KITCHEN.add(
   {
     "id": "paraguayan-sweet-potato-mash",
     "name": "Paraguayan Sweet Potato Mash",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Paraguayan",
-    "time": 32,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        250
+        "sweet-potato",
+        800
       ],
       [
-        "plantain",
-        2
+        "butter",
+        40
       ],
       [
-        "red-pepper",
+        "milk",
+        80
+      ],
+      [
+        "nutmeg",
         1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
       ],
       [
         "salt",
         3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomato} and turn to coat in the seasoning.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Peel {sweet-potato} and cut into 3 cm chunks. Boil in lightly salted water for 15–20 minutes until very tender; drain well.",
+      "Mash with {butter} and warm {milk} until smooth.",
+      "Season with {nutmeg}, {salt} and {black-pepper} and serve hot."
     ]
   },
   {
@@ -625,47 +642,59 @@ KITCHEN.add(
     "name": "Paraguayan Black Bean and Rice Bowl",
     "meal": "big",
     "cuisine": "Paraguayan",
-    "time": 39,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
         "black-beans",
-        250
+        480
       ],
       [
         "rice",
         250
       ],
       [
-        "tomato",
-        250
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "red-pepper",
+        "1pc"
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "eggs",
+        "4pc"
+      ],
+      [
+        "cilantro",
+        10
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "oil",
+        40
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Cook {rice} in 500 ml water with a pinch of {salt}, covered, on low heat for 15 minutes.",
+      "Chop {onion} and {red-pepper}; crush {garlic}. Cook them in half of the {oil} for 6 minutes, add {cumin}, then {black-beans} (drained) and 100 ml water. Simmer for 10 minutes, mashing a few against the pan.",
+      "Fry {eggs} in the remaining oil until the whites are set and the edges crisp.",
+      "Serve the rice and beans in bowls with an egg, chopped {cilantro} and a squeeze of {lime}."
     ]
   },
   {
@@ -710,93 +739,83 @@ KITCHEN.add(
   {
     "id": "paraguayan-sweet-plantain-cakes",
     "name": "Paraguayan Sweet Plantain Cakes",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Paraguayan",
-    "time": 53,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
         "plantain",
-        2
+        "3pc"
       ],
       [
-        "red-pepper",
-        1
+        "cheese",
+        100
       ],
       [
-        "cilantro",
+        "cornmeal",
+        60
+      ],
+      [
+        "sugar",
         10
       ],
       [
-        "lime",
-        1
+        "oil",
+        60
       ],
       [
-        "oil",
-        20
+        "salt",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Peel the very ripe {plantain}, mash until nearly smooth and stir in {cornmeal}, {sugar} and {salt}. Grate {cheese} and fold it in.",
+      "Form 8 flat patties with wet hands.",
+      "Heat {oil} in a frying pan over medium heat and fry the patties for 3 minutes per side until golden and crisp at the edges. Serve warm."
     ]
   },
   {
     "id": "paraguayan-lime-cabbage-slaw",
     "name": "Paraguayan Lime Cabbage Slaw",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Paraguayan",
-    "time": 60,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "red-pepper",
-        1
+        "cabbage",
+        400
       ],
       [
-        "cilantro",
-        10
+        "tomato",
+        "2pc"
+      ],
+      [
+        "red-onion",
+        "1pc"
       ],
       [
         "lime",
-        1
+        "1pc"
       ],
       [
-        "oil",
+        "olive-oil",
         20
+      ],
+      [
+        "parsley",
+        15
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {cilantro} until fragrant.",
-      "Add the {red-pepper} and {black-beans}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Shred {cabbage} finely, dice {tomato} and slice {red-onion} thinly.",
+      "Toss the cabbage with {salt} and the juice of {lime} and massage for 1 minute.",
+      "Fold in the tomato, onion, {olive-oil} and chopped {parsley}, rest 10 minutes and serve."
     ]
   },
   {
@@ -804,39 +823,63 @@ KITCHEN.add(
     "name": "Paraguayan Beef and Potato Stew",
     "meal": "big",
     "cuisine": "Paraguayan",
-    "time": 31,
+    "time": 120,
     "serves": 4,
     "ing": [
       [
+        "beef-chuck",
+        600
+      ],
+      [
+        "potatoes",
+        500
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "red-pepper",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "beef-stock",
+        600
+      ],
+      [
+        "oregano",
+        2
+      ],
+      [
+        "bay-leaf",
+        2
+      ],
+      [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {salt} until fragrant.",
-      "Add the {oil} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Cut {beef-chuck} into 3 cm cubes. Chop {onion}, {red-pepper} and {tomato}; crush {garlic}; quarter {potatoes}.",
+      "Brown the beef in {oil} in two batches. Add the onion and pepper for 5 minutes, then garlic and tomato for 4 minutes.",
+      "Add {beef-stock}, {oregano}, {bay-leaf}, {salt} and {black-pepper}, cover and simmer for 1 hour 15 minutes.",
+      "Add the potatoes and cook 25–30 minutes until tender and the broth has thickened. Remove the bay leaves and serve."
     ]
   },
   {

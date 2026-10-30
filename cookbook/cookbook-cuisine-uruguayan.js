@@ -338,43 +338,52 @@ KITCHEN.add(
     "name": "Uruguayan Pascualina Spinach Pie",
     "meal": "big",
     "cuisine": "Uruguayan",
-    "time": 37,
+    "time": 80,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "puff-pastry",
+        500
       ],
       [
-        "tomato",
-        250
+        "spinach",
+        500
       ],
       [
-        "plantain",
-        2
+        "ricotta",
+        150
       ],
       [
-        "red-pepper",
-        1
+        "eggs",
+        "5pc"
       ],
       [
-        "cilantro",
-        10
+        "onion",
+        "1pc"
       ],
       [
-        "lime",
-        1
-      ],
-      [
-        "oil",
+        "butter",
         20
+      ],
+      [
+        "nutmeg",
+        1
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Heat the oven to 200 °C. Wilt {spinach} in a large pot for 3 minutes, cool, squeeze very dry and chop. Finely chop {onion} and cook in {butter} for 5 minutes.",
+      "Mix the spinach, onion, {ricotta}, one of the {eggs}, {nutmeg}, {salt} and {black-pepper}.",
+      "Line a 24 cm tin with half of the {puff-pastry}. Fill with the spinach mixture, make 4 hollows and crack an egg into each.",
+      "Cover with the remaining pastry, seal the edges and prick the top. Brush with the last beaten egg.",
+      "Bake for 35–40 minutes until deep golden. Cool 10 minutes before cutting."
     ]
   },
   {
@@ -382,48 +391,63 @@ KITCHEN.add(
     "name": "Uruguayan Beef and Potato Stew",
     "meal": "big",
     "cuisine": "Uruguayan",
-    "time": 44,
+    "time": 130,
     "serves": 4,
     "ing": [
       [
-        "plantain",
+        "beef-chuck",
+        600
+      ],
+      [
+        "potatoes",
+        400
+      ],
+      [
+        "sweet-potato",
+        300
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "beef-stock",
+        600
+      ],
+      [
+        "bay-leaf",
         2
       ],
       [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
+        "thyme",
+        2
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Cut {beef-chuck} into 3 cm cubes. Chop {onion} and {tomato}, crush {garlic}, and cut {potatoes} and {sweet-potato} into chunks.",
+      "Brown the beef in {oil} in two batches. Cook the onion 5 minutes, then garlic and tomato 4 minutes.",
+      "Add {beef-stock}, {bay-leaf}, {thyme}, {salt} and {black-pepper}, cover and simmer for 1 hour 15 minutes.",
+      "Add the potatoes and sweet potato and cook 25 minutes until tender. Remove the bay leaves and serve."
     ]
   },
   {
@@ -469,43 +493,51 @@ KITCHEN.add(
     "name": "Uruguayan Pumpkin and Cheese Bake",
     "meal": "big",
     "cuisine": "Uruguayan",
-    "time": 58,
+    "time": 70,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "pumpkin",
+        700
       ],
       [
-        "tomato",
-        250
+        "mozzarella",
+        150
       ],
       [
-        "plantain",
-        2
+        "cream",
+        150
       ],
       [
-        "red-pepper",
-        1
+        "onion",
+        "1pc"
       ],
       [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "oil",
+        "butter",
         20
+      ],
+      [
+        "nutmeg",
+        1
+      ],
+      [
+        "breadcrumbs",
+        30
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Heat the oven to 200 °C. Peel {pumpkin} and slice 5 mm thick; finely chop {onion} and cook in {butter} for 5 minutes.",
+      "Layer the pumpkin and onion in a buttered dish, seasoning with {salt}, {black-pepper} and {nutmeg}.",
+      "Pour over {cream}, cover with foil and bake for 30 minutes.",
+      "Scatter {mozzarella} and {breadcrumbs} on top and bake uncovered for 15–20 minutes until the pumpkin is tender and the top is golden."
     ]
   },
   {
@@ -513,48 +545,47 @@ KITCHEN.add(
     "name": "Uruguayan Chimichurri Grilled Chicken",
     "meal": "big",
     "cuisine": "Uruguayan",
-    "time": 65,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "plantain",
-        2
+        "chicken-thigh",
+        700
       ],
       [
-        "red-pepper",
-        1
+        "parsley",
+        30
       ],
       [
-        "cilantro",
-        10
+        "garlic",
+        "4pc"
       ],
       [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
+        "oregano",
         3
       ],
       [
-        "chicken-thigh",
-        450
+        "vinegar",
+        40
       ],
       [
-        "black-beans",
-        250
+        "olive-oil",
+        80
+      ],
+      [
+        "chilli-flakes",
+        2
+      ],
+      [
+        "salt",
+        4
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Finely chop {parsley} and crush {garlic}. Mix with {oregano}, {vinegar}, {olive-oil}, {chilli-flakes} and 2 g of the {salt} to make the chimichurri.",
+      "Rub {chicken-thigh} with a third of the chimichurri and the remaining salt; marinate for 30 minutes.",
+      "Grill or pan-fry the chicken over medium-high heat for 6–7 minutes per side until charred and cooked through. Rest 5 minutes.",
+      "Serve with the remaining chimichurri spooned over."
     ]
   },
   {
@@ -600,31 +631,51 @@ KITCHEN.add(
     "name": "Uruguayan Chickpea and Vegetable Stew",
     "meal": "big",
     "cuisine": "Uruguayan",
-    "time": 32,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        250
+        "chickpeas",
+        480
       ],
       [
-        "plantain",
+        "potatoes",
+        300
+      ],
+      [
+        "carrot",
+        "2pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "spinach",
+        100
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "cumin",
         2
       ],
       [
-        "red-pepper",
-        1
+        "vegetable-stock",
+        500
       ],
       [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "oil",
+        "olive-oil",
         20
       ],
       [
@@ -633,11 +684,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomato} and turn to coat in the seasoning.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Dice {potatoes} and {carrot}, chop {onion} and {tomato}, crush {garlic}; drain {chickpeas}.",
+      "Cook the onion in {olive-oil} for 5 minutes, add garlic, {paprika} and {cumin}, then the tomato for 4 minutes.",
+      "Add the potatoes, carrot, {vegetable-stock} and {salt}, cover and simmer for 15 minutes.",
+      "Stir in {chickpeas} and simmer 10 minutes, then wilt in {spinach} for 2 minutes and serve."
     ]
   },
   {
@@ -645,16 +695,32 @@ KITCHEN.add(
     "name": "Uruguayan Black Bean and Rice Bowl",
     "meal": "big",
     "cuisine": "Uruguayan",
-    "time": 39,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "cilantro",
-        10
+        "black-beans",
+        480
       ],
       [
-        "lime",
-        1
+        "rice",
+        250
+      ],
+      [
+        "chorizo",
+        100
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "parsley",
+        10
       ],
       [
         "oil",
@@ -663,29 +729,13 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Cook {rice} in 500 ml water with a pinch of {salt}, covered, on low heat for 15 minutes.",
+      "Slice {chorizo} and fry in {oil} for 4 minutes until it releases its fat. Add chopped {onion} and cook 5 minutes, then crushed {garlic}.",
+      "Add {black-beans} (drained) and 100 ml water and simmer for 10 minutes, mashing a few against the pan.",
+      "Serve over the rice with chopped {parsley}."
     ]
   },
   {
@@ -730,93 +780,79 @@ KITCHEN.add(
   {
     "id": "uruguayan-sweet-plantain-cakes",
     "name": "Uruguayan Sweet Plantain Cakes",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Uruguayan",
-    "time": 53,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
         "plantain",
-        2
+        "3pc"
       ],
       [
-        "red-pepper",
+        "flour",
+        60
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "jam",
+        60
+      ],
+      [
+        "butter",
+        30
+      ],
+      [
+        "salt",
         1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Peel the very ripe {plantain}, mash until nearly smooth and stir in {flour}, {eggs} and {salt}.",
+      "Melt {butter} in a frying pan over medium heat and cook 8 heaped spoonfuls, flattening slightly, for 3 minutes per side until golden.",
+      "Serve warm with a spoonful of {jam} on each."
     ]
   },
   {
     "id": "uruguayan-lime-cabbage-slaw",
     "name": "Uruguayan Lime Cabbage Slaw",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Uruguayan",
-    "time": 60,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "red-pepper",
-        1
+        "cabbage",
+        400
       ],
       [
-        "cilantro",
-        10
+        "apple",
+        "1pc"
       ],
       [
         "lime",
-        1
+        "1pc"
       ],
       [
-        "oil",
+        "olive-oil",
         20
+      ],
+      [
+        "parsley",
+        10
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {cilantro} until fragrant.",
-      "Add the {red-pepper} and {black-beans}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Shred {cabbage} finely and cut {apple} into thin matchsticks.",
+      "Toss the cabbage with {salt} and the juice of {lime} and massage for 1 minute.",
+      "Fold in the apple, {olive-oil} and chopped {parsley}, rest for 10 minutes and serve."
     ]
   },
   {
@@ -824,39 +860,43 @@ KITCHEN.add(
     "name": "Uruguayan Corn and Cheese Bake",
     "meal": "big",
     "cuisine": "Uruguayan",
-    "time": 31,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "oil",
+        "sweetcorn",
+        400
+      ],
+      [
+        "mozzarella",
+        150
+      ],
+      [
+        "cream",
+        150
+      ],
+      [
+        "eggs",
+        "2pc"
+      ],
+      [
+        "butter",
         20
       ],
       [
+        "nutmeg",
+        1
+      ],
+      [
         "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
+        2
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {salt} until fragrant.",
-      "Add the {oil} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 190 °C and butter a 20 cm dish.",
+      "Blend half of the {sweetcorn} with {cream}, {eggs}, {nutmeg} and {salt}, then stir in the remaining whole corn.",
+      "Tear {mozzarella} and fold in two-thirds of it. Pour into the dish and top with the rest, dotting with {butter}.",
+      "Bake for 30–35 minutes until set and golden. Rest 5 minutes and serve."
     ]
   },
   {

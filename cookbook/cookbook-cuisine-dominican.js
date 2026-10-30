@@ -191,7 +191,6 @@ KITCHEN.add(
         "red-pepper",
         180
       ],
-      
       [
         "garlic",
         "3pc"
@@ -474,68 +473,56 @@ KITCHEN.add(
     "name": "Dominican Sancocho-Inspired Stew",
     "meal": "big",
     "cuisine": "Dominican",
-    "time": 37,
+    "time": 120,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "beef-chuck",
+        300
       ],
       [
-        "tomato",
+        "chicken-thigh",
+        300
+      ],
+      [
+        "yuca-frozen",
         250
       ],
       [
         "plantain",
-        2
+        "1pc"
       ],
       [
-        "red-pepper",
-        1
+        "pumpkin",
+        250
       ],
       [
-        "cilantro",
-        10
+        "sweetcorn",
+        200
       ],
       [
-        "lime",
-        1
+        "onion",
+        "1pc"
       ],
       [
-        "oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "dominican-moro-rice-and-beans",
-    "name": "Dominican Moro Rice and Beans",
-    "meal": "big",
-    "cuisine": "Dominican",
-    "time": 44,
-    "serves": 4,
-    "ing": [
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
+        "garlic",
+        "3pc"
       ],
       [
         "cilantro",
-        10
+        15
+      ],
+      [
+        "oregano",
+        2
       ],
       [
         "lime",
-        1
+        "1pc"
+      ],
+      [
+        "beef-stock",
+        1200
       ],
       [
         "oil",
@@ -544,22 +531,74 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Cut {beef-chuck} into 3 cm cubes and season with {salt} and {oregano}. Brown in {oil} in a large pot for 6 minutes, add chopped {onion} and crushed {garlic} for 4 minutes.",
+      "Pour in {beef-stock}, cover and simmer for 45 minutes.",
+      "Add {chicken-thigh} (bone-in or boneless) and simmer 20 minutes.",
+      "Cut {yuca-frozen}, the green {plantain} and {pumpkin} into 3 cm chunks. Add the yuca and plantain and cook for 15 minutes, then the pumpkin and {sweetcorn} for 15 minutes more, until the broth thickens.",
+      "Stir in chopped {cilantro} and the juice of {lime} and serve in deep bowls."
+    ]
+  },
+  {
+    "id": "dominican-moro-rice-and-beans",
+    "name": "Dominican Moro Rice and Beans",
+    "meal": "big",
+    "cuisine": "Dominican",
+    "time": 40,
+    "serves": 4,
+    "ing": [
+      [
+        "rice",
+        250
+      ],
+      [
+        "black-beans",
+        480
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "red-pepper",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "oregano",
+        2
+      ],
+      [
+        "tomato-paste",
+        20
+      ],
+      [
+        "cilantro",
+        10
+      ],
+      [
+        "vegetable-stock",
+        400
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        3
+      ]
+    ],
+    "steps": [
+      "Chop {onion} and {red-pepper}; crush {garlic}. Drain {black-beans}.",
+      "Heat {oil} in a pot, cook the onion and pepper for 5 minutes, add garlic, {oregano} and {tomato-paste} for 2 minutes.",
+      "Stir in {rice} for 1 minute, then add {black-beans}, {vegetable-stock} and {salt}.",
+      "Bring to a boil, cover and cook on the lowest heat for 18 minutes. Rest 5 minutes, then fold in chopped {cilantro} and fluff."
     ]
   },
   {
@@ -641,34 +680,34 @@ KITCHEN.add(
   {
     "id": "dominican-avocado-and-tomato-salad",
     "name": "Dominican Avocado and Tomato Salad",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Dominican",
-    "time": 32,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
+        "avocado",
+        "2pc"
+      ],
+      [
         "tomato",
-        250
+        "3pc"
       ],
       [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
+        "red-onion",
+        "1pc"
       ],
       [
         "lime",
-        1
+        "1pc"
       ],
       [
-        "oil",
+        "olive-oil",
         20
+      ],
+      [
+        "oregano",
+        1
       ],
       [
         "salt",
@@ -676,59 +715,44 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomato} and turn to coat in the seasoning.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Slice {red-onion} thinly and toss with the juice of {lime} for 5 minutes.",
+      "Cut {tomato} into wedges and {avocado} into thick slices.",
+      "Arrange on a plate, top with the onion and lime juice, drizzle with {olive-oil} and season with {oregano} and {salt}. Serve at once."
     ]
   },
   {
     "id": "dominican-sweet-plantain-bake",
     "name": "Dominican Sweet Plantain Bake",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Dominican",
-    "time": 39,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "cilantro",
-        10
+        "plantain",
+        "4pc"
       ],
       [
-        "lime",
-        1
+        "butter",
+        30
       ],
       [
-        "oil",
+        "brown-sugar",
         20
       ],
       [
-        "salt",
-        3
+        "cinnamon",
+        1
       ],
       [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
+        "cheese",
+        80
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 200 °C. Peel the very ripe {plantain} and cut in half lengthways, then lay cut-side up in a baking dish.",
+      "Dot with {butter}, sprinkle with {brown-sugar} and {cinnamon}, and bake for 20 minutes until soft and caramelised.",
+      "Top with grated {cheese} and bake 8–10 minutes more until melted and bubbling. Serve warm."
     ]
   },
   {
@@ -775,131 +799,141 @@ KITCHEN.add(
     "name": "Dominican Chicken with Tomato and Peppers",
     "meal": "big",
     "cuisine": "Dominican",
-    "time": 53,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "chicken-thigh",
+        600
       ],
       [
         "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "3pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
-        10
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "tomato-paste",
+        30
+      ],
+      [
+        "oregano",
+        2
       ],
       [
         "lime",
-        1
+        "1pc"
+      ],
+      [
+        "green-olives",
+        40
       ],
       [
         "oil",
         20
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Marinate {chicken-thigh} with the juice of {lime}, {oregano}, crushed {garlic} and {salt} for 20 minutes.",
+      "Brown the chicken in {oil} for 5 minutes per side. Remove.",
+      "Cook sliced {onion} and {red-pepper} for 5 minutes, then chopped {tomato} and {tomato-paste} with 100 ml water for 4 minutes.",
+      "Return the chicken, cover and simmer for 25 minutes. Add {green-olives} for the last 5 minutes and serve."
     ]
   },
   {
     "id": "dominican-sweet-plantain-cakes",
     "name": "Dominican Sweet Plantain Cakes",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Dominican",
-    "time": 60,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "red-pepper",
+        "plantain",
+        "3pc"
+      ],
+      [
+        "flour",
+        60
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "raisins",
+        30
+      ],
+      [
+        "cinnamon",
         1
       ],
       [
-        "cilantro",
+        "sugar",
         10
       ],
       [
-        "lime",
-        1
-      ],
-      [
         "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
+        60
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {cilantro} until fragrant.",
-      "Add the {red-pepper} and {black-beans}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Peel the very ripe {plantain}, mash until nearly smooth and stir in {flour}, {eggs}, {raisins}, {cinnamon} and {sugar}.",
+      "Heat {oil} in a frying pan over medium heat and fry 8 heaped spoonfuls, flattening slightly, for 3 minutes per side until deep golden.",
+      "Drain and serve warm."
     ]
   },
   {
     "id": "dominican-lime-cabbage-slaw",
     "name": "Dominican Lime Cabbage Slaw",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Dominican",
-    "time": 31,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "oil",
+        "cabbage",
+        400
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "spring-onion",
+        "3pc"
+      ],
+      [
+        "lime",
+        "2pc"
+      ],
+      [
+        "olive-oil",
         20
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {salt} until fragrant.",
-      "Add the {oil} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Shred {cabbage} finely, dice {tomato} and slice {spring-onion}.",
+      "Toss the cabbage with {salt} and the juice of {lime} and massage for 1 minute.",
+      "Fold in the tomato, spring onion and {olive-oil}, rest for 10 minutes and serve cold."
     ]
   },
   {

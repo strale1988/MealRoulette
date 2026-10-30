@@ -1762,7 +1762,7 @@ KITCHEN.add(
     "name": "Ají de gallina (Peruvian chicken in yellow chilli-nut sauce)",
     "meal": "big",
     "cuisine": "Peruvian",
-    "time": 50,
+    "time": 60,
     "serves": 2,
     "ing": [
       [
@@ -1771,7 +1771,7 @@ KITCHEN.add(
       ],
       [
         "aji-amarillo-paste",
-        120
+        60
       ],
       [
         "bread",
@@ -1795,7 +1795,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "chicken-stock",
@@ -1819,11 +1819,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {chicken-thigh} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {chicken-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Poach and shred chicken, blend soaked bread with milk, walnuts and yellow chilli, then simmer with onion and stock until creamy; serve over rice.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Simmer {chicken-thigh} in {chicken-stock} for 25 minutes until cooked through. Lift out and shred, keeping the stock.",
+      "Tear {bread} into pieces and soak in {milk}. Blend with {walnuts}, {parmesan} and 100 ml of the warm stock until smooth.",
+      "Cook chopped {onion} in {oil} for 6 minutes, add crushed {garlic} and {aji-amarillo-paste} for 3 minutes.",
+      "Stir in the blended sauce, {salt} and {black-pepper} and simmer for 10 minutes, adding stock if too thick. Fold in the chicken.",
+      "Cook {rice} in 360 ml water, covered, on low heat for 15 minutes and serve the chicken sauce over it."
     ]
   },
   {

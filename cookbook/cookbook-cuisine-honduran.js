@@ -358,68 +358,40 @@ KITCHEN.add(
     "name": "Honduran Sopa de Caracol-Inspired Coconut Soup",
     "meal": "big",
     "cuisine": "Honduran",
-    "time": 37,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "white-fish",
+        400
       ],
       [
-        "tomato",
+        "coconut-milk",
+        400
+      ],
+      [
+        "yuca-frozen",
         250
       ],
       [
         "plantain",
-        2
+        "1pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
         "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "honduran-pollo-chuco-style-chicken",
-    "name": "Honduran Pollo Chuco-Style Chicken",
-    "meal": "big",
-    "cuisine": "Honduran",
-    "time": 44,
-    "serves": 4,
-    "ing": [
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
+        15
       ],
       [
         "oil",
@@ -428,22 +400,76 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Cut {white-fish} into 3 cm chunks. Chop {onion}, dice {red-pepper}, crush {garlic}, and cut the green {plantain} and {yuca-frozen} into 2 cm pieces.",
+      "Heat {oil} in a pot, cook the onion and red pepper for 5 minutes, then add garlic for 1 minute.",
+      "Add 600 ml water, the plantain, yuca and {salt}; simmer for 15 minutes until nearly tender.",
+      "Pour in {coconut-milk} and simmer for 5 minutes, then add the fish and poach gently for 5 minutes until it flakes.",
+      "Stir in chopped {cilantro} and serve hot."
+    ]
+  },
+  {
+    "id": "honduran-pollo-chuco-style-chicken",
+    "name": "Honduran Pollo Chuco-Style Chicken",
+    "meal": "big",
+    "cuisine": "Honduran",
+    "time": 55,
+    "serves": 4,
+    "ing": [
+      [
+        "chicken-thigh",
+        600
+      ],
+      [
+        "flour",
+        80
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "oil",
+        200
+      ],
+      [
+        "corn-tortillas",
+        "8pc"
+      ],
+      [
+        "cabbage",
+        150
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "mayonnaise",
+        40
+      ],
+      [
+        "lime",
+        "1pc"
+      ]
+    ],
+    "steps": [
+      "Rub {chicken-thigh} with crushed {garlic}, {paprika}, the juice of half of the {lime} and half of the {salt}; marinate 20 minutes.",
+      "Mix {flour} with the remaining salt, dredge the chicken and shake off the excess.",
+      "Heat {oil} in a deep frying pan to 170 °C and fry the chicken for 12–14 minutes, turning, until crisp and cooked through. Drain.",
+      "Fry {corn-tortillas} in the same oil for 1 minute per side until crisp, to make tostadas.",
+      "Shred {cabbage}, dice {tomato}, and toss with {mayonnaise} and the remaining lime juice.",
+      "Serve the chicken on the tostadas, topped with the cabbage-tomato salad."
     ]
   },
   {
@@ -489,92 +515,111 @@ KITCHEN.add(
     "name": "Honduran Rice and Chicken",
     "meal": "big",
     "cuisine": "Honduran",
-    "time": 58,
+    "time": 60,
     "serves": 4,
     "ing": [
+      [
+        "chicken-thigh",
+        600
+      ],
       [
         "rice",
         250
       ],
       [
+        "red-pepper",
+        "1pc"
+      ],
+      [
         "tomato",
-        250
+        "2pc"
       ],
       [
-        "plantain",
-        2
+        "onion",
+        "1pc"
       ],
       [
-        "red-pepper",
-        1
+        "garlic",
+        "2pc"
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "chicken-stock",
+        500
+      ],
+      [
+        "oil",
+        30
       ],
       [
         "cilantro",
         10
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "honduran-plantain-cakes",
-    "name": "Honduran Plantain Cakes",
-    "meal": "big",
-    "cuisine": "Honduran",
-    "time": 65,
-    "serves": 4,
-    "ing": [
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
       ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Season {chicken-thigh} with {salt}, {black-pepper} and half of the {paprika}. Dice {red-pepper}, {tomato}, {onion} and {carrot}; crush {garlic}.",
+      "Heat {oil} in a wide pan and brown the chicken for 5 minutes per side. Remove.",
+      "Cook the onion, red pepper and carrot for 5 minutes, add garlic and the remaining paprika, then the tomato for 3 minutes. Stir in {rice} for 1 minute.",
+      "Pour in {chicken-stock}, nestle the chicken on top, cover and cook on low heat for 25 minutes until the rice is tender and the chicken is cooked through.",
+      "Rest 5 minutes, scatter chopped {cilantro} and serve."
+    ]
+  },
+  {
+    "id": "honduran-plantain-cakes",
+    "name": "Honduran Plantain Cakes",
+    "meal": "bite",
+    "cuisine": "Honduran",
+    "time": 30,
+    "serves": 4,
+    "ing": [
+      [
+        "plantain",
+        "3pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "cheese",
+        80
+      ],
+      [
+        "flour",
+        50
+      ],
+      [
+        "oil",
+        60
+      ],
+      [
+        "salt",
+        2
+      ],
+      [
+        "black-pepper",
+        1
+      ]
+    ],
+    "steps": [
+      "Peel the ripe {plantain} and mash until nearly smooth. Finely chop {onion} and grate {cheese}.",
+      "Mix everything with {flour}, {salt} and {black-pepper} into a thick, sticky mixture.",
+      "Heat {oil} in a frying pan over medium heat and fry 8 heaped spoonfuls, flattening slightly, for 3 minutes per side until golden. Serve warm."
     ]
   },
   {
@@ -620,44 +665,68 @@ KITCHEN.add(
     "name": "Honduran Tomato Beef Stew",
     "meal": "big",
     "cuisine": "Honduran",
-    "time": 32,
+    "time": 130,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        250
+        "beef-chuck",
+        600
       ],
       [
-        "plantain",
-        2
+        "tomato",
+        "4pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "potatoes",
+        300
+      ],
+      [
+        "carrot",
+        "2pc"
       ],
       [
         "cilantro",
-        10
+        15
       ],
       [
-        "lime",
-        1
+        "cumin",
+        3
+      ],
+      [
+        "beef-stock",
+        500
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomato} and turn to coat in the seasoning.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Cut {beef-chuck} into 3 cm cubes. Chop {onion}, {tomato} and {red-pepper}; crush {garlic}; cut {potatoes} and {carrot} into chunks.",
+      "Heat {oil} in a heavy pot and brown the beef in two batches. Cook the onion and pepper for 5 minutes, add garlic and {cumin}, then the tomato for 5 minutes.",
+      "Return the beef, add {beef-stock}, {salt} and {black-pepper}, cover and simmer for 1 hour 15 minutes.",
+      "Add the potatoes and carrots and cook 30 minutes until tender and the sauce is thick.",
+      "Stir in chopped {cilantro} and serve."
     ]
   },
   {
@@ -665,16 +734,40 @@ KITCHEN.add(
     "name": "Honduran Corn and Bean Soup",
     "meal": "big",
     "cuisine": "Honduran",
-    "time": 39,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "cilantro",
-        10
+        "black-beans",
+        480
       ],
       [
-        "lime",
-        1
+        "sweetcorn",
+        200
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "tomato",
+        "1pc"
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "cilantro",
+        15
+      ],
+      [
+        "vegetable-stock",
+        800
       ],
       [
         "oil",
@@ -683,29 +776,13 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Chop {onion} and {tomato}; crush {garlic}. Drain {black-beans}.",
+      "Heat {oil} in a pot, cook the onion for 5 minutes, add garlic and {cumin} for 1 minute, then the tomato for 4 minutes.",
+      "Add {black-beans}, {sweetcorn}, {vegetable-stock} and {salt} and simmer for 20 minutes, mashing a few beans against the side to thicken.",
+      "Stir in chopped {cilantro} and serve hot."
     ]
   },
   {
@@ -752,131 +829,145 @@ KITCHEN.add(
     "name": "Honduran Chicken with Tomato and Peppers",
     "meal": "big",
     "cuisine": "Honduran",
-    "time": 53,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "chicken-thigh",
+        600
       ],
       [
         "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "3pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
-        10
+        "onion",
+        "1pc"
       ],
       [
-        "lime",
-        1
+        "garlic",
+        "3pc"
+      ],
+      [
+        "potatoes",
+        300
+      ],
+      [
+        "oregano",
+        2
       ],
       [
         "oil",
         20
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Season {chicken-thigh} with {salt} and {oregano}. Slice {onion} and {red-pepper}, chop {tomato}, crush {garlic} and cut {potatoes} into 3 cm chunks.",
+      "Heat {oil} in a wide pan and brown the chicken for 5 minutes per side. Remove.",
+      "Cook the onion and pepper for 6 minutes, add garlic for 1 minute and the tomato with 150 ml water.",
+      "Return the chicken, add the potatoes, cover and simmer for 30 minutes until both are tender and the sauce is thick."
     ]
   },
   {
     "id": "honduran-sweet-plantain-cakes",
     "name": "Honduran Sweet Plantain Cakes",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Honduran",
-    "time": 60,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "red-pepper",
-        1
+        "plantain",
+        "3pc"
       ],
       [
-        "cilantro",
-        10
+        "flour",
+        80
       ],
       [
-        "lime",
-        1
+        "milk",
+        100
       ],
       [
-        "oil",
-        20
+        "eggs",
+        "1pc"
       ],
       [
-        "salt",
+        "baking-powder",
         3
       ],
       [
-        "chicken-thigh",
-        450
+        "cinnamon",
+        1
       ],
       [
-        "black-beans",
-        250
+        "butter",
+        30
       ],
       [
-        "rice",
-        250
+        "brown-sugar",
+        20
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {cilantro} until fragrant.",
-      "Add the {red-pepper} and {black-beans}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Peel the very ripe {plantain} and mash smooth. Whisk in {milk} and {eggs}, then stir in {flour}, {baking-powder} and {cinnamon} until just combined.",
+      "Melt a little {butter} in a frying pan over medium-low heat and cook 4 spoonfuls of batter at a time for 3 minutes per side until golden.",
+      "Repeat with the remaining batter, then sprinkle the warm cakes with {brown-sugar} and serve."
     ]
   },
   {
     "id": "honduran-lime-cabbage-slaw",
     "name": "Honduran Lime Cabbage Slaw",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Honduran",
-    "time": 31,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "oil",
-        20
+        "cabbage",
+        400
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "red-onion",
+        "1pc"
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "vinegar",
+        40
+      ],
+      [
+        "sugar",
+        5
+      ],
+      [
+        "oregano",
+        1
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {salt} until fragrant.",
-      "Add the {oil} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Shred {cabbage} finely, grate {carrot} and slice {red-onion} thinly.",
+      "Whisk {vinegar} with the juice of {lime}, {sugar}, {oregano} and {salt} until the sugar dissolves.",
+      "Toss with the vegetables, massage briefly and rest 20 minutes so the cabbage softens and turns tangy. Serve cold."
     ]
   },
   {

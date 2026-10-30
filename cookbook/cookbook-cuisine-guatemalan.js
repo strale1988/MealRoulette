@@ -362,68 +362,40 @@ KITCHEN.add(
     "name": "Guatemalan Black Bean Soup",
     "meal": "big",
     "cuisine": "Guatemalan",
-    "time": 37,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "black-beans",
+        480
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
       ],
       [
         "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
+        "2pc"
       ],
       [
         "cilantro",
-        10
+        15
+      ],
+      [
+        "vegetable-stock",
+        700
       ],
       [
         "lime",
-        1
+        "1pc"
       ],
       [
-        "oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "guatemalan-chuchitos-style-corn-dumplings",
-    "name": "Guatemalan Chuchitos-Style Corn Dumplings",
-    "meal": "big",
-    "cuisine": "Guatemalan",
-    "time": 44,
-    "serves": 4,
-    "ing": [
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
+        "sour-cream",
+        60
       ],
       [
         "oil",
@@ -432,22 +404,71 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Chop {onion} and {tomato} and crush {garlic}. Drain {black-beans}.",
+      "Heat {oil} in a pot and cook the onion for 5 minutes, then add garlic for 1 minute and the tomato for 5 minutes until jammy.",
+      "Add {black-beans}, {vegetable-stock} and {salt} and simmer for 20 minutes.",
+      "Blend about half of the soup until smooth and stir it back in for a creamy but chunky texture.",
+      "Ladle into bowls and top with {sour-cream}, chopped {cilantro} and a squeeze of {lime}."
+    ]
+  },
+  {
+    "id": "guatemalan-chuchitos-style-corn-dumplings",
+    "name": "Guatemalan Chuchitos-Style Corn Dumplings",
+    "meal": "big",
+    "cuisine": "Guatemalan",
+    "time": 120,
+    "serves": 4,
+    "ing": [
+      [
+        "masa-harina",
+        300
+      ],
+      [
+        "chicken-thigh",
+        350
+      ],
+      [
+        "tomato",
+        "3pc"
+      ],
+      [
+        "red-pepper",
+        "1pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "chicken-stock",
+        350
+      ],
+      [
+        "oil",
+        60
+      ],
+      [
+        "salt",
+        5
+      ]
+    ],
+    "steps": [
+      "Blend {tomato}, {red-pepper}, {onion}, {garlic} and {paprika} until smooth. Cook this sauce in 20 g of the {oil} for 10 minutes until thick, season with 2 g of the {salt}.",
+      "Cut {chicken-thigh} into 2 cm cubes, add to the sauce and simmer for 15 minutes until cooked through; cool.",
+      "Warm {chicken-stock}. Mix {masa-harina} with the remaining oil, remaining salt and enough warm stock to form a soft, spreadable dough.",
+      "Cut 8 squares of foil or baking paper. Spread a thin layer of dough in the centre of each, add a spoonful of chicken and sauce, and fold into tight, sealed parcels.",
+      "Steam the parcels for 1 hour, then let them rest 10 minutes before unwrapping and serving."
     ]
   },
   {
@@ -493,7 +514,7 @@ KITCHEN.add(
     "name": "Guatemalan Rice with Vegetables",
     "meal": "big",
     "cuisine": "Guatemalan",
-    "time": 58,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
@@ -501,35 +522,48 @@ KITCHEN.add(
         250
       ],
       [
+        "carrot",
+        "2pc"
+      ],
+      [
+        "green-beans",
+        150
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
         "tomato",
-        250
+        "2pc"
       ],
       [
-        "plantain",
-        2
+        "vegetable-stock",
+        500
       ],
       [
-        "red-pepper",
-        1
+        "oil",
+        30
       ],
       [
         "cilantro",
         10
       ],
       [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
+        "salt",
+        2
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Dice {carrot}, cut {green-beans} into 1 cm pieces, chop {onion} and {tomato} and crush {garlic}.",
+      "Heat {oil} in a wide pot and fry {rice} for 3 minutes until lightly golden and translucent at the edges.",
+      "Add the onion, garlic and tomato and cook 3 minutes, then add the carrot, green beans, {vegetable-stock} and {salt}.",
+      "Bring to a boil, cover and cook on the lowest heat for 18 minutes. Rest 5 minutes off the heat.",
+      "Fluff with a fork and scatter chopped {cilantro}."
     ]
   },
   {
@@ -537,48 +571,47 @@ KITCHEN.add(
     "name": "Guatemalan Plantain and Bean Bowl",
     "meal": "big",
     "cuisine": "Guatemalan",
-    "time": 65,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
         "plantain",
-        2
+        "3pc"
       ],
       [
-        "red-pepper",
-        1
+        "black-beans",
+        480
       ],
       [
-        "cilantro",
-        10
+        "onion",
+        "1pc"
       ],
       [
-        "lime",
-        1
+        "garlic",
+        "2pc"
+      ],
+      [
+        "sour-cream",
+        80
+      ],
+      [
+        "cheese",
+        60
       ],
       [
         "oil",
-        20
+        60
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Slice the very ripe {plantain} on a diagonal into 1.5 cm pieces. Chop {onion} and crush {garlic}; drain {black-beans}.",
+      "Cook the onion in 15 g of the {oil} for 5 minutes, add garlic for 1 minute, then {black-beans}, {salt} and 100 ml water. Simmer for 10 minutes, mashing about half into a thick purée.",
+      "Fry the plantain in the remaining oil over medium heat for 2–3 minutes per side until deep golden; drain.",
+      "Spoon the beans into bowls, top with plantain, {sour-cream} and crumbled {cheese}."
     ]
   },
   {
@@ -624,28 +657,36 @@ KITCHEN.add(
     "name": "Guatemalan Corn and Potato Soup",
     "meal": "big",
     "cuisine": "Guatemalan",
-    "time": 32,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        250
+        "sweetcorn",
+        300
       ],
       [
-        "plantain",
-        2
+        "potatoes",
+        400
       ],
       [
-        "red-pepper",
-        1
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
       ],
       [
         "cilantro",
-        10
+        15
       ],
       [
-        "lime",
-        1
+        "vegetable-stock",
+        900
+      ],
+      [
+        "milk",
+        150
       ],
       [
         "oil",
@@ -654,31 +695,46 @@ KITCHEN.add(
       [
         "salt",
         3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomato} and turn to coat in the seasoning.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Dice {potatoes} and {onion}; crush {garlic}.",
+      "Heat {oil} in a pot, cook the onion for 5 minutes, add garlic for 1 minute, then the potatoes and {vegetable-stock}. Simmer for 15 minutes.",
+      "Add {sweetcorn} and simmer 5 minutes. Blend about a third of the soup and stir it back in to thicken.",
+      "Stir in {milk}, {salt} and {black-pepper}, warm through and top with chopped {cilantro}."
     ]
   },
   {
     "id": "guatemalan-avocado-lime-salad",
     "name": "Guatemalan Avocado Lime Salad",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Guatemalan",
-    "time": 39,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "cilantro",
-        10
+        "avocado",
+        "3pc"
+      ],
+      [
+        "radish",
+        100
       ],
       [
         "lime",
-        1
+        "2pc"
+      ],
+      [
+        "red-onion",
+        "1pc"
+      ],
+      [
+        "cilantro",
+        15
       ],
       [
         "oil",
@@ -687,29 +743,12 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Slice {red-onion} very thinly and soak in the juice of {lime} for 10 minutes. Slice {radish} into thin rounds.",
+      "Cut {avocado} into thick cubes and mix gently with the radish, onion with its lime juice and {oil}.",
+      "Season with {salt}, fold in chopped {cilantro} and serve right away."
     ]
   },
   {
@@ -756,101 +795,121 @@ KITCHEN.add(
     "name": "Guatemalan Chicken with Tomato and Peppers",
     "meal": "big",
     "cuisine": "Guatemalan",
-    "time": 53,
+    "time": 70,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "chicken-thigh",
+        600
       ],
       [
         "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "4pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
-        10
+        "pumpkin-seeds",
+        40
       ],
       [
-        "lime",
-        1
+        "sesame-seeds",
+        20
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "chicken-stock",
+        300
       ],
       [
         "oil",
         20
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Toast {pumpkin-seeds} and {sesame-seeds} in a dry pan for 3–4 minutes until fragrant and popping, then set aside.",
+      "Grill or char {tomato}, {red-pepper}, {onion} and {garlic} in a dry pan for 10 minutes until blackened in spots. Blend with the toasted seeds and {chicken-stock} until smooth.",
+      "Brown {chicken-thigh}, seasoned with {salt}, in {oil} for 5 minutes per side. Remove.",
+      "Pour the sauce into the pan and cook for 5 minutes, then return the chicken, cover and simmer for 30 minutes until tender and the sauce is thick and nutty."
     ]
   },
   {
     "id": "guatemalan-sweet-plantain-cakes",
     "name": "Guatemalan Sweet Plantain Cakes",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Guatemalan",
-    "time": 60,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "red-pepper",
-        1
+        "plantain",
+        "3pc"
       ],
       [
-        "cilantro",
-        10
+        "black-beans",
+        240
       ],
       [
-        "lime",
+        "sugar",
+        30
+      ],
+      [
+        "cinnamon",
         1
       ],
       [
         "oil",
-        20
+        80
       ],
       [
         "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {cilantro} until fragrant.",
-      "Add the {red-pepper} and {black-beans}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Boil the very ripe {plantain} in their skins for 20 minutes until soft, then peel and mash smooth with {salt}.",
+      "Drain {black-beans} and mash with {sugar} and {cinnamon}; cook in a small pan for 5 minutes, stirring, until it forms a thick paste. Cool.",
+      "Divide the plantain into 8 balls, flatten each, put a spoonful of sweet beans in the middle and close it up into a small oval.",
+      "Fry in {oil} over medium heat for 2–3 minutes per side until deep golden. Drain and serve warm."
     ]
   },
   {
     "id": "guatemalan-lime-cabbage-slaw",
     "name": "Guatemalan Lime Cabbage Slaw",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Guatemalan",
-    "time": 31,
+    "time": 15,
     "serves": 4,
     "ing": [
+      [
+        "cabbage",
+        400
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "red-onion",
+        "1pc"
+      ],
+      [
+        "lime",
+        "2pc"
+      ],
       [
         "oil",
         20
@@ -860,27 +919,14 @@ KITCHEN.add(
         3
       ],
       [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {salt} until fragrant.",
-      "Add the {oil} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Shred {cabbage} finely and slice {red-onion} thinly. Toss with {salt} and the juice of {lime}.",
+      "Dice {tomato} and fold in with {oil} and {black-pepper}.",
+      "Chill for 10 minutes, taste for lime and salt and serve."
     ]
   },
   {

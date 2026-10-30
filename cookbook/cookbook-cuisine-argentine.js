@@ -122,18 +122,6 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "pumpkin",
-        300
-      ],
-      [
-        "white-beans",
-        200
-      ],
-      [
-        "sweetcorn",
-        120
-      ],
-      [
         "pork",
         400
       ],
@@ -142,12 +130,24 @@ KITCHEN.add(
         250
       ],
       [
+        "white-beans",
+        240
+      ],
+      [
+        "pumpkin",
+        300
+      ],
+      [
+        "sweetcorn",
+        120
+      ],
+      [
         "onion",
         "1pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "paprika",
@@ -159,7 +159,7 @@ KITCHEN.add(
       ],
       [
         "vegetable-stock",
-        450
+        600
       ],
       [
         "salt",
@@ -175,11 +175,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {pumpkin} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {vegetable-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Cook the beans and pork slowly, add pumpkin and corn and simmer until the pumpkin partly dissolves to thicken the pot; finish with smoked paprika.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cut {pork} into 3 cm cubes, dice {onion}, crush {garlic} and cut {pumpkin} into 2 cm cubes. Drain {white-beans}.",
+      "Heat {oil} in a heavy pot and brown the pork for 8 minutes. Add the onion and cook 5 minutes, then stir in garlic, {paprika}, {cumin}, {salt} and {black-pepper}.",
+      "Pour in {vegetable-stock}, cover and simmer for 50 minutes until the pork is tender.",
+      "Add the pumpkin and {sweetcorn} and simmer for 20 minutes, mashing some pumpkin against the pot so the stew thickens.",
+      "Slice {smoked-sausage}, add it with {white-beans} and simmer 10 minutes. Taste for salt and serve in deep bowls."
     ]
   },
   {
@@ -231,12 +231,12 @@ KITCHEN.add(
     "name": "Humita en olla (Argentine creamy corn and pumpkin stew)",
     "meal": "big",
     "cuisine": "Argentine",
-    "time": 35,
+    "time": 40,
     "serves": 2,
     "ing": [
       [
         "sweetcorn",
-        120
+        300
       ],
       [
         "pumpkin",
@@ -276,11 +276,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {butter} in a heavy pan; soften {onion}.",
-      "Add {sweetcorn} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {milk} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Sauté onion in butter, add corn and grated pumpkin with a splash of milk, and simmer while stirring until the vegetables soften into a thick creamy mixture; finish with cheese.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Finely chop {onion}, grate {pumpkin} and coarsely chop half of the {sweetcorn}; leave the rest whole.",
+      "Melt {butter} in a wide pot, cook the onion for 5 minutes, then stir in {paprika}, {cumin}, {salt} and {black-pepper}.",
+      "Add the pumpkin, all the corn and {milk}. Simmer for 15–20 minutes, stirring often, until it is thick and creamy.",
+      "Grate {cheddar} and stir it in until melted. Serve hot."
     ]
   },
   {
@@ -626,7 +625,6 @@ KITCHEN.add(
         "red-pepper",
         300
       ],
-      
       [
         "onion",
         "1pc"
@@ -850,92 +848,108 @@ KITCHEN.add(
     "name": "Argentine Chicken with Tomato and Peppers",
     "meal": "big",
     "cuisine": "Argentine",
-    "time": 32,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        250
+        "chicken-thigh",
+        600
       ],
       [
-        "plantain",
-        2
+        "tomato",
+        "4pc"
       ],
       [
         "red-pepper",
-        1
+        "2pc"
       ],
       [
-        "cilantro",
-        10
+        "onion",
+        "1pc"
       ],
       [
-        "lime",
-        1
+        "garlic",
+        "3pc"
+      ],
+      [
+        "paprika",
+        4
+      ],
+      [
+        "oregano",
+        2
+      ],
+      [
+        "white-wine",
+        100
       ],
       [
         "oil",
         20
       ],
       [
+        "parsley",
+        10
+      ],
+      [
         "salt",
         3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomato} and turn to coat in the seasoning.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Season {chicken-thigh} with {salt}, {black-pepper} and half of the {paprika}. Slice {onion} and {red-pepper}, chop {tomato} and crush {garlic}.",
+      "Heat {oil} in a wide pan and brown the chicken for 5 minutes per side. Remove.",
+      "Cook the onion and red pepper in the same pan for 6 minutes, add garlic, the remaining paprika and {oregano} for 1 minute, then pour in {white-wine} and reduce by half.",
+      "Add the tomato, return the chicken, cover and simmer for 25 minutes until the chicken is cooked through and the sauce is thick.",
+      "Scatter chopped {parsley} and serve."
     ]
   },
   {
     "id": "argentine-sweet-plantain-cakes",
     "name": "Argentine Sweet Plantain Cakes",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Argentine",
-    "time": 39,
+    "time": 25,
     "serves": 4,
     "ing": [
       [
-        "cilantro",
-        10
+        "plantain",
+        "3pc"
       ],
       [
-        "lime",
+        "flour",
+        60
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "cinnamon",
+        1
+      ],
+      [
+        "salt",
         1
       ],
       [
         "oil",
-        20
+        60
       ],
       [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
+        "honey",
+        30
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Peel the very ripe {plantain} (the skins should be mostly black) and mash with a fork until nearly smooth.",
+      "Stir in {flour}, {eggs}, {cinnamon} and {salt} to make a thick, spoonable batter.",
+      "Heat {oil} in a frying pan over medium heat and drop in 8 heaped spoonfuls, flattening slightly. Fry for 2–3 minutes per side until deep golden.",
+      "Drain on paper towel and drizzle with {honey}. Serve warm."
     ]
   },
   {
@@ -982,43 +996,55 @@ KITCHEN.add(
     "name": "Argentine Corn and Cheese Bake",
     "meal": "big",
     "cuisine": "Argentine",
-    "time": 53,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "sweetcorn",
+        400
       ],
       [
-        "tomato",
-        250
+        "eggs",
+        "3pc"
       ],
       [
-        "plantain",
+        "milk",
+        150
+      ],
+      [
+        "cheddar",
+        120
+      ],
+      [
+        "flour",
+        30
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "butter",
+        20
+      ],
+      [
+        "paprika",
         2
       ],
       [
-        "red-pepper",
+        "salt",
+        2
+      ],
+      [
+        "black-pepper",
         1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Heat the oven to 180 °C and butter a 20 cm baking dish with some of the {butter}. Finely chop {onion} and cook it in the remaining butter for 5 minutes.",
+      "Blend half of the {sweetcorn} with {milk} and {eggs} until fairly smooth. Stir in the onion, {flour}, {paprika}, {salt}, {black-pepper} and the remaining whole corn.",
+      "Grate {cheddar} and fold in two-thirds of it.",
+      "Pour into the dish, top with the remaining cheese and bake for 35–40 minutes until set and golden. Rest 10 minutes before serving."
     ]
   }
 ]

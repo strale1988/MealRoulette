@@ -188,32 +188,60 @@ KITCHEN.add(
     "name": "Mchuzi wa Samaki-Style Fish Curry",
     "meal": "big",
     "cuisine": "Tanzanian",
-    "time": 37,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "tomato",
+        "white-fish",
+        600
+      ],
+      [
+        "coconut-milk",
         300
       ],
       [
-        "peanut-butter",
-        50
+        "tomato",
+        "3pc"
       ],
       [
-        "rice",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "spinach",
-        150
+        "garlic",
+        "3pc"
       ],
       [
         "ginger",
+        15
+      ],
+      [
+        "turmeric",
+        3
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "ground-coriander",
+        2
+      ],
+      [
+        "tamarind-paste",
+        10
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "cilantro",
         10
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
@@ -221,11 +249,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {peanut-butter} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {tomato} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Chop {onion} and {tomato}; crush {garlic}; grate {ginger}; slice {green-chilli}. Cut {white-fish} into 4 cm chunks and rub with {turmeric} and half of the {salt}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic, ginger, {cumin}, {ground-coriander} and chilli for 2 minutes, then the tomato for 6 minutes.",
+      "Add {coconut-milk}, {tamarind-paste} and the remaining salt and simmer for 8 minutes.",
+      "Add the fish and poach gently for 6–8 minutes until it flakes. Scatter chopped {cilantro} and serve."
     ]
   },
   {
@@ -233,20 +260,36 @@ KITCHEN.add(
     "name": "Tanzanian Coconut Bean Stew",
     "meal": "big",
     "cuisine": "Tanzanian",
-    "time": 44,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "black-eyed-peas",
+        480
+      ],
+      [
+        "coconut-milk",
+        300
       ],
       [
         "spinach",
         150
       ],
       [
-        "ginger",
-        10
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "turmeric",
+        2
       ],
       [
         "oil",
@@ -255,26 +298,13 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Drain {black-eyed-peas}. Chop {onion}, {tomato} and {spinach}; crush {garlic}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic and {turmeric}, then the tomato for 5 minutes.",
+      "Add {black-eyed-peas}, {coconut-milk} and {salt} and simmer for 12 minutes.",
+      "Stir in the spinach and cook 3 minutes until wilted. Serve hot."
     ]
   },
   {
@@ -321,44 +351,43 @@ KITCHEN.add(
     "name": "Tanzanian Ugali with Greens",
     "meal": "big",
     "cuisine": "Tanzanian",
-    "time": 58,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
+        "cornmeal",
         250
       ],
       [
-        "spinach",
-        150
+        "collard-greens",
+        500
       ],
       [
-        "ginger",
-        10
+        "onion",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "3pc"
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        500
+        4
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {spinach} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Bring 750 ml water and half of the {salt} to a boil, whisk in {cornmeal} gradually, then reduce the heat and beat for 8–10 minutes until stiff and smooth like a dough.",
+      "Shred {collard-greens}. Chop {onion} and {tomato}; crush {garlic}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic and tomato for 5 minutes, then the collards, the remaining salt and 100 ml water. Cover and cook 15 minutes until very tender.",
+      "Shape the ugali into mounds and serve with the greens."
     ]
   },
   {
@@ -366,108 +395,36 @@ KITCHEN.add(
     "name": "Maharage Coconut Beans",
     "meal": "big",
     "cuisine": "Tanzanian",
-    "time": 65,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        500
+        "kidney-beans",
+        480
+      ],
+      [
+        "coconut-milk",
+        300
+      ],
+      [
+        "tomato",
+        "2pc"
       ],
       [
         "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "cardamom",
         1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {onion} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "tanzanian-banana-beef-stew",
-    "name": "Tanzanian Banana Beef Stew",
-    "meal": "big",
-    "cuisine": "Tanzanian",
-    "time": 36,
-    "serves": 4,
-    "ing": [
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {peanut-butter} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {tomato} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "coconut-rice-with-lime",
-    "name": "Coconut Rice with Lime",
-    "meal": "big",
-    "cuisine": "Tanzanian",
-    "time": 43,
-    "serves": 4,
-    "ing": [
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "ginger",
-        10
       ],
       [
         "oil",
@@ -476,22 +433,112 @@ KITCHEN.add(
       [
         "salt",
         3
+      ]
+    ],
+    "steps": [
+      "Drain {kidney-beans}. Chop {onion} and {tomato}; crush {garlic}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic, {cumin} and {cardamom}, then the tomato for 5 minutes.",
+      "Add {kidney-beans}, {coconut-milk} and {salt} and simmer for 15 minutes, mashing some to thicken the sauce into a rich, creamy curry."
+    ]
+  },
+  {
+    "id": "tanzanian-banana-beef-stew",
+    "name": "Tanzanian Banana Beef Stew",
+    "meal": "big",
+    "cuisine": "Tanzanian",
+    "time": 120,
+    "serves": 4,
+    "ing": [
+      [
+        "beef-chuck",
+        600
       ],
       [
-        "chicken-thigh",
-        500
+        "plantain",
+        "3pc"
+      ],
+      [
+        "tomato",
+        "2pc"
       ],
       [
         "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "ginger",
+        10
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "ground-coriander",
+        2
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
         1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {ginger} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Cut {beef-chuck} into 3 cm cubes. Chop {onion} and {tomato}; crush {garlic}; grate {ginger}. Peel the green {plantain} and cut into 3 cm chunks.",
+      "Brown the beef in {oil} for 8 minutes, add the onion for 5 minutes, then garlic, ginger, {cumin} and {ground-coriander}.",
+      "Add the tomato, {salt}, {black-pepper} and 400 ml water, cover and simmer for 1 hour 15 minutes.",
+      "Add the plantain and cook for 25 minutes until it is soft and thickens the stew. Serve hot."
+    ]
+  },
+  {
+    "id": "coconut-rice-with-lime",
+    "name": "Coconut Rice with Lime",
+    "meal": "big",
+    "cuisine": "Tanzanian",
+    "time": 35,
+    "serves": 4,
+    "ing": [
+      [
+        "rice",
+        250
+      ],
+      [
+        "coconut-milk",
+        400
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "cardamom",
+        1
+      ],
+      [
+        "cinnamon",
+        1
+      ],
+      [
+        "salt",
+        3
+      ]
+    ],
+    "steps": [
+      "Rinse {rice}. Zest and juice {lime}.",
+      "Combine the rice, {coconut-milk}, 150 ml water, {cardamom}, {cinnamon}, {salt} and the lime zest in a pot and bring to a gentle boil.",
+      "Cover and cook on the lowest heat for 18 minutes, then rest 5 minutes off the heat.",
+      "Fluff and stir in the lime juice before serving."
     ]
   },
   {
@@ -537,44 +584,46 @@ KITCHEN.add(
     "name": "Tanzanian Tomato and Bean Stew",
     "meal": "big",
     "cuisine": "Tanzanian",
-    "time": 32,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
+        "white-beans",
+        480
       ],
       [
-        "rice",
-        250
+        "tomato",
+        "3pc"
       ],
       [
-        "spinach",
-        150
+        "onion",
+        "1pc"
       ],
       [
-        "ginger",
+        "garlic",
+        "2pc"
+      ],
+      [
+        "curry-powder",
+        4
+      ],
+      [
+        "cilantro",
         10
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Drain {white-beans}. Chop {onion} and {tomato}; crush {garlic}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic and {curry-powder}, then the tomato for 8 minutes.",
+      "Add {white-beans}, 100 ml water and {salt} and simmer for 12 minutes. Stir in chopped {cilantro} and serve."
     ]
   },
   {
@@ -667,44 +716,46 @@ KITCHEN.add(
     "name": "Tanzanian Peanut and Sweet Potato Soup",
     "meal": "big",
     "cuisine": "Tanzanian",
-    "time": 53,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
+        "sweet-potato",
+        500
+      ],
+      [
         "peanut-butter",
-        50
+        60
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
+        "coconut-milk",
         150
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
       ],
       [
         "ginger",
         10
       ],
       [
-        "oil",
-        20
+        "vegetable-stock",
+        700
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Peel {sweet-potato} and cut into chunks. Chop {onion}; crush {garlic}; grate {ginger}.",
+      "Simmer the sweet potato, onion, garlic, ginger and {vegetable-stock} for 20 minutes until soft.",
+      "Whisk {peanut-butter} with a ladle of broth and stir in with {coconut-milk} and {salt}; simmer 8 minutes. Blend until smooth and serve."
     ]
   },
   {
@@ -797,23 +848,39 @@ KITCHEN.add(
     "name": "Tanzanian Ginger Lentil Curry",
     "meal": "big",
     "cuisine": "Tanzanian",
-    "time": 38,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
+        "green-lentils",
         250
       ],
       [
-        "spinach",
+        "ginger",
+        25
+      ],
+      [
+        "coconut-milk",
         150
       ],
       [
-        "ginger",
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "curry-powder",
+        6
+      ],
+      [
+        "tomato",
+        "1pc"
+      ],
+      [
+        "cilantro",
         10
       ],
       [
@@ -823,18 +890,13 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Rinse {green-lentils}. Chop {onion} and {tomato}; crush {garlic}; grate {ginger}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic, ginger and {curry-powder} for 2 minutes, then the tomato for 3 minutes.",
+      "Add the lentils and 500 ml water and simmer for 25 minutes until tender.",
+      "Stir in {coconut-milk} and {salt}, simmer 5 minutes and finish with chopped {cilantro}."
     ]
   }
 ]

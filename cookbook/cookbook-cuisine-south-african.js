@@ -70,7 +70,7 @@ KITCHEN.add(
     "name": "Bunny chow (hollowed bread filled with Durban curry)",
     "meal": "big",
     "cuisine": "South African",
-    "time": 50,
+    "time": 60,
     "serves": 2,
     "ing": [
       [
@@ -127,11 +127,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {chicken-thigh} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {chicken-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Cook a thick, hot chicken-and-potato curry until it holds together, hollow out sturdy bread rolls and ladle the curry inside; serve the removed bread alongside for dipping.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Chop {onion}, crush {garlic}, grate {ginger}. Cut {chicken-thigh} into 3 cm pieces and {potatoes} into 2 cm cubes.",
+      "Heat {oil} in a heavy pot, cook the onion for 5 minutes, then add garlic, ginger, {curry-powder}, {cumin} and {black-pepper} and stir for 1 minute.",
+      "Add the chicken and brown for 5 minutes, then {canned-tomatoes}, {chicken-stock} and {salt}. Simmer for 15 minutes.",
+      "Add the potatoes and cook for 20 minutes until tender and the curry is thick.",
+      "Cut the tops off {bread-rolls}, scoop out most of the crumb and fill each hollow with the hot curry. Serve with the lids on the side."
     ]
   },
   {
@@ -199,7 +199,7 @@ KITCHEN.add(
     "name": "Potjiekos-inspired slow-cooked meat and vegetable pot",
     "meal": "big",
     "cuisine": "South African",
-    "time": 120,
+    "time": 130,
     "serves": 2,
     "ing": [
       [
@@ -252,11 +252,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion}.",
-      "Add {beef-chuck} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Brown beef in a heavy pot, layer vegetables on top without stirring too much, add stock and tomatoes, then cover and cook slowly until the lower meat is tender and upper vegetables hold shape.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cut {beef-chuck} into 4 cm cubes; slice {onion}; peel and quarter {potatoes}; cut {carrot} into chunks; trim {green-beans}; chop {tomato}.",
+      "Heat {oil} in a heavy pot and brown the beef for 8 minutes with the onion. Season with {salt}, {black-pepper} and {thyme}.",
+      "Pour in {beef-stock} and {canned-tomatoes}, cover and simmer on low for 1 hour.",
+      "Layer in the potatoes, carrot, green beans and fresh tomato without stirring, cover and cook for 45 minutes until all are tender and the gravy is thick."
     ]
   },
   {
@@ -424,7 +423,7 @@ KITCHEN.add(
     "name": "Tamatiebredie (South African tomato and lamb stew)",
     "meal": "big",
     "cuisine": "South African",
-    "time": 100,
+    "time": 110,
     "serves": 2,
     "ing": [
       [
@@ -473,11 +472,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {lamb} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Brown lamb well, add onions and tomatoes with a small pinch of sugar, cover and simmer slowly until the meat is tender and the tomato sauce is rich.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cut {lamb} into 3 cm pieces; chop {onion}, crush {garlic} and chop {tomato}.",
+      "Brown the lamb in {oil} in a heavy pot for 8 minutes. Add the onion and garlic and cook 5 minutes, then season with {salt}, {black-pepper} and {thyme}.",
+      "Add {canned-tomatoes}, the fresh tomato, {brown-sugar} and {beef-stock}. Cover and simmer on very low heat for 1 hour 15 minutes, until the lamb is tender and the sauce has reduced to a rich, sweet-tart gravy.",
+      "Taste for sugar and salt and serve hot."
     ]
   },
   {
@@ -635,32 +633,48 @@ KITCHEN.add(
     "name": "South African Chakalaka Beans",
     "meal": "big",
     "cuisine": "South African",
-    "time": 37,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
+        "kidney-beans",
+        480
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "carrot",
+        "2pc"
+      ],
+      [
+        "red-pepper",
+        "1pc"
+      ],
+      [
         "tomato",
-        300
+        "3pc"
       ],
       [
-        "peanut-butter",
-        50
+        "curry-powder",
+        10
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
+        "garlic",
+        "3pc"
       ],
       [
         "ginger",
         10
       ],
       [
+        "chilli-flakes",
+        1
+      ],
+      [
         "oil",
-        20
+        30
       ],
       [
         "salt",
@@ -668,11 +682,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {peanut-butter} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {tomato} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Drain {kidney-beans}. Chop {onion} and {tomato}, dice {red-pepper}, grate {carrot}, crush {garlic} and grate {ginger}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic, ginger, {curry-powder} and {chilli-flakes} for 1 minute.",
+      "Add the carrot, pepper and tomato and cook for 12 minutes until it forms a thick, spicy relish.",
+      "Stir in {kidney-beans} and {salt} and simmer for 10 minutes. Serve warm or cold."
     ]
   },
   {
@@ -718,23 +731,27 @@ KITCHEN.add(
     "name": "South African Boerewors with Pap",
     "meal": "big",
     "cuisine": "South African",
-    "time": 32,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
+        "sausages",
+        600
       ],
       [
-        "rice",
+        "cornmeal",
         250
       ],
       [
-        "spinach",
-        150
+        "tomato",
+        "3pc"
       ],
       [
-        "ginger",
+        "onion",
+        "2pc"
+      ],
+      [
+        "brown-sugar",
         10
       ],
       [
@@ -743,19 +760,18 @@ KITCHEN.add(
       ],
       [
         "salt",
-        3
+        4
       ],
       [
-        "chicken-thigh",
-        500
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Bring 750 ml water and half of the {salt} to a boil. Pour in {cornmeal} in a steady stream without stirring, cover, reduce the heat to low and cook for 10 minutes. Stir, then cover and cook 15 minutes more until crumbly and fluffy.",
+      "Slice {onion} and chop {tomato}. Cook the onion in {oil} for 8 minutes until golden, add the tomato, {brown-sugar}, the remaining salt and {black-pepper}, and simmer for 10 minutes into a relish.",
+      "Coil {sausages} and pan-fry or grill over medium heat for 15 minutes, turning, until browned and cooked through.",
+      "Serve the sausage with the pap and the tomato-onion sauce."
     ]
   },
   {
@@ -848,44 +864,50 @@ KITCHEN.add(
     "name": "South African Tomato and Bean Stew",
     "meal": "big",
     "cuisine": "South African",
-    "time": 53,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
+        "white-beans",
+        480
       ],
       [
-        "rice",
-        250
+        "tomato",
+        "3pc"
       ],
       [
-        "spinach",
-        150
+        "onion",
+        "1pc"
       ],
       [
-        "ginger",
+        "garlic",
+        "2pc"
+      ],
+      [
+        "tomato-paste",
+        30
+      ],
+      [
+        "brown-sugar",
         10
       ],
       [
+        "mustard",
+        5
+      ],
+      [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Drain {white-beans}. Chop {onion} and {tomato}; crush {garlic}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic, {tomato-paste} and {mustard} for 2 minutes, then the tomato for 6 minutes.",
+      "Add {white-beans}, {brown-sugar}, {salt} and 100 ml water and simmer for 15 minutes until thick and sticky. Serve hot."
     ]
   },
   {
@@ -978,44 +1000,47 @@ KITCHEN.add(
     "name": "South African Peanut and Sweet Potato Soup",
     "meal": "big",
     "cuisine": "South African",
-    "time": 38,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
+        "sweet-potato",
+        500
+      ],
+      [
         "peanut-butter",
-        50
+        60
       ],
       [
-        "rice",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "spinach",
-        150
+        "garlic",
+        "2pc"
       ],
       [
-        "ginger",
-        10
+        "curry-powder",
+        4
       ],
       [
-        "oil",
+        "vegetable-stock",
+        900
+      ],
+      [
+        "mango-chutney",
         20
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Peel {sweet-potato} and cut into chunks. Chop {onion}; crush {garlic}.",
+      "Simmer the sweet potato, onion, garlic, {curry-powder} and {vegetable-stock} for 20 minutes until soft.",
+      "Whisk {peanut-butter} with a ladle of broth, stir in with {salt} and simmer 8 minutes. Blend until smooth.",
+      "Serve with a swirl of {mango-chutney} in each bowl."
     ]
   }
 ]

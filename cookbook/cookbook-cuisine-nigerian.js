@@ -6,7 +6,7 @@ KITCHEN.add(
     "name": "Nigerian party jollof rice with smoky tomato-pepper base",
     "meal": "big",
     "cuisine": "Nigerian",
-    "time": 45,
+    "time": 55,
     "serves": 2,
     "ing": [
       [
@@ -59,11 +59,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Rinse {rice} if it is uncooked; prepare the other ingredients while it drains.",
-      "Heat {oil} and soften {onion} and {garlic}, then cook the main filling until fragrant.",
-      "Combine the ingredients with {vegetable-stock} and cook covered until the rice is tender and the liquid is absorbed.",
-      "Blend pepper, tomato and onion, fry the mixture until dark and reduced, then add rinsed rice and stock; cover tightly and cook until the grains absorb the smoky red sauce.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Blend {red-pepper}, {passata}, {garlic} and {ginger} until smooth.",
+      "Heat {oil} in a heavy pot and soften chopped {onion} for 5 minutes. Add the blended mixture and fry for 15 minutes, until reduced, dark and the oil floats on top.",
+      "Stir in {thyme}, {bay-leaf}, {salt}, {black-pepper} and {vegetable-stock} and bring to a boil.",
+      "Add {rice}, stir once, cover tightly and cook on the lowest heat for 25 minutes, letting the bottom catch slightly for the smoky party-jollof flavour.",
+      "Rest 10 minutes, remove the bay leaves and fluff."
     ]
   },
   {
@@ -71,7 +71,7 @@ KITCHEN.add(
     "name": "Egusi-inspired melon-seed and leafy-green stew",
     "meal": "big",
     "cuisine": "Nigerian",
-    "time": 55,
+    "time": 100,
     "serves": 2,
     "ing": [
       [
@@ -116,11 +116,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion}.",
-      "Add {pumpkin-seeds} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Grind pumpkin seeds coarsely and stir into the simmering meat stock to form a thick, nutty sauce; add leafy greens at the end and cook only until wilted.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cut {beef-chuck} into 3 cm cubes and simmer in {beef-stock} with half of the {salt} for 1 hour until tender.",
+      "Grind {pumpkin-seeds} to a coarse powder. Blend {tomato}, {red-chilli} and half of the {onion} to a purée; chop the rest of the onion.",
+      "Heat {oil} in a pot, cook the chopped onion for 4 minutes, add the purée and fry for 10 minutes until it thickens and darkens.",
+      "Stir in the ground seeds and cook for 8 minutes until they clump into little curds.",
+      "Add the beef with its stock and simmer 15 minutes, then stir in chopped {spinach}, {black-pepper} and the remaining salt and cook 3 minutes. Serve hot."
     ]
   },
   {
@@ -128,7 +128,7 @@ KITCHEN.add(
     "name": "Efo riro (Yoruba spinach and pepper stew)",
     "meal": "big",
     "cuisine": "Nigerian",
-    "time": 35,
+    "time": 40,
     "serves": 2,
     "ing": [
       [
@@ -173,11 +173,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {spinach} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {vegetable-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Reduce the blended pepper and tomato base until the oil separates, flake in smoked fish and fold through spinach in batches so the sauce clings to the leaves.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Blend {tomato} and {red-pepper} to a purée. Chop {onion} and {garlic}; chop {spinach}; flake {smoked-mackerel}.",
+      "Heat {oil} in a pot, cook the onion and garlic for 4 minutes, add the purée and fry for 12 minutes until reduced and the oil separates.",
+      "Add {vegetable-stock}, {salt} and {black-pepper} and simmer for 8 minutes.",
+      "Stir in the mackerel and spinach and cook for 4 minutes, until the spinach is just wilted but still bright. Serve hot."
     ]
   },
   {
@@ -374,11 +373,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion}.",
-      "Add {smoked-mackerel} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {vegetable-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Stir finely ground pumpkin seeds into the simmering stock until the broth turns glossy and slightly stretchy; add smoked fish and greens near the end.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Grind {pumpkin-seeds} to a fine powder. Chop {onion}; flake {smoked-mackerel}; chop {spinach} and slice {red-chilli}.",
+      "Heat {oil} in a pot and cook the onion for 4 minutes. Whisk the ground seeds with 100 ml of the {vegetable-stock} into a paste and stir into the pot.",
+      "Add the remaining stock a little at a time, whisking, until the soup turns thick and slightly stringy, like a draw soup. Simmer for 15 minutes.",
+      "Add the mackerel, chilli, {salt} and {black-pepper} and simmer 5 minutes, then wilt in the spinach for 2 minutes. Serve hot."
     ]
   },
   {
@@ -442,7 +440,7 @@ KITCHEN.add(
     "name": "Ofada-style rice with green pepper sauce",
     "meal": "big",
     "cuisine": "Nigerian",
-    "time": 40,
+    "time": 50,
     "serves": 2,
     "ing": [
       [
@@ -483,11 +481,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Rinse {rice} if it is uncooked; prepare the other ingredients while it drains.",
-      "Heat {oil} and soften {red-onion}, then cook the main filling until fragrant.",
-      "Combine the ingredients with {beef-stock} and cook covered until the rice is tender and the liquid is absorbed.",
-      "Cook the rice separately; blister and chop green peppers, simmer them with onion and a little stock, then serve with a rich minced-beef sauce and egg.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cook {rice} in {beef-stock} (diluted with 100 ml water) with half of the {salt}, covered, on low heat for 18 minutes.",
+      "Boil {eggs} for 9 minutes, cool and peel.",
+      "Blend {red-pepper} with half of the {red-onion}; slice the rest. Heat {oil} in a pan, cook the sliced onion for 4 minutes, add the blended pepper and fry for 12 minutes until the oil floats.",
+      "Add {beef-mince}, the remaining salt and {black-pepper} and cook for 10 minutes, breaking it up, to make a spicy sauce.",
+      "Serve the rice with the sauce spooned over and the halved eggs on top."
     ]
   },
   {
@@ -577,32 +575,52 @@ KITCHEN.add(
     "name": "Nigerian Jollof Rice",
     "meal": "big",
     "cuisine": "Nigerian",
-    "time": 37,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "tomato",
+        "rice",
         300
       ],
       [
-        "peanut-butter",
-        50
+        "tomato",
+        "3pc"
       ],
       [
-        "rice",
-        250
+        "tomato-paste",
+        40
       ],
       [
-        "spinach",
-        150
+        "red-pepper",
+        "2pc"
       ],
       [
-        "ginger",
-        10
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "chicken-stock",
+        500
+      ],
+      [
+        "thyme",
+        2
+      ],
+      [
+        "curry-powder",
+        4
+      ],
+      [
+        "bay-leaf",
+        2
       ],
       [
         "oil",
-        20
+        50
       ],
       [
         "salt",
@@ -610,11 +628,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {peanut-butter} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {tomato} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Blend {tomato}, {red-pepper} and {garlic} until smooth.",
+      "Heat {oil} in a heavy pot, cook chopped {onion} for 5 minutes, add {tomato-paste} for 2 minutes, then the blended mixture and fry for 15 minutes until thick and oily.",
+      "Add {curry-powder}, {thyme}, {bay-leaf}, {salt} and {chicken-stock} and bring to a boil.",
+      "Stir in {rice}, cover tightly and cook on the lowest heat for 25 minutes. Rest 10 minutes, remove the bay leaves and fluff."
     ]
   },
   {
@@ -660,44 +677,47 @@ KITCHEN.add(
     "name": "Nigerian Moi Moi-Inspired Bean Cakes",
     "meal": "big",
     "cuisine": "Nigerian",
-    "time": 32,
+    "time": 75,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
+        "black-eyed-peas",
+        480
       ],
       [
-        "rice",
-        250
+        "red-pepper",
+        "1pc"
       ],
       [
-        "spinach",
-        150
+        "onion",
+        "1pc"
       ],
       [
-        "ginger",
-        10
+        "eggs",
+        "3pc"
       ],
       [
         "oil",
-        20
+        60
+      ],
+      [
+        "vegetable-stock",
+        150
+      ],
+      [
+        "green-chilli",
+        "1pc"
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Boil 2 of the {eggs} for 9 minutes, cool, peel and cut into chunks.",
+      "Drain {black-eyed-peas}. Blend them with {red-pepper}, {onion}, {green-chilli}, {oil}, {vegetable-stock} and {salt} until smooth, then stir in the remaining raw egg.",
+      "Grease 6 ramekins or foil cups, fill them two-thirds with batter, tuck in egg chunks and cover tightly with foil.",
+      "Steam the cakes in a covered pot with 3 cm of simmering water for 40 minutes until firm. Serve warm."
     ]
   },
   {
@@ -790,44 +810,38 @@ KITCHEN.add(
     "name": "Nigerian Tomato and Bean Stew",
     "meal": "big",
     "cuisine": "Nigerian",
-    "time": 53,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
+        "black-eyed-peas",
+        480
       ],
       [
-        "rice",
-        250
+        "tomato",
+        "2pc"
       ],
       [
-        "spinach",
-        150
+        "onion",
+        "3pc"
       ],
       [
-        "ginger",
-        10
+        "chilli-flakes",
+        2
       ],
       [
         "oil",
-        20
+        60
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Drain {black-eyed-peas} and simmer in 150 ml water for 10 minutes until very soft, then mash roughly with {salt}. Chop {tomato}.",
+      "In a separate pan, heat {oil} and fry sliced {onion} for 10 minutes until deep brown, add {chilli-flakes} and tomato and cook 8 minutes into a dark, spicy sauce.",
+      "Spoon the mashed beans onto plates and top generously with the pepper sauce."
     ]
   },
   {
@@ -920,44 +934,46 @@ KITCHEN.add(
     "name": "Nigerian Peanut and Sweet Potato Soup",
     "meal": "big",
     "cuisine": "Nigerian",
-    "time": 38,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
+        "sweet-potato",
+        500
+      ],
+      [
         "peanut-butter",
-        50
+        60
       ],
       [
-        "rice",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "spinach",
-        150
+        "tomato",
+        "2pc"
       ],
       [
-        "ginger",
-        10
+        "red-chilli",
+        "1pc"
       ],
       [
-        "oil",
-        20
+        "chicken-stock",
+        900
+      ],
+      [
+        "thyme",
+        2
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Peel {sweet-potato} and cut into chunks; chop {onion} and {tomato}; slice {red-chilli}.",
+      "Simmer the sweet potato, onion, tomato, chilli, {thyme} and {chicken-stock} for 20 minutes until soft.",
+      "Whisk {peanut-butter} with a ladle of broth, stir in with {salt} and simmer 8 minutes. Blend half for a rustic, creamy soup."
     ]
   }
 ]

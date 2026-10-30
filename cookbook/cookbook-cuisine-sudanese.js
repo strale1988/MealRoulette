@@ -180,32 +180,40 @@ KITCHEN.add(
     "name": "Sudanese Peanut and Okra Stew",
     "meal": "big",
     "cuisine": "Sudanese",
-    "time": 37,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        300
+        "okra",
+        400
       ],
       [
         "peanut-butter",
-        50
+        80
       ],
       [
-        "rice",
-        250
+        "tomato",
+        "3pc"
       ],
       [
-        "spinach",
-        150
+        "onion",
+        "1pc"
       ],
       [
-        "ginger",
-        10
+        "garlic",
+        "3pc"
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "ground-coriander",
+        1
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
@@ -213,11 +221,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {peanut-butter} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {tomato} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Trim {okra}; chop {onion} and {tomato}; crush {garlic}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic, {cumin} and {ground-coriander} for 1 minute, then the tomato for 8 minutes.",
+      "Add the okra, 300 ml water and {salt}, cover and simmer for 10 minutes.",
+      "Whisk {peanut-butter} with a ladle of the liquid, stir in and simmer 10 minutes until the stew is thick and glossy."
     ]
   },
   {
@@ -225,48 +232,51 @@ KITCHEN.add(
     "name": "Kisra-Style Flatbread with Lentils",
     "meal": "big",
     "cuisine": "Sudanese",
-    "time": 44,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "flour",
+        200
       ],
       [
-        "spinach",
-        150
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "oil",
-        20
+        "cornmeal",
+        50
       ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        500
+        "red-lentils",
+        250
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
-        "tomato",
-        300
+        "garlic",
+        "3pc"
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "tomato-paste",
+        20
+      ],
+      [
+        "oil",
+        40
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Whisk {flour}, {cornmeal} and half of the {salt} with about 450 ml water into a thin, smooth batter. Rest 20 minutes.",
+      "Cook chopped {onion} in half of the {oil} for 5 minutes, then add crushed {garlic}, {cumin} and {tomato-paste} and stir for 2 minutes.",
+      "Rinse the {red-lentils} well, add them to the pot with 700 ml water and the remaining salt, and simmer for 20 minutes until soft and thick.",
+      "Heat a non-stick pan, brush with a little oil and pour in a thin layer of batter. Cook 1–2 minutes per side until lightly golden. Repeat, then serve the thin flatbreads with the lentils."
     ]
   },
   {
@@ -313,44 +323,59 @@ KITCHEN.add(
     "name": "Sudanese Spiced Rice",
     "meal": "big",
     "cuisine": "Sudanese",
-    "time": 58,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
-      ],
-      [
         "rice",
-        250
+        300
       ],
       [
-        "spinach",
-        150
+        "onion",
+        "2pc"
       ],
       [
-        "ginger",
-        10
+        "carrot",
+        "1pc"
+      ],
+      [
+        "raisins",
+        40
+      ],
+      [
+        "almonds",
+        30
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "cinnamon",
+        1
+      ],
+      [
+        "cardamom",
+        1
+      ],
+      [
+        "vegetable-stock",
+        500
       ],
       [
         "oil",
-        20
+        40
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {spinach} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Rinse {rice}. Slice {onion}, grate {carrot} and roughly chop {almonds}.",
+      "Cook the onion in {oil} for 10 minutes until golden, add {cumin}, {cinnamon} and {cardamom} for 1 minute.",
+      "Add the carrot and rice and stir for 1 minute, then pour in {vegetable-stock} and {salt}. Cover and cook on the lowest heat for 18 minutes.",
+      "Scatter {raisins} on top for the last 5 minutes. Fluff and top with the almonds."
     ]
   },
   {
@@ -358,108 +383,36 @@ KITCHEN.add(
     "name": "Lentil and Cumin Soup",
     "meal": "big",
     "cuisine": "Sudanese",
-    "time": 65,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        500
+        "red-lentils",
+        250
+      ],
+      [
+        "cumin",
+        4
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
-        "tomato",
-        300
+        "garlic",
+        "3pc"
       ],
       [
-        "peanut-butter",
-        50
+        "carrot",
+        "1pc"
       ],
       [
-        "rice",
-        250
+        "vegetable-stock",
+        900
       ],
       [
-        "spinach",
-        150
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {onion} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "sudanese-fish-with-coriander",
-    "name": "Sudanese Fish with Coriander",
-    "meal": "big",
-    "cuisine": "Sudanese",
-    "time": 36,
-    "serves": 4,
-    "ing": [
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {peanut-butter} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {tomato} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "sweet-sesame-date-bites",
-    "name": "Sweet Sesame Date Bites",
-    "meal": "big",
-    "cuisine": "Sudanese",
-    "time": 43,
-    "serves": 4,
-    "ing": [
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "ginger",
-        10
+        "lemon",
+        "1pc"
       ],
       [
         "oil",
@@ -468,22 +421,101 @@ KITCHEN.add(
       [
         "salt",
         3
+      ]
+    ],
+    "steps": [
+      "Rinse {red-lentils}. Chop {onion} and {carrot}; crush {garlic}.",
+      "Cook the onion and carrot in {oil} for 6 minutes, add garlic and {cumin} for 1 minute.",
+      "Add the lentils, {vegetable-stock} and {salt}, simmer for 22 minutes until soft, then blend until smooth.",
+      "Finish with the juice of {lemon} and serve hot."
+    ]
+  },
+  {
+    "id": "sudanese-fish-with-coriander",
+    "name": "Sudanese Fish with Coriander",
+    "meal": "big",
+    "cuisine": "Sudanese",
+    "time": 35,
+    "serves": 4,
+    "ing": [
+      [
+        "white-fish",
+        600
       ],
       [
-        "chicken-thigh",
-        500
+        "cilantro",
+        30
       ],
       [
-        "onion",
+        "garlic",
+        "4pc"
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "lemon",
+        "2pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "oil",
+        40
+      ],
+      [
+        "salt",
+        3
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 200 °C. Blend {cilantro}, {garlic}, {green-chilli}, {cumin}, the juice of one {lemon}, half of the {oil} and half of the {salt} into a green paste.",
+      "Rub the paste over {white-fish} and marinate for 15 minutes.",
+      "Slice {tomato}, lay it in a baking dish, drizzle with the remaining oil and salt, and place the fish on top.",
+      "Bake for 15–18 minutes until the fish flakes easily. Squeeze over the second lemon and serve."
+    ]
+  },
+  {
+    "id": "sweet-sesame-date-bites",
+    "name": "Sweet Sesame Date Bites",
+    "meal": "treat",
+    "cuisine": "Sudanese",
+    "time": 40,
+    "serves": 4,
+    "ing": [
+      [
+        "dates",
+        200
+      ],
+      [
+        "sesame-seeds",
+        60
+      ],
+      [
+        "tahini",
+        40
+      ],
+      [
+        "cardamom",
+        1
+      ],
+      [
+        "cinnamon",
         1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {ginger} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Toast {sesame-seeds} in a dry pan for 3–4 minutes until golden; cool on a plate.",
+      "Pit {dates} and blend them with {tahini}, {cardamom} and {cinnamon} into a thick, sticky paste.",
+      "Roll the paste into 16 small balls and coat each in the sesame seeds.",
+      "Chill for 30 minutes to firm up before serving."
     ]
   },
   {
@@ -529,44 +561,55 @@ KITCHEN.add(
     "name": "Sudanese Tomato and Bean Stew",
     "meal": "big",
     "cuisine": "Sudanese",
-    "time": 32,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
+        "white-beans",
+        480
       ],
       [
-        "rice",
-        250
+        "tomato",
+        "2pc"
       ],
       [
-        "spinach",
-        150
+        "onion",
+        "1pc"
       ],
       [
-        "ginger",
+        "garlic",
+        "2pc"
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "olive-oil",
+        30
+      ],
+      [
+        "parsley",
         10
       ],
       [
-        "oil",
+        "tahini",
         20
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Drain {white-beans}. Chop {onion} and {tomato}; crush {garlic}.",
+      "Cook the onion in half of the {olive-oil} for 5 minutes, add garlic and {cumin}, then the tomato for 5 minutes.",
+      "Add {white-beans}, 100 ml water and {salt}, simmer 10 minutes and mash about half roughly.",
+      "Stir in {tahini} and the juice of {lemon}, then drizzle with the remaining oil and scatter chopped {parsley}."
     ]
   },
   {
@@ -659,44 +702,50 @@ KITCHEN.add(
     "name": "Sudanese Peanut and Sweet Potato Soup",
     "meal": "big",
     "cuisine": "Sudanese",
-    "time": 53,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
+        "sweet-potato",
+        500
+      ],
+      [
         "peanut-butter",
-        50
+        60
       ],
       [
-        "rice",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "spinach",
-        150
+        "garlic",
+        "2pc"
       ],
       [
-        "ginger",
-        10
+        "cumin",
+        2
       ],
       [
-        "oil",
-        20
+        "cinnamon",
+        1
+      ],
+      [
+        "vegetable-stock",
+        900
+      ],
+      [
+        "lime",
+        "1pc"
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Peel {sweet-potato} and cut into chunks. Chop {onion}; crush {garlic}.",
+      "Simmer the sweet potato, onion, garlic, {cumin}, {cinnamon} and {vegetable-stock} for 20 minutes until soft.",
+      "Whisk {peanut-butter} with a ladle of broth, stir in with {salt} and simmer 8 minutes. Blend until smooth and finish with the juice of {lime}."
     ]
   },
   {
@@ -789,44 +838,50 @@ KITCHEN.add(
     "name": "Sudanese Ginger Lentil Curry",
     "meal": "big",
     "cuisine": "Sudanese",
-    "time": 38,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
+        "brown-lentils",
         250
       ],
       [
-        "spinach",
-        150
+        "ginger",
+        25
       ],
       [
-        "ginger",
-        10
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "turmeric",
+        2
+      ],
+      [
+        "tomato",
+        "2pc"
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Rinse {brown-lentils}. Chop {onion} and {tomato}; crush {garlic}; grate {ginger}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic, ginger, {cumin} and {turmeric} for 2 minutes, then the tomato for 4 minutes.",
+      "Add the lentils and 650 ml water, simmer for 30 minutes until tender, season with {salt} and serve."
     ]
   }
 ]

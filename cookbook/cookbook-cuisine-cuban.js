@@ -218,7 +218,7 @@ KITCHEN.add(
     "name": "Ropa vieja (Cuban shredded beef in pepper-tomato sauce)",
     "meal": "big",
     "cuisine": "Cuban",
-    "time": 120,
+    "time": 150,
     "serves": 2,
     "ing": [
       [
@@ -227,16 +227,15 @@ KITCHEN.add(
       ],
       [
         "red-pepper",
-        2
+        "2pc"
       ],
-      
       [
         "onion",
         "1pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "canned-tomatoes",
@@ -252,7 +251,7 @@ KITCHEN.add(
       ],
       [
         "oregano",
-        100
+        2
       ],
       [
         "olive-oil",
@@ -268,11 +267,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {olive-oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {beef-chuck} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Braise beef with aromatics until it pulls apart, shred finely and return to a reduced tomato-pepper sauce with cumin and oregano; cook until the meat absorbs the sauce.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cut {beef-chuck} into 3 large pieces and season with {salt} and {black-pepper}. Brown in {olive-oil} for 3–4 minutes per side, then add {beef-stock}, cover and simmer for 1 hour 30 minutes until it shreds easily.",
+      "Lift out the beef, shred it with two forks and keep about 150 ml of the broth.",
+      "Slice {onion} and {red-pepper}; crush {garlic}. Cook them in the same pot for 8 minutes, add {cumin} and {oregano}, then {canned-tomatoes}.",
+      "Return the beef with the reserved broth and simmer for 20 minutes until the sauce clings to the meat. Taste for salt and serve."
     ]
   },
   {
@@ -329,11 +327,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Rinse {rice} if it is uncooked; prepare the other ingredients while it drains.",
-      "Heat {olive-oil} and soften {onion} and {garlic}, then cook the main filling until fragrant.",
-      "Combine the ingredients with {vegetable-stock} and cook covered until the rice is tender and the liquid is absorbed.",
-      "Sauté onion, garlic and pepper, add drained {black-beans} with their broth and rice, then cover and cook until the grains absorb the seasoned bean liquid.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Chop {onion} and {red-pepper}; crush {garlic}. Drain {black-beans}.",
+      "Cook the onion and pepper in {olive-oil} for 6 minutes, add garlic and {cumin} for 1 minute.",
+      "Stir in {rice} for 1 minute, then add {black-beans}, {vegetable-stock}, {bay-leaf}, {salt} and {black-pepper}.",
+      "Bring to a boil, cover and cook on the lowest heat for 18 minutes. Rest 5 minutes, remove the bay leaf and fluff."
     ]
   },
   {
@@ -441,16 +438,16 @@ KITCHEN.add(
     "name": "Ajiaco cubano-inspired root-vegetable and pork stew",
     "meal": "big",
     "cuisine": "Cuban",
-    "time": 90,
+    "time": 110,
     "serves": 2,
     "ing": [
       [
         "pork",
-        400
+        300
       ],
       [
         "beef-chuck",
-        450
+        300
       ],
       [
         "potatoes",
@@ -470,7 +467,7 @@ KITCHEN.add(
       ],
       [
         "plantain",
-        2
+        "1pc"
       ],
       [
         "beef-stock",
@@ -494,11 +491,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan and let the aromatics or spices become fragrant without browning.",
-      "Add {pork} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Simmer the meats first, add root vegetables and corn in stages, and let some pumpkin thicken the broth; balance the rich pot with a squeeze of lemon before serving.",
-      "Finish with a little {lemon} if needed, taste for seasoning and serve while the texture is at its best."
+      "Cut {pork} and {beef-chuck} into 3 cm cubes. Brown them in {oil} in a large pot for 8 minutes.",
+      "Add {beef-stock}, 600 ml water, {salt} and {black-pepper}, cover and simmer for 1 hour until the meat is tender.",
+      "Cut {potatoes}, {sweet-potato}, {pumpkin} and the green {plantain} into 3 cm chunks. Add the potatoes and plantain and simmer 10 minutes.",
+      "Add {sweet-potato}, {pumpkin} and {sweetcorn} and cook for 20 minutes until the stew is thick and the pumpkin has partly dissolved.",
+      "Finish with the juice of {lemon} and serve hot."
     ]
   },
   {
@@ -1008,31 +1005,43 @@ KITCHEN.add(
     "name": "Cuban Chicken with Tomato and Peppers",
     "meal": "big",
     "cuisine": "Cuban",
-    "time": 32,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        250
+        "chicken-thigh",
+        600
       ],
       [
-        "plantain",
-        2
+        "tomato",
+        "3pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
-        10
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "4pc"
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "oregano",
+        2
       ],
       [
         "lime",
-        1
+        "1pc"
       ],
       [
-        "oil",
+        "olive-oil",
         20
       ],
       [
@@ -1041,11 +1050,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomato} and turn to coat in the seasoning.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Mix crushed {garlic}, {cumin}, {oregano}, the juice of {lime} and {salt}; rub over {chicken-thigh} and marinate for 30 minutes.",
+      "Brown the chicken in {olive-oil} for 5 minutes per side. Remove.",
+      "Cook sliced {onion} and {red-pepper} for 6 minutes, add chopped {tomato} and 100 ml water.",
+      "Return the chicken, cover and simmer for 25 minutes until tender and the sauce is thick."
     ]
   }
 ]

@@ -270,7 +270,7 @@ KITCHEN.add(
     "name": "Bobó de camarão (prawn and cassava-style coconut stew)",
     "meal": "big",
     "cuisine": "Brazilian",
-    "time": 35,
+    "time": 50,
     "serves": 2,
     "ing": [
       [
@@ -278,16 +278,20 @@ KITCHEN.add(
         250
       ],
       [
+        "yuca-frozen",
+        300
+      ],
+      [
         "coconut-milk",
         250
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
         "onion",
@@ -295,7 +299,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "lime",
@@ -319,11 +323,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {olive-oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {prawns} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {coconut-milk} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Simmer the peppers and tomato into a smooth coconut sauce, add prawns only near the end, and stop cooking as soon as they turn opaque.",
-      "Finish with a little {lime} if needed, taste for seasoning and serve while the texture is at its best."
+      "Boil {yuca-frozen} in salted water for 25 minutes until very soft. Drain and blend with half of the {coconut-milk} until smooth like a thick purée.",
+      "Marinate {prawns} with the juice of {lime}, crushed {garlic}, {salt} and {black-pepper} for 10 minutes.",
+      "Cook chopped {onion}, {red-pepper} and {tomato} in {olive-oil} for 8 minutes, then add the prawns and cook 2 minutes.",
+      "Stir in the yuca purée and remaining {coconut-milk} and simmer gently for 8 minutes until thick and creamy.",
+      "Top with chopped {cilantro} and serve."
     ]
   },
   {
@@ -436,11 +440,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Rinse {rice} if it is uncooked; prepare the other ingredients while it drains.",
-      "Heat {olive-oil} and soften {onion} and {garlic}, then cook the main filling until fragrant.",
-      "Combine the ingredients with {chicken-stock} and cook covered until the rice is tender and the liquid is absorbed.",
-      "Brown the chicken deeply before adding rice so the grains absorb the pan juices and turmeric; cover and cook until both rice and chicken are tender.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Season {chicken-thigh} with {salt} and {black-pepper}. Chop {onion} and {tomato}; crush {garlic}.",
+      "Heat {olive-oil} in a wide pan and brown the chicken for 5 minutes per side. Remove.",
+      "Cook the onion for 4 minutes, add garlic, tomato and {turmeric} for 3 minutes, then stir in {rice} for 1 minute.",
+      "Add {chicken-stock}, nestle the chicken on top, cover and cook on low heat for 25 minutes. Scatter {peas} on top for the last 5 minutes.",
+      "Rest 5 minutes, scatter chopped {parsley} and serve."
     ]
   },
   {
@@ -497,11 +501,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Rinse {rice} if it is uncooked; prepare the other ingredients while it drains.",
-      "Heat {oil} and soften {onion} and {garlic}, then cook the main filling until fragrant.",
-      "Combine the ingredients with {vegetable-stock} and cook covered until the rice is tender and the liquid is absorbed.",
-      "Cook rice with stock, fold in already-cooked beans and crisp bacon, then add the cheese off the heat so it softens without disappearing.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Dice {bacon}, chop {onion} and crush {garlic}. Drain {black-beans}.",
+      "Fry the bacon in {oil} for 5 minutes until crisp, add the onion for 4 minutes and the garlic for 1 minute.",
+      "Stir in {rice} for 1 minute, then add {vegetable-stock}, {black-beans}, {salt} and {black-pepper}. Cover and cook on low heat for 18 minutes.",
+      "Grate {cheddar} and stir it through the hot rice until melted, then scatter chopped {cilantro} and serve."
     ]
   },
   {
@@ -1027,37 +1030,52 @@ KITCHEN.add(
     "name": "Brazilian Black Bean and Rice Bowl",
     "meal": "big",
     "cuisine": "Brazilian",
-    "time": 25,
+    "time": 40,
     "serves": 4,
     "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
       [
         "rice",
         250
       ],
       [
+        "black-beans",
+        480
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
         "tomato",
-        250
+        "2pc"
       ],
       [
-        "plantain",
-        2
+        "parsley",
+        10
       ],
       [
-        "red-pepper",
-        1
+        "lime",
+        "1pc"
+      ],
+      [
+        "oil",
+        25
+      ],
+      [
+        "salt",
+        4
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Cook {rice} in 500 ml water with a pinch of {salt}, covered, on low heat for 15 minutes.",
+      "Chop {onion} and crush {garlic}. Cook them in {oil} for 5 minutes until soft.",
+      "Add {black-beans} (drained), 150 ml water and a pinch of {salt}. Simmer for 15 minutes, mashing a few beans to thicken.",
+      "Chop {tomato} and {parsley} and toss with the juice of {lime}.",
+      "Serve the rice and beans in bowls topped with the tomato and parsley salad."
     ]
   }
 ]

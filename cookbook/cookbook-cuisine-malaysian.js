@@ -195,7 +195,7 @@ KITCHEN.add(
     "name": "Ikan asam pedas (tangy chilli fish braise)",
     "meal": "big",
     "cuisine": "Malaysian",
-    "time": 30,
+    "time": 35,
     "serves": 2,
     "ing": [
       [
@@ -248,11 +248,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {white-fish} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {water} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Fry the aromatics until fragrant, dissolve tamarind into the liquid and simmer the fish gently so it holds together in the hot-sour gravy.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cut {white-fish} into 4 cm pieces. Blend {onion}, {garlic}, {ginger}, {red-chilli} and {tomato} into a paste.",
+      "Heat {oil} in a pan and fry the paste for 8 minutes until the oil separates.",
+      "Add {tamarind-paste}, {fish-sauce}, {water}, {salt} and {black-pepper} and simmer for 5 minutes.",
+      "Add the fish and cook gently for 8–10 minutes until it flakes, spooning the sour-spicy gravy over. Serve hot."
     ]
   },
   {
@@ -506,7 +505,7 @@ KITCHEN.add(
     "name": "Sambal sotong (squid in Malaysian chilli paste)",
     "meal": "big",
     "cuisine": "Malaysian",
-    "time": 25,
+    "time": 30,
     "serves": 2,
     "ing": [
       [
@@ -551,11 +550,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {squid} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {tomato} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Cook the sambal until the oil separates and the paste darkens, then add squid briefly at the end so it stays tender and glossy.",
-      "Finish with a little {lime} if needed, taste for seasoning and serve while the texture is at its best."
+      "Cook {rice} in 360 ml water with a pinch of {salt}, covered, on low heat for 15 minutes.",
+      "Clean {squid} and cut into rings. Blend {onion}, {garlic} and {tomato} with {sambal-oelek}.",
+      "Heat {oil} and fry the paste for 8 minutes until thick and oily. Season with {salt} and {black-pepper}.",
+      "Add the squid and cook for 2–3 minutes only, until just opaque and tender. Squeeze over {lime} and serve with the rice."
     ]
   },
   {
@@ -654,32 +652,44 @@ KITCHEN.add(
     "name": "Malaysian Laksa-Inspired Noodle Soup",
     "meal": "big",
     "cuisine": "Malaysian",
-    "time": 37,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "soy-sauce",
-        25
+        "rice-noodles",
+        250
       ],
       [
-        "ginger",
-        10
+        "laksa-paste",
+        60
       ],
       [
-        "garlic",
-        2
+        "coconut-milk",
+        400
       ],
       [
-        "spring-onion",
-        2
+        "chicken-stock",
+        600
       ],
       [
-        "carrot",
-        1
+        "prawns",
+        300
       ],
       [
-        "sesame-oil",
-        10
+        "tofu",
+        150
+      ],
+      [
+        "bean-sprouts",
+        100
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "oil",
+        20
       ],
       [
         "salt",
@@ -687,10 +697,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a heavy pan and soften the {ginger} until fragrant.",
-      "Add the {soy-sauce} and turn to coat in the seasoning.",
-      "Add the {garlic} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Heat {oil} in a pot and fry {laksa-paste} for 3 minutes until fragrant. Add {chicken-stock} and simmer for 10 minutes.",
+      "Stir in {coconut-milk} and {salt} and simmer gently for 5 minutes; do not boil hard.",
+      "Cover {rice-noodles} with hot water for 8 minutes, drain, and divide into bowls with {bean-sprouts}.",
+      "Add {prawns} and cubed {tofu} to the soup and cook for 3 minutes until the prawns turn pink.",
+      "Ladle over the noodles and serve with {lime} wedges."
     ]
   },
   {
@@ -737,43 +748,47 @@ KITCHEN.add(
     "name": "Malaysian Sambal Green Beans",
     "meal": "big",
     "cuisine": "Malaysian",
-    "time": 32,
+    "time": 25,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "green-beans",
+        400
+      ],
+      [
+        "sambal-oelek",
+        20
       ],
       [
         "garlic",
-        2
+        "3pc"
       ],
       [
-        "spring-onion",
-        2
+        "shallot",
+        "2pc"
       ],
       [
-        "carrot",
-        1
+        "brown-sugar",
+        5
       ],
       [
-        "sesame-oil",
-        10
+        "lime",
+        "1pc"
+      ],
+      [
+        "oil",
+        30
       ],
       [
         "salt",
         2
-      ],
-      [
-        "chicken-thigh",
-        400
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a pan and soften the {garlic} until fragrant.",
-      "Add the {ginger} and turn to coat in the seasoning.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Trim {green-beans} and cut into 5 cm lengths. Slice {shallot} and crush {garlic}.",
+      "Heat {oil} in a wok, fry the shallot and garlic for 2 minutes, then add {sambal-oelek} and {brown-sugar} for 2 minutes.",
+      "Add the beans and {salt} with a splash of water and stir-fry over high heat for 5–6 minutes until tender-crisp.",
+      "Squeeze over {lime} and serve."
     ]
   },
   {
@@ -781,47 +796,76 @@ KITCHEN.add(
     "name": "Malaysian Curry Mee",
     "meal": "big",
     "cuisine": "Malaysian",
-    "time": 39,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "carrot",
-        1
+        "egg-noodles",
+        300
       ],
       [
-        "sesame-oil",
-        10
+        "curry-powder",
+        15
       ],
       [
-        "salt",
-        2
+        "coconut-milk",
+        300
       ],
       [
         "chicken-thigh",
-        400
+        300
       ],
       [
-        "rice",
-        250
+        "tofu",
+        150
       ],
       [
-        "soy-sauce",
-        25
+        "bean-sprouts",
+        100
+      ],
+      [
+        "potatoes",
+        200
+      ],
+      [
+        "chicken-stock",
+        500
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
       ],
       [
         "ginger",
         10
       ],
       [
-        "garlic",
+        "lime",
+        "1pc"
+      ],
+      [
+        "sambal-oelek",
+        15
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
+        "salt",
         2
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {carrot} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Chop {onion}, crush {garlic}, grate {ginger}; cut {potatoes} into 2 cm cubes and slice {chicken-thigh} thinly.",
+      "Heat {oil} and cook the onion for 4 minutes, add garlic, ginger and {curry-powder} for 1 minute.",
+      "Add {chicken-stock}, the potatoes and chicken and simmer for 15 minutes. Stir in {coconut-milk}, cubed {tofu} and {salt} and simmer 5 minutes.",
+      "Cook {egg-noodles} as the packet directs and divide among bowls with {bean-sprouts}.",
+      "Ladle the curry over and serve with {sambal-oelek} and {lime} wedges."
     ]
   },
   {
@@ -868,43 +912,58 @@ KITCHEN.add(
     "name": "Malaysian Soy and Sesame Tofu",
     "meal": "big",
     "cuisine": "Malaysian",
-    "time": 53,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "tofu",
+        400
       ],
       [
-        "garlic",
-        2
+        "soy-sauce",
+        30
       ],
       [
-        "spring-onion",
-        2
-      ],
-      [
-        "carrot",
-        1
+        "sambal-oelek",
+        15
       ],
       [
         "sesame-oil",
         10
       ],
       [
-        "salt",
-        2
+        "garlic",
+        "3pc"
       ],
       [
-        "chicken-thigh",
-        400
+        "ginger",
+        10
+      ],
+      [
+        "spring-onion",
+        "3pc"
+      ],
+      [
+        "brown-sugar",
+        10
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "cornstarch",
+        20
+      ],
+      [
+        "oil",
+        40
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a pan and soften the {garlic} until fragrant.",
-      "Add the {ginger} and turn to coat in the seasoning.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Press {tofu} for 10 minutes, cut into cubes and toss with {cornstarch}. Fry in {oil} for 8 minutes until golden; lift out.",
+      "Stir-fry crushed {garlic} and grated {ginger} for 30 seconds, then add {soy-sauce}, {sambal-oelek}, {brown-sugar} and 50 ml water; simmer 1 minute.",
+      "Return the tofu and toss until glazed, then finish with {sesame-oil}, sliced {spring-onion} and a squeeze of {lime}."
     ]
   },
   {
@@ -912,47 +971,60 @@ KITCHEN.add(
     "name": "Malaysian Chicken with Scallion Rice",
     "meal": "big",
     "cuisine": "Malaysian",
-    "time": 60,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "carrot",
-        1
-      ],
-      [
-        "sesame-oil",
-        10
-      ],
-      [
-        "salt",
-        2
-      ],
-      [
         "chicken-thigh",
-        400
+        600
       ],
       [
         "rice",
         250
       ],
       [
-        "soy-sauce",
-        25
+        "spring-onion",
+        "4pc"
       ],
       [
         "ginger",
-        10
+        15
       ],
       [
         "garlic",
+        "3pc"
+      ],
+      [
+        "lemongrass",
+        "1pc"
+      ],
+      [
+        "soy-sauce",
+        20
+      ],
+      [
+        "sesame-oil",
+        10
+      ],
+      [
+        "chicken-stock",
+        450
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
         2
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {carrot} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Season {chicken-thigh} with {soy-sauce} and {salt}. Slice {spring-onion}, bruise {lemongrass}, crush {garlic}, grate {ginger}. Rinse {rice}.",
+      "Brown the chicken in {oil} for 5 minutes per side. Remove.",
+      "Cook half of the spring onion, garlic, ginger and lemongrass for 2 minutes, then stir in the rice for 1 minute.",
+      "Add {chicken-stock}, nestle the chicken on top, cover and cook on low heat for 22 minutes. Remove the lemongrass.",
+      "Rest 5 minutes, drizzle with {sesame-oil} and scatter the remaining spring onion."
     ]
   },
   {
@@ -997,45 +1069,44 @@ KITCHEN.add(
   {
     "id": "malaysian-sesame-cucumber-salad",
     "name": "Malaysian Sesame Cucumber Salad",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Malaysian",
-    "time": 38,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "ginger",
+        "cucumber",
+        "2pc"
+      ],
+      [
+        "sesame-seeds",
         10
       ],
       [
-        "garlic",
-        2
-      ],
-      [
-        "spring-onion",
-        2
-      ],
-      [
-        "carrot",
-        1
-      ],
-      [
-        "sesame-oil",
+        "sambal-oelek",
         10
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "brown-sugar",
+        5
+      ],
+      [
+        "peanuts",
+        20
       ],
       [
         "salt",
         2
-      ],
-      [
-        "chicken-thigh",
-        400
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a pan and soften the {garlic} until fragrant.",
-      "Add the {ginger} and turn to coat in the seasoning.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Toast {sesame-seeds} and {peanuts} in a dry pan for 3 minutes; crush the peanuts coarsely.",
+      "Cut {cucumber} into chunks and toss with {salt}, {brown-sugar}, {sambal-oelek} and the juice of {lime}.",
+      "Scatter the sesame and peanuts over and serve at once."
     ]
   }
 ]

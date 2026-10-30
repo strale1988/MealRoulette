@@ -417,43 +417,55 @@ KITCHEN.add(
     "name": "Haitian Griot-Style Pork",
     "meal": "big",
     "cuisine": "Haitian",
-    "time": 37,
+    "time": 120,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "pork-shoulder",
+        700
       ],
       [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
+        "orange",
+        "1pc"
       ],
       [
         "lime",
-        1
+        "1pc"
+      ],
+      [
+        "garlic",
+        "4pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "thyme",
+        2
       ],
       [
         "oil",
-        20
+        60
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Cut {pork-shoulder} into 4 cm cubes. Marinate with the juice of {orange} and {lime}, crushed {garlic}, sliced {onion}, {green-chilli}, {thyme}, {salt} and {black-pepper} for at least 1 hour.",
+      "Put the pork and marinade in a pot, add 200 ml water, cover and simmer for 1 hour until tender.",
+      "Uncover and cook until the liquid has fully evaporated, about 15 minutes. Lift out the pork and pat dry.",
+      "Heat {oil} in a frying pan and fry the pork for 8–10 minutes, turning, until crisp and deep golden on all sides. Serve hot."
     ]
   },
   {
@@ -461,48 +473,51 @@ KITCHEN.add(
     "name": "Haitian Diri ak Pwa Rice and Beans",
     "meal": "big",
     "cuisine": "Haitian",
-    "time": 44,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "plantain",
+        "black-beans",
+        480
+      ],
+      [
+        "rice",
+        250
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "thyme",
         2
       ],
       [
-        "red-pepper",
+        "cloves",
         1
       ],
       [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
+        "green-chilli",
+        "1pc"
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Chop {onion}; crush {garlic}. Drain {black-beans}, keeping 150 ml of the liquid.",
+      "Cook the onion in {oil} for 5 minutes, add garlic, {thyme} and {cloves} for 1 minute.",
+      "Add {black-beans}, the reserved liquid and 350 ml water with {salt} and the whole {green-chilli}. Bring to a boil, then stir in {rice}.",
+      "Cover and cook on the lowest heat for 18 minutes. Rest 5 minutes, remove the chilli and fluff before serving."
     ]
   },
   {
@@ -546,45 +561,49 @@ KITCHEN.add(
   {
     "id": "haitian-pikliz-cabbage-slaw",
     "name": "Haitian Pikliz Cabbage Slaw",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Haitian",
-    "time": 58,
+    "time": 130,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "cabbage",
+        400
       ],
       [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "carrot",
+        "1pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
-        10
+        "green-chilli",
+        "2pc"
+      ],
+      [
+        "vinegar",
+        150
       ],
       [
         "lime",
+        "1pc"
+      ],
+      [
+        "cloves",
         1
       ],
       [
-        "oil",
-        20
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Shred {cabbage} finely, grate {carrot} and thinly slice {red-pepper} and {green-chilli}.",
+      "Pack everything into a clean jar with {cloves} and {salt}.",
+      "Pour over {vinegar} and the juice of {lime} until covered, then press down and seal.",
+      "Refrigerate for at least 2 hours, ideally overnight, until the cabbage is tangy and hot. Serve cold as a condiment."
     ]
   },
   {
@@ -630,32 +649,48 @@ KITCHEN.add(
     "name": "Haitian Fish in Tomato Sauce",
     "meal": "big",
     "cuisine": "Haitian",
-    "time": 32,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        250
+        "white-fish",
+        600
       ],
       [
-        "plantain",
-        2
+        "tomato",
+        "4pc"
+      ],
+      [
+        "onion",
+        "1pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
-        10
+        "garlic",
+        "3pc"
       ],
       [
         "lime",
-        1
+        "1pc"
+      ],
+      [
+        "thyme",
+        2
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "parsley",
+        10
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
@@ -663,11 +698,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomato} and turn to coat in the seasoning.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Season {white-fish} with the juice of {lime} and half of the {salt}; set aside for 10 minutes.",
+      "Cook sliced {onion} and {red-pepper} in {oil} for 6 minutes, add crushed {garlic}, {thyme} and {green-chilli}, then chopped {tomato} and 100 ml water. Simmer for 12 minutes into a sauce.",
+      "Nestle the fish in the sauce, cover and cook gently for 8–10 minutes until it flakes easily.",
+      "Scatter chopped {parsley}, adjust the salt and serve."
     ]
   },
   {
@@ -675,47 +709,47 @@ KITCHEN.add(
     "name": "Haitian Sweet Potato Soup",
     "meal": "big",
     "cuisine": "Haitian",
-    "time": 39,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "cilantro",
+        "sweet-potato",
+        700
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "ginger",
         10
       ],
       [
-        "lime",
-        1
+        "thyme",
+        2
       ],
       [
-        "oil",
-        20
+        "coconut-milk",
+        200
+      ],
+      [
+        "vegetable-stock",
+        800
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Peel {sweet-potato} and cut into 3 cm chunks. Chop {onion}; crush {garlic}; grate {ginger}.",
+      "Cook the onion in a little water or oil for 5 minutes, add garlic, ginger and {thyme} for 1 minute.",
+      "Add the sweet potato and {vegetable-stock}, simmer for 20 minutes until very soft.",
+      "Blend until smooth, stir in {coconut-milk} and {salt}, and warm through for 3 minutes."
     ]
   },
   {
@@ -762,131 +796,141 @@ KITCHEN.add(
     "name": "Haitian Chicken with Tomato and Peppers",
     "meal": "big",
     "cuisine": "Haitian",
-    "time": 53,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "chicken-thigh",
+        600
       ],
       [
         "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "3pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
-        10
+        "onion",
+        "1pc"
       ],
       [
-        "lime",
-        1
+        "garlic",
+        "3pc"
+      ],
+      [
+        "tomato-paste",
+        30
+      ],
+      [
+        "thyme",
+        2
+      ],
+      [
+        "vinegar",
+        15
+      ],
+      [
+        "green-chilli",
+        "1pc"
       ],
       [
         "oil",
         20
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Rub {chicken-thigh} with {vinegar}, {thyme}, crushed {garlic} and {salt}; marinate 20 minutes.",
+      "Brown the chicken in {oil} for 5 minutes per side. Remove.",
+      "Cook sliced {onion}, {red-pepper} and {green-chilli} for 6 minutes, then {tomato} and {tomato-paste} with 100 ml water for 4 minutes.",
+      "Return the chicken, cover and simmer for 25 minutes until tender and the sauce is thick."
     ]
   },
   {
     "id": "haitian-sweet-plantain-cakes",
     "name": "Haitian Sweet Plantain Cakes",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Haitian",
-    "time": 60,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "red-pepper",
+        "plantain",
+        "3pc"
+      ],
+      [
+        "flour",
+        60
+      ],
+      [
+        "milk",
+        60
+      ],
+      [
+        "nutmeg",
         1
       ],
       [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
+        "brown-sugar",
+        15
       ],
       [
         "oil",
-        20
+        60
       ],
       [
         "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {cilantro} until fragrant.",
-      "Add the {red-pepper} and {black-beans}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Peel the very ripe {plantain}, mash until nearly smooth and stir in {flour}, {milk}, {nutmeg} and {salt}.",
+      "Heat {oil} in a frying pan over medium heat and fry 8 heaped spoonfuls, flattening slightly, for 3 minutes per side until golden.",
+      "Sprinkle with {brown-sugar} while hot and serve."
     ]
   },
   {
     "id": "haitian-lime-cabbage-slaw",
     "name": "Haitian Lime Cabbage Slaw",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Haitian",
-    "time": 31,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "oil",
-        20
+        "cabbage",
+        400
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "spring-onion",
+        "3pc"
+      ],
+      [
+        "lime",
+        "2pc"
       ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {salt} until fragrant.",
-      "Add the {oil} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Shred {cabbage} finely, grate {carrot} and slice {spring-onion}.",
+      "Toss with {salt}, {black-pepper} and the juice of {lime} and massage for 1 minute.",
+      "Rest for 10 minutes and serve cold."
     ]
   },
   {

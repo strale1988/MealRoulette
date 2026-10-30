@@ -188,28 +188,40 @@ KITCHEN.add(
     "name": "Kedjenou-Style Chicken Pot",
     "meal": "big",
     "cuisine": "Ivorian",
-    "time": 37,
+    "time": 85,
     "serves": 4,
     "ing": [
       [
+        "chicken-thigh",
+        800
+      ],
+      [
         "tomato",
-        300
+        "3pc"
       ],
       [
-        "peanut-butter",
-        50
+        "onion",
+        "2pc"
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
+        "garlic",
+        "4pc"
       ],
       [
         "ginger",
-        10
+        20
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "aubergine",
+        "1pc"
+      ],
+      [
+        "thyme",
+        2
       ],
       [
         "oil",
@@ -221,11 +233,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {peanut-butter} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {tomato} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Season {chicken-thigh} with {salt} and {thyme}. Slice {onion}, chop {tomato} and {aubergine}, crush {garlic}, grate {ginger} and halve {green-chilli}.",
+      "Heat {oil} in a heavy pot, brown the chicken for 4 minutes per side, then add everything else without any water.",
+      "Seal the pot with foil under the lid so no steam escapes and cook on the lowest heat for 1 hour, shaking the pot (never stirring) every 10 minutes so nothing sticks.",
+      "Uncover; the chicken will be tender in its own concentrated juices. Serve hot."
     ]
   },
   {
@@ -233,48 +244,55 @@ KITCHEN.add(
     "name": "Ivorian Peanut Chicken Stew",
     "meal": "big",
     "cuisine": "Ivorian",
-    "time": 44,
+    "time": 65,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "chicken-thigh",
+        700
       ],
       [
-        "spinach",
-        150
+        "peanut-butter",
+        80
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
       ],
       [
         "ginger",
-        10
+        15
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "chicken-stock",
+        500
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Season {chicken-thigh} with {salt}. Blend {tomato}, {onion}, {garlic}, {ginger} and {green-chilli} until smooth.",
+      "Brown the chicken in {oil} for 4 minutes per side. Add the blended mixture and fry for 10 minutes.",
+      "Whisk {peanut-butter} into {chicken-stock} until smooth and pour it over the chicken.",
+      "Cover and simmer for 30 minutes until the chicken is tender and the sauce is thick with oil floating on top. Serve hot."
     ]
   },
   {
@@ -321,44 +339,63 @@ KITCHEN.add(
     "name": "Ivorian Jollof Rice",
     "meal": "big",
     "cuisine": "Ivorian",
-    "time": 58,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
-      ],
-      [
         "rice",
-        250
+        300
       ],
       [
-        "spinach",
-        150
+        "tomato",
+        "3pc"
       ],
       [
-        "ginger",
-        10
+        "tomato-paste",
+        30
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "red-pepper",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "green-beans",
+        100
+      ],
+      [
+        "bay-leaf",
+        2
+      ],
+      [
+        "chicken-stock",
+        500
       ],
       [
         "oil",
-        20
+        40
       ],
       [
         "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        500
+        2
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {spinach} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Blend {tomato}, {red-pepper} and {garlic} smooth. Dice {carrot}, trim and cut {green-beans}, chop {onion}.",
+      "Cook the onion in {oil} for 5 minutes, add {tomato-paste} for 2 minutes, then the blended mixture and cook for 15 minutes until reduced and oily.",
+      "Stir in {rice}, {chicken-stock}, {bay-leaf} and {salt}, cover tightly and cook on the lowest heat for 15 minutes.",
+      "Scatter the carrot and green beans on top, cover and cook 10 minutes more. Rest 5 minutes, remove the bay leaves and mix."
     ]
   },
   {
@@ -366,47 +403,51 @@ KITCHEN.add(
     "name": "Cassava-Style Greens with Beans",
     "meal": "big",
     "cuisine": "Ivorian",
-    "time": 65,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
+        "yuca-frozen",
         250
       ],
       [
         "spinach",
-        150
+        400
       ],
       [
-        "ginger",
-        10
+        "black-eyed-peas",
+        480
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
       ],
       [
         "oil",
-        20
+        30
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {onion} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Boil {yuca-frozen} in salted water for 20 minutes until tender and drain. Chop {spinach}, {onion}, {tomato}; crush {garlic}; drain {black-eyed-peas}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic, {green-chilli} and tomato for 5 minutes.",
+      "Add the spinach and 100 ml water, cover and cook 10 minutes until soft.",
+      "Stir in {black-eyed-peas}, the yuca and {salt} and simmer 8 minutes, mashing some yuca to thicken. Serve hot."
     ]
   },
   {
@@ -414,39 +455,51 @@ KITCHEN.add(
     "name": "Ivorian Grilled Fish with Lime",
     "meal": "big",
     "cuisine": "Ivorian",
-    "time": 36,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        300
+        "white-fish",
+        700
       ],
       [
-        "peanut-butter",
-        50
+        "lime",
+        "2pc"
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
+        "garlic",
+        "3pc"
       ],
       [
         "ginger",
-        10
+        15
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "2pc"
       ],
       [
         "oil",
-        20
+        30
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {peanut-butter} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {tomato} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Crush {garlic}, grate {ginger}, chop {green-chilli} and mix with the juice of one {lime}, half of the {oil} and half of the {salt}. Rub over {white-fish} and marinate 20 minutes.",
+      "Slice {onion} and {tomato} thinly, toss with the juice of the second lime and the remaining salt for the relish.",
+      "Brush a grill or pan with the remaining oil and cook the fish over high heat for 4–5 minutes per side until charred and flaking.",
+      "Serve topped with the onion and tomato relish."
     ]
   },
   {
@@ -454,20 +507,44 @@ KITCHEN.add(
     "name": "Coconut Chicken and Rice",
     "meal": "big",
     "cuisine": "Ivorian",
-    "time": 43,
+    "time": 60,
     "serves": 4,
     "ing": [
+      [
+        "chicken-thigh",
+        600
+      ],
       [
         "rice",
         250
       ],
       [
-        "spinach",
-        150
+        "coconut-milk",
+        300
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
       ],
       [
         "ginger",
-        10
+        15
+      ],
+      [
+        "thyme",
+        2
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "chicken-stock",
+        200
       ],
       [
         "oil",
@@ -476,22 +553,13 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {ginger} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Season {chicken-thigh} with {salt} and {thyme}. Chop {onion}, crush {garlic} and grate {ginger}.",
+      "Brown the chicken in {oil} for 5 minutes per side. Remove.",
+      "Cook the onion for 4 minutes, add garlic, ginger and {green-chilli}, then stir in {rice} for 1 minute.",
+      "Add {coconut-milk} and {chicken-stock}, nestle the chicken on top, cover and cook on the lowest heat for 25 minutes. Rest 5 minutes and serve."
     ]
   },
   {
@@ -537,44 +605,46 @@ KITCHEN.add(
     "name": "Ivorian Tomato and Bean Stew",
     "meal": "big",
     "cuisine": "Ivorian",
-    "time": 32,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
+        "white-beans",
+        480
       ],
       [
-        "rice",
-        250
+        "tomato",
+        "3pc"
       ],
       [
-        "spinach",
-        150
+        "onion",
+        "1pc"
       ],
       [
-        "ginger",
+        "garlic",
+        "2pc"
+      ],
+      [
+        "red-pepper",
+        "1pc"
+      ],
+      [
+        "parsley",
         10
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Drain {white-beans}. Chop {onion}, {tomato} and {red-pepper}; crush {garlic}.",
+      "Cook the onion and pepper in {oil} for 6 minutes, add garlic and tomato and cook 10 minutes until thick.",
+      "Add {white-beans}, 100 ml water and {salt} and simmer for 12 minutes. Stir in chopped {parsley} and serve."
     ]
   },
   {
@@ -667,44 +737,43 @@ KITCHEN.add(
     "name": "Ivorian Herbed Flatbread",
     "meal": "big",
     "cuisine": "Ivorian",
-    "time": 53,
+    "time": 90,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
+        "flour",
+        300
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "oil",
-        20
+        "yeast",
+        5
       ],
       [
         "salt",
-        3
+        4
       ],
       [
-        "chicken-thigh",
-        500
+        "oil",
+        30
+      ],
+      [
+        "parsley",
+        15
+      ],
+      [
+        "spring-onion",
+        "3pc"
+      ],
+      [
+        "garlic",
+        "2pc"
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Mix {flour}, {yeast} and {salt} with 20 g of the {oil} and about 180 ml warm water; knead 8 minutes. Cover and rise for 45 minutes.",
+      "Finely chop {parsley}, {spring-onion} and {garlic} and knead them into the dough.",
+      "Divide into 6 balls and roll each into a 5 mm thick round.",
+      "Cook in a hot, lightly oiled pan for 3 minutes per side until puffed and golden, brushing with the remaining oil. Serve warm."
     ]
   },
   {
@@ -797,44 +866,47 @@ KITCHEN.add(
     "name": "Ivorian Roasted Plantain with Beans",
     "meal": "big",
     "cuisine": "Ivorian",
-    "time": 38,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
+        "plantain",
+        "3pc"
       ],
       [
-        "rice",
-        250
+        "black-beans",
+        480
       ],
       [
-        "spinach",
-        150
+        "tomato",
+        "2pc"
       ],
       [
-        "ginger",
-        10
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
       ],
       [
         "oil",
-        20
+        40
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 200 °C. Slice the ripe {plantain} in half lengthways, brush with half of the {oil} and roast cut-side down for 25 minutes until golden and caramelised.",
+      "Drain {black-beans}. Chop {onion}, {tomato} and {green-chilli}; crush {garlic}.",
+      "Cook the onion in the remaining oil for 5 minutes, add garlic, chilli and tomato for 6 minutes, then {black-beans}, {salt} and 100 ml water. Simmer 10 minutes.",
+      "Serve the roasted plantain with the beans spooned over."
     ]
   }
 ]

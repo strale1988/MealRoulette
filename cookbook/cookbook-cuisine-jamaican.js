@@ -752,7 +752,6 @@ KITCHEN.add(
         "red-pepper",
         180
       ],
-      
       [
         "garlic",
         "3pc"
@@ -1004,28 +1003,48 @@ KITCHEN.add(
     "name": "Jamaican Chicken with Tomato and Peppers",
     "meal": "big",
     "cuisine": "Jamaican",
-    "time": 32,
+    "time": 70,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        250
+        "chicken-thigh",
+        700
       ],
       [
-        "plantain",
-        2
+        "tomato",
+        "2pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "thyme",
+        2
+      ],
+      [
+        "allspice",
+        2
+      ],
+      [
+        "brown-sugar",
         10
       ],
       [
-        "lime",
-        1
+        "spring-onion",
+        "3pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
       ],
       [
         "oil",
@@ -1034,62 +1053,64 @@ KITCHEN.add(
       [
         "salt",
         3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomato} and turn to coat in the seasoning.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Season {chicken-thigh} with {salt}, {black-pepper}, {thyme}, {allspice}, crushed {garlic} and sliced {spring-onion}; marinate for 30 minutes.",
+      "Heat {oil} in a heavy pot, stir in {brown-sugar} until dark amber, then brown the chicken for 5 minutes per side.",
+      "Add sliced {onion}, {red-pepper}, {green-chilli} and chopped {tomato} with 200 ml water.",
+      "Cover and simmer for 30 minutes until the chicken is very tender and the gravy is dark and rich."
     ]
   },
   {
     "id": "jamaican-sweet-plantain-cakes",
     "name": "Jamaican Sweet Plantain Cakes",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Jamaican",
-    "time": 39,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "cilantro",
-        10
+        "plantain",
+        "3pc"
       ],
       [
-        "lime",
-        1
+        "flour",
+        60
       ],
       [
-        "oil",
-        20
-      ],
-      [
-        "salt",
+        "baking-powder",
         3
       ],
       [
-        "chicken-thigh",
-        450
+        "milk",
+        60
       ],
       [
-        "black-beans",
-        250
+        "nutmeg",
+        1
       ],
       [
-        "rice",
-        250
+        "cinnamon",
+        1
       ],
       [
-        "tomato",
-        250
+        "sugar",
+        15
+      ],
+      [
+        "oil",
+        60
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Peel the very ripe {plantain}, mash until nearly smooth and stir in {flour}, {baking-powder}, {milk}, {nutmeg}, {cinnamon} and {sugar}.",
+      "Heat {oil} in a frying pan over medium heat and fry 8 heaped spoonfuls, flattening slightly, for 3 minutes per side until golden.",
+      "Drain and serve warm."
     ]
   }
 ]

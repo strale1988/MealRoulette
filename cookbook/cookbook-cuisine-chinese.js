@@ -3298,7 +3298,7 @@ KITCHEN.add(
     "name": "Cantonese claypot rice with Chinese sausage and mushrooms",
     "meal": "big",
     "cuisine": "Chinese",
-    "time": 35,
+    "time": 40,
     "serves": 2,
     "ing": [
       [
@@ -3307,7 +3307,7 @@ KITCHEN.add(
       ],
       [
         "smoked-sausage",
-        250
+        150
       ],
       [
         "shiitake-mushrooms",
@@ -3339,7 +3339,7 @@ KITCHEN.add(
       ],
       [
         "salt",
-        3
+        1
       ],
       [
         "black-pepper",
@@ -3351,11 +3351,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Rinse {rice} if it is uncooked; prepare the other ingredients while it drains.",
-      "Heat {oil} and soften {ginger} and {spring-onion}, then cook the main filling until fragrant.",
-      "Combine the ingredients with {water} and cook covered until the rice is tender and the liquid is absorbed.",
-      "Start rice in a heavy covered pot, add sliced sausage and mushrooms when the water is nearly absorbed, then finish over low heat to form a lightly crisp rice crust.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Rinse {rice}. Slice {smoked-sausage}, {shiitake-mushrooms} and {ginger}; slice {spring-onion}.",
+      "Put the rice and {water} in a heavy pot with {salt}, bring to a boil and cook uncovered for 5 minutes until the water has nearly gone.",
+      "Lay the sausage, mushrooms and ginger on top, cover and cook on the lowest heat for 15 minutes.",
+      "Mix {soy-sauce}, {dark-soy-sauce}, {sesame-oil} and {black-pepper}; drizzle {oil} around the rim of the pot and cook 3 more minutes so the bottom crisps.",
+      "Pour the sauce over, scatter the spring onion, mix and serve, scraping up the crispy rice."
     ]
   }
 ]

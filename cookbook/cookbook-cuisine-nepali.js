@@ -298,7 +298,7 @@ KITCHEN.add(
     "name": "Aloo tama-inspired potato and sour bamboo-style curry",
     "meal": "big",
     "cuisine": "Nepali",
-    "time": 40,
+    "time": 45,
     "serves": 2,
     "ing": [
       [
@@ -347,11 +347,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {garlic} and {ginger}.",
-      "Add {potatoes} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {water} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Brown the potatoes, add the tangy tamarind broth and beans, and simmer until the potatoes start to break at the edges and thicken the sauce.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Peel {potatoes} and cut into 3 cm chunks. Chop {tomato}, crush {garlic}, grate {ginger}. Drain {black-beans}.",
+      "Heat {oil} in a heavy pot, add {cumin} for 20 seconds, then garlic, ginger and tomato; cook 6 minutes until soft.",
+      "Add the potatoes, {tamarind-paste}, {salt}, {black-pepper} and {water}. Cover and simmer for 20 minutes until the potatoes are tender and the broth is pleasantly sour.",
+      "Stir in {black-beans} and simmer 5 minutes. Serve hot."
     ]
   },
   {
@@ -627,43 +626,67 @@ KITCHEN.add(
     "name": "Nepali Aloo Tama-Inspired Potato Stew",
     "meal": "big",
     "cuisine": "Nepali",
-    "time": 37,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "soy-sauce",
-        25
+        "potatoes",
+        600
       ],
       [
-        "ginger",
-        10
+        "tamarind-paste",
+        15
+      ],
+      [
+        "chickpeas",
+        240
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "onion",
+        "1pc"
       ],
       [
         "garlic",
+        "3pc"
+      ],
+      [
+        "ginger",
+        15
+      ],
+      [
+        "turmeric",
         2
       ],
       [
-        "spring-onion",
+        "cumin",
         2
       ],
       [
-        "carrot",
+        "fenugreek",
         1
       ],
       [
-        "sesame-oil",
+        "cilantro",
         10
       ],
       [
+        "oil",
+        30
+      ],
+      [
         "salt",
-        2
+        3
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a heavy pan and soften the {ginger} until fragrant.",
-      "Add the {soy-sauce} and turn to coat in the seasoning.",
-      "Add the {garlic} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Peel {potatoes} and cut into 3 cm chunks. Chop {onion} and {tomato}; crush {garlic}; grate {ginger}. Drain {chickpeas}.",
+      "Heat {oil}, add {cumin} and {fenugreek} for 20 seconds, then the onion for 5 minutes, garlic, ginger and {turmeric} for 1 minute, and the tomato for 5 minutes.",
+      "Add the potatoes, {tamarind-paste}, {salt} and 500 ml water, cover and simmer for 20 minutes.",
+      "Add {chickpeas} and simmer 5 minutes. Scatter chopped {cilantro} and serve."
     ]
   },
   {
@@ -710,91 +733,123 @@ KITCHEN.add(
     "name": "Nepali Chicken Tarkari",
     "meal": "big",
     "cuisine": "Nepali",
-    "time": 32,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "chicken-thigh",
+        700
+      ],
+      [
+        "onion",
+        "2pc"
+      ],
+      [
+        "tomato",
+        "3pc"
       ],
       [
         "garlic",
+        "4pc"
+      ],
+      [
+        "ginger",
+        20
+      ],
+      [
+        "cumin",
         2
       ],
       [
-        "spring-onion",
+        "ground-coriander",
         2
       ],
       [
-        "carrot",
+        "turmeric",
+        2
+      ],
+      [
+        "garam-masala",
+        3
+      ],
+      [
+        "chilli-flakes",
         1
       ],
       [
-        "sesame-oil",
+        "cilantro",
         10
       ],
       [
-        "salt",
-        2
+        "oil",
+        40
       ],
       [
-        "chicken-thigh",
-        400
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a pan and soften the {garlic} until fragrant.",
-      "Add the {ginger} and turn to coat in the seasoning.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Cut {chicken-thigh} into 4 cm pieces and rub with {turmeric} and half of the {salt}. Slice {onion}, chop {tomato}, crush {garlic}, grate {ginger}.",
+      "Heat {oil} in a heavy pot, fry the onion for 10 minutes until golden, then add garlic, ginger, {cumin}, {ground-coriander} and {chilli-flakes} for 1 minute.",
+      "Add the tomato and cook 8 minutes, then the chicken; brown 5 minutes.",
+      "Add 200 ml water and the remaining salt, cover and simmer for 25 minutes until tender and the gravy is thick. Stir in {garam-masala} and chopped {cilantro}."
     ]
   },
   {
     "id": "nepali-tomato-sesame-achar",
     "name": "Nepali Tomato Sesame Achar",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Nepali",
-    "time": 39,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "carrot",
-        1
+        "tomato",
+        "6pc"
       ],
       [
-        "sesame-oil",
-        10
+        "sesame-seeds",
+        40
       ],
       [
-        "salt",
-        2
-      ],
-      [
-        "chicken-thigh",
-        400
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "soy-sauce",
-        25
+        "garlic",
+        "3pc"
       ],
       [
         "ginger",
         10
       ],
       [
-        "garlic",
-        2
+        "green-chilli",
+        "2pc"
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "cilantro",
+        15
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
+        "chilli-flakes",
+        1
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {carrot} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the grill to high. Roast {tomato}, {garlic} (unpeeled) and {green-chilli} for 12–15 minutes, turning, until blistered and blackened in spots.",
+      "Toast {sesame-seeds} in a dry pan for 3 minutes until golden and grind coarsely.",
+      "Peel the tomatoes and garlic and mash with the chillies, ground sesame, grated {ginger}, {chilli-flakes} and {salt} into a chunky paste.",
+      "Stir in the juice of {lime} and chopped {cilantro}, then heat {oil} until shimmering and pour it over. Serve at room temperature."
     ]
   },
   {
@@ -841,43 +896,55 @@ KITCHEN.add(
     "name": "Nepali Soy and Sesame Tofu",
     "meal": "big",
     "cuisine": "Nepali",
-    "time": 53,
+    "time": 30,
     "serves": 4,
     "ing": [
+      [
+        "tofu",
+        400
+      ],
+      [
+        "soy-sauce",
+        30
+      ],
+      [
+        "sesame-seeds",
+        20
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
       [
         "ginger",
         10
       ],
       [
-        "garlic",
-        2
-      ],
-      [
         "spring-onion",
-        2
+        "3pc"
       ],
       [
-        "carrot",
+        "chilli-flakes",
         1
       ],
       [
-        "sesame-oil",
-        10
+        "lime",
+        "1pc"
       ],
       [
-        "salt",
-        2
+        "black-pepper",
+        1
       ],
       [
-        "chicken-thigh",
-        400
+        "oil",
+        30
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a pan and soften the {garlic} until fragrant.",
-      "Add the {ginger} and turn to coat in the seasoning.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Press {tofu} for 10 minutes and cut into 2 cm cubes. Toast {sesame-seeds} in a dry pan for 2–3 minutes.",
+      "Fry the tofu in {oil} over medium-high heat for 8 minutes until golden on all sides.",
+      "Add crushed {garlic}, grated {ginger} and {chilli-flakes} for 1 minute, then {soy-sauce} and {black-pepper}, tossing until glazed.",
+      "Finish with the sesame seeds, sliced {spring-onion} and a squeeze of {lime}."
     ]
   },
   {
@@ -885,47 +952,59 @@ KITCHEN.add(
     "name": "Nepali Chicken with Scallion Rice",
     "meal": "big",
     "cuisine": "Nepali",
-    "time": 60,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "carrot",
-        1
-      ],
-      [
-        "sesame-oil",
-        10
-      ],
-      [
-        "salt",
-        2
-      ],
-      [
         "chicken-thigh",
-        400
+        600
       ],
       [
         "rice",
         250
       ],
       [
-        "soy-sauce",
-        25
+        "spring-onion",
+        "4pc"
       ],
       [
         "ginger",
-        10
+        15
       ],
       [
         "garlic",
+        "3pc"
+      ],
+      [
+        "turmeric",
         2
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "chicken-stock",
+        450
+      ],
+      [
+        "cilantro",
+        10
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {carrot} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Season {chicken-thigh} with {turmeric} and {salt}. Slice {spring-onion}; crush {garlic}; grate {ginger}. Rinse {rice}.",
+      "Brown the chicken in {oil} for 5 minutes per side. Remove.",
+      "Cook half of the spring onion, garlic, ginger and {cumin} for 2 minutes, then stir in the rice for 1 minute.",
+      "Add {chicken-stock}, nestle the chicken on top, cover and cook on low heat for 22 minutes. Rest 5 minutes and scatter the remaining spring onion and chopped {cilantro}."
     ]
   },
   {
@@ -970,45 +1049,40 @@ KITCHEN.add(
   {
     "id": "nepali-sesame-cucumber-salad",
     "name": "Nepali Sesame Cucumber Salad",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Nepali",
-    "time": 38,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "cucumber",
+        "2pc"
       ],
       [
-        "garlic",
-        2
+        "sesame-seeds",
+        20
       ],
       [
-        "spring-onion",
-        2
+        "lime",
+        "1pc"
       ],
       [
-        "carrot",
+        "chilli-flakes",
         1
       ],
       [
-        "sesame-oil",
+        "cilantro",
         10
       ],
       [
         "salt",
         2
-      ],
-      [
-        "chicken-thigh",
-        400
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a pan and soften the {garlic} until fragrant.",
-      "Add the {ginger} and turn to coat in the seasoning.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Toast {sesame-seeds} in a dry pan for 3 minutes and grind coarsely with {salt} and {chilli-flakes}.",
+      "Cut {cucumber} into bite-sized chunks and toss with the juice of {lime}.",
+      "Mix in the sesame mixture and chopped {cilantro} and serve immediately."
     ]
   }
 ]

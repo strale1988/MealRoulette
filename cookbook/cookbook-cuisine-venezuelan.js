@@ -444,43 +444,65 @@ KITCHEN.add(
     "name": "Venezuelan Pabellón-Inspired Beef and Beans",
     "meal": "big",
     "cuisine": "Venezuelan",
-    "time": 37,
+    "time": 130,
     "serves": 4,
     "ing": [
+      [
+        "beef-chuck",
+        500
+      ],
+      [
+        "black-beans",
+        480
+      ],
       [
         "rice",
         250
       ],
       [
-        "tomato",
-        250
+        "plantain",
+        "2pc"
       ],
       [
-        "plantain",
-        2
+        "onion",
+        "1pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
-        10
+        "garlic",
+        "3pc"
       ],
       [
-        "lime",
-        1
+        "tomato",
+        "2pc"
+      ],
+      [
+        "cumin",
+        2
       ],
       [
         "oil",
-        20
+        60
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Simmer {beef-chuck} in water with half of the {salt} for 1 hour 15 minutes until tender; shred finely.",
+      "Chop {onion}, {red-pepper} and {tomato}; crush {garlic}. Cook them in 20 g of the {oil} for 8 minutes, add {cumin}, {black-pepper} and the shredded beef, and simmer 15 minutes with a splash of broth.",
+      "Cook {rice} in 500 ml water with a pinch of salt, covered, on low heat for 15 minutes.",
+      "Simmer {black-beans} (drained) in 100 ml water for 10 minutes, mashing some, with a pinch of salt.",
+      "Slice the very ripe {plantain} and fry in the remaining oil for 2–3 minutes per side until caramelised.",
+      "Serve beef, rice, beans and plantain together on each plate."
     ]
   },
   {
@@ -488,48 +510,39 @@ KITCHEN.add(
     "name": "Venezuelan Cachapas Corn Pancakes",
     "meal": "big",
     "cuisine": "Venezuelan",
-    "time": 44,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "plantain",
-        2
+        "sweetcorn",
+        400
       ],
       [
-        "red-pepper",
-        1
+        "cornmeal",
+        60
       ],
       [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "oil",
+        "sugar",
         20
       ],
       [
         "salt",
-        3
+        2
       ],
       [
-        "chicken-thigh",
-        450
+        "butter",
+        30
       ],
       [
-        "black-beans",
-        250
+        "mozzarella",
+        200
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Blend {sweetcorn} with {sugar} and {salt} into a thick, slightly coarse batter, then stir in {cornmeal} and rest for 10 minutes.",
+      "Melt a little {butter} in a frying pan over medium heat and pour in a quarter of the batter, spreading to 12 cm. Cook 3 minutes until the edges set, then flip and cook 2 minutes.",
+      "Repeat for four cachapas, adding butter as needed.",
+      "Fill each with {mozzarella}, fold over and serve hot while the cheese melts."
     ]
   },
   {
@@ -613,28 +626,36 @@ KITCHEN.add(
     "name": "Venezuelan Chicken Asado",
     "meal": "big",
     "cuisine": "Venezuelan",
-    "time": 32,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        250
+        "chicken-thigh",
+        700
       ],
       [
-        "plantain",
-        2
+        "onion",
+        "1pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
-        10
+        "garlic",
+        "3pc"
       ],
       [
-        "lime",
-        1
+        "tomato-paste",
+        30
+      ],
+      [
+        "brown-sugar",
+        20
+      ],
+      [
+        "vinegar",
+        20
       ],
       [
         "oil",
@@ -643,14 +664,17 @@ KITCHEN.add(
       [
         "salt",
         3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomato} and turn to coat in the seasoning.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Season {chicken-thigh} with {salt} and {black-pepper}. Slice {onion} and {red-pepper}; crush {garlic}.",
+      "Heat {oil} in a heavy pot, add {brown-sugar} and stir until it turns dark amber (about 1 minute), then brown the chicken for 5 minutes per side.",
+      "Add the onion, pepper and garlic for 5 minutes, stir in {tomato-paste} and {vinegar} with 150 ml water.",
+      "Cover and simmer for 30 minutes until the chicken is tender and the sauce is dark and glossy."
     ]
   },
   {
@@ -658,16 +682,44 @@ KITCHEN.add(
     "name": "Venezuelan Black Bean Soup",
     "meal": "big",
     "cuisine": "Venezuelan",
-    "time": 39,
+    "time": 40,
     "serves": 4,
     "ing": [
+      [
+        "black-beans",
+        480
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "red-pepper",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "sugar",
+        5
+      ],
       [
         "cilantro",
         10
       ],
       [
-        "lime",
-        1
+        "cheese",
+        60
+      ],
+      [
+        "vegetable-stock",
+        600
       ],
       [
         "oil",
@@ -676,29 +728,13 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Chop {onion} and {red-pepper}; crush {garlic}.",
+      "Cook the onion and pepper in {oil} for 6 minutes, add garlic and {cumin}.",
+      "Add {black-beans} (drained), {vegetable-stock}, {sugar} and {salt} and simmer for 20 minutes. Blend about half until smooth and stir back in.",
+      "Ladle into bowls and top with crumbled {cheese} and chopped {cilantro}."
     ]
   },
   {
@@ -745,131 +781,129 @@ KITCHEN.add(
     "name": "Venezuelan Chicken with Tomato and Peppers",
     "meal": "big",
     "cuisine": "Venezuelan",
-    "time": 53,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "chicken-thigh",
+        600
       ],
       [
         "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "3pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
-        10
+        "onion",
+        "1pc"
       ],
       [
-        "lime",
-        1
+        "garlic",
+        "2pc"
+      ],
+      [
+        "capers",
+        15
+      ],
+      [
+        "green-olives",
+        50
       ],
       [
         "oil",
         20
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Season {chicken-thigh} with {salt}. Slice {onion} and {red-pepper}, chop {tomato}, crush {garlic}.",
+      "Brown the chicken in {oil} for 5 minutes per side. Remove.",
+      "Cook the onion and pepper 5 minutes, add garlic and tomato for 5 minutes with 100 ml water.",
+      "Return the chicken, cover and simmer for 25 minutes. Stir in {capers} and {green-olives} for the last 5 minutes and serve."
     ]
   },
   {
     "id": "venezuelan-sweet-plantain-cakes",
     "name": "Venezuelan Sweet Plantain Cakes",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Venezuelan",
-    "time": 60,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "red-pepper",
+        "plantain",
+        "3pc"
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "flour",
+        40
+      ],
+      [
+        "cinnamon",
         1
       ],
       [
-        "cilantro",
-        10
+        "brown-sugar",
+        15
       ],
       [
-        "lime",
-        1
+        "butter",
+        30
       ],
       [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
+        "cheese",
+        60
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {cilantro} until fragrant.",
-      "Add the {red-pepper} and {black-beans}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Peel the very ripe {plantain}, mash until nearly smooth and stir in {eggs}, {flour} and {cinnamon}.",
+      "Melt {butter} in a frying pan over medium heat and cook 8 heaped spoonfuls, flattening slightly, for 3 minutes per side until golden.",
+      "Top each hot cake with grated {cheese} and a pinch of {brown-sugar} and serve while the cheese melts."
     ]
   },
   {
     "id": "venezuelan-lime-cabbage-slaw",
     "name": "Venezuelan Lime Cabbage Slaw",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Venezuelan",
-    "time": 31,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "oil",
+        "cabbage",
+        400
+      ],
+      [
+        "beetroot",
+        200
+      ],
+      [
+        "lime",
+        "2pc"
+      ],
+      [
+        "olive-oil",
         20
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {salt} until fragrant.",
-      "Add the {oil} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Shred {cabbage} finely and grate {beetroot} coarsely.",
+      "Toss with {salt} and the juice of {lime} and massage for 1 minute.",
+      "Dress with {olive-oil}, rest 10 minutes so the colours bleed prettily, and serve."
     ]
   },
   {

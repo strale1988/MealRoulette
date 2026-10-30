@@ -244,7 +244,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Thinly slice the {onion} and toss with {vinegar} and a pinch of {salt}. Warm and mash {beans} until spreadable.",
-      "Fry the {corn-tortillas} until crisp and drain. Spread each with warm {beans}.",
+      "Fry the {corn-tortillas} in {oil} until crisp and drain. Spread each with warm {beans}.",
       "Top with grated {cheese} and pickled onion; serve while the tortillas stay crisp."
     ]
   },
@@ -312,37 +312,52 @@ KITCHEN.add(
     "name": "Belizean Rice and Beans",
     "meal": "big",
     "cuisine": "Belizean",
-    "time": 30,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
         "rice",
-        250
+        300
       ],
       [
-        "tomato",
-        250
+        "kidney-beans",
+        400
       ],
       [
-        "plantain",
+        "coconut-milk",
+        400
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "thyme",
         2
       ],
       [
-        "red-pepper",
+        "black-pepper",
         1
+      ],
+      [
+        "oil",
+        15
+      ],
+      [
+        "salt",
+        4
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Rinse {rice}. Finely chop {onion} and crush {garlic}.",
+      "Heat {oil} in a pot, cook the onion for 4 minutes, then add the garlic and {thyme} for 1 minute.",
+      "Add {kidney-beans} (drained), {coconut-milk}, 250 ml water, {salt} and {black-pepper} and bring to a boil.",
+      "Stir in the rice, cover and cook on the lowest heat for 20 minutes until the rice is tender.",
+      "Rest 5 minutes off the heat, fluff with a fork and serve."
     ]
   },
   {
@@ -350,43 +365,59 @@ KITCHEN.add(
     "name": "Belizean Stewed Chicken",
     "meal": "big",
     "cuisine": "Belizean",
-    "time": 37,
+    "time": 70,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "chicken-thigh",
+        700
       ],
       [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "onion",
+        "1pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
+        "garlic",
+        "3pc"
+      ],
+      [
+        "vinegar",
+        30
+      ],
+      [
+        "paprika",
+        4
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "oregano",
+        2
+      ],
+      [
+        "brown-sugar",
         10
       ],
       [
-        "lime",
-        1
+        "oil",
+        30
       ],
       [
-        "oil",
-        20
+        "salt",
+        4
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Mix {vinegar}, {paprika}, {cumin}, {oregano}, crushed {garlic} and {salt} into a paste, rub it over {chicken-thigh} and marinate for 30 minutes.",
+      "Heat {oil} in a heavy pot, stir in {brown-sugar} until it melts and darkens, then brown the chicken for 5 minutes per side.",
+      "Add sliced {onion} and {red-pepper} and cook 5 minutes.",
+      "Pour in 300 ml water, cover and simmer for 35 minutes until the chicken is tender and the gravy is thick and glossy. Serve hot."
     ]
   },
   {
@@ -394,48 +425,52 @@ KITCHEN.add(
     "name": "Belizean Escabeche Onion Soup",
     "meal": "big",
     "cuisine": "Belizean",
-    "time": 44,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "plantain",
+        "chicken-thigh",
+        500
+      ],
+      [
+        "onion",
+        "4pc"
+      ],
+      [
+        "vinegar",
+        40
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "oregano",
         2
       ],
       [
-        "red-pepper",
+        "cumin",
+        2
+      ],
+      [
+        "black-pepper",
         1
       ],
       [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
+        "corn-tortillas",
+        "4pc"
       ],
       [
         "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
+        4
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Put {chicken-thigh} in a pot with 1.2 litres of water, crushed {garlic}, {oregano}, {cumin}, {black-pepper} and half of the {salt}. Simmer for 30 minutes until cooked through.",
+      "Lift out the chicken, shred the meat and keep the broth.",
+      "Slice {onion} into thin rings and simmer in the broth with {vinegar} and the remaining salt for 15 minutes until soft and tangy.",
+      "Warm or toast {corn-tortillas} in a dry pan.",
+      "Ladle the soup into bowls, top with the shredded chicken and serve with the tortillas."
     ]
   },
   {
@@ -443,81 +478,100 @@ KITCHEN.add(
     "name": "Belizean Fish with Coconut Sauce",
     "meal": "big",
     "cuisine": "Belizean",
-    "time": 51,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "white-fish",
+        600
       ],
       [
-        "black-beans",
-        250
+        "coconut-milk",
+        400
       ],
       [
-        "rice",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "garlic",
+        "3pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "thyme",
+        2
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
+        "salt",
+        4
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Cut {white-fish} into large pieces and season with {salt} and the juice of {lime}.",
+      "Slice {onion} and {red-pepper}, chop {tomato} and crush {garlic}.",
+      "Cook the onion and pepper in {oil} for 5 minutes, add the garlic, {thyme} and tomato and cook 4 minutes.",
+      "Pour in {coconut-milk} and simmer gently for 8 minutes.",
+      "Lay the fish in the sauce, cover and cook 8 to 10 minutes until it flakes. Serve hot."
     ]
   },
   {
     "id": "belizean-fry-jacks",
     "name": "Belizean Fry Jacks",
-    "meal": "big",
+    "meal": "morning,treat",
     "cuisine": "Belizean",
-    "time": 58,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "flour",
+        350
       ],
       [
-        "tomato",
-        250
+        "baking-powder",
+        6
       ],
       [
-        "plantain",
-        2
+        "salt",
+        3
       ],
       [
-        "red-pepper",
-        1
+        "butter",
+        40
       ],
       [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
+        "milk",
+        180
       ],
       [
         "oil",
-        20
+        300
+      ],
+      [
+        "honey",
+        40
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Mix {flour}, {baking-powder} and {salt}, rub in {butter}, then add {milk} to make a soft dough. Knead briefly and rest 15 minutes.",
+      "Roll the dough out 3 mm thin and cut into triangles.",
+      "Heat {oil} to 180 °C and fry the triangles a few at a time for about 1 minute per side until they puff up and turn golden. Drain on paper towel.",
+      "Serve warm with {honey} drizzled over."
     ]
   },
   {
@@ -525,48 +579,56 @@ KITCHEN.add(
     "name": "Belizean Chicken Salbutes",
     "meal": "big",
     "cuisine": "Belizean",
-    "time": 65,
+    "time": 70,
     "serves": 4,
     "ing": [
       [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        3
+        "masa-harina",
+        250
       ],
       [
         "chicken-thigh",
-        450
+        400
       ],
       [
-        "black-beans",
-        250
+        "cabbage",
+        150
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "avocado",
+        "1pc"
+      ],
+      [
+        "red-onion",
+        "1pc"
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "vinegar",
+        30
+      ],
+      [
+        "oil",
+        150
+      ],
+      [
+        "salt",
+        4
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Simmer {chicken-thigh} in salted water for 25 minutes, then shred. Slice {red-onion} and marinate it in {vinegar} and the juice of {lime} for 15 minutes.",
+      "Mix {masa-harina} with about 300 ml warm water and 2 g of the {salt} into a soft dough. Form 8 balls and press each into a 10 cm disc.",
+      "Heat {oil} in a frying pan to 180 °C and fry the discs for 1 minute per side until puffed and golden. Drain.",
+      "Shred {cabbage}, slice {tomato} and {avocado}.",
+      "Top each salbute with chicken, cabbage, tomato, avocado and the pickled onion, with a pinch of salt."
     ]
   },
   {
@@ -574,70 +636,88 @@ KITCHEN.add(
     "name": "Belizean Plantain and Black Bean Bowl",
     "meal": "big",
     "cuisine": "Belizean",
-    "time": 25,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "plantain",
+        "3pc"
       ],
       [
         "black-beans",
-        250
+        480
       ],
       [
         "rice",
         250
       ],
       [
-        "tomato",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "plantain",
+        "garlic",
+        "2pc"
+      ],
+      [
+        "cumin",
         2
       ],
       [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "belizean-lime-cabbage-slaw",
-    "name": "Belizean Lime Cabbage Slaw",
-    "meal": "big",
-    "cuisine": "Belizean",
-    "time": 32,
-    "serves": 4,
-    "ing": [
-      [
-        "tomato",
-        250
+        "avocado",
+        "1pc"
       ],
       [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
+        "lime",
+        "1pc"
       ],
       [
         "cilantro",
         10
       ],
       [
-        "lime",
-        1
+        "oil",
+        45
       ],
       [
-        "oil",
-        20
+        "salt",
+        4
+      ]
+    ],
+    "steps": [
+      "Cook {rice} in 500 ml water with a pinch of {salt}, covered, on low heat for 15 minutes.",
+      "Chop {onion} and crush {garlic}. Cook them in 15 g of the {oil} for 5 minutes, add {cumin}, then {black-beans} (drained) and 100 ml water. Simmer 10 minutes.",
+      "Peel the ripe {plantain}, slice on the diagonal and fry in the remaining oil for 3 minutes per side until deep golden.",
+      "Serve the rice and beans with the plantain, sliced {avocado}, a squeeze of {lime} and chopped {cilantro}."
+    ]
+  },
+  {
+    "id": "belizean-lime-cabbage-slaw",
+    "name": "Belizean Lime Cabbage Slaw",
+    "meal": "bite",
+    "cuisine": "Belizean",
+    "time": 15,
+    "serves": 4,
+    "ing": [
+      [
+        "cabbage",
+        400
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "lime",
+        "2pc"
+      ],
+      [
+        "cilantro",
+        10
       ],
       [
         "salt",
@@ -645,11 +725,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomato} and turn to coat in the seasoning.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Shred {cabbage} finely, grate {carrot} and finely chop {green-chilli}.",
+      "Toss with {salt} and the juice of {lime} and massage for 1 minute.",
+      "Fold in chopped {cilantro}, rest 10 minutes and serve cold."
     ]
   },
   {
@@ -657,47 +735,43 @@ KITCHEN.add(
     "name": "Belizean Coconut Rice",
     "meal": "big",
     "cuisine": "Belizean",
-    "time": 39,
+    "time": 35,
     "serves": 4,
     "ing": [
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
       [
         "rice",
         250
       ],
       [
-        "tomato",
-        250
+        "coconut-milk",
+        400
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "thyme",
+        2
+      ],
+      [
+        "oil",
+        15
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Rinse {rice}. Finely chop {onion} and crush {garlic}.",
+      "Heat {oil} in a pot and cook the onion for 4 minutes, then add garlic and {thyme} for 1 minute.",
+      "Add the rice, {coconut-milk}, 150 ml water and {salt}. Bring to a gentle boil, then cover and cook on the lowest heat for 18 minutes.",
+      "Rest 5 minutes off the heat, fluff with a fork and serve."
     ]
   },
   {
@@ -705,38 +779,59 @@ KITCHEN.add(
     "name": "Belizean Stewed Beans",
     "meal": "big",
     "cuisine": "Belizean",
-    "time": 46,
+    "time": 55,
     "serves": 4,
     "ing": [
+      [
+        "kidney-beans",
+        480
+      ],
+      [
+        "bacon",
+        100
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "red-pepper",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "thyme",
+        2
+      ],
+      [
+        "allspice",
+        1
+      ],
+      [
+        "oil",
+        10
+      ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
         "rice",
         250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
       ]
     ],
     "steps": [
-      "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Chop {bacon}, {onion} and {red-pepper}; crush {garlic} and chop {tomato}.",
+      "Fry the bacon in {oil} for 5 minutes, add the onion and pepper and cook 5 minutes, then the garlic, {thyme} and {allspice} for 1 minute.",
+      "Add the tomato, {kidney-beans} (drained), 300 ml water and {salt}. Simmer uncovered for 25 minutes, mashing a few beans to thicken.",
+      "Meanwhile cook {rice} in 500 ml water, covered, on low heat for 15 minutes. Serve the beans over the rice."
     ]
   },
   {
@@ -744,43 +839,63 @@ KITCHEN.add(
     "name": "Belizean Black Bean and Rice Bowl",
     "meal": "big",
     "cuisine": "Belizean",
-    "time": 53,
+    "time": 45,
     "serves": 4,
     "ing": [
+      [
+        "black-beans",
+        480
+      ],
       [
         "rice",
         250
       ],
       [
-        "tomato",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "plantain",
-        2
+        "garlic",
+        "2pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "avocado",
+        "1pc"
+      ],
+      [
+        "red-onion",
+        "1pc"
+      ],
+      [
+        "lime",
+        "1pc"
       ],
       [
         "cilantro",
         10
       ],
       [
-        "lime",
-        1
+        "oil",
+        30
       ],
       [
-        "oil",
-        20
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Cook {rice} in 500 ml water with a pinch of {salt}, covered, on low heat for 15 minutes.",
+      "Slice {red-onion} and soak in the juice of {lime} for 10 minutes.",
+      "Chop {onion} and {red-pepper}; crush {garlic}. Cook them in {oil} for 6 minutes, add {cumin}, then {black-beans} (drained) and 100 ml water. Simmer 10 minutes, mashing a few against the pan.",
+      "Serve the rice and beans in bowls topped with sliced {avocado}, the pickled onion and chopped {cilantro}."
     ]
   },
   {
@@ -788,20 +903,40 @@ KITCHEN.add(
     "name": "Belizean Chicken with Tomato and Peppers",
     "meal": "big",
     "cuisine": "Belizean",
-    "time": 60,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
+        "chicken-thigh",
+        600
+      ],
+      [
+        "tomato",
+        "3pc"
+      ],
+      [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
-        10
+        "onion",
+        "1pc"
       ],
       [
-        "lime",
-        1
+        "garlic",
+        "2pc"
+      ],
+      [
+        "coconut-milk",
+        150
+      ],
+      [
+        "thyme",
+        2
+      ],
+      [
+        "green-chilli",
+        "1pc"
       ],
       [
         "oil",
@@ -810,65 +945,52 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {cilantro} until fragrant.",
-      "Add the {red-pepper} and {black-beans}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Season {chicken-thigh} with {salt}. Slice {onion}, {red-pepper} and {green-chilli}; chop {tomato}; crush {garlic}.",
+      "Brown the chicken in {oil} for 5 minutes per side. Remove.",
+      "Cook the onion, pepper and chilli for 5 minutes, add garlic, {thyme} and tomato for 4 minutes.",
+      "Return the chicken, pour in {coconut-milk}, cover and simmer for 25 minutes until tender and the sauce is creamy."
     ]
   },
   {
     "id": "belizean-sweet-plantain-cakes",
     "name": "Belizean Sweet Plantain Cakes",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Belizean",
-    "time": 31,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "oil",
-        20
+        "plantain",
+        "3pc"
       ],
       [
-        "salt",
-        3
+        "flour",
+        60
       ],
       [
-        "chicken-thigh",
-        450
+        "eggs",
+        "1pc"
       ],
       [
-        "black-beans",
-        250
+        "nutmeg",
+        1
       ],
       [
-        "rice",
-        250
+        "brown-sugar",
+        15
       ],
       [
-        "tomato",
-        250
+        "butter",
+        30
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {salt} until fragrant.",
-      "Add the {oil} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Peel the very ripe {plantain}, mash until nearly smooth and stir in {flour}, {eggs}, {nutmeg} and half of the {brown-sugar}.",
+      "Melt {butter} in a frying pan over medium heat and cook 8 heaped spoonfuls, flattening slightly, for 3 minutes per side until golden.",
+      "Sprinkle with the remaining sugar and serve warm."
     ]
   },
   {
@@ -876,42 +998,55 @@ KITCHEN.add(
     "name": "Belizean Corn and Cheese Bake",
     "meal": "big",
     "cuisine": "Belizean",
-    "time": 38,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "black-beans",
+        "sweetcorn",
+        400
+      ],
+      [
+        "cheese",
+        150
+      ],
+      [
+        "eggs",
+        "3pc"
+      ],
+      [
+        "milk",
         250
       ],
       [
-        "rice",
-        250
+        "flour",
+        60
       ],
       [
-        "tomato",
-        250
+        "butter",
+        30
       ],
       [
-        "plantain",
-        2
+        "onion",
+        "1pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
         "cilantro",
         10
       ],
       [
-        "lime",
-        1
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {black-beans} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Heat the oven to 190 °C and grease a baking dish with a little of the {butter}.",
+      "Melt the remaining butter and cook finely chopped {onion} and {red-pepper} for 5 minutes.",
+      "Whisk {eggs}, {milk}, {flour} and {salt} into a batter, then stir in the {sweetcorn} (drained), the cooked vegetables, grated {cheese} and chopped {cilantro}.",
+      "Pour into the dish and bake for 30 minutes until set and golden. Rest 5 minutes before serving."
     ]
   }
 ]

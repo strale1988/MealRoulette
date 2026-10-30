@@ -370,43 +370,64 @@ KITCHEN.add(
     "name": "Costa Rican Olla de Carne",
     "meal": "big",
     "cuisine": "Costa Rican",
-    "time": 37,
+    "time": 130,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "beef-chuck",
+        500
       ],
       [
-        "tomato",
-        250
+        "potatoes",
+        300
+      ],
+      [
+        "carrot",
+        "2pc"
       ],
       [
         "plantain",
-        2
+        "1pc"
       ],
       [
-        "red-pepper",
-        1
+        "sweetcorn",
+        200
+      ],
+      [
+        "cabbage",
+        200
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
       ],
       [
         "cilantro",
-        10
+        15
       ],
       [
-        "lime",
+        "beef-stock",
+        1200
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
         1
-      ],
-      [
-        "oil",
-        20
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Cut {beef-chuck} into 4 cm chunks. Chop {onion}, crush {garlic}, and cut {potatoes}, {carrot}, the unripe {plantain} and {cabbage} into large chunks.",
+      "Put the beef, onion, garlic, {beef-stock}, {salt} and {black-pepper} in a large pot, bring to a boil, skim, then cover and simmer for 1 hour 15 minutes until the beef is nearly tender.",
+      "Add the carrot, plantain and potatoes and simmer 20 minutes.",
+      "Add {sweetcorn} and {cabbage} and cook 10 minutes until all the vegetables are tender.",
+      "Stir in chopped {cilantro} and serve in deep bowls with plenty of broth."
     ]
   },
   {
@@ -414,48 +435,61 @@ KITCHEN.add(
     "name": "Casado-Style Rice and Beans Plate",
     "meal": "big",
     "cuisine": "Costa Rican",
-    "time": 44,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "plantain",
-        2
+        "chicken-thigh",
+        500
       ],
       [
-        "red-pepper",
-        1
+        "rice",
+        250
+      ],
+      [
+        "black-beans",
+        480
+      ],
+      [
+        "plantain",
+        "2pc"
+      ],
+      [
+        "cabbage",
+        150
+      ],
+      [
+        "tomato",
+        "1pc"
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "onion",
+        "1pc"
       ],
       [
         "cilantro",
         10
       ],
       [
-        "lime",
-        1
-      ],
-      [
         "oil",
-        20
+        40
       ],
       [
         "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
+        4
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Cook {rice} in 500 ml water with a pinch of {salt}, covered, on low heat for 15 minutes; rest 5 minutes.",
+      "Season {chicken-thigh} with salt and fry in half of the {oil} for 6 minutes per side until cooked through. Rest, then slice.",
+      "Fry sliced ripe {plantain} in the remaining oil for 2–3 minutes per side until deep golden and caramelised; drain.",
+      "Cook chopped {onion} in the same pan for 4 minutes, add drained {black-beans}, a splash of water and salt, and simmer 10 minutes, mashing a few against the pan.",
+      "Shred {cabbage}, dice {tomato}, and dress with the juice of {lime}, chopped {cilantro} and a pinch of salt.",
+      "Serve each plate with rice, beans, chicken, plantain and salad side by side."
     ]
   },
   {
@@ -501,68 +535,32 @@ KITCHEN.add(
     "name": "Costa Rican Chicken in Tomato Sauce",
     "meal": "big",
     "cuisine": "Costa Rican",
-    "time": 58,
+    "time": 60,
     "serves": 4,
     "ing": [
+      [
+        "chicken-thigh",
+        600
+      ],
       [
         "rice",
         250
       ],
       [
         "tomato",
-        250
+        "3pc"
       ],
       [
-        "plantain",
-        2
+        "onion",
+        "1pc"
       ],
       [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "chayote-and-corn-soup",
-    "name": "Chayote and Corn Soup",
-    "meal": "big",
-    "cuisine": "Costa Rican",
-    "time": 65,
-    "serves": 4,
-    "ing": [
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
+        "garlic",
+        "2pc"
       ],
       [
         "cilantro",
         10
-      ],
-      [
-        "lime",
-        1
       ],
       [
         "oil",
@@ -573,20 +571,73 @@ KITCHEN.add(
         3
       ],
       [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Season {chicken-thigh} with {salt} and {black-pepper}. Dice {onion} and {tomato}, and crush {garlic}.",
+      "Heat {oil} in a wide pan and brown the chicken for 5 minutes per side. Remove.",
+      "Cook the onion for 5 minutes, add garlic for 1 minute, then the tomato and 100 ml water. Simmer for 8 minutes until saucy.",
+      "Return the chicken, cover and simmer for 25 minutes until tender. Meanwhile cook {rice} in 500 ml water, covered, on low heat for 15 minutes.",
+      "Stir chopped {cilantro} into the sauce and serve the chicken over the rice."
+    ]
+  },
+  {
+    "id": "chayote-and-corn-soup",
+    "name": "Chayote and Corn Soup",
+    "meal": "big",
+    "cuisine": "Costa Rican",
+    "time": 45,
+    "serves": 4,
+    "ing": [
+      [
+        "chayote",
+        "2pc"
+      ],
+      [
+        "sweetcorn",
+        200
+      ],
+      [
+        "potatoes",
+        200
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "cilantro",
+        15
+      ],
+      [
+        "vegetable-stock",
+        900
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
+        "salt",
+        3
+      ]
+    ],
+    "steps": [
+      "Peel {chayote}, remove the soft core and cut into 2 cm cubes; dice {potatoes} and {onion} and crush {garlic}.",
+      "Heat {oil} in a pot, cook the onion for 5 minutes, then add garlic for 1 minute.",
+      "Add {vegetable-stock}, potatoes and {salt} and simmer for 10 minutes. Add the chayote and {sweetcorn} and cook 15 minutes until tender.",
+      "Mash a few pieces against the side of the pot to thicken the soup slightly.",
+      "Stir in chopped {cilantro} and the juice of {lime} and serve hot."
     ]
   },
   {
@@ -630,94 +681,79 @@ KITCHEN.add(
   {
     "id": "costa-rican-sweet-plantains",
     "name": "Costa Rican Sweet Plantains",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Costa Rican",
-    "time": 32,
+    "time": 25,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        250
-      ],
-      [
         "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
+        "4pc"
       ],
       [
         "oil",
-        20
+        60
+      ],
+      [
+        "brown-sugar",
+        15
+      ],
+      [
+        "cinnamon",
+        1
       ],
       [
         "salt",
-        3
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomato} and turn to coat in the seasoning.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Peel the very ripe {plantain} and slice on a diagonal into 1.5 cm pieces.",
+      "Heat {oil} in a frying pan over medium heat and fry the slices for 2–3 minutes per side until deep golden and caramelised at the edges.",
+      "Drain on paper towel and sprinkle with {brown-sugar}, {cinnamon} and {salt}. Serve hot."
     ]
   },
   {
     "id": "costa-rican-cabbage-lime-salad",
     "name": "Costa Rican Cabbage Lime Salad",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Costa Rican",
-    "time": 39,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "cilantro",
-        10
+        "cabbage",
+        400
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "1pc"
       ],
       [
         "lime",
-        1
+        "2pc"
       ],
       [
-        "oil",
+        "cilantro",
+        15
+      ],
+      [
+        "olive-oil",
         20
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Shred {cabbage} finely and grate {carrot}. Toss with {salt} and the juice of {lime} and massage for 1 minute until it softens.",
+      "Dice {tomato} and chop {cilantro}.",
+      "Mix everything with {olive-oil}, rest for 10 minutes so the flavours marry, then taste for lime and salt before serving."
     ]
   },
   {
@@ -764,131 +800,138 @@ KITCHEN.add(
     "name": "Costa Rican Chicken with Tomato and Peppers",
     "meal": "big",
     "cuisine": "Costa Rican",
-    "time": 53,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "chicken-thigh",
+        600
       ],
       [
         "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "3pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "paprika",
+        3
       ],
       [
         "cilantro",
-        10
+        15
       ],
       [
         "lime",
-        1
+        "1pc"
       ],
       [
         "oil",
         20
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Marinate {chicken-thigh} with the juice of {lime}, {paprika} and {salt} for 15 minutes. Slice {onion} and {red-pepper}, chop {tomato} and crush {garlic}.",
+      "Heat {oil} in a wide pan and brown the chicken for 5 minutes per side. Remove.",
+      "Cook the onion and pepper for 6 minutes, add garlic for 1 minute, then the tomato and 100 ml water.",
+      "Return the chicken, cover and simmer for 25 minutes until cooked through and the sauce is thick.",
+      "Scatter chopped {cilantro} and serve."
     ]
   },
   {
     "id": "costa-rican-sweet-plantain-cakes",
     "name": "Costa Rican Sweet Plantain Cakes",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Costa Rican",
-    "time": 60,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "red-pepper",
+        "plantain",
+        "3pc"
+      ],
+      [
+        "flour",
+        60
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "cinnamon",
         1
       ],
       [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
+        "salt",
         1
       ],
       [
         "oil",
-        20
+        60
       ],
       [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
+        "sour-cream",
+        100
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {cilantro} until fragrant.",
-      "Add the {red-pepper} and {black-beans}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Peel the very ripe {plantain}, mash until nearly smooth and stir in {flour}, {eggs}, {cinnamon} and {salt}.",
+      "Heat {oil} in a frying pan over medium heat and drop in 8 heaped spoonfuls, flattening slightly. Fry for 2–3 minutes per side until deep golden.",
+      "Drain on paper towel and serve warm with a spoonful of {sour-cream}."
     ]
   },
   {
     "id": "costa-rican-lime-cabbage-slaw",
     "name": "Costa Rican Lime Cabbage Slaw",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Costa Rican",
-    "time": 31,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "oil",
-        20
+        "cabbage",
+        400
+      ],
+      [
+        "carrot",
+        "2pc"
+      ],
+      [
+        "red-onion",
+        "1pc"
+      ],
+      [
+        "lime",
+        "2pc"
+      ],
+      [
+        "mayonnaise",
+        40
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {salt} until fragrant.",
-      "Add the {oil} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Shred {cabbage} finely, grate {carrot} and slice {red-onion} very thinly.",
+      "Toss with {salt} and the juice of {lime} and let stand for 5 minutes.",
+      "Stir in {mayonnaise} until everything is lightly coated, chill for 10 minutes and serve."
     ]
   },
   {

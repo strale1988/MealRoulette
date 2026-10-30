@@ -342,43 +342,56 @@ KITCHEN.add(
     "name": "Nacatamal-Inspired Corn and Pork Parcels",
     "meal": "big",
     "cuisine": "Nicaraguan",
-    "time": 37,
+    "time": 150,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "masa-harina",
+        300
+      ],
+      [
+        "pork",
+        350
+      ],
+      [
+        "potatoes",
+        150
       ],
       [
         "tomato",
-        250
+        "2pc"
       ],
       [
-        "plantain",
-        2
+        "onion",
+        "1pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
-        10
+        "paprika",
+        3
       ],
       [
-        "lime",
-        1
+        "chicken-stock",
+        300
       ],
       [
         "oil",
-        20
+        60
+      ],
+      [
+        "salt",
+        5
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Cut {pork} into 3 cm cubes and season with half of the {salt} and {paprika}. Slice {potatoes}, {tomato}, {onion} and {red-pepper} into thin rounds.",
+      "Warm {chicken-stock}. Mix {masa-harina} with {oil}, the remaining salt and enough warm stock to form a soft, spreadable dough.",
+      "Cut 8 squares of foil or baking paper. Spread a layer of dough in the centre of each, then top with pork, a slice of potato, tomato, onion and pepper, and a little more dough.",
+      "Fold into tight, sealed parcels and tie or crimp the edges.",
+      "Steam the parcels for 1 hour 30 minutes, until the pork is tender and the masa is firm. Rest 10 minutes before unwrapping."
     ]
   },
   {
@@ -386,48 +399,60 @@ KITCHEN.add(
     "name": "Nicaraguan Indio Viejo-Inspired Beef Stew",
     "meal": "big",
     "cuisine": "Nicaraguan",
-    "time": 44,
+    "time": 130,
     "serves": 4,
     "ing": [
       [
-        "plantain",
-        2
+        "beef-chuck",
+        500
+      ],
+      [
+        "masa-harina",
+        80
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "2pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
+        "garlic",
+        "3pc"
+      ],
+      [
+        "mint",
         10
       ],
       [
         "lime",
-        1
+        "1pc"
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Simmer {beef-chuck} in 1 litre of water with a quarter of the onion, {salt} and {black-pepper} for 1 hour 15 minutes until very tender. Lift out, shred finely and keep the broth.",
+      "Chop the rest of the {onion}, {tomato} and {red-pepper}; crush {garlic}. Cook them in {oil} for 8 minutes until soft.",
+      "Whisk {masa-harina} into 150 ml cold broth until smooth, then stir into the vegetables with 500 ml more broth.",
+      "Add the shredded beef and simmer for 15 minutes, stirring, until thick and silky.",
+      "Stir in torn {mint} and the juice of {lime} and serve hot."
     ]
   },
   {
@@ -473,43 +498,42 @@ KITCHEN.add(
     "name": "Nicaraguan Cheese Corn Cakes",
     "meal": "big",
     "cuisine": "Nicaraguan",
-    "time": 58,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "sweetcorn",
+        300
       ],
       [
-        "tomato",
-        250
+        "cornmeal",
+        80
       ],
       [
-        "plantain",
+        "cheese",
+        120
+      ],
+      [
+        "eggs",
+        "2pc"
+      ],
+      [
+        "sugar",
+        15
+      ],
+      [
+        "salt",
         2
       ],
       [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
         "oil",
-        20
+        40
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Blend {sweetcorn} with {eggs}, {sugar} and {salt} into a thick, slightly coarse purée. Stir in {cornmeal} and rest 10 minutes.",
+      "Grate {cheese} and fold it in.",
+      "Heat {oil} in a frying pan over medium heat and fry 8 heaped spoonfuls, flattening slightly, for 3 minutes per side until golden. Serve warm."
     ]
   },
   {
@@ -517,24 +541,48 @@ KITCHEN.add(
     "name": "Nicaraguan Chicken and Rice",
     "meal": "big",
     "cuisine": "Nicaraguan",
-    "time": 65,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "plantain",
-        2
+        "chicken-thigh",
+        600
+      ],
+      [
+        "rice",
+        250
+      ],
+      [
+        "bacon",
+        80
+      ],
+      [
+        "peas",
+        100
+      ],
+      [
+        "tomato",
+        "2pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
-        10
+        "onion",
+        "1pc"
       ],
       [
-        "lime",
-        1
+        "garlic",
+        "2pc"
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "chicken-stock",
+        500
       ],
       [
         "oil",
@@ -543,22 +591,14 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Season {chicken-thigh} with {salt} and half of the {paprika}. Dice {bacon}, {tomato}, {red-pepper} and {onion}; crush {garlic}.",
+      "Cook the bacon in {oil} in a wide pan for 4 minutes, then brown the chicken in the fat for 5 minutes per side. Remove.",
+      "Cook the onion and pepper for 5 minutes, add garlic, the remaining paprika and the tomato for 3 minutes, then stir in {rice}.",
+      "Add {chicken-stock}, nestle the chicken on top, cover and cook on low heat for 20 minutes. Scatter {peas} over, cover and cook 5 minutes more.",
+      "Rest 5 minutes and serve."
     ]
   },
   {
@@ -604,28 +644,32 @@ KITCHEN.add(
     "name": "Nicaraguan Tomato and Egg Soup",
     "meal": "big",
     "cuisine": "Nicaraguan",
-    "time": 32,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
         "tomato",
-        250
+        "4pc"
       ],
       [
-        "plantain",
-        2
+        "eggs",
+        "4pc"
       ],
       [
-        "red-pepper",
-        1
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "vegetable-stock",
+        800
       ],
       [
         "cilantro",
         10
-      ],
-      [
-        "lime",
-        1
       ],
       [
         "oil",
@@ -633,15 +677,19 @@ KITCHEN.add(
       ],
       [
         "salt",
-        3
+        2
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomato} and turn to coat in the seasoning.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Chop {onion}, crush {garlic} and chop {tomato}.",
+      "Heat {oil} in a pot, cook the onion for 4 minutes, add garlic and tomato and cook 8 minutes until the tomato collapses.",
+      "Pour in {vegetable-stock}, season with {salt} and {black-pepper} and simmer for 10 minutes.",
+      "Crack {eggs} one at a time into the simmering soup and poach for 3–4 minutes until the whites set.",
+      "Ladle into bowls with an egg each and scatter chopped {cilantro}."
     ]
   },
   {
@@ -649,16 +697,32 @@ KITCHEN.add(
     "name": "Nicaraguan Bean and Avocado Salad",
     "meal": "big",
     "cuisine": "Nicaraguan",
-    "time": 39,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "cilantro",
-        10
+        "kidney-beans",
+        240
+      ],
+      [
+        "avocado",
+        "2pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "red-onion",
+        "1pc"
       ],
       [
         "lime",
-        1
+        "1pc"
+      ],
+      [
+        "cilantro",
+        10
       ],
       [
         "oil",
@@ -666,30 +730,13 @@ KITCHEN.add(
       ],
       [
         "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
+        2
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Drain and rinse {kidney-beans}. Dice {tomato} and {avocado}, and slice {red-onion} thinly.",
+      "Whisk the juice of {lime} with {oil} and {salt}.",
+      "Toss {kidney-beans}, the tomato and the onion with the dressing, then fold in the avocado and chopped {cilantro} gently. Serve at once."
     ]
   },
   {
@@ -736,131 +783,133 @@ KITCHEN.add(
     "name": "Nicaraguan Chicken with Tomato and Peppers",
     "meal": "big",
     "cuisine": "Nicaraguan",
-    "time": 53,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "chicken-thigh",
+        600
       ],
       [
         "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "3pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
-        10
+        "onion",
+        "1pc"
       ],
       [
-        "lime",
-        1
+        "garlic",
+        "3pc"
+      ],
+      [
+        "vinegar",
+        20
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "oregano",
+        2
       ],
       [
         "oil",
         20
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Marinate {chicken-thigh} with {vinegar}, {paprika}, {oregano}, crushed {garlic} and {salt} for 20 minutes.",
+      "Slice {onion} and {red-pepper} and chop {tomato}.",
+      "Heat {oil} in a wide pan, brown the chicken for 5 minutes per side and remove.",
+      "Cook the onion and pepper for 6 minutes, add the tomato and 100 ml water, return the chicken, cover and simmer 25 minutes until tender and saucy."
     ]
   },
   {
     "id": "nicaraguan-sweet-plantain-cakes",
     "name": "Nicaraguan Sweet Plantain Cakes",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Nicaraguan",
-    "time": 60,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "red-pepper",
+        "plantain",
+        "3pc"
+      ],
+      [
+        "cornmeal",
+        60
+      ],
+      [
+        "butter",
+        30
+      ],
+      [
+        "sugar",
+        15
+      ],
+      [
+        "cinnamon",
         1
+      ],
+      [
+        "salt",
+        1
+      ]
+    ],
+    "steps": [
+      "Peel the very ripe {plantain}, mash until nearly smooth and stir in {cornmeal} and {salt}.",
+      "Melt {butter} in a frying pan over medium heat and cook 8 heaped spoonfuls, flattening slightly, for 3 minutes per side until golden.",
+      "Mix {sugar} with {cinnamon}, roll the hot cakes in it and serve warm."
+    ]
+  },
+  {
+    "id": "nicaraguan-lime-cabbage-slaw",
+    "name": "Nicaraguan Lime Cabbage Slaw",
+    "meal": "bite",
+    "cuisine": "Nicaraguan",
+    "time": 15,
+    "serves": 4,
+    "ing": [
+      [
+        "cabbage",
+        400
+      ],
+      [
+        "pineapple",
+        150
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "red-onion",
+        "1pc"
       ],
       [
         "cilantro",
         10
       ],
       [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {cilantro} until fragrant.",
-      "Add the {red-pepper} and {black-beans}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "nicaraguan-lime-cabbage-slaw",
-    "name": "Nicaraguan Lime Cabbage Slaw",
-    "meal": "big",
-    "cuisine": "Nicaraguan",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a pan and soften the {salt} until fragrant.",
-      "Add the {oil} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Shred {cabbage} finely, slice {red-onion} thinly and dice {pineapple}.",
+      "Toss the cabbage with {salt} and the juice of {lime} and massage for 1 minute.",
+      "Fold in the pineapple, onion and chopped {cilantro}, chill for 10 minutes and serve."
     ]
   },
   {

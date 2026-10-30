@@ -468,68 +468,48 @@ KITCHEN.add(
     "name": "Puerto Rican Picadillo",
     "meal": "big",
     "cuisine": "Puerto Rican",
-    "time": 37,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "rice",
+        "beef-mince",
+        450
+      ],
+      [
+        "potatoes",
         250
       ],
       [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "onion",
+        "1pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
-        10
+        "garlic",
+        "3pc"
       ],
       [
-        "lime",
-        1
+        "tomato-paste",
+        40
       ],
       [
-        "oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "puerto-rican-pollo-guisado",
-    "name": "Puerto Rican Pollo Guisado",
-    "meal": "big",
-    "cuisine": "Puerto Rican",
-    "time": 44,
-    "serves": 4,
-    "ing": [
+        "green-olives",
+        50
+      ],
       [
-        "plantain",
+        "capers",
+        15
+      ],
+      [
+        "raisins",
+        40
+      ],
+      [
+        "oregano",
         2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
       ],
       [
         "oil",
@@ -538,22 +518,73 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Dice {potatoes} into 1 cm cubes, chop {onion} and {red-pepper}, crush {garlic}.",
+      "Heat {oil} in a wide pan and cook the onion and pepper for 5 minutes, then add garlic and {beef-mince} and brown for 8 minutes, breaking it up.",
+      "Stir in {tomato-paste}, {oregano}, {salt} and 200 ml water, then add the potatoes. Cover and simmer for 15 minutes.",
+      "Add {green-olives}, {capers} and {raisins} and simmer uncovered for 8 minutes until thick. Serve hot."
+    ]
+  },
+  {
+    "id": "puerto-rican-pollo-guisado",
+    "name": "Puerto Rican Pollo Guisado",
+    "meal": "big",
+    "cuisine": "Puerto Rican",
+    "time": 60,
+    "serves": 4,
+    "ing": [
+      [
+        "chicken-thigh",
+        700
+      ],
+      [
+        "potatoes",
+        300
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "red-pepper",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "tomato-paste",
+        30
+      ],
+      [
+        "green-olives",
+        40
+      ],
+      [
+        "oregano",
+        2
+      ],
+      [
+        "chicken-stock",
+        300
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
+        "salt",
+        3
+      ]
+    ],
+    "steps": [
+      "Season {chicken-thigh} with {salt} and {oregano}. Cut {potatoes} into 3 cm chunks; slice {onion} and {red-pepper}; crush {garlic}.",
+      "Brown the chicken in {oil} for 5 minutes per side. Remove.",
+      "Cook the onion and pepper for 5 minutes, add garlic and {tomato-paste} for 2 minutes, then {chicken-stock}.",
+      "Return the chicken, add the potatoes, cover and simmer for 30 minutes. Add {green-olives} for the last 5 minutes and serve."
     ]
   },
   {
@@ -637,32 +668,52 @@ KITCHEN.add(
     "name": "Puerto Rican Sofrito Chicken Rice",
     "meal": "big",
     "cuisine": "Puerto Rican",
-    "time": 32,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "tomato",
+        "chicken-thigh",
+        600
+      ],
+      [
+        "rice",
         250
       ],
       [
-        "plantain",
-        2
+        "onion",
+        "1pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
+      ],
+      [
+        "garlic",
+        "4pc"
       ],
       [
         "cilantro",
-        10
+        15
       ],
       [
-        "lime",
-        1
+        "tomato-paste",
+        20
+      ],
+      [
+        "green-olives",
+        40
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "chicken-stock",
+        500
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
@@ -670,11 +721,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomato} and turn to coat in the seasoning.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Blend {onion}, {red-pepper}, {garlic} and {cilantro} into a coarse green sofrito.",
+      "Season {chicken-thigh} with {salt} and {paprika}, then brown in {oil} in a wide pan for 5 minutes per side. Remove.",
+      "Fry the sofrito and {tomato-paste} for 6 minutes until the water cooks out, then stir in {rice} for 1 minute.",
+      "Add {chicken-stock}, nestle the chicken on top, cover and cook on low heat for 25 minutes. Scatter {green-olives} over, rest 5 minutes and serve."
     ]
   },
   {
@@ -682,47 +732,43 @@ KITCHEN.add(
     "name": "Puerto Rican Garlic Shrimp",
     "meal": "big",
     "cuisine": "Puerto Rican",
-    "time": 39,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "cilantro",
-        10
+        "prawns",
+        500
+      ],
+      [
+        "garlic",
+        "8pc"
+      ],
+      [
+        "olive-oil",
+        40
       ],
       [
         "lime",
-        1
+        "1pc"
       ],
       [
-        "oil",
-        20
+        "parsley",
+        15
+      ],
+      [
+        "chilli-flakes",
+        1
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Pat {prawns} dry and season with {salt}. Slice {garlic} thinly.",
+      "Warm {olive-oil} in a wide pan over medium heat, add the garlic and {chilli-flakes} and cook for 1 minute until fragrant but not browned.",
+      "Add the prawns and cook for 2 minutes per side until pink and just cooked through.",
+      "Squeeze over the juice of {lime}, scatter chopped {parsley} and serve at once."
     ]
   },
   {
@@ -769,131 +815,145 @@ KITCHEN.add(
     "name": "Puerto Rican Chicken with Tomato and Peppers",
     "meal": "big",
     "cuisine": "Puerto Rican",
-    "time": 53,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "chicken-thigh",
+        700
       ],
       [
         "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "3pc"
       ],
       [
         "red-pepper",
-        1
+        "2pc"
       ],
       [
-        "cilantro",
-        10
+        "onion",
+        "1pc"
       ],
       [
-        "lime",
-        1
+        "garlic",
+        "4pc"
       ],
       [
-        "oil",
+        "oregano",
+        2
+      ],
+      [
+        "vinegar",
         20
+      ],
+      [
+        "olive-oil",
+        30
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Heat the oven to 200 °C. Mix {vinegar}, {oregano}, crushed {garlic}, {salt}, {black-pepper} and half of the {olive-oil} and rub over {chicken-thigh}.",
+      "Cut {tomato}, {red-pepper} and {onion} into thick wedges and toss with the remaining oil in a roasting tin.",
+      "Set the chicken on top, skin-side up, and roast for 40–45 minutes until the skin is browned and the vegetables have softened into a sauce.",
+      "Spoon the juices over the chicken and serve."
     ]
   },
   {
     "id": "puerto-rican-sweet-plantain-cakes",
     "name": "Puerto Rican Sweet Plantain Cakes",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Puerto Rican",
-    "time": 60,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "red-pepper",
+        "plantain",
+        "3pc"
+      ],
+      [
+        "flour",
+        60
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "pineapple",
+        100
+      ],
+      [
+        "cinnamon",
         1
+      ],
+      [
+        "brown-sugar",
+        20
+      ],
+      [
+        "butter",
+        30
+      ]
+    ],
+    "steps": [
+      "Peel the very ripe {plantain}, mash until nearly smooth and stir in {flour}, {eggs}, {cinnamon} and half of the {brown-sugar}. Finely dice {pineapple} and fold it in.",
+      "Melt {butter} in a frying pan over medium heat and cook 8 heaped spoonfuls, flattening slightly, for 3 minutes per side until golden.",
+      "Sprinkle with the remaining sugar and serve warm."
+    ]
+  },
+  {
+    "id": "puerto-rican-lime-cabbage-slaw",
+    "name": "Puerto Rican Lime Cabbage Slaw",
+    "meal": "bite",
+    "cuisine": "Puerto Rican",
+    "time": 15,
+    "serves": 4,
+    "ing": [
+      [
+        "cabbage",
+        400
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "1pc"
+      ],
+      [
+        "lime",
+        "2pc"
+      ],
+      [
+        "vinegar",
+        15
       ],
       [
         "cilantro",
         10
       ],
       [
-        "lime",
-        1
-      ],
-      [
-        "oil",
+        "olive-oil",
         20
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {cilantro} until fragrant.",
-      "Add the {red-pepper} and {black-beans}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "puerto-rican-lime-cabbage-slaw",
-    "name": "Puerto Rican Lime Cabbage Slaw",
-    "meal": "big",
-    "cuisine": "Puerto Rican",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a pan and soften the {salt} until fragrant.",
-      "Add the {oil} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Shred {cabbage} finely and grate {carrot}. Crush {garlic} into a paste with the {salt}.",
+      "Whisk the garlic with the juice of {lime}, {vinegar} and {olive-oil}.",
+      "Toss with the vegetables and chopped {cilantro}, rest 10 minutes and serve cold."
     ]
   },
   {

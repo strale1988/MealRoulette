@@ -6,7 +6,7 @@ KITCHEN.add(
     "name": "Fish ambul thiyal (Sri Lankan sour black-pepper fish)",
     "meal": "big",
     "cuisine": "Sri Lankan",
-    "time": 35,
+    "time": 40,
     "serves": 2,
     "ing": [
       [
@@ -51,11 +51,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {garlic} and {ginger}.",
-      "Add {white-fish} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {water} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Coat fish chunks in a thick tamarind and black-pepper paste, arrange tightly in a shallow pot and simmer with very little water until the sauce clings to the fish.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cut {white-fish} into 4 cm chunks. Crush {garlic}, grate {ginger}, and mix with {tamarind-paste}, {black-pepper}, {turmeric}, {cinnamon} and {salt}.",
+      "Coat the fish in the paste and marinate for 15 minutes.",
+      "Heat {oil} in a pan, add the fish with {water}, bring to a simmer, then cook uncovered over medium-low heat for 15–18 minutes, turning once, until the liquid has cooked away and the fish is coated in a dark, sour glaze."
     ]
   },
   {
@@ -316,7 +314,7 @@ KITCHEN.add(
     "name": "Kukul mas curry (Sri Lankan chicken curry)",
     "meal": "big",
     "cuisine": "Sri Lankan",
-    "time": 45,
+    "time": 50,
     "serves": 2,
     "ing": [
       [
@@ -369,11 +367,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {chicken-thigh} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {coconut-milk} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Toast the whole spices in oil before adding onion and chicken; simmer gently in coconut milk until the curry turns rich and the chicken is tender.",
-      "Finish with a little {lime} if needed, taste for seasoning and serve while the texture is at its best."
+      "Cut {chicken-thigh} into 4 cm pieces. Chop {onion}, crush {garlic}, grate {ginger}.",
+      "Heat {oil} in a heavy pot, add {cinnamon} and {cardamom} for 30 seconds, then the onion for 6 minutes. Add garlic, ginger and {curry-powder} for 1 minute.",
+      "Add the chicken, {salt} and {black-pepper} and brown for 5 minutes, then pour in {coconut-milk}.",
+      "Simmer gently for 25 minutes until the chicken is tender and the gravy has thickened, then finish with the juice of {lime}."
     ]
   },
   {
@@ -421,7 +418,7 @@ KITCHEN.add(
     "name": "Sri Lankan black pork curry with roasted spices",
     "meal": "big",
     "cuisine": "Sri Lankan",
-    "time": 90,
+    "time": 100,
     "serves": 2,
     "ing": [
       [
@@ -470,11 +467,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {pork} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {water} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Toast the spices until dark and aromatic without burning, coat the pork thoroughly and braise slowly with vinegar until the sauce is concentrated and almost black.",
-      "Finish with a little {vinegar} if needed, taste for seasoning and serve while the texture is at its best."
+      "Dry-roast {cumin}, {black-pepper} and {cinnamon} in a pan for 2 minutes until dark and fragrant, then grind to a powder.",
+      "Cut {pork} into 3 cm cubes. Slice {onion}; crush {garlic}; grate {ginger}.",
+      "Heat {oil} in a heavy pot, cook the onion for 8 minutes until deep golden, then add garlic and ginger for 1 minute. Add the pork, the roasted spice powder and {salt} and brown for 8 minutes.",
+      "Add {vinegar} and {water}, cover and simmer for 1 hour 10 minutes, until the pork is tender and the sauce is thick, dark and glossy."
     ]
   },
   {
@@ -482,12 +478,12 @@ KITCHEN.add(
     "name": "Sri Lankan-style coconut and aubergine curry",
     "meal": "big",
     "cuisine": "Sri Lankan",
-    "time": 35,
+    "time": 40,
     "serves": 2,
     "ing": [
       [
         "aubergine",
-        1
+        "1pc"
       ],
       [
         "coconut-milk",
@@ -499,7 +495,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -515,7 +511,7 @@ KITCHEN.add(
       ],
       [
         "curry-leaves",
-        100
+        6
       ],
       [
         "lime",
@@ -523,7 +519,7 @@ KITCHEN.add(
       ],
       [
         "oil",
-        15
+        20
       ],
       [
         "salt",
@@ -535,11 +531,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {aubergine} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {coconut-milk} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Brown the aubergine well first, then simmer in a spiced coconut sauce until creamy; finish with lime to balance the richness.",
-      "Finish with a little {lime} if needed, taste for seasoning and serve while the texture is at its best."
+      "Cut {aubergine} into 3 cm chunks and salt lightly for 10 minutes, then pat dry. Chop {onion}, crush {garlic}, grate {ginger}.",
+      "Heat {oil}, fry the aubergine for 6 minutes until golden; lift out. Cook the onion with {curry-leaves} for 5 minutes, then garlic, ginger, {turmeric}, {cumin} and {black-pepper} for 1 minute.",
+      "Return the aubergine, add {coconut-milk} and {salt} and simmer for 15 minutes until the aubergine is meltingly tender and the sauce is thick.",
+      "Finish with the juice of {lime}."
     ]
   },
   {
@@ -584,45 +579,36 @@ KITCHEN.add(
   {
     "id": "sri-lankan-coconut-sambol",
     "name": "Sri Lankan Coconut Sambol",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Sri Lankan",
-    "time": 37,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "soy-sauce",
-        25
+        "desiccated-coconut",
+        150
       ],
       [
-        "ginger",
-        10
+        "red-onion",
+        "1pc"
       ],
       [
-        "garlic",
-        2
+        "chilli-flakes",
+        3
       ],
       [
-        "spring-onion",
-        2
-      ],
-      [
-        "carrot",
-        1
-      ],
-      [
-        "sesame-oil",
-        10
+        "lime",
+        "1pc"
       ],
       [
         "salt",
-        2
+        3
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a heavy pan and soften the {ginger} until fragrant.",
-      "Add the {soy-sauce} and turn to coat in the seasoning.",
-      "Add the {garlic} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Sprinkle {desiccated-coconut} with 4 tablespoons of warm water and leave for 5 minutes to soften.",
+      "Finely chop {red-onion} and pound or mash it with {chilli-flakes} and {salt} into a coarse paste.",
+      "Mix the coconut into the paste with your fingers, squeeze in the juice of {lime} and taste for salt and heat."
     ]
   },
   {
@@ -667,45 +653,41 @@ KITCHEN.add(
   {
     "id": "sri-lankan-pol-roti-flatbread",
     "name": "Sri Lankan Pol Roti Flatbread",
-    "meal": "big",
+    "meal": "morning,bite",
     "cuisine": "Sri Lankan",
-    "time": 32,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "flour",
+        250
       ],
       [
-        "garlic",
-        2
+        "desiccated-coconut",
+        100
       ],
       [
-        "spring-onion",
-        2
+        "green-chilli",
+        "1pc"
       ],
       [
-        "carrot",
-        1
-      ],
-      [
-        "sesame-oil",
-        10
+        "onion",
+        "1pc"
       ],
       [
         "salt",
-        2
+        3
       ],
       [
-        "chicken-thigh",
-        400
+        "oil",
+        20
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a pan and soften the {garlic} until fragrant.",
-      "Add the {ginger} and turn to coat in the seasoning.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Finely chop {onion} and {green-chilli}. Mix {flour}, {desiccated-coconut}, the onion, chilli and {salt}.",
+      "Add about 120 ml warm water and knead into a soft dough. Rest 10 minutes.",
+      "Divide into 8 balls and pat or roll each into a 12 cm disc.",
+      "Brush a hot griddle with a little {oil} and cook the rotis for 2–3 minutes per side until golden with brown flecks. Serve warm."
     ]
   },
   {
@@ -713,47 +695,59 @@ KITCHEN.add(
     "name": "Sri Lankan Pumpkin Curry",
     "meal": "big",
     "cuisine": "Sri Lankan",
-    "time": 39,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "carrot",
-        1
+        "pumpkin",
+        600
       ],
       [
-        "sesame-oil",
-        10
+        "coconut-milk",
+        200
       ],
       [
-        "salt",
-        2
-      ],
-      [
-        "chicken-thigh",
-        400
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "soy-sauce",
-        25
-      ],
-      [
-        "ginger",
-        10
+        "onion",
+        "1pc"
       ],
       [
         "garlic",
+        "3pc"
+      ],
+      [
+        "curry-powder",
+        8
+      ],
+      [
+        "mustard-seeds",
         2
+      ],
+      [
+        "cinnamon",
+        1
+      ],
+      [
+        "curry-leaves",
+        5
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {carrot} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Peel {pumpkin} and cut into 3 cm cubes. Chop {onion}, crush {garlic}, slice {green-chilli}.",
+      "Heat {oil}, add {mustard-seeds} until they pop, then {curry-leaves}, {cinnamon} and the onion for 5 minutes. Add garlic, chilli and {curry-powder} for 1 minute.",
+      "Add the pumpkin, {salt} and 100 ml water, cover and cook 10 minutes.",
+      "Pour in {coconut-milk} and simmer uncovered for 10 minutes until the pumpkin is tender and the sauce is creamy."
     ]
   },
   {
@@ -800,43 +794,59 @@ KITCHEN.add(
     "name": "Sri Lankan Soy and Sesame Tofu",
     "meal": "big",
     "cuisine": "Sri Lankan",
-    "time": 53,
+    "time": 30,
     "serves": 4,
     "ing": [
+      [
+        "tofu",
+        400
+      ],
+      [
+        "soy-sauce",
+        30
+      ],
+      [
+        "sesame-seeds",
+        15
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "red-pepper",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
       [
         "ginger",
         10
       ],
       [
-        "garlic",
-        2
-      ],
-      [
-        "spring-onion",
-        2
-      ],
-      [
-        "carrot",
+        "chilli-flakes",
         1
       ],
       [
-        "sesame-oil",
+        "vinegar",
         10
       ],
       [
-        "salt",
-        2
+        "cornstarch",
+        20
       ],
       [
-        "chicken-thigh",
-        400
+        "oil",
+        40
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a pan and soften the {garlic} until fragrant.",
-      "Add the {ginger} and turn to coat in the seasoning.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Press {tofu} for 10 minutes, cut into 2 cm cubes and toss in {cornstarch}. Slice {onion} and {red-pepper}.",
+      "Fry the tofu in half of the {oil} for 8 minutes until crisp; lift out.",
+      "Stir-fry the onion and pepper in the remaining oil for 3 minutes, add crushed {garlic}, grated {ginger} and {chilli-flakes} for 1 minute.",
+      "Add {soy-sauce}, {vinegar} and 50 ml water, return the tofu and toss until glazed. Scatter {sesame-seeds} and serve."
     ]
   },
   {
@@ -844,47 +854,59 @@ KITCHEN.add(
     "name": "Sri Lankan Chicken with Scallion Rice",
     "meal": "big",
     "cuisine": "Sri Lankan",
-    "time": 60,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "carrot",
-        1
-      ],
-      [
-        "sesame-oil",
-        10
-      ],
-      [
-        "salt",
-        2
-      ],
-      [
         "chicken-thigh",
-        400
+        600
       ],
       [
         "rice",
         250
       ],
       [
-        "soy-sauce",
-        25
+        "spring-onion",
+        "4pc"
       ],
       [
         "ginger",
-        10
+        15
       ],
       [
         "garlic",
-        2
+        "3pc"
+      ],
+      [
+        "curry-powder",
+        6
+      ],
+      [
+        "cinnamon",
+        1
+      ],
+      [
+        "coconut-milk",
+        200
+      ],
+      [
+        "chicken-stock",
+        250
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {carrot} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Season {chicken-thigh} with {curry-powder} and {salt}. Slice {spring-onion}; crush {garlic}; grate {ginger}. Rinse {rice}.",
+      "Brown the chicken in {oil} for 5 minutes per side. Remove.",
+      "Cook half of the spring onion, garlic, ginger and {cinnamon} for 2 minutes, then stir in the rice for 1 minute.",
+      "Add {coconut-milk} and {chicken-stock}, nestle the chicken on top, cover and cook on low heat for 22 minutes. Rest 5 minutes and scatter the remaining spring onion."
     ]
   },
   {
@@ -929,45 +951,40 @@ KITCHEN.add(
   {
     "id": "sri-lankan-sesame-cucumber-salad",
     "name": "Sri Lankan Sesame Cucumber Salad",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Sri Lankan",
-    "time": 38,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "cucumber",
+        "2pc"
       ],
       [
-        "garlic",
-        2
+        "red-onion",
+        "1pc"
       ],
       [
-        "spring-onion",
-        2
+        "green-chilli",
+        "1pc"
       ],
       [
-        "carrot",
-        1
+        "lime",
+        "1pc"
       ],
       [
-        "sesame-oil",
+        "sesame-seeds",
         10
       ],
       [
         "salt",
         2
-      ],
-      [
-        "chicken-thigh",
-        400
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a pan and soften the {garlic} until fragrant.",
-      "Add the {ginger} and turn to coat in the seasoning.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Slice {cucumber} and {red-onion} thinly and finely chop {green-chilli}. Toast {sesame-seeds} in a dry pan for 2 minutes.",
+      "Toss the vegetables with {salt} and the juice of {lime}.",
+      "Scatter the sesame seeds over and serve cold."
     ]
   }
 ]

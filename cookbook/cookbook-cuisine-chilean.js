@@ -33,7 +33,6 @@ KITCHEN.add(
         "sweetcorn",
         240
       ],
-      
       [
         "milk",
         250
@@ -131,16 +130,16 @@ KITCHEN.add(
     "name": "Porotos granados (Chilean cranberry-bean and corn stew)",
     "meal": "big",
     "cuisine": "Chilean",
-    "time": 60,
+    "time": 45,
     "serves": 2,
     "ing": [
       [
         "white-beans",
-        200
+        400
       ],
       [
         "sweetcorn",
-        120
+        200
       ],
       [
         "pumpkin",
@@ -156,7 +155,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "paprika",
@@ -164,7 +163,7 @@ KITCHEN.add(
       ],
       [
         "water",
-        350
+        500
       ],
       [
         "olive-oil",
@@ -180,11 +179,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {olive-oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {white-beans} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {water} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Cook beans until nearly tender, add corn and pumpkin and simmer until creamy; stir in chopped basil at the end and keep the texture rustic rather than puréed.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Dice {onion}, crush {garlic} and cut {pumpkin} into 2 cm cubes. Drain {white-beans}.",
+      "Heat {olive-oil} in a pot and cook the onion for 5 minutes, then add garlic and {paprika} for 1 minute.",
+      "Add the pumpkin and {water}, bring to a boil and simmer for 15 minutes until the pumpkin starts to soften.",
+      "Add {sweetcorn} and {white-beans} and simmer for 10 minutes, mashing some of the pumpkin against the side so the stew turns creamy but stays rustic.",
+      "Season with {salt} and {black-pepper}, stir in torn {basil} and serve."
     ]
   },
   {
@@ -352,7 +351,7 @@ KITCHEN.add(
     "name": "Charquicán-inspired Chilean beef and vegetable mash",
     "meal": "big",
     "cuisine": "Chilean",
-    "time": 45,
+    "time": 50,
     "serves": 2,
     "ing": [
       [
@@ -385,15 +384,15 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "oregano",
-        100
+        2
       ],
       [
         "beef-stock",
-        450
+        300
       ],
       [
         "salt",
@@ -409,11 +408,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {beef-mince} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Brown beef with onion, add diced vegetables and a little stock, then simmer and mash some of the potato and pumpkin into the broth for a thick rustic finish.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Dice {potatoes}, {pumpkin} and {carrot} into 1.5 cm cubes, trim and cut {green-beans} into 3 cm lengths, chop {onion} and crush {garlic}.",
+      "Heat {oil} in a wide pot and brown {beef-mince} for 8 minutes with the onion. Add garlic, {oregano}, {salt} and {black-pepper}.",
+      "Add the potatoes, pumpkin, carrot and {beef-stock}, cover and simmer for 15 minutes.",
+      "Add {green-beans} and {sweetcorn} and cook 10 minutes more, mashing some of the potato and pumpkin into the liquid until the stew is thick and rustic.",
+      "Taste, adjust the seasoning and serve hot."
     ]
   },
   {
@@ -882,28 +881,40 @@ KITCHEN.add(
     "name": "Chilean Chicken with Tomato and Peppers",
     "meal": "big",
     "cuisine": "Chilean",
-    "time": 32,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        250
+        "chicken-thigh",
+        600
       ],
       [
-        "plantain",
-        2
+        "tomato",
+        "3pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
+        "onion",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "oregano",
+        2
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "parsley",
         10
-      ],
-      [
-        "lime",
-        1
       ],
       [
         "oil",
@@ -912,62 +923,61 @@ KITCHEN.add(
       [
         "salt",
         3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomato} and turn to coat in the seasoning.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Season {chicken-thigh} with {salt}, {black-pepper} and {cumin}. Slice {onion} and {red-pepper}, chop {tomato} and crush {garlic}.",
+      "Heat {oil} in a wide pan and brown the chicken for 5 minutes per side. Remove.",
+      "Cook the onion for 8 minutes until soft and sweet, add the red pepper, garlic and {oregano} and cook 3 minutes.",
+      "Add the tomato and 100 ml water, return the chicken, cover and simmer for 25 minutes until the chicken is tender and the sauce is thick.",
+      "Scatter chopped {parsley} and serve."
     ]
   },
   {
     "id": "chilean-sweet-plantain-cakes",
     "name": "Chilean Sweet Plantain Cakes",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Chilean",
-    "time": 39,
+    "time": 25,
     "serves": 4,
     "ing": [
       [
-        "cilantro",
-        10
+        "plantain",
+        "3pc"
+      ],
+      [
+        "flour",
+        60
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "brown-sugar",
+        20
       ],
       [
         "lime",
+        "1pc"
+      ],
+      [
+        "salt",
         1
       ],
       [
         "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
+        60
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Peel the very ripe {plantain}, mash until nearly smooth and stir in {flour}, {eggs}, {salt} and the finely grated zest of {lime}.",
+      "Heat {oil} in a frying pan over medium heat and drop in 8 heaped spoonfuls, flattening slightly. Fry for 2–3 minutes per side until deep golden.",
+      "Drain on paper towel, dust with {brown-sugar} while hot and serve with lime juice squeezed over."
     ]
   },
   {
@@ -1014,43 +1024,47 @@ KITCHEN.add(
     "name": "Chilean Corn and Cheese Bake",
     "meal": "big",
     "cuisine": "Chilean",
-    "time": 53,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "sweetcorn",
+        400
       ],
       [
-        "tomato",
-        250
+        "basil",
+        15
       ],
       [
-        "plantain",
-        2
+        "milk",
+        150
       ],
       [
-        "red-pepper",
-        1
+        "butter",
+        30
       ],
       [
-        "cilantro",
+        "sugar",
         10
       ],
       [
-        "lime",
-        1
+        "cheddar",
+        100
       ],
       [
-        "oil",
-        20
+        "eggs",
+        "2pc"
+      ],
+      [
+        "salt",
+        2
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Heat the oven to 190 °C. Blend {sweetcorn} (keep a third whole) with {milk}, {eggs}, {sugar}, {salt} and {basil} into a thick, slightly coarse purée.",
+      "Melt {butter} in a pan and cook the purée for 8–10 minutes, stirring, until it thickens like porridge.",
+      "Grate {cheddar} and stir in most of it. Spoon into a buttered dish and scatter the rest on top.",
+      "Bake for 25–30 minutes until bubbling and golden. Rest 5 minutes and serve."
     ]
   }
 ]

@@ -4128,11 +4128,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan and let the aromatics or spices become fragrant without browning.",
-      "Add {chicken-thigh} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {chicken-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Toast nuts and seeds, blend with chilli, tomato, cocoa and spices, then simmer with browned chicken until the sauce becomes dark, complex and velvety.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Toast {peanuts}, {almonds} and {sesame-seeds} in a dry pan for 3–4 minutes until golden and fragrant.",
+      "Blend the toasted nuts and seeds with {chipotle-adobo}, {cocoa}, {cinnamon}, {canned-tomatoes} and 200 ml of the {chicken-stock} into a smooth, thick sauce.",
+      "Season {chicken-thigh} with {salt} and {black-pepper} and brown in {oil} for 4–5 minutes per side. Remove.",
+      "Pour the sauce into the pan and cook for 8 minutes, stirring, until it darkens and thickens.",
+      "Add the remaining stock and the chicken, cover and simmer for 30 minutes until tender, then serve with the sauce spooned over."
     ]
   },
   {

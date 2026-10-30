@@ -184,32 +184,32 @@ KITCHEN.add(
     "name": "Saka-Saka Style Greens",
     "meal": "big",
     "cuisine": "Congolese",
-    "time": 37,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        300
+        "spinach",
+        600
       ],
       [
         "peanut-butter",
-        50
+        40
       ],
       [
-        "rice",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "spinach",
-        150
+        "garlic",
+        "3pc"
       ],
       [
-        "ginger",
-        10
+        "green-chilli",
+        "1pc"
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
@@ -217,11 +217,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {peanut-butter} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {tomato} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Chop {spinach} finely. Chop {onion}; crush {garlic}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic and {green-chilli} for 2 minutes.",
+      "Add the spinach, 150 ml water and {salt}, cover and cook for 15 minutes until very soft.",
+      "Whisk {peanut-butter} with a splash of the cooking liquid, stir it in and simmer 10 minutes until thick and rich."
     ]
   },
   {
@@ -229,48 +228,46 @@ KITCHEN.add(
     "name": "Cassava-Style Greens and Beans",
     "meal": "big",
     "cuisine": "Congolese",
-    "time": 44,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "yuca-frozen",
+        300
       ],
       [
-        "spinach",
-        150
+        "collard-greens",
+        300
       ],
       [
-        "ginger",
-        10
+        "white-beans",
+        240
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Boil {yuca-frozen} in salted water for 20 minutes until tender; drain and cut into chunks. Shred {collard-greens}, drain {white-beans}, chop {onion} and crush {garlic}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic and chopped {green-chilli}, then the collards and 150 ml water. Cover and cook 15 minutes.",
+      "Add {white-beans}, the yuca and {salt} and simmer for 8 minutes. Serve hot."
     ]
   },
   {
@@ -317,44 +314,47 @@ KITCHEN.add(
     "name": "Plantain and Peanut Bowl",
     "meal": "big",
     "cuisine": "Congolese",
-    "time": 58,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
+        "plantain",
+        "3pc"
+      ],
+      [
         "peanut-butter",
-        50
+        60
       ],
       [
-        "rice",
-        250
+        "tomato",
+        "2pc"
       ],
       [
-        "spinach",
-        150
+        "onion",
+        "1pc"
       ],
       [
-        "ginger",
-        10
+        "garlic",
+        "2pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
       ],
       [
         "oil",
-        20
+        60
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {spinach} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Slice the ripe {plantain} on a diagonal and fry in {oil} for 2–3 minutes per side until golden; drain and sprinkle with a little {salt}.",
+      "Cook chopped {onion} in a spoonful of the oil for 5 minutes, add crushed {garlic}, {green-chilli} and chopped {tomato} and cook 6 minutes.",
+      "Stir in {peanut-butter} and 100 ml water, season with the remaining salt and simmer 5 minutes until thick.",
+      "Serve the plantain with the peanut sauce spooned over."
     ]
   },
   {
@@ -362,47 +362,59 @@ KITCHEN.add(
     "name": "Congolese Spiced Rice",
     "meal": "big",
     "cuisine": "Congolese",
-    "time": 65,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
+        "rice",
         300
       ],
       [
-        "peanut-butter",
-        50
+        "onion",
+        "1pc"
       ],
       [
-        "rice",
-        250
+        "tomato-paste",
+        30
       ],
       [
-        "spinach",
-        150
+        "garlic",
+        "2pc"
       ],
       [
         "ginger",
         10
       ],
       [
+        "curry-powder",
+        6
+      ],
+      [
+        "peas",
+        100
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "vegetable-stock",
+        500
+      ],
+      [
         "oil",
-        20
+        30
+      ],
+      [
+        "salt",
+        2
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {onion} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Chop {onion}, dice {carrot}, crush {garlic} and grate {ginger}.",
+      "Cook the onion and carrot in {oil} for 5 minutes, add garlic, ginger, {curry-powder} and {tomato-paste} and fry for 2 minutes.",
+      "Stir in {rice}, then add {vegetable-stock} and {salt}. Bring to a boil, cover and cook on the lowest heat for 18 minutes.",
+      "Scatter {peas} on top for the last 5 minutes, then rest 5 minutes and fluff."
     ]
   },
   {
@@ -410,39 +422,59 @@ KITCHEN.add(
     "name": "Chicken and Sweet Potato Pot",
     "meal": "big",
     "cuisine": "Congolese",
-    "time": 36,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
+        "chicken-thigh",
+        700
+      ],
+      [
+        "sweet-potato",
+        500
+      ],
+      [
         "tomato",
-        300
+        "2pc"
       ],
       [
-        "peanut-butter",
-        50
+        "onion",
+        "1pc"
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
+        "garlic",
+        "3pc"
       ],
       [
         "ginger",
-        10
+        15
+      ],
+      [
+        "tomato-paste",
+        30
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "chicken-stock",
+        300
       ],
       [
         "oil",
-        20
+        30
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {peanut-butter} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {tomato} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Season {chicken-thigh} with {salt}. Peel {sweet-potato} and cut into 4 cm chunks. Chop {onion} and {tomato}; crush {garlic}; grate {ginger}.",
+      "Brown the chicken in {oil} for 5 minutes per side. Remove.",
+      "Cook the onion for 5 minutes, add garlic, ginger, {green-chilli}, tomato and {tomato-paste} for 5 minutes.",
+      "Add {chicken-stock}, return the chicken and add the sweet potato. Cover and simmer for 30 minutes until both are tender and the sauce is thick."
     ]
   },
   {
@@ -450,44 +482,46 @@ KITCHEN.add(
     "name": "Beans with Palm-Style Tomato Sauce",
     "meal": "big",
     "cuisine": "Congolese",
-    "time": 43,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "kidney-beans",
+        480
       ],
       [
-        "spinach",
-        150
+        "tomato-paste",
+        40
       ],
       [
-        "ginger",
-        10
+        "paprika",
+        4
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
       ],
       [
         "oil",
-        20
+        40
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {ginger} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Drain {kidney-beans}. Chop {onion}; crush {garlic}.",
+      "Heat {oil} in a pot, cook the onion for 5 minutes, add garlic, {paprika}, {tomato-paste} and {green-chilli} and fry for 6 minutes until the oil turns red.",
+      "Add {kidney-beans}, 150 ml water and {salt} and simmer for 15 minutes, mashing a few to thicken the sauce. Serve hot."
     ]
   },
   {
@@ -533,44 +567,46 @@ KITCHEN.add(
     "name": "Congolese Tomato and Bean Stew",
     "meal": "big",
     "cuisine": "Congolese",
-    "time": 32,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
+        "white-beans",
+        480
       ],
       [
-        "rice",
-        250
+        "tomato",
+        "3pc"
       ],
       [
-        "spinach",
-        150
+        "onion",
+        "1pc"
       ],
       [
-        "ginger",
-        10
+        "garlic",
+        "2pc"
+      ],
+      [
+        "tomato-paste",
+        30
+      ],
+      [
+        "green-chilli",
+        "1pc"
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Drain {white-beans}. Chop {onion}, {tomato} and {green-chilli}; crush {garlic}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic, tomato, {tomato-paste} and chilli and cook for 10 minutes until thick.",
+      "Add {white-beans}, 150 ml water and {salt} and simmer for 12 minutes. Serve hot."
     ]
   },
   {
@@ -663,44 +699,51 @@ KITCHEN.add(
     "name": "Congolese Peanut and Sweet Potato Soup",
     "meal": "big",
     "cuisine": "Congolese",
-    "time": 53,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
+        "sweet-potato",
+        500
       ],
       [
-        "rice",
-        250
+        "peanut-butter",
+        70
       ],
       [
         "spinach",
         150
       ],
       [
-        "ginger",
-        10
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "tomato-paste",
+        20
+      ],
+      [
+        "vegetable-stock",
+        900
       ],
       [
         "oil",
-        20
+        15
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Peel {sweet-potato} and cut into 3 cm chunks. Chop {onion}; crush {garlic}; chop {spinach}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic and {tomato-paste} for 2 minutes.",
+      "Add the sweet potato and {vegetable-stock}, simmer for 18 minutes until soft.",
+      "Whisk {peanut-butter} with a ladle of broth and stir in with {salt}; simmer 5 minutes, then wilt in the spinach for 3 minutes and serve."
     ]
   },
   {
@@ -793,24 +836,40 @@ KITCHEN.add(
     "name": "Congolese Ginger Lentil Curry",
     "meal": "big",
     "cuisine": "Congolese",
-    "time": 38,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
+        "green-lentils",
         250
       ],
       [
+        "coconut-milk",
+        200
+      ],
+      [
         "spinach",
-        150
+        100
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
       ],
       [
         "ginger",
-        10
+        20
+      ],
+      [
+        "tomato-paste",
+        20
+      ],
+      [
+        "cumin",
+        2
       ],
       [
         "oil",
@@ -819,18 +878,13 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Rinse {green-lentils}. Chop {onion}; crush {garlic}; grate {ginger}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic, ginger, {cumin} and {tomato-paste} for 2 minutes.",
+      "Add the lentils and 500 ml water and simmer for 25 minutes until tender.",
+      "Stir in {coconut-milk} and {salt}, simmer 8 minutes, then wilt in {spinach} for 2 minutes and serve."
     ]
   }
 ]

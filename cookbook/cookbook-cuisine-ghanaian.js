@@ -191,32 +191,40 @@ KITCHEN.add(
     "name": "Kontomire-Style Spinach Stew",
     "meal": "big",
     "cuisine": "Ghanaian",
-    "time": 37,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
         "spinach",
-        150
+        600
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "onion",
+        "2pc"
       ],
       [
         "ginger",
         10
       ],
       [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "eggs",
+        "4pc"
+      ],
+      [
         "oil",
-        20
+        50
       ],
       [
         "salt",
@@ -224,11 +232,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {peanut-butter} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {tomato} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Boil {eggs} for 9 minutes, cool, peel and halve. Chop {spinach}; blend {tomato}, one of the {onion}, {ginger}, {garlic} and {green-chilli} into a coarse paste.",
+      "Heat {oil} in a pot, cook the other chopped onion for 4 minutes, then add the paste and fry for 12 minutes until the oil separates.",
+      "Add the spinach and {salt}, cover and cook for 12 minutes until it is soft and the sauce is thick.",
+      "Serve topped with the boiled eggs."
     ]
   },
   {
@@ -236,48 +243,47 @@ KITCHEN.add(
     "name": "Ghanaian Light Soup with Chicken",
     "meal": "big",
     "cuisine": "Ghanaian",
-    "time": 44,
+    "time": 70,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "chicken-thigh",
+        700
       ],
       [
-        "spinach",
-        150
+        "tomato",
+        "3pc"
+      ],
+      [
+        "onion",
+        "1pc"
       ],
       [
         "ginger",
-        10
+        20
       ],
       [
-        "oil",
-        20
+        "garlic",
+        "3pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "aubergine",
+        "1pc"
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Blend {tomato}, half of the {onion}, {ginger}, {garlic} and {green-chilli} until smooth.",
+      "Put {chicken-thigh} in a pot with the blended mixture, the remaining onion (sliced), {salt} and 1 litre of water. Bring to a boil and skim.",
+      "Simmer for 30 minutes, add the quartered {aubergine} and cook for 15 minutes until the chicken is tender and the broth is thin and peppery.",
+      "Taste for salt and serve in deep bowls."
     ]
   },
   {
@@ -324,44 +330,56 @@ KITCHEN.add(
     "name": "Ghanaian Beans and Fried Plantain",
     "meal": "big",
     "cuisine": "Ghanaian",
-    "time": 58,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
+        "black-eyed-peas",
+        480
       ],
       [
-        "rice",
-        250
+        "plantain",
+        "3pc"
       ],
       [
-        "spinach",
-        150
+        "tomato",
+        "2pc"
+      ],
+      [
+        "onion",
+        "1pc"
       ],
       [
         "ginger",
         10
       ],
       [
+        "tomato-paste",
+        30
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
         "oil",
-        20
+        80
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {spinach} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Drain {black-eyed-peas}. Blend {tomato}, {onion}, {ginger} and {green-chilli} until smooth.",
+      "Heat 30 g of the {oil} in a pot, add {paprika} and {tomato-paste} and fry for 2 minutes, then the blended mixture for 10 minutes until the oil separates.",
+      "Add {black-eyed-peas}, 150 ml water and {salt} and simmer for 12 minutes until thick.",
+      "Slice the very ripe {plantain} and fry in the remaining oil for 2–3 minutes per side until dark golden and caramelised.",
+      "Serve the stew with the fried plantain alongside."
     ]
   },
   {
@@ -369,47 +387,59 @@ KITCHEN.add(
     "name": "Tomato Fish Stew with Rice",
     "meal": "big",
     "cuisine": "Ghanaian",
-    "time": 65,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
+        "white-fish",
+        600
       ],
       [
         "rice",
         250
       ],
       [
-        "spinach",
-        150
+        "tomato",
+        "4pc"
+      ],
+      [
+        "tomato-paste",
+        30
+      ],
+      [
+        "onion",
+        "1pc"
       ],
       [
         "ginger",
         10
       ],
       [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "bay-leaf",
+        1
+      ],
+      [
         "oil",
-        20
+        30
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {onion} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Cook {rice} in 500 ml water with a pinch of {salt}, covered, on low heat for 15 minutes.",
+      "Blend {tomato}, {ginger}, {garlic} and {green-chilli} smooth. Cook chopped {onion} in {oil} for 5 minutes, add {tomato-paste} and fry 2 minutes.",
+      "Add the blended tomato, {bay-leaf} and the remaining salt and simmer for 15 minutes until thick.",
+      "Cut {white-fish} into chunks, add to the stew and poach gently for 6–8 minutes. Serve over the rice."
     ]
   },
   {
@@ -417,39 +447,47 @@ KITCHEN.add(
     "name": "Ghanaian Spiced Beef Skewers",
     "meal": "big",
     "cuisine": "Ghanaian",
-    "time": 36,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        300
+        "beef-steak",
+        600
       ],
       [
-        "peanut-butter",
-        50
+        "peanuts",
+        60
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
+        "chilli-flakes",
+        2
       ],
       [
         "ginger",
         10
       ],
       [
+        "paprika",
+        2
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
         "oil",
-        20
+        30
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {peanut-butter} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {tomato} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Toast {peanuts} in a dry pan for 4 minutes, cool, then grind coarsely with {chilli-flakes}, {paprika}, {ginger} (grated) and {salt} to make the spice rub.",
+      "Cut {beef-steak} into 3 cm cubes and toss with {oil} and two-thirds of the rub; marinate for at least 30 minutes. Cut {onion} into wedges.",
+      "Thread the beef and onion onto skewers.",
+      "Grill or pan-sear over high heat for 8–10 minutes, turning, until charred outside and just cooked inside. Dust with the remaining rub and serve."
     ]
   },
   {
@@ -457,7 +495,7 @@ KITCHEN.add(
     "name": "Coconut Rice with Peas",
     "meal": "big",
     "cuisine": "Ghanaian",
-    "time": 43,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
@@ -465,36 +503,39 @@ KITCHEN.add(
         250
       ],
       [
-        "spinach",
-        150
+        "coconut-milk",
+        400
+      ],
+      [
+        "peas",
+        100
+      ],
+      [
+        "onion",
+        "1pc"
       ],
       [
         "ginger",
         10
       ],
       [
+        "bay-leaf",
+        1
+      ],
+      [
         "oil",
-        20
+        15
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {ginger} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Rinse {rice}. Finely chop {onion} and grate {ginger}.",
+      "Cook the onion in {oil} for 4 minutes, add ginger and {bay-leaf} for 1 minute.",
+      "Add the rice, {coconut-milk}, 150 ml water and {salt}, bring to a boil, cover and cook on the lowest heat for 15 minutes.",
+      "Scatter {peas} on top, cover for 5 minutes, remove the bay leaf and fluff."
     ]
   },
   {
@@ -540,44 +581,50 @@ KITCHEN.add(
     "name": "Ghanaian Tomato and Bean Stew",
     "meal": "big",
     "cuisine": "Ghanaian",
-    "time": 32,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
+        "kidney-beans",
+        480
       ],
       [
-        "rice",
-        250
+        "tomato",
+        "4pc"
       ],
       [
-        "spinach",
-        150
+        "onion",
+        "1pc"
       ],
       [
         "ginger",
         10
       ],
       [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "bay-leaf",
+        1
+      ],
+      [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Drain {kidney-beans}. Blend {tomato}, {ginger}, {garlic} and {green-chilli} smooth.",
+      "Cook chopped {onion} in {oil} for 5 minutes, add the blended tomato and {bay-leaf} and simmer for 12 minutes.",
+      "Add {kidney-beans}, 100 ml water and {salt} and simmer for 10 minutes. Remove the bay leaf and serve."
     ]
   },
   {
@@ -670,44 +717,46 @@ KITCHEN.add(
     "name": "Ghanaian Peanut and Sweet Potato Soup",
     "meal": "big",
     "cuisine": "Ghanaian",
-    "time": 53,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
+        "sweet-potato",
+        500
+      ],
+      [
         "peanut-butter",
-        50
+        80
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
+        "onion",
+        "1pc"
       ],
       [
         "ginger",
-        10
+        15
       ],
       [
-        "oil",
+        "tomato-paste",
         20
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "chicken-stock",
+        900
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Peel {sweet-potato} and cut into 3 cm chunks. Chop {onion} and grate {ginger}.",
+      "Put them in a pot with {chicken-stock}, {tomato-paste} and the whole {green-chilli}; simmer for 20 minutes until the sweet potato is soft.",
+      "Whisk {peanut-butter} with a ladle of hot broth, stir in with {salt} and simmer 8 minutes. Remove the chilli, blend half and serve."
     ]
   },
   {
@@ -800,24 +849,36 @@ KITCHEN.add(
     "name": "Ghanaian Ginger Lentil Curry",
     "meal": "big",
     "cuisine": "Ghanaian",
-    "time": 38,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
+        "red-lentils",
         250
       ],
       [
-        "spinach",
-        150
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
       ],
       [
         "ginger",
-        10
+        25
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "bay-leaf",
+        1
       ],
       [
         "oil",
@@ -826,18 +887,12 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {rice} until fragrant.",
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {peanut-butter} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Rinse {red-lentils}. Chop {onion} and {tomato}; crush {garlic}; grate {ginger}.",
+      "Cook the onion in {oil} for 5 minutes, add garlic, ginger and {paprika} for 2 minutes, then the tomato for 4 minutes.",
+      "Add the lentils, {bay-leaf}, 700 ml water and {salt}, simmer for 20 minutes until soft and thick. Remove the bay leaf and serve."
     ]
   }
 ]

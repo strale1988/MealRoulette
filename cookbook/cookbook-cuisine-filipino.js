@@ -6,7 +6,7 @@ KITCHEN.add(
     "name": "Chicken adobo with soy, vinegar and bay",
     "meal": "big",
     "cuisine": "Filipino",
-    "time": 45,
+    "time": 50,
     "serves": 2,
     "ing": [
       [
@@ -51,11 +51,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {garlic}.",
-      "Add {chicken-thigh} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {water} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Simmer the chicken first in soy, vinegar, garlic and bay without stirring much; uncover at the end to reduce the braising liquid to a glossy glaze.",
-      "Finish with a little {vinegar} if needed, taste for seasoning and serve while the texture is at its best."
+      "Cut {chicken-thigh} into 4 cm pieces. Crush {garlic}. Combine with {soy-sauce}, {vinegar}, {bay-leaf} and {black-pepper} and marinate for 15 minutes.",
+      "Heat {oil} in a heavy pot and brown the chicken pieces (lifted out of the marinade) for 4 minutes per side.",
+      "Pour in the marinade and {water}, bring to a boil without stirring for the first 2 minutes, then cover and simmer for 20 minutes.",
+      "Uncover and simmer for 10 minutes until the sauce reduces to a glossy glaze; add {salt} if needed.",
+      "Cook {rice} in 360 ml water, covered, on low heat for 15 minutes and serve with the adobo."
     ]
   },
   {
@@ -123,7 +123,7 @@ KITCHEN.add(
     "name": "Kare-kare (peanut-rich Filipino stew)",
     "meal": "big",
     "cuisine": "Filipino",
-    "time": 100,
+    "time": 120,
     "serves": 2,
     "ing": [
       [
@@ -172,11 +172,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {beef-chuck} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {beef-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Cook the beef until tender, then whisk peanut butter into the broth for a thick, mellow sauce; add vegetables near the end to retain their shape.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cut {beef-chuck} into 4 cm chunks and simmer in {beef-stock} with {salt} and {black-pepper} for 1 hour 30 minutes until very tender.",
+      "Chop {onion}, crush {garlic}. Cut {aubergine} into thick slices, trim {green-beans} and slice {red-pepper}.",
+      "Heat {oil} in a separate pan and cook the onion for 5 minutes with the garlic. Whisk {peanut-butter} into a ladle of the beef broth and stir it into the pot with the onion mixture. Simmer 10 minutes until thick.",
+      "Add the aubergine, green beans and red pepper and cook for 8 minutes until just tender.",
+      "Serve hot; traditionally with a little salty shrimp paste or soy on the side."
     ]
   },
   {
@@ -459,11 +459,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {spinach} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {coconut-milk} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Cook the greens slowly in coconut milk with pork and chilli until the sauce reduces and clings to the leaves; avoid vigorous stirring during the initial simmer.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Dice {bacon}. Chop {onion}, crush {garlic}, grate {ginger}, slice {red-chilli} and chop {spinach}.",
+      "Fry the bacon in {oil} for 5 minutes until crisp, add the onion for 4 minutes, then garlic, ginger and chilli for 1 minute.",
+      "Pour in {coconut-milk}, {fish-sauce}, {salt} and {black-pepper} and simmer gently for 10 minutes until it starts to thicken.",
+      "Add the spinach and cook 8 minutes until the sauce is thick and the oil starts to separate.",
+      "Cook {rice} in 360 ml water, covered, on low heat for 15 minutes and serve with the laing."
     ]
   },
   {
@@ -615,43 +615,63 @@ KITCHEN.add(
     "name": "Filipino Pancit-Style Noodles",
     "meal": "big",
     "cuisine": "Filipino",
-    "time": 37,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "soy-sauce",
-        25
+        "rice-noodles",
+        250
       ],
       [
-        "ginger",
-        10
+        "chicken-thigh",
+        300
       ],
       [
-        "garlic",
-        2
-      ],
-      [
-        "spring-onion",
-        2
+        "cabbage",
+        200
       ],
       [
         "carrot",
+        "2pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "soy-sauce",
+        40
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "chicken-stock",
+        300
+      ],
+      [
+        "spring-onion",
+        "3pc"
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "black-pepper",
         1
-      ],
-      [
-        "sesame-oil",
-        10
-      ],
-      [
-        "salt",
-        2
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a heavy pan and soften the {ginger} until fragrant.",
-      "Add the {soy-sauce} and turn to coat in the seasoning.",
-      "Add the {garlic} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Cover {rice-noodles} with hot water for 8 minutes until pliable, then drain. Slice {chicken-thigh} thinly, shred {cabbage}, cut {carrot} into thin strips, chop {onion} and crush {garlic}.",
+      "Heat {oil} in a wok and stir-fry the chicken for 4 minutes. Add onion and garlic for 2 minutes, then carrot and cabbage for 3 minutes.",
+      "Pour in {chicken-stock} and {soy-sauce}, bring to a simmer, add the noodles and toss for 4–5 minutes until they absorb the liquid.",
+      "Season with {black-pepper}, scatter sliced {spring-onion} and serve with {lime} wedges."
     ]
   },
   {
@@ -698,43 +718,47 @@ KITCHEN.add(
     "name": "Filipino Garlic Fried Rice",
     "meal": "big",
     "cuisine": "Filipino",
-    "time": 32,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "rice",
+        300
       ],
       [
         "garlic",
-        2
+        "8pc"
+      ],
+      [
+        "eggs",
+        "3pc"
       ],
       [
         "spring-onion",
-        2
+        "3pc"
       ],
       [
-        "carrot",
-        1
+        "soy-sauce",
+        15
       ],
       [
-        "sesame-oil",
-        10
+        "oil",
+        40
       ],
       [
         "salt",
         2
       ],
       [
-        "chicken-thigh",
-        400
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a pan and soften the {garlic} until fragrant.",
-      "Add the {ginger} and turn to coat in the seasoning.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Cook {rice} in 600 ml water, covered, on low heat for 15 minutes, then spread on a tray and cool for at least 20 minutes (day-old rice is best).",
+      "Crush {garlic} and fry in half of the {oil} over medium heat for 3 minutes until golden and crisp; lift half out for topping.",
+      "Add the remaining oil and rice and stir-fry on high heat for 4 minutes, breaking up clumps. Add {soy-sauce}, {salt} and {black-pepper}.",
+      "Fry {eggs} in a separate pan. Serve the rice topped with an egg, the crisp garlic and sliced {spring-onion}."
     ]
   },
   {
@@ -742,47 +766,63 @@ KITCHEN.add(
     "name": "Filipino Pork Giniling",
     "meal": "big",
     "cuisine": "Filipino",
-    "time": 39,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "carrot",
-        1
+        "pork-mince",
+        450
       ],
       [
-        "sesame-oil",
-        10
+        "potatoes",
+        250
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "red-pepper",
+        "1pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "passata",
+        200
+      ],
+      [
+        "raisins",
+        40
+      ],
+      [
+        "soy-sauce",
+        20
+      ],
+      [
+        "oil",
+        20
       ],
       [
         "salt",
         2
       ],
       [
-        "chicken-thigh",
-        400
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "soy-sauce",
-        25
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "garlic",
-        2
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {carrot} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Dice {potatoes}, {carrot} and {red-pepper} into 1 cm cubes. Chop {onion}, crush {garlic}.",
+      "Cook the onion and garlic in {oil} for 4 minutes, add {pork-mince} and brown for 8 minutes, breaking it up.",
+      "Stir in {soy-sauce}, {passata}, {salt}, {black-pepper} and 150 ml water, then the potatoes and carrot. Cover and simmer for 15 minutes.",
+      "Add the red pepper and {raisins} and simmer uncovered for 8 minutes until thick. Serve hot."
     ]
   },
   {
@@ -829,43 +869,47 @@ KITCHEN.add(
     "name": "Filipino Ginger Garlic Noodle Bowl",
     "meal": "big",
     "cuisine": "Filipino",
-    "time": 53,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
+        "egg-noodles",
+        250
+      ],
+      [
+        "chicken-stock",
+        800
+      ],
+      [
         "ginger",
-        10
+        25
       ],
       [
         "garlic",
-        2
+        "4pc"
       ],
       [
         "spring-onion",
-        2
+        "4pc"
       ],
       [
-        "carrot",
-        1
+        "pak-choi",
+        200
       ],
       [
-        "sesame-oil",
-        10
+        "eggs",
+        "2pc"
       ],
       [
-        "salt",
-        2
-      ],
-      [
-        "chicken-thigh",
-        400
+        "soy-sauce",
+        30
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a pan and soften the {garlic} until fragrant.",
-      "Add the {ginger} and turn to coat in the seasoning.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Boil {eggs} for 7 minutes, cool and peel. Slice {ginger} into matchsticks, crush {garlic}, slice {spring-onion} and halve {pak-choi}.",
+      "Simmer {chicken-stock} with the ginger, garlic and {soy-sauce} for 10 minutes.",
+      "Cook {egg-noodles} in boiling water as the packet directs, adding the pak choi for the last 2 minutes; drain.",
+      "Divide the noodles and pak choi among bowls, ladle over the hot broth, and top with halved eggs and spring onion."
     ]
   },
   {
@@ -873,47 +917,59 @@ KITCHEN.add(
     "name": "Filipino Soy and Sesame Tofu",
     "meal": "big",
     "cuisine": "Filipino",
-    "time": 60,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "carrot",
-        1
-      ],
-      [
-        "sesame-oil",
-        10
-      ],
-      [
-        "salt",
-        2
-      ],
-      [
-        "chicken-thigh",
+        "tofu",
         400
       ],
       [
-        "rice",
-        250
-      ],
-      [
         "soy-sauce",
-        25
+        30
       ],
       [
-        "ginger",
-        10
+        "vinegar",
+        30
       ],
       [
         "garlic",
-        2
+        "3pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "spring-onion",
+        "3pc"
+      ],
+      [
+        "sesame-seeds",
+        10
+      ],
+      [
+        "sugar",
+        5
+      ],
+      [
+        "chilli-flakes",
+        1
+      ],
+      [
+        "cornstarch",
+        20
+      ],
+      [
+        "oil",
+        40
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {carrot} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Press {tofu} for 10 minutes, cut into 2 cm cubes and toss with {cornstarch}. Fry in {oil} for 8 minutes until golden all over; drain.",
+      "Mix {soy-sauce}, {vinegar}, {sugar} and {chilli-flakes} with 30 ml water for the sauce. Finely slice {onion} and crush {garlic}.",
+      "Toss the onion and garlic with the sauce, spoon over the hot tofu and let it sit for 2 minutes.",
+      "Top with sliced {spring-onion} and {sesame-seeds}."
     ]
   },
   {
@@ -960,43 +1016,59 @@ KITCHEN.add(
     "name": "Filipino Coconut Vegetable Curry",
     "meal": "big",
     "cuisine": "Filipino",
-    "time": 38,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "pumpkin",
+        300
+      ],
+      [
+        "green-beans",
+        150
+      ],
+      [
+        "aubergine",
+        "1pc"
+      ],
+      [
+        "coconut-milk",
+        400
+      ],
+      [
+        "onion",
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "3pc"
       ],
       [
-        "spring-onion",
-        2
+        "ginger",
+        15
       ],
       [
-        "carrot",
-        1
+        "fish-sauce",
+        15
       ],
       [
-        "sesame-oil",
-        10
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "oil",
+        15
       ],
       [
         "salt",
         2
-      ],
-      [
-        "chicken-thigh",
-        400
       ]
     ],
     "steps": [
-      "Warm the {sesame-oil} in a pan and soften the {garlic} until fragrant.",
-      "Add the {ginger} and turn to coat in the seasoning.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Cut {pumpkin} into 3 cm cubes, {aubergine} into chunks and trim {green-beans}. Chop {onion}, crush {garlic}, grate {ginger}, slice {green-chilli}.",
+      "Cook the onion in {oil} for 4 minutes, add garlic, ginger and chilli for 1 minute.",
+      "Add {coconut-milk}, {fish-sauce}, {salt} and the pumpkin; simmer for 10 minutes.",
+      "Add the aubergine and green beans and cook 10 minutes until all are tender and the sauce is creamy."
     ]
   }
 ]

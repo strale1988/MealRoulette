@@ -441,68 +441,44 @@ KITCHEN.add(
     "name": "Bolivian Sopa de Maní Peanut Soup",
     "meal": "big",
     "cuisine": "Bolivian",
-    "time": 37,
+    "time": 50,
     "serves": 4,
     "ing": [
+      [
+        "peanuts",
+        100
+      ],
+      [
+        "potatoes",
+        400
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "cumin",
+        2
+      ],
       [
         "rice",
-        250
+        60
       ],
       [
-        "tomato",
-        250
+        "vegetable-stock",
+        1000
       ],
       [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
+        "parsley",
         10
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "bolivian-silpancho-style-beef-and-rice",
-    "name": "Bolivian Silpancho-Style Beef and Rice",
-    "meal": "big",
-    "cuisine": "Bolivian",
-    "time": 44,
-    "serves": 4,
-    "ing": [
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
       ],
       [
         "oil",
@@ -511,22 +487,80 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Toast {peanuts} in a dry pan for 4 minutes until golden, then blend with 250 ml of the {vegetable-stock} into a smooth cream.",
+      "Chop {onion} and crush {garlic}. Cook the onion in {oil} for 5 minutes, then add garlic and {cumin} for 1 minute.",
+      "Add the remaining stock, diced {potatoes}, diced {carrot}, {rice} and {salt}. Simmer for 20 minutes until the potatoes and rice are tender.",
+      "Stir in the peanut cream and simmer gently for 10 minutes, without boiling hard, until the soup is thick and silky.",
+      "Top with chopped {parsley} and serve."
+    ]
+  },
+  {
+    "id": "bolivian-silpancho-style-beef-and-rice",
+    "name": "Bolivian Silpancho-Style Beef and Rice",
+    "meal": "big",
+    "cuisine": "Bolivian",
+    "time": 70,
+    "serves": 4,
+    "ing": [
+      [
+        "beef-steak",
+        400
+      ],
+      [
+        "breadcrumbs",
+        80
+      ],
+      [
+        "flour",
+        30
+      ],
+      [
+        "eggs",
+        "5pc"
+      ],
+      [
+        "rice",
+        200
+      ],
+      [
+        "potatoes",
+        500
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "red-onion",
+        "1pc"
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "oil",
+        80
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "black-pepper",
+        1
+      ]
+    ],
+    "steps": [
+      "Peel {potatoes}, cut into 3 cm chunks and boil in salted water for 15 minutes until tender; drain. Cook {rice} in 400 ml water with a pinch of {salt}, covered, on low heat for 15 minutes.",
+      "Cut {beef-steak} into 4 portions and pound each between baking paper until about 4 mm thin. Season with {salt} and {black-pepper}.",
+      "Dredge each cutlet in {flour}, dip in one of the beaten {eggs}, then coat in {breadcrumbs}.",
+      "Heat half of the {oil} and fry the cutlets for 2 minutes per side until crisp and golden. Drain.",
+      "Dice {tomato} and {red-onion}, mix with the juice of {lime} and a pinch of salt for the salsa.",
+      "Fry the potatoes in the remaining oil for 5 minutes until golden, then fry the other 4 eggs. Pile rice and potatoes on each plate, top with a cutlet and a fried egg, and spoon the salsa over."
     ]
   },
   {
@@ -572,43 +606,60 @@ KITCHEN.add(
     "name": "Bolivian Quinoa and Vegetable Soup",
     "meal": "big",
     "cuisine": "Bolivian",
-    "time": 58,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "quinoa",
+        100
       ],
       [
-        "tomato",
-        250
+        "potatoes",
+        300
       ],
       [
-        "plantain",
+        "carrot",
+        "2pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "sweetcorn",
+        100
+      ],
+      [
+        "cumin",
         2
       ],
       [
-        "red-pepper",
-        1
+        "vegetable-stock",
+        1200
       ],
       [
-        "cilantro",
+        "parsley",
         10
-      ],
-      [
-        "lime",
-        1
       ],
       [
         "oil",
         20
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Rinse {quinoa} under cold water for 1 minute to remove its bitter coating. Chop {onion}, dice {potatoes} and {carrot}, and crush {garlic}.",
+      "Heat {oil} in a pot and cook the onion for 5 minutes, then add garlic and {cumin} for 1 minute.",
+      "Add {vegetable-stock}, the potatoes, carrots and {salt}. Simmer for 10 minutes.",
+      "Stir in the quinoa and {sweetcorn} and cook 15 minutes until the quinoa has unfurled and the vegetables are tender.",
+      "Stir in chopped {parsley} and serve."
     ]
   },
   {
@@ -654,44 +705,43 @@ KITCHEN.add(
     "name": "Bolivian Corn and Cheese Bake",
     "meal": "big",
     "cuisine": "Bolivian",
-    "time": 32,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        250
+        "sweetcorn",
+        400
       ],
       [
-        "plantain",
-        2
+        "eggs",
+        "3pc"
       ],
       [
-        "red-pepper",
-        1
+        "cheese",
+        150
       ],
       [
-        "cilantro",
+        "onion",
+        "1pc"
+      ],
+      [
+        "sugar",
         10
       ],
       [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
+        "butter",
+        30
       ],
       [
         "salt",
-        3
+        2
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomato} and turn to coat in the seasoning.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 180 °C. Finely chop {onion} and cook in half of the {butter} for 5 minutes.",
+      "Blend {sweetcorn} (keep a third whole) with {eggs}, {sugar} and {salt} into a thick, slightly coarse batter and stir in the onion.",
+      "Cube {cheese} and fold in most of it.",
+      "Pour into a buttered dish, scatter the remaining cheese on top, dot with the remaining butter and bake for 35–40 minutes until set and golden."
     ]
   },
   {
@@ -699,47 +749,47 @@ KITCHEN.add(
     "name": "Bolivian Peanut Potato Bowl",
     "meal": "big",
     "cuisine": "Bolivian",
-    "time": 39,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "cilantro",
-        10
+        "potatoes",
+        600
+      ],
+      [
+        "peanuts",
+        80
+      ],
+      [
+        "milk",
+        100
+      ],
+      [
+        "garlic",
+        "1pc"
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "eggs",
+        "2pc"
       ],
       [
         "lime",
-        1
-      ],
-      [
-        "oil",
-        20
+        "1pc"
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Boil {potatoes} in salted water for 20 minutes until tender. In another pot, boil {eggs} for 9 minutes, then cool, peel and halve.",
+      "Toast {peanuts} in a dry pan for 4 minutes, then blend with {milk}, {garlic}, {paprika} and {salt} into a thick, creamy sauce, adding a splash of water if needed.",
+      "Warm the sauce gently in a small pan for 3 minutes.",
+      "Slice the potatoes into bowls, spoon over the peanut sauce, add the eggs and squeeze {lime} over the top."
     ]
   },
   {
@@ -786,131 +836,147 @@ KITCHEN.add(
     "name": "Bolivian Chicken with Tomato and Peppers",
     "meal": "big",
     "cuisine": "Bolivian",
-    "time": 53,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
+        "chicken-thigh",
+        600
+      ],
+      [
         "rice",
-        250
+        200
       ],
       [
         "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "2pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
-        "cilantro",
-        10
+        "aji-amarillo-paste",
+        20
       ],
       [
-        "lime",
-        1
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "chicken-stock",
+        400
       ],
       [
         "oil",
         20
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Season {chicken-thigh} with {salt}. Dice {onion}, {red-pepper} and {tomato}, and crush {garlic}.",
+      "Heat {oil} in a wide pan and brown the chicken for 5 minutes per side. Remove.",
+      "Cook the onion and red pepper for 5 minutes, then stir in garlic, {cumin} and {aji-amarillo-paste} for 1 minute. Add the tomato and cook 4 minutes.",
+      "Add {rice} and stir to coat, pour in {chicken-stock} and nestle the chicken on top.",
+      "Cover and cook on low heat for 25 minutes until the rice is tender and the chicken is cooked through. Rest 5 minutes and serve."
     ]
   },
   {
     "id": "bolivian-sweet-plantain-cakes",
     "name": "Bolivian Sweet Plantain Cakes",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Bolivian",
-    "time": 60,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "red-pepper",
-        1
+        "plantain",
+        "3pc"
       ],
       [
-        "cilantro",
+        "cheese",
+        100
+      ],
+      [
+        "flour",
+        50
+      ],
+      [
+        "sugar",
         10
       ],
       [
-        "lime",
+        "cinnamon",
         1
       ],
       [
         "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
+        60
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {cilantro} until fragrant.",
-      "Add the {red-pepper} and {black-beans}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Peel the very ripe {plantain}, mash until nearly smooth and stir in {flour}. Cube {cheese} into 1 cm pieces.",
+      "Form 8 patties with wet hands, pressing a few cheese cubes into the middle of each and sealing the plantain around them.",
+      "Heat {oil} in a frying pan over medium heat and fry the patties for 3 minutes per side until deep golden and the cheese is melting.",
+      "Mix {sugar} with {cinnamon}, dust over the hot cakes and serve."
     ]
   },
   {
     "id": "bolivian-lime-cabbage-slaw",
     "name": "Bolivian Lime Cabbage Slaw",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Bolivian",
-    "time": 31,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "oil",
+        "cabbage",
+        400
+      ],
+      [
+        "lime",
+        "2pc"
+      ],
+      [
+        "red-onion",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "1pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "cilantro",
+        15
+      ],
+      [
+        "olive-oil",
         20
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {salt} until fragrant.",
-      "Add the {oil} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Shred {cabbage} very finely and slice {red-onion} thinly. Toss with {salt} and the juice of {lime}, and massage for 1 minute until the cabbage softens.",
+      "Dice {tomato}, finely chop {green-chilli} and chop {cilantro}.",
+      "Mix everything with {olive-oil}, let it stand for 10 minutes so the flavours marry, then taste for lime and salt before serving."
     ]
   },
   {

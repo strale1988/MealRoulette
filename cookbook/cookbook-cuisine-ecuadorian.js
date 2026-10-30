@@ -413,43 +413,52 @@ KITCHEN.add(
     "name": "Ecuadorian Llapingachos Potato Cakes",
     "meal": "big",
     "cuisine": "Ecuadorian",
-    "time": 37,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "potatoes",
+        800
       ],
       [
-        "tomato",
-        250
+        "cheese",
+        150
       ],
       [
-        "plantain",
+        "onion",
+        "1pc"
+      ],
+      [
+        "paprika",
         2
       ],
       [
-        "red-pepper",
-        1
+        "butter",
+        30
       ],
       [
-        "cilantro",
-        10
+        "eggs",
+        "4pc"
       ],
       [
-        "lime",
-        1
+        "avocado",
+        "1pc"
       ],
       [
         "oil",
-        20
+        30
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Peel {potatoes}, boil in salted water for 20 minutes until soft, drain and mash smooth.",
+      "Finely chop {onion} and cook in {butter} with {paprika} for 6 minutes. Mix into the mash with {salt} and let cool slightly.",
+      "Grate {cheese}. Shape the mash into 8 balls, make a dent in each, fill with cheese, close up and flatten into patties.",
+      "Fry the patties in half of the {oil} for 4 minutes per side until crisp and golden.",
+      "Fry {eggs} in the remaining oil, slice {avocado}, and serve a stack of patties topped with an egg and avocado."
     ]
   },
   {
@@ -457,48 +466,64 @@ KITCHEN.add(
     "name": "Ecuadorian Seco de Pollo-Style Chicken",
     "meal": "big",
     "cuisine": "Ecuadorian",
-    "time": 44,
+    "time": 65,
     "serves": 4,
     "ing": [
       [
-        "plantain",
-        2
+        "chicken-thigh",
+        600
+      ],
+      [
+        "rice",
+        250
+      ],
+      [
+        "onion",
+        "2pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "3pc"
       ],
       [
         "cilantro",
-        10
+        20
       ],
       [
-        "lime",
-        1
+        "cumin",
+        3
+      ],
+      [
+        "beer",
+        150
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {red-pepper} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {plantain} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {cilantro} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Season {chicken-thigh} with {salt}, {black-pepper} and half of the {cumin}. Dice {onion}, {red-pepper} and {tomato} and crush {garlic}.",
+      "Heat {oil} in a wide pan and brown the chicken for 5 minutes per side. Remove.",
+      "Cook the onion and pepper for 6 minutes, add garlic and the remaining cumin for 1 minute, then the tomato and {beer}. Simmer for 5 minutes.",
+      "Return the chicken, cover and simmer on low heat for 30 minutes. Meanwhile cook {rice} in 500 ml water, covered, on low heat for 15 minutes.",
+      "Stir in chopped {cilantro} and serve the chicken and sauce over the rice."
     ]
   },
   {
@@ -544,43 +569,47 @@ KITCHEN.add(
     "name": "Ecuadorian Quinoa and Corn Salad",
     "meal": "big",
     "cuisine": "Ecuadorian",
-    "time": 58,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "quinoa",
+        150
+      ],
+      [
+        "sweetcorn",
+        200
       ],
       [
         "tomato",
-        250
+        "2pc"
       ],
       [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
+        "red-onion",
+        "1pc"
       ],
       [
         "cilantro",
-        10
+        15
       ],
       [
         "lime",
-        1
+        "2pc"
       ],
       [
-        "oil",
-        20
+        "olive-oil",
+        30
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Rinse {quinoa} well, then simmer in 300 ml water with a pinch of {salt}, covered, for 15 minutes. Fluff and spread out to cool.",
+      "Cook {sweetcorn} in boiling water for 4 minutes, drain and cool.",
+      "Dice {tomato} and {red-onion} and chop {cilantro}.",
+      "Whisk {olive-oil} with the juice of {lime} and the remaining salt, then toss everything together. Chill 10 minutes and serve."
     ]
   },
   {
@@ -626,92 +655,95 @@ KITCHEN.add(
     "name": "Ecuadorian Lentil Rice Bowl",
     "meal": "big",
     "cuisine": "Ecuadorian",
-    "time": 32,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a pan and soften the {plantain} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {tomato} and turn to coat in the seasoning.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "ecuadorian-tomato-and-avocado-salad",
-    "name": "Ecuadorian Tomato and Avocado Salad",
-    "meal": "big",
-    "cuisine": "Ecuadorian",
-    "time": 39,
-    "serves": 4,
-    "ing": [
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
+        "green-lentils",
+        200
       ],
       [
         "rice",
         250
       ],
       [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
         "tomato",
-        250
+        "2pc"
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "cilantro",
+        15
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
+        "salt",
+        4
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {cilantro} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Rinse {green-lentils} and simmer in 600 ml water for 30 minutes until tender; drain if very wet.",
+      "Cook {rice} in 500 ml water with a pinch of {salt}, covered, on low heat for 15 minutes.",
+      "Cook chopped {onion} in {oil} for 5 minutes, add crushed {garlic} and {cumin} for 1 minute, then chopped {tomato} and cook 6 minutes until jammy.",
+      "Stir the lentils into the sauce with the remaining salt and simmer 5 minutes.",
+      "Serve the lentils over the rice, topped with chopped {cilantro}."
+    ]
+  },
+  {
+    "id": "ecuadorian-tomato-and-avocado-salad",
+    "name": "Ecuadorian Tomato and Avocado Salad",
+    "meal": "bite",
+    "cuisine": "Ecuadorian",
+    "time": 15,
+    "serves": 4,
+    "ing": [
+      [
+        "tomato",
+        "4pc"
+      ],
+      [
+        "avocado",
+        "2pc"
+      ],
+      [
+        "red-onion",
+        "1pc"
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "cilantro",
+        15
+      ],
+      [
+        "olive-oil",
+        20
+      ],
+      [
+        "salt",
+        3
+      ]
+    ],
+    "steps": [
+      "Slice {red-onion} very thinly and soak in the juice of {lime} for 10 minutes.",
+      "Cut {tomato} into wedges and {avocado} into thick slices.",
+      "Arrange on a plate, spoon over the onion and lime, drizzle with {olive-oil}, season with {salt} and scatter chopped {cilantro}. Serve at once."
     ]
   },
   {
@@ -758,101 +790,121 @@ KITCHEN.add(
     "name": "Ecuadorian Chicken with Tomato and Peppers",
     "meal": "big",
     "cuisine": "Ecuadorian",
-    "time": 53,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "chicken-thigh",
+        600
       ],
       [
         "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "3pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "peanut-butter",
+        30
       ],
       [
         "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
+        15
       ],
       [
         "oil",
         20
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {tomato} until fragrant.",
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Season {chicken-thigh} with {salt} and half of the {cumin}. Slice {onion} and {red-pepper}, chop {tomato} and crush {garlic}.",
+      "Heat {oil} in a wide pan and brown the chicken for 5 minutes per side. Remove.",
+      "Cook the onion and pepper for 6 minutes, add garlic and the remaining cumin, then the tomato and 150 ml water. Simmer 5 minutes.",
+      "Return the chicken, cover and simmer for 25 minutes. Stir {peanut-butter} into the sauce and simmer 5 minutes more until thick.",
+      "Scatter chopped {cilantro} and serve."
     ]
   },
   {
     "id": "ecuadorian-sweet-plantain-cakes",
     "name": "Ecuadorian Sweet Plantain Cakes",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Ecuadorian",
-    "time": 60,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "red-pepper",
-        1
+        "plantain",
+        "3pc"
       ],
       [
-        "cilantro",
-        10
+        "cheese",
+        80
       ],
       [
-        "lime",
-        1
+        "flour",
+        50
       ],
       [
-        "oil",
-        20
+        "butter",
+        30
       ],
       [
         "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {cilantro} until fragrant.",
-      "Add the {red-pepper} and {black-beans}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Peel the very ripe {plantain}, mash until nearly smooth and stir in {flour} and {salt}. Grate {cheese} and fold it in.",
+      "Shape into 8 flat patties with wet hands.",
+      "Melt {butter} in a frying pan over medium heat and fry the patties for 3 minutes per side until golden and the cheese is melting. Serve warm."
     ]
   },
   {
     "id": "ecuadorian-lime-cabbage-slaw",
     "name": "Ecuadorian Lime Cabbage Slaw",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Ecuadorian",
-    "time": 31,
+    "time": 15,
     "serves": 4,
     "ing": [
+      [
+        "cabbage",
+        400
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "lime",
+        "2pc"
+      ],
+      [
+        "sugar",
+        5
+      ],
+      [
+        "cilantro",
+        15
+      ],
       [
         "oil",
         20
@@ -860,29 +912,12 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {salt} until fragrant.",
-      "Add the {oil} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Shred {cabbage} finely and grate {carrot}. Toss with {salt} and {sugar}.",
+      "Whisk the juice of {lime} with {oil} and pour over the cabbage.",
+      "Fold in chopped {cilantro}, rest for 10 minutes and serve."
     ]
   },
   {
