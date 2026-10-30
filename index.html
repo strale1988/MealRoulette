@@ -21,6 +21,9 @@ const toast=m=>{let t=document.getElementById("navtoast");if(!t){t=document.crea
 if(ON){try{const s=history.state||{};
   if(s.mrroot)history.pushState({mrapp:1},"");
   else if(!s.mrapp){if(s.mrres||s.mrlay)history.replaceState({mrapp:1},"");else{history.replaceState({mrroot:1},"");history.pushState({mrapp:1},"")}}}catch(e){}}
+const ST=[],TP=[]; // what each history entry above the app is ("tab", "res", "lay"), and the tab a "tab" entry came from
+if(ON){const _p=history.pushState.bind(history);history.pushState=function(s,t,u){ST.push(s&&s.mrtab?"tab":s&&s.mrlay?"lay":s&&s.mrres?"res":"x");return _p(s,t,u)}}
+addEventListener("popstate",()=>{if(!ON)return;const t=ST.pop();if(t==="tab"&&TP.length&&window.__nav&&window.__nav.onTabBack)window.__nav.onTabBack(TP.pop())}); // Back from a tab entry: return to the tab we came from
 addEventListener("popstate",e=>{
   if(!ON)return;
   if(skip>0){skip--;e.stopImmediatePropagation();return}               // a Back we triggered ourselves
@@ -32,7 +35,8 @@ addEventListener("popstate",e=>{
     armed=1;clearTimeout(ta);ta=setTimeout(()=>{armed=0},2000);toast("Press back again to exit")}
 });
 window.__nav={
-  on:ON,
+  on:ON,onTabBack:null,
+  tabPush(prev){if(!ON)return;try{history.pushState({mrtab:1},"");TP.push(prev)}catch(e){}}, // a tab change the user made is one Back step
   push(close){if(!ON)return null;const l={close};try{history.pushState({mrlay:1},"")}catch(e){return null}L.push(l);return l},  // e.g. cooking mode
   pop(l){if(!l)return;const i=L.indexOf(l);if(i<0)return;L.splice(i,1);if(i===L.length&&history.state&&history.state.mrlay){skip++;history.back()}}, // closed with its own X: drop its entry
   drop(){if(!ON||skip>0)return;const s=history.state;if(s&&(s.mrres||s.mrlay)){skip++;history.back()}}                                         // left a result screen without Back: drop its entry
@@ -937,6 +941,7 @@ ul.ing li .q{white-space:normal;text-align:right;flex:0 1 auto;max-width:52%;min
  .shakehint.kb{display:block}
 }
 .shakehint.kb{display:none}
+.alm{display:grid;gap:8px;margin:6px 0 14px}.alm button{display:block;width:100%;text-align:left;padding:10px 14px;border:var(--bw,2px) solid var(--ink);border-radius:16px;background:var(--card,#fff);color:var(--ink);font:inherit;cursor:pointer}.alm button b{display:block;font-size:15px}.alm button small{display:block;margin-top:2px;color:var(--mute);font-size:13px}
 /* drawn icons that replace emoji in text (chips, headings, hints), sized to the text around them */
 .emo{display:inline-flex;align-items:center;vertical-align:-.22em;line-height:1;flex:none}.emo svg{width:1.25em;height:1.25em;display:block;overflow:visible}
 .pgr .cem i svg{display:block;margin:10px auto 0}
@@ -1517,7 +1522,7 @@ const missing=i=>!isLeftIng(i)&&items().length>0&&!i.have&&!(S.basic&&(i.pantry|
 function priorityCount(g){const ids=new Set(S.urgent.flatMap(x=>K.match(x)));return(g.ing||[]).filter(i=>(i.id?[i.id]:K.match(i.name||"")).some(id=>ids.has(id))).length;}
 function bestOf(fn,k){let best=null,bm=1e9;for(let j=0;j<k;j++){const g=fn(),m=g.ing.filter(missing).length*100-priorityCount(g)*30+(S.quick&&g.min>30?1000:0)+(recent(g.title)?50:0);if(m<bm){best=g;bm=m;if(m<=-30)break}}return best}
 function callout(r){
-  if(r.plain||!items().length)return"";const m=r.ing.filter(missing),uu=(r.unused||[]).filter(x=>!stap().includes(x)),un=uu.length?` Not used this time: ${esc(uu.join(", "))}.`:"";
+  if(!items().length)return"";const m=r.ing.filter(missing),uu=(r.unused||[]).filter(x=>!stap().includes(x)),un=uu.length?` Not used this time: ${esc(uu.join(", "))}.`:"";
   return m.length?`<div class="call buy2">${I("cart")}<span>To buy (${m.length}): ${m.map(i=>esc(i.name)).join(", ")}.${un}</span></div>`:`<div class="call ok2">${I("check")}<span>You already have everything.${un}</span></div>`;
 }
 const isBake=r=>/^bake-|bread|cake|cookie|crumble/.test(r.id),isLeft=isLeftId;
@@ -1578,9 +1583,9 @@ function plainPick(uniform){
   const m=S.meal,pool=RECIPES.filter(r=>r.meals.includes(m)&&K.allowed(r,S.diet)&&!r.ids.some(isLeft));if(!pool.length)return false;
   const sn=seenOf();let c=pool.filter(r=>!sn.includes(r.id));
   if(!c.length){const last=sn[sn.length-1];clearSeen();c=pool.filter(r=>r.id!==last);if(!c.length)c=pool}
-  const r=uniform?c[Math.floor(Math.random()*c.length)]:pickWeighted(c.map(x=>({r:x}))).r,x=K.resolve(r,S.n,{fridge:new Set(),basic:S.basic,urgent:new Set()});
+  const r=uniform?c[Math.floor(Math.random()*c.length)]:pickWeighted(c.map(x=>({r:x}))).r,x=K.resolve(r,S.n,{fridge:fridgeIds(),basic:S.basic,urgent:new Set([...S.urgent.flatMap(w=>K.match(w)),...[...fridgeIds()].filter(isLeft)])}); // same resolve as every other pick, so staples and leftovers still show what is already at home and what is "to buy"
   markSeen(r.id);markShown(r);
-  show({rid:r.id,title:r.title,min:r.min,n:S.n,steps:x.steps,ing:x.ing,desc:[r.note,x.leftoverNote].filter(Boolean).join(" "),plain:true},"");return true;
+  show({rid:r.id,title:r.title,min:r.min,n:S.n,steps:x.steps,ing:x.ing,desc:[r.note,x.leftoverNote].filter(Boolean).join(" ")},"");return true;
 }
 window.__plainRoll=m=>{S.meal=m;S.pm={[m]:true};save();window.__plain="uniform"}; // the start wheel: a random kind of meal, fridge and filters ignored
 function go(){
@@ -1601,15 +1606,18 @@ function go(){
 function canMake(m){const o=S.meal;S.meal=m;try{if(recipeInfos(m).some(x=>x.miss===0))return true;const it=items(),g=isMain(m)?(S.bake?null:fridgeTry(it)):bestOf(()=>GEN.makeSmall(m,it,S.n,dietP()),30);return !!(g&&!g.ing.some(missing))}catch(e){return false}finally{S.meal=o}}
 function nothing(){
   current=null;lastPlan=null;$("note").textContent="";
-  const others=MEALS.filter(m=>m[0]!==S.meal&&canMake(m[0])),near={};
-  recipeInfos().filter(x=>x.miss===1).forEach(x=>{const i=x.ing.find(missing);if(i)near[i.name]=(near[i.name]||0)+1});
+  const others=MEALS.filter(m=>m[0]!==S.meal&&canMake(m[0])),near={},RI=recipeInfos(),
+    almost=RI.filter(x=>x.miss>=1&&x.miss<=2).sort((a,b)=>a.miss-b.miss||b.hit-a.hit||Math.random()-.5).slice(0,6); // "almost there": real recipes that are only one or two ingredients short
+  RI.filter(x=>x.miss===1).forEach(x=>{const i=x.ing.find(missing);if(i)near[i.name]=(near[i.name]||0)+1});
   const add=Object.entries(near).sort((a,b)=>b[1]-a[1]).slice(0,4);
-  $("out").innerHTML=`<article class="card"><div class="body"><div class="ph"><b>Nothing for ${esc(ML(S.meal).toLowerCase())} from only your fridge</b>${others.length||add.length?"Here is what would work:":"Add a few more ingredients and try again."}</div>
+  $("out").innerHTML=`<article class="card"><div class="body"><div class="ph"><b>Nothing for ${esc(ML(S.meal).toLowerCase())} from only your fridge</b>${others.length||add.length||almost.length?"Here is what would work:":"Add a few more ingredients and try again."}</div>
   ${others.length?`<h3>${I("dice")}Works right now</h3><div class="row">${others.map(m=>`<button data-meal="${m[0]}">${I(m[1])}${m[2]}</button>`).join("")}</div>`:""}
   ${add.length?`<h3>${I("cart")}One ingredient away</h3><div class="row">${add.map(a=>`<button data-add="${esc(a[0])}">+ ${esc(a[0])} <small>(${a[1]} recipe${a[1]>1?"s":""})</small></button>`).join("")}</div>`:""}
+  ${almost.length?`<h3>${I("check")}Almost there</h3><div class="alm">${almost.map((x,k)=>`<button data-near="${k}"><b>${esc(x.r.title)}</b><small>${x.r.min} min · need ${x.ing.filter(missing).map(i=>esc(i.name)).join(", ")}</small></button>`).join("")}</div>`:""}
   <div class="row"><button data-closest="1">${I("list")}Show the closest recipe anyway</button></div></div></article>`;
   $("out").querySelectorAll("[data-meal]").forEach(b=>b.onclick=()=>{S.meal=b.dataset.meal;S.pm[S.meal]=true;save();draw();go()});
   $("out").querySelectorAll("[data-add]").forEach(b=>b.onclick=()=>{S.pantry.push(b.dataset.add.toLowerCase());save();draw();go()});
+  $("out").querySelectorAll("[data-near]").forEach(b=>b.onclick=()=>{const x=almost[+b.dataset.near];markSeen(x.r.id);markShown(x.r);show({rid:x.r.id,title:x.r.title,min:x.r.min,n:S.n,steps:x.steps,ing:x.ing,desc:[x.r.note,x.leftoverNote].filter(Boolean).join(" ")},"")});
   $("out").querySelectorAll("[data-closest]").forEach(b=>b.onclick=()=>spin());
 }
 function fridgeTry(it){let best=null,bestScore=1e9;for(let j=0;j<40;j++){const x=GEN.makeFridge(it,S.n,S.cuisine,dietP(),S.basic);if(!x)continue;const score=x.ing.filter(missing).length*100-priorityCount(x)*500+(S.quick&&x.min>30?1000:0)+(recent(x.title)?50:0);if(score<bestScore){best=x;bestScore=score}if(priorityCount(x)>0&&!x.ing.some(missing)&&(!S.quick||x.min<=30)&&!recent(x.title))break}return best}
@@ -1658,7 +1666,7 @@ function show(r,msg){
   <div class="meta"><span>${I("clock")}${r.min} min</span><span>${I("users")}${r.n} ${hasKids()?(r.n>1?"portions":"portion"):(r.n>1?"people":"person")}</span><span>${I(ic)}${ML(S.meal)}</span>${r.remix?`<span>${I("wand")}Whisked</span>`:""}${(()=>{const x=r.ing.length&&r.ing.every(i=>i.id)?K.nutri(r.ing,r.n):GEN.nutri(r.ing,r.n);return x.kcal?`<span title="Rough estimate">${I("flame")}≈${x.kcal} kcal · ${x.p} g protein each</span>`:""})()}</div>
   ${r.desc?`<p class="desc">${esc(cv(r.desc))}</p>`:""}${callout(r)}
   <div class="split"><div><h3>${I("list")}Ingredients <small style="text-transform:none;letter-spacing:0;color:var(--mute)">(tap to tick off)</small></h3>
-  <ul class="ing">${r.ing.map(i=>`<li><span>${esc(i.name)}${missing(i)&&!r.plain?'<span class="buy">to buy</span>':""}</span><span class="q">${esc(Q(i))}</span></li>`).join("")}</ul></div>
+  <ul class="ing">${r.ing.map(i=>`<li><span>${esc(i.name)}${missing(i)?'<span class="buy">to buy</span>':""}</span><span class="q">${esc(Q(i))}</span></li>`).join("")}</ul></div>
   <div><h3>${I("chef")}Method</h3><ol>${r.steps.map(s=>`<li><span>${esc(cv(s))}</span></li>`).join("")}</ol></div></div>
   <div class="row"><button id="save">${I("heart")}Save</button><button id="shop">${I("cart")}Copy list</button><button id="again">Again</button></div></div></article>`;
   $("out").querySelectorAll(".ing li").forEach(li=>li.onclick=()=>li.classList.toggle("done"));
@@ -2910,6 +2918,14 @@ window.__tidyRow=function(row,icon){
     if(a&&c&&c.querySelector(".meta use[href='#i-wand']"))a.innerHTML=I("wand")+"Whisk again"}catch(e){console.error(e)}
   return r;
 };
+})();
+
+/* ---- Back goes through the tabs too: every tab change the user makes is one history step, so the phone's Back returns to the previous tab before it ever asks to exit ---- */
+(function(){const N=window.__nav;if(!N||!N.on)return;const _st=setTab;let restoring=false;
+  setTab=function(t){const prev=tab,r=_st.apply(this,arguments);
+    if(!restoring&&tab!==prev&&!document.querySelector(".splash:not(.out)")&&!(window.__home&&window.__home.from))N.tabPush(prev); // wheel flows manage their own Back (the result screen closes back to the wheel)
+    return r};
+  N.onTabBack=prev=>{restoring=true;try{setTab(prev)}finally{restoring=false}};
 })();
 </script>
 <script>
