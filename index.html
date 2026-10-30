@@ -2241,11 +2241,12 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
     const names=()=>{const z=((window.PZ&&PZ.recipes)||[]).map(x=>x.title||x.name).filter(Boolean);
       return RECIPES.map(r=>r.title).concat(Object.keys(GEN.cuisines).map(c=>c+" "+rnd(["chicken bowl","stir-fry","curry","traybake","stew"])),z)};
     /* the start wheel mixes the app's spinners: add a kind here (e.g. burger) and it joins the roulette */
-    const KINDS=[...["Main","Breakfast","Snack","Dessert"].map(m=>({w:1,go:i=>{window.__plainRoll(m);setTab("cook");run("spin",true,i)}})),{w:1,art:"wedge",go:i=>{setTab("pizza");pzRun("spin",i)}}];
+    const KINDS=[...["Main","Breakfast","Snack","Dessert"].map(m=>({key:"cook-"+m,w:1,go:i=>{window.__plainRoll(m);setTab("cook");run("spin",true,i)}})),{key:"pizza",w:1,art:"wedge",go:i=>{setTab("pizza");pzRun("spin",i)}}];
     /* the Craft meals and treats are on the wheel too (burgers, pasta, noodles, soups...): each opens its own tool and spins a random build */
     const CRAFTK=["burger","pasta","noodle","soup","salad","sandwich","dumpling","eggs","grain","bake","frozen"];
-    const kinds=()=>KINDS.concat(window.__spinCraft?CRAFTK.filter(id=>window.__craftHas(id)).map(id=>({w:1,go:i=>{setTab(id);window.__spinCraft(id,i)}})):[]);
-    const pick=()=>{const KS=kinds();let r=Math.random()*KS.reduce((t,k)=>t+k.w,0);return KS.find(k=>(r-=k.w)<0)||KS[0]};
+    const kinds=()=>KINDS.concat(window.__spinCraft?CRAFTK.filter(id=>window.__craftHas(id)).map(id=>({key:id,w:1,go:i=>{setTab(id);window.__spinCraft(id,i)}})):[]);
+    let lastKind=null; // equal chance for every kind, but never the same kind twice in a row
+    const pick=()=>{let KS=kinds().filter(k=>k.key!==lastKind);const r0=KS.reduce((t,k)=>t+k.w,0);let r=Math.random()*r0;const k=KS.find(k=>(r-=k.w)<0)||KS[0];lastKind=k.key;return k};
     let _from=false;
     const H=window.__home={
       up:()=>sp.isConnected&&ready&&!sp.classList.contains("out"),
@@ -2278,8 +2279,8 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
     /* a recipe that came from the start wheel keeps rolling the wheel: "Again" (or a shake) picks a new kind at random, instead of repeating whichever kind it landed on */
     H.roll=false;
     H.again=()=>{if(!H.roll||!H.from||busy)return false;try{window.__leaveCook&&__leaveCook();window.__leavePizza&&__leavePizza();window.__leaveCraft&&__leaveCraft();H.show(true);setTimeout(()=>H.spin(),60)}catch(e){console.error(e)}return true}; // "Again" runs the start wheel again: random spinners to the end, then it lands on its pick
-    document.addEventListener("click",e=>{const t=e.target.closest&&e.target.closest("#again,.pzagain,#spin,#remix,#pzspin,#pzremix");if(!t)return;
-      if(t.matches("#again,.pzagain")){if(H.again()){e.stopImmediatePropagation();e.preventDefault()}}else{H.roll=false;window.__plain=false}},true); // using Spin or Remix yourself switches this off
+    document.addEventListener("click",e=>{const t=e.target.closest&&e.target.closest("#again,.pzagain,.crafttab.resmode [data-a=rand],#spin,#remix,#pzspin,#pzremix");if(!t)return;
+      if(t.matches("#again,.pzagain,.crafttab.resmode [data-a=rand]")){if(H.again()){e.stopImmediatePropagation();e.preventDefault()}}else{H.roll=false;window.__plain=false}},true); // using Spin or Remix yourself switches this off
     sp.addEventListener("click",e=>{if(e.target.closest&&e.target.closest("#spgo"))return;H.spin()}); // tap anywhere
     document.addEventListener("keydown",e=>{if(!H.up()||e.metaKey||e.ctrlKey||e.altKey)return;if(e.target.closest&&e.target.closest("#spgo"))return;const k=e.key.toLowerCase();if(k==="enter"||k===" "||k==="s"){e.preventDefault();H.spin()}});
     document.addEventListener("keydown",e=>{ // recipe card from the start wheel: S rolls the wheel again, Esc closes

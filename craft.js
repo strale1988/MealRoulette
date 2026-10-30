@@ -109,7 +109,7 @@ const NORM={};Object.keys(ICO).forEach(k=>{NORM[k.replace(/\uFE0F/g,"")]=ICO[k]}
 const icoHTML=(e,sz)=>{const g=NORM[String(e==null?"":e).replace(/\uFE0F/g,"")];return g?`<svg viewBox="-16 -16 32 32" width="${sz||30}" height="${sz||30}" aria-hidden="true">${g}</svg>`:e};
 window.__ico=e=>icoHTML(e);
 /* safety net: any emoji that has a drawn icon and shows up as text anywhere in the page (chips, headings, hints, recipe files) is swapped for the drawing, now and whenever the page changes */
-{const EMRE=new RegExp("("+Object.keys(NORM).sort((a,b)=>b.length-a.length).join("|")+")\\uFE0F?","g"),NOSW="SCRIPT,STYLE,TEXTAREA,INPUT,SELECT,OPTION,TITLE,svg,[contenteditable],.noemo";
+{const EMRE=new RegExp("("+Object.keys(NORM).sort((a,b)=>b.length-a.length).join("|")+")\\uFE0F?","g"),NOSW="SCRIPT,STYLE,TEXTAREA,INPUT,SELECT,OPTION,TITLE,svg,[contenteditable],.noemo,.ing i";
  const swapText=t=>{const p=t.parentElement;if(!p||p.closest(NOSW))return;const s=t.nodeValue;EMRE.lastIndex=0;if(!EMRE.test(s))return;EMRE.lastIndex=0;
   const f=document.createDocumentFragment();let last=0,m;
   while((m=EMRE.exec(s))){if(m.index>last)f.appendChild(document.createTextNode(s.slice(last,m.index)));const sp=document.createElement("span");sp.className="emo";sp.innerHTML=`<svg viewBox="-16 -16 32 32" aria-hidden="true">${NORM[m[1]]}</svg>`;f.appendChild(sp);last=m.index+m[0].length}
@@ -283,10 +283,12 @@ function decorate(id,T,r,root,s){
 }
 
 /* spin a random build: full-screen spinner with the tool's own art and a name ticker, then the card (same rhythm as Cook, Pizza and Ferment) */
-const SPINNING={};
+const SPINNING={},RK="mr-craftrecent",recentBuilds=()=>{try{return JSON.parse(localStorage.getItem(RK)||"[]")||[]}catch(e){return[]}},noteBuild=t=>{try{localStorage.setItem(RK,JSON.stringify(recentBuilds().filter(x=>x!==t).concat(t).slice(-40)))}catch(e){}};
 function spinTool(id,instant){
  const T=TOOLS[id],root=document.getElementById("tab-"+id);if(!T||!T.spin||!root||SPINNING[id])return;
- const done=()=>{T.spin(cfg(id));save();draw(id);const c=root.querySelector(".card");if(c)c.scrollIntoView({behavior:"smooth",block:"start"})};
+ const done=()=>{const wheel=resOn===id,s=cfg(id),rec=recentBuilds();let r,k=0; // a fresh build every time: not one of the last 40 shown, and no stocks or broths from the start wheel
+  do{T.spin(s);try{r=T.calc(s)}catch(e){r=null;break}k++}while(k<16&&r&&(rec.includes(r.title)||(wheel&&/\b(stocks?|broths?|bouillon)\b/i.test(r.title))));
+  if(r&&r.title)noteBuild(r.title);save();draw(id);const c=root.querySelector(".card");if(c)c.scrollIntoView({behavior:"smooth",block:"start"})};
  if(instant||matchMedia("(prefers-reduced-motion:reduce)").matches||(window.mrNoSpin&&mrNoSpin())||!window.mrSpinNames||!T.art)return done();
  SPINNING[id]=1;const bs=[...root.querySelectorAll("[data-spin]")];bs.forEach(b=>b.disabled=true);
  const rl=document.createElement("div");rl.className="reel on";rl.setAttribute("aria-hidden","true");
