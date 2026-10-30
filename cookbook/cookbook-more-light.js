@@ -282,7 +282,7 @@ KITCHEN.add(
   {
     "id": "spinach-feta-egg-muffins",
     "name": "Spinach and feta egg muffins",
-    "meal": "morning,bite",
+    "meal": "morning",
     "time": 30,
     "serves": 3,
     "ing": [
@@ -328,7 +328,7 @@ KITCHEN.add(
   {
     "id": "garlic-mushroom-toast",
     "name": "Garlic thyme mushrooms on toast",
-    "meal": "bite,morning",
+    "meal": "bite",
     "time": 15,
     "serves": 2,
     "ing": [
@@ -454,7 +454,7 @@ KITCHEN.add(
   {
     "id": "sweetcorn-fritters",
     "name": "Sweetcorn fritters",
-    "meal": "bite,morning",
+    "meal": "bite",
     "time": 25,
     "serves": 3,
     "ing": [
@@ -870,7 +870,7 @@ KITCHEN.add(
   {
     "id": "honey-lime-fruit-salad",
     "name": "Honey-lime fruit salad with mint",
-    "meal": "treat,morning",
+    "meal": "treat",
     "time": 10,
     "serves": 3,
     "ing": [
@@ -946,7 +946,7 @@ KITCHEN.add(
   {
     "id": "chocolate-chia-pudding",
     "name": "Chocolate chia pudding",
-    "meal": "treat,morning",
+    "meal": "treat",
     "time": 10,
     "serves": 2,
     "ing": [
@@ -1118,11 +1118,11 @@ KITCHEN.add(
       ],
       [
         "lemon",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        1
+        "1pc"
       ],
       [
         "cumin",

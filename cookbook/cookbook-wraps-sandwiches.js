@@ -884,7 +884,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Poach {chicken-breast} in simmering salted water for 15 minutes until cooked through (74 °C); cool and shred.",
+      "Poach {chicken-breast} in simmering water with {salt} for 15 minutes until cooked through (74 °C); cool and shred.",
       "Mix {mayonnaise}, {yogurt}, {curry-powder} and {mango-chutney}. Stir in the chicken and {raisins}.",
       "Toast {almonds} in a dry pan for 2 minutes and chop.",
       "Spread the chicken on {bread}, scatter over the almonds, add {lettuce} and close."
@@ -1357,7 +1357,7 @@ KITCHEN.add(
   {
     "id": "roasted-plums-yogurt-granola",
     "name": "Roasted plums with yogurt and granola",
-    "meal": "morning,treat",
+    "meal": "morning",
     "time": 25,
     "serves": 2,
     "ing": [
@@ -1414,13 +1414,14 @@ KITCHEN.add(
     ],
     "steps": [
       "Layer {yogurt}, {granola} and {berries} in two glasses.",
-      "Drizzle with {honey} and serve straight away so the granola stays crunchy."
+      "Drizzle with {honey}.",
+      "Serve straight away so the granola stays crunchy."
     ]
   },
   {
     "id": "maple-pecan-granola",
     "name": "Maple pecan granola clusters",
-    "meal": "morning,treat",
+    "meal": "morning",
     "time": 35,
     "serves": 4,
     "ing": [
@@ -2116,7 +2117,7 @@ KITCHEN.add(
   {
     "id": "pastrami-hash-fried-eggs",
     "name": "Pastrami hash with fried eggs",
-    "meal": "morning,big",
+    "meal": "morning",
     "time": 35,
     "serves": 2,
     "ing": [
@@ -2357,7 +2358,7 @@ KITCHEN.add(
   {
     "id": "eggs-in-purgatory-crusty-bread",
     "name": "Eggs in purgatory with crusty bread",
-    "meal": "morning,big",
+    "meal": "morning",
     "time": 25,
     "serves": 2,
     "ing": [
@@ -2886,7 +2887,7 @@ KITCHEN.add(
   {
     "id": "wrap-halloumi-roasted-pepper",
     "name": "Halloumi and roasted pepper wraps",
-    "meal": "big,bite",
+    "meal": "big",
     "time": 18,
     "serves": 2,
     "ing": [
@@ -2944,7 +2945,7 @@ KITCHEN.add(
       ],
       [
         "zucchini",
-        1
+        "1pc"
       ],
       [
         "red-pepper",
@@ -2952,7 +2953,7 @@ KITCHEN.add(
       ],
       [
         "aubergine",
-        1
+        "1pc"
       ],
       [
         "feta",
@@ -2964,7 +2965,7 @@ KITCHEN.add(
       ],
       [
         "lemon",
-        0.5
+        "0.5pc"
       ],
       [
         "olive-oil",
@@ -3067,7 +3068,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "lemon-juice",
@@ -3083,11 +3084,11 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        1
+        "1pc"
       ],
       [
         "red-onion",
-        1
+        "1pc"
       ],
       [
         "olive-oil",
@@ -3130,7 +3131,7 @@ KITCHEN.add(
       ],
       [
         "flour-tortillas",
-        6
+        "6pc"
       ],
       [
         "cabbage",
@@ -3142,7 +3143,7 @@ KITCHEN.add(
       ],
       [
         "lime",
-        1
+        "1pc"
       ],
       [
         "paprika",

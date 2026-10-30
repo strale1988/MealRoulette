@@ -2,61 +2,6 @@
 KITCHEN.add(
 [
   {
-    "id": "bo-silpancho",
-    "name": "Silpancho-inspired Bolivian breaded beef with rice, potato and egg",
-    "meal": "big",
-    "cuisine": "Bolivian",
-    "time": 40,
-    "serves": 2,
-    "ing": [
-      [
-        "beef-strips",
-        300
-      ],
-      [
-        "breadcrumbs",
-        80
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "potatoes",
-        350
-      ],
-      [
-        "rice",
-        160
-      ],
-      [
-        "tomato",
-        150
-      ],
-      [
-        "red-onion",
-        "1pc"
-      ],
-      [
-        "oil",
-        60
-      ],
-      [
-        "salt",
-        4
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Cook the {rice}. Boil or pan-fry sliced {potatoes} until tender and golden. Pound the {beef-strips} thin; season with {salt} and {black-pepper}.",
-      "Dip the beef in beaten {eggs} then press into {breadcrumbs}. Pan-fry in {oil} for 2–3 minutes per side until crisp and cooked through.",
-      "Top with chopped {tomato} and thinly sliced {red-onion}; serve with rice and potatoes."
-    ]
-  },
-  {
     "id": "bo-pique-macho",
     "name": "Pique macho (Bolivian beef, sausage, potato and pepper platter)",
     "meal": "big",
@@ -399,44 +344,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "saltenas-inspired-beef-hand-pies",
-    "name": "Salteñas-Inspired Beef Hand Pies",
-    "meal": "big",
-    "cuisine": "Bolivian",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
     "id": "bolivian-sopa-de-mani-peanut-soup",
     "name": "Bolivian Sopa de Maní Peanut Soup",
     "meal": "big",
@@ -568,37 +475,50 @@ KITCHEN.add(
     "name": "Bolivian Papas a la Huancaína",
     "meal": "big",
     "cuisine": "Bolivian",
-    "time": 51,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "potatoes",
+        800
       ],
       [
-        "black-beans",
-        250
+        "eggs",
+        "3pc"
       ],
       [
-        "rice",
-        250
+        "queso-fresco",
+        150
       ],
       [
-        "tomato",
-        250
+        "evaporated-milk",
+        100
       ],
       [
-        "plantain",
-        2
+        "aji-amarillo-paste",
+        30
       ],
       [
-        "red-pepper",
-        1
+        "garlic",
+        "1pc"
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "black-olives",
+        40
+      ],
+      [
+        "salt",
+        4
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Boil the {potatoes} in water with 2 g of the {salt} for 20–25 minutes until tender. Boil the {eggs} for 10 minutes, then cool, peel and halve them.",
+      "Blend the {queso-fresco}, {evaporated-milk}, {aji-amarillo-paste}, {garlic}, {oil} and the remaining salt until smooth and creamy.",
+      "Peel and slice the potatoes, arrange them on a platter and pour the sauce over. Top with the eggs and {black-olives}."
     ]
   },
   {
@@ -660,44 +580,6 @@ KITCHEN.add(
       "Add {vegetable-stock}, the potatoes, carrots and {salt}. Simmer for 10 minutes.",
       "Stir in the quinoa and {sweetcorn} and cook 15 minutes until the quinoa has unfurled and the vegetables are tender.",
       "Stir in chopped {parsley} and serve."
-    ]
-  },
-  {
-    "id": "bolivian-chicken-sajta-inspired-stew",
-    "name": "Bolivian Chicken Sajta-Inspired Stew",
-    "meal": "big",
-    "cuisine": "Bolivian",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
     ]
   },
   {
@@ -797,38 +679,59 @@ KITCHEN.add(
     "name": "Bolivian Black Bean and Rice Bowl",
     "meal": "big",
     "cuisine": "Bolivian",
-    "time": 46,
+    "time": 40,
     "serves": 4,
     "ing": [
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
       [
         "rice",
         250
       ],
       [
-        "tomato",
-        250
+        "black-beans",
+        400
       ],
       [
-        "plantain",
+        "onion",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "cumin",
         2
+      ],
+      [
+        "oil",
+        25
+      ],
+      [
+        "queso-fresco",
+        80
+      ],
+      [
+        "cilantro",
+        10
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "salt",
+        4
       ]
     ],
     "steps": [
-      "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Rinse the {rice} and cook in 500 ml water with half the {salt}, covered, on low heat for 15 minutes. Rest covered for 5 minutes.",
+      "Chop the {onion} and {tomato} and crush the {garlic}. Heat the {oil} and cook the onion for 5 minutes, then add the garlic and {cumin} for 1 minute.",
+      "Add the tomato, drained {black-beans}, the remaining salt and 100 ml water and simmer for 10 minutes until thick.",
+      "Serve the beans over the rice, crumble over the {queso-fresco}, scatter with chopped {cilantro} and squeeze over the juice of the {lime}."
     ]
   },
   {
@@ -984,42 +887,72 @@ KITCHEN.add(
     "name": "Bolivian Beef and Potato Stew",
     "meal": "big",
     "cuisine": "Bolivian",
-    "time": 38,
+    "time": 110,
     "serves": 4,
     "ing": [
       [
-        "black-beans",
-        250
+        "beef-chuck",
+        600
       ],
       [
-        "rice",
-        250
+        "potatoes",
+        600
       ],
       [
-        "tomato",
-        250
+        "carrot",
+        "2pc"
       ],
       [
-        "plantain",
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "peas",
+        100
+      ],
+      [
+        "tomato-paste",
+        30
+      ],
+      [
+        "cumin",
         2
       ],
       [
-        "red-pepper",
-        1
+        "oregano",
+        2
       ],
       [
-        "cilantro",
+        "beef-stock",
+        700
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
+        "parsley",
         10
       ],
       [
-        "lime",
+        "salt",
+        4
+      ],
+      [
+        "black-pepper",
         1
       ]
     ],
     "steps": [
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {black-beans} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Cut the {beef-chuck} into 3 cm cubes. Dice the {onion}, crush the {garlic} and cut the {carrot} and {potatoes} into 3 cm chunks.",
+      "Brown the beef in the {oil} in a heavy pot for 8 minutes. Add the onion for 5 minutes, then the garlic, {tomato-paste}, {cumin} and {oregano} for 1 minute.",
+      "Add the {beef-stock}, {salt} and {black-pepper}, cover and simmer gently for 60 minutes.",
+      "Add the carrot and potatoes and simmer 25 minutes, then add the {peas} for 5 minutes until everything is tender.",
+      "Scatter with chopped {parsley} and serve."
     ]
   }
 ]

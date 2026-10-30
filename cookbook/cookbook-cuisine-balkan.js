@@ -200,53 +200,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-shopska-salad",
-    "name": "Šopska salad",
-    "meal": "bite",
-    "cuisine": "Balkan",
-    "time": 12,
-    "serves": 2,
-    "ing": [
-      [
-        "tomato",
-        250
-      ],
-      [
-        "cucumber",
-        200
-      ],
-      [
-        "red-pepper",
-        100
-      ],
-      [
-        "red-onion",
-        60
-      ],
-      [
-        "feta",
-        100
-      ],
-      [
-        "olive-oil",
-        18
-      ],
-      [
-        "vinegar",
-        8
-      ],
-      [
-        "salt",
-        2
-      ]
-    ],
-    "steps": [
-      "Cut {tomato}, {cucumber} and {red-pepper} into bite-sized pieces; thinly slice {red-onion}.",
-      "Toss the vegetables with {olive-oil}, {vinegar} and {salt}.",
-      "Crumble {feta} generously over the top and serve chilled or at room temperature."
-    ]
-  },
-  {
     "id": "world-djuvec-rice",
     "name": "Balkan đuveč rice",
     "meal": "big",
@@ -312,62 +265,6 @@ KITCHEN.add(
       "Stir in {garlic} and {paprika}; add {rice}, {green-beans}, {canned-tomatoes} and {vegetable-stock}.",
       "Bring to a simmer, cover and cook on low for 20–25 minutes until the rice is tender, adding a little water if needed.",
       "Rest covered for 5 minutes, season with {salt} and finish with {parsley}."
-    ]
-  },
-  {
-    "id": "world-prebranac",
-    "name": "Serbian-style baked beans (prebranac-inspired)",
-    "meal": "big",
-    "cuisine": "Balkan",
-    "time": 50,
-    "serves": 3,
-    "ing": [
-      [
-        "beans",
-        440
-      ],
-      [
-        "onion",
-        350
-      ],
-      [
-        "paprika",
-        5
-      ],
-      [
-        "smoked-paprika",
-        2
-      ],
-      [
-        "bay-leaf",
-        1
-      ],
-      [
-        "garlic",
-        10
-      ],
-      [
-        "oil",
-        25
-      ],
-      [
-        "vegetable-stock",
-        160
-      ],
-      [
-        "salt",
-        4
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Slice {onion} thinly and cook slowly in {oil} for 15–20 minutes until soft and golden.",
-      "Stir in {garlic}, {paprika} and {smoked-paprika}; cook 1 minute. Fold in {beans}, {bay-leaf}, {salt} and {black-pepper}.",
-      "Add {vegetable-stock}, transfer to a shallow baking dish and bake at 190°C for 25–30 minutes until the top is lightly browned and the liquid has reduced.",
-      "Remove the {bay-leaf} and serve warm with bread or a crisp salad."
     ]
   },
   {
@@ -468,122 +365,6 @@ KITCHEN.add(
       "Brush a baking dish with {oil}. Scrunch or layer sheets of {phyllo-pastry} into the dish, spooning the filling between layers.",
       "Pour any remaining filling over the top and drizzle with the remaining {oil}.",
       "Bake at 190°C for 35–40 minutes until puffed, set and golden. Rest 10 minutes before slicing."
-    ]
-  },
-  {
-    "id": "world-pljeskavica",
-    "name": "Balkan grilled meat patties",
-    "meal": "big",
-    "cuisine": "Balkan",
-    "time": 25,
-    "serves": 2,
-    "ing": [
-      [
-        "beef-mince",
-        350
-      ],
-      [
-        "pork",
-        100
-      ],
-      [
-        "red-onion",
-        70
-      ],
-      [
-        "garlic",
-        8
-      ],
-      [
-        "paprika",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "salt",
-        4
-      ],
-      [
-        "pita-bread",
-        120
-      ],
-      [
-        "ajvar",
-        80
-      ],
-      [
-        "sour-cream",
-        40
-      ]
-    ],
-    "steps": [
-      "Finely grate {red-onion} and {garlic}; mix with {beef-mince}, finely chopped {pork}, {paprika}, {black-pepper} and {salt}.",
-      "Shape into two wide, flat patties and chill for 10 minutes if time allows.",
-      "Grill or sear in a hot pan for 4–6 minutes per side, depending on thickness, until browned and cooked through.",
-      "Serve in {pita-bread} with {ajvar} and a little {sour-cream}."
-    ]
-  },
-  {
-    "id": "world-balkan-stuffed-peppers",
-    "name": "Balkan stuffed peppers",
-    "meal": "big",
-    "cuisine": "Balkan",
-    "time": 75,
-    "serves": 3,
-    "ing": [
-      [
-        "red-pepper",
-        500
-      ],
-      [
-        "beef-mince",
-        300
-      ],
-      [
-        "rice",
-        100
-      ],
-      [
-        "onion",
-        120
-      ],
-      [
-        "garlic",
-        8
-      ],
-      [
-        "canned-tomatoes",
-        300
-      ],
-      [
-        "paprika",
-        4
-      ],
-      [
-        "olive-oil",
-        15
-      ],
-      [
-        "parsley",
-        10
-      ],
-      [
-        "salt",
-        4
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Cook {onion} in {olive-oil} until soft; add {beef-mince}, {garlic}, {paprika}, {salt} and {black-pepper} and brown lightly.",
-      "Mix in rinsed {rice} and chopped {parsley}. Cut the tops from {red-pepper} and remove the seeds.",
-      "Fill the peppers loosely and arrange upright in a deep pot. Pour {canned-tomatoes} and enough water around them to come halfway up.",
-      "Cover and simmer gently for 50–55 minutes until the rice and peppers are tender."
     ]
   },
   {
@@ -753,57 +534,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "balkan-prebranac",
-    "name": "Prebranac (Serbian baked beans)",
-    "meal": "big",
-    "cuisine": "Balkan",
-    "time": 80,
-    "serves": 4,
-    "ing": [
-      [
-        "white-beans",
-        700
-      ],
-      [
-        "onion",
-        "4pc"
-      ],
-      [
-        "olive-oil",
-        50
-      ],
-      [
-        "paprika",
-        8
-      ],
-      [
-        "bay-leaf",
-        "2pc"
-      ],
-      [
-        "tomato-paste",
-        30
-      ],
-      [
-        "black-pepper",
-        2
-      ],
-      [
-        "salt",
-        6
-      ],
-      [
-        "water",
-        250
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 180 °C. Slice the {onion} thinly and soften it slowly in the {olive-oil} for 15–20 minutes until sweet and golden.",
-      "Stir in the {paprika}, {tomato-paste}, {black-pepper} and {salt}. Fold in the {white-beans} and {bay-leaf}, adding the {water} to keep the mixture moist.",
-      "Bake uncovered for 40–45 minutes until the top is lightly browned and the onions have settled into the beans. Remove the bay leaves before serving."
-    ]
-  },
-  {
     "id": "balkan-shopska-salad",
     "name": "Shopska salad",
     "meal": "bite",
@@ -948,54 +678,6 @@ KITCHEN.add(
       "Brown the {pork} in {olive-oil}; add the {onion} and {paprika}.",
       "Stir in the {cabbage}, {canned-tomatoes}, {rice}, {vegetable-stock} and {salt}.",
       "Cover and simmer gently until the {rice} is tender and the cabbage is soft, adding a splash of water if needed."
-    ]
-  },
-  {
-    "id": "balkan-proja-cornbread",
-    "name": "Proja-style savoury cornmeal bread",
-    "meal": "wake",
-    "cuisine": "Balkan",
-    "time": 35,
-    "serves": 2,
-    "ing": [
-      [
-        "cornmeal",
-        180
-      ],
-      [
-        "flour",
-        70
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "yogurt",
-        180
-      ],
-      [
-        "oil",
-        35
-      ],
-      [
-        "baking-powder",
-        8
-      ],
-      [
-        "feta",
-        120
-      ],
-      [
-        "salt",
-        3
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 190 °C and grease a small baking dish with a little {oil}.",
-      "Whisk the {eggs}, {yogurt}, remaining {oil} and {salt}.",
-      "Fold in the {cornmeal}, {flour}, {baking-powder} and crumbled {feta}.",
-      "Bake for 25–30 minutes until golden and set in the centre."
     ]
   },
   {
@@ -1286,54 +968,6 @@ KITCHEN.add(
     "cuisine": "Balkan"
   },
   {
-    "id": "world-sarma-inspired-skillet",
-    "name": "Cabbage and rice skillet, sarma-inspired",
-    "meal": "big",
-    "time": 35,
-    "serves": 3,
-    "ing": [
-      [
-        "cabbage",
-        350
-      ],
-      [
-        "beef-mince",
-        250
-      ],
-      [
-        "rice",
-        120
-      ],
-      [
-        "onion",
-        100
-      ],
-      [
-        "canned-tomatoes",
-        300
-      ],
-      [
-        "paprika",
-        3
-      ],
-      [
-        "garlic",
-        6
-      ],
-      [
-        "vegetable-stock",
-        300
-      ]
-    ],
-    "steps": [
-      "Cook {rice} until just tender and drain.",
-      "Brown {beef-mince} in a deep skillet. Add diced {onion}, shredded {cabbage} and {garlic}; cook for 6 minutes.",
-      "Stir in {paprika}, {canned-tomatoes}, {vegetable-stock} and the rice. Cover and simmer for 15 minutes until the cabbage is tender and the meat fully cooked.",
-      "Season to taste and serve hot."
-    ],
-    "cuisine": "Balkan"
-  },
-  {
     "id": "world-balkan-yogurt-cucumber-soup",
     "name": "Cold Balkan cucumber-yogurt soup",
     "meal": "bite",
@@ -1425,58 +1059,6 @@ KITCHEN.add(
     "cuisine": "Balkan"
   },
   {
-    "id": "world-balkan-sarma",
-    "name": "Balkan cabbage rolls with pork and rice",
-    "meal": "big",
-    "cuisine": "Balkan",
-    "time": 100,
-    "serves": 6,
-    "ing": [
-      [
-        "sauerkraut",
-        12
-      ],
-      [
-        "pork-mince",
-        500
-      ],
-      [
-        "rice",
-        100
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "paprika",
-        6
-      ],
-      [
-        "black-pepper",
-        2
-      ],
-      [
-        "tomato-paste",
-        30
-      ],
-      [
-        "vegetable-stock",
-        700
-      ],
-      [
-        "pork-ribs",
-        250
-      ]
-    ],
-    "steps": [
-      "Mix {pork-mince} with rinsed {rice}, finely chopped {onion}, {paprika} and {black-pepper}.",
-      "Separate {sauerkraut}; trim thick ribs. Place a spoonful of filling on each leaf, fold sides in and roll tightly.",
-      "Line a heavy pot with any torn leaves and {pork-ribs}. Pack rolls seam-side down, then stir {tomato-paste} into {vegetable-stock} and pour over.",
-      "Cover and simmer very gently for 75–90 minutes, adding water if needed. Rest 10 minutes before serving."
-    ]
-  },
-  {
     "id": "world-balkan-ajvar-pasta",
     "name": "Roasted pepper ajvar pasta",
     "meal": "big",
@@ -1518,97 +1100,6 @@ KITCHEN.add(
       "Warm {olive-oil} in a skillet and gently cook minced {garlic} for 30 seconds.",
       "Stir in {ajvar} and {cream}; simmer 3 minutes. Loosen with pasta water until glossy, then toss through the pasta.",
       "Crumble {feta} over the top and finish with chopped {parsley}."
-    ]
-  },
-  {
-    "id": "balkan-gibanica",
-    "name": "Gibanica cheese and filo pie",
-    "meal": "big",
-    "cuisine": "Balkan",
-    "time": 50,
-    "serves": 2,
-    "ing": [
-      [
-        "phyllo-pastry",
-        300
-      ],
-      [
-        "feta",
-        250
-      ],
-      [
-        "eggs",
-        "3pc"
-      ],
-      [
-        "yogurt",
-        200
-      ],
-      [
-        "sparkling-water",
-        100
-      ],
-      [
-        "oil",
-        40
-      ]
-    ],
-    "steps": [
-      "Crumble {feta} and whisk with {eggs}, {yogurt}, {sparkling-water} and half the {oil}.",
-      "Oil a baking dish. Crumple filo sheets loosely, dip or spoon filling between layers, and arrange in the dish.",
-      "Drizzle with remaining oil and any leftover filling.",
-      "Bake at 190 °C for 35–40 minutes until puffed and deep golden; rest 10 minutes before slicing."
-    ]
-  },
-  {
-    "id": "balkan-ajvar-chicken",
-    "name": "Roasted pepper ajvar chicken traybake",
-    "meal": "big",
-    "cuisine": "Balkan",
-    "time": 40,
-    "serves": 2,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "potatoes",
-        450
-      ],
-      [
-        "red-pepper",
-        "2pc"
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "ajvar",
-        80
-      ],
-      [
-        "garlic",
-        "3pc"
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "paprika",
-        4
-      ],
-      [
-        "salt",
-        4
-      ]
-    ],
-    "steps": [
-      "Heat oven to 210 °C. Toss potato wedges, sliced {red-pepper} and {onion} with {oil}, {paprika} and {salt}.",
-      "Mix {ajvar} with crushed {garlic}; coat {chicken-thigh} thoroughly.",
-      "Arrange chicken over vegetables and roast 30–35 minutes, turning vegetables once, until chicken reaches 74 °C."
     ]
   },
   {
@@ -1723,7 +1214,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "carrot",
@@ -1735,7 +1226,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "bay-leaf",
@@ -1778,7 +1269,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        4
+        "4pc"
       ],
       [
         "paprika",
@@ -1806,7 +1297,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ]
     ],
     "steps": [
@@ -1818,7 +1309,7 @@ KITCHEN.add(
   {
     "id": "balkan-popara-bread-soup",
     "name": "Popara Balkan bread and cheese breakfast bowl",
-    "meal": "quick",
+    "meal": "morning",
     "cuisine": "Balkan",
     "time": 15,
     "serves": 2,
@@ -1872,19 +1363,19 @@ KITCHEN.add(
       ],
       [
         "red-pepper",
-        2
+        "2pc"
       ],
       [
         "tomato",
-        3
+        "3pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "paprika",
@@ -1892,7 +1383,7 @@ KITCHEN.add(
       ],
       [
         "fresh-chilli",
-        1
+        "1pc"
       ],
       [
         "oil",
@@ -1959,26 +1450,26 @@ KITCHEN.add(
   {
     "id": "balkan-fergese-pepper-cheese",
     "name": "Fërgesë-inspired Balkan pepper and cheese skillet",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Balkan",
     "time": 30,
     "serves": 2,
     "ing": [
       [
         "red-pepper",
-        2
+        "2pc"
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "cottage-cheese",
@@ -2006,7 +1497,7 @@ KITCHEN.add(
       ],
       [
         "bread",
-        4
+        "4pc"
       ]
     ],
     "steps": [
@@ -2018,7 +1509,7 @@ KITCHEN.add(
   {
     "id": "balkan-ajvar-eggplant-dip",
     "name": "Roasted red pepper and eggplant ajvar",
-    "meal": "side",
+    "meal": "bite",
     "cuisine": "Balkan",
     "time": 75,
     "serves": 6,
@@ -2235,7 +1726,7 @@ KITCHEN.add(
     "name": "Vanilice (Serbian walnut-jam sandwich biscuits)",
     "meal": "treat",
     "cuisine": "Balkan",
-    "time": 45,
+    "time": 55,
     "serves": 2,
     "ing": [
       [
@@ -2244,15 +1735,15 @@ KITCHEN.add(
       ],
       [
         "butter",
-        35
+        75
+      ],
+      [
+        "sugar",
+        40
       ],
       [
         "walnuts",
         40
-      ],
-      [
-        "sugar",
-        35
       ],
       [
         "vanilla",
@@ -2263,15 +1754,19 @@ KITCHEN.add(
         50
       ],
       [
-        "lemon-juice",
+        "icing-sugar",
         20
+      ],
+      [
+        "lemon-juice",
+        5
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {flour} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Make a tender walnut shortbread dough, cut small rounds and bake pale rather than browned; sandwich pairs with a thin layer of jam and dust with vanilla sugar.",
-      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
+      "Heat the oven to 170 °C. Finely grind the {walnuts}. Cream the {butter} and {sugar} for 3 minutes, then beat in the {vanilla} and {lemon-juice}.",
+      "Stir in the {flour} and ground walnuts to a soft dough, wrap and chill for 20 minutes.",
+      "Roll the dough 4 mm thick, cut 4 cm rounds (about 16) and bake on lined trays for 12–14 minutes until pale golden at the edges. Cool completely.",
+      "Sandwich pairs of biscuits with the {jam} and dust with the {icing-sugar}."
     ]
   }
 ]

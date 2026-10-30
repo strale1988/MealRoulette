@@ -137,7 +137,7 @@ KITCHEN.add(
   {
     "id": "berry-walnut-parfait",
     "name": "Yogurt, berry and walnut parfait",
-    "meal": "morning,bite",
+    "meal": "morning",
     "time": 5,
     "serves": 2,
     "ing": [
@@ -202,7 +202,7 @@ KITCHEN.add(
   {
     "id": "banana-pb-toast",
     "name": "Banana peanut butter toast",
-    "meal": "morning,bite",
+    "meal": "morning",
     "time": 5,
     "serves": 2,
     "ing": [
@@ -348,7 +348,7 @@ KITCHEN.add(
   {
     "id": "berry-chia-pudding",
     "name": "Berry chia pudding",
-    "meal": "treat,morning",
+    "meal": "morning",
     "time": 5,
     "serves": 2,
     "note": "Plan ahead: chill for at least 4 hours or overnight.",
@@ -758,7 +758,7 @@ KITCHEN.add(
   {
     "id": "peanut-oat-bites",
     "name": "Peanut chocolate oat bites",
-    "meal": "bite,treat",
+    "meal": "bite",
     "time": 10,
     "serves": 2,
     "note": "Chill 20 minutes before eating.",
@@ -785,7 +785,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Mix {oats}, {peanut-butter}, {honey}, {cocoa} and {salt} until it holds together. Add a spoonful of water if crumbly.",
+      "Mix {oats}, {peanut-butter}, {honey}, {cocoa} and {salt} in a bowl until the mixture holds together.",
+      "Add a spoonful of water if it is crumbly.",
       "Roll into 10 balls and chill for 20 minutes."
     ]
   },
@@ -959,7 +960,7 @@ KITCHEN.add(
   {
     "id": "berry-compote-yogurt",
     "name": "Warm berry compote with yogurt",
-    "meal": "treat,morning",
+    "meal": "treat",
     "time": 15,
     "serves": 2,
     "ing": [
@@ -982,7 +983,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Simmer {berries} with {sugar} and the juice of {lemon} over medium heat for 8 minutes until syrupy.",
-      "Cool 5 minutes, then spoon over {yogurt}."
+      "Take off the heat and cool for 5 minutes.",
+      "Divide the {yogurt} between two bowls and spoon the warm compote over."
     ]
   },
   {
@@ -1070,7 +1072,7 @@ KITCHEN.add(
   {
     "id": "light-broccoli-edamame-salad",
     "name": "Broccoli and edamame sesame salad",
-    "meal": "big,bite",
+    "meal": "big",
     "time": 18,
     "serves": 2,
     "ing": [
@@ -1175,7 +1177,7 @@ KITCHEN.add(
       ],
       [
         "cucumber",
-        1
+        "1pc"
       ],
       [
         "yogurt",
@@ -1187,7 +1189,7 @@ KITCHEN.add(
       ],
       [
         "lemon",
-        1
+        "1pc"
       ],
       [
         "rice",
@@ -1219,15 +1221,15 @@ KITCHEN.add(
       ],
       [
         "carrot",
-        2
+        "2pc"
       ],
       [
         "celery",
-        2
+        "2pc"
       ],
       [
         "red-onion",
-        0.5
+        "0.5pc"
       ],
       [
         "parsley",
@@ -1256,7 +1258,7 @@ KITCHEN.add(
   {
     "id": "light-roasted-cauliflower-lentil-salad",
     "name": "Roasted cauliflower and lentil salad",
-    "meal": "light",
+    "meal": "big",
     "time": 35,
     "serves": 3,
     "ing": [
@@ -1302,7 +1304,7 @@ KITCHEN.add(
   {
     "id": "light-salmon-cucumber-rice-bowl",
     "name": "Salmon cucumber rice bowl with sesame",
-    "meal": "light",
+    "meal": "big",
     "time": 25,
     "serves": 2,
     "ing": [
@@ -1348,7 +1350,7 @@ KITCHEN.add(
   {
     "id": "light-watermelon-feta-mint-salad",
     "name": "Mango salad with feta, mint and lime",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Everyday",
     "time": 10,
     "serves": 2,
@@ -1391,7 +1393,7 @@ KITCHEN.add(
   {
     "id": "light-roasted-beetroot-goat-cheese-salad",
     "name": "Roasted beetroot and goat cheese salad with walnuts",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Everyday",
     "time": 35,
     "serves": 2,
@@ -1438,7 +1440,7 @@ KITCHEN.add(
   {
     "id": "light-edamame-avocado-salad",
     "name": "Edamame avocado salad with sesame-lime dressing",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Everyday",
     "time": 15,
     "serves": 2,
@@ -1449,7 +1451,7 @@ KITCHEN.add(
       ],
       [
         "avocado",
-        1
+        "1pc"
       ],
       [
         "cucumber",
@@ -1473,7 +1475,7 @@ KITCHEN.add(
       ],
       [
         "spring-onion",
-        2
+        "2pc"
       ]
     ],
     "steps": [
@@ -1485,7 +1487,7 @@ KITCHEN.add(
   {
     "id": "light-carrot-orange-couscous",
     "name": "Carrot and orange couscous salad with pistachios",
-    "meal": "light",
+    "meal": "big",
     "cuisine": "Everyday",
     "time": 20,
     "serves": 2,
@@ -1500,7 +1502,7 @@ KITCHEN.add(
       ],
       [
         "orange",
-        1
+        "1pc"
       ],
       [
         "pistachios",
@@ -1531,58 +1533,6 @@ KITCHEN.add(
       "Cover {couscous} with boiling water and a pinch of {salt}; cover 5 minutes, then fluff.",
       "Grate {carrot}; segment {orange} over a bowl to catch the juice.",
       "Toss couscous with carrot, orange, {pistachios}, chopped {mint}, {lemon-juice}, {olive-oil} and {cumin}. Serve warm or chilled."
-    ]
-  },
-  {
-    "id": "light-roasted-carrot-lentil-salad",
-    "name": "Roasted carrot and lentil salad with yogurt",
-    "meal": "light,big",
-    "cuisine": "",
-    "time": 35,
-    "serves": 2,
-    "ing": [
-      [
-        "carrot",
-        350
-      ],
-      [
-        "lentils",
-        200
-      ],
-      [
-        "yogurt",
-        120
-      ],
-      [
-        "lemon",
-        1
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "olive-oil",
-        20
-      ],
-      [
-        "mint",
-        10
-      ],
-      [
-        "parsley",
-        10
-      ],
-      [
-        "salt",
-        3
-      ]
-    ],
-    "steps": [
-      "Cut {carrot} into batons, toss with half the {olive-oil}, {cumin} and {salt}; roast at 210 °C until caramelized.",
-      "Cook {lentils} until tender but intact; drain and cool slightly.",
-      "Mix {yogurt} with {lemon} juice and chopped {mint}.",
-      "Toss {lentils} with carrots, remaining oil and {parsley}; serve with yogurt dressing."
     ]
   }
 ]

@@ -30,8 +30,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
+      "Toast {bread}.",
       "Fry {eggs} in {butter} until the whites are set, about 3 minutes.",
-      "Toast {bread}. Layer {ham}, sliced {cheddar} and the eggs on two slices and close the sandwiches."
+      "Layer {ham}, sliced {cheddar} and the eggs on two slices of toast and close the sandwiches."
     ]
   },
   {
@@ -239,7 +240,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Toast {bread} and spread with {tahini}.",
+      "Toast {bread}.",
+      "Spread the toast with {tahini}.",
       "Top with sliced {banana}, {honey} and {sesame-seeds}."
     ]
   },
@@ -280,7 +282,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Blend {oats}, {applesauce}, {eggs}, {baking-powder}, {milk} and {cinnamon} into a thick batter and rest 5 minutes.",
+      "Blend {oats}, {applesauce}, {eggs}, {baking-powder}, {milk} and {cinnamon} into a thick batter.",
+      "Rest the batter for 5 minutes.",
       "Cook spoonfuls in {oil} over medium heat for 2–3 minutes per side until golden."
     ]
   },
@@ -486,7 +489,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Blend {white-beans}, {garlic}, {olive-oil}, juice of the {lemon}, finely chopped {rosemary} and {salt} until smooth.",
-      "Serve with warm {pita-bread}."
+      "Warm the {pita-bread} in a toaster or dry pan for 1–2 minutes.",
+      "Serve the dip with the warm pita."
     ]
   },
   {
@@ -709,7 +713,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat the oven to 200 °C. Mash soft {butter} with crushed {garlic}, chopped {parsley} and {salt}.",
-      "Slice {bread} without cutting through, spread the butter in the cuts and bake 10 minutes until crisp."
+      "Slice {bread} without cutting all the way through and spread the garlic butter into the cuts.",
+      "Bake for 10 minutes until crisp."
     ]
   },
   {
@@ -1012,7 +1017,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Beat {mascarpone} with {honey} and {vanilla} until smooth.",
-      "Layer with {berries} in glasses."
+      "Layer with {berries} in glasses.",
+      "Serve straight away, or chill for up to an hour."
     ]
   },
   {
@@ -1044,8 +1050,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {milk} with {cocoa}, {sugar} and {cinnamon}, whisking.",
-      "Add chopped {dark-chocolate} and whisk until melted and glossy. Serve hot."
+      "Heat {milk} with {cocoa}, {sugar} and {cinnamon}, whisking, until steaming but not boiling.",
+      "Add chopped {dark-chocolate} and whisk until melted and glossy.",
+      "Pour into mugs and serve hot."
     ]
   },
   {
@@ -1117,44 +1124,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "light-smoked-salmon-cucumber-bagel",
-    "name": "Smoked salmon and cucumber bagel",
-    "meal": "morning",
-    "time": 10,
-    "serves": 2,
-    "ing": [
-      [
-        "bagels",
-        "2pc"
-      ],
-      [
-        "cream-cheese",
-        70
-      ],
-      [
-        "smoked-salmon",
-        100
-      ],
-      [
-        "cucumber",
-        100
-      ],
-      [
-        "dill",
-        5
-      ],
-      [
-        "lemon",
-        "0.5pc"
-      ]
-    ],
-    "steps": [
-      "Split and toast {bagels}.",
-      "Spread with {cream-cheese}; layer on {smoked-salmon} and thin slices of {cucumber}.",
-      "Finish with {dill}, a little {lemon} juice and black pepper."
-    ]
-  },
-  {
     "id": "light-courgette-pea-soup",
     "name": "Courgette and pea soup",
     "meal": "big",
@@ -1207,7 +1176,7 @@ KITCHEN.add(
     "ing": [
       [
         "bread",
-        2
+        "2pc"
       ],
       [
         "ricotta",
@@ -1215,7 +1184,7 @@ KITCHEN.add(
       ],
       [
         "pear",
-        1
+        "1pc"
       ],
       [
         "honey",
@@ -1255,11 +1224,11 @@ KITCHEN.add(
       ],
       [
         "cucumber",
-        1
+        "1pc"
       ],
       [
         "carrot",
-        1
+        "1pc"
       ],
       [
         "soy-sauce",

@@ -65,7 +65,7 @@ KITCHEN.add(
     "steps": [
       "Boil peeled {potatoes} until tender, then mash with {butter}, {milk} and half the {salt}.",
       "Brown {lamb-mince} in {oil}; add diced {onion} and {carrot} and cook 6 minutes.",
-      "Stir in {tomato-paste}, {thyme} and {beef-stock}; simmer 15 minutes, add {peas}, and season.",
+      "Stir in {tomato-paste}, {thyme} and {beef-stock}; simmer 15 minutes, add {peas}, and season with the remaining {salt} and {black-pepper}.",
       "Spread into a baking dish, top with mash and bake at 200 °C for 25–30 minutes until golden."
     ]
   },
@@ -133,7 +133,7 @@ KITCHEN.add(
     "steps": [
       "Boil {potatoes} until soft; mash with {milk}, {butter} and half the {cheddar}.",
       "Brown {beef-mince} in {oil}, then add diced {onion} and {carrot}. Cook until softened.",
-      "Stir in {tomato-paste}, {beef-stock} and {peas}; simmer until thick and season.",
+      "Stir in {tomato-paste}, {beef-stock} and {peas}; simmer until thick and season with {salt} and {black-pepper}.",
       "Place the filling in a dish, cover with mash, scatter remaining {cheddar} and bake at 200 °C for 25 minutes."
     ]
   },
@@ -252,8 +252,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Boil {potatoes} until tender, drain and mash with 20 g {butter}.",
-      "Warm {milk} with the fish for 4 minutes; lift fish out and flake into a baking dish.",
-      "Melt remaining {butter}, stir in {flour}, then gradually whisk in the fish-infused {milk} to make a sauce. Add {peas}, chopped {parsley}, lemon juice and seasoning.",
+      "Warm the {milk} with the {white-fish} and {salmon} for 4 minutes; lift fish out and flake into a baking dish.",
+      "Melt remaining {butter}, stir in {flour}, then gradually whisk in the fish-infused {milk} to make a sauce. Add {peas}, chopped {parsley}, the juice of the {lemon}, {salt} and {black-pepper}.",
       "Pour sauce over fish, top with mash and {cheddar}, then bake at 200 °C for 25 minutes until bubbling."
     ]
   },
@@ -315,7 +315,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Toss {beef-chuck} with {flour} and brown in {oil} in batches.",
+      "Toss {beef-chuck} with {flour} and {salt} and brown in {oil} in batches.",
       "Add sliced {onion}, {carrot} and {mushrooms}; cook 5 minutes.",
       "Pour in {beer} and {beef-stock}, add {thyme}, cover and simmer gently for 1 hour 45 minutes until tender; cool the filling.",
       "Spoon into a pie dish, cover with {puff-pastry}, seal and brush with beaten {eggs}. Bake at 200 °C for 25–30 minutes."
@@ -335,7 +335,7 @@ KITCHEN.add(
       ],
       [
         "bread",
-        4
+        "4pc"
       ],
       [
         "apple",
@@ -359,8 +359,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Slice {cheddar}, {apple} and {tomato}.",
-      "Arrange with {bread}, {pickles}, {chutney} and {butter}; serve as a generous cold lunch."
+      "Slice the {cheddar}, {apple} and {tomato}.",
+      "Cut the {bread} into thick slices and set out the {pickles}, {chutney} and {butter} in small dishes.",
+      "Arrange everything on a board and serve as a generous cold lunch."
     ]
   },
   {
@@ -409,7 +410,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Dice {beef-chuck}, {potatoes}, {swede} and {onion} very finely; season well.",
+      "Dice {beef-chuck}, {potatoes}, {swede} and {onion} very finely; season with {salt} and {black-pepper}.",
       "Divide {shortcrust-pastry} into four rounds. Add filling and a little {butter} to each centre.",
       "Fold over, crimp the edges firmly and brush with beaten {eggs}.",
       "Bake at 200 °C for 40–45 minutes until deep golden and the beef is cooked through."
@@ -418,7 +419,7 @@ KITCHEN.add(
   {
     "id": "british-bubble-squeak",
     "name": "Bubble and squeak potato-cabbage cakes",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "British",
     "time": 30,
     "serves": 2,
@@ -505,7 +506,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Boil four {eggs} for 6–7 minutes, cool quickly and peel.",
-      "Remove sausage meat from casings, mix with {mustard} and seasoning, then wrap each egg evenly.",
+      "Remove the {sausages} from their casings and mix the meat with {mustard}, {salt} and {black-pepper}, then wrap each egg evenly.",
       "Coat in {flour}, the remaining beaten {eggs}, then {breadcrumbs}.",
       "Shallow-fry in hot {oil}, turning carefully, until evenly browned and sausage meat reaches 71 °C; alternatively bake at 200 °C for 25 minutes."
     ]
@@ -561,7 +562,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Layer sliced {onion} and {carrot} in a casserole, then add {lamb}, {thyme}, {worcestershire-sauce} and {beef-stock}.",
-      "Cover with overlapping thin slices of {potatoes}; dot with {butter} and season.",
+      "Cover with overlapping thin slices of {potatoes}; dot with {butter} and season with {salt} and {black-pepper}.",
       "Cover and bake at 160 °C for 1 hour 45 minutes.",
       "Uncover, raise oven to 200 °C and bake another 25–30 minutes until the potato top is crisp."
     ]
@@ -619,7 +620,7 @@ KITCHEN.add(
       "Simmer {rice} until fluffy. Boil {eggs} for 8–9 minutes, cool and quarter.",
       "Poach {smoked-haddock} gently in water for 5–7 minutes; drain, remove skin and flake.",
       "Soften diced {onion} in {butter}, stir in {curry-powder}, then fold in rice, {peas} and fish.",
-      "Warm through, season, and finish with {parsley}, lemon juice and quartered eggs."
+      "Warm through, season with {salt} and finish with {parsley}, the juice of the {lemon} and the quartered eggs."
     ]
   },
   {
@@ -672,8 +673,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Roast or pan-fry {sausages} until browned and cooked through.",
-      "Boil {potatoes} until tender; mash with {milk}, half the {butter} and seasoning.",
+      "Pan-fry the {sausages} in the {oil} until browned and cooked through.",
+      "Boil {potatoes} until tender; mash with {milk}, half the {butter} and {salt}.",
       "Cook sliced {onion} slowly in remaining {butter} until golden. Stir in {flour}, then gradually add {vegetable-stock} and {mustard}.",
       "Simmer gravy until thick and serve over the mash with sausages."
     ]
@@ -681,7 +682,7 @@ KITCHEN.add(
   {
     "id": "british-easy-trifle",
     "name": "Berry and custard trifle cups",
-    "meal": "sweet",
+    "meal": "treat",
     "cuisine": "British",
     "time": 25,
     "serves": 4,
@@ -716,7 +717,7 @@ KITCHEN.add(
   {
     "id": "british-sticky-toffee-pudding",
     "name": "Sticky toffee pudding with warm date sauce",
-    "meal": "sweet",
+    "meal": "treat",
     "cuisine": "British",
     "time": 55,
     "serves": 6,
@@ -766,111 +767,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "british-beef-and-ale-pie",
-    "name": "Beef and ale pie",
-    "cuisine": "British",
-    "meal": "big",
-    "time": 150,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        600
-      ],
-      [
-        "onion",
-        "2pc"
-      ],
-      [
-        "carrot",
-        "2pc"
-      ],
-      [
-        "beer",
-        300
-      ],
-      [
-        "beef-stock",
-        250
-      ],
-      [
-        "flour",
-        30
-      ],
-      [
-        "puff-pastry",
-        300
-      ],
-      [
-        "thyme",
-        2
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Brown {beef-chuck} in {oil} in batches. Add sliced {onion} and {carrot} and cook until softened.",
-      "Stir in {flour}, then gradually add {beer} and {beef-stock}. Add {thyme}, season, cover and simmer gently 90–110 minutes until tender; cool.",
-      "Heat oven to 200 °C. Spoon filling into a pie dish, cover with {puff-pastry}, seal and cut a steam vent. Bake 30–35 minutes until deeply golden."
-    ]
-  },
-  {
-    "id": "british-ploughmans-pickles",
-    "name": "Ploughman’s lunch with cheddar and chutney",
-    "cuisine": "British",
-    "meal": "light",
-    "time": 15,
-    "serves": 2,
-    "ing": [
-      [
-        "cheddar",
-        120
-      ],
-      [
-        "bread",
-        180
-      ],
-      [
-        "apple",
-        "1pc"
-      ],
-      [
-        "pickled-red-onions",
-        60
-      ],
-      [
-        "chutney",
-        50
-      ],
-      [
-        "tomato",
-        "1pc"
-      ],
-      [
-        "cucumber",
-        100
-      ],
-      [
-        "butter",
-        15
-      ]
-    ],
-    "steps": [
-      "Slice {cheddar}, {apple}, {tomato} and {cucumber}.",
-      "Arrange with {pickled-red-onions} and {chutney} on a board. Serve with thick slices of {bread} and {butter}."
-    ]
-  },
-  {
     "id": "british-full-english-breakfast",
     "name": "Full English breakfast with mushrooms and tomatoes",
     "meal": "big",
@@ -880,11 +776,11 @@ KITCHEN.add(
     "ing": [
       [
         "eggs",
-        4
+        "4pc"
       ],
       [
         "sausages",
-        2
+        "2pc"
       ],
       [
         "bacon",
@@ -896,11 +792,11 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "bread",
-        2
+        "2pc"
       ],
       [
         "oil",
@@ -924,7 +820,7 @@ KITCHEN.add(
   {
     "id": "british-welsh-rarebit",
     "name": "Welsh rarebit with mustard and mature cheddar",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "British",
     "time": 15,
     "serves": 2,
@@ -935,7 +831,7 @@ KITCHEN.add(
       ],
       [
         "bread",
-        2
+        "2pc"
       ],
       [
         "butter",
@@ -971,7 +867,7 @@ KITCHEN.add(
   {
     "id": "british-coronation-chicken",
     "name": "Coronation chicken salad with curry yogurt",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "British",
     "time": 20,
     "serves": 2,
@@ -1088,7 +984,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        2
+        "2pc"
       ],
       [
         "cheddar",
@@ -1147,7 +1043,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "vegetable-stock",
@@ -1190,7 +1086,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "butter",
@@ -1249,7 +1145,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        1
+        "1pc"
       ],
       [
         "mustard",
@@ -1273,7 +1169,7 @@ KITCHEN.add(
   {
     "id": "british-treacle-tart",
     "name": "British-style syrup crumb tart with lemon",
-    "meal": "sweet",
+    "meal": "treat",
     "cuisine": "British",
     "time": 55,
     "serves": 2,
@@ -1283,7 +1179,7 @@ KITCHEN.add(
         250
       ],
       [
-        "maple-syrup",
+        "golden-syrup",
         180
       ],
       [
@@ -1300,19 +1196,19 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        1
+        "1pc"
       ]
     ],
     "steps": [
       "Line a small tart tin with {shortcrust-pastry} and chill while the oven heats to 180 °C.",
-      "Warm {maple-syrup} with {butter} and {lemon-juice}; stir in fine crumbs from {stale-bread}, then mix in beaten {eggs}.",
+      "Warm {golden-syrup} with {butter} and {lemon-juice}; stir in fine crumbs from {stale-bread}, then mix in beaten {eggs}.",
       "Fill the pastry case and bake for 25–30 minutes until set and golden. Allow to cool slightly before serving."
     ]
   },
   {
     "id": "british-bakewell-tart",
     "name": "Bakewell tart with raspberry jam and almonds",
-    "meal": "sweet",
+    "meal": "treat",
     "cuisine": "British",
     "time": 65,
     "serves": 2,
@@ -1339,7 +1235,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        2
+        "2pc"
       ],
       [
         "vanilla-extract",
@@ -1359,7 +1255,7 @@ KITCHEN.add(
   {
     "id": "british-victoria-sponge",
     "name": "Victoria sponge cake with strawberry jam",
-    "meal": "sweet",
+    "meal": "treat",
     "cuisine": "British",
     "time": 50,
     "serves": 2,
@@ -1374,7 +1270,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        2
+        "2pc"
       ],
       [
         "flour",
@@ -1406,7 +1302,7 @@ KITCHEN.add(
   {
     "id": "british-eccles-cakes",
     "name": "Eccles cakes with currants and warm spice",
-    "meal": "sweet",
+    "meal": "treat",
     "cuisine": "British",
     "time": 35,
     "serves": 2,
@@ -1437,7 +1333,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        1
+        "1pc"
       ]
     ],
     "steps": [
@@ -1449,7 +1345,7 @@ KITCHEN.add(
   {
     "id": "british-bread-butter-pudding",
     "name": "Bread-and-butter pudding with raisins and nutmeg",
-    "meal": "sweet",
+    "meal": "treat",
     "cuisine": "British",
     "time": 50,
     "serves": 2,
@@ -1468,7 +1364,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        2
+        "2pc"
       ],
       [
         "sugar",
@@ -1496,7 +1392,7 @@ KITCHEN.add(
   {
     "id": "british-sticky-spotted-dick",
     "name": "Spotted dick steamed pudding with raisins",
-    "meal": "sweet",
+    "meal": "treat",
     "cuisine": "British",
     "time": 75,
     "serves": 2,
@@ -1527,7 +1423,7 @@ KITCHEN.add(
       ],
       [
         "lemon",
-        1
+        "1pc"
       ],
       [
         "vanilla-extract",
@@ -1558,7 +1454,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "beef-stock",
@@ -1602,14 +1498,14 @@ KITCHEN.add(
   {
     "id": "british-crumpets-cheddar",
     "name": "Toasted cheddar and chutney melts",
-    "meal": "quick",
+    "meal": "bite",
     "cuisine": "British",
     "time": 10,
     "serves": 2,
     "ing": [
       [
         "bread-rolls",
-        2
+        "2pc"
       ],
       [
         "cheddar",
@@ -1683,7 +1579,7 @@ KITCHEN.add(
     "ing": [
       [
         "leek",
-        1
+        "1pc"
       ],
       [
         "cheddar",
@@ -1907,7 +1803,7 @@ KITCHEN.add(
       ],
       [
         "bread",
-        4
+        "4pc"
       ],
       [
         "salt",
@@ -1927,13 +1823,13 @@ KITCHEN.add(
   {
     "id": "british-beef-wellington",
     "name": "Beef Wellington with mushroom duxelles",
-    "meal": "fancy,big",
+    "meal": "big",
     "cuisine": "British",
     "time": 105,
     "serves": 4,
     "ing": [
       [
-        "beef-strips",
+        "beef-steak",
         700
       ],
       [
@@ -1974,10 +1870,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Season and sear the beef in a hot pan; cool and brush with {mustard}.",
-      "Finely chop {mushrooms} and cook with {butter} and {thyme} until dry; cool completely.",
-      "Wrap the beef with {prosciutto} and mushroom mixture, then enclose in {puff-pastry}; seal with beaten {eggs}.",
-      "Bake at 200 °C until the pastry is golden and the centre reaches your preferred doneness; rest before slicing."
+      "Season the {beef-steak} (a centre-cut fillet is ideal) with half the {salt} and the {black-pepper}. Sear in a very hot pan for 1 minute on each side until browned all over. Cool, then brush with the {mustard}.",
+      "Finely chop the {mushrooms} and cook with the {butter}, {thyme} and the remaining salt for 10–12 minutes until completely dry. Cool completely.",
+      "Lay the {prosciutto} on cling film, spread with the mushroom mixture, place the beef on top and roll tightly. Chill for 30 minutes.",
+      "Heat the oven to 200 °C. Wrap the beef in the {puff-pastry}, seal the edges with beaten {eggs} and brush the outside with egg. Score lightly.",
+      "Bake for 35–40 minutes, until the pastry is deep golden and the centre reaches 52 °C for medium-rare. Rest for 10 minutes before slicing."
     ]
   },
   {
@@ -2082,7 +1979,7 @@ KITCHEN.add(
   {
     "id": "british-cauliflower-cheese",
     "name": "Cauliflower cheese bake",
-    "meal": "side,big",
+    "meal": "big",
     "cuisine": "British",
     "time": 40,
     "serves": 4,
@@ -2185,7 +2082,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cut chicken into bite-sized pieces and slice {leek}.",
+      "Cut the {chicken-thigh} into bite-sized pieces and slice {leek}.",
       "Cook chicken and leek in {butter} until lightly coloured; stir in {flour}, then gradually add {chicken-stock} and {cream}.",
       "Season with {thyme}, {salt} and {black-pepper}; simmer until thick, then cool slightly in a pie dish.",
       "Cover with {puff-pastry}, seal and brush with beaten {eggs}. Bake at 200 °C for 25–30 minutes until crisp and cooked through."
@@ -2194,7 +2091,7 @@ KITCHEN.add(
   {
     "id": "british-eton-mess",
     "name": "Eton mess with berries and homemade meringue",
-    "meal": "sweet",
+    "meal": "treat",
     "cuisine": "British",
     "time": 75,
     "serves": 4,
@@ -2221,7 +2118,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Separate the whites from {eggs}, whip them with part of the {sugar} to stiff peaks, bake in small meringue pieces at low heat until dry, then cool.",
+      "Separate the whites from {eggs}, whip them with part of the {sugar} to stiff peaks, bake in small meringue pieces at 110 °C for 60 minutes until dry, then cool.",
       "Hull and slice {berries}; toss with a little of the {sugar}.",
       "Whip {cream} with the remaining {sugar} and {vanilla} to soft peaks, then fold in the cooled meringue and berries just before serving."
     ]
@@ -2229,7 +2126,7 @@ KITCHEN.add(
   {
     "id": "british-apple-crumble",
     "name": "Apple crumble with oat topping",
-    "meal": "sweet",
+    "meal": "treat",
     "cuisine": "British",
     "time": 50,
     "serves": 6,
@@ -2314,49 +2211,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "main-roasted-cauliflower-cheese",
-    "name": "Roasted cauliflower cheese bake",
-    "meal": "big",
-    "cuisine": "British",
-    "time": 40,
-    "serves": 3,
-    "ing": [
-      [
-        "cauliflower",
-        500
-      ],
-      [
-        "milk",
-        300
-      ],
-      [
-        "butter",
-        25
-      ],
-      [
-        "flour",
-        25
-      ],
-      [
-        "cheddar",
-        120
-      ],
-      [
-        "mustard",
-        8
-      ],
-      [
-        "breadcrumbs",
-        30
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 200 °C. Cut {cauliflower} into florets and parboil for 4 minutes; drain well.",
-      "Melt {butter}, stir in {flour} and cook 1 minute. Gradually whisk in {milk}; simmer until thick, then stir in {mustard} and most of the {cheddar}.",
-      "Put cauliflower in a baking dish, pour over sauce, top with remaining cheddar and {breadcrumbs}. Bake 20–25 minutes until golden."
-    ]
-  },
-  {
     "id": "main-shepherds-pie-lentil",
     "name": "Vegetarian lentil shepherd’s pie",
     "meal": "big",
@@ -2370,15 +2224,15 @@ KITCHEN.add(
       ],
       [
         "carrot",
-        2
+        "2pc"
       ],
       [
         "celery",
-        2
+        "2pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "tomato-paste",
@@ -2403,10 +2257,14 @@ KITCHEN.add(
       [
         "milk",
         100
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Heat oven to 200 °C. Boil {potatoes} until tender, then mash with {butter}, {milk} and salt.",
+      "Heat oven to 200 °C. Boil {potatoes} until tender, then mash with {butter}, {milk} and {salt}.",
       "Dice {carrot}, {celery} and {onion}; sauté until softened. Stir in {tomato-paste} and {lentils}.",
       "Add {vegetable-stock} and simmer 25–30 minutes until {lentils} are tender and the filling is thick. Stir in {peas}.",
       "Spread filling in a baking dish, top with mashed potato and rough up the surface with a fork. Bake 20–25 minutes until golden."
@@ -2425,6 +2283,10 @@ KITCHEN.add(
         350
       ],
       [
+        "potatoes",
+        500
+      ],
+      [
         "flour",
         120
       ],
@@ -2434,70 +2296,26 @@ KITCHEN.add(
       ],
       [
         "beer",
-        250
-      ],
-      [
-        "potatoes",
-        350
+        180
       ],
       [
         "oil",
-        15
+        600
       ],
       [
-        "vinegar",
-        15
+        "malt-vinegar",
+        20
       ],
       [
         "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
+        4
       ]
     ],
     "steps": [
-      "Prepare {white-fish} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {white-fish} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Cut potatoes into thick chips and blanch before frying; dip dry fish in a light cold batter and fry until crisp, then finish with vinegar salt.",
-      "Finish with a little {vinegar} if needed, taste for seasoning and serve while the texture is at its best."
-    ]
-  },
-  {
-    "id": "gb-eton-mess",
-    "name": "Eton mess with strawberries, meringue and cream",
-    "meal": "treat",
-    "cuisine": "British",
-    "time": 25,
-    "serves": 2,
-    "ing": [
-      [
-        "berries",
-        200
-      ],
-      [
-        "cream",
-        150
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "sugar",
-        35
-      ],
-      [
-        "vanilla",
-        3
-      ]
-    ],
-    "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {berries} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Make or crush crisp meringues, whip cream to soft peaks and fold with sliced berries at the last moment so the mixture keeps both creamy and crunchy textures.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Peel the {potatoes} and cut into thick chips; rinse and dry thoroughly. Heat the {oil} to 160 °C in a deep, heavy pan and cook the chips for 6–7 minutes until soft but still pale. Drain.",
+      "Whisk the {flour}, {baking-powder} and 2 g of the {salt} with the cold {beer} to a thin batter. Pat the {white-fish} dry.",
+      "Heat the oil to 180 °C. Dip each piece of fish in the batter, let the excess drip off and fry for 4–5 minutes until crisp and golden. Drain on a rack.",
+      "Return the chips to the oil for 3 minutes until golden and crisp. Drain, sprinkle with the remaining salt and the {malt-vinegar} and serve with the fish."
     ]
   }
 ]

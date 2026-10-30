@@ -15,7 +15,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "paprika",
@@ -28,12 +28,17 @@ KITCHEN.add(
       [
         "oil",
         20
+      ],
+      [
+        "salt",
+        4
       ]
     ],
     "steps": [
-      "Cut {pork-shoulder} into large cubes and toss with sliced {onion}, {paprika}, {lemon-juice} and {oil}.",
-      "Marinate at least 30 minutes, then thread onto skewers.",
-      "Grill, turning often, until browned and cooked through; rest before serving."
+      "Cut {pork-shoulder} into 4 cm cubes and toss with sliced {onion}, {paprika}, {lemon-juice}, {salt} and {oil}.",
+      "Marinate for at least 30 minutes, then thread onto skewers.",
+      "Grill over hot coals or a very hot grill pan for 12–15 minutes, turning often, until browned and cooked through.",
+      "Rest for 5 minutes before serving."
     ]
   },
   {
@@ -49,7 +54,7 @@ KITCHEN.add(
         700
       ],
       [
-        "wholemeal-flour",
+        "wheat-berries",
         250
       ],
       [
@@ -59,18 +64,23 @@ KITCHEN.add(
       [
         "butter",
         40
+      ],
+      [
+        "salt",
+        4
       ]
     ],
     "steps": [
-      "Simmer {chicken-thigh} in {water} until falling apart; remove bones and shred meat.",
-      "Stir in {wholemeal-flour} gradually and cook over very low heat, stirring frequently.",
-      "Beat until the wheat and chicken form a thick, smooth porridge; serve with melted {butter}."
+      "Rinse the {wheat-berries} and put them in a large heavy pot with the {chicken-thigh}, {water} and half the {salt}. Bring to the boil and skim.",
+      "Cover and simmer very gently for 2 hours, stirring from time to time, until the chicken falls off the bone and the wheat is very soft.",
+      "Lift out the chicken, remove the skin and bones and shred the meat. Return it to the pot.",
+      "Beat the porridge vigorously with a wooden spoon for 10 minutes until the wheat and chicken form a thick, smooth mass. Season with the remaining {salt} and serve with the {butter} melted over the top."
     ]
   },
   {
     "id": "armenian-eetch",
     "name": "Eetch (tomato bulgur salad)",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Armenian",
     "time": 30,
     "serves": 4,
@@ -89,7 +99,7 @@ KITCHEN.add(
       ],
       [
         "red-onion",
-        1
+        "1pc"
       ],
       [
         "lemon-juice",
@@ -116,7 +126,7 @@ KITCHEN.add(
     "ing": [
       [
         "pumpkin",
-        1
+        1200
       ],
       [
         "rice",
@@ -140,48 +150,69 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Hollow out the {pumpkin}, leaving a sturdy shell. Part-cook {rice} until just tender.",
-      "Mix rice with chopped {dried-apricots}, {raisins}, {walnuts} and {honey}; spoon into pumpkin.",
-      "Cover and bake at 180°C until pumpkin is tender and filling is hot."
+      "Cut a lid from the {pumpkin} and scoop out the seeds, leaving a sturdy shell. Part-cook the {rice} for 8 minutes in boiling water and drain.",
+      "Mix the rice with chopped {dried-apricots}, {raisins}, {walnuts} and {honey} and spoon into the pumpkin.",
+      "Put the lid back on and bake at 180 °C for 60–70 minutes until the pumpkin flesh is tender and the filling is hot."
     ]
   },
   {
     "id": "lentil-vosp-apur",
-    "name": "Lentil Vosp Apur",
+    "name": "Lentil Vosp Apur (Armenian lentil soup)",
     "meal": "big",
     "cuisine": "Armenian",
-    "time": 30,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "potatoes",
-        400
+        "brown-lentils",
+        250
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
-        "eggs",
-        3
+        "carrot",
+        "1pc"
       ],
       [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
+        "tomato-paste",
+        20
       ],
       [
         "butter",
-        20
+        30
+      ],
+      [
+        "water",
+        1000
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "mint",
+        2
+      ],
+      [
+        "lemon-juice",
+        15
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a heavy pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir well so the ingredients are evenly coated.",
-      "Add the {eggs} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Rinse the {brown-lentils}. Finely chop the {onion} and dice the {carrot}.",
+      "Melt the {butter} in a large pot and cook the onion and carrot for 6 minutes. Stir in the {tomato-paste} and {cumin} for 1 minute.",
+      "Add the lentils, {water} and {salt}. Bring to the boil, then simmer for 25–30 minutes until the lentils are completely soft.",
+      "Mash some of the lentils against the side of the pot to thicken the soup. Stir in the {mint}, {lemon-juice} and {black-pepper} and serve hot."
     ]
   },
   {
@@ -559,38 +590,51 @@ KITCHEN.add(
     "name": "Armenian Creamy Mushroom and Potato Soup",
     "meal": "big",
     "cuisine": "Armenian",
-    "time": 25,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
+        "mushrooms",
+        300
+      ],
+      [
         "potatoes",
-        400
+        500
       ],
       [
         "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
+        "1pc"
       ],
       [
         "butter",
-        20
+        30
+      ],
+      [
+        "vegetable-stock",
+        800
+      ],
+      [
+        "greek-yogurt",
+        100
+      ],
+      [
+        "dill",
+        10
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Slice the {mushrooms}, dice the {potatoes} into 2 cm cubes and chop the {onion}.",
+      "Melt the {butter} in a large pot and cook the mushrooms for 8 minutes until golden. Set a quarter aside.",
+      "Add the onion for 4 minutes. Add the potatoes, {vegetable-stock} and {salt} and simmer for 20 minutes until tender.",
+      "Blend until smooth. Off the heat, stir in the {greek-yogurt} and {black-pepper}. Reheat gently without boiling, then top with the reserved mushrooms and chopped {dill}."
     ]
   },
   {
@@ -636,48 +680,41 @@ KITCHEN.add(
   {
     "id": "armenian-apple-and-cinnamon-bake",
     "name": "Armenian Apple and Cinnamon Bake",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Armenian",
-    "time": 39,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "parsley",
-        10
+        "apple",
+        800
       ],
       [
-        "black-pepper",
-        2
+        "walnuts",
+        60
       ],
       [
-        "salt",
+        "honey",
+        50
+      ],
+      [
+        "cinnamon",
         3
       ],
       [
-        "potatoes",
-        400
+        "butter",
+        30
       ],
       [
-        "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
+        "raisins",
+        40
       ]
     ],
     "steps": [
-      "Add the {parsley} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 180 °C. Core the {apple} (leave 4 apples whole if possible, or halve them) and place cut-side up in a baking dish.",
+      "Chop the {walnuts} and mix with the {raisins}, {cinnamon} and half the {honey}. Pile into the apples.",
+      "Dot each apple with {butter} and drizzle with the remaining {honey}. Add 3 tablespoons of water to the dish.",
+      "Bake for 30–35 minutes until the apples are soft. Spoon the juices over and serve warm."
     ]
   },
   {
@@ -685,38 +722,59 @@ KITCHEN.add(
     "name": "Armenian Cabbage and Bean Stew",
     "meal": "big",
     "cuisine": "Armenian",
-    "time": 46,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "potatoes",
+        "cabbage",
         400
       ],
       [
-        "onion",
-        1
+        "white-beans",
+        480
       ],
       [
-        "eggs",
+        "onion",
+        "1pc"
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "tomato-paste",
+        30
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
+        "water",
+        500
+      ],
+      [
+        "dill",
+        10
+      ],
+      [
+        "paprika",
         3
       ],
       [
-        "cheese",
-        100
+        "salt",
+        3
       ],
       [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Slice the {onion}, dice the {carrot} and chop the {cabbage} coarsely.",
+      "Heat the {oil} in a large pot and cook the onion and carrot for 6 minutes. Stir in the {tomato-paste} and {paprika} for 1 minute.",
+      "Add the {water}, {white-beans} (drained) and {salt}. Bring to the boil and simmer for 10 minutes.",
+      "Add the cabbage and simmer for 15–20 minutes until tender and the stew is thick. Season with {black-pepper} and scatter with chopped {dill}."
     ]
   },
   {
@@ -784,42 +842,47 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "parsley",
-        10
+        "barley",
+        200
       ],
       [
-        "black-pepper",
-        2
+        "mushrooms",
+        300
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "butter",
+        30
+      ],
+      [
+        "vegetable-stock",
+        600
+      ],
+      [
+        "parsley",
+        10
       ],
       [
         "salt",
         3
       ],
       [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
+        "black-pepper",
         1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
       ]
     ],
     "steps": [
-      "Add the {parsley} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Rinse the {barley}. Slice the {mushrooms} and chop the {onion}; crush the {garlic}.",
+      "Melt the {butter} in a wide, deep skillet and cook the mushrooms over high heat for 8 minutes until golden. Remove half.",
+      "Add the onion for 5 minutes, then the garlic for 1 minute. Stir in the barley, {vegetable-stock}, {salt} and {black-pepper}.",
+      "Cover and simmer for 35–40 minutes until the barley is tender and the liquid is absorbed. Fold the reserved mushrooms and chopped {parsley} through and serve."
     ]
   },
   {
@@ -827,38 +890,51 @@ KITCHEN.add(
     "name": "Armenian Potato and Leek Gratin",
     "meal": "big",
     "cuisine": "Armenian",
-    "time": 31,
+    "time": 70,
     "serves": 4,
     "ing": [
       [
         "potatoes",
-        400
+        700
       ],
       [
-        "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
+        "leek",
+        "2pc"
       ],
       [
         "butter",
-        20
+        30
+      ],
+      [
+        "milk",
+        300
+      ],
+      [
+        "eggs",
+        "2pc"
+      ],
+      [
+        "feta",
+        100
+      ],
+      [
+        "nutmeg",
+        1
+      ],
+      [
+        "black-pepper",
+        1
+      ],
+      [
+        "salt",
+        2
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Heat the oven to 190 °C and butter a 24 cm baking dish with some of the {butter}. Slice the {potatoes} 3 mm thin and the {leek} into thin rounds.",
+      "Melt the remaining {butter} in a pan and cook the leek for 6 minutes until soft.",
+      "Layer the potatoes and leek in the dish. Whisk the {milk}, {eggs}, {salt}, {nutmeg} and {black-pepper} and pour over. Crumble the {feta} on top.",
+      "Cover with foil and bake for 35 minutes, then uncover and bake 15–20 minutes more until the potatoes are tender and the top is golden. Rest for 5 minutes."
     ]
   },
   {

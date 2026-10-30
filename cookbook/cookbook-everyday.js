@@ -4,7 +4,7 @@ KITCHEN.add(
   {
     "id": "zucchini-spinach-frittata",
     "name": "Zucchini, spinach and cheddar frittata",
-    "meal": "morning,big",
+    "meal": "morning",
     "time": 25,
     "serves": 3,
     "ing": [
@@ -750,7 +750,7 @@ KITCHEN.add(
   {
     "id": "world-hungarian-palacsinta",
     "name": "Hungarian palacsinta (thin crepes)",
-    "meal": "morning,treat",
+    "meal": "morning",
     "time": 25,
     "serves": 3,
     "ing": [
@@ -1539,8 +1539,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Dice {pumpkin} and roast at 210 °C for 20 minutes until tender.",
-      "Warm {vegetable-stock} in a saucepan. Soften diced {onion} in {butter}, add rice and stir for 1 minute.",
-      "Add stock a ladle at a time, stirring often, until rice is creamy and tender. Fold in pumpkin, {parmesan} and chopped {sage}."
+      "Warm {vegetable-stock} in a saucepan. Soften diced {onion} in {butter}, add the {rice} and stir for 1 minute.",
+      "Add stock a ladle at a time, stirring often, until the rice is creamy and tender. Fold in the pumpkin, {parmesan} and chopped {sage}."
     ]
   },
   {
@@ -2110,11 +2110,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -2130,7 +2130,7 @@ KITCHEN.add(
       ],
       [
         "lime",
-        1
+        "1pc"
       ]
     ],
     "steps": [
@@ -2178,7 +2178,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat oven to 210 °C. Cut {potatoes} into wedges and slice {fennel} and {red-onion}.",
-      "Toss vegetables with {olive-oil}, rosemary, lemon zest and seasoning in a roasting tray. Nestle {sausage} among them.",
+      "Toss vegetables with {olive-oil}, {rosemary}, lemon zest and seasoning in a roasting tray. Nestle {sausage} among them.",
       "Roast 35–40 minutes, turning vegetables once, until the sausages are browned and potatoes crisp. Squeeze over {lemon} juice to serve."
     ]
   },
@@ -2230,174 +2230,216 @@ KITCHEN.add(
   },
   {
     "id": "one-pot-tomato-chickpeas",
-    "name": "One-Pot Tomato Chickpeas",
-    "meal": "quick",
+    "name": "One-pot smoky tomato chickpeas",
+    "meal": "big",
     "cuisine": "Everyday",
     "time": 30,
     "serves": 4,
     "ing": [
       [
-        "flour",
-        250
+        "chickpeas",
+        800
       ],
       [
-        "eggs",
+        "canned-tomatoes",
+        400
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "smoked-paprika",
+        4
+      ],
+      [
+        "cumin",
         2
       ],
       [
-        "milk",
-        200
+        "tomato-paste",
+        25
       ],
       [
-        "butter",
-        40
+        "olive-oil",
+        20
       ],
       [
-        "sugar",
-        50
+        "yogurt",
+        150
       ],
       [
-        "baking-powder",
-        5
+        "parsley",
+        10
       ]
     ],
     "steps": [
-      "Warm the {butter} in a heavy pan and soften the {eggs} until fragrant.",
-      "Add the {flour} and {flour}; stir well so the ingredients are evenly coated.",
-      "Add the {milk} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Chop {onion} and mince {garlic}. Warm {olive-oil} in a wide pan over medium heat and cook the onion for 6 minutes until soft.",
+      "Add the garlic, {smoked-paprika}, {cumin} and {tomato-paste}; stir for 1 minute.",
+      "Pour in {canned-tomatoes}, the drained {chickpeas}, 100 ml water and a pinch of salt. Simmer gently for 15 minutes until thick, crushing a few chickpeas against the pan to thicken the sauce.",
+      "Serve topped with spoonfuls of {yogurt} and chopped {parsley}."
     ]
   },
   {
     "id": "quick-chicken-and-rice",
-    "name": "Quick Chicken and Rice",
-    "meal": "quick",
+    "name": "Quick chicken and rice",
+    "meal": "big",
     "cuisine": "Everyday",
-    "time": 25,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "flour",
-        250
+        "chicken-breast",
+        450
       ],
       [
-        "eggs",
-        2
+        "rice",
+        240
       ],
       [
-        "milk",
-        200
+        "onion",
+        "1pc"
       ],
       [
-        "butter",
-        40
+        "garlic",
+        "2pc"
       ],
       [
-        "sugar",
-        50
+        "chicken-stock",
+        500
       ],
       [
-        "baking-powder",
-        5
+        "peas",
+        100
+      ],
+      [
+        "olive-oil",
+        15
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "parsley",
+        8
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {eggs} until fragrant.",
-      "Add the {flour} and {flour}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Cut {chicken-breast} into bite-size pieces and season with salt and pepper. Brown in {olive-oil} in a wide lidded pan over medium-high heat for 4 minutes, then lift out.",
+      "Soften diced {onion} in the same pan for 3 minutes. Add minced {garlic} and {paprika} and stir for 30 seconds.",
+      "Stir in the {rice}, pour in {chicken-stock} and return the chicken. Bring to the boil, cover and cook on low heat for 12 minutes.",
+      "Scatter the {peas} on top, cover and cook 3 minutes more until the rice is tender and the chicken is cooked through. Rest 5 minutes off the heat, then fold through chopped {parsley}."
     ]
   },
   {
     "id": "lemony-lentil-soup",
-    "name": "Lemony Lentil Soup",
-    "meal": "quick",
+    "name": "Lemony lentil soup",
+    "meal": "big",
     "cuisine": "Everyday",
-    "time": 32,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "butter",
-        40
-      ],
-      [
-        "sugar",
-        50
-      ],
-      [
-        "baking-powder",
-        5
-      ],
-      [
-        "salt",
-        2
-      ],
-      [
-        "flour",
-        250
-      ],
-      [
-        "eggs",
-        2
-      ],
-      [
-        "milk",
+        "red-lentils",
         200
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "carrot",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "vegetable-stock",
+        1000
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "olive-oil",
+        20
+      ],
+      [
+        "parsley",
+        10
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {sugar} until fragrant.",
-      "Add the {butter} and {flour}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Dice {onion} and {carrot}. Soften in {olive-oil} in a large pot over medium heat for 6 minutes. Add minced {garlic} and {cumin} and cook for 1 minute.",
+      "Rinse the {red-lentils}, add them to the pot with {vegetable-stock} and bring to the boil.",
+      "Simmer 20 minutes until the lentils are soft and falling apart. Blend roughly with a stick blender for a creamier soup if you like.",
+      "Stir in the zest and juice of {lemon}, season with salt and pepper, and serve scattered with chopped {parsley}."
     ]
   },
   {
     "id": "sheet-pan-sausage-and-vegetables",
-    "name": "Sheet-Pan Sausage and Vegetables",
-    "meal": "quick",
+    "name": "Sheet-pan sausage and vegetables",
+    "meal": "big",
     "cuisine": "Everyday",
-    "time": 39,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "salt",
+        "sausage",
+        "8pc"
+      ],
+      [
+        "sweet-potato",
+        500
+      ],
+      [
+        "red-pepper",
+        "2pc"
+      ],
+      [
+        "zucchini",
+        "2pc"
+      ],
+      [
+        "red-onion",
+        "1pc"
+      ],
+      [
+        "olive-oil",
+        30
+      ],
+      [
+        "oregano",
         2
       ],
       [
-        "flour",
-        250
-      ],
-      [
-        "eggs",
-        2
-      ],
-      [
-        "milk",
-        200
-      ],
-      [
-        "butter",
-        40
-      ],
-      [
-        "sugar",
-        50
-      ],
-      [
-        "baking-powder",
-        5
+        "mustard",
+        15
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {flour} until fragrant.",
-      "Add the {salt} and {flour}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 210 °C. Cut {sweet-potato} into 2 cm chunks and cut the {red-pepper}, {zucchini} and {red-onion} into pieces of similar size.",
+      "Toss the vegetables with {olive-oil}, {oregano}, salt and pepper on a large tray. Roast for 15 minutes.",
+      "Nestle the {sausage} among the vegetables and roast 25 minutes more, turning everything once, until the sausages are browned and cooked through and the sweet potato is tender.",
+      "Serve straight from the tray with {mustard} on the side."
     ]
   },
   {
     "id": "everyday-apple-cinnamon-muffins",
     "name": "Everyday Apple Cinnamon Muffins",
-    "meal": "morning,treat",
+    "meal": "morning",
     "cuisine": "Everyday",
     "time": 40,
     "serves": 4,
@@ -2448,173 +2490,151 @@ KITCHEN.add(
   },
   {
     "id": "everyday-cheddar-herb-biscuits",
-    "name": "Everyday Cheddar Herb Biscuits",
-    "meal": "quick",
+    "name": "Everyday cheddar herb biscuits",
+    "meal": "bite",
     "cuisine": "Everyday",
-    "time": 53,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
+        "flour",
+        250
+      ],
+      [
         "baking-powder",
-        5
+        12
       ],
       [
         "salt",
         2
       ],
       [
-        "flour",
-        250
+        "butter",
+        100
       ],
       [
-        "eggs",
-        2
+        "cheddar",
+        100
+      ],
+      [
+        "chives",
+        10
       ],
       [
         "milk",
-        200
+        150
       ],
       [
-        "butter",
-        40
-      ],
-      [
-        "sugar",
-        50
+        "eggs",
+        "1pc"
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {salt} until fragrant.",
-      "Add the {baking-powder} and {flour}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 220 °C and line a tray. Mix {flour}, {baking-powder} and {salt} in a bowl.",
+      "Rub in the cold, cubed {butter} with your fingertips until it looks like breadcrumbs, then stir in grated {cheddar} and chopped {chives}.",
+      "Beat {eggs} with {milk}, keeping a spoonful back for brushing. Stir the rest into the dry mix until it just comes together into a soft dough.",
+      "Pat out to 2.5 cm thick, cut into 8 rounds and place on the tray. Brush with the reserved egg mixture.",
+      "Bake 12–15 minutes until risen and golden. Cool for 5 minutes and serve warm."
     ]
   },
   {
     "id": "everyday-roasted-vegetable-pasta",
-    "name": "Everyday Roasted Vegetable Pasta",
-    "meal": "quick",
+    "name": "Everyday roasted vegetable pasta",
+    "meal": "big",
     "cuisine": "Everyday",
-    "time": 60,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "eggs",
-        2
+        "pasta",
+        320
       ],
       [
-        "milk",
-        200
+        "zucchini",
+        "2pc"
       ],
       [
-        "butter",
+        "red-pepper",
+        "2pc"
+      ],
+      [
+        "red-onion",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "4pc"
+      ],
+      [
+        "garlic",
+        "4pc"
+      ],
+      [
+        "olive-oil",
         40
       ],
       [
-        "sugar",
-        50
+        "basil",
+        8
       ],
       [
-        "baking-powder",
-        5
-      ],
-      [
-        "salt",
-        2
-      ],
-      [
-        "flour",
-        250
+        "parmesan",
+        40
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {milk} until fragrant.",
-      "Add the {eggs} and {eggs}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "everyday-lemon-yogurt-loaf",
-    "name": "Everyday Lemon Yogurt Loaf",
-    "meal": "quick",
-    "cuisine": "Everyday",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "sugar",
-        50
-      ],
-      [
-        "baking-powder",
-        5
-      ],
-      [
-        "salt",
-        2
-      ],
-      [
-        "flour",
-        250
-      ],
-      [
-        "eggs",
-        2
-      ],
-      [
-        "milk",
-        200
-      ]
-    ],
-    "steps": [
-      "Add the {sugar} and {flour}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 220 °C. Cut {zucchini}, {red-pepper}, {red-onion} and {tomato} into 2 cm pieces and put them on a large tray with the whole, unpeeled {garlic} cloves.",
+      "Drizzle with {olive-oil}, season with salt and pepper and roast 25–30 minutes, stirring once, until soft and lightly charred.",
+      "Meanwhile boil the {pasta} in salted water according to the packet. Keep a cupful of the cooking water, then drain.",
+      "Squeeze the garlic from its skins and stir it through the vegetables. Toss with the pasta and a splash of cooking water. Serve with torn {basil} and grated {parmesan}."
     ]
   },
   {
     "id": "everyday-creamy-tomato-soup",
-    "name": "Everyday Creamy Tomato Soup",
-    "meal": "quick",
+    "name": "Everyday creamy tomato soup",
+    "meal": "big",
     "cuisine": "Everyday",
-    "time": 38,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "flour",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "eggs",
-        2
+        "garlic",
+        "2pc"
       ],
       [
-        "milk",
-        200
+        "canned-tomatoes",
+        800
+      ],
+      [
+        "vegetable-stock",
+        400
+      ],
+      [
+        "cream",
+        100
       ],
       [
         "butter",
-        40
+        25
+      ],
+      [
+        "basil",
+        8
       ],
       [
         "sugar",
-        50
-      ],
-      [
-        "baking-powder",
         5
-      ],
-      [
-        "salt",
-        2
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {eggs} until fragrant.",
-      "Add the {flour} and {flour}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Dice {onion}. Melt {butter} in a large pot and cook the onion over medium heat for 6 minutes until soft. Add minced {garlic} and cook for 1 minute.",
+      "Add {canned-tomatoes}, {vegetable-stock}, {sugar}, a pinch of salt and pepper. Bring to the boil, then simmer for 20 minutes.",
+      "Blend until smooth with a stick blender. Stir in {cream} and warm through without boiling.",
+      "Serve scattered with torn {basil}."
     ]
   }
 ]

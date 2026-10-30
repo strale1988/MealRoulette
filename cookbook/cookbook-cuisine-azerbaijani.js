@@ -23,6 +23,10 @@ KITCHEN.add(
       ],
       [
         "eggs",
+        "1pc"
+      ],
+      [
+        "saffron",
         1
       ],
       [
@@ -32,18 +36,23 @@ KITCHEN.add(
       [
         "raisins",
         60
+      ],
+      [
+        "salt",
+        10
       ]
     ],
     "steps": [
-      "Parboil {rice} in salted water until partly cooked; drain.",
-      "Mix {yogurt}, {eggs} and a little rice to make a base; spread in a buttered pot and layer remaining rice with {dried-apricots} and {raisins}.",
-      "Cover with a clean towel under the lid and steam gently until fluffy; finish with {butter}."
+      "Soak the {saffron} in 3 tablespoons of hot water for 10 minutes. Rinse the {rice} until the water runs clear, then parboil it in 2 litres of boiling water with the {salt} for 6–7 minutes until partly cooked. Drain.",
+      "Mix the {yogurt}, {eggs}, 1 tablespoon of the saffron water and a ladleful of rice. Melt half the {butter} in a heavy 24 cm pot and spread the mixture over the base; this makes the golden crust.",
+      "Pile the remaining rice into the pot in a mound, scattering the {dried-apricots} and {raisins} between the layers. Drizzle with the rest of the melted butter and saffron water and poke a few steam holes with a spoon handle.",
+      "Wrap the lid in a clean towel, cover the pot and cook for 5 minutes on medium heat, then 35 minutes on the lowest heat. Serve with the crust broken into pieces."
     ]
   },
   {
     "id": "azerbaijani-qutab",
     "name": "Qutab (thin stuffed flatbread)",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Azerbaijani",
     "time": 35,
     "serves": 4,
@@ -97,7 +106,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "beef-stock",
@@ -106,12 +115,21 @@ KITCHEN.add(
       [
         "parsley",
         10
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Make a firm dough with {flour} and {water}; rest, roll thin and cut into small squares.",
-      "Mix {beef-mince} with finely chopped {onion}, salt and pepper; place tiny portions on dough and seal.",
-      "Simmer dumplings in {beef-stock} until cooked; garnish with {parsley}."
+      "Mix the {flour}, {water} and half the {salt} into a firm dough, knead for 8 minutes, then cover and rest for 30 minutes.",
+      "Grate the {onion} and mix it with the {beef-mince}, the remaining salt and the {black-pepper}.",
+      "Roll the dough 1.5 mm thin and cut into 3 cm squares. Put a pea-sized ball of filling on each and pinch the corners together into tiny pouches.",
+      "Bring the {beef-stock} to a simmer and cook the dumplings for 8–10 minutes until they float and the filling is cooked. Serve in the broth with chopped {parsley}."
     ]
   },
   {
@@ -119,7 +137,7 @@ KITCHEN.add(
     "name": "Lavangi-style stuffed chicken",
     "meal": "big",
     "cuisine": "Azerbaijani",
-    "time": 80,
+    "time": 70,
     "serves": 4,
     "ing": [
       [
@@ -132,7 +150,11 @@ KITCHEN.add(
       ],
       [
         "red-onion",
-        1
+        "1pc"
+      ],
+      [
+        "pomegranate-molasses",
+        25
       ],
       [
         "lemon-juice",
@@ -141,12 +163,21 @@ KITCHEN.add(
       [
         "oil",
         20
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Finely chop {walnuts} and {red-onion}; season with salt, pepper and {lemon-juice}.",
-      "Spread the walnut mixture under the skin of {chicken-thigh} or use as a topping in a baking dish.",
-      "Brush with {oil} and roast at 190°C until browned and cooked through."
+      "Heat the oven to 190 °C. Finely chop the {walnuts} and {red-onion} and mix with the {pomegranate-molasses}, {lemon-juice}, 2 g of the {salt} and the {black-pepper}.",
+      "Loosen the skin of each {chicken-thigh} and push the walnut stuffing underneath, spreading any extra over the top.",
+      "Place the thighs in a baking dish, brush with the {oil} and sprinkle with the remaining salt.",
+      "Roast for 45–50 minutes until the skin is browned and the juices run clear."
     ]
   },
   {
@@ -154,38 +185,64 @@ KITCHEN.add(
     "name": "Azerbaijani Plov with Dried Fruit",
     "meal": "big",
     "cuisine": "Azerbaijani",
-    "time": 30,
+    "time": 90,
     "serves": 4,
     "ing": [
       [
-        "beef-chuck",
-        450
+        "lamb",
+        500
       ],
       [
         "onion",
-        1
+        "2pc"
       ],
       [
         "carrot",
-        2
+        "2pc"
       ],
       [
         "rice",
-        250
+        300
       ],
       [
-        "potatoes",
+        "dried-apricots",
+        60
+      ],
+      [
+        "dried-prunes",
+        60
+      ],
+      [
+        "raisins",
+        40
+      ],
+      [
+        "butter",
+        50
+      ],
+      [
+        "cinnamon",
         2
       ],
       [
-        "cumin",
-        3
+        "oil",
+        30
+      ],
+      [
+        "water",
+        300
+      ],
+      [
+        "salt",
+        5
       ]
     ],
     "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {carrot} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Cut the {lamb} into 3 cm cubes. Brown in the {oil} for 8 minutes, add the sliced {onion} and cook 8 minutes until golden. Stir in the {cinnamon} and 2 g of the {salt}, add the {water}, cover and simmer for 45 minutes until tender.",
+      "Meanwhile cut the {carrot} into matchsticks and fry in half the {butter} for 5 minutes. Add the {dried-apricots}, {dried-prunes} and {raisins} and cook 3 minutes.",
+      "Rinse the {rice} and parboil in plenty of boiling water with the remaining salt for 7 minutes. Drain.",
+      "In a heavy pot layer half the rice, the fruit and carrot, the lamb and the remaining rice. Dot with the remaining butter and add 3 tablespoons of the lamb liquid.",
+      "Cover with a towel and a tight lid and steam on the lowest heat for 25 minutes."
     ]
   },
   {
@@ -297,40 +354,45 @@ KITCHEN.add(
   {
     "id": "azerbaijani-tomato-egg-scramble",
     "name": "Azerbaijani Tomato Egg Scramble",
-    "meal": "big",
+    "meal": "morning",
     "cuisine": "Azerbaijani",
-    "time": 51,
+    "time": 25,
     "serves": 4,
     "ing": [
       [
+        "eggs",
+        "8pc"
+      ],
+      [
+        "tomato",
+        "4pc"
+      ],
+      [
         "onion",
-        1
+        "1pc"
       ],
       [
-        "carrot",
-        2
+        "oil",
+        30
       ],
       [
-        "rice",
-        250
+        "dill",
+        10
       ],
       [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
+        "salt",
         3
       ],
       [
-        "garlic",
-        2
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {onion} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {rice} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Chop the {onion} and dice the {tomato}.",
+      "Heat the {oil} in a wide pan and cook the onion for 5 minutes. Add the tomato and cook for 8 minutes until jammy.",
+      "Beat the {eggs} with the {salt} and {black-pepper}, pour into the pan and stir gently for 2–3 minutes until softly set.",
+      "Scatter with chopped {dill} and serve at once."
     ]
   },
   {
@@ -549,7 +611,7 @@ KITCHEN.add(
     "name": "Azerbaijani Beef and Onion Pilaf",
     "meal": "big",
     "cuisine": "Azerbaijani",
-    "time": 25,
+    "time": 70,
     "serves": 4,
     "ing": [
       [
@@ -558,29 +620,42 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
+        "2pc"
       ],
       [
         "rice",
-        250
+        300
       ],
       [
-        "potatoes",
-        2
+        "tomato-paste",
+        20
       ],
       [
         "cumin",
         3
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "beef-stock",
+        700
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Cut the {beef-chuck} into 2 cm cubes and slice the {onion}.",
+      "Brown the beef in the {oil} for 8 minutes, add the onion and cook 8 minutes until golden. Stir in the {tomato-paste}, {cumin}, {salt} and {black-pepper} for 1 minute.",
+      "Add 300 ml of the {beef-stock}, cover and simmer for 35–40 minutes until the beef is tender.",
+      "Stir in the rinsed {rice} and the remaining 400 ml stock, bring to the boil, cover and cook on the lowest heat for 18 minutes. Rest for 5 minutes, then fluff and serve."
     ]
   },
   {
@@ -636,85 +711,111 @@ KITCHEN.add(
     "name": "Azerbaijani Carrot and Chickpea Soup",
     "meal": "big",
     "cuisine": "Azerbaijani",
-    "time": 39,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
+        "carrot",
+        500
+      ],
+      [
+        "chickpeas",
+        400
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
         "garlic",
+        "2pc"
+      ],
+      [
+        "cumin",
         2
+      ],
+      [
+        "vegetable-stock",
+        900
       ],
       [
         "oil",
         20
       ],
       [
+        "lemon-juice",
+        15
+      ],
+      [
+        "coriander",
+        8
+      ],
+      [
         "salt",
         3
       ],
       [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
+        "black-pepper",
         1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
       ]
     ],
     "steps": [
-      "Add the {garlic} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Chop the {onion}, slice the {carrot} and crush the {garlic}.",
+      "Heat the {oil} in a large pot and cook the onion for 5 minutes. Add the garlic and {cumin} for 1 minute, then the carrot.",
+      "Add the {vegetable-stock}, drained {chickpeas} and {salt}. Simmer for 20 minutes until the carrot is very soft.",
+      "Blend about half the soup for a thick texture, stir in the {lemon-juice} and {black-pepper} and serve with chopped {coriander}."
     ]
   },
   {
     "id": "azerbaijani-flatbread-with-yogurt-dip",
     "name": "Azerbaijani Flatbread with Yogurt Dip",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Azerbaijani",
-    "time": 46,
+    "time": 80,
     "serves": 4,
     "ing": [
       [
-        "beef-chuck",
-        450
+        "flour",
+        300
       ],
       [
-        "onion",
-        1
+        "yeast",
+        5
       ],
       [
-        "carrot",
-        2
+        "salt",
+        5
       ],
       [
-        "rice",
+        "water",
+        180
+      ],
+      [
+        "oil",
+        15
+      ],
+      [
+        "greek-yogurt",
         250
       ],
       [
-        "potatoes",
-        2
+        "garlic",
+        "1pc"
       ],
       [
-        "cumin",
-        3
+        "dill",
+        8
+      ],
+      [
+        "olive-oil",
+        15
       ]
     ],
     "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Mix the {flour}, {yeast}, 3 g of the {salt}, the {oil} and {water} and knead for 8 minutes. Cover and let rise for 45 minutes.",
+      "Crush the {garlic} into the {greek-yogurt}, then stir in the chopped {dill}, the {olive-oil} and the remaining salt. Chill.",
+      "Divide the dough into 4 balls, roll each into an oval about 5 mm thick and prick with a fork.",
+      "Cook in a hot dry skillet for 2 minutes per side until blistered and golden. Serve warm with the dip."
     ]
   },
   {
@@ -777,17 +878,37 @@ KITCHEN.add(
   {
     "id": "azerbaijani-herbed-cucumber-salad",
     "name": "Azerbaijani Herbed Cucumber Salad",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Azerbaijani",
-    "time": 60,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "garlic",
-        2
+        "cucumber",
+        600
       ],
       [
-        "oil",
+        "tomato",
+        "2pc"
+      ],
+      [
+        "red-onion",
+        "1pc"
+      ],
+      [
+        "dill",
+        10
+      ],
+      [
+        "parsley",
+        10
+      ],
+      [
+        "olive-oil",
+        30
+      ],
+      [
+        "lemon-juice",
         20
       ],
       [
@@ -795,30 +916,14 @@ KITCHEN.add(
         3
       ],
       [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
+        "black-pepper",
         1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
       ]
     ],
     "steps": [
-      "Add the {garlic} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Slice the {cucumber}, cut the {tomato} into wedges and slice the {red-onion} very thinly.",
+      "Whisk the {olive-oil}, {lemon-juice}, {salt} and {black-pepper}.",
+      "Toss the vegetables with the dressing and the chopped {dill} and {parsley}. Rest for 5 minutes and serve."
     ]
   },
   {
@@ -826,38 +931,59 @@ KITCHEN.add(
     "name": "Azerbaijani Lamb-Style Noodle Broth",
     "meal": "big",
     "cuisine": "Azerbaijani",
-    "time": 31,
+    "time": 90,
     "serves": 4,
     "ing": [
       [
-        "beef-chuck",
-        450
+        "lamb",
+        350
+      ],
+      [
+        "noodles",
+        200
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "carrot",
-        2
+        "1pc"
       ],
       [
-        "rice",
-        250
+        "garlic",
+        "2pc"
       ],
       [
-        "potatoes",
-        2
+        "tomato-paste",
+        20
       ],
       [
-        "cumin",
-        3
+        "parsley",
+        10
+      ],
+      [
+        "water",
+        1500
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Cut the {lamb} into 2 cm cubes and brown in the {oil} in a large pot for 6 minutes. Add the diced {onion} and {carrot} for 5 minutes, then the crushed {garlic} and {tomato-paste} for 1 minute.",
+      "Add the {water}, {salt} and {black-pepper}. Bring to the boil, skim, then simmer for 60 minutes until the lamb is tender.",
+      "Add the {noodles} and cook for 5–7 minutes until tender.",
+      "Stir in chopped {parsley} and serve hot."
     ]
   },
   {

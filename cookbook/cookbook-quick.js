@@ -69,7 +69,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Blend {banana}, {oats}, {milk}, {peanut-butter} and {cinnamon} until thick and smooth.",
-      "Pour into two bowls and scatter {chia-seeds} on top."
+      "Pour into two bowls.",
+      "Scatter {chia-seeds} on top."
     ]
   },
   {
@@ -642,7 +643,7 @@ KITCHEN.add(
   {
     "id": "date-almond-balls",
     "name": "Date, almond and cocoa bites",
-    "meal": "bite,treat",
+    "meal": "bite",
     "time": 15,
     "serves": 4,
     "ing": [
@@ -1035,51 +1036,9 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "tuna-cannellini-lemon-salad",
-    "name": "Tuna and cannellini bean lemon salad",
-    "meal": "bite,big",
-    "time": 12,
-    "serves": 2,
-    "ing": [
-      [
-        "tuna",
-        160
-      ],
-      [
-        "white-beans",
-        240
-      ],
-      [
-        "red-onion",
-        40
-      ],
-      [
-        "parsley",
-        10
-      ],
-      [
-        "lemon",
-        "1pc"
-      ],
-      [
-        "olive-oil",
-        18
-      ],
-      [
-        "cucumber",
-        120
-      ]
-    ],
-    "steps": [
-      "Drain {tuna} and {white-beans}. Thinly slice {red-onion} and dice {cucumber}.",
-      "Whisk lemon juice from {lemon} with {olive-oil}, salt and black pepper.",
-      "Gently toss the {tuna}, beans, onion and cucumber with the dressing and chopped {parsley}. Rest 5 minutes before serving."
-    ]
-  },
-  {
     "id": "avocado-egg-rice-bowl",
     "name": "Avocado and egg rice bowl",
-    "meal": "big,morning",
+    "meal": "morning",
     "time": 15,
     "serves": 1,
     "ing": [
@@ -1163,7 +1122,7 @@ KITCHEN.add(
   {
     "id": "garlic-butter-peas-toast",
     "name": "Garlic butter peas on toast",
-    "meal": "morning,bite",
+    "meal": "bite",
     "time": 12,
     "serves": 2,
     "ing": [
@@ -1206,7 +1165,7 @@ KITCHEN.add(
   {
     "id": "smoky-bean-quesadillas",
     "name": "Smoky bean and cheese quesadillas",
-    "meal": "big,bite",
+    "meal": "big",
     "time": 18,
     "serves": 2,
     "ing": [
@@ -1319,11 +1278,11 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "spring-onion",
-        2
+        "2pc"
       ],
       [
         "sesame-seeds",
@@ -1338,57 +1297,9 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "quick-crispy-chickpea-pitas",
-    "name": "Crispy spiced chickpea pitas",
-    "meal": "big",
-    "cuisine": "",
-    "time": 20,
-    "serves": 2,
-    "ing": [
-      [
-        "chickpeas",
-        400
-      ],
-      [
-        "pita-bread",
-        2
-      ],
-      [
-        "yogurt",
-        100
-      ],
-      [
-        "lemon",
-        1
-      ],
-      [
-        "cumin",
-        4
-      ],
-      [
-        "paprika",
-        4
-      ],
-      [
-        "cucumber",
-        1
-      ],
-      [
-        "olive-oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Drain and dry the {chickpeas}. Toss with {cumin}, {paprika} and half the {olive-oil}.",
-      "Pan-fry {chickpeas} over medium-high heat for 8–10 minutes until crisp in spots.",
-      "Mix {yogurt} with lemon juice and a pinch of salt. Dice the {cucumber}.",
-      "Warm {pita-bread}, fill with {chickpeas} and cucumber, and spoon over lemon yogurt."
-    ]
-  },
-  {
     "id": "quick-miso-butter-mushroom-noodles",
     "name": "Miso-butter mushroom noodles",
-    "meal": "quick",
+    "meal": "big",
     "time": 15,
     "serves": 2,
     "ing": [
@@ -1430,7 +1341,7 @@ KITCHEN.add(
   {
     "id": "quick-halloumi-chickpea-bowls",
     "name": "Halloumi and chickpea grain bowls",
-    "meal": "quick,big",
+    "meal": "big",
     "time": 20,
     "serves": 2,
     "ing": [
@@ -1480,7 +1391,7 @@ KITCHEN.add(
   {
     "id": "quick-sesame-soba-peanut-bowl",
     "name": "15-minute sesame soba bowl with edamame and cucumber",
-    "meal": "quick",
+    "meal": "big",
     "cuisine": "Everyday",
     "time": 15,
     "serves": 2,
@@ -1531,7 +1442,7 @@ KITCHEN.add(
   {
     "id": "quick-mediterranean-tuna-bean-toast",
     "name": "Mediterranean tuna and white bean toast with lemon",
-    "meal": "quick",
+    "meal": "big",
     "cuisine": "Everyday",
     "time": 10,
     "serves": 2,
@@ -1550,7 +1461,7 @@ KITCHEN.add(
       ],
       [
         "red-onion",
-        1
+        "1pc"
       ],
       [
         "parsley",
@@ -1566,7 +1477,7 @@ KITCHEN.add(
       ],
       [
         "bread",
-        4
+        "4pc"
       ],
       [
         "black-pepper",
@@ -1582,7 +1493,7 @@ KITCHEN.add(
   {
     "id": "quick-garlic-mushroom-polenta",
     "name": "Quick creamy polenta with garlic mushrooms",
-    "meal": "quick",
+    "meal": "big",
     "cuisine": "Everyday",
     "time": 20,
     "serves": 2,
@@ -1601,7 +1512,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "butter",
@@ -1637,7 +1548,7 @@ KITCHEN.add(
   {
     "id": "quick-chickpea-shakshuka",
     "name": "Chickpea shakshuka with eggs and smoked paprika",
-    "meal": "quick",
+    "meal": "big",
     "cuisine": "Everyday",
     "time": 25,
     "serves": 2,
@@ -1648,7 +1559,7 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        3
+        "3pc"
       ],
       [
         "red-pepper",
@@ -1656,15 +1567,15 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "eggs",
-        4
+        "4pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "paprika",
@@ -1696,7 +1607,7 @@ KITCHEN.add(
   {
     "id": "quick-crispy-halloumi-lentil-bowl",
     "name": "Warm lentil bowl with crispy halloumi and lemon herbs",
-    "meal": "quick",
+    "meal": "big",
     "cuisine": "Everyday",
     "time": 20,
     "serves": 2,

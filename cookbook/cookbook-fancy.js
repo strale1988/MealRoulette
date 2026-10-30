@@ -146,7 +146,7 @@ KITCHEN.add(
   {
     "id": "fancy-duck-orange",
     "name": "Pan-seared duck breast with orange pan sauce",
-    "meal": "fancy",
+    "meal": "big",
     "time": 35,
     "serves": 2,
     "ing": [

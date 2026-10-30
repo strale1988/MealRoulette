@@ -4,7 +4,7 @@ KITCHEN.add(
   {
     "id": "left-bubble-and-squeak",
     "name": "Bubble and squeak with fried eggs",
-    "meal": "big,wake",
+    "meal": "big",
     "cuisine": "",
     "time": 25,
     "serves": 2,
@@ -224,7 +224,7 @@ KITCHEN.add(
   {
     "id": "left-vegetable-strata",
     "name": "Cheesy bread and vegetable strata",
-    "meal": "big,wake",
+    "meal": "big",
     "time": 45,
     "serves": 3,
     "ing": [
@@ -395,7 +395,7 @@ KITCHEN.add(
   {
     "id": "left-ham-potato-hash",
     "name": "Ham and potato hash with cabbage",
-    "meal": "big,wake",
+    "meal": "big",
     "time": 25,
     "serves": 2,
     "ing": [
@@ -474,7 +474,7 @@ KITCHEN.add(
   {
     "id": "stale-bread-french-toast",
     "name": "French toast from stale bread",
-    "meal": "wake",
+    "meal": "morning",
     "time": 15,
     "serves": 2,
     "ing": [
@@ -604,7 +604,7 @@ KITCHEN.add(
   {
     "id": "left-potato-cakes",
     "name": "Crisp potato cakes from leftover potatoes",
-    "meal": "big,wake",
+    "meal": "big",
     "time": 25,
     "serves": 2,
     "ing": [
@@ -967,7 +967,7 @@ KITCHEN.add(
   {
     "id": "leftover-rice-frittata",
     "name": "Leftover rice and vegetable frittata",
-    "meal": "wake",
+    "meal": "morning",
     "cuisine": "",
     "time": 25,
     "serves": 2,
@@ -1186,49 +1186,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "left-roast-veg-couscous",
-    "name": "Leftover roast vegetable couscous bowl",
-    "meal": "big",
-    "cuisine": "",
-    "time": 12,
-    "serves": 2,
-    "ing": [
-      [
-        "left-veg",
-        300
-      ],
-      [
-        "couscous",
-        150
-      ],
-      [
-        "chickpeas",
-        240
-      ],
-      [
-        "lemon",
-        "1pc"
-      ],
-      [
-        "olive-oil",
-        15
-      ],
-      [
-        "feta",
-        60
-      ],
-      [
-        "mint",
-        8
-      ]
-    ],
-    "steps": [
-      "Prepare {couscous} according to the package directions and fluff with a fork.",
-      "Warm leftover cooked {left-veg} and drained {chickpeas} until piping hot.",
-      "Fold through the couscous with {lemon} juice and {olive-oil}. Top with {feta} and chopped {mint}."
-    ]
-  },
-  {
     "id": "left-potato-cauliflower-hash",
     "name": "Leftover potato and cauliflower hash",
     "meal": "big",
@@ -1265,49 +1222,6 @@ KITCHEN.add(
       "Dice cooked {left-potatoes} and chop {cauliflower} into small florets. Finely slice {onion}.",
       "Pan-fry onion in oil until soft; add potatoes, cauliflower and {paprika}. Cook until crisp in spots, turning occasionally.",
       "Make two spaces and crack in {eggs}. Cover and cook until the eggs are set. Finish with {parsley}."
-    ]
-  },
-  {
-    "id": "leftover-chicken-noodle-soup",
-    "name": "Leftover chicken noodle soup",
-    "meal": "big",
-    "cuisine": "",
-    "time": 25,
-    "serves": 3,
-    "ing": [
-      [
-        "left-chicken",
-        250
-      ],
-      [
-        "noodles",
-        120
-      ],
-      [
-        "carrot",
-        "1pc"
-      ],
-      [
-        "celery",
-        60
-      ],
-      [
-        "onion",
-        "0.5pc"
-      ],
-      [
-        "chicken-stock",
-        900
-      ],
-      [
-        "parsley",
-        8
-      ]
-    ],
-    "steps": [
-      "Dice {carrot}, {celery} and {onion}. Bring {chicken-stock} to a simmer and add the vegetables.",
-      "Cook 8–10 minutes until vegetables begin to soften, then add {noodles} and cook according to their package directions.",
-      "Stir in shredded cooked {left-chicken} and heat until piping hot. Finish with {parsley}."
     ]
   },
   {
@@ -1355,49 +1269,6 @@ KITCHEN.add(
       "Beat {eggs}. Heat a little oil in a wok or wide pan and scramble the eggs until just set; transfer to a plate.",
       "Stir-fry diced {carrot}, {peas} and chopped {garlic} for 3 minutes. Add {left-rice} and fry until piping hot.",
       "Return the eggs to the pan and toss with {soy-sauce}, {sesame-oil} and sliced {spring-onion}."
-    ]
-  },
-  {
-    "id": "leftover-cooked-pasta-frittata-new",
-    "name": "Frittata with leftover cooked pasta",
-    "meal": "big",
-    "time": 20,
-    "serves": 2,
-    "ing": [
-      [
-        "left-pasta",
-        250
-      ],
-      [
-        "eggs",
-        "4pc"
-      ],
-      [
-        "parmesan",
-        40
-      ],
-      [
-        "spinach",
-        60
-      ],
-      [
-        "milk",
-        30
-      ],
-      [
-        "olive-oil",
-        10
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Whisk {eggs} with {milk}, grated {parmesan} and {black-pepper}.",
-      "Warm {left-pasta} in a skillet with {olive-oil}; add {spinach} and stir until wilted.",
-      "Pour the egg mixture over the pasta and cook on low heat until the edges set.",
-      "Finish under a hot grill or cover the pan until the centre is fully set. Cool leftovers promptly."
     ]
   },
   {
@@ -1501,7 +1372,7 @@ KITCHEN.add(
   {
     "id": "left-mashed-potato-cakes",
     "name": "Crispy leftover mashed potato cakes",
-    "meal": "big,bite",
+    "meal": "big",
     "time": 20,
     "serves": 2,
     "ing": [
@@ -1544,7 +1415,7 @@ KITCHEN.add(
   {
     "id": "left-bread-panzanella",
     "name": "Panzanella with stale bread",
-    "meal": "bite,big",
+    "meal": "big",
     "time": 15,
     "serves": 2,
     "ing": [
@@ -1675,46 +1546,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "leftover-roast-veg-frittata",
-    "name": "Leftover roast vegetable frittata",
-    "meal": "big",
-    "cuisine": "",
-    "time": 20,
-    "serves": 3,
-    "ing": [
-      [
-        "roasted-vegetables",
-        300
-      ],
-      [
-        "eggs",
-        "5pc"
-      ],
-      [
-        "milk",
-        40
-      ],
-      [
-        "cheddar",
-        70
-      ],
-      [
-        "parsley",
-        10
-      ],
-      [
-        "olive-oil",
-        12
-      ]
-    ],
-    "steps": [
-      "Heat the grill to medium-high. Cut any large {roasted-vegetables} into bite-size pieces.",
-      "Whisk {eggs} with {milk}, grated {cheddar} and chopped {parsley}.",
-      "Warm {olive-oil} in an oven-safe skillet, add vegetables and pour over the egg mixture. Cook gently until the base is set.",
-      "Grill 3–5 minutes until the top is puffed and golden. Rest briefly before slicing."
-    ]
-  },
-  {
     "id": "leftover-rice-congee",
     "name": "Ginger chicken congee from leftover rice",
     "meal": "big",
@@ -1740,7 +1571,7 @@ KITCHEN.add(
       ],
       [
         "spring-onion",
-        2
+        "2pc"
       ],
       [
         "soy-sauce",

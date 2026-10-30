@@ -6,7 +6,7 @@ KITCHEN.add(
     "name": "Argentine beef empanadas with olive and egg",
     "meal": "big",
     "cuisine": "Argentine",
-    "time": 55,
+    "time": 70,
     "serves": 2,
     "ing": [
       [
@@ -19,7 +19,7 @@ KITCHEN.add(
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
         "eggs",
@@ -55,10 +55,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat the oven to 190 °C and lightly grease a baking dish or line a tray.",
-      "Prepare {beef-mince} with the other listed ingredients, layer or shape the mixture evenly and season it well.",
-      "Cook the beef with a generous amount of slowly softened onion and spices, cool fully, fold in chopped egg and olives, then fill pastry discs and seal with a rope-like crimp.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Boil the {eggs} for 10 minutes, cool, peel and chop. Finely dice the {onion} and {red-pepper}.",
+      "Heat the {oil} in a pan and cook the onion and red pepper slowly for 8 minutes until very soft. Add the {beef-mince}, {cumin}, {paprika}, {salt} and {black-pepper} and cook for 8 minutes until browned. Cool completely.",
+      "Fold the chopped egg and sliced {green-olives} into the cooled filling.",
+      "Heat the oven to 200 °C. Roll out the {shortcrust-pastry}, cut 10 cm discs, fill each with a spoonful of filling, fold over and seal with a rope-like crimp.",
+      "Place on a lined tray and bake for 20–25 minutes until golden."
     ]
   },
   {
@@ -66,40 +67,40 @@ KITCHEN.add(
     "name": "Argentine steak with fresh chimichurri",
     "meal": "big",
     "cuisine": "Argentine",
-    "time": 25,
+    "time": 30,
     "serves": 2,
     "ing": [
       [
-        "beef-strips",
-        350
+        "beef-steak",
+        450
       ],
       [
         "parsley",
-        10
+        30
       ],
       [
         "oregano",
-        100
+        3
       ],
       [
         "garlic",
-        3
-      ],
-      [
-        "red-wine-vinegar",
-        120
-      ],
-      [
-        "olive-oil",
-        15
+        "2pc"
       ],
       [
         "red-chilli",
-        1
+        "1pc"
+      ],
+      [
+        "red-wine-vinegar",
+        30
+      ],
+      [
+        "olive-oil",
+        60
       ],
       [
         "salt",
-        3
+        4
       ],
       [
         "black-pepper",
@@ -107,10 +108,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Season {beef-strips} and coat it with the aromatics and marinade ingredients; rest briefly while the grill heats.",
-      "Grill or sear {beef-strips} over medium-high heat, turning as needed until cooked through and lightly charred.",
-      "Grill the seasoned steak over high heat and rest it before slicing across the grain; stir chopped parsley, garlic, oregano, vinegar and oil into a loose uncooked sauce.",
-      "Finish with a little {red-wine-vinegar} if needed, taste for seasoning and serve while the texture is at its best."
+      "Take the {beef-steak} out of the fridge 20 minutes before cooking. Finely chop the {parsley}, {garlic} and {red-chilli} and mix with the {oregano}, {red-wine-vinegar}, 45 ml of the {olive-oil} and 1 g of the {salt}. Leave the chimichurri to rest for at least 15 minutes.",
+      "Pat the steaks dry and rub with the remaining olive oil, the remaining {salt} and the {black-pepper}.",
+      "Heat a grill or heavy pan until very hot and cook the steaks for 3–4 minutes per side for medium-rare, longer if you prefer.",
+      "Rest the steaks for 5 minutes, slice across the grain and spoon the chimichurri over."
     ]
   },
   {
@@ -192,14 +193,14 @@ KITCHEN.add(
     "ing": [
       [
         "provolone",
-        100
+        200
       ],
       [
         "oregano",
-        100
+        3
       ],
       [
-        "red-chilli",
+        "chilli-flakes",
         1
       ],
       [
@@ -207,23 +208,19 @@ KITCHEN.add(
         15
       ],
       [
-        "black-pepper",
-        1
-      ],
-      [
         "bread",
         "4pc"
       ],
       [
-        "salt",
-        3
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Season {provolone} and coat it with the aromatics and marinade ingredients; rest briefly while the grill heats.",
-      "Grill or sear {provolone} over medium-high heat, turning as needed until cooked through and lightly charred.",
-      "Use a small heatproof skillet or grill pan, oil lightly, and cook the cheese until a golden crust forms while the centre remains molten; season with oregano and chilli.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat a small cast-iron skillet or grill pan over medium-high heat. Rub the {provolone} slices (about 2 cm thick) with half the {olive-oil}.",
+      "Cook the cheese for 2–3 minutes until a golden crust forms underneath, then turn carefully and cook 1 minute more so the centre stays molten.",
+      "Scatter the {oregano}, {chilli-flakes} and {black-pepper} over the cheese and drizzle with the remaining oil.",
+      "Toast the {bread} on the grill or in the pan and serve with the provoleta straight from the skillet."
     ]
   },
   {
@@ -287,55 +284,51 @@ KITCHEN.add(
     "name": "Choripán with chimichurri and toasted bread",
     "meal": "big",
     "cuisine": "Argentine",
-    "time": 25,
+    "time": 30,
     "serves": 2,
     "ing": [
       [
-        "sausages",
+        "chorizo-fresco",
         350
       ],
       [
-        "bread",
-        "4pc"
+        "bread-rolls",
+        "2pc"
       ],
       [
         "parsley",
-        10
+        20
       ],
       [
         "garlic",
-        3
+        "2pc"
       ],
       [
         "oregano",
-        100
-      ],
-      [
-        "red-wine-vinegar",
-        120
-      ],
-      [
-        "olive-oil",
-        15
-      ],
-      [
-        "red-chilli",
-        1
-      ],
-      [
-        "salt",
         3
       ],
       [
-        "black-pepper",
-        1
+        "red-chilli",
+        "1pc"
+      ],
+      [
+        "red-wine-vinegar",
+        30
+      ],
+      [
+        "olive-oil",
+        45
+      ],
+      [
+        "salt",
+        2
       ]
     ],
     "steps": [
-      "Season {sausages} and coat it with the aromatics and marinade ingredients; rest briefly while the grill heats.",
-      "Grill or sear {sausages} over medium-high heat, turning as needed until cooked through and lightly charred.",
-      "Grill sausages until browned and cooked through, split lengthwise and toast the bread; spoon over fresh chimichurri just before serving so the bread stays crisp.",
-      "Finish with a little {red-wine-vinegar} if needed, taste for seasoning and serve while the texture is at its best."
+      "Finely chop the {parsley}, {garlic} and {red-chilli} and mix with the {oregano}, {red-wine-vinegar}, {olive-oil} and {salt}. Let the chimichurri stand for 15 minutes.",
+      "Grill or pan-fry the {chorizo-fresco} over medium heat for 15–18 minutes, turning often, until browned and cooked through.",
+      "Split the sausages lengthwise and toast the {bread-rolls} for 1–2 minutes.",
+      "Fill the rolls with the sausages and spoon the chimichurri over just before serving."
     ]
   },
   {
@@ -343,28 +336,32 @@ KITCHEN.add(
     "name": "Alfajores (Argentine dulce-style sandwich biscuits)",
     "meal": "treat",
     "cuisine": "Argentine",
-    "time": 55,
-    "serves": 2,
+    "time": 70,
+    "serves": 4,
     "ing": [
       [
         "cornstarch",
-        100
-      ],
-      [
-        "flour",
         120
       ],
       [
+        "flour",
+        100
+      ],
+      [
+        "baking-powder",
+        3
+      ],
+      [
         "butter",
-        35
+        100
       ],
       [
         "sugar",
-        35
+        50
       ],
       [
-        "eggs",
-        "2pc"
+        "egg-yolks",
+        "3pc"
       ],
       [
         "vanilla",
@@ -372,11 +369,11 @@ KITCHEN.add(
       ],
       [
         "lemon-juice",
-        20
+        5
       ],
       [
-        "condensed-milk",
-        100
+        "dulce-de-leche",
+        150
       ],
       [
         "coconut-flakes",
@@ -384,10 +381,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {cornstarch} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Cream butter and sugar, mix in egg and vanilla, then fold in flour and cornstarch for a tender short dough; sandwich cooled biscuits with thick caramelised condensed milk and roll the edges in coconut.",
-      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
+      "Cream the {butter} and {sugar} for 3 minutes until pale. Beat in the {egg-yolks}, {vanilla} and {lemon-juice}.",
+      "Sift in the {flour}, {cornstarch} and {baking-powder} and fold to a soft dough. Wrap and chill for 30 minutes.",
+      "Heat the oven to 170 °C. Roll the dough 5 mm thick, cut 5 cm rounds and bake on lined trays for 10–12 minutes until set but still pale. Cool completely.",
+      "Sandwich pairs of biscuits with the {dulce-de-leche} and roll the edges in {coconut-flakes}."
     ]
   },
   {
@@ -395,12 +392,12 @@ KITCHEN.add(
     "name": "Matambre arrollado (Argentine rolled beef with vegetables and egg)",
     "meal": "big",
     "cuisine": "Argentine",
-    "time": 100,
-    "serves": 2,
+    "time": 120,
+    "serves": 4,
     "ing": [
       [
-        "beef-chuck",
-        450
+        "beef-steak",
+        500
       ],
       [
         "eggs",
@@ -412,19 +409,27 @@ KITCHEN.add(
       ],
       [
         "red-pepper",
-        1
+        "1pc"
+      ],
+      [
+        "spinach",
+        100
+      ],
+      [
+        "garlic",
+        "3pc"
       ],
       [
         "parsley",
         10
       ],
       [
-        "garlic",
-        3
-      ],
-      [
         "olive-oil",
         15
+      ],
+      [
+        "beef-stock",
+        300
       ],
       [
         "salt",
@@ -436,10 +441,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat the oven to 190 °C and season the main ingredient evenly with the listed aromatics and spices.",
-      "Roast {beef-chuck} until cooked through and browned; baste once or twice with the pan juices if available.",
-      "Pound the beef thin, lay cooked egg and vegetable strips across it, roll tightly and tie with kitchen string; braise covered until tender, then chill before slicing into rounds.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Boil the {eggs} for 10 minutes, cool and peel. Cut the {carrot} into strips and blanch for 4 minutes, strip the {red-pepper}, and wilt the {spinach} in a dry pan for 1 minute, then squeeze dry.",
+      "Pound the {beef-steak} to a 1 cm thick rectangle. Rub with crushed {garlic}, chopped {parsley}, half the {olive-oil}, {salt} and {black-pepper}.",
+      "Lay the spinach, carrot, red pepper and halved eggs along the length of the beef, roll up tightly and tie with string every 3 cm.",
+      "Brown the roll in the remaining oil for 8 minutes. Add the {beef-stock}, cover and simmer gently for 75 minutes until tender.",
+      "Cool, then chill for at least 1 hour. Remove the string and slice into rounds."
     ]
   },
   {
@@ -447,32 +453,32 @@ KITCHEN.add(
     "name": "Fugazzeta (Argentine onion and mozzarella stuffed pizza)",
     "meal": "big",
     "cuisine": "Argentine",
-    "time": 35,
+    "time": 40,
     "serves": 2,
     "ing": [
       [
         "pizza-dough",
-        100
+        350
       ],
       [
         "mozzarella",
-        100
+        250
       ],
       [
         "onion",
-        "1pc"
+        "2pc"
       ],
       [
         "oregano",
-        100
+        2
       ],
       [
         "olive-oil",
-        15
+        30
       ],
       [
         "salt",
-        3
+        2
       ],
       [
         "black-pepper",
@@ -480,10 +486,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat the oven to 190 °C and lightly grease a baking dish or line a tray.",
-      "Prepare {pizza-dough} with the other listed ingredients, layer or shape the mixture evenly and season it well.",
-      "Stretch one dough round over the pan, fill with mozzarella, seal with a second round and cover generously with thin onion; bake hot until the base is crisp and cheese pulls.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 220 °C. Slice the {onion} thinly and toss with half the {olive-oil}, the {salt} and the {black-pepper}.",
+      "Divide the {pizza-dough} in two and roll each piece into a 26 cm round. Lay one round in an oiled pan, pushing it up the sides, and cover with the {mozzarella}, leaving a 1 cm border.",
+      "Cover with the second round and pinch the edges to seal. Pile the onion on top, drizzle with the remaining oil and sprinkle with {oregano}.",
+      "Bake for 20–25 minutes until the crust is golden, the onions are soft and the cheese is molten inside. Rest for 5 minutes before cutting."
     ]
   },
   {
@@ -495,8 +501,12 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "beef-strips",
-        350
+        "beef-steak",
+        400
+      ],
+      [
+        "flour",
+        40
       ],
       [
         "eggs",
@@ -504,11 +514,11 @@ KITCHEN.add(
       ],
       [
         "breadcrumbs",
-        60
+        100
       ],
       [
-        "flour",
-        120
+        "oil",
+        100
       ],
       [
         "passata",
@@ -516,15 +526,11 @@ KITCHEN.add(
       ],
       [
         "mozzarella",
-        100
+        120
       ],
       [
         "oregano",
-        100
-      ],
-      [
-        "oil",
-        15
+        2
       ],
       [
         "salt",
@@ -536,10 +542,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat the oven to 190 °C and lightly grease a baking dish or line a tray.",
-      "Prepare {beef-strips} with the other listed ingredients, layer or shape the mixture evenly and season it well.",
-      "Pound beef thin, coat in flour, egg and breadcrumbs, shallow-fry until crisp, then top with tomato {passata} and mozzarella and bake until the cheese bubbles.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Pound the {beef-steak} to 5 mm thick and season with {salt} and {black-pepper}. Heat the oven to 220 °C.",
+      "Coat each piece in {flour}, then beaten {eggs}, then {breadcrumbs}, pressing the crumbs on firmly.",
+      "Heat the {oil} in a wide pan over medium-high heat and fry the beef for 2 minutes per side until golden. Drain on paper.",
+      "Place on a tray, spoon over the {passata} mixed with the {oregano} and cover with {mozzarella}. Bake for 8–10 minutes until the cheese bubbles."
     ]
   },
   {
@@ -659,7 +665,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Season the {chicken-thigh} with {paprika}, {oregano} and {salt}. Slice the {onion}, {red-pepper} and {red-pepper}; crush the {garlic}.",
+      "Season the {chicken-thigh} with {paprika}, {oregano} and {salt}. Slice the {onion} and {red-pepper}; crush the {garlic}.",
       "Brown the chicken in {oil} in a wide heavy pan. Add onion and peppers and cook for 6 minutes; stir in garlic.",
       "Pour in {white-wine} and {chicken-stock}, add cubed {potatoes}, cover and simmer 30–35 minutes until the chicken is fully cooked and the potatoes are tender."
     ]
@@ -810,37 +816,67 @@ KITCHEN.add(
     "name": "Argentine Black Bean and Rice Bowl",
     "meal": "big",
     "cuisine": "Argentine",
-    "time": 25,
+    "time": 40,
     "serves": 4,
     "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
       [
         "rice",
         250
       ],
       [
-        "tomato",
-        250
+        "black-beans",
+        400
       ],
       [
-        "plantain",
-        2
+        "onion",
+        "1pc"
       ],
       [
         "red-pepper",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "olive-oil",
+        30
+      ],
+      [
+        "parsley",
+        10
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "black-pepper",
         1
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Rinse the {rice} and cook in 500 ml water with half the {salt}, covered, on low heat for 15 minutes. Rest covered for 5 minutes.",
+      "Chop the {onion}, {red-pepper} and {tomato} and crush the {garlic}. Heat the {olive-oil} and cook the onion and pepper for 6 minutes. Add the garlic, {paprika} and {cumin} for 1 minute.",
+      "Add the tomato, drained {black-beans}, the remaining salt, {black-pepper} and 100 ml water. Simmer for 10 minutes until thick.",
+      "Spoon the beans over the rice, scatter with chopped {parsley} and squeeze over the juice of the {lemon}."
     ]
   },
   {
@@ -955,40 +991,48 @@ KITCHEN.add(
   {
     "id": "argentine-lime-cabbage-slaw",
     "name": "Argentine Lime Cabbage Slaw",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Argentine",
-    "time": 46,
+    "time": 15,
     "serves": 4,
     "ing": [
+      [
+        "cabbage",
+        400
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "red-onion",
+        "1pc"
+      ],
+      [
+        "lime",
+        "2pc"
+      ],
+      [
+        "olive-oil",
+        30
+      ],
+      [
+        "parsley",
+        10
+      ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Finely shred the {cabbage}, grate the {carrot} and slice the {red-onion} very thinly.",
+      "Whisk the juice of the {lime} with the {olive-oil}, {salt} and {black-pepper}. Toss with the vegetables and massage for 1 minute.",
+      "Rest for 10 minutes, then fold in the chopped {parsley} and serve cold."
     ]
   },
   {
