@@ -2,7 +2,7 @@
    Same rules as every cookbook file: ingredient ids from ingredients.js, {id} placeholders in steps, validated by K.add. */
 KITCHEN.add([
 {id:"french-onion-soup-burgers",name:"French onion soup burgers with jus",craft:"burger",meal:"big",time:55,serves:4,
- ing:[["beef-mince",600],["burger-buns","4pc"],["onion",500],["butter",30],["thyme",2],["gruyere",120],["beef-stock",250],["worcestershire-sauce",10],["flour",8],["garlic","1pc"],["oil",10],["salt",5],["black-pepper",2]],
+ ing:[["beef-mince",600,"Patties"],["salt",5,"Patties"],["gruyere",120,"Patties"],["onion",500,"Onions"],["butter",30,"Onions"],["thyme",2,"Onions"],["garlic","1pc","Onions"],["oil",10,"Onions"],["beef-stock",250,"Jus"],["worcestershire-sauce",10,"Jus"],["flour",8,"Jus"],["black-pepper",2,"Jus"],["burger-buns","4pc","Buns"]],
  steps:["Slice the {onion} thinly and cook it in the {butter} and {oil} over medium-low heat for 30 minutes, stirring now and then, until deep brown and jammy. Add the crushed {garlic} and half of the {thyme} for the last 2 minutes.",
   "For the jus, stir the {flour} into a spoonful of the onions, add the {beef-stock} and {worcestershire-sauce} and simmer for 8 minutes until slightly thickened. Season with {black-pepper} and keep it warm in small cups.",
   "Divide the {beef-mince#} into 4 patties, season with {salt} and the rest of the {thyme} and fry for 4 minutes per side. Lay the grated {gruyere} on top, cover and cook for 1 minute until melted.",
@@ -39,7 +39,7 @@ KITCHEN.add([
   "Toast the {burger-buns}, spread with {mustard}, then stack with the patty, the {sauerkraut} and the sauce."],
  note:"Sauerkraut from the Fermentation station gives it the real tang."},
 {id:"greek-lamb-burgers-tzatziki",name:"Greek lamb burgers with tzatziki",craft:"burger",meal:"big",time:35,serves:4,
- ing:[["lamb-mince",500],["burger-buns","4pc"],["feta",80],["yogurt",100],["cucumber",80],["mint",5],["garlic","1pc"],["lemon","1pc"],["oregano",3],["red-onion",40],["oil",10],["salt",4]],
+ ing:[["lamb-mince",500,"Patties"],["feta",80,"Patties"],["garlic","1pc","Patties"],["lemon","1pc","Patties"],["oregano",3,"Patties"],["oil",10,"Patties"],["yogurt",100,"Tzatziki"],["cucumber",80,"Tzatziki"],["mint",5,"Tzatziki"],["salt",4,"Tzatziki"],["burger-buns","4pc","Buns"],["red-onion",40,"Buns"]],
  steps:["Grate the {cucumber}, squeeze it dry and stir it into the {yogurt} with half of the crushed {garlic}, the chopped {mint} and a pinch of {salt} for the tzatziki.",
   "Mix the {lamb-mince#} with the rest of the {garlic}, the {oregano} and the juice of the {lemon}, then fold in the crumbled {feta}. Shape into 4 patties.",
   "Fry in the {oil} for 5 minutes per side until cooked through.",

@@ -888,7 +888,7 @@ KITCHEN.add(
       ],
       [
         "orange",
-        2
+        "2pc"
       ],
       [
         "baking-powder",
@@ -897,15 +897,15 @@ KITCHEN.add(
     ],
     "steps": [
       "Heat oven to 170 °C and line a 20 cm cake tin. Cream {butter} and {sugar} until light.",
-      "Beat in {eggs} one at a time, then add finely grated zest of the {orange}.",
+      "Beat in {eggs} one at a time, then add finely grated zest of one {orange}.",
       "Fold in {ground-almonds}, {polenta} and {baking-powder}; spread in the tin.",
-      "Bake 35–40 minutes until golden and a skewer comes out clean. Brush with a little orange juice while warm if desired."
+      "Bake 35–40 minutes until golden and a skewer comes out clean. Brush with a little juice from the second orange while warm."
     ]
   },
   {
     "id": "bake-raspberry-almond-financiers",
     "name": "Raspberry almond mini cakes with browned butter",
-    "meal": "sweet",
+    "meal": "treat",
     "cuisine": "Baking",
     "time": 35,
     "serves": 2,
@@ -928,7 +928,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        3
+        "3pc"
       ],
       [
         "vanilla-extract",
@@ -948,7 +948,7 @@ KITCHEN.add(
   {
     "id": "bake-cinnamon-cardamom-knots",
     "name": "Cinnamon cardamom sweet bread knots",
-    "meal": "sweet",
+    "meal": "treat",
     "cuisine": "Baking",
     "time": 90,
     "serves": 2,
@@ -983,7 +983,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        1
+        "1pc"
       ],
       [
         "salt",
@@ -999,7 +999,7 @@ KITCHEN.add(
   {
     "id": "bake-black-sesame-shortbread",
     "name": "Black sesame shortbread biscuits",
-    "meal": "sweet",
+    "meal": "treat",
     "cuisine": "Baking",
     "time": 35,
     "serves": 2,
@@ -1038,7 +1038,7 @@ KITCHEN.add(
   {
     "id": "bake-lemon-drizzle-cake",
     "name": "Lemon drizzle loaf cake",
-    "meal": "sweet",
+    "meal": "treat",
     "cuisine": "",
     "time": 60,
     "serves": 8,
@@ -1065,7 +1065,7 @@ KITCHEN.add(
       ],
       [
         "lemon",
-        2
+        "2pc"
       ],
       [
         "icing-sugar",
