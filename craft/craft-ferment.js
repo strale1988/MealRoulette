@@ -475,5 +475,6 @@ function applyShare(d){ // a shared setup: validate every id against the real me
  ST.sal=Math.min(2,Math.max(0,Number(d.sal)|0));ST.temp=["cool","mild","warm"].includes(d.temp)?d.temp:"mild";
  enter();save();build();return true;
 }
-window.FERMENT={rebuild:build,methods:M,applyShare};
+const snap=()=>{const m=cur();return{m:m.id,items:selItems(m),arom:selArom(m),g:amount(m),sal:ST.sal,temp:ST.temp}}; // the setup as it is now, for "Back to ..." links
+window.FERMENT={rebuild:build,methods:M,applyShare,snap};
 })();

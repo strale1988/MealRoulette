@@ -104,7 +104,7 @@ main{max-width:2400px;margin:0 auto;padding:18px 16px 60px}
 select{padding:0 10px}
 .step{display:flex;align-items:center;justify-content:space-between;padding:0 6px}
 .step button{width:34px;height:34px;border-radius:9px;border:0;background:var(--card);color:var(--ink);cursor:pointer;display:grid;place-items:center}
-.step b{font-size:17px}
+.step b{font-size:17px}.step b.sv,.step b:has(.sv){display:flex;align-items:baseline;justify-content:center;gap:4px}.step .sv{font:inherit;color:inherit;background:transparent;border:0;border-bottom:2px dashed transparent;border-radius:0;padding:0;margin:0;text-align:right;min-width:2ch;max-width:6ch;width:auto;letter-spacing:inherit;font-variant-numeric:tabular-nums;-webkit-appearance:none;appearance:none}.step .sv:hover{border-bottom-color:var(--line)}.step .sv:focus{outline:0;border-bottom-color:var(--acc)}.step .su{font-weight:700;font-size:.8em;color:var(--mute)}
 .tg{display:flex;flex-wrap:wrap;gap:8px}
 .tg button{display:flex;align-items:center;gap:6px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:7px 13px;font-size:14px;cursor:pointer}
 .tg button[aria-pressed=true]{background:var(--acc2);border-color:var(--acc2);color:#fff}
@@ -885,7 +885,7 @@ body .reel.on .rtx,body .fmreel .rtx{grid-row:3;align-self:start;justify-self:ce
 @media print{#kz-shelf{display:none!important}}
 /* ---- Craft hub, breadcrumb, Cook search ---- */
 .crumb{margin:0 0 4px}.crumb[hidden]{display:none}
-.crumb button{display:inline-flex;align-items:center;gap:4px;border:0;background:none;color:var(--mute);font:inherit;font-weight:700;font-size:15px;padding:6px 10px 6px 0;cursor:pointer}.crumb button:hover{color:var(--ink)}
+.crumb button{display:inline-flex;align-items:center;gap:4px;border:0;background:none;color:var(--mute);font:inherit;font-weight:700;font-size:15px;padding:6px 10px 6px 0;cursor:pointer}.crumb button:hover{color:var(--ink)}.crumb{display:flex;align-items:center;flex-wrap:wrap}.crumb .cn{font-weight:800;font-size:15px;color:var(--ink);padding:6px 0}.crumb .cn:before{content:"/";color:var(--mute);font-weight:700;margin-right:8px}
 main:has(.tab.resmode:not([hidden])) .crumb{display:none}
 .cgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:8px}
 @media (min-width:760px){.cgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
@@ -1027,7 +1027,7 @@ ul.ing li .q{white-space:normal;text-align:right;flex:0 1 auto;max-width:52%;min
 </div></header>
 
 <main>
-<div class="crumb" id="crumb" hidden><button type="button" id="crumbb" aria-label="Back to Craft"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Craft</button></div>
+<div class="crumb" id="crumb" hidden><button type="button" id="crumbb" aria-label="Back to Craft"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Craft</button><span class="cn" id="crumbn"></span><button type="button" class="cr" id="crumbr" hidden></button></div>
 <div id="tab-cook" class="tab" role="tabpanel"><h1 class="hl">What are we eating tonight?</h1><p>Pick a mood, then spin.</p>
   <div class="cols">
  <aside class="side">
@@ -1379,8 +1379,7 @@ function hubSync(){TOOLS.forEach(t=>{const e=document.querySelector(`#tab-craft 
 function setTab(t){if(!PANELS.includes(t))t="cook";tab=t;
   PANELS.forEach(k=>{const el=$("tab-"+k);if(el)el.hidden=k!==t});
   document.querySelectorAll("#tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.t===navOf(t)));
-  $("crumb").hidden=!TOOLS.some(x=>x.id===t);
-  const T=TOOLS.find(x=>x.id===t);if(T&&(!T.ready||T.rec))stubSync(T);if(t==="craft")hubSync();
+  const T=TOOLS.find(x=>x.id===t);$("crumb").hidden=!T;$("crumbn").textContent=T?T.name:"";if(window.XLINK&&XLINK.sync)XLINK.sync(t);if(T&&(!T.ready||T.rec))stubSync(T);if(t==="craft")hubSync();
   if(t==="pizza"&&typeof pzUI==="function")pzSection(S.pz.sec||"dough");scrollTo({top:0})}
 document.querySelectorAll("#tabs button").forEach(b=>b.onclick=()=>setTab(b.dataset.t));
 /* ---------- Cook search: one box for every recipe, plus a shortcut into a matching Craft tool ---------- */

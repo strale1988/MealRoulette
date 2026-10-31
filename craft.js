@@ -236,13 +236,24 @@ TOOLS.grill.main="m"; // Doneness and Thickness depend on the meat (key m), not 
 
 const LEARN=window.CRAFTLIB.LEARN; // the "Good to know" notes, filled in by the craft-*.js files
 const cfg=id=>{const o=ST[id]=ST[id]||{};TOOLS[id].ctl.forEach(c=>{if(o[c.k]===undefined)o[c.k]=c.def});return o};
+/* ingredient lines written as "Bun: flour" become a section headed "Bun" with plain lines under it (a label needs 2+ lines, or its own link, to be a section).
+   A section can carry one link ("Make buns"); a single ingredient such as pickles keeps its pill on its own line. The raw names stay as they are for Copy, Share and Start cooking. */
+const PFX=/^([A-Z][A-Za-z ]{1,22}): (.+)$/,cap1=t=>t.charAt(0).toUpperCase()+t.slice(1);
+function ingHTML(r,id,s){
+ const ctx={tool:id,s},X=window.XLINK,rows=r.ing.map(i=>{const m=PFX.exec(i[0]);return{l:m?m[1]:"",n:m?m[2]:i[0],raw:i[0],q:i[1]}}),cnt={};
+ rows.forEach(x=>{if(x.l)cnt[x.l]=(cnt[x.l]||0)+1});
+ const sec=l=>X&&X.sec?X.sec(l,ctx):"",real=x=>x.l&&(cnt[x.l]>1||sec(x.l)),G=[];
+ rows.forEach(x=>{const l=real(x)?x.l:"",g=G[G.length-1];if(g&&g.l===l)g.r.push(x);else G.push({l,r:[x]})});
+ const labelled=G.some(g=>g.l);
+ return G.map((g,k)=>{const head=g.l||(labelled&&k>0?"Also":"");
+  return(head?`<div class="ingh"><span>${esc(head)}</span>${g.l?sec(g.l):""}</div>`:"")+`<ul class="ing">${g.r.map(x=>{const n=g.l?cap1(x.n):x.raw;return`<li><span>${esc(n)}${X?X.btn(n,null,ctx):""}</span><span class="q">${esc(x.q)}</span></li>`}).join("")}</ul>`}).join("")}
 function draw(id){
  const T=TOOLS[id],s=cfg(id),root=document.getElementById("tab-"+id);if(!root)return;
  const nm=c=>esc(c.label.replace(/\s*\(.*$/,"").toLowerCase().replace(/^how many\s*/,"").replace(/^how much to make$/,"")||"amount"); // "Flour" -> "flour", "How many cookies" -> "cookies"
  const vis=T.ctl.filter(c=>!c.only||[].concat(c.only).includes(s[T.main||"t"]));
  const ctl=vis.map(c=>`<div class="lab"${c===vis[0]?"":' style="margin-top:16px"'}>${I(c.icon)}${esc(c.label)}</div>`+(c.tg?`<div class="tg">${c.tg.map(o=>`<button data-k="${c.k}" data-v="${esc(o[0])}" aria-pressed="${String(s[c.k])===String(o[0])}">${esc(o[1])}</button>`).join("")}</div>`
    :c.ms?`<div class="tg">${c.ms.map(o=>`<button data-k="${c.k}" data-m="${esc(o[0])}" aria-pressed="${(s[c.k]||[]).includes(o[0])}">${esc(o[1])}</button>`).join("")}</div>`
-   :`<div class="step"><button data-k="${c.k}" data-d="-1" aria-label="Less ${nm(c)}">${I("minus")}</button><b>${s[c.k]||people}${c.step[3]?" "+c.step[3]:""}</b><button data-k="${c.k}" data-d="1" aria-label="More ${nm(c)}">${I("plus")}</button></div>`)).join("");
+   :`<div class="step"><button data-k="${c.k}" data-d="-1" aria-label="Less ${nm(c)}">${I("minus")}</button><b><input class="sv" data-k="${c.k}" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" value="${s[c.k]||people}" size="${String(s[c.k]||people).length}" aria-label="${esc(c.label.replace(/\s*\(.*$/,""))}: type a number"${c.step[3]?` title="Tap to type a number"`:""}>${c.step[3]?`<span class="su">${esc(c.step[3])}</span>`:""}</b><button data-k="${c.k}" data-d="1" aria-label="More ${nm(c)}">${I("plus")}</button></div>`)).join("");
  const r=T.calc(s);if(!r.learn){const L=LEARN[id];r.learn=L&&L[s[T.main||"t"]]}
  root.querySelector("[data-ctl]").innerHTML=ctl;
  root.querySelector("[data-out]").innerHTML=`<article class="card"><div class="hero"><div class="ic">${I(T.icon)}</div><h2>${esc(r.title)}</h2></div><div class="body">
@@ -250,7 +261,7 @@ function draw(id){
   ${(r.note||[]).map(n=>`<div class="call" style="background:var(--soft)">${I("flame")}<span>${esc(n)}</span></div>`).join("")}
   ${r.learn?`<details class="learn" style="margin:12px 0;padding:10px 14px;border-radius:14px;background:var(--soft)"><summary style="cursor:pointer;font-weight:700">Good to know</summary>${r.learn.map(n=>`<p style="margin:8px 0 0">${esc(n)}</p>`).join("")}</details>`:""}
   ${r.more?`<p style="margin:0 0 12px;font-size:.92em">More: ${r.more.map(m=>`<a href="${esc(m[1])}" target="_blank" rel="noopener noreferrer">${esc(m[0])}</a>`).join(" · ")}</p>`:""}
-  <div class="split"><div><h3>${I("list")}Ingredients <small style="text-transform:none;letter-spacing:0;color:var(--mute)">(tap to tick off)</small></h3><ul class="ing">${r.ing.map(i=>`<li><span>${esc(i[0])}</span><span class="q">${esc(i[1])}</span></li>`).join("")}</ul></div>
+  <div class="split"><div><h3>${I("list")}Ingredients <small style="text-transform:none;letter-spacing:0;color:var(--mute)">(tap to tick off)</small></h3>${ingHTML(r,id,s)}</div>
   <div><h3>${I("chef")}Method</h3><ol>${r.steps.map(x=>`<li><span>${esc(x)}</span></li>`).join("")}</ol></div></div>
   <div class="row"><button class="go" data-a="start">${I("flame")}Start cooking</button><button class="pzsave">${I("heart")}Save</button><button data-a="copy" data-copy>${I("cart")}Copy list</button><button data-a="share">${I("share")}Share</button><button type="button" data-a="rand" data-spin>Spin again</button></div></div></article>`;
  root.querySelectorAll(".ing li").forEach(li=>li.onclick=()=>li.classList.toggle("done"));
@@ -302,11 +313,29 @@ Object.keys(TOOLS).forEach(id=>{
  root.innerHTML=`<h1 class="hl">${esc(T.title)}</h1><p>${esc(T.sub)}</p><div class="cols"><aside class="side"><section class="panel" data-ctl></section>${T.spin?`<button type="button" class="fmspin" data-spin>${I(T.icon)}${esc(T.spinLabel||"Spin!")}</button>`:""}<div class="fav" data-fav></div></aside><section class="res"><div data-out></div></section></div>
   <section class="panel"><div class="lab">${I(T.icon)}Recipes</div><input class="bksearch rsearch" type="search" placeholder="Search ${esc(T.name)} recipes…" aria-label="Search ${esc(T.name)} recipes" autocomplete="off"><p class="hint" data-n></p><ul class="bklist" data-l></ul><button type="button" class="stubmore" hidden></button></section>`;
  root.querySelector("[data-ctl]").addEventListener("click",e=>{
-  const b=e.target.closest("button[data-k]");if(!b)return;const box=e.currentTarget,at=[...box.querySelectorAll("button")].indexOf(b),s=cfg(id),c=T.ctl.find(x=>x.k===b.dataset.k);
+  const b=e.target.closest("button[data-k]");if(!b)return;if(b.dataset.d&&Date.now()<holdBlock)return;const box=e.currentTarget,at=[...box.querySelectorAll("button")].indexOf(b),s=cfg(id),c=T.ctl.find(x=>x.k===b.dataset.k);
   if(b.dataset.m!==undefined){const a=Array.isArray(s[c.k])?s[c.k]:[];s[c.k]=a.includes(b.dataset.m)?a.filter(x=>x!==b.dataset.m):[...a,b.dataset.m]}
   else if(b.dataset.d){const[lo,hi,by]=c.step,v=(s[c.k]||people)+(+b.dataset.d)*by;s[c.k]=Math.min(hi,Math.max(lo,v))}
   else{const o=c.tg.find(x=>String(x[0])===b.dataset.v);s[c.k]=o?o[0]:b.dataset.v}
   save();draw(id);const nb=box.querySelectorAll("button")[at];if(nb)nb.focus()});
+ let holdBlock=0;
+ const ctlBox=root.querySelector("[data-ctl]"),setStep=(c,v)=>{const s=cfg(id);s[c.k]=Math.min(c.step[1],Math.max(c.step[0],Math.round(v)))};
+ /* press and hold a + or − to keep going (faster after about 1.5 s); the card is redrawn once, when the finger lifts */
+ ctlBox.addEventListener("pointerdown",e=>{const b=e.target.closest("button[data-d]");if(!b||e.button>0)return;
+  const c=T.ctl.find(x=>x.k===b.dataset.k),dir=+b.dataset.d,s=cfg(id);if(!c||!c.step)return;let n=0,fired=0,t;
+  const tick=()=>{fired=1;n++;const by=c.step[2]*(n>10?5:1);setStep(c,(s[c.k]||people)+dir*by);const v=ctlBox.querySelector('input.sv[data-k="'+c.k+'"]');if(v){v.value=s[c.k];v.size=String(s[c.k]).length}t=setTimeout(tick,n>10?70:120)};
+  t=setTimeout(tick,450);
+  const end=()=>{clearTimeout(t);removeEventListener("pointerup",end);removeEventListener("pointercancel",end);
+   if(fired){holdBlock=Date.now()+400;save();setTimeout(()=>draw(id),0)}};
+  addEventListener("pointerup",end);addEventListener("pointercancel",end)});
+ /* tap the number to type one (any whole number inside the tool's range); ↑ ↓ step it from a keyboard */
+ ctlBox.addEventListener("focusin",e=>{if(e.target.matches&&e.target.matches("input.sv"))e.target.select()});
+ ctlBox.addEventListener("input",e=>{const v=e.target;if(v.matches&&v.matches("input.sv")){v.value=v.value.replace(/\D/g,"").slice(0,5);v.size=Math.max(1,v.value.length)}});
+ ctlBox.addEventListener("keydown",e=>{const v=e.target;if(!v.matches||!v.matches("input.sv"))return;
+  if(e.key==="Enter"){v.blur();return}
+  if(e.key==="ArrowUp"||e.key==="ArrowDown"){e.preventDefault();const c=T.ctl.find(x=>x.k===v.dataset.k);setStep(c,(+v.value||cfg(id)[c.k]||people)+(e.key==="ArrowUp"?1:-1)*c.step[2]);save();draw(id);const nv=ctlBox.querySelector('input.sv[data-k="'+c.k+'"]');if(nv)nv.focus()}});
+ ctlBox.addEventListener("change",e=>{const v=e.target;if(!v.matches||!v.matches("input.sv"))return;const c=T.ctl.find(x=>x.k===v.dataset.k);if(!c)return;
+  const x=parseInt(v.value,10);if(Number.isFinite(x))setStep(c,x);save();draw(id)});
  root.addEventListener("click",e=>{const b=e.target.closest("[data-spin]");if(b&&!b.disabled)spinTool(id)});
  draw(id);drawFavs(id);
 });

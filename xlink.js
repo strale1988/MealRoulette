@@ -56,38 +56,65 @@ const destName=t=>{
  const kc=((window.KITCHEN&&window.KITCHEN.CRAFTS)||[]).find(c=>c.id===t.id);return kc?kc.name:"Craft"};
 
 /* the pill for one ingredient line: "" when there is nothing to link to. ctx = {tool, s} on Craft cards, {ferm} on Ferment cards */
-const btn=(name,id,ctx)=>{
- const key=find(name,id),t=key&&T[key];if(!t||same(t,ctx))return "";
+const pill=(key,ctx)=>{
+ const t=T[key];if(!t||same(t,ctx))return "";
  const to=destName(t);
  return `<button type="button" class="xl" data-xl="${esc(key)}" title="Opens ${esc(to)}" aria-label="${esc(t.l)}: opens ${esc(to)}">${esc(t.l)}</button>`};
+const btn=(name,id,ctx)=>pill(find(name,id),ctx);
+/* a whole section can link too: the "Bun" section of a burger gets one "Make buns" pill instead of one on every line */
+const SEC=[[/^buns?$/i,"bun"]];
+const sec=(label,ctx)=>{const k=(SEC.find(x=>x[0].test(label))||[])[1];return k?pill(k,ctx):""};
 
 /* open the target: leave any full-screen result first (same calls the Home wheel makes), apply the settings, then switch tab.
    The tab switch is a normal setTab, so the Back button returns to the recipe the person came from. */
 const leave=()=>["Cook","Pizza","Ferm","Craft"].forEach(n=>{try{const f=window["__leave"+n];if(f)f()}catch(e){}});
 const toCard=tab=>setTimeout(()=>{const c=document.querySelector("#tab-"+tab+" .card");if(c)c.scrollIntoView({block:"start"})},60);
+/* where the person was when they tapped a link, so one tap brings the exact recipe back. A stack, so A -> B -> C can walk back to A.
+   Craft and Ferment cards are rebuilt from a copy of their settings, a Cook recipe is still on its page; the button lives in the breadcrumb. */
+const stack=[];
+const here=()=>{
+ const from=typeof tab==="string"?tab:null;if(!from)return null;
+ const h=document.querySelector("#tab-"+from+" .card h2"),title=h?h.textContent.trim():"";
+ const look=()=>setTimeout(()=>{const c=document.querySelector("#tab-"+from+" .card");if(c)c.scrollIntoView({block:"start"})},60);
+ let restore;
+ if(window.CRAFT&&window.CRAFT.tools&&window.CRAFT.tools[from]){const s=JSON.parse(JSON.stringify(window.CRAFT.cfg(from)));restore=()=>{window.CRAFT.applyShare({id:from,s});window.setTab(from);look()}}
+ else if(from==="ferm"&&window.FERMENT&&window.FERMENT.snap){const d=window.FERMENT.snap();restore=()=>{window.FERMENT.applyShare(d);window.setTab(from);look()}}
+ else if(from==="cook"){const r=typeof current!=="undefined"?current:null;restore=()=>{window.setTab("cook");if(r&&!document.querySelector("#tab-cook .card")&&typeof show==="function")show(r);look()}}
+ else restore=()=>window.setTab(from);
+ return{from,title,restore}};
+/* called by setTab on every tab change: show the return button on the tab we went to, forget it once the person has gone back or wandered off */
+const sync=t=>{
+ while(stack.length&&stack[stack.length-1].from===t)stack.pop();
+ let o=stack[stack.length-1];if(o&&o.to!==t){stack.length=0;o=null}
+ const b=document.getElementById("crumbr");if(!b)return;
+ b.hidden=!o;if(o){const n=o.title.length>30?o.title.slice(0,29)+"…":o.title;b.textContent="↩ Back to "+(n||"your recipe");b.title="Back to "+(o.title||"your recipe")}};
+const back=()=>{const o=stack[stack.length-1];if(!o)return;try{o.restore()}catch(e){console.error(e)}};
 const go=key=>{
  const t=T[key];if(!t||typeof window.setTab!=="function")return;
+ const o=here(),arrive=tab=>{if(o&&o.from!==tab)stack.push(Object.assign(o,{to:tab})); // remembered only once the target really opens
+  window.setTab(tab)};
  try{
   if(t.k==="craft"){
    if(!window.CRAFT||!window.CRAFT.applyShare)return;
    leave();if(!window.CRAFT.applyShare({id:t.id,s:t.s}))return;
-   window.setTab(t.id);toCard(t.id)}
+   arrive(t.id);toCard(t.id)}
   else{
    const F=window.FERMENT,m=F&&F.methods&&F.methods.find(x=>x.id===t.m);if(!m||!F.applyShare)return;
    /* applyShare resets anything it is not given, so hand it the method's own defaults: its usual amount and the aromatics that start ticked */
    const d={m:t.m,items:t.items,arom:(m.arom||[]).filter(a=>a.on).map(a=>a.id),g:m.g&&m.g[3],sal:1,temp:"mild"};
    leave();if(!F.applyShare(d))return;
-   window.setTab("ferm");toCard("ferm")}
+   arrive("ferm");toCard("ferm")}
  }catch(e){console.error(e)}};
 
 /* one listener for every list. It runs first (capture) and stops the tap there, so pressing a pill never ticks the line off. */
 document.addEventListener("click",e=>{
  const b=e.target.closest&&e.target.closest("button.xl");if(!b)return;
  e.preventDefault();e.stopPropagation();go(b.dataset.xl)},true);
+document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("#crumbr");if(b){e.preventDefault();back()}});
 
 const css=document.createElement("style");
-css.textContent=".xl{font:inherit;font-size:11px;font-weight:800;line-height:1.5;color:var(--acct,var(--acc2));background:transparent;border:1.5px solid currentColor;border-radius:999px;padding:0 9px;margin-left:8px;cursor:pointer;white-space:nowrap;vertical-align:middle;-webkit-user-select:none;user-select:none;touch-action:manipulation}.xl:hover{background:var(--soft)}.xl:focus-visible{outline:2px solid var(--ink);outline-offset:2px}";
+css.textContent=".xl{font:inherit;font-size:11px;font-weight:800;line-height:1.5;color:var(--acct,var(--acc2));background:transparent;border:1.5px solid currentColor;border-radius:999px;padding:0 9px;margin-left:8px;cursor:pointer;white-space:nowrap;vertical-align:middle;-webkit-user-select:none;user-select:none;touch-action:manipulation}.xl:hover{background:var(--soft)}.crumb .cr{margin-left:auto;font:inherit;font-weight:800;font-size:13px;color:var(--acct,var(--acc2));background:transparent;border:1.5px solid currentColor;border-radius:999px;padding:3px 12px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;cursor:pointer}.crumb .cr[hidden]{display:none}.crumb .cr:hover{background:var(--soft);color:var(--acct,var(--acc2))}.ingh{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:16px 0 6px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}.ingh:first-child{margin-top:0}.ingh .xl{margin:0;letter-spacing:0;text-transform:none;font-size:12px;padding:1px 10px}.xl:focus-visible{outline:2px solid var(--ink);outline-offset:2px}";
 document.head.appendChild(css);
 
-window.XLINK={btn,find,go,targets:T};
+window.XLINK={btn,sec,find,go,sync,back,targets:T};
 })();
