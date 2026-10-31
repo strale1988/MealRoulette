@@ -47,9 +47,37 @@ KITCHEN.add(
     "name": "Norwegian creamy fish soup with root vegetables",
     "meal": "big",
     "cuisine": "Norwegian",
-    "time": 35,
-    "serves": 2,
+    "time": 40,
+    "serves": 4,
     "ing": [
+      [
+        "butter",
+        35
+      ],
+      [
+        "leek",
+        "1pc"
+      ],
+      [
+        "carrot",
+        "2pc"
+      ],
+      [
+        "celery",
+        "1pc"
+      ],
+      [
+        "flour",
+        30
+      ],
+      [
+        "fish-stock",
+        700
+      ],
+      [
+        "cream",
+        150
+      ],
       [
         "white-fish",
         350
@@ -59,40 +87,8 @@ KITCHEN.add(
         300
       ],
       [
-        "carrot",
-        150
-      ],
-      [
-        "celery",
-        80
-      ],
-      [
-        "leek",
-        1
-      ],
-      [
-        "fish-stock",
-        450
-      ],
-      [
-        "cream",
-        150
-      ],
-      [
-        "butter",
-        35
-      ],
-      [
-        "flour",
-        120
-      ],
-      [
         "dill",
         10
-      ],
-      [
-        "salt",
-        3
       ],
       [
         "black-pepper",
@@ -100,10 +96,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {butter} in a soup pot and soften {leek} without browning.",
-      "Add {fish-stock} and {white-fish}, simmering gently until the main ingredient is tender.",
-      "Make a light butter-flour base and whisk in stock and cream; simmer root vegetables until tender, then poach fish gently in the finished soup.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Melt the {butter} in a pot and soften sliced {leek}, {carrot} and {celery} for 6 minutes.",
+      "Stir in the {flour}, then gradually add the {fish-stock}, stirring, and simmer for 10 minutes until the vegetables are tender.",
+      "Stir in the {cream}, add the {white-fish} and {salmon} in chunks and poach gently for 5 minutes.",
+      "Season with {black-pepper} and serve scattered with chopped {dill}."
     ]
   },
   {
@@ -111,43 +107,35 @@ KITCHEN.add(
     "name": "Raspeballer (Norwegian potato dumplings with bacon)",
     "meal": "big",
     "cuisine": "Norwegian",
-    "time": 50,
-    "serves": 2,
+    "time": 60,
+    "serves": 4,
     "ing": [
       [
         "potatoes",
-        350
+        800
       ],
       [
         "flour",
-        120
+        150
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "vegetable-stock",
+        1200
       ],
       [
         "bacon",
         120
-      ],
-      [
-        "vegetable-stock",
-        450
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "oil",
-        15
       ]
     ],
     "steps": [
-      "Prepare a cohesive filling around {potatoes}, season it and allow it to cool if hot.",
-      "Shape or wrap the filling securely, then steam, simmer or bake until the wrapper is cooked and the centre is hot.",
-      "Grate potatoes, squeeze only lightly and mix with flour into a firm dough; shape balls and simmer gently in stock until they float and are cooked through.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Grate the {potatoes}, squeeze out only some of the liquid and mix with {flour} and {salt} into a firm, slightly sticky dough.",
+      "Bring the {vegetable-stock} to a gentle simmer. With wet hands, shape the dough into golf-ball sized dumplings and lower them in.",
+      "Simmer gently for 25–30 minutes until the dumplings float and are cooked through.",
+      "Meanwhile fry the {bacon} until crisp and serve it over the dumplings."
     ]
   },
   {
@@ -155,39 +143,39 @@ KITCHEN.add(
     "name": "Norwegian potato lefse with butter and cinnamon sugar",
     "meal": "treat",
     "cuisine": "Norwegian",
-    "time": 45,
-    "serves": 2,
+    "time": 60,
+    "serves": 4,
     "ing": [
       [
         "potatoes",
-        350
-      ],
-      [
-        "flour",
-        120
-      ],
-      [
-        "butter",
-        35
-      ],
-      [
-        "sugar",
-        35
-      ],
-      [
-        "cinnamon",
-        2
+        500
       ],
       [
         "salt",
         3
+      ],
+      [
+        "flour",
+        150
+      ],
+      [
+        "butter",
+        50
+      ],
+      [
+        "sugar",
+        30
+      ],
+      [
+        "cinnamon",
+        3
       ]
     ],
     "steps": [
-      "Mix {flour} with the remaining dough ingredients to make a workable dough or batter; knead or beat until even.",
-      "Rest or prove the mixture as needed, shape it, then bake, steam or griddle until cooked through.",
-      "Mash potatoes until completely smooth, chill, then work in flour and roll paper-thin; cook briefly on a dry griddle and spread with butter and cinnamon sugar.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Boil the {potatoes} until tender, mash until completely smooth and chill.",
+      "Work in the {flour} and {salt} to make a soft dough, then divide into 8 pieces.",
+      "Roll each piece paper-thin and cook on a dry, very hot griddle for about 1 minute per side until lightly freckled.",
+      "Spread with the {butter}, sprinkle with {sugar} mixed with {cinnamon} and fold."
     ]
   },
   {
@@ -252,28 +240,28 @@ KITCHEN.add(
     "name": "Rømmegrøt (Norwegian sour-cream porridge)",
     "meal": "morning",
     "cuisine": "Norwegian",
-    "time": 25,
+    "time": 30,
     "serves": 2,
     "ing": [
       [
         "sour-cream",
-        100
-      ],
-      [
-        "flour",
-        120
-      ],
-      [
-        "milk",
         250
       ],
       [
+        "flour",
+        60
+      ],
+      [
+        "milk",
+        400
+      ],
+      [
         "butter",
-        35
+        30
       ],
       [
         "sugar",
-        35
+        30
       ],
       [
         "cinnamon",
@@ -281,18 +269,13 @@ KITCHEN.add(
       ],
       [
         "salt",
-        3
-      ],
-      [
-        "black-pepper",
         1
       ]
     ],
     "steps": [
-      "Prepare and measure all ingredients, then heat the pan or pot over medium heat.",
-      "Cook {sour-cream} with the seasonings until the dish reaches its intended texture and the flavours meld.",
-      "Warm sour cream until it releases butterfat, whisk in flour gradually, then add hot milk a little at a time until the porridge is silky and thick; serve with cinnamon sugar.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Simmer the {sour-cream} in a pot for 10 minutes until it thickens and the butterfat starts to separate.",
+      "Whisk in the {flour} gradually, then add the hot {milk} a little at a time, stirring, and cook for 8 minutes until thick and silky. Season with {salt}.",
+      "Spoon into bowls, drizzle with melted {butter} and dust with {sugar} and {cinnamon}."
     ]
   },
   {
@@ -300,12 +283,12 @@ KITCHEN.add(
     "name": "Skolebrød (Norwegian cardamom buns with custard)",
     "meal": "treat",
     "cuisine": "Norwegian",
-    "time": 100,
-    "serves": 2,
+    "time": 120,
+    "serves": 6,
     "ing": [
       [
         "flour",
-        120
+        300
       ],
       [
         "yeast",
@@ -313,42 +296,42 @@ KITCHEN.add(
       ],
       [
         "milk",
-        250
+        200
       ],
       [
         "butter",
-        35
+        80
       ],
       [
         "sugar",
-        35
+        60
       ],
       [
         "cardamom",
-        2
-      ],
-      [
-        "custard",
-        100
-      ],
-      [
-        "coconut-flakes",
-        30
-      ],
-      [
-        "eggs",
-        "2pc"
+        3
       ],
       [
         "salt",
-        3
+        2
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "custard",
+        200
+      ],
+      [
+        "coconut-flakes",
+        40
       ]
     ],
     "steps": [
-      "Mix {flour} with the remaining dough ingredients to make a workable dough or batter; knead or beat until even.",
-      "Rest or prove the mixture as needed, shape it, then bake, steam or griddle until cooked through.",
-      "Knead a soft cardamom dough and let it rise, form buns with a shallow centre, fill with custard and bake; glaze the cooled edges and dip them in coconut.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Warm the {milk} with the {butter} until lukewarm. Mix with {flour}, {yeast}, {sugar}, {cardamom}, {salt} and the {eggs} into a soft dough and knead for 8 minutes. Cover and prove for 1 hour.",
+      "Divide into 6 buns, place on a lined tray and make a shallow dent in the centre of each. Prove for 20 minutes.",
+      "Bake at 200 °C for 15 minutes until golden, then cool.",
+      "Fill each dent with {custard} and sprinkle the edges with {coconut-flakes}."
     ]
   },
   {
@@ -356,12 +339,12 @@ KITCHEN.add(
     "name": "Norwegian fish cakes with dill and nutmeg",
     "meal": "big",
     "cuisine": "Norwegian",
-    "time": 30,
-    "serves": 2,
+    "time": 35,
+    "serves": 4,
     "ing": [
       [
         "white-fish",
-        350
+        600
       ],
       [
         "eggs",
@@ -369,11 +352,11 @@ KITCHEN.add(
       ],
       [
         "milk",
-        250
+        150
       ],
       [
         "flour",
-        120
+        60
       ],
       [
         "nutmeg",
@@ -384,27 +367,26 @@ KITCHEN.add(
         10
       ],
       [
-        "butter",
-        35
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
         "salt",
-        3
+        4
       ],
       [
         "black-pepper",
         1
+      ],
+      [
+        "butter",
+        30
+      ],
+      [
+        "oil",
+        15
       ]
     ],
     "steps": [
-      "Prepare {white-fish} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {white-fish} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Pulse the fish with egg, milk and flour just until a sticky farce forms, season with nutmeg and dill, then fry small cakes over medium heat until springy and golden.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Blitz the {white-fish} with the {eggs}, {milk}, {flour}, {nutmeg}, {salt} and {black-pepper} until a sticky paste forms. Fold in chopped {dill}.",
+      "Heat the {butter} and {oil} in a wide pan over medium heat.",
+      "Fry spoonfuls of the mixture, flattened into cakes, for 4 minutes per side until golden and springy."
     ]
   },
   {
@@ -412,28 +394,28 @@ KITCHEN.add(
     "name": "Trøndelag sodd-inspired lamb broth with vegetables",
     "meal": "big",
     "cuisine": "Norwegian",
-    "time": 90,
-    "serves": 2,
+    "time": 100,
+    "serves": 4,
     "ing": [
       [
         "lamb",
-        400
+        600
       ],
       [
         "beef-stock",
-        450
+        1200
       ],
       [
         "carrot",
-        150
+        "2pc"
       ],
       [
         "potatoes",
-        350
+        400
       ],
       [
         "celery",
-        80
+        "1pc"
       ],
       [
         "parsley",
@@ -446,17 +428,13 @@ KITCHEN.add(
       [
         "black-pepper",
         1
-      ],
-      [
-        "oil",
-        15
       ]
     ],
     "steps": [
-      "Prepare the vegetables and bring the cooking liquid to a gentle simmer.",
-      "Add {beef-stock} and {lamb}, simmering gently until the main ingredient is tender.",
-      "Simmer lamb gently and skim the broth, then add small, evenly cut vegetables and cook until just tender; keep the broth clear and serve the meat in the soup.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Put the {lamb} in a pot with the {beef-stock}, bring slowly to the boil, skim, then simmer gently for 1 hour.",
+      "Add the {carrot}, {potatoes} and {celery}, all cut into small even pieces, with the {salt} and {black-pepper}.",
+      "Simmer for 20 minutes until the vegetables are just tender.",
+      "Serve the meat and vegetables in the broth, scattered with chopped {parsley}."
     ]
   },
   {
@@ -464,24 +442,28 @@ KITCHEN.add(
     "name": "Tilslørte bondepiker (Norwegian apple, crumb and cream dessert)",
     "meal": "treat",
     "cuisine": "Norwegian",
-    "time": 30,
-    "serves": 2,
+    "time": 35,
+    "serves": 4,
     "ing": [
       [
         "apple",
-        2
+        "4pc"
       ],
       [
-        "stale-bread",
-        160
+        "sugar",
+        30
       ],
       [
         "butter",
-        35
+        50
+      ],
+      [
+        "stale-bread",
+        150
       ],
       [
         "brown-sugar",
-        30
+        50
       ],
       [
         "cinnamon",
@@ -489,7 +471,7 @@ KITCHEN.add(
       ],
       [
         "cream",
-        150
+        250
       ],
       [
         "vanilla",
@@ -497,137 +479,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {apple} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Cook apples to a soft compote, toast buttered crumbs with brown sugar until crisp and cool, then layer with softly whipped cream in glasses.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
-    ]
-  },
-  {
-    "id": "norwegian-fish-cakes-with-dill",
-    "name": "Norwegian Fish Cakes with Dill",
-    "meal": "big",
-    "cuisine": "Norwegian",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {butter} in a heavy pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir well so the ingredients are evenly coated.",
-      "Add the {eggs} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "norwegian-farikal-inspired-lamb-and-cabbage",
-    "name": "Norwegian Fårikål-Inspired Lamb and Cabbage",
-    "meal": "big",
-    "cuisine": "Norwegian",
-    "time": 60,
-    "serves": 4,
-    "ing": [
-      [
-        "lamb",
-        600
-      ],
-      [
-        "savoy-cabbage",
-        600
-      ],
-      [
-        "potatoes",
-        500
-      ],
-      [
-        "butter",
-        20
-      ],
-      [
-        "flour",
-        20
-      ],
-      [
-        "salt",
-        4
-      ],
-      [
-        "black-pepper",
-        2
-      ],
-      [
-        "water",
-        400
-      ]
-    ],
-    "steps": [
-      "Cut {lamb} into 3 cm cubes; slice {savoy-cabbage} into thick wedges and peel and quarter {potatoes}.",
-      "Melt {butter} in a wide heavy pot and brown the lamb for 6 minutes. Sprinkle over {flour} and stir for 1 minute.",
-      "Pour in {water} a little at a time, stirring so no lumps form, then add {salt} and {black-pepper}. Cover and simmer for 25 minutes.",
-      "Lay the cabbage and {potatoes} over the lamb, cover and cook for 25 minutes more, until the lamb is tender and the potatoes are soft.",
-      "Check the seasoning and serve straight from the pot, spooning the thickened broth over everything."
-    ]
-  },
-  {
-    "id": "norwegian-creamy-salmon-soup",
-    "name": "Norwegian Creamy Salmon Soup",
-    "meal": "big",
-    "cuisine": "Norwegian",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Peel and slice the {apple} and cook with {sugar} and a splash of water for 10 minutes to a soft compote. Cool.",
+      "Crumble the {stale-bread} and fry in the {butter} with the {brown-sugar} and {cinnamon} for 8 minutes until crisp and golden. Cool.",
+      "Whip the {cream} with the {vanilla} until soft peaks form.",
+      "Layer the compote, crumbs and cream in glasses, finishing with cream and crumbs."
     ]
   },
   {
@@ -666,94 +521,104 @@ KITCHEN.add(
   },
   {
     "id": "norwegian-apple-and-cinnamon-cake",
-    "name": "Norwegian Apple and Cinnamon Cake",
+    "name": "Norwegian apple cake (eplekake)",
+    "meal": "treat",
+    "cuisine": "Norwegian",
+    "time": 60,
+    "serves": 8,
+    "ing": [
+      [
+        "apple",
+        "4pc"
+      ],
+      [
+        "eggs",
+        "2pc"
+      ],
+      [
+        "sugar",
+        150
+      ],
+      [
+        "butter",
+        100
+      ],
+      [
+        "flour",
+        200
+      ],
+      [
+        "baking-powder",
+        8
+      ],
+      [
+        "milk",
+        100
+      ],
+      [
+        "cinnamon",
+        4
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 180 °C and line a 22 cm tin. Peel, core and slice the {apple}.",
+      "Beat the soft {butter} with {sugar} until pale, then beat in the {eggs} one at a time.",
+      "Fold in the {flour}, {baking-powder} and {milk}. Spread in the tin.",
+      "Press the apple slices into the batter, sprinkle with {cinnamon} and bake for 40–45 minutes until golden and a skewer comes out clean."
+    ]
+  },
+  {
+    "id": "norwegian-creamy-mushroom-and-potato-soup",
+    "name": "Norwegian creamy mushroom and potato soup",
     "meal": "big",
     "cuisine": "Norwegian",
-    "time": 39,
+    "time": 45,
     "serves": 4,
     "ing": [
+      [
+        "butter",
+        30
+      ],
+      [
+        "leek",
+        "1pc"
+      ],
+      [
+        "mushrooms",
+        400
+      ],
+      [
+        "potatoes",
+        400
+      ],
+      [
+        "vegetable-stock",
+        1000
+      ],
+      [
+        "cream",
+        100
+      ],
       [
         "parsley",
         10
       ],
       [
         "black-pepper",
-        2
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
         1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
       ]
     ],
     "steps": [
-      "Add the {parsley} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "norwegian-creamy-mushroom-and-potato-soup",
-    "name": "Norwegian Creamy Mushroom and Potato Soup",
-    "meal": "big",
-    "cuisine": "Norwegian",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Melt the {butter} in a large pot and soften sliced {leek} for 5 minutes.",
+      "Add sliced {mushrooms} and cook for 8 minutes until golden.",
+      "Add diced {potatoes} and {vegetable-stock}, bring to the boil and simmer for 15 minutes.",
+      "Stir in the {cream}, season with {black-pepper} and serve with chopped {parsley}."
     ]
   },
   {
     "id": "norwegian-herbed-cheese-omelette",
     "name": "Norwegian Herbed Cheese Omelette",
-    "meal": "morning,big",
+    "meal": "morning",
     "cuisine": "Norwegian",
     "time": 20,
     "serves": 4,
@@ -792,89 +657,59 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "norwegian-apple-and-cinnamon-bake",
-    "name": "Norwegian Apple and Cinnamon Bake",
+    "id": "norwegian-cabbage-and-bean-stew",
+    "name": "Norwegian cabbage and white bean stew",
     "meal": "big",
     "cuisine": "Norwegian",
-    "time": 60,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "parsley",
-        10
+        "butter",
+        25
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "carrot",
+        "2pc"
+      ],
+      [
+        "cabbage",
+        500
+      ],
+      [
+        "potatoes",
+        300
+      ],
+      [
+        "vegetable-stock",
+        800
+      ],
+      [
+        "caraway",
+        3
+      ],
+      [
+        "white-beans",
+        400
       ],
       [
         "black-pepper",
-        2
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
         1
       ],
       [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
+        "parsley",
+        10
       ]
     ],
     "steps": [
-      "Add the {parsley} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "norwegian-cabbage-and-bean-stew",
-    "name": "Norwegian Cabbage and Bean Stew",
-    "meal": "big",
-    "cuisine": "Norwegian",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Melt the {butter} in a large pot and soften diced {onion} and {carrot} for 6 minutes.",
+      "Add shredded {cabbage}, diced {potatoes}, {vegetable-stock} and {caraway}. Cover and simmer for 20 minutes.",
+      "Add the drained {white-beans} and simmer for 10 minutes more.",
+      "Season with {black-pepper} and serve with chopped {parsley}."
     ]
   },
   {

@@ -39,7 +39,7 @@ KITCHEN.add(
       ],
       [
         "lemon",
-        "0.5pc"
+        30
       ]
     ],
     "steps": [
@@ -295,7 +295,7 @@ KITCHEN.add(
   {
     "id": "left-potato-tortilla",
     "name": "Spanish tortilla from cooked potatoes",
-    "meal": "big,wake",
+    "meal": "big",
     "cuisine": "Spanish",
     "time": 30,
     "serves": 2,
@@ -328,7 +328,7 @@ KITCHEN.add(
   {
     "id": "stale-bread-migas",
     "name": "Spanish migas with stale bread and chorizo",
-    "meal": "big,wake",
+    "meal": "big",
     "cuisine": "Spanish",
     "time": 25,
     "serves": 2,
@@ -428,7 +428,7 @@ KITCHEN.add(
       "potatoes"
     ],
     "name": "Spanish potato tortilla",
-    "meal": "morning,big",
+    "meal": "big",
     "cuisine": "Spanish",
     "time": 45,
     "serves": 2,
@@ -465,7 +465,7 @@ KITCHEN.add(
   {
     "id": "left-rice-frittata",
     "name": "Cheesy spinach rice frittata",
-    "meal": "big,bite",
+    "meal": "big",
     "cuisine": "Spanish",
     "time": 20,
     "serves": 3,
@@ -571,110 +571,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-patatas-bravas",
-    "name": "Patatas bravas with smoky tomato sauce",
-    "meal": "big",
-    "cuisine": "Spanish",
-    "time": 45,
-    "serves": 2,
-    "ing": [
-      [
-        "potatoes",
-        500
-      ],
-      [
-        "olive-oil",
-        28
-      ],
-      [
-        "canned-tomatoes",
-        220
-      ],
-      [
-        "garlic",
-        10
-      ],
-      [
-        "smoked-paprika",
-        4
-      ],
-      [
-        "chilli-flakes",
-        1
-      ],
-      [
-        "vinegar",
-        12
-      ],
-      [
-        "mayonnaise",
-        50
-      ],
-      [
-        "parsley",
-        8
-      ],
-      [
-        "salt",
-        3
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 220°C. Cut {potatoes} into bite-sized pieces, toss with half the {olive-oil} and roast 30–35 minutes, turning once.",
-      "Warm the remaining {olive-oil}; cook {garlic}, {smoked-paprika} and {chilli-flakes} for 30 seconds.",
-      "Add {canned-tomatoes}, {vinegar} and a pinch of {salt}; simmer 12–15 minutes, then mash into a thick sauce.",
-      "Serve the crisp {potatoes} with the sauce, {mayonnaise} and chopped {parsley}."
-    ]
-  },
-  {
-    "id": "world-gambas-ajillo",
-    "name": "Gambas al ajillo (garlic prawns)",
-    "meal": "big",
-    "cuisine": "Spanish",
-    "time": 15,
-    "serves": 2,
-    "ing": [
-      [
-        "prawns",
-        300
-      ],
-      [
-        "olive-oil",
-        35
-      ],
-      [
-        "garlic",
-        18
-      ],
-      [
-        "chilli-flakes",
-        1
-      ],
-      [
-        "parsley",
-        10
-      ],
-      [
-        "lemon",
-        "0.5pc"
-      ],
-      [
-        "bread",
-        160
-      ],
-      [
-        "salt",
-        2
-      ]
-    ],
-    "steps": [
-      "Warm {olive-oil} gently in a small skillet and cook sliced {garlic} until just golden.",
-      "Add {chilli-flakes} and {prawns}; cook 2–3 minutes per side until opaque and cooked through.",
-      "Season with {salt}, squeeze over {lemon}, and scatter {parsley} on top.",
-      "Serve immediately with {bread} to soak up the garlicky oil."
-    ]
-  },
-  {
     "id": "world-albondigas",
     "name": "Spanish albóndigas in tomato sauce",
     "meal": "big",
@@ -764,7 +660,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        8
+        "8pc"
       ],
       [
         "canned-tomatoes",
@@ -816,7 +712,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        5
+        "5pc"
       ],
       [
         "stale-bread",
@@ -844,138 +740,6 @@ KITCHEN.add(
       "Blend the vegetables with {garlic}, softened bread, {olive-oil}, {vinegar}, {salt} and remaining {water} until very smooth.",
       "Taste and adjust the seasoning, then chill for at least 30 minutes.",
       "Serve cold in small bowls, with an extra drizzle of {olive-oil} if desired."
-    ]
-  },
-  {
-    "id": "spanish-tortilla-espanola",
-    "leftoverSwaps": [
-      "potatoes"
-    ],
-    "name": "Tortilla española (Spanish potato omelette)",
-    "meal": "big",
-    "cuisine": "Spanish",
-    "time": 40,
-    "serves": 4,
-    "ing": [
-      [
-        "potatoes",
-        500
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "eggs",
-        "6pc"
-      ],
-      [
-        "olive-oil",
-        45
-      ],
-      [
-        "salt",
-        4
-      ]
-    ],
-    "steps": [
-      "Slice the {potatoes} thinly and finely slice the {onion}. Cook the onion gently in the {olive-oil} in a covered skillet until soft. Add the {potatoes} and cook gently for 15–20 minutes until soft, not crisp.",
-      "Beat the {eggs} with the {salt}. Drain the potatoes and onion, reserving a little oil, and fold into the eggs; rest 5 minutes.",
-      "Pour into a non-stick pan and cook over low-medium heat until set around the edges. Flip carefully using a plate and cook the other side until just set."
-    ]
-  },
-  {
-    "id": "spanish-patatas-bravas",
-    "name": "Patatas bravas",
-    "meal": "bite",
-    "cuisine": "Spanish",
-    "time": 40,
-    "serves": 4,
-    "ing": [
-      [
-        "potatoes",
-        650
-      ],
-      [
-        "olive-oil",
-        30
-      ],
-      [
-        "canned-tomatoes",
-        250
-      ],
-      [
-        "garlic",
-        "2pc"
-      ],
-      [
-        "smoked-paprika",
-        5
-      ],
-      [
-        "chilli-powder",
-        2
-      ],
-      [
-        "vinegar",
-        10
-      ],
-      [
-        "mayonnaise",
-        70
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 220 °C. Cut the {potatoes} into chunks, toss with half the {olive-oil} and roast 30–35 minutes until crisp.",
-      "Warm the remaining oil in a saucepan, add minced {garlic}, {smoked-paprika} and {chilli-powder}, then add the {canned-tomatoes} and simmer 12 minutes. Finish with {vinegar}.",
-      "Spoon the brava sauce over the potatoes and serve with {mayonnaise} on the side."
-    ]
-  },
-  {
-    "id": "spanish-gazpacho",
-    "name": "Gazpacho",
-    "meal": "bite",
-    "cuisine": "Spanish",
-    "time": 15,
-    "serves": 4,
-    "ing": [
-      [
-        "tomato",
-        700
-      ],
-      [
-        "cucumber",
-        200
-      ],
-      [
-        "red-pepper",
-        "0.5pc"
-      ],
-      [
-        "red-onion",
-        "0.25pc"
-      ],
-      [
-        "garlic",
-        "1pc"
-      ],
-      [
-        "bread",
-        60
-      ],
-      [
-        "olive-oil",
-        30
-      ],
-      [
-        "vinegar",
-        15
-      ]
-    ],
-    "steps": [
-      "Roughly chop the {tomato}, {cucumber}, {red-pepper} and {red-onion}; tear the {bread} into pieces.",
-      "Blend the vegetables with the {garlic}, {olive-oil} and {vinegar} until smooth. Add a splash of cold water if the mixture is too thick.",
-      "Chill for at least 1 hour, then taste and adjust seasoning. Serve cold with a drizzle of olive oil."
     ]
   },
   {
@@ -1245,7 +1009,7 @@ KITCHEN.add(
       ],
       [
         "lemon",
-        "0.5pc"
+        30
       ],
       [
         "chilli-flakes",
@@ -1257,149 +1021,6 @@ KITCHEN.add(
       "Warm {olive-oil} in a skillet; cook garlic and {chilli-flakes} briefly without browning. Add {prawns} and {smoked-paprika}.",
       "Cook until prawns are opaque, then stir in beans to warm through. Finish with {parsley} and {lemon} juice."
     ]
-  },
-  {
-    "id": "spanish-spinach-chickpea-stew",
-    "name": "Spanish spinach and chickpea stew",
-    "meal": "big",
-    "cuisine": "Spanish",
-    "time": 25,
-    "serves": 3,
-    "ing": [
-      [
-        "chickpeas",
-        480
-      ],
-      [
-        "spinach",
-        200
-      ],
-      [
-        "canned-tomatoes",
-        250
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "garlic",
-        "3pc"
-      ],
-      [
-        "smoked-paprika",
-        4
-      ],
-      [
-        "cumin",
-        2
-      ],
-      [
-        "bread",
-        60
-      ]
-    ],
-    "steps": [
-      "Toast or pan-fry {bread} until crisp, then crush into coarse crumbs.",
-      "Soften diced {onion} in oil; add {garlic}, {smoked-paprika} and {cumin}. Stir in {canned-tomatoes} and simmer 8 minutes.",
-      "Add {chickpeas} and a splash of water; simmer 8 minutes. Stir in {spinach} until wilted and thicken with the bread crumbs."
-    ]
-  },
-  {
-    "id": "world-spinach-chickpea-garlic",
-    "name": "Spanish-style spinach and chickpeas",
-    "meal": "big",
-    "time": 20,
-    "serves": 2,
-    "ing": [
-      [
-        "chickpeas",
-        440
-      ],
-      [
-        "spinach",
-        250
-      ],
-      [
-        "garlic",
-        12
-      ],
-      [
-        "olive-oil",
-        20
-      ],
-      [
-        "smoked-paprika",
-        3
-      ],
-      [
-        "cumin",
-        2
-      ],
-      [
-        "lemon",
-        "0.5pc"
-      ],
-      [
-        "bread",
-        120
-      ]
-    ],
-    "steps": [
-      "Warm {olive-oil} in a skillet and gently cook sliced {garlic} until fragrant but not browned.",
-      "Add {smoked-paprika} and {cumin}; stir for 15 seconds. Add drained {chickpeas} and a splash of water.",
-      "Fold in {spinach} in batches and cook until wilted. Lightly mash some {chickpeas} to thicken.",
-      "Finish with lemon juice from {lemon}, season and serve with {bread}."
-    ],
-    "cuisine": "Spanish"
-  },
-  {
-    "id": "world-pisto-egg",
-    "name": "Spanish pisto vegetables with eggs",
-    "meal": "big",
-    "time": 35,
-    "serves": 3,
-    "ing": [
-      [
-        "zucchini",
-        250
-      ],
-      [
-        "aubergine",
-        200
-      ],
-      [
-        "red-pepper",
-        180
-      ],
-      [
-        "onion",
-        100
-      ],
-      [
-        "canned-tomatoes",
-        350
-      ],
-      [
-        "eggs",
-        "3pc"
-      ],
-      [
-        "olive-oil",
-        20
-      ],
-      [
-        "garlic",
-        6
-      ]
-    ],
-    "steps": [
-      "Dice {zucchini}, {aubergine}, {red-pepper} and {onion}.",
-      "Cook onion and pepper in {olive-oil} for 5 minutes. Add aubergine and zucchini and cook another 8 minutes.",
-      "Stir in {garlic} and {canned-tomatoes}; simmer 15 minutes until thick and tender.",
-      "Make small wells, crack in {eggs}, cover and cook until the eggs are set."
-    ],
-    "cuisine": "Spanish"
   },
   {
     "id": "world-spanish-patatas-bravas",
@@ -1419,7 +1040,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "smoked-paprika",
@@ -1454,42 +1075,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "spanish-tortilla",
-    "name": "Spanish tortilla with potato and onion",
-    "meal": "big",
-    "cuisine": "Spanish",
-    "time": 35,
-    "serves": 2,
-    "ing": [
-      [
-        "potatoes",
-        500
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "eggs",
-        "5pc"
-      ],
-      [
-        "olive-oil",
-        45
-      ],
-      [
-        "salt",
-        4
-      ]
-    ],
-    "steps": [
-      "Thinly slice {potatoes} and {onion}. Cook gently in {olive-oil} with salt until very tender but not deeply browned.",
-      "Drain potatoes, reserving a little oil. Beat {eggs} and fold in the warm potato mixture; rest 5 minutes.",
-      "Pour into a non-stick skillet and cook over low-medium heat until edges set.",
-      "Invert onto a plate, slide back into pan and cook the other side until set to your liking."
-    ]
-  },
-  {
     "id": "spanish-fabada-bean-stew",
     "name": "Asturian fabada bean stew with chorizo and smoked sausage",
     "meal": "big",
@@ -1515,11 +1100,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "paprika",
@@ -1539,15 +1124,15 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "If using dried beans, soak and pre-cook until nearly tender. Slice {chorizo}, {smoked-sausage} and {bacon}.",
-      "Add beans, meats, {onion}, {garlic}, {paprika}, {bay-leaf} and {vegetable-stock} to a heavy pot.",
-      "Simmer gently 50–60 minutes until creamy and the beans are tender; remove bay leaf and season with {salt}."
+      "Drain and rinse the {white-beans}. Slice the {chorizo}, {smoked-sausage} and {bacon}.",
+      "Add the beans, meats, chopped {onion}, crushed {garlic}, {paprika}, {bay-leaf} and {vegetable-stock} to a heavy pot.",
+      "Simmer gently for 50–60 minutes until creamy; remove the bay leaf and season with {salt}."
     ]
   },
   {
     "id": "spanish-salmorejo",
     "name": "Salmorejo chilled tomato and bread soup with egg",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Spanish",
     "time": 20,
     "serves": 2,
@@ -1562,7 +1147,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        1
+        "1pc"
       ],
       [
         "olive-oil",
@@ -1574,7 +1159,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        2
+        "2pc"
       ],
       [
         "ham",
@@ -1588,7 +1173,7 @@ KITCHEN.add(
     "steps": [
       "Soak {stale-bread} briefly in water and squeeze. Blend with ripe {tomato}, {garlic}, {sherry-vinegar} and {salt} until smooth.",
       "With the blender running, slowly pour in {olive-oil} until thick and creamy. Chill for at least 30 minutes.",
-      "Serve cold topped with chopped cooked {eggs} and finely diced {ham}."
+      "Boil the {eggs} for 9 minutes, cool and peel. Serve the soup cold topped with chopped egg and finely diced {ham}."
     ]
   },
   {
@@ -1609,15 +1194,15 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        3
+        "3pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "black-olives",
@@ -1645,22 +1230,22 @@ KITCHEN.add(
   {
     "id": "spanish-escalivada",
     "name": "Escalivada (Catalan roasted pepper, aubergine and onion)",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Spanish",
     "time": 50,
     "serves": 2,
     "ing": [
       [
         "red-pepper",
-        2
+        "2pc"
       ],
       [
         "aubergine",
-        1
+        "1pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "olive-oil",
@@ -1668,7 +1253,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        1
+        "1pc"
       ],
       [
         "sherry-vinegar",
@@ -1684,12 +1269,12 @@ KITCHEN.add(
       ],
       [
         "bread",
-        4
+        "4pc"
       ]
     ],
     "steps": [
-      "Place {red-pepper}, {aubergine} and {onion} on a tray; roast at 220 °C, turning as needed, until skins blister and vegetables soften.",
-      "Cover the peppers to steam, then peel and slice all vegetables. Toss with {olive-oil}, crushed {garlic}, {sherry-vinegar} and {salt}.",
+      "Place {red-pepper}, {aubergine} and {onion} on a tray and roast at 220 °C for 40 minutes, turning as needed, until the skins blister and the vegetables soften.",
+      "Cover the peppers to steam for 10 minutes, then peel and slice all the vegetables. Toss with {olive-oil}, crushed {garlic}, {sherry-vinegar} and {salt}.",
       "Finish with chopped {parsley} and serve at room temperature with toasted {bread}."
     ]
   },
@@ -1707,7 +1292,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        4
+        "4pc"
       ],
       [
         "olive-oil",
@@ -1715,7 +1300,7 @@ KITCHEN.add(
       ],
       [
         "fresh-chilli",
-        1
+        "1pc"
       ],
       [
         "parsley",
@@ -1742,7 +1327,7 @@ KITCHEN.add(
     "ing": [
       [
         "aubergine",
-        1
+        "1pc"
       ],
       [
         "flour",
@@ -1773,53 +1358,6 @@ KITCHEN.add(
       "Slice {aubergine} into thin rounds or batons, salt lightly and rest 10 minutes; pat dry.",
       "Whisk {flour}, {sparkling-water} and a pinch of {salt} into a light batter. Coat the aubergine and fry in hot {oil} until crisp and golden.",
       "Drain on a rack, drizzle with {honey} and a little {lemon-juice}, and serve immediately."
-    ]
-  },
-  {
-    "id": "spanish-gambas-ajillo",
-    "name": "Gambas al ajillo (Spanish garlic prawns in olive oil)",
-    "meal": "big",
-    "cuisine": "Spanish",
-    "time": 15,
-    "serves": 2,
-    "ing": [
-      [
-        "prawns",
-        350
-      ],
-      [
-        "garlic",
-        5
-      ],
-      [
-        "olive-oil",
-        60
-      ],
-      [
-        "fresh-chilli",
-        1
-      ],
-      [
-        "parsley",
-        15
-      ],
-      [
-        "lemon-juice",
-        10
-      ],
-      [
-        "salt",
-        2
-      ],
-      [
-        "bread",
-        150
-      ]
-    ],
-    "steps": [
-      "Thinly slice {garlic} and {fresh-chilli}. Warm {olive-oil} in a small skillet over medium-low heat and cook garlic until fragrant, not browned.",
-      "Add {prawns} and {salt}; turn and cook 2–3 minutes until just pink.",
-      "Remove from the heat, add {lemon-juice} and chopped {parsley}, and serve sizzling with {bread} to mop up the oil."
     ]
   },
   {
@@ -1868,62 +1406,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Melt {butter}, stir in {flour} and cook 2 minutes; gradually whisk in {milk} until a very thick béchamel forms.",
-      "Fold in finely diced {ham}, {nutmeg} and pepper. Spread in a tray, cover and chill until firm.",
+      "Melt {butter}, stir in {flour} and cook for 2 minutes; gradually whisk in {milk} until a very thick béchamel forms.",
+      "Fold in finely diced {ham}, {nutmeg} and {black-pepper}. Spread in a tray, cover and chill for at least 2 hours until firm.",
       "Shape into small cylinders; coat in beaten {eggs} and {breadcrumbs}.",
-      "Fry in hot {oil} until golden and crisp; drain and serve warm."
-    ]
-  },
-  {
-    "id": "spanish-pisto",
-    "name": "Pisto manchego vegetable stew with eggs",
-    "meal": "big,light",
-    "cuisine": "Spanish",
-    "time": 40,
-    "serves": 3,
-    "ing": [
-      [
-        "zucchini",
-        250
-      ],
-      [
-        "red-pepper",
-        180
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "tomato",
-        350
-      ],
-      [
-        "aubergine",
-        200
-      ],
-      [
-        "garlic",
-        "2pc"
-      ],
-      [
-        "olive-oil",
-        25
-      ],
-      [
-        "eggs",
-        "3pc"
-      ],
-      [
-        "salt",
-        3
-      ]
-    ],
-    "steps": [
-      "Dice {zucchini}, {red-pepper}, {aubergine} and {onion}.",
-      "Cook onion and pepper in {olive-oil} until soft; add garlic, aubergine and zucchini.",
-      "Add chopped {tomato} and {salt}; simmer 20–25 minutes until thick and tender.",
-      "Serve with fried or gently baked {eggs}."
+      "Fry in {oil} heated to 180 °C for 2–3 minutes until golden and crisp; drain and serve warm."
     ]
   },
   {
@@ -1948,7 +1434,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "onion",
@@ -1980,11 +1466,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Rinse {rice} if it is uncooked; prepare the other ingredients while it drains.",
-      "Heat {olive-oil} and soften {onion} and {garlic}, then cook the main filling until fragrant.",
-      "Combine the ingredients with {fish-stock} and cook covered until the rice is tender and the liquid is absorbed.",
-      "Sear squid and garlic, toast rice in the pan, add fish stock and squid ink if available, then cook without stirring until the rice is tender and the bottom lightly toasted.",
-      "Finish with a little {lemon} if needed, taste for seasoning and serve while the texture is at its best."
+      "Warm the {fish-stock} in a pan. Chop the {onion}, crush the {garlic}, slice the {squid} into rings and cut the {white-fish} into 3 cm pieces.",
+      "Heat the {olive-oil} in a wide pan, soften the onion for 5 minutes, add the garlic and squid and cook for 4 minutes. Pour in the {white-wine} and boil for 2 minutes.",
+      "Stir in the {rice} for 1 minute, then pour in the hot stock (add a sachet of squid ink here if you have it, for the classic black colour) with the {salt}. Simmer without stirring for 12 minutes.",
+      "Nestle the fish into the rice and cook for 8 minutes more until the rice is tender and the bottom is lightly toasted. Season with {black-pepper}, rest for 3 minutes and serve with wedges of {lemon}."
     ]
   },
   {
@@ -2009,11 +1494,11 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "paprika",
@@ -2041,11 +1526,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cook {noodles} according to its packet, drain and reserve a little cooking water.",
-      "Heat {olive-oil} in a wok or large skillet; stir-fry {garlic} with the main ingredients.",
-      "Toss the noodles through the sauce over high heat so they absorb the seasoning without turning soft.",
-      "Toast short noodles in olive oil until lightly golden, add tomato and paprika, pour in hot seafood stock and arrange seafood on top; cook uncovered until the liquid is absorbed.",
-      "Finish with a little {lemon} if needed, taste for seasoning and serve while the texture is at its best."
+      "Break the {noodles} into 3 cm pieces. Grate the {tomato} and crush the {garlic}.",
+      "Heat the {olive-oil} in a wide pan and toast the noodles for 3 minutes until golden; set aside. Fry the garlic for 30 seconds, add the tomato and {paprika} and cook for 5 minutes until jammy.",
+      "Return the noodles, pour in the hot {fish-stock} with the {salt} and simmer uncovered for 8 minutes.",
+      "Arrange the {mussels} and {prawns} on top, cover and cook for 5 minutes until the mussels open and the prawns are pink; discard any unopened mussels. Season with {black-pepper} and serve with wedges of {lemon}."
     ]
   }
 ]

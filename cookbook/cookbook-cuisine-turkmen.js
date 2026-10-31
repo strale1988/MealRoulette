@@ -2,41 +2,6 @@
 KITCHEN.add(
 [
   {
-    "id": "turkmen-dograma",
-    "name": "Dogroma-inspired lamb and bread soup",
-    "meal": "big",
-    "cuisine": "Turkmen",
-    "time": 85,
-    "serves": 4,
-    "ing": [
-      [
-        "lamb",
-        500
-      ],
-      [
-        "onion",
-        2
-      ],
-      [
-        "flatbread",
-        2
-      ],
-      [
-        "beef-stock",
-        1000
-      ],
-      [
-        "parsley",
-        10
-      ]
-    ],
-    "steps": [
-      "Simmer {lamb} with one {onion} in {beef-stock} until very tender.",
-      "Tear {flatbread} into small pieces and place in serving bowls with sliced remaining {onion}.",
-      "Ladle hot broth and lamb over the bread; garnish with {parsley}."
-    ]
-  },
-  {
     "id": "turkmen-ishlekli",
     "name": "Ishlekli-style meat and onion pie",
     "meal": "big",
@@ -58,7 +23,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        2
+        "2pc"
       ],
       [
         "oil",
@@ -89,11 +54,11 @@ KITCHEN.add(
       ],
       [
         "carrot",
-        3
+        "3pc"
       ],
       [
         "onion",
-        2
+        "2pc"
       ],
       [
         "cumin",
@@ -113,7 +78,7 @@ KITCHEN.add(
   {
     "id": "turkmen-chorek",
     "name": "Çörek-style Turkmen bread",
-    "meal": "bake",
+    "meal": "bite",
     "cuisine": "Turkmen",
     "time": 100,
     "serves": 4,
@@ -143,45 +108,6 @@ KITCHEN.add(
       "Mix {flour}, {water}, {yeast} and {salt}; knead until elastic.",
       "Cover and rise until doubled. Shape into a round loaf and sprinkle with {sesame-seeds}.",
       "Bake at 220°C until deeply golden and hollow-sounding when tapped."
-    ]
-  },
-  {
-    "id": "turkmen-plov-with-beef-and-carrots",
-    "name": "Turkmen Plov with Beef and Carrots",
-    "meal": "big",
-    "cuisine": "Turkmen",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ]
-    ],
-    "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {carrot} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
     ]
   },
   {
@@ -279,41 +205,50 @@ KITCHEN.add(
   },
   {
     "id": "turkmen-manti-dumplings",
-    "name": "Turkmen Manti Dumplings",
+    "name": "Turkmen manti (steamed lamb dumplings)",
     "meal": "big",
     "cuisine": "Turkmen",
-    "time": 51,
+    "time": 80,
     "serves": 4,
     "ing": [
       [
+        "flour",
+        400
+      ],
+      [
+        "water",
+        200
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "lamb-mince",
+        400
+      ],
+      [
         "onion",
-        1
+        "2pc"
       ],
       [
-        "carrot",
+        "black-pepper",
         2
       ],
       [
-        "rice",
-        250
+        "butter",
+        30
       ],
       [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "garlic",
-        2
+        "yogurt",
+        200
       ]
     ],
     "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {onion} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {rice} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Mix {flour}, {water} and half the {salt} into a firm dough. Knead for 5 minutes, then cover and rest for 30 minutes.",
+      "Mix {lamb-mince} with finely diced {onion}, {black-pepper} and the remaining {salt}.",
+      "Roll the dough thin and cut into 8 cm squares. Put a spoonful of filling in each and pinch the corners together.",
+      "Steam the manti in batches for 30 minutes. Serve with melted {butter} and spoonfuls of {yogurt}."
     ]
   },
   {
@@ -522,45 +457,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "turkmen-beef-and-onion-pilaf",
-    "name": "Turkmen Beef and Onion Pilaf",
-    "meal": "big",
-    "cuisine": "Turkmen",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ]
-    ],
-    "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
-    ]
-  },
-  {
     "id": "turkmen-pumpkin-and-herb-dumplings",
     "name": "Turkmen Pumpkin and Herb Dumplings",
     "meal": "big",
@@ -603,88 +499,109 @@ KITCHEN.add(
   },
   {
     "id": "turkmen-carrot-and-chickpea-soup",
-    "name": "Turkmen Carrot and Chickpea Soup",
+    "name": "Turkmen carrot and chickpea soup",
     "meal": "big",
     "cuisine": "Turkmen",
-    "time": 39,
+    "time": 45,
     "serves": 4,
     "ing": [
-      [
-        "garlic",
-        2
-      ],
       [
         "oil",
         20
       ],
       [
-        "salt",
-        3
-      ],
-      [
-        "beef-chuck",
-        450
-      ],
-      [
         "onion",
-        1
+        "1pc"
       ],
       [
         "carrot",
-        2
+        "3pc"
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ]
-    ],
-    "steps": [
-      "Add the {garlic} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "turkmen-flatbread-with-yogurt-dip",
-    "name": "Turkmen Flatbread with Yogurt Dip",
-    "meal": "big",
-    "cuisine": "Turkmen",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
+        "garlic",
+        "3pc"
       ],
       [
         "cumin",
         3
+      ],
+      [
+        "tomato-paste",
+        20
+      ],
+      [
+        "chickpeas",
+        400
+      ],
+      [
+        "vegetable-stock",
+        900
+      ],
+      [
+        "salt",
+        2
+      ],
+      [
+        "cilantro",
+        10
+      ],
+      [
+        "lemon",
+        "1pc"
       ]
     ],
     "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Heat {oil} in a large pot and soften diced {onion} and {carrot} for 8 minutes. Add {garlic}, {cumin} and {tomato-paste} and stir for 1 minute.",
+      "Add the drained {chickpeas}, {vegetable-stock} and {salt}. Bring to the boil and simmer for 25 minutes.",
+      "Blend roughly with a stick blender, leaving some texture. Serve with chopped {cilantro} and a squeeze of {lemon}."
+    ]
+  },
+  {
+    "id": "turkmen-flatbread-with-yogurt-dip",
+    "name": "Turkmen flatbread with garlic yogurt dip",
+    "meal": "bite",
+    "cuisine": "Turkmen",
+    "time": 40,
+    "serves": 4,
+    "ing": [
+      [
+        "flour",
+        300
+      ],
+      [
+        "baking-powder",
+        6
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "yogurt",
+        320
+      ],
+      [
+        "water",
+        80
+      ],
+      [
+        "oil",
+        15
+      ],
+      [
+        "garlic",
+        "1pc"
+      ],
+      [
+        "dill",
+        8
+      ]
+    ],
+    "steps": [
+      "Mix {flour}, {baking-powder} and {salt}. Stir in 120 g of the {yogurt} and the {water} to make a soft dough. Knead briefly and rest for 15 minutes.",
+      "Divide into 4 pieces and roll each into a 20 cm round.",
+      "Cook in a hot, lightly oiled pan ({oil}) for 2–3 minutes per side until puffed and golden.",
+      "Mix the remaining {yogurt} with crushed {garlic} and chopped {dill} and serve with the warm bread."
     ]
   },
   {
@@ -742,88 +659,45 @@ KITCHEN.add(
   },
   {
     "id": "turkmen-herbed-cucumber-salad",
-    "name": "Turkmen Herbed Cucumber Salad",
-    "meal": "big",
+    "name": "Turkmen cucumber and yogurt salad with herbs",
+    "meal": "bite",
     "cuisine": "Turkmen",
-    "time": 60,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "garlic",
-        2
+        "cucumber",
+        "3pc"
       ],
       [
-        "oil",
-        20
+        "yogurt",
+        200
+      ],
+      [
+        "garlic",
+        "1pc"
+      ],
+      [
+        "dill",
+        10
+      ],
+      [
+        "cilantro",
+        10
+      ],
+      [
+        "olive-oil",
+        10
       ],
       [
         "salt",
-        3
-      ],
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
         2
       ]
     ],
     "steps": [
-      "Add the {garlic} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "turkmen-lamb-style-noodle-broth",
-    "name": "Turkmen Lamb-Style Noodle Broth",
-    "meal": "big",
-    "cuisine": "Turkmen",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ]
-    ],
-    "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Dice the {cucumber} and mix with {salt}; leave for 5 minutes, then drain off any liquid.",
+      "Stir {yogurt} with crushed {garlic}, chopped {dill} and {cilantro}.",
+      "Fold in the cucumber, drizzle with {olive-oil} and serve chilled."
     ]
   },
   {

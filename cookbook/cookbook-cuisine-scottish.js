@@ -19,7 +19,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "milk",
@@ -78,7 +78,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "beef-stock",
@@ -108,42 +108,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "sc-cranachan",
-    "name": "Cranachan (Scottish raspberries, toasted oats and cream)",
-    "meal": "treat",
-    "cuisine": "Scottish",
-    "time": 20,
-    "serves": 2,
-    "ing": [
-      [
-        "oats",
-        100
-      ],
-      [
-        "berries",
-        200
-      ],
-      [
-        "cream",
-        150
-      ],
-      [
-        "honey",
-        100
-      ],
-      [
-        "vanilla",
-        3
-      ]
-    ],
-    "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {berries} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Toast oats until nutty and cool fully; whip cream softly with honey and vanilla, then layer with raspberries and oats just before serving.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
-    ]
-  },
-  {
     "id": "sc-cock-a-leekie",
     "name": "Cock-a-leekie soup with chicken, leeks and barley",
     "meal": "big",
@@ -157,7 +121,7 @@ KITCHEN.add(
       ],
       [
         "leek",
-        1
+        "2pc"
       ],
       [
         "chicken-stock",
@@ -189,10 +153,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a soup pot and soften {leek} without browning.",
-      "Add {chicken-stock} and {chicken-thigh}, simmering gently until the main ingredient is tender.",
-      "Simmer chicken with leeks and barley until tender, shred the meat and return it to the clear broth; finish with parsley and generous black pepper.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Slice the {leek} and keep the dark green tops separate. Soften the white and pale green parts in {oil} in a soup pot for 5 minutes without browning.",
+      "Add {chicken-thigh}, {chicken-stock}, {barley} and 300 ml water. Bring to the boil, skim, then simmer gently for 40 minutes.",
+      "Add diced {carrot} and the green leek tops and simmer for 15 minutes until the barley and vegetables are tender.",
+      "Lift out the chicken, shred it and return it to the clear broth; season with {salt} and plenty of {black-pepper}.",
+      "Serve in bowls sprinkled with chopped {parsley}."
     ]
   },
   {
@@ -200,7 +165,7 @@ KITCHEN.add(
     "name": "Scottish tattie scones (potato griddle breads)",
     "meal": "morning",
     "cuisine": "Scottish",
-    "time": 25,
+    "time": 35,
     "serves": 2,
     "ing": [
       [
@@ -221,10 +186,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Mix {flour} with the remaining dough ingredients to make a workable dough or batter; knead or beat until even.",
-      "Rest or prove the mixture as needed, shape it, then bake, steam or griddle until cooked through.",
-      "Mash boiled potatoes while still warm, work in flour and butter, roll thinly and cut into triangles; cook on a hot dry griddle until lightly browned on both sides.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Boil {potatoes} in water with the {salt} for 15 minutes until soft; drain well and mash while still warm.",
+      "Work in the {butter} until melted, then add the {flour} gradually to make a soft, non-sticky dough.",
+      "Roll out 3 mm thick on a floured board, cut into rounds or triangles and prick with a fork.",
+      "Cook on a hot, dry griddle over medium heat for 2–3 minutes per side until speckled brown. Serve warm."
     ]
   },
   {
@@ -257,7 +222,7 @@ KITCHEN.add(
       ],
       [
         "milk",
-        250
+        120
       ],
       [
         "cinnamon",
@@ -270,13 +235,18 @@ KITCHEN.add(
       [
         "butter",
         35
+      ],
+      [
+        "baking-powder",
+        5
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {flour} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Mix a firm spiced fruit batter, wrap securely in a floured cloth or pudding basin and steam until set; allow the surface to dry briefly in a warm oven.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Mix {flour}, {oats}, {brown-sugar}, {cinnamon}, {nutmeg} and {baking-powder} in a bowl, rub in the cold {butter} and stir in the {raisins}.",
+      "Beat {eggs} with {milk} and stir into the dry mix to a soft, dropping batter.",
+      "Pour into a greased, floured 1 litre pudding basin, cover with pleated baking parchment and foil and tie tightly.",
+      "Steam over simmering water for 2 hours, topping up the water as needed.",
+      "Turn out and dry the surface in a 180 °C oven for 10 minutes. Serve warm in slices."
     ]
   },
   {
@@ -350,11 +320,11 @@ KITCHEN.add(
       ],
       [
         "water",
-        350
+        75
       ],
       [
         "sugar",
-        35
+        5
       ],
       [
         "salt",
@@ -362,10 +332,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Mix {flour} with the remaining dough ingredients to make a workable dough or batter; knead or beat until even.",
-      "Rest or prove the mixture as needed, shape it, then bake, steam or griddle until cooked through.",
-      "Rub cold butter into the dough in layers, shape into squat rolls, allow a short rise and bake until the bottoms are crisp and the centres tender.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Mix {flour}, {yeast}, {sugar} and {salt}, add {water} and knead for 8 minutes to a soft dough. Prove for 1 hour until doubled.",
+      "Roll the dough into a rectangle, spread with two-thirds of the {butter}, fold in thirds and chill for 15 minutes; repeat with the remaining butter.",
+      "Cut into 4 pieces, shape into squat rolls and prove for 30 minutes.",
+      "Bake at 200 °C for 18–20 minutes until deep golden and crisp on the bottom."
     ]
   },
   {
@@ -373,24 +343,24 @@ KITCHEN.add(
     "name": "Scottish tablet (crumbly set sugar confection)",
     "meal": "treat",
     "cuisine": "Scottish",
-    "time": 40,
-    "serves": 2,
+    "time": 100,
+    "serves": 6,
     "ing": [
       [
         "sugar",
-        35
-      ],
-      [
-        "butter",
-        35
-      ],
-      [
-        "milk",
         250
       ],
       [
+        "butter",
+        50
+      ],
+      [
+        "milk",
+        80
+      ],
+      [
         "condensed-milk",
-        100
+        200
       ],
       [
         "vanilla",
@@ -398,10 +368,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {sugar} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Dissolve the sugar slowly with milk and butter, boil to soft-ball stage while stirring frequently, beat as it cools until grainy, then pour into a lined tin to set.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Line a 15 cm square tin with baking parchment.",
+      "Heat {sugar}, {milk} and {butter} slowly in a heavy saucepan, stirring until the sugar dissolves.",
+      "Add {condensed-milk}, bring to the boil and cook over medium heat for 15–20 minutes, stirring constantly, until it reaches 116 °C (soft-ball stage).",
+      "Remove from the heat, stir in {vanilla} and beat with a wooden spoon for 5–8 minutes until thick, pale and grainy. Pour into the tin and score into squares.",
+      "Leave to set for 1 hour, then break into pieces."
     ]
   },
   {
@@ -426,7 +397,7 @@ KITCHEN.add(
       ],
       [
         "water",
-        350
+        100
       ],
       [
         "salt",
@@ -434,10 +405,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Mix {wholemeal-flour} with the remaining dough ingredients to make a workable dough or batter; knead or beat until even.",
-      "Rest or prove the mixture as needed, shape it, then bake, steam or griddle until cooked through.",
-      "Mix fine oats with flour, melted butter and enough hot water to form a firm dough, roll thinly, cut into rounds and bake until dry and crisp.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 180 °C and line a baking tray.",
+      "Mix {oats}, {wholemeal-flour} and {salt}; stir in melted {butter} and the hot {water} to make a firm dough.",
+      "Roll 3 mm thick on a floured board and cut into 8 cm rounds.",
+      "Bake for 20 minutes, turning once, until dry and crisp at the edges; cool on a rack."
     ]
   },
   {
@@ -470,7 +441,7 @@ KITCHEN.add(
       ],
       [
         "beef-stock",
-        450
+        120
       ],
       [
         "oil",
@@ -482,10 +453,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare {lamb-mince} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {lamb-mince} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Cook onion and oats in stock until softened, cool and mix with lamb and warm spices; form compact patties and pan-fry until browned and cooked through.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Finely chop the {onion} and soften it in half of the {oil} for 5 minutes.",
+      "Add {oats} and {beef-stock} and simmer for 4 minutes until absorbed, then cool.",
+      "Mix with {lamb-mince}, {allspice}, {black-pepper} and {salt} and shape into 6 patties.",
+      "Fry in the remaining oil over medium heat for 5 minutes per side until deep golden and cooked through."
     ]
   },
   {
@@ -522,49 +493,66 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {berries} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Mash berries with sugar and lemon, whip egg whites to stiff peaks and fold in carefully; serve the airy fruit foam with softly whipped cream immediately.",
-      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
+      "Mash {berries} with half of the {sugar} and the {lemon-juice}; sieve for a smooth purée if you like.",
+      "Separate the {eggs}, keeping the yolks for another use. Whisk the whites to stiff peaks, adding the remaining sugar gradually until glossy.",
+      "Fold the whites gently into the fruit purée.",
+      "Whip {cream} with {vanilla} to soft peaks. Spoon the snow into glasses, top with cream and serve immediately."
     ]
   },
   {
-    "id": "scottish-cullen-inspired-fish-soup",
-    "name": "Scottish Cullen-Inspired Fish Soup",
+    "id": "scottish-partan-bree",
+    "name": "Partan Bree (Scottish crab and rice soup)",
     "meal": "big",
     "cuisine": "Scottish",
-    "time": 25,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "potatoes",
-        400
+        "crabmeat",
+        300
       ],
       [
-        "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
+        "rice",
         100
       ],
       [
-        "mushrooms",
-        150
+        "fish-stock",
+        700
+      ],
+      [
+        "milk",
+        300
+      ],
+      [
+        "cream",
+        100
+      ],
+      [
+        "onion",
+        "1pc"
       ],
       [
         "butter",
         20
+      ],
+      [
+        "paprika",
+        2
+      ],
+      [
+        "salt",
+        2
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Soften chopped {onion} in {butter} for 5 minutes. Add {rice} and {fish-stock} and simmer for 18 minutes until the rice is very soft.",
+      "Blend until smooth, return to the pot with the {milk} and warm gently.",
+      "Stir in {crabmeat}, {paprika}, {salt} and {black-pepper} and simmer for 5 minutes without boiling.",
+      "Finish with the {cream} and serve hot."
     ]
   },
   {
@@ -625,50 +613,47 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "scottish-tattie-scones",
-    "name": "Scottish Tattie Scones",
+    "id": "scottish-rumbledethumps",
+    "name": "Rumbledethumps (Scottish potato, cabbage and cheese bake)",
     "meal": "big",
     "cuisine": "Scottish",
-    "time": 39,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "parsley",
-        10
+        "potatoes",
+        700
       ],
       [
-        "black-pepper",
-        2
+        "cabbage",
+        400
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "butter",
+        40
+      ],
+      [
+        "cheddar",
+        100
       ],
       [
         "salt",
         3
       ],
       [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
+        "black-pepper",
         1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
       ]
     ],
     "steps": [
-      "Add the {parsley} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 200 °C. Peel and chop {potatoes} and boil in water with the {salt} for 15 minutes until tender; drain and mash with half of the {butter}.",
+      "Shred the {cabbage}, slice the {onion} and fry in the remaining butter for 8 minutes until soft.",
+      "Mix the cabbage and onion into the mash, season with {black-pepper} and spread in a baking dish.",
+      "Top with grated {cheddar} and bake for 25 minutes until golden and bubbling."
     ]
   },
   {
@@ -676,38 +661,59 @@ KITCHEN.add(
     "name": "Scottish Beef and Barley Broth",
     "meal": "big",
     "cuisine": "Scottish",
-    "time": 46,
+    "time": 110,
     "serves": 4,
     "ing": [
       [
-        "potatoes",
+        "beef-chuck",
         400
       ],
       [
-        "onion",
-        1
+        "barley",
+        80
       ],
       [
-        "eggs",
+        "carrot",
+        "2pc"
+      ],
+      [
+        "swede",
+        200
+      ],
+      [
+        "leek",
+        "1pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "beef-stock",
+        1200
+      ],
+      [
+        "parsley",
+        10
+      ],
+      [
+        "oil",
+        15
+      ],
+      [
+        "salt",
         3
       ],
       [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Cut {beef-chuck} into 2 cm cubes and brown in {oil} in a large pot for 6 minutes.",
+      "Add diced {onion}, {beef-stock} and {barley}; bring to the boil, skim and simmer for 60 minutes.",
+      "Add diced {carrot} and {swede} and sliced {leek} and simmer for 30 minutes until the beef and vegetables are tender.",
+      "Season with {salt} and {black-pepper} and stir in chopped {parsley}."
     ]
   },
   {
@@ -747,85 +753,91 @@ KITCHEN.add(
     "name": "Scottish Creamy Mushroom and Potato Soup",
     "meal": "big",
     "cuisine": "Scottish",
-    "time": 60,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "parsley",
-        10
+        "mushrooms",
+        300
       ],
       [
-        "black-pepper",
-        2
+        "potatoes",
+        300
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "butter",
+        30
+      ],
+      [
+        "vegetable-stock",
+        700
+      ],
+      [
+        "milk",
+        200
+      ],
+      [
+        "parsley",
+        10
       ],
       [
         "salt",
         3
       ],
       [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
+        "black-pepper",
         1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
       ]
     ],
     "steps": [
-      "Add the {parsley} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Slice the {mushrooms} and dice the {onion} and {potatoes}.",
+      "Cook the onion and mushrooms in {butter} over medium-high heat for 8 minutes until golden.",
+      "Add the potatoes and {vegetable-stock} and simmer for 15 minutes until tender.",
+      "Blend about half the soup, return to the pot, stir in {milk} and warm through. Season with {salt} and {black-pepper} and finish with chopped {parsley}."
     ]
   },
   {
     "id": "scottish-herbed-cheese-omelette",
     "name": "Scottish Herbed Cheese Omelette",
-    "meal": "big",
+    "meal": "morning",
     "cuisine": "Scottish",
-    "time": 31,
-    "serves": 4,
+    "time": 15,
+    "serves": 2,
     "ing": [
       [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
         "eggs",
-        3
+        "6pc"
       ],
       [
-        "cheese",
-        100
+        "cheddar",
+        80
       ],
       [
-        "mushrooms",
-        150
+        "chives",
+        10
       ],
       [
         "butter",
         20
+      ],
+      [
+        "salt",
+        2
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Beat {eggs} with {salt}, {black-pepper} and chopped {chives}.",
+      "Melt half of the {butter} in a 20 cm non-stick pan over medium heat and pour in half of the egg.",
+      "Cook for 2 minutes, drawing the edges inwards, until just set. Scatter over half of the {cheddar}, fold and slide onto a plate.",
+      "Repeat with the remaining butter, egg and cheese."
     ]
   },
   {

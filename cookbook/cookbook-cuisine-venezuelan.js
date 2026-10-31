@@ -44,7 +44,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Poach the {chicken-breast} until cooked through, cool slightly and shred. Mash the {avocado} with {mayonnaise}, {lime} juice, chopped {cilantro} and {salt}; fold in the chicken.",
-      "Mix {cornmeal} with {salt} and warm water to form a soft dough. Shape into thick discs and cook in a lightly oiled skillet for 5–6 minutes per side, then finish in a 180 °C oven for 10 minutes.",
+      "Mix {cornmeal} with {salt} and warm water to form a soft dough. Shape into thick discs and cook in a skillet with the {oil} for 5–6 minutes per side, then finish in a 180 °C oven for 10 minutes.",
       "Split the warm arepas and fill generously with the chicken-avocado mixture."
     ]
   },
@@ -70,7 +70,7 @@ KITCHEN.add(
       ],
       [
         "plantain",
-        1
+        "1pc"
       ],
       [
         "onion",
@@ -403,65 +403,63 @@ KITCHEN.add(
   },
   {
     "id": "venezuelan-arepas-with-black-beans",
-    "name": "Venezuelan Arepas with Black Beans",
+    "name": "Venezuelan arepas with black beans and cheese",
     "meal": "big",
     "cuisine": "Venezuelan",
-    "time": 30,
+    "time": 40,
+    "serves": 4,
+    "ing": [
+      [
+        "cornmeal",
+        300
+      ],
+      [
+        "water",
+        450
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "black-beans",
+        400
+      ],
+      [
+        "queso-fresco",
+        150
+      ],
+      [
+        "avocado",
+        "1pc"
+      ]
+    ],
+    "steps": [
+      "Mix {cornmeal}, {salt} and warm {water} into a soft dough. Rest for 5 minutes, then shape into 8 thick discs.",
+      "Cook the arepas in {oil} in a skillet for 5 minutes per side until a crust forms, then finish in a 180 °C oven for 10 minutes.",
+      "Warm the drained {black-beans} in a small pan and mash lightly.",
+      "Split the arepas and fill with the beans, crumbled {queso-fresco} and sliced {avocado}."
+    ]
+  },
+  {
+    "id": "venezuelan-hallacas-inspired-rice-parcels",
+    "name": "Venezuelan hallaca-inspired chicken and corn parcels",
+    "meal": "big",
+    "cuisine": "Venezuelan",
+    "time": 90,
     "serves": 4,
     "ing": [
       [
         "chicken-thigh",
-        450
+        400
       ],
       [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "venezuelan-pabellon-inspired-beef-and-beans",
-    "name": "Venezuelan Pabellón-Inspired Beef and Beans",
-    "meal": "big",
-    "cuisine": "Venezuelan",
-    "time": 130,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        500
-      ],
-      [
-        "black-beans",
-        480
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "plantain",
-        "2pc"
+        "oil",
+        40
       ],
       [
         "onion",
@@ -472,153 +470,47 @@ KITCHEN.add(
         "1pc"
       ],
       [
-        "garlic",
-        "3pc"
-      ],
-      [
-        "tomato",
-        "2pc"
+        "tomato-paste",
+        20
       ],
       [
         "cumin",
         2
       ],
       [
-        "oil",
-        60
+        "paprika",
+        3
+      ],
+      [
+        "capers",
+        15
+      ],
+      [
+        "green-olives",
+        50
+      ],
+      [
+        "raisins",
+        30
+      ],
+      [
+        "cornmeal",
+        250
+      ],
+      [
+        "water",
+        400
       ],
       [
         "salt",
         4
-      ],
-      [
-        "black-pepper",
-        1
       ]
     ],
     "steps": [
-      "Simmer {beef-chuck} in water with half of the {salt} for 1 hour 15 minutes until tender; shred finely.",
-      "Chop {onion}, {red-pepper} and {tomato}; crush {garlic}. Cook them in 20 g of the {oil} for 8 minutes, add {cumin}, {black-pepper} and the shredded beef, and simmer 15 minutes with a splash of broth.",
-      "Cook {rice} in 500 ml water with a pinch of salt, covered, on low heat for 15 minutes.",
-      "Simmer {black-beans} (drained) in 100 ml water for 10 minutes, mashing some, with a pinch of salt.",
-      "Slice the very ripe {plantain} and fry in the remaining oil for 2–3 minutes per side until caramelised.",
-      "Serve beef, rice, beans and plantain together on each plate."
-    ]
-  },
-  {
-    "id": "venezuelan-cachapas-corn-pancakes",
-    "name": "Venezuelan Cachapas Corn Pancakes",
-    "meal": "big",
-    "cuisine": "Venezuelan",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "sweetcorn",
-        400
-      ],
-      [
-        "cornmeal",
-        60
-      ],
-      [
-        "sugar",
-        20
-      ],
-      [
-        "salt",
-        2
-      ],
-      [
-        "butter",
-        30
-      ],
-      [
-        "mozzarella",
-        200
-      ]
-    ],
-    "steps": [
-      "Blend {sweetcorn} with {sugar} and {salt} into a thick, slightly coarse batter, then stir in {cornmeal} and rest for 10 minutes.",
-      "Melt a little {butter} in a frying pan over medium heat and pour in a quarter of the batter, spreading to 12 cm. Cook 3 minutes until the edges set, then flip and cook 2 minutes.",
-      "Repeat for four cachapas, adding butter as needed.",
-      "Fill each with {mozzarella}, fold over and serve hot while the cheese melts."
-    ]
-  },
-  {
-    "id": "venezuelan-reina-pepiada-chicken-salad",
-    "name": "Venezuelan Reina Pepiada Chicken Salad",
-    "meal": "big",
-    "cuisine": "Venezuelan",
-    "time": 51,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "venezuelan-hallacas-inspired-rice-parcels",
-    "name": "Venezuelan Hallacas-Inspired Rice Parcels",
-    "meal": "big",
-    "cuisine": "Venezuelan",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Dice the {chicken-thigh}. Fry in half the {oil} for 5 minutes, add diced {onion} and {red-pepper} and cook for 5 minutes. Stir in {tomato-paste}, {cumin} and {paprika}, then add {capers}, chopped {green-olives} and {raisins} and cook for 5 minutes. Cool.",
+      "Mix {cornmeal} with {water}, the remaining {oil} and {salt} into a soft, smooth dough.",
+      "Flatten a portion of dough on a sheet of baking parchment, spoon filling in the centre, fold the dough over and wrap the parcel tightly in parchment and then foil.",
+      "Steam or simmer the parcels in a covered pot with a little water for 45 minutes. Unwrap to serve."
     ]
   },
   {
@@ -735,45 +627,6 @@ KITCHEN.add(
       "Cook the onion and pepper in {oil} for 6 minutes, add garlic and {cumin}.",
       "Add {black-beans} (drained), {vegetable-stock}, {sugar} and {salt} and simmer for 20 minutes. Blend about half until smooth and stir back in.",
       "Ladle into bowls and top with crumbled {cheese} and chopped {cilantro}."
-    ]
-  },
-  {
-    "id": "venezuelan-black-bean-and-rice-bowl",
-    "name": "Venezuelan Black Bean and Rice Bowl",
-    "meal": "big",
-    "cuisine": "Venezuelan",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ]
-    ],
-    "steps": [
-      "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
     ]
   },
   {
@@ -908,45 +761,50 @@ KITCHEN.add(
   },
   {
     "id": "venezuelan-corn-and-cheese-bake",
-    "name": "Venezuelan Corn and Cheese Bake",
+    "name": "Venezuelan corn and cheese bake (pudín de maíz)",
     "meal": "big",
     "cuisine": "Venezuelan",
-    "time": 38,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "black-beans",
-        250
+        "sweetcorn",
+        400
       ],
       [
-        "rice",
-        250
+        "cornmeal",
+        60
       ],
       [
-        "tomato",
-        250
+        "eggs",
+        "3pc"
       ],
       [
-        "plantain",
+        "milk",
+        200
+      ],
+      [
+        "butter",
+        40
+      ],
+      [
+        "queso-fresco",
+        120
+      ],
+      [
+        "sugar",
+        30
+      ],
+      [
+        "salt",
         2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
       ]
     ],
     "steps": [
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {black-beans} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Heat the oven to 180 °C and grease a baking dish with a little of the {butter}.",
+      "Blend the {sweetcorn} with {eggs}, {milk}, {cornmeal}, {sugar}, {salt} and the remaining melted {butter} until nearly smooth.",
+      "Stir in most of the crumbled {queso-fresco} and pour into the dish. Top with the rest of the cheese.",
+      "Bake for 35–40 minutes until set and golden. Cool for 10 minutes before serving."
     ]
   }
 ]

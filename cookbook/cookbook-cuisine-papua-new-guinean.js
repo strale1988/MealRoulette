@@ -27,7 +27,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ]
     ],
     "steps": [
@@ -39,7 +39,7 @@ KITCHEN.add(
   {
     "id": "png-sago-pudding",
     "name": "Sago coconut pudding",
-    "meal": "dessert",
+    "meal": "treat",
     "cuisine": "Papua New Guinean",
     "time": 35,
     "serves": 4,
@@ -70,7 +70,7 @@ KITCHEN.add(
   {
     "id": "png-aibika-greens",
     "name": "Aibika-style greens in coconut milk",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Papua New Guinean",
     "time": 25,
     "serves": 4,
@@ -85,11 +85,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ]
     ],
     "steps": [
@@ -124,7 +124,7 @@ KITCHEN.add(
       ],
       [
         "spring-onion",
-        3
+        "3pc"
       ]
     ],
     "steps": [
@@ -135,684 +135,416 @@ KITCHEN.add(
   },
   {
     "id": "papua-new-guinean-coconut-chicken",
-    "name": "Papua New Guinean Coconut Chicken",
-    "meal": "big",
-    "cuisine": "Papua New Guinean",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {white-fish} and {sweet-potato}; stir well so the ingredients are evenly coated.",
-      "Add the {coconut-milk} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "mumu-inspired-root-vegetable-bake",
-    "name": "Mumu-Inspired Root Vegetable Bake",
-    "meal": "big",
-    "cuisine": "Papua New Guinean",
-    "time": 37,
-    "serves": 4,
-    "ing": [
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Add the {sweet-potato} and {sweet-potato}; stir well so the ingredients are evenly coated.",
-      "Add the {lime} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
-    ]
-  },
-  {
-    "id": "sago-style-coconut-pudding",
-    "name": "Sago-Style Coconut Pudding",
-    "meal": "big",
-    "cuisine": "Papua New Guinean",
-    "time": 44,
-    "serves": 4,
-    "ing": [
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {onion} until fragrant.",
-      "Add the {lime} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {coconut-milk} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
-    ]
-  },
-  {
-    "id": "papua-new-guinean-fish-and-greens",
-    "name": "Papua New Guinean Fish and Greens",
-    "meal": "big",
-    "cuisine": "Papua New Guinean",
-    "time": 51,
-    "serves": 4,
-    "ing": [
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ]
-    ],
-    "steps": [
-      "Add the {coconut-milk} and {sweet-potato}; stir well so the ingredients are evenly coated.",
-      "Add the {coconut-milk} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "banana-and-sweet-potato-mash",
-    "name": "Banana and Sweet Potato Mash",
-    "meal": "big",
-    "cuisine": "Papua New Guinean",
-    "time": 58,
-    "serves": 4,
-    "ing": [
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "white-fish",
-        450
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {lime} until fragrant.",
-      "Add the {spinach} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {onion} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
-    ]
-  },
-  {
-    "id": "coconut-pumpkin-soup",
-    "name": "Coconut Pumpkin Soup",
-    "meal": "big",
-    "cuisine": "Papua New Guinean",
-    "time": 65,
-    "serves": 4,
-    "ing": [
-      [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {coconut-milk} until fragrant.",
-      "Add the {white-fish} and {sweet-potato}; stir well so the ingredients are evenly coated.",
-      "Add the {coconut-milk} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "papua-new-guinean-chicken-rice",
-    "name": "Papua New Guinean Chicken Rice",
-    "meal": "big",
-    "cuisine": "Papua New Guinean",
-    "time": 36,
-    "serves": 4,
-    "ing": [
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Add the {sweet-potato} and {sweet-potato}; stir well so the ingredients are evenly coated.",
-      "Add the {lime} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "taro-style-greens-and-beans",
-    "name": "Taro-Style Greens and Beans",
-    "meal": "big",
-    "cuisine": "Papua New Guinean",
-    "time": 43,
-    "serves": 4,
-    "ing": [
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {onion} until fragrant.",
-      "Add the {lime} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {coconut-milk} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
-    ]
-  },
-  {
-    "id": "papua-new-guinean-coconut-fish-and-rice",
-    "name": "Papua New Guinean Coconut Fish and Rice",
-    "meal": "big",
-    "cuisine": "Papua New Guinean",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {white-fish} and {sweet-potato}; stir to combine.",
-      "Add the {coconut-milk} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "papua-new-guinean-roasted-sweet-potato-with-lime",
-    "name": "Papua New Guinean Roasted Sweet Potato with Lime",
-    "meal": "big",
-    "cuisine": "Papua New Guinean",
-    "time": 32,
-    "serves": 4,
-    "ing": [
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "white-fish",
-        450
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {spinach} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "papua-new-guinean-banana-coconut-pudding",
-    "name": "Papua New Guinean Banana Coconut Pudding",
-    "meal": "big",
-    "cuisine": "Papua New Guinean",
-    "time": 39,
-    "serves": 4,
-    "ing": [
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {coconut-milk} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "papua-new-guinean-ginger-chicken-parcels",
-    "name": "Papua New Guinean Ginger Chicken Parcels",
-    "meal": "big",
-    "cuisine": "Papua New Guinean",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {white-fish} and {sweet-potato}; stir to combine.",
-      "Add the {coconut-milk} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "papua-new-guinean-taro-style-greens-with-coconut",
-    "name": "Papua New Guinean Taro-Style Greens with Coconut",
-    "meal": "big",
-    "cuisine": "Papua New Guinean",
-    "time": 53,
-    "serves": 4,
-    "ing": [
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "white-fish",
-        450
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {spinach} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "papua-new-guinean-pineapple-rice-bowl",
-    "name": "Papua New Guinean Pineapple Rice Bowl",
+    "name": "Papua New Guinean coconut chicken with sweet potato",
     "meal": "big",
     "cuisine": "Papua New Guinean",
     "time": 60,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
+        "chicken-thigh",
+        700
       ],
       [
         "salt",
         3
       ],
       [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {coconut-milk} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "papua-new-guinean-coconut-pumpkin-soup",
-    "name": "Papua New Guinean Coconut Pumpkin Soup",
-    "meal": "big",
-    "cuisine": "Papua New Guinean",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {white-fish} and {sweet-potato}; stir to combine.",
-      "Add the {coconut-milk} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "papua-new-guinean-lime-fish-with-herbs",
-    "name": "Papua New Guinean Lime Fish with Herbs",
-    "meal": "big",
-    "cuisine": "Papua New Guinean",
-    "time": 38,
-    "serves": 4,
-    "ing": [
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
         "oil",
+        20
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "ginger",
         15
+      ],
+      [
+        "coconut-milk",
+        400
+      ],
+      [
+        "sweet-potato",
+        500
+      ],
+      [
+        "spinach",
+        150
+      ],
+      [
+        "lime",
+        "1pc"
+      ]
+    ],
+    "steps": [
+      "Season the {chicken-thigh} with {salt} and brown in {oil} in a large pot for 4 minutes per side. Remove.",
+      "Cook diced {onion} in the same pot for 5 minutes, then add {garlic} and {ginger} for 1 minute.",
+      "Return the chicken and add {coconut-milk} and cubed {sweet-potato}. Cover and simmer for 30 minutes until the chicken is cooked through.",
+      "Stir in the {spinach} for 3 minutes and finish with the juice of the {lime}."
+    ]
+  },
+  {
+    "id": "mumu-inspired-root-vegetable-bake",
+    "name": "Mumu-inspired root vegetable and greens bake",
+    "meal": "big",
+    "cuisine": "Papua New Guinean",
+    "time": 70,
+    "serves": 4,
+    "ing": [
+      [
+        "sweet-potato",
+        500
+      ],
+      [
+        "taro",
+        300
+      ],
+      [
+        "pumpkin",
+        300
+      ],
+      [
+        "onion",
+        "1pc"
       ],
       [
         "salt",
         3
       ],
       [
-        "white-fish",
-        450
+        "spinach",
+        150
+      ],
+      [
+        "coconut-milk",
+        300
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {spinach} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 190 °C. Peel and slice the {sweet-potato}, {taro} and {pumpkin} into 1 cm slices and slice the {onion}.",
+      "Layer the vegetables in a deep baking dish, sprinkling each layer with {salt} and finishing with the {spinach} leaves.",
+      "Pour over the {coconut-milk}, cover tightly with foil and bake for 50 minutes until everything is tender, like a mumu earth oven."
+    ]
+  },
+  {
+    "id": "papua-new-guinean-fish-and-greens",
+    "name": "Papua New Guinean fish and greens in coconut milk",
+    "meal": "big",
+    "cuisine": "Papua New Guinean",
+    "time": 40,
+    "serves": 4,
+    "ing": [
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "ginger",
+        15
+      ],
+      [
+        "coconut-milk",
+        300
+      ],
+      [
+        "white-fish",
+        600
+      ],
+      [
+        "spinach",
+        300
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "rice",
+        280
+      ]
+    ],
+    "steps": [
+      "Cook the {rice} according to the packet.",
+      "Slice the {onion} and simmer with grated {ginger}, {coconut-milk} and {salt} in a wide pan for 8 minutes.",
+      "Add the {white-fish} in large pieces, cover and cook gently for 5 minutes. Add the {spinach} and cook for 3 minutes until wilted.",
+      "Finish with the juice of the {lime} and serve over the rice."
+    ]
+  },
+  {
+    "id": "banana-and-sweet-potato-mash",
+    "name": "Banana and sweet potato mash with coconut",
+    "meal": "bite",
+    "cuisine": "Papua New Guinean",
+    "time": 35,
+    "serves": 4,
+    "ing": [
+      [
+        "sweet-potato",
+        600
+      ],
+      [
+        "banana",
+        "2pc"
+      ],
+      [
+        "coconut-milk",
+        100
+      ],
+      [
+        "salt",
+        2
+      ]
+    ],
+    "steps": [
+      "Peel and cube the {sweet-potato}. Peel the {banana} and cut into chunks.",
+      "Boil the sweet potato and banana together in lightly salted water for 18 minutes until very tender, then drain.",
+      "Mash with the {coconut-milk} and {salt} until smooth and creamy."
+    ]
+  },
+  {
+    "id": "coconut-pumpkin-soup",
+    "name": "Coconut pumpkin soup with chilli and lime",
+    "meal": "big",
+    "cuisine": "Papua New Guinean",
+    "time": 45,
+    "serves": 4,
+    "ing": [
+      [
+        "oil",
+        15
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "ginger",
+        10
+      ],
+      [
+        "fresh-chilli",
+        "1pc"
+      ],
+      [
+        "pumpkin",
+        800
+      ],
+      [
+        "vegetable-stock",
+        600
+      ],
+      [
+        "coconut-milk",
+        400
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "salt",
+        2
+      ]
+    ],
+    "steps": [
+      "Heat {oil} in a large pot and soften chopped {onion} for 5 minutes. Add {garlic}, {ginger} and the chopped {fresh-chilli} and cook for 1 minute.",
+      "Add cubed {pumpkin} and {vegetable-stock}, bring to the boil and simmer for 20 minutes until very soft.",
+      "Blend until smooth, stir in the {coconut-milk} and {salt} and warm through. Finish with the juice of the {lime}."
+    ]
+  },
+  {
+    "id": "papua-new-guinean-chicken-rice",
+    "name": "Papua New Guinean chicken and curry rice",
+    "meal": "big",
+    "cuisine": "Papua New Guinean",
+    "time": 50,
+    "serves": 4,
+    "ing": [
+      [
+        "oil",
+        20
+      ],
+      [
+        "chicken-thigh",
+        600
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "ginger",
+        10
+      ],
+      [
+        "curry-powder",
+        6
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "rice",
+        300
+      ],
+      [
+        "chicken-stock",
+        600
+      ],
+      [
+        "salt",
+        2
+      ]
+    ],
+    "steps": [
+      "Heat {oil} in a wide lidded pan and brown the cubed {chicken-thigh} for 5 minutes. Add diced {onion}, {garlic}, {ginger} and {curry-powder} and cook for 3 minutes.",
+      "Add the diced {carrot}, {rice}, {chicken-stock} and {salt}. Bring to the boil, cover and cook on the lowest heat for 15 minutes.",
+      "Rest for 5 minutes off the heat and fluff with a fork."
+    ]
+  },
+  {
+    "id": "papua-new-guinean-roasted-sweet-potato-with-lime",
+    "name": "Papua New Guinean roasted sweet potato with lime and spring onion",
+    "meal": "bite",
+    "cuisine": "Papua New Guinean",
+    "time": 45,
+    "serves": 4,
+    "ing": [
+      [
+        "sweet-potato",
+        800
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "lime",
+        "2pc"
+      ],
+      [
+        "spring-onion",
+        "2pc"
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 220 °C. Cut the {sweet-potato} into thick wedges, toss with {oil} and {salt} and spread on a tray.",
+      "Roast for 35 minutes, turning once, until soft inside and browned at the edges.",
+      "Squeeze over the juice of the {lime} and scatter with sliced {spring-onion}."
+    ]
+  },
+  {
+    "id": "papua-new-guinean-banana-coconut-pudding",
+    "name": "Papua New Guinean banana and coconut pudding",
+    "meal": "treat",
+    "cuisine": "Papua New Guinean",
+    "time": 55,
+    "serves": 4,
+    "ing": [
+      [
+        "butter",
+        15
+      ],
+      [
+        "banana",
+        "4pc"
+      ],
+      [
+        "flour",
+        80
+      ],
+      [
+        "sugar",
+        40
+      ],
+      [
+        "cinnamon",
+        2
+      ],
+      [
+        "salt",
+        1
+      ],
+      [
+        "coconut-milk",
+        300
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 180 °C and grease a baking dish with the {butter}.",
+      "Mash 3 of the {banana} and mix with {flour}, {sugar}, {cinnamon} and {salt}.",
+      "Stir in the {coconut-milk} to a thick batter, pour into the dish and top with the remaining banana, sliced.",
+      "Bake for 35 minutes until golden and set. Serve warm."
+    ]
+  },
+  {
+    "id": "papua-new-guinean-pineapple-rice-bowl",
+    "name": "Papua New Guinean pineapple coconut rice bowl",
+    "meal": "big",
+    "cuisine": "Papua New Guinean",
+    "time": 35,
+    "serves": 4,
+    "ing": [
+      [
+        "rice",
+        300
+      ],
+      [
+        "coconut-milk",
+        250
+      ],
+      [
+        "water",
+        250
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "pineapple",
+        250
+      ],
+      [
+        "peanuts",
+        40
+      ],
+      [
+        "spring-onion",
+        "3pc"
+      ],
+      [
+        "lime",
+        "1pc"
+      ]
+    ],
+    "steps": [
+      "Rinse the {rice}. Cook with {coconut-milk}, {water} and {salt}: bring to the boil, cover and cook on low heat for 15 minutes, then rest for 5 minutes.",
+      "Toast the {peanuts} in a dry pan for 3 minutes and chop. Cut the {pineapple} into small chunks.",
+      "Fold the pineapple through the rice and serve topped with the peanuts, sliced {spring-onion} and wedges of {lime}."
     ]
   }
 ]

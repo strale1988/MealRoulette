@@ -2,137 +2,6 @@
 KITCHEN.add(
 [
   {
-    "id": "world-peruvian-lomo-saltado",
-    "leftoverSwaps": [
-      "rice"
-    ],
-    "name": "Peruvian lomo saltado-inspired beef stir-fry",
-    "meal": "big",
-    "cuisine": "Peruvian",
-    "time": 30,
-    "serves": 2,
-    "ing": [
-      [
-        "beef-strips",
-        300
-      ],
-      [
-        "potatoes",
-        300
-      ],
-      [
-        "red-onion",
-        120
-      ],
-      [
-        "tomato",
-        220
-      ],
-      [
-        "soy-sauce",
-        25
-      ],
-      [
-        "vinegar",
-        15
-      ],
-      [
-        "garlic",
-        8
-      ],
-      [
-        "cumin",
-        2
-      ],
-      [
-        "oil",
-        25
-      ],
-      [
-        "coriander",
-        8
-      ],
-      [
-        "rice",
-        130
-      ]
-    ],
-    "steps": [
-      "Cook {rice}. Cut {potatoes} into thick fries, toss with a little {oil} and roast at 220°C until crisp, 25–30 minutes.",
-      "Toss {beef-strips} with {soy-sauce}, {vinegar}, {garlic} and {cumin}.",
-      "Sear the beef over very high heat, then add wedges of {red-onion} and {tomato}; stir-fry briefly so they soften but keep their shape.",
-      "Fold in the crisp potatoes, finish with {coriander} and serve immediately with rice."
-    ]
-  },
-  {
-    "id": "world-peruvian-ajidegallina",
-    "name": "Ají de gallina-style creamy chicken",
-    "meal": "big",
-    "cuisine": "Peruvian",
-    "time": 40,
-    "serves": 2,
-    "ing": [
-      [
-        "chicken-breast",
-        350
-      ],
-      [
-        "bread",
-        70
-      ],
-      [
-        "milk",
-        220
-      ],
-      [
-        "walnuts",
-        25
-      ],
-      [
-        "parmesan",
-        25
-      ],
-      [
-        "onion",
-        100
-      ],
-      [
-        "garlic",
-        8
-      ],
-      [
-        "chilli-powder",
-        2
-      ],
-      [
-        "turmeric",
-        2
-      ],
-      [
-        "rice",
-        140
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "oil",
-        12
-      ],
-      [
-        "salt",
-        4
-      ]
-    ],
-    "steps": [
-      "Poach {chicken-breast} in water until cooked; shred the meat and reserve some cooking liquid.",
-      "Soak {bread} in {milk}, then blend with {walnuts} and {parmesan} until smooth.",
-      "Cook {onion} and {garlic} in {oil}; add {chilli-powder} and {turmeric}. Stir in the bread mixture and enough reserved liquid to make a thick sauce.",
-      "Fold in shredded chicken and simmer 8 minutes; season with {salt}. Serve with {rice} and halved hard-boiled {eggs}."
-    ]
-  },
-  {
     "id": "world-chimichurri-steak",
     "name": "Steak with chimichurri",
     "meal": "big",
@@ -429,49 +298,6 @@ KITCHEN.add(
       "Blend {spinach}, {coriander} and a splash of water into a green puree.",
       "Brown {chicken-thigh} in a pot and set aside. Cook diced {onion} until soft, then add {garlic}.",
       "Stir in {rice}, green puree and {chicken-stock}. Nestle chicken back in, cover and simmer until rice is tender and chicken is cooked through. Fold in {peas} and finish with {lime} juice."
-    ]
-  },
-  {
-    "id": "peruvian-causa-tuna-potato",
-    "name": "Peruvian-inspired tuna and potato causa",
-    "meal": "big",
-    "cuisine": "Peruvian",
-    "time": 35,
-    "serves": 2,
-    "ing": [
-      [
-        "potatoes",
-        500
-      ],
-      [
-        "tuna",
-        160
-      ],
-      [
-        "mayonnaise",
-        30
-      ],
-      [
-        "lime",
-        "1pc"
-      ],
-      [
-        "avocado",
-        "1pc"
-      ],
-      [
-        "red-onion",
-        "0.5pc"
-      ],
-      [
-        "fresh-chilli",
-        "10"
-      ]
-    ],
-    "steps": [
-      "Boil {potatoes} until tender, drain and mash until smooth. Let cool, then season with {lime} juice, salt and a little oil.",
-      "Mix drained {tuna} with {mayonnaise} and finely diced {red-onion}. Slice {avocado}.",
-      "Layer half the seasoned potato into a small dish, add {tuna} and avocado, then top with remaining potato. Chill briefly before slicing."
     ]
   },
   {
@@ -965,114 +791,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-peruvian-aji-gallina",
-    "name": "Peruvian ají de gallina chicken in walnut sauce",
-    "meal": "big",
-    "cuisine": "Peruvian",
-    "time": 50,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-breast",
-        600
-      ],
-      [
-        "bread",
-        100
-      ],
-      [
-        "evaporated-milk",
-        300
-      ],
-      [
-        "walnuts",
-        70
-      ],
-      [
-        "aji-amarillo-paste",
-        45
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "garlic",
-        2
-      ],
-      [
-        "parmesan",
-        40
-      ],
-      [
-        "chicken-stock",
-        350
-      ],
-      [
-        "salt",
-        4
-      ]
-    ],
-    "steps": [
-      "Poach the {chicken-breast} in simmering {chicken-stock} until cooked through; reserve the liquid and shred the chicken.",
-      "Soak the {bread} in {evaporated-milk}, then blend with the {walnuts} until smooth.",
-      "Cook the chopped {onion} and {garlic} until soft. Stir in the {aji-amarillo-paste}, then add the bread mixture and 250 ml reserved stock.",
-      "Simmer gently until creamy, fold in the chicken and {parmesan}, and season with {salt}. Serve with rice and boiled potatoes if desired."
-    ]
-  },
-  {
-    "id": "world-peruvian-causa",
-    "name": "Peruvian causa potato and avocado stacks",
-    "meal": "big",
-    "cuisine": "Peruvian",
-    "time": 45,
-    "serves": 4,
-    "ing": [
-      [
-        "potatoes",
-        800
-      ],
-      [
-        "lime",
-        2
-      ],
-      [
-        "aji-amarillo-paste",
-        25
-      ],
-      [
-        "olive-oil",
-        25
-      ],
-      [
-        "avocado",
-        2
-      ],
-      [
-        "tuna",
-        200
-      ],
-      [
-        "mayonnaise",
-        45
-      ],
-      [
-        "red-onion",
-        0.5
-      ],
-      [
-        "salt",
-        5
-      ]
-    ],
-    "steps": [
-      "Boil the {potatoes} until tender, drain and rice or mash while hot until smooth.",
-      "Mix the warm potato with juice from the {lime}, {aji-amarillo-paste}, {olive-oil} and {salt}; cool until easy to handle.",
-      "Mix the {tuna} with {mayonnaise} and finely diced {red-onion}. Slice the {avocado}.",
-      "Layer seasoned potato, avocado and {tuna} in a small ring mould or shape into compact stacks. Chill 20 minutes and unmould carefully."
-    ]
-  },
-  {
     "id": "peruvian-aji-de-gallina",
     "name": "Ají de gallina creamy yellow chilli chicken",
     "cuisine": "Peruvian",
@@ -1149,11 +867,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "aji-amarillo-paste",
@@ -1173,7 +891,7 @@ KITCHEN.add(
       ],
       [
         "carrot",
-        1
+        "1pc"
       ],
       [
         "cumin",
@@ -1212,11 +930,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "tomato-paste",
@@ -1249,14 +967,14 @@ KITCHEN.add(
     ],
     "steps": [
       "Cook the {rice} until fluffy. Brown {beef-mince} with diced {onion} and {garlic}; stir in {tomato-paste}, {cumin}, chopped {black-olives} and {raisins}.",
-      "Season the filling with {salt} and simmer until moist but not wet. Fry the {eggs} to your preference.",
+      "Season the filling with {salt} and simmer until moist but not wet. Fry the {eggs} in {oil}.",
       "Press half the rice into a small bowl, spoon in the beef filling, cover with remaining rice and invert onto a plate. Top with fried egg."
     ]
   },
   {
     "id": "peruvian-solterito-quinoa-salad",
     "name": "Solterito-inspired quinoa, broad bean and cheese salad",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Peruvian",
     "time": 30,
     "serves": 2,
@@ -1279,7 +997,7 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        1
+        "1pc"
       ],
       [
         "red-onion",
@@ -1330,11 +1048,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "black-olives",
@@ -1393,7 +1111,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "cumin",
@@ -1440,7 +1158,7 @@ KITCHEN.add(
     "ing": [
       [
         "red-pepper",
-        3
+        "3pc"
       ],
       [
         "beef-mince",
@@ -1448,11 +1166,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "tomato-paste",
@@ -1507,7 +1225,7 @@ KITCHEN.add(
       ],
       [
         "bread-rolls",
-        2
+        "2pc"
       ],
       [
         "red-onion",
@@ -1523,7 +1241,7 @@ KITCHEN.add(
       ],
       [
         "fresh-chilli",
-        1
+        "1pc"
       ],
       [
         "mayonnaise",
@@ -1566,11 +1284,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "aji-amarillo-paste",
@@ -1578,7 +1296,7 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        1
+        "1pc"
       ],
       [
         "potatoes",
@@ -1699,131 +1417,6 @@ KITCHEN.add(
       "Simmer {condensed-milk} and {evaporated-milk} over low heat, stirring until thick and pale caramel in colour, 20–25 minutes.",
       "Remove from heat, whisk a little hot milk mixture into {egg-yolks}, then return to the pan and cook gently for 2 minutes. Stir in {vanilla} and divide among glasses.",
       "Beat the whites of the {eggs} with {sugar} to glossy peaks. Spoon over the cooled cream and dust with {cinnamon}."
-    ]
-  },
-  {
-    "id": "pe-causa-limena",
-    "name": "Causa limeña (Peruvian layered lime potato and tuna salad)",
-    "meal": "light",
-    "cuisine": "Peruvian",
-    "time": 40,
-    "serves": 2,
-    "ing": [
-      [
-        "potatoes",
-        350
-      ],
-      [
-        "tuna",
-        250
-      ],
-      [
-        "mayonnaise",
-        100
-      ],
-      [
-        "lime-juice",
-        20
-      ],
-      [
-        "aji-amarillo-paste",
-        120
-      ],
-      [
-        "avocado",
-        1
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "oil",
-        15
-      ]
-    ],
-    "steps": [
-      "Prepare and measure all ingredients, then heat the pan or pot over medium heat.",
-      "Cook {potatoes} with the seasonings until the dish reaches its intended texture and the flavours meld.",
-      "Mash cooled potatoes with lime and aji amarillo until smooth, layer with {tuna} mayonnaise and avocado, then press into a mould and chill before slicing.",
-      "Finish with a little {lime-juice} if needed, taste for seasoning and serve while the texture is at its best."
-    ]
-  },
-  {
-    "id": "pe-aji-de-gallina",
-    "name": "Ají de gallina (Peruvian chicken in yellow chilli-nut sauce)",
-    "meal": "big",
-    "cuisine": "Peruvian",
-    "time": 60,
-    "serves": 2,
-    "ing": [
-      [
-        "chicken-thigh",
-        400
-      ],
-      [
-        "aji-amarillo-paste",
-        60
-      ],
-      [
-        "bread",
-        "4pc"
-      ],
-      [
-        "milk",
-        250
-      ],
-      [
-        "walnuts",
-        40
-      ],
-      [
-        "parmesan",
-        30
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "garlic",
-        "3pc"
-      ],
-      [
-        "chicken-stock",
-        450
-      ],
-      [
-        "rice",
-        180
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "oil",
-        15
-      ]
-    ],
-    "steps": [
-      "Simmer {chicken-thigh} in {chicken-stock} for 25 minutes until cooked through. Lift out and shred, keeping the stock.",
-      "Tear {bread} into pieces and soak in {milk}. Blend with {walnuts}, {parmesan} and 100 ml of the warm stock until smooth.",
-      "Cook chopped {onion} in {oil} for 6 minutes, add crushed {garlic} and {aji-amarillo-paste} for 3 minutes.",
-      "Stir in the blended sauce, {salt} and {black-pepper} and simmer for 10 minutes, adding stock if too thick. Fold in the chicken.",
-      "Cook {rice} in 360 ml water, covered, on low heat for 15 minutes and serve the chicken sauce over it."
     ]
   },
   {

@@ -53,13 +53,13 @@ KITCHEN.add(
     "steps": [
       "Cook {pork-mince} with diced {onion}, {oregano} and {salt} until browned. Mash {beans} and mix with grated {mozzarella}.",
       "Mix {cornmeal} with warm water and salt to make soft dough. Flatten a ball, add pork and the mashed {beans} and cheese filling, seal and pat into a thick disc.",
-      "Cook on a lightly oiled hot griddle for 4–5 minutes per side until browned and cooked through. Serve with finely shredded {cabbage} tossed with {vinegar} and salt."
+      "Cook on a hot griddle brushed with {oil} for 4–5 minutes per side until browned and cooked through. Serve with finely shredded {cabbage} tossed with {vinegar} and salt."
     ]
   },
   {
     "id": "sv-yuca-frita-inspired-root-fries",
     "name": "Salvadoran-style crisp sweet-potato fries with curtido",
-    "meal": "side",
+    "meal": "bite",
     "cuisine": "Salvadoran",
     "time": 35,
     "serves": 2,
@@ -165,7 +165,7 @@ KITCHEN.add(
   {
     "id": "sv-casamiento-rice-beans",
     "name": "Casamiento (Salvadoran rice and beans cooked together)",
-    "meal": "side",
+    "meal": "big",
     "cuisine": "Salvadoran",
     "time": 25,
     "serves": 2,
@@ -301,40 +301,54 @@ KITCHEN.add(
   },
   {
     "id": "salvadoran-pupusas-with-beans-and-cheese",
-    "name": "Salvadoran Pupusas with Beans and Cheese",
+    "name": "Salvadoran Pupusas de Frijol con Queso (bean and cheese pupusas)",
     "meal": "big",
     "cuisine": "Salvadoran",
-    "time": 30,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "masa-harina",
+        300
       ],
       [
         "black-beans",
-        250
+        300
       ],
       [
-        "rice",
-        250
+        "mozzarella",
+        200
       ],
       [
-        "tomato",
-        250
+        "cabbage",
+        300
       ],
       [
-        "plantain",
+        "carrot",
+        "1pc"
+      ],
+      [
+        "vinegar",
+        60
+      ],
+      [
+        "oregano",
         2
       ],
       [
-        "red-pepper",
-        1
+        "oil",
+        20
+      ],
+      [
+        "salt",
+        5
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Make the curtido: shred {cabbage} finely, grate {carrot} and toss with {vinegar}, {oregano} and half of the {salt}. Leave to pickle while you make the pupusas.",
+      "Mash the {black-beans} into a thick paste and mix with grated {mozzarella}. Mix {masa-harina} with 450 ml warm water and the remaining {salt} into a soft dough and rest for 10 minutes.",
+      "Divide the dough into 8 balls. Flatten each in your palm, add a spoonful of filling, close the dough over it and pat into a 1 cm thick disc.",
+      "Cook on a hot griddle brushed with {oil} for 4–5 minutes per side until speckled brown and the cheese is oozing. Serve with the curtido."
     ]
   },
   {
@@ -471,41 +485,55 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "salvadoran-casamiento-rice-and-beans",
-    "name": "Salvadoran Casamiento Rice and Beans",
-    "meal": "big",
+    "id": "salvadoran-casamiento-breakfast-plate",
+    "name": "Salvadoran Casamiento Breakfast Plate with Eggs and Cheese",
+    "meal": "morning",
     "cuisine": "Salvadoran",
-    "time": 51,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "rice",
+        200
       ],
       [
         "black-beans",
         250
       ],
       [
-        "rice",
-        250
+        "eggs",
+        "4pc"
       ],
       [
-        "tomato",
-        250
+        "queso-fresco",
+        120
       ],
       [
-        "plantain",
-        2
+        "onion",
+        "1pc"
       ],
       [
-        "red-pepper",
-        1
+        "garlic",
+        "2pc"
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "cilantro",
+        10
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Rinse {rice} and cook with 400 ml water and half of the {salt}, covered, over low heat for 15 minutes. Rest for 5 minutes.",
+      "Fry diced {onion} and crushed {garlic} in half of the {oil} for 5 minutes until soft. Add {black-beans} with 3 tablespoons of their liquid and simmer for 5 minutes, crushing a few beans.",
+      "Fold the cooked rice into the beans and cook for 3 minutes, stirring, until moist and hot. Stir in chopped {cilantro}.",
+      "Fry {eggs} in the remaining {oil} for 2–3 minutes until the whites are set and season with the remaining salt. Serve the casamiento topped with the eggs and crumbled {queso-fresco}."
     ]
   },
   {
@@ -592,41 +620,47 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "salvadoran-corn-cakes",
-    "name": "Salvadoran Corn Cakes",
-    "meal": "big",
+    "id": "salvadoran-tamales-de-elote",
+    "name": "Salvadoran Tamales de Elote (sweet corn tamales)",
+    "meal": "bite",
     "cuisine": "Salvadoran",
-    "time": 25,
+    "time": 75,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "sweetcorn",
+        500
       ],
       [
-        "black-beans",
-        250
+        "masa-harina",
+        100
       ],
       [
-        "rice",
-        250
+        "butter",
+        50
       ],
       [
-        "tomato",
-        250
+        "sugar",
+        50
       ],
       [
-        "plantain",
+        "milk",
+        100
+      ],
+      [
+        "salt",
         2
       ],
       [
-        "red-pepper",
-        1
+        "sour-cream",
+        100
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Blend {sweetcorn} with {milk} and {sugar} to a thick, slightly coarse purée.",
+      "Beat in melted {butter}, {masa-harina} and {salt} to make a soft batter that holds its shape on a spoon. Rest for 10 minutes.",
+      "Spoon the batter onto 8 squares of baking parchment or foil, fold into tight parcels and steam over simmering water for 45 minutes until firm.",
+      "Rest for 10 minutes, unwrap and serve warm with {sour-cream}."
     ]
   },
   {
@@ -734,41 +768,70 @@ KITCHEN.add(
   },
   {
     "id": "salvadoran-black-bean-and-rice-bowl",
-    "name": "Salvadoran Black Bean and Rice Bowl",
+    "name": "Salvadoran Chicken, Rice and Black Bean Bowl with Curtido",
     "meal": "big",
     "cuisine": "Salvadoran",
-    "time": 46,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "salt",
-        3
+        "chicken-thigh",
+        500
       ],
       [
-        "chicken-thigh",
-        450
+        "rice",
+        240
       ],
       [
         "black-beans",
         250
       ],
       [
-        "rice",
-        250
+        "cabbage",
+        200
+      ],
+      [
+        "vinegar",
+        40
       ],
       [
         "tomato",
-        250
+        "2pc"
       ],
       [
-        "plantain",
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "cumin",
         2
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "oil",
+        25
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "cilantro",
+        10
       ]
     ],
     "steps": [
-      "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Mix {cumin}, {paprika} and half of the {salt} and rub over {chicken-thigh}. Shred {cabbage} and toss with {vinegar} for a quick curtido.",
+      "Sear the chicken in 15 g of the {oil} for 6 minutes per side until deep golden and cooked through. Rest, then slice.",
+      "Cook {rice} in 480 ml water with the remaining salt, covered, for 15 minutes. Meanwhile fry diced {onion} and crushed {garlic} in the remaining oil for 5 minutes, add chopped {tomato} for 5 minutes, then {black-beans} and simmer for 8 minutes.",
+      "Serve the rice topped with the beans, sliced chicken, curtido and chopped {cilantro}."
     ]
   },
   {
@@ -911,42 +974,51 @@ KITCHEN.add(
     "name": "Salvadoran Corn and Cheese Bake",
     "meal": "big",
     "cuisine": "Salvadoran",
-    "time": 38,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "black-beans",
-        250
+        "sweetcorn",
+        500
       ],
       [
-        "rice",
-        250
+        "eggs",
+        "3pc"
       ],
       [
-        "tomato",
-        250
+        "queso-fresco",
+        150
       ],
       [
-        "plantain",
-        2
+        "milk",
+        200
       ],
       [
-        "red-pepper",
-        1
+        "cornmeal",
+        60
       ],
       [
-        "cilantro",
-        10
+        "butter",
+        30
       ],
       [
-        "lime",
+        "onion",
+        "1pc"
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
         1
       ]
     ],
     "steps": [
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {black-beans} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Heat the oven to 180 °C and grease a 22 cm baking dish with a little of the {butter}.",
+      "Blend half of the {sweetcorn} with {milk}, {eggs}, {cornmeal}, {salt} and {black-pepper} until fairly smooth.",
+      "Soften diced {onion} in the remaining butter for 5 minutes and stir into the batter with the rest of the whole sweetcorn and crumbled {queso-fresco}.",
+      "Pour into the dish and bake for 40 minutes until set and golden. Rest for 10 minutes before cutting."
     ]
   }
 ]

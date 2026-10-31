@@ -316,66 +316,16 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "panamanian-sancocho-chicken-soup",
-    "name": "Panamanian Sancocho Chicken Soup",
+    "id": "panamanian-coconut-rice-and-beans",
+    "name": "Panamanian coconut rice and beans (arroz con coco y frijoles)",
     "meal": "big",
     "cuisine": "Panamanian",
-    "time": 30,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "panamanian-arroz-con-pollo",
-    "name": "Panamanian Arroz con Pollo",
-    "meal": "big",
-    "cuisine": "Panamanian",
-    "time": 60,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        600
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "peas",
-        100
-      ],
-      [
-        "red-pepper",
-        "1pc"
+        "oil",
+        15
       ],
       [
         "onion",
@@ -386,24 +336,24 @@ KITCHEN.add(
         "2pc"
       ],
       [
-        "beer",
-        150
-      ],
-      [
-        "chicken-stock",
-        350
-      ],
-      [
-        "cumin",
+        "thyme",
         2
       ],
       [
-        "cilantro",
-        15
+        "rice",
+        300
       ],
       [
-        "oil",
-        30
+        "coconut-milk",
+        300
+      ],
+      [
+        "water",
+        250
+      ],
+      [
+        "kidney-beans",
+        400
       ],
       [
         "salt",
@@ -411,93 +361,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Season {chicken-thigh} with {salt} and {cumin}. Dice {red-pepper} and {onion}; crush {garlic}.",
-      "Heat {oil} in a wide pan and brown the chicken for 5 minutes per side. Remove.",
-      "Cook the onion and pepper for 5 minutes, add garlic and stir in {rice} for 1 minute. Pour in {beer} and let it bubble for 2 minutes.",
-      "Add {chicken-stock}, nestle the chicken in, cover and cook on low heat for 20 minutes. Scatter {peas} on top and cook 5 minutes more.",
-      "Stir in chopped {cilantro}, rest 5 minutes and serve."
-    ]
-  },
-  {
-    "id": "panamanian-hojaldres-fried-breads",
-    "name": "Panamanian Hojaldres Fried Breads",
-    "meal": "morning,bite",
-    "cuisine": "Panamanian",
-    "time": 45,
-    "serves": 4,
-    "ing": [
-      [
-        "flour",
-        400
-      ],
-      [
-        "baking-powder",
-        8
-      ],
-      [
-        "sugar",
-        20
-      ],
-      [
-        "salt",
-        4
-      ],
-      [
-        "butter",
-        40
-      ],
-      [
-        "milk",
-        200
-      ],
-      [
-        "oil",
-        300
-      ]
-    ],
-    "steps": [
-      "Mix {flour}, {baking-powder}, {sugar} and {salt}. Rub in {butter} until it looks like fine crumbs.",
-      "Stir in {milk} to make a soft dough, knead for 2 minutes and rest, covered, for 20 minutes.",
-      "Divide into 8 pieces and roll each into a 1 cm thick oval.",
-      "Heat {oil} to 180 °C and fry 2 or 3 at a time for about 2 minutes per side until puffed and golden. Drain and serve warm."
-    ]
-  },
-  {
-    "id": "panamanian-coconut-rice-and-beans",
-    "name": "Panamanian Coconut Rice and Beans",
-    "meal": "big",
-    "cuisine": "Panamanian",
-    "time": 51,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Heat {oil} in a pot and soften diced {onion} for 5 minutes. Add {garlic} and {thyme} for 1 minute.",
+      "Add the {rice}, {coconut-milk}, {water} and {salt}. Bring to the boil, then cover and cook on the lowest heat for 12 minutes.",
+      "Stir in the drained {kidney-beans}, cover and cook for 8 minutes more. Rest for 5 minutes and fluff with a fork."
     ]
   },
   {
@@ -622,44 +488,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "panamanian-plantain-cakes",
-    "name": "Panamanian Plantain Cakes",
-    "meal": "big",
-    "cuisine": "Panamanian",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
-  {
     "id": "panamanian-lentil-soup",
     "name": "Panamanian Lentil Soup",
     "meal": "big",
@@ -760,45 +588,6 @@ KITCHEN.add(
       "Shred {cabbage} finely, grate {carrot} and slice {spring-onion}.",
       "Toss with {salt} and the juice of {lime} and massage for 1 minute.",
       "Dress with {olive-oil} and {black-pepper}, rest 10 minutes and serve."
-    ]
-  },
-  {
-    "id": "panamanian-black-bean-and-rice-bowl",
-    "name": "Panamanian Black Bean and Rice Bowl",
-    "meal": "big",
-    "cuisine": "Panamanian",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ]
-    ],
-    "steps": [
-      "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
     ]
   },
   {
@@ -941,45 +730,54 @@ KITCHEN.add(
   },
   {
     "id": "panamanian-corn-and-cheese-bake",
-    "name": "Panamanian Corn and Cheese Bake",
+    "name": "Panamanian sweetcorn and cheese bake",
     "meal": "big",
     "cuisine": "Panamanian",
-    "time": 38,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "black-beans",
-        250
+        "butter",
+        40
       ],
       [
-        "rice",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "tomato",
-        250
+        "sweetcorn",
+        400
       ],
       [
-        "plantain",
+        "cornmeal",
+        60
+      ],
+      [
+        "eggs",
+        "3pc"
+      ],
+      [
+        "milk",
+        200
+      ],
+      [
+        "queso-fresco",
+        120
+      ],
+      [
+        "sugar",
+        20
+      ],
+      [
+        "salt",
         2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
       ]
     ],
     "steps": [
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {black-beans} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Heat the oven to 180 °C and grease a baking dish with a little of the {butter}.",
+      "Soften diced {onion} in the remaining {butter} for 5 minutes.",
+      "Blend the {sweetcorn} with {cornmeal}, {eggs}, {milk}, {sugar} and {salt}, then stir in the onion and most of the crumbled {queso-fresco}.",
+      "Pour into the dish, top with the rest of the cheese and bake for 35–40 minutes until set and golden."
     ]
   }
 ]

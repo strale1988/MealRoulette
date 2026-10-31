@@ -50,58 +50,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-portuguese-caldo-verde",
-    "name": "Portuguese caldo verde soup",
-    "meal": "big",
-    "cuisine": "Portuguese",
-    "time": 35,
-    "serves": 3,
-    "ing": [
-      [
-        "potatoes",
-        450
-      ],
-      [
-        "onion",
-        100
-      ],
-      [
-        "garlic",
-        8
-      ],
-      [
-        "vegetable-stock",
-        800
-      ],
-      [
-        "kale",
-        180
-      ],
-      [
-        "sausage",
-        160
-      ],
-      [
-        "olive-oil",
-        18
-      ],
-      [
-        "salt",
-        4
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Cook diced {onion} and {garlic} in {olive-oil} until soft. Add cubed {potatoes} and {vegetable-stock}; simmer 18–20 minutes until tender.",
-      "Blend the potato broth until smooth, adding water if it is too thick.",
-      "Stir in finely shredded {kale} and sliced {sausage}; simmer 5–7 minutes until the kale is tender and the sausage is hot.",
-      "Season with {salt} and {black-pepper}, drizzle with a little olive oil and serve hot."
-    ]
-  },
-  {
     "id": "portuguese-caldo-verde",
     "name": "Caldo verde (Portuguese kale and potato soup)",
     "meal": "big",
@@ -228,53 +176,6 @@ KITCHEN.add(
       "Blend the {fresh-chilli}, {garlic}, {paprika}, juice from one {lemon} and the {olive-oil}. Coat the {chicken-thigh} and marinate for at least 20 minutes.",
       "Heat the oven to 210 °C. Cut the {potatoes} into wedges and spread on a tray; place the chicken on top or on a separate tray.",
       "Roast for 35–45 minutes, turning once and basting with the marinade, until cooked through. Serve with the remaining {lemon} cut into wedges."
-    ]
-  },
-  {
-    "id": "portuguese-pasteis-nata-style",
-    "name": "Portuguese custard tarts",
-    "meal": "treat",
-    "cuisine": "Portuguese",
-    "time": 45,
-    "serves": 6,
-    "ing": [
-      [
-        "puff-pastry",
-        300
-      ],
-      [
-        "eggs",
-        "3pc"
-      ],
-      [
-        "milk",
-        250
-      ],
-      [
-        "cream",
-        100
-      ],
-      [
-        "sugar",
-        100
-      ],
-      [
-        "flour",
-        20
-      ],
-      [
-        "cinnamon",
-        2
-      ],
-      [
-        "vanilla",
-        5
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 230 °C. Roll the {puff-pastry} tightly into a log, slice into 12 rounds and press each into a muffin tin to form thin shells.",
-      "Whisk the {flour} with a little {milk} until smooth. Warm the remaining milk with the {cream}, {sugar} and {vanilla}; whisk in the flour mixture and cook until slightly thickened, then cool briefly.",
-      "Whisk the {eggs} into the custard, fill the pastry shells and bake 12–15 minutes until blistered and set. Dust with {cinnamon} to serve."
     ]
   },
   {
@@ -566,7 +467,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Dice {potatoes} and {onion}; slice {sausage}.",
-      "Soften onion in {olive-oil}, add garlic and potatoes, then pour in {vegetable-stock}. Simmer until potatoes are tender.",
+      "Soften onion in {olive-oil}, add {garlic} and the potatoes, then pour in {vegetable-stock}. Simmer until potatoes are tender.",
       "Mash some potatoes into the broth. Add finely sliced {kale} and sausage; simmer 5–7 minutes until the kale is tender and sausage hot."
     ]
   },
@@ -885,7 +786,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Spread the {butter} on the outside of the {bread}. Fill with the {ham} and grated {cheddar}.",
+      "Spread the {butter} on the outside of the {bread}.",
+      "Fill with the {ham} and grated {cheddar}.",
       "Toast in a pan or sandwich press for 3 minutes per side until golden and melted."
     ]
   },
@@ -976,54 +878,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-portuguese-piri-piri-chicken",
-    "name": "Portuguese piri-piri roast chicken",
-    "meal": "big",
-    "cuisine": "Portuguese",
-    "time": 60,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        900
-      ],
-      [
-        "lemon",
-        1
-      ],
-      [
-        "garlic",
-        4
-      ],
-      [
-        "fresh-chilli",
-        2
-      ],
-      [
-        "paprika",
-        6
-      ],
-      [
-        "olive-oil",
-        35
-      ],
-      [
-        "red-wine-vinegar",
-        20
-      ],
-      [
-        "salt",
-        6
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 220 °C. Crush the {garlic} and {fresh-chilli}; mix with {paprika}, {olive-oil}, {red-wine-vinegar}, zest and juice of the {lemon}, and {salt}.",
-      "Slash the {chicken-thigh} lightly and coat thoroughly with the piri-piri marinade. Rest 15 minutes if time allows.",
-      "Arrange skin-side up on a tray and roast for 35–45 minutes, basting once, until deeply browned and cooked through.",
-      "Rest 5 minutes and spoon over the tray juices. Serve with rice, salad or roasted potatoes."
-    ]
-  },
-  {
     "id": "portuguese-bacalhau-com-natas",
     "name": "Bacalhau com natas creamy cod bake",
     "cuisine": "Portuguese",
@@ -1073,7 +927,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "If using salted cod, soak and change water as needed until desalted. Poach gently in {milk} until it flakes; reserve the milk.",
+      "Soak the {salt-cod} for 24 hours, changing the water several times, until desalted. Poach gently in {milk} until it flakes; reserve the milk.",
       "Cut {potatoes} into small cubes and fry or roast until just golden. Soften sliced {onion} and {garlic} in {olive-oil}; fold in flaked cod and potatoes.",
       "Make a sauce with {butter}, {flour} and reserved milk, then stir in {cream} and {nutmeg}. Combine with the cod mixture, bake at 200 °C for 20–25 minutes until bubbling and golden."
     ]
@@ -1088,7 +942,7 @@ KITCHEN.add(
     "ing": [
       [
         "duck-breast",
-        2
+        "2pc"
       ],
       [
         "rice",
@@ -1100,11 +954,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "chicken-stock",
@@ -1112,7 +966,7 @@ KITCHEN.add(
       ],
       [
         "orange",
-        1
+        "1pc"
       ],
       [
         "bay-leaf",
@@ -1129,7 +983,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Sear {duck-breast} skin-side down until the fat renders and the skin is crisp; turn briefly, then set aside.",
-      "Cook sliced {onion}, {garlic} and {chorizo} in a little duck fat. Add {rice}, {bay-leaf} and {chicken-stock}; simmer until rice is nearly tender.",
+      "Cook sliced {onion}, {garlic} and {chorizo} in a little duck fat and the {olive-oil}. Add {rice}, {bay-leaf} and {chicken-stock}; simmer until rice is nearly tender.",
       "Fold in sliced duck, transfer to a baking dish and bake at 200 °C for 10–15 minutes. Finish with {orange} zest and {parsley}."
     ]
   },
@@ -1163,7 +1017,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        2
+        "2pc"
       ],
       [
         "salt",
@@ -1194,7 +1048,7 @@ KITCHEN.add(
     "ing": [
       [
         "bread",
-        4
+        "4pc"
       ],
       [
         "beef-strips",
@@ -1226,7 +1080,7 @@ KITCHEN.add(
       ],
       [
         "fresh-chilli",
-        1
+        "1pc"
       ],
       [
         "oil",
@@ -1402,7 +1256,7 @@ KITCHEN.add(
       ],
       [
         "carrot",
-        2
+        "2pc"
       ],
       [
         "cabbage",
@@ -1410,7 +1264,7 @@ KITCHEN.add(
       ],
       [
         "turnip",
-        1
+        "1pc"
       ],
       [
         "chicken-stock",
@@ -1453,11 +1307,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "canned-tomatoes",
@@ -1528,11 +1382,11 @@ KITCHEN.add(
       ],
       [
         "lemon",
-        1
+        "1pc"
       ]
     ],
     "steps": [
-      "Line small tart moulds with {shortcrust-pastry} and chill.",
+      "Brush small tart moulds with melted {butter}, line with {shortcrust-pastry} and chill.",
       "Beat {cottage-cheese} with {sugar}, {eggs}, {cinnamon}, {flour} and a little grated {lemon} zest until smooth.",
       "Fill the pastry shells and bake at 190 °C for 22–28 minutes until the tops are golden and lightly cracked. Cool before unmoulding."
     ]

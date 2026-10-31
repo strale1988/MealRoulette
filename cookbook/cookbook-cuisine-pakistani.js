@@ -75,7 +75,7 @@ KITCHEN.add(
     "name": "Chapli kebab with tomato, coriander and chilli",
     "meal": "big",
     "cuisine": "Pakistani",
-    "time": 35,
+    "time": 40,
     "serves": 2,
     "ing": [
       [
@@ -84,7 +84,7 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "1pc"
       ],
       [
         "red-onion",
@@ -92,7 +92,7 @@ KITCHEN.add(
       ],
       [
         "green-chilli",
-        1
+        "2pc"
       ],
       [
         "coriander-seeds",
@@ -103,31 +103,26 @@ KITCHEN.add(
         3
       ],
       [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "flour",
-        120
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
         "salt",
         3
       ],
       [
-        "black-pepper",
-        1
+        "eggs",
+        "1pc"
+      ],
+      [
+        "flour",
+        30
+      ],
+      [
+        "oil",
+        60
       ]
     ],
     "steps": [
-      "Season {beef-mince} and coat it with the aromatics and marinade ingredients; rest briefly while the grill heats.",
-      "Grill or sear {beef-mince} over medium-high heat, turning as needed until cooked through and lightly charred.",
-      "Mix finely diced tomato and onion into the mince with crushed coriander and cumin, flatten into broad thin patties and sear until the edges become deeply crisp.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Mix {beef-mince} with finely diced {tomato}, {red-onion} and {green-chilli}, crushed {coriander-seeds}, {cumin}, {salt}, the {eggs} and {flour}. Knead well and rest for 15 minutes.",
+      "Shape into 4 broad, thin patties about 12 cm wide.",
+      "Heat the {oil} in a wide pan over medium-high heat and shallow-fry for 4–5 minutes per side until deeply browned, crisp at the edges and cooked through."
     ]
   },
   {
@@ -217,7 +212,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -225,7 +220,7 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "cumin",
@@ -274,7 +269,7 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "ginger",
@@ -282,11 +277,11 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "green-chilli",
-        1
+        "1pc"
       ],
       [
         "ground-coriander",
@@ -334,7 +329,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -398,7 +393,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -459,7 +454,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -467,7 +462,7 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "cumin",
@@ -506,12 +501,12 @@ KITCHEN.add(
     "name": "Lahori chicken chargha with spiced yogurt marinade",
     "meal": "big",
     "cuisine": "Pakistani",
-    "time": 55,
+    "time": 70,
     "serves": 2,
     "ing": [
       [
         "chicken-thigh",
-        400
+        600
       ],
       [
         "yogurt",
@@ -523,15 +518,15 @@ KITCHEN.add(
       ],
       [
         "ginger",
-        12
+        15
       ],
       [
         "garlic",
-        3
+        "4pc"
       ],
       [
         "paprika",
-        3
+        4
       ],
       [
         "cumin",
@@ -542,23 +537,22 @@ KITCHEN.add(
         2
       ],
       [
-        "oil",
-        15
-      ],
-      [
-        "salt",
+        "chilli-powder",
         3
       ],
       [
-        "black-pepper",
-        1
+        "salt",
+        4
+      ],
+      [
+        "oil",
+        60
       ]
     ],
     "steps": [
-      "Heat the oven to 190 °C and season the main ingredient evenly with the listed aromatics and spices.",
-      "Roast {chicken-thigh} until cooked through and browned; baste once or twice with the pan juices if available.",
-      "Score the chicken so the spiced yogurt reaches beneath the surface, marinate thoroughly, then roast until the edges are deeply browned and the meat is cooked through.",
-      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
+      "Score the {chicken-thigh} deeply. Mix {yogurt}, {lemon-juice}, grated {ginger}, crushed {garlic}, {paprika}, {cumin}, {turmeric}, {chilli-powder} and {salt}, coat the chicken and marinate for at least 2 hours.",
+      "Heat the oven to 190 °C and roast the chicken in a covered dish for 30 minutes until cooked through (75 °C).",
+      "Heat the {oil} in a pan and shallow-fry the chicken for 3–4 minutes per side until the skin is crisp and deep golden."
     ]
   },
   {
@@ -566,7 +560,7 @@ KITCHEN.add(
     "name": "Shami kebab (beef and lentil patties)",
     "meal": "big",
     "cuisine": "Pakistani",
-    "time": 55,
+    "time": 60,
     "serves": 2,
     "ing": [
       [
@@ -575,7 +569,7 @@ KITCHEN.add(
       ],
       [
         "red-lentils",
-        180
+        100
       ],
       [
         "onion",
@@ -583,7 +577,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -594,66 +588,31 @@ KITCHEN.add(
         3
       ],
       [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "oil",
-        15
+        "water",
+        400
       ],
       [
         "salt",
-        3
+        4
       ],
       [
         "black-pepper",
         1
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "oil",
+        60
       ]
     ],
     "steps": [
-      "Prepare {beef-mince} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {beef-mince} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Cook the beef and lentils together with aromatics until nearly dry, mash to a cohesive mixture, shape small patties and shallow-fry after dipping in beaten egg.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
-    ]
-  },
-  {
-    "id": "pakistani-chicken-karahi",
-    "name": "Pakistani Chicken Karahi",
-    "meal": "big",
-    "cuisine": "Pakistani",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        400
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "soy-sauce",
-        25
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "garlic",
-        2
-      ],
-      [
-        "spring-onion",
-        2
-      ]
-    ],
-    "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {soy-sauce} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Put {beef-mince}, {red-lentils}, chopped {onion}, {garlic}, {ginger}, {cumin}, {water}, {salt} and {black-pepper} in a pan. Bring to the boil and simmer for 30 minutes until the liquid has evaporated and the lentils are soft.",
+      "Blend the mixture to a coarse paste, cool, then mix in the {eggs}.",
+      "Shape into 8 small patties.",
+      "Fry in the {oil} for 3 minutes per side until crisp and golden."
     ]
   },
   {
@@ -726,41 +685,70 @@ KITCHEN.add(
   },
   {
     "id": "pakistani-aloo-keema",
-    "name": "Pakistani Aloo Keema",
+    "name": "Pakistani aloo keema (spiced mince and potato curry)",
     "meal": "big",
     "cuisine": "Pakistani",
-    "time": 25,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        400
+        "oil",
+        40
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "soy-sauce",
-        25
-      ],
-      [
-        "ginger",
-        10
+        "onion",
+        "2pc"
       ],
       [
         "garlic",
+        "4pc"
+      ],
+      [
+        "ginger",
+        15
+      ],
+      [
+        "beef-mince",
+        500
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "turmeric",
         2
       ],
       [
-        "spring-onion",
+        "chilli-powder",
         2
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "potatoes",
+        400
+      ],
+      [
+        "garam-masala",
+        3
+      ],
+      [
+        "cilantro",
+        10
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Heat {oil} in a heavy pot and cook sliced {onion} for 10 minutes until golden. Add {garlic} and {ginger} and cook for 1 minute.",
+      "Add the {beef-mince} and brown for 8 minutes, breaking it up. Stir in {cumin}, {turmeric}, {chilli-powder} and {salt}.",
+      "Add chopped {tomato} and cook for 5 minutes, then add diced {potatoes} and 200 ml water. Cover and simmer for 20 minutes until the potatoes are tender.",
+      "Stir in the {garam-masala} and serve topped with chopped {cilantro}."
     ]
   },
   {
@@ -892,41 +880,62 @@ KITCHEN.add(
   },
   {
     "id": "pakistani-ginger-garlic-noodle-bowl",
-    "name": "Pakistani Ginger Garlic Noodle Bowl",
+    "name": "Pakistani-style chicken chowmein with ginger and garlic",
     "meal": "big",
     "cuisine": "Pakistani",
-    "time": 46,
+    "time": 25,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        400
+        "noodles",
+        300
       ],
       [
-        "rice",
-        250
+        "chicken-breast",
+        300
       ],
       [
-        "soy-sauce",
-        25
+        "oil",
+        30
       ],
       [
         "ginger",
-        10
+        15
       ],
       [
         "garlic",
-        2
+        "4pc"
       ],
       [
-        "spring-onion",
+        "carrot",
+        "2pc"
+      ],
+      [
+        "cabbage",
+        200
+      ],
+      [
+        "red-pepper",
+        "1pc"
+      ],
+      [
+        "soy-sauce",
+        40
+      ],
+      [
+        "vinegar",
+        15
+      ],
+      [
+        "black-pepper",
         2
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Cook the {noodles} according to the packet and drain.",
+      "Slice the {chicken-breast} thinly and stir-fry in half the {oil} over high heat for 4 minutes until cooked. Remove.",
+      "Add the remaining oil and fry grated {ginger} and crushed {garlic} for 30 seconds. Add the {carrot} cut into sticks, shredded {cabbage} and sliced {red-pepper} and stir-fry for 4 minutes.",
+      "Return the chicken, add the noodles, {soy-sauce}, {vinegar} and {black-pepper} and toss for 2 minutes."
     ]
   },
   {
@@ -1052,41 +1061,61 @@ KITCHEN.add(
   },
   {
     "id": "pakistani-coconut-vegetable-curry",
-    "name": "Pakistani Coconut Vegetable Curry",
+    "name": "Pakistani mixed vegetable curry with coconut milk",
     "meal": "big",
     "cuisine": "Pakistani",
-    "time": 31,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        400
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "soy-sauce",
+        "oil",
         25
       ],
       [
-        "ginger",
-        10
+        "onion",
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "3pc"
       ],
       [
-        "spring-onion",
-        2
+        "ginger",
+        15
+      ],
+      [
+        "curry-powder",
+        8
+      ],
+      [
+        "potatoes",
+        300
+      ],
+      [
+        "cauliflower",
+        250
+      ],
+      [
+        "peas",
+        100
+      ],
+      [
+        "coconut-milk",
+        300
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "cilantro",
+        10
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Heat {oil} in a pot and soften diced {onion} for 6 minutes. Add {garlic}, {ginger} and {curry-powder} and cook for 1 minute.",
+      "Add diced {potatoes}, {cauliflower} florets, {coconut-milk} and {salt}. Cover and simmer for 20 minutes.",
+      "Stir in the {peas} and cook for 5 minutes. Serve topped with chopped {cilantro}."
     ]
   },
   {

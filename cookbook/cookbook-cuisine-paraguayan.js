@@ -78,7 +78,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "If using coarse tapioca pearls, grind them into a fine flour. Mix with {salt} and grated {cheese}.",
+      "Grind the {tapioca-pearls} into a fine flour. Mix with {salt} and grated {cheese}.",
       "Rub in {butter}; add {eggs} and {milk} gradually to make a soft, slightly sticky dough. Shape into small rings or balls.",
       "Bake at 200 °C for 18–22 minutes until puffed and lightly golden. Serve warm."
     ]
@@ -276,84 +276,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "sopa-paraguaya-cornbread",
-    "name": "Sopa Paraguaya Cornbread",
-    "meal": "big",
-    "cuisine": "Paraguayan",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "chipa-style-cheese-bites",
-    "name": "Chipa-Style Cheese Bites",
-    "meal": "bite",
-    "cuisine": "Paraguayan",
-    "time": 45,
-    "serves": 4,
-    "ing": [
-      [
-        "cassava-flour",
-        300
-      ],
-      [
-        "cheese",
-        200
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "butter",
-        60
-      ],
-      [
-        "milk",
-        60
-      ],
-      [
-        "salt",
-        4
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 220 °C. Grate {cheese}.",
-      "Mix {cassava-flour}, cheese and {salt}. Rub in softened {butter}, then add {eggs} and {milk} and knead into a soft dough that holds together.",
-      "Roll into 3 cm balls and place on a lined tray, spaced apart.",
-      "Bake for 18–20 minutes until puffed and golden. Serve warm."
-    ]
-  },
-  {
     "id": "paraguayan-beef-and-cassava-stew",
     "name": "Paraguayan Beef and Cassava Stew",
     "meal": "big",
@@ -418,44 +340,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "mbeju-style-cheese-flatbread",
-    "name": "Mbejú-Style Cheese Flatbread",
-    "meal": "big",
-    "cuisine": "Paraguayan",
-    "time": 51,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
     "id": "paraguayan-chicken-rice",
     "name": "Paraguayan Chicken Rice",
     "meal": "big",
@@ -517,85 +401,63 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "paraguayan-corn-and-cheese-bake",
-    "name": "Paraguayan Corn and Cheese Bake",
+    "id": "paraguayan-beef-empanadas",
+    "name": "Paraguayan beef empanadas",
     "meal": "big",
     "cuisine": "Paraguayan",
     "time": 70,
     "serves": 4,
     "ing": [
       [
-        "cornmeal",
-        250
+        "flour",
+        300
       ],
       [
-        "cheese",
-        200
+        "butter",
+        100
+      ],
+      [
+        "water",
+        100
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "oil",
+        20
       ],
       [
         "onion",
         "2pc"
       ],
       [
+        "beef-mince",
+        350
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "paprika",
+        3
+      ],
+      [
+        "green-olives",
+        40
+      ],
+      [
         "eggs",
-        "3pc"
-      ],
-      [
-        "milk",
-        250
-      ],
-      [
-        "butter",
-        60
-      ],
-      [
-        "salt",
-        4
+        "2pc"
       ]
     ],
     "steps": [
-      "Heat the oven to 200 °C and butter a 22 cm baking dish. Finely chop {onion} and cook it in half of the {butter} for 8 minutes until very soft.",
-      "Beat {eggs} with the remaining melted butter, {milk} and {salt}, then stir in {cornmeal} to make a loose batter.",
-      "Grate {cheese} and fold it in with the onion.",
-      "Pour into the dish and bake for 35–40 minutes until set and golden. Cool 10 minutes and cut into squares."
-    ]
-  },
-  {
-    "id": "paraguayan-beef-empanadas",
-    "name": "Paraguayan Beef Empanadas",
-    "meal": "big",
-    "cuisine": "Paraguayan",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Rub the {butter} into the {flour} and half the {salt}, add the {water} and bring together into a smooth dough. Wrap and chill for 30 minutes. Hard-boil one of the {eggs} for 9 minutes, cool and chop.",
+      "Heat the {oil} and soften diced {onion} for 6 minutes. Add the {beef-mince}, {cumin}, {paprika} and the remaining salt and cook for 8 minutes. Cool, then stir in the chopped egg and {green-olives}.",
+      "Heat the oven to 200 °C. Roll out the dough and cut 8 rounds of 14 cm. Fill, fold over and crimp the edges.",
+      "Brush with the remaining beaten egg and bake for 25 minutes until golden."
     ]
   },
   {
@@ -699,41 +561,58 @@ KITCHEN.add(
   },
   {
     "id": "paraguayan-chicken-with-tomato-and-peppers",
-    "name": "Paraguayan Chicken with Tomato and Peppers",
+    "name": "Paraguayan chicken with tomato and peppers",
     "meal": "big",
     "cuisine": "Paraguayan",
-    "time": 46,
+    "time": 55,
     "serves": 4,
     "ing": [
+      [
+        "chicken-thigh",
+        700
+      ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        450
+        "oil",
+        25
       ],
       [
-        "black-beans",
-        250
+        "onion",
+        "1pc"
+      ],
+      [
+        "red-pepper",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "paprika",
+        4
+      ],
+      [
+        "oregano",
+        2
+      ],
+      [
+        "tomato",
+        "3pc"
       ],
       [
         "rice",
         250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
       ]
     ],
     "steps": [
-      "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Season the {chicken-thigh} with {salt} and brown in {oil} for 5 minutes per side. Remove.",
+      "Soften sliced {onion} and {red-pepper} in the same pan for 6 minutes, add {garlic}, {paprika} and {oregano} for 1 minute, then add chopped {tomato}.",
+      "Return the chicken, cover and simmer for 30 minutes until cooked through.",
+      "Cook the {rice} according to the packet and serve with the chicken."
     ]
   },
   {
@@ -884,45 +763,50 @@ KITCHEN.add(
   },
   {
     "id": "paraguayan-cilantro-lime-fish",
-    "name": "Paraguayan Cilantro Lime Fish",
+    "name": "Paraguayan cilantro-lime fish with cassava",
     "meal": "big",
     "cuisine": "Paraguayan",
-    "time": 38,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "black-beans",
-        250
+        "yuca-frozen",
+        500
       ],
       [
-        "rice",
-        250
+        "salt",
+        3
       ],
       [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
+        "white-fish",
+        600
       ],
       [
         "lime",
-        1
+        "2pc"
+      ],
+      [
+        "cilantro",
+        15
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "onion",
+        "1pc"
       ]
     ],
     "steps": [
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {black-beans} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Boil the {yuca-frozen} in water with half the {salt} for 20 minutes until tender, then drain.",
+      "Mix the juice of one {lime}, chopped {cilantro}, crushed {garlic} and the remaining salt and coat the {white-fish}. Marinate for 15 minutes.",
+      "Fry sliced {onion} in half the {oil} for 8 minutes until golden, then remove. Fry the fish in the remaining oil for 3–4 minutes per side.",
+      "Serve the fish with the cassava and onion and wedges of the remaining {lime}."
     ]
   }
 ]

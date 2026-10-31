@@ -2,61 +2,6 @@
 KITCHEN.add(
 [
   {
-    "id": "tom-yum-prawn-soup",
-    "name": "Tom yum prawn soup",
-    "meal": "big",
-    "cuisine": "Thai",
-    "time": 25,
-    "serves": 2,
-    "ing": [
-      [
-        "prawns",
-        250
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "lemongrass",
-        20
-      ],
-      [
-        "ginger",
-        15
-      ],
-      [
-        "fresh-chilli",
-        "2pc"
-      ],
-      [
-        "lime",
-        "1pc"
-      ],
-      [
-        "fish-sauce",
-        20
-      ],
-      [
-        "tomato",
-        "2pc"
-      ],
-      [
-        "chicken-stock",
-        800
-      ],
-      [
-        "coriander",
-        8
-      ]
-    ],
-    "steps": [
-      "Simmer {chicken-stock} with bruised {lemongrass}, sliced {ginger} and {fresh-chilli} for 8 minutes.",
-      "Add quartered {tomato} and {mushrooms} and simmer 4 minutes, then {prawns} for 3 minutes until pink.",
-      "Off the heat add {fish-sauce} and juice of the {lime}. Serve with {coriander}."
-    ]
-  },
-  {
     "id": "thai-coconut-tofu-curry",
     "name": "Thai-style coconut tofu curry",
     "meal": "big",
@@ -522,116 +467,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "thai-pad-thai",
-    "name": "Pad Thai",
-    "meal": "big",
-    "cuisine": "Thai",
-    "time": 30,
-    "serves": 3,
-    "ing": [
-      [
-        "rice-noodles",
-        250
-      ],
-      [
-        "prawns",
-        250
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "beansprouts",
-        150
-      ],
-      [
-        "peanuts",
-        40
-      ],
-      [
-        "tamarind-paste",
-        25
-      ],
-      [
-        "fish-sauce",
-        25
-      ],
-      [
-        "brown-sugar",
-        15
-      ],
-      [
-        "lime",
-        "1pc"
-      ],
-      [
-        "garlic",
-        "2pc"
-      ],
-      [
-        "oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Soak the {rice-noodles} in warm water until pliable, then drain. Mix the {tamarind-paste}, {fish-sauce} and {brown-sugar} with a splash of water.",
-      "Heat the {oil} in a wok; cook the {prawns} until just pink and add minced {garlic}. Push aside, scramble the {eggs}, then add the noodles and sauce.",
-      "Toss until the noodles are tender and coated. Fold in the {beansprouts}; serve with chopped {peanuts} and wedges of {lime}."
-    ]
-  },
-  {
-    "id": "thai-green-curry-chicken",
-    "name": "Thai green curry chicken",
-    "meal": "big",
-    "cuisine": "Thai",
-    "time": 35,
-    "serves": 3,
-    "ing": [
-      [
-        "chicken-thigh",
-        400
-      ],
-      [
-        "green-curry-paste",
-        35
-      ],
-      [
-        "coconut-milk",
-        400
-      ],
-      [
-        "aubergine",
-        250
-      ],
-      [
-        "red-pepper",
-        "1pc"
-      ],
-      [
-        "fish-sauce",
-        20
-      ],
-      [
-        "brown-sugar",
-        10
-      ],
-      [
-        "basil",
-        10
-      ],
-      [
-        "rice",
-        240
-      ]
-    ],
-    "steps": [
-      "Cook the {rice}. Cut the {chicken-thigh}, {aubergine} and {red-pepper} into bite-sized pieces.",
-      "Warm a few spoonfuls of {coconut-milk} in a pan and fry the {green-curry-paste} until fragrant. Add the chicken and stir to coat.",
-      "Add the remaining coconut milk, aubergine and pepper; simmer 15–18 minutes until the chicken is cooked. Season with {fish-sauce} and {brown-sugar}, finish with {basil} and serve with rice."
-    ]
-  },
-  {
     "id": "thai-tom-kha-gai",
     "name": "Tom kha gai (Thai coconut chicken soup)",
     "meal": "big",
@@ -685,65 +520,6 @@ KITCHEN.add(
       "Add the {chicken-thigh} and cook gently until nearly done, then add the {mushrooms} and {coconut-milk}. Simmer 8–10 minutes until the chicken is fully cooked.",
       "Season with {fish-sauce} and juice from the {lime}; add sliced {fresh-chilli} to taste and finish with {coriander}."
     ]
-  },
-  {
-    "id": "thai-massaman-curry",
-    "leftoverSwaps": [
-      "rice"
-    ],
-    "name": "Massaman-style beef and potato curry",
-    "meal": "big",
-    "cuisine": "Thai",
-    "time": 120,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-strips",
-        550
-      ],
-      [
-        "red-curry-paste",
-        25
-      ],
-      [
-        "coconut-milk",
-        400
-      ],
-      [
-        "potatoes",
-        350
-      ],
-      [
-        "peanuts",
-        40
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "cinnamon",
-        "1pc"
-      ],
-      [
-        "fish-sauce",
-        20
-      ],
-      [
-        "brown-sugar",
-        15
-      ],
-      [
-        "rice",
-        260
-      ]
-    ],
-    "steps": [
-      "Cook the {rice}. Brown the {beef-strips} in a heavy pot, then remove. Slice the {onion} and cut the {potatoes} into chunks.",
-      "Fry the {red-curry-paste} in a little thick {coconut-milk} until fragrant. Return the beef, add remaining coconut milk, {cinnamon} and onion, then simmer gently for 60 minutes.",
-      "Add the potatoes and simmer 25–30 minutes until tender. Stir in the {peanuts}, {fish-sauce} and {brown-sugar}; serve with rice."
-    ],
-    "note": "A pantry-friendly Massaman-style curry; traditional curry paste blends can vary widely."
   },
   {
     "id": "thai-larb-pork",
@@ -802,62 +578,6 @@ KITCHEN.add(
     ],
     "leftoverSwaps": [
       "rice"
-    ]
-  },
-  {
-    "id": "thai-pad-see-ew",
-    "name": "Pad see ew (wide noodle stir-fry)",
-    "meal": "big",
-    "cuisine": "Thai",
-    "time": 25,
-    "serves": 2,
-    "ing": [
-      [
-        "udon-noodles",
-        250
-      ],
-      [
-        "beef-strips",
-        200
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "pak-choi",
-        180
-      ],
-      [
-        "soy-sauce",
-        25
-      ],
-      [
-        "dark-soy-sauce",
-        15
-      ],
-      [
-        "oyster-sauce",
-        20
-      ],
-      [
-        "sugar",
-        5
-      ],
-      [
-        "garlic",
-        8
-      ],
-      [
-        "oil",
-        15
-      ]
-    ],
-    "steps": [
-      "Mix the {soy-sauce}, {dark-soy-sauce}, {oyster-sauce} and {sugar}. Slice the {pak-choi} and mince the {garlic}.",
-      "Cook the {udon-noodles} according to the package directions and drain well.",
-      "Heat the {oil} in a hot wok; sear the {beef-strips}, then add garlic and pak choi. Push aside and scramble the {eggs}.",
-      "Add noodles and sauce; toss over high heat until hot and lightly charred."
     ]
   },
   {
@@ -1216,7 +936,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "olive-oil",
@@ -1226,14 +946,14 @@ KITCHEN.add(
     "steps": [
       "Soak or prepare the {rice-noodles} according to the packet. Mix {soy-sauce}, {oyster-sauce} and {sugar}.",
       "Slice the {chicken-breast}; mince {garlic}; cut {chinese-broccoli} into bite-size pieces.",
-      "Heat a wok until very hot. Add oil and garlic, then chicken; stir-fry until nearly cooked. Push aside and scramble the {eggs}.",
+      "Heat a wok until very hot. Add {olive-oil} and garlic, then chicken; stir-fry until nearly cooked. Push aside and scramble the {eggs}.",
       "Add noodles, broccoli and sauce. Toss over high heat until noodles char lightly at the edges and broccoli is tender-crisp."
     ]
   },
   {
     "id": "thai-larb-chicken",
     "name": "Thai larb chicken lettuce cups",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Thai",
     "time": 25,
     "serves": 2,
@@ -1264,7 +984,7 @@ KITCHEN.add(
       ],
       [
         "fresh-chilli",
-        2
+        "2pc"
       ],
       [
         "rice",
@@ -1272,13 +992,13 @@ KITCHEN.add(
       ],
       [
         "lettuce",
-        8
+        80
       ]
     ],
     "steps": [
       "Toast {rice} in a dry pan until golden; cool and grind coarsely.",
       "Cook {chicken-mince} in a splash of water, breaking it up, until fully cooked.",
-      "Off the heat, toss with {fish-sauce}, lime juice, sliced {red-onion}, {fresh-chilli}, chopped {mint}, {cilantro} and toasted rice powder.",
+      "Off the heat, toss with {fish-sauce}, the juice of {lime}, sliced {red-onion}, {fresh-chilli}, chopped {mint}, {cilantro} and toasted rice powder.",
       "Spoon into {lettuce} leaves and serve immediately."
     ]
   },
@@ -1337,7 +1057,7 @@ KITCHEN.add(
   {
     "id": "thai-green-papaya-salad",
     "name": "Som tam green papaya salad",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Thai",
     "time": 20,
     "serves": 2,
@@ -1376,53 +1096,14 @@ KITCHEN.add(
       ],
       [
         "fresh-chilli",
-        2
+        "2pc"
       ]
     ],
     "steps": [
       "Shred {green-papaya} into thin strips; cut {green-beans} into short lengths.",
-      "Pound {garlic} and {fresh-chilli} in a mortar, then add {brown-sugar}, {fish-sauce} and lime juice.",
+      "Pound {garlic} and {fresh-chilli} in a mortar, then add {brown-sugar}, {fish-sauce} and the juice of {lime}.",
       "Lightly bruise beans in the dressing, add shredded papaya and chopped {tomato}, and toss thoroughly.",
       "Top with {peanuts} and serve immediately."
-    ]
-  },
-  {
-    "id": "thai-mango-sticky-rice",
-    "name": "Mango sticky rice",
-    "cuisine": "Thai",
-    "meal": "treat",
-    "time": 45,
-    "serves": 3,
-    "ing": [
-      [
-        "glutinous-rice",
-        180
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sugar",
-        45
-      ],
-      [
-        "salt",
-        2
-      ],
-      [
-        "mango",
-        "2pc"
-      ],
-      [
-        "sesame-seeds",
-        5
-      ]
-    ],
-    "steps": [
-      "Rinse {glutinous-rice} until the water runs mostly clear, soak 30 minutes, then steam 20–25 minutes until tender.",
-      "Warm {coconut-milk} with {sugar} and {salt} until dissolved; do not boil hard. Pour most over the hot rice, cover and rest 15 minutes to absorb.",
-      "Slice {mango}. Serve the sticky rice with mango, spoon over remaining coconut sauce and sprinkle {sesame-seeds}."
     ]
   },
   {
@@ -1443,7 +1124,7 @@ KITCHEN.add(
       ],
       [
         "lemongrass",
-        2
+        20
       ],
       [
         "fresh-galangal",
@@ -1451,7 +1132,7 @@ KITCHEN.add(
       ],
       [
         "lime",
-        3
+        "1pc"
       ],
       [
         "fish-sauce",
@@ -1463,7 +1144,7 @@ KITCHEN.add(
       ],
       [
         "fresh-chilli",
-        2
+        "2pc"
       ],
       [
         "chicken-stock",
@@ -1475,7 +1156,7 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        1
+        "1pc"
       ]
     ],
     "steps": [
@@ -1518,11 +1199,11 @@ KITCHEN.add(
       ],
       [
         "lime",
-        3
+        "1pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
         "basil",
@@ -1549,7 +1230,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        1
+        "1pc"
       ],
       [
         "red-curry-paste",
@@ -1604,15 +1285,15 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "fresh-chilli",
-        2
+        "2pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
         "green-beans",
@@ -1667,19 +1348,19 @@ KITCHEN.add(
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "spring-onion",
-        3
+        "3pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "oyster-sauce",
@@ -1691,7 +1372,7 @@ KITCHEN.add(
       ],
       [
         "fresh-chilli",
-        1
+        "1pc"
       ],
       [
         "honey",
@@ -1730,7 +1411,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        2
+        "2pc"
       ],
       [
         "peanuts",
@@ -1738,11 +1419,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "curry-powder",
@@ -1762,7 +1443,7 @@ KITCHEN.add(
       ],
       [
         "spring-onion",
-        2
+        "2pc"
       ]
     ],
     "steps": [
@@ -1774,7 +1455,7 @@ KITCHEN.add(
   {
     "id": "thai-larb-mushroom-lettuce",
     "name": "Thai mushroom larb lettuce cups with toasted rice",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Thai",
     "time": 25,
     "serves": 2,
@@ -1797,7 +1478,7 @@ KITCHEN.add(
       ],
       [
         "red-onion",
-        1
+        "1pc"
       ],
       [
         "mint",
@@ -1809,7 +1490,7 @@ KITCHEN.add(
       ],
       [
         "fresh-chilli",
-        1
+        "1pc"
       ],
       [
         "rice",
@@ -1856,7 +1537,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "coriander",
@@ -1930,61 +1611,6 @@ KITCHEN.add(
       "Fry {red-curry-paste} and {curry-powder} in {oil} until fragrant. Add {chicken-thigh} and coat in the paste.",
       "Pour in {coconut-milk} and {chicken-stock}; simmer 20–25 minutes until the chicken is tender. Season with {fish-sauce} and {lime-juice}.",
       "Cook {egg-pasta} separately. Serve noodles in the curry broth topped with {pickled-red-onions} and {chilli-flakes}."
-    ]
-  },
-  {
-    "id": "thai-laab-moo",
-    "name": "Larb moo (Thai minced pork salad with toasted rice)",
-    "meal": "light",
-    "cuisine": "Thai",
-    "time": 25,
-    "serves": 2,
-    "ing": [
-      [
-        "pork-mince",
-        350
-      ],
-      [
-        "fish-sauce",
-        25
-      ],
-      [
-        "lime-juice",
-        30
-      ],
-      [
-        "red-onion",
-        40
-      ],
-      [
-        "mint",
-        15
-      ],
-      [
-        "cilantro",
-        15
-      ],
-      [
-        "chilli-flakes",
-        3
-      ],
-      [
-        "rice",
-        20
-      ],
-      [
-        "lettuce",
-        100
-      ],
-      [
-        "sugar",
-        5
-      ]
-    ],
-    "steps": [
-      "Toast dry {rice} in a pan until golden, then grind coarsely.",
-      "Cook {pork-mince} with 2 tbsp water, breaking it up until fully cooked. Remove from heat and stir in {fish-sauce}, {lime-juice} and {sugar}.",
-      "Fold in sliced {red-onion}, chopped {mint}, {cilantro}, {chilli-flakes} and the toasted rice powder. Serve warm with {lettuce}."
     ]
   },
   {
@@ -2078,76 +1704,32 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "thai-larb-gai",
-    "name": "Larb gai minced chicken salad",
-    "meal": "light,big",
-    "cuisine": "Thai",
-    "time": 25,
-    "serves": 3,
-    "ing": [
-      [
-        "chicken-mince",
-        400
-      ],
-      [
-        "lime",
-        2
-      ],
-      [
-        "fish-sauce",
-        25
-      ],
-      [
-        "red-onion",
-        "1pc"
-      ],
-      [
-        "mint",
-        15
-      ],
-      [
-        "coriander",
-        15
-      ],
-      [
-        "chilli-flakes",
-        2
-      ],
-      [
-        "rice",
-        30
-      ],
-      [
-        "lettuce",
-        120
-      ]
-    ],
-    "steps": [
-      "Toast dry {rice} in a pan until golden; cool and grind coarsely.",
-      "Cook {chicken-mince} with a splash of water until just done; remove from heat.",
-      "Season with {lime} juice, {fish-sauce} and {chilli-flakes}; fold in sliced {red-onion}, {mint} and {coriander}.",
-      "Mix in toasted rice powder and serve with {lettuce} leaves."
-    ]
-  },
-  {
     "id": "th-pad-prik-khing",
     "name": "Pad prik khing (Thai dry red curry with pork and green beans)",
     "meal": "big",
     "cuisine": "Thai",
-    "time": 25,
+    "time": 20,
     "serves": 2,
     "ing": [
       [
         "pork",
-        400
+        300
       ],
       [
         "green-beans",
         150
       ],
       [
+        "oil",
+        20
+      ],
+      [
         "red-curry-paste",
-        120
+        40
+      ],
+      [
+        "garlic",
+        "2pc"
       ],
       [
         "fish-sauce",
@@ -2155,31 +1737,18 @@ KITCHEN.add(
       ],
       [
         "brown-sugar",
-        30
+        10
       ],
       [
-        "garlic",
+        "kaffir-lime-leaves",
         3
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {garlic}.",
-      "Add {pork} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add a small splash of water if needed and cook gently until the flavours meld and the main ingredient is tender.",
-      "Fry the red curry paste in oil until fragrant, add pork and green beans, then cook with a splash of water until the beans are tender-crisp and the sauce clings to the meat.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Slice the {pork} thinly. Cut the {green-beans} into 3 cm lengths and finely shred the {kaffir-lime-leaves}.",
+      "Heat {oil} in a wok over high heat and fry the {red-curry-paste} with minced {garlic} for 1–2 minutes until fragrant.",
+      "Add the pork and stir-fry for 3 minutes until no longer pink, adding a splash of water if it sticks.",
+      "Add the {green-beans}, {fish-sauce} and {brown-sugar} and stir-fry for 4 minutes until the beans are tender-crisp and the sauce clings. Stir in the lime leaves."
     ]
   }
 ]

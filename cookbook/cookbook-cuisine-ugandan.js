@@ -11,15 +11,15 @@ KITCHEN.add(
     "ing": [
       [
         "plantain",
-        5
+        "5pc"
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "peanut-butter",
@@ -39,22 +39,22 @@ KITCHEN.add(
   {
     "id": "ugandan-rolex",
     "name": "Ugandan rolex (chapati egg wrap)",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Ugandan",
     "time": 20,
     "serves": 4,
     "ing": [
       [
         "eggs",
-        3
+        "3pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "tomato",
-        1
+        "1pc"
       ],
       [
         "cabbage",
@@ -76,41 +76,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "ugandan-groundnut-sauce",
-    "name": "Groundnut sauce with greens",
-    "meal": "big",
-    "cuisine": "Ugandan",
-    "time": 35,
-    "serves": 4,
-    "ing": [
-      [
-        "peanut-butter",
-        120
-      ],
-      [
-        "spinach",
-        300
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        2
-      ],
-      [
-        "water",
-        500
-      ]
-    ],
-    "steps": [
-      "Cook {onion} and {tomato} until soft.",
-      "Whisk {peanut-butter} with {water} until smooth and pour into the pot.",
-      "Simmer gently, stirring often, then fold in {spinach} and cook until wilted."
-    ]
-  },
-  {
     "id": "ugandan-beans",
     "name": "Ugandan red bean stew",
     "meal": "big",
@@ -124,7 +89,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "tomato",
@@ -132,7 +97,7 @@ KITCHEN.add(
       ],
       [
         "carrot",
-        1
+        "1pc"
       ],
       [
         "oil",
@@ -147,57 +112,71 @@ KITCHEN.add(
   },
   {
     "id": "ugandan-groundnut-stew",
-    "name": "Ugandan Groundnut Stew",
+    "name": "Ugandan groundnut stew with chicken",
     "meal": "big",
     "cuisine": "Ugandan",
-    "time": 30,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
         "chicken-thigh",
-        500
+        600
+      ],
+      [
+        "oil",
+        20
       ],
       [
         "onion",
-        1
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "ginger",
+        10
       ],
       [
         "tomato",
-        300
+        "3pc"
       ],
       [
         "peanut-butter",
-        50
+        80
+      ],
+      [
+        "water",
+        500
+      ],
+      [
+        "salt",
+        3
       ],
       [
         "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
+        280
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Season the {chicken-thigh} with {salt} and brown in {oil} in a large pot for 4 minutes per side. Remove.",
+      "Cook diced {onion} in the same pot for 5 minutes, add {garlic} and {ginger} for 1 minute, then add chopped {tomato} and cook for 6 minutes.",
+      "Return the chicken. Whisk {peanut-butter} with a little of the {water} and stir in with the rest. Cover and simmer for 30 minutes until the chicken is cooked through and the sauce is thick.",
+      "Cook the {rice} according to the packet and serve with the stew."
     ]
   },
   {
-    "id": "matoke-inspired-plantain-stew",
-    "name": "Matoke-Inspired Plantain Stew",
+    "id": "ugandan-beans-and-sweet-potato",
+    "name": "Ugandan beans and sweet potato stew",
     "meal": "big",
     "cuisine": "Ugandan",
     "time": 50,
     "serves": 4,
     "ing": [
       [
-        "plantain",
-        "4pc"
-      ],
-      [
-        "tomato",
-        "3pc"
+        "oil",
+        20
       ],
       [
         "onion",
@@ -208,114 +187,39 @@ KITCHEN.add(
         "2pc"
       ],
       [
-        "carrot",
-        "1pc"
+        "ginger",
+        10
       ],
       [
-        "oil",
-        30
+        "tomato",
+        "2pc"
+      ],
+      [
+        "sweet-potato",
+        600
+      ],
+      [
+        "beans",
+        400
+      ],
+      [
+        "water",
+        300
       ],
       [
         "salt",
         3
       ],
       [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Oil your hands lightly, peel the green {plantain} and cut into 3 cm chunks. Chop {onion} and {tomato}; crush {garlic}; dice {carrot}.",
-      "Cook the onion in {oil} for 5 minutes, add garlic and carrot for 3 minutes, then the tomato for 6 minutes.",
-      "Add the plantain, 250 ml water, {salt} and {black-pepper}, cover and simmer for 25 minutes until the plantain is soft and the sauce is thick.",
-      "Mash a few pieces against the pot to thicken it and serve hot."
-    ]
-  },
-  {
-    "id": "ugandan-rolex-style-egg-wrap",
-    "name": "Ugandan Rolex-Style Egg Wrap",
-    "meal": "morning,big",
-    "cuisine": "Ugandan",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "eggs",
-        "6pc"
-      ],
-      [
-        "flatbread",
-        240
-      ],
-      [
-        "tomato",
-        "1pc"
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "cabbage",
-        100
-      ],
-      [
-        "oil",
-        30
-      ],
-      [
-        "salt",
-        2
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Finely chop {onion}, {tomato} and shred {cabbage}. Beat {eggs} with {salt} and {black-pepper}.",
-      "Warm {flatbread} in a dry pan, one piece at a time, and keep wrapped in a cloth.",
-      "Heat a quarter of the {oil} in a pan, cook a quarter of the vegetables for 2 minutes, pour in a quarter of the eggs and cook 2 minutes into a thin omelette.",
-      "Lay the omelette on a flatbread, roll up tightly and repeat three more times. Serve hot."
-    ]
-  },
-  {
-    "id": "ugandan-beans-and-sweet-potato",
-    "name": "Ugandan Beans and Sweet Potato",
-    "meal": "big",
-    "cuisine": "Ugandan",
-    "time": 51,
-    "serves": 4,
-    "ing": [
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "ginger",
+        "cilantro",
         10
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {onion} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Heat {oil} in a pot and soften diced {onion} for 5 minutes. Add {garlic} and {ginger} for 1 minute, then add chopped {tomato} and cook for 5 minutes.",
+      "Add cubed {sweet-potato}, {water} and {salt}. Cover and simmer for 15 minutes.",
+      "Add the drained {beans} and simmer for 10 minutes until the potato is soft and the sauce is thick.",
+      "Serve scattered with chopped {cilantro}."
     ]
   },
   {
@@ -523,44 +427,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "ugandan-spiced-rice-with-vegetables",
-    "name": "Ugandan Spiced Rice with Vegetables",
-    "meal": "big",
-    "cuisine": "Ugandan",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
-  {
     "id": "ugandan-tomato-and-bean-stew",
     "name": "Ugandan Tomato and Bean Stew",
     "meal": "big",
@@ -609,87 +475,54 @@ KITCHEN.add(
   },
   {
     "id": "ugandan-grilled-fish-with-lime",
-    "name": "Ugandan Grilled Fish with Lime",
+    "name": "Ugandan grilled tilapia with lime and kachumbari",
     "meal": "big",
     "cuisine": "Ugandan",
-    "time": 39,
+    "time": 35,
     "serves": 4,
     "ing": [
+      [
+        "tilapia",
+        600
+      ],
+      [
+        "lime",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
       [
         "ginger",
         10
       ],
       [
-        "oil",
-        20
+        "chilli-powder",
+        2
       ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
+        "oil",
+        20
       ],
       [
         "tomato",
-        300
+        "2pc"
       ],
       [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
+        "red-onion",
+        "1pc"
       ]
     ],
     "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "ugandan-chicken-and-greens-pot",
-    "name": "Ugandan Chicken and Greens Pot",
-    "meal": "big",
-    "cuisine": "Ugandan",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Mix the juice of one {lime} with crushed {garlic}, grated {ginger}, {chilli-powder}, {salt} and half the {oil}. Coat the {tilapia} and marinate for 20 minutes.",
+      "Slice {tomato} and {red-onion} and toss with the juice of half the remaining {lime}.",
+      "Heat a griddle pan to high, brush with the remaining {oil} and grill the fish for 4–5 minutes per side until it flakes easily.",
+      "Serve with the kachumbari and wedges of the remaining lime."
     ]
   },
   {
@@ -742,87 +575,90 @@ KITCHEN.add(
   },
   {
     "id": "ugandan-herbed-flatbread",
-    "name": "Ugandan Herbed Flatbread",
-    "meal": "big",
+    "name": "Ugandan chapati (soft layered flatbread)",
+    "meal": "bite",
     "cuisine": "Ugandan",
-    "time": 60,
+    "time": 75,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "flour",
+        400
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "sugar",
+        5
+      ],
+      [
+        "water",
+        200
       ],
       [
         "oil",
-        20
+        50
+      ]
+    ],
+    "steps": [
+      "Mix {flour}, {salt} and {sugar}. Knead with {water} and 15 ml of the {oil} for 8 minutes into a soft dough, then cover and rest for 30 minutes.",
+      "Divide into 8 balls, roll each thin, brush with oil, roll into a rope and coil into a snail. Rest for 10 minutes.",
+      "Roll each coil into a 20 cm round.",
+      "Cook in a hot pan for 1 minute, flip, brush with oil and cook for 1–2 minutes per side until golden and layered."
+    ]
+  },
+  {
+    "id": "ugandan-coconut-rice-bowl",
+    "name": "Ugandan coconut rice with greens and fried egg",
+    "meal": "big",
+    "cuisine": "Ugandan",
+    "time": 40,
+    "serves": 4,
+    "ing": [
+      [
+        "rice",
+        300
+      ],
+      [
+        "coconut-milk",
+        300
+      ],
+      [
+        "water",
+        250
       ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        500
+        "oil",
+        20
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "tomato",
-        300
+        "2pc"
       ],
       [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ]
-    ],
-    "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "ugandan-coconut-rice-bowl",
-    "name": "Ugandan Coconut Rice Bowl",
-    "meal": "big",
-    "cuisine": "Ugandan",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
+        "kale",
         150
+      ],
+      [
+        "eggs",
+        "4pc"
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Rinse the {rice} and cook with {coconut-milk}, {water} and {salt}: bring to the boil, cover and cook on low heat for 15 minutes, then rest for 5 minutes.",
+      "Heat half the {oil} and soften sliced {onion} for 5 minutes. Add chopped {tomato} and cook for 5 minutes, then add the shredded {kale} and cook for 4 minutes.",
+      "Fry the {eggs} in the remaining {oil} until the whites are set.",
+      "Serve the rice topped with the greens and a fried egg."
     ]
   },
   {

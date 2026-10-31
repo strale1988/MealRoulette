@@ -59,10 +59,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat the oven to 190 °C and lightly grease a baking dish or line a tray.",
-      "Prepare {beef-mince} with the other listed ingredients, layer or shape the mixture evenly and season it well.",
-      "Soak bread in milk and mix into curried mince with raisins, bake until the filling is set, then pour beaten egg-and-milk custard over the top and return to the oven until golden.",
-      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
+      "Heat the oven to 180 °C. Soak the {bread} in 100 ml of the {milk}, then squeeze out and mash.",
+      "Soften chopped {onion} in {oil} for 5 minutes, add {curry-powder} for 1 minute, then {beef-mince} and brown for 8 minutes, breaking it up.",
+      "Mix in the soaked bread, {raisins}, {lemon-juice}, {salt} and {black-pepper}. Spread in a baking dish, press down and tuck in the {bay-leaf}.",
+      "Beat the {eggs} with the remaining milk and a pinch of salt, pour over the mince and bake for 30 minutes until the custard is set and golden."
     ]
   },
   {
@@ -95,7 +95,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -137,7 +137,7 @@ KITCHEN.add(
   {
     "id": "za-chakalaka",
     "name": "Chakalaka (South African spicy tomato and bean relish)",
-    "meal": "side",
+    "meal": "bite",
     "cuisine": "South African",
     "time": 30,
     "serves": 2,
@@ -148,7 +148,7 @@ KITCHEN.add(
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
         "carrot",
@@ -164,7 +164,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "curry-powder",
@@ -188,10 +188,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add a small splash of water if needed and cook gently until the flavours meld and the main ingredient is tender.",
-      "Sauté grated carrot, pepper, cabbage and onion until softened, add curry powder and tomato paste, then fold in baked {beans} and simmer until thick and spicy.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat {oil} in a heavy pan and soften chopped {onion} and {garlic} for 5 minutes.",
+      "Add grated {carrot}, diced {red-pepper} and shredded {cabbage} and cook for 8 minutes until softened.",
+      "Stir in {curry-powder} and {tomato-paste} for 1 minute, then add the baked {beans}, {salt}, {black-pepper} and 100 ml water and simmer for 10 minutes until thick and spicy. Serve warm or cold."
     ]
   },
   {
@@ -224,7 +223,7 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "canned-tomatoes",
@@ -263,16 +262,16 @@ KITCHEN.add(
     "name": "Malva pudding with warm buttery cream sauce",
     "meal": "treat",
     "cuisine": "South African",
-    "time": 45,
-    "serves": 2,
+    "time": 50,
+    "serves": 4,
     "ing": [
       [
         "flour",
-        120
+        150
       ],
       [
         "sugar",
-        35
+        150
       ],
       [
         "eggs",
@@ -284,15 +283,15 @@ KITCHEN.add(
       ],
       [
         "milk",
-        250
+        150
       ],
       [
         "butter",
-        35
+        60
       ],
       [
         "baking-soda",
-        100
+        5
       ],
       [
         "vinegar",
@@ -308,10 +307,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {flour} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Beat egg, sugar and apricot jam, fold in the dry ingredients and milk, then bake until springy; pour warm butter-cream sauce over the pudding while it is still hot.",
-      "Finish with a little {vinegar} if needed, taste for seasoning and serve while the texture is at its best."
+      "Heat the oven to 180 °C and grease a 20 cm baking dish.",
+      "Beat the {eggs} with 100 g of the {sugar} until pale, then beat in the {jam}, 20 g of melted {butter}, the {vinegar} and {vanilla}.",
+      "Dissolve the {baking-soda} in the {milk} and fold into the batter alternately with the {flour}.",
+      "Pour into the dish and bake for 35 minutes until risen and deep golden.",
+      "Meanwhile heat the {cream}, remaining butter and remaining sugar with 3 tablespoons of hot water until dissolved. Pour slowly over the hot pudding so it soaks in."
     ]
   },
   {
@@ -319,8 +319,8 @@ KITCHEN.add(
     "name": "Melktert (South African cinnamon milk tart)",
     "meal": "treat",
     "cuisine": "South African",
-    "time": 55,
-    "serves": 2,
+    "time": 70,
+    "serves": 4,
     "ing": [
       [
         "shortcrust-pastry",
@@ -328,7 +328,7 @@ KITCHEN.add(
       ],
       [
         "milk",
-        250
+        500
       ],
       [
         "eggs",
@@ -336,15 +336,15 @@ KITCHEN.add(
       ],
       [
         "sugar",
-        35
+        60
       ],
       [
         "flour",
-        120
+        40
       ],
       [
         "butter",
-        35
+        20
       ],
       [
         "vanilla",
@@ -352,14 +352,14 @@ KITCHEN.add(
       ],
       [
         "cinnamon",
-        2
+        3
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {shortcrust-pastry} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Blind-bake the pastry shell, thicken sweetened milk with egg and flour into a soft custard, pour into the shell and dust generously with cinnamon before chilling.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 190 °C. Line a 20 cm tart tin with the {shortcrust-pastry}, prick the base, line with parchment and baking beans and blind-bake for 15 minutes; remove the beans and bake for 5 minutes more.",
+      "Heat the {milk} with the {butter} until steaming.",
+      "Whisk the {eggs}, {sugar}, {flour} and {vanilla} together, whisk in the hot milk gradually, then return to the pan and cook, stirring, for 5 minutes until thickened.",
+      "Pour into the pastry shell, dust generously with {cinnamon} and bake at 160 °C for 15 minutes until just set. Chill for 1 hour before slicing."
     ]
   },
   {
@@ -367,7 +367,7 @@ KITCHEN.add(
     "name": "Sosaties (Cape Malay curried lamb skewers)",
     "meal": "big",
     "cuisine": "South African",
-    "time": 40,
+    "time": 55,
     "serves": 2,
     "ing": [
       [
@@ -380,7 +380,7 @@ KITCHEN.add(
       ],
       [
         "preserved-lemon",
-        1
+        30
       ],
       [
         "curry-powder",
@@ -388,7 +388,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -412,10 +412,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Season {lamb} and coat it with the aromatics and marinade ingredients; rest briefly while the grill heats.",
-      "Grill or sear {lamb} over medium-high heat, turning as needed until cooked through and lightly charred.",
-      "Marinate lamb with curry spices, vinegar and chopped dried apricot, thread onto skewers and grill, turning until charred at the edges and juicy inside.",
-      "Finish with a little {vinegar} if needed, taste for seasoning and serve while the texture is at its best."
+      "Cut {lamb} into 3 cm cubes. Mix crushed {garlic}, grated {ginger}, {curry-powder}, {vinegar}, chopped {preserved-lemon}, {oil}, {salt} and {black-pepper}, toss with the lamb and marinate for at least 30 minutes.",
+      "Thread the lamb and {dried-apricots} alternately onto skewers.",
+      "Grill over medium-high heat for 10–12 minutes, turning, until charred at the edges and juicy inside."
     ]
   },
   {
@@ -432,7 +431,7 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "canned-tomatoes",
@@ -444,7 +443,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "brown-sugar",
@@ -484,27 +483,27 @@ KITCHEN.add(
     "meal": "treat",
     "cuisine": "South African",
     "time": 75,
-    "serves": 2,
+    "serves": 4,
     "ing": [
       [
         "flour",
-        120
+        250
       ],
       [
         "eggs",
-        "2pc"
+        "1pc"
       ],
       [
         "butter",
-        35
+        30
       ],
       [
-        "yeast",
-        7
+        "baking-powder",
+        10
       ],
       [
         "sugar",
-        35
+        300
       ],
       [
         "water",
@@ -520,14 +519,14 @@ KITCHEN.add(
       ],
       [
         "oil",
-        15
+        500
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {flour} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Knead a firm enriched dough, braid small strips and fry until deep golden; plunge hot braids straight into chilled spiced syrup so the crust absorbs it.",
-      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
+      "Make the syrup first: dissolve the {sugar} in 250 ml of the {water} with the {cinnamon} and {lemon-juice}, boil for 5 minutes, then chill in the freezer.",
+      "Rub the {butter} into the {flour} and {baking-powder}, mix in the {eggs} and about 100 ml water to a soft dough and rest for 30 minutes.",
+      "Roll out 1 cm thick, cut into strips, braid three strips together and pinch the ends. Heat the {oil} to 180 °C and fry for 2 minutes per side until deep golden.",
+      "Plunge the hot koeksisters straight into the cold syrup for 1 minute, then drain on a rack."
     ]
   },
   {
@@ -556,7 +555,7 @@ KITCHEN.add(
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
         "carrot",
@@ -584,48 +583,62 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare and measure all ingredients, then heat the pan or pot over medium heat.",
-      "Cook {cornmeal} with the seasonings until the dish reaches its intended texture and the flavours meld.",
-      "Whisk cornmeal into boiling salted water and cook slowly until thick and smooth; make a separate spicy relish from {beans}, {carrot}, {red-pepper} and {tomato-paste} and spoon over the soft pap.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Soften chopped {onion} in half of the {butter} for 5 minutes, then add grated {carrot} and diced {red-pepper} for 6 minutes.",
+      "Stir in {curry-powder}, {tomato-paste}, {beans}, {black-pepper} and a splash of water and simmer for 10 minutes into a thick relish.",
+      "Bring the {water} to the boil with the {salt}, whisk in the {cornmeal} and cook on low heat for 15 minutes, stirring, until thick and smooth. Stir in the remaining butter.",
+      "Serve the pap with the relish spooned over."
     ]
   },
   {
-    "id": "south-african-bobotie",
-    "name": "South African Bobotie",
-    "meal": "big",
+    "id": "south-african-pampoenkoekies",
+    "name": "Pampoenkoekies (South African pumpkin fritters)",
+    "meal": "bite",
     "cuisine": "South African",
     "time": 30,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        500
+        "pumpkin",
+        400
       ],
       [
-        "onion",
+        "flour",
+        150
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "baking-powder",
+        8
+      ],
+      [
+        "sugar",
+        30
+      ],
+      [
+        "cinnamon",
+        3
+      ],
+      [
+        "salt",
         1
       ],
       [
-        "tomato",
-        300
+        "oil",
+        60
       ],
       [
-        "peanut-butter",
+        "milk",
         50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Peel and cube the {pumpkin} and boil in lightly salted water ({salt}) for 12 minutes; drain, mash smooth and cool slightly.",
+      "Mix the mash with the {eggs}, {sugar} and {milk}, then stir in the {flour} and {baking-powder} to a thick batter.",
+      "Heat the {oil} in a frying pan over medium heat, drop in heaped tablespoons of batter and fry for 3 minutes per side until golden.",
+      "Drain and dust with {cinnamon}. Serve warm."
     ]
   },
   {
@@ -689,41 +702,63 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "south-african-bunny-chow-curry",
-    "name": "South African Bunny Chow Curry",
+    "id": "south-african-cape-malay-chicken-curry",
+    "name": "Cape Malay Chicken Curry with Apricots",
     "meal": "big",
     "cuisine": "South African",
-    "time": 25,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
         "chicken-thigh",
-        500
+        700
       ],
       [
         "onion",
-        1
+        "2pc"
       ],
       [
         "tomato",
-        300
+        "2pc"
       ],
       [
-        "peanut-butter",
-        50
+        "garlic",
+        "3pc"
+      ],
+      [
+        "ginger",
+        15
+      ],
+      [
+        "curry-powder",
+        10
+      ],
+      [
+        "dried-apricots",
+        80
+      ],
+      [
+        "brown-sugar",
+        15
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        3
       ],
       [
         "rice",
         250
-      ],
-      [
-        "spinach",
-        150
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Season {chicken-thigh} with half of the {salt} and brown in {oil} for 5 minutes per side. Remove.",
+      "Soften sliced {onion} in the pot for 8 minutes, add crushed {garlic}, grated {ginger} and {curry-powder} for 1 minute, then chopped {tomato} for 5 minutes.",
+      "Return the chicken, add {dried-apricots}, {brown-sugar}, 250 ml water and the remaining salt, cover and simmer for 30 minutes.",
+      "Meanwhile cook {rice} in 500 ml water, covered, on low heat for 15 minutes. Serve the curry over the rice."
     ]
   },
   {
@@ -775,88 +810,119 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "south-african-malva-pudding",
-    "name": "South African Malva Pudding",
+    "id": "south-african-vetkoek",
+    "name": "Vetkoek with Curried Mince",
     "meal": "big",
     "cuisine": "South African",
-    "time": 39,
+    "time": 80,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "flour",
+        300
       ],
       [
-        "oil",
-        20
+        "yeast",
+        7
+      ],
+      [
+        "sugar",
+        10
       ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        500
+        "water",
+        190
+      ],
+      [
+        "oil",
+        400
+      ],
+      [
+        "beef-mince",
+        400
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
-        "tomato",
-        300
+        "curry-powder",
+        8
       ],
       [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
+        "tomato-paste",
+        20
       ]
     ],
     "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Mix {flour}, {yeast}, {sugar}, {salt} and {water} and knead for 8 minutes to a soft dough. Cover and rise for 45 minutes.",
+      "Brown {beef-mince} with chopped {onion} in a pan for 8 minutes, then stir in {curry-powder} and {tomato-paste} with a splash of water and simmer for 10 minutes.",
+      "Shape the dough into 8 balls, flatten slightly and rest for 10 minutes.",
+      "Heat the {oil} to 170 °C and fry the dough balls for 3–4 minutes per side until deep golden and cooked through; drain.",
+      "Split the vetkoek and fill with the curried mince."
     ]
   },
   {
     "id": "south-african-spiced-rice-with-vegetables",
-    "name": "South African Spiced Rice with Vegetables",
+    "name": "South African Vegetable Breyani (Cape Malay-style lentil rice)",
     "meal": "big",
     "cuisine": "South African",
-    "time": 46,
+    "time": 50,
     "serves": 4,
     "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
       [
         "rice",
         250
       ],
       [
-        "spinach",
-        150
+        "lentils",
+        240
+      ],
+      [
+        "potatoes",
+        300
+      ],
+      [
+        "onion",
+        "2pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "ginger",
+        10
+      ],
+      [
+        "curry-powder",
+        8
+      ],
+      [
+        "cinnamon",
+        2
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Cook sliced {onion} in {oil} for 10 minutes until deep golden, then add crushed {garlic}, grated {ginger}, {curry-powder} and {cinnamon} for 1 minute.",
+      "Add chopped {tomato}, {potatoes} in chunks, 200 ml water and {salt} and simmer for 8 minutes.",
+      "Stir in the rinsed {rice} and 450 ml hot water, cover and cook on the lowest heat for 15 minutes. Fold in the drained {lentils}, heat for 5 minutes, rest for 5 minutes and fluff."
     ]
   },
   {
@@ -912,87 +978,93 @@ KITCHEN.add(
   },
   {
     "id": "south-african-grilled-fish-with-lime",
-    "name": "South African Grilled Fish with Lime",
+    "name": "Braaied Fish with Apricot-Lime Glaze",
     "meal": "big",
     "cuisine": "South African",
-    "time": 60,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "white-fish",
+        700
       ],
       [
-        "oil",
-        20
+        "jam",
+        60
+      ],
+      [
+        "lime",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "butter",
+        30
       ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
+        "black-pepper",
         1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
       ]
     ],
     "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Melt the {butter} with crushed {garlic}, the {jam} (apricot if you have it), the juice of one {lime}, {salt} and {black-pepper} into a glaze.",
+      "Heat a braai or grill to medium-high (about 200 °C). Brush the {white-fish} with glaze and grill for 4–5 minutes per side, brushing often.",
+      "Serve with wedges of the remaining lime and any leftover glaze."
     ]
   },
   {
     "id": "south-african-chicken-and-greens-pot",
-    "name": "South African Chicken and Greens Pot",
+    "name": "South African Chicken and Morogo (wild spinach) Pot",
     "meal": "big",
     "cuisine": "South African",
-    "time": 31,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
         "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
+        600
       ],
       [
         "spinach",
-        150
+        300
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Season {chicken-thigh} with half of the {salt} and the {black-pepper} and brown in {oil} for 5 minutes per side. Remove.",
+      "Soften sliced {onion} and crushed {garlic} for 5 minutes, then add chopped {tomato} and cook for 8 minutes.",
+      "Return the chicken with 250 ml water and the remaining salt, cover and simmer for 25 minutes.",
+      "Stir in the {spinach} and cook for 5 minutes until wilted. Serve with pap or bread."
     ]
   },
   {

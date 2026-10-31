@@ -19,7 +19,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "salt",
@@ -29,13 +29,13 @@ KITCHEN.add(
     "steps": [
       "Place {spinach} in a baking dish with finely sliced {onion}.",
       "Pour {coconut-milk} over the greens and season with {salt}.",
-      "Cover tightly and bake at 180°C until the greens are very tender and coconut sauce is rich."
+      "Cover tightly with foil and bake at 180 °C for 35 minutes until the greens are very tender and the coconut sauce is rich."
     ]
   },
   {
     "id": "samoan-oka",
     "name": "Oka i’a (coconut lime fish)",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Samoan",
     "time": 25,
     "serves": 4,
@@ -54,15 +54,15 @@ KITCHEN.add(
       ],
       [
         "red-onion",
-        1
+        "1pc"
       ],
       [
         "tomato",
-        1
+        "1pc"
       ]
     ],
     "steps": [
-      "Dice {white-fish} and marinate in {lime-juice} in the refrigerator until opaque; keep chilled.",
+      "Dice {white-fish} and marinate in {lime-juice} in the refrigerator for 20 minutes until opaque; keep chilled.",
       "Drain most of the lime juice and mix with {coconut-milk}.",
       "Fold in finely sliced {red-onion} and diced {tomato}; serve immediately. Use very fresh fish suitable for raw preparations."
     ]
@@ -80,8 +80,8 @@ KITCHEN.add(
         350
       ],
       [
-        "pasta",
-        300
+        "glass-noodles",
+        200
       ],
       [
         "soy-sauce",
@@ -89,23 +89,23 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "spring-onion",
-        3
+        "3pc"
       ]
     ],
     "steps": [
-      "Cook {pasta} until just tender and drain.",
-      "Stir-fry {beef-strips} with {garlic} until browned; add {soy-sauce} and a splash of water.",
-      "Toss in noodles and sliced {spring-onion}; stir-fry until hot and coated."
+      "Soak {glass-noodles} in hot water for 10 minutes until soft, then drain.",
+      "Stir-fry {beef-strips} with crushed {garlic} in a very hot pan for 4 minutes until browned; add {soy-sauce} and a splash of water.",
+      "Toss in the noodles and sliced {spring-onion}; stir-fry for 2–3 minutes until hot and coated."
     ]
   },
   {
     "id": "samoan-panipopo",
     "name": "Panipopo (sweet coconut bread rolls)",
-    "meal": "bake",
+    "meal": "treat",
     "cuisine": "Samoan",
     "time": 100,
     "serves": 4,
@@ -132,328 +132,277 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Mix {flour}, {milk}, {yeast} and half the {sugar}; knead into a soft dough. Rise until doubled.",
-      "Shape into rolls and place snugly in a baking dish.",
-      "Pour {coconut-milk} mixed with remaining sugar around the rolls; bake at 180°C until golden and sauce is bubbling."
+      "Mix {flour}, {milk}, {yeast} and half the {sugar}; knead for 8 minutes into a soft dough. Rise for 1 hour until doubled.",
+      "Shape into 8 rolls and place snugly in a baking dish.",
+      "Pour {coconut-milk} mixed with the remaining sugar around the rolls; bake at 180 °C for 25 minutes until golden and the sauce is bubbling."
     ]
   },
   {
-    "id": "samoan-oka-style-lime-fish",
-    "name": "Samoan Oka-Style Lime Fish",
+    "id": "samoan-faalifu-fai",
+    "name": "Fa'alifu Fa'i (green bananas in coconut cream with corned beef)",
     "meal": "big",
     "cuisine": "Samoan",
-    "time": 30,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "white-fish",
-        450
+        "plantain",
+        "3pc"
+      ],
+      [
+        "corned-beef",
+        340
       ],
       [
         "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
+        400
       ],
       [
         "onion",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {white-fish} and {sweet-potato}; stir well so the ingredients are evenly coated.",
-      "Add the {coconut-milk} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "palusami-inspired-coconut-greens",
-    "name": "Palusami-Inspired Coconut Greens",
-    "meal": "big",
-    "cuisine": "Samoan",
-    "time": 37,
-    "serves": 4,
-    "ing": [
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
+        "1pc"
       ],
       [
         "salt",
-        3
+        2
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Add the {sweet-potato} and {sweet-potato}; stir well so the ingredients are evenly coated.",
-      "Add the {lime} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Peel the {plantain} (score the skin lengthwise to help) and cut into 3 cm chunks. Slice the {onion}.",
+      "Simmer the plantain in water with the {salt} for 15 minutes until almost tender; drain.",
+      "Heat the {coconut-milk} with the onion for 5 minutes, then break in the {corned-beef} and simmer for 5 minutes.",
+      "Add the plantain and simmer gently for 10 minutes until coated in a thick, creamy sauce. Serve hot."
+    ]
+  },
+  {
+    "id": "samoan-koko-alaisa",
+    "name": "Koko Alaisa (Samoan cocoa rice)",
+    "meal": "morning",
+    "cuisine": "Samoan",
+    "time": 35,
+    "serves": 4,
+    "ing": [
+      [
+        "rice",
+        200
+      ],
+      [
+        "cocoa",
+        25
+      ],
+      [
+        "milk",
+        500
+      ],
+      [
+        "sugar",
+        60
+      ],
+      [
+        "salt",
+        1
+      ]
+    ],
+    "steps": [
+      "Rinse {rice} and simmer in 500 ml water with the {salt} for 12 minutes until the water is absorbed.",
+      "Whisk {cocoa} and {sugar} into the {milk} until smooth.",
+      "Pour over the rice and simmer over low heat for 15 minutes, stirring often, until thick and creamy.",
+      "Rest for 5 minutes and serve warm in bowls."
     ]
   },
   {
     "id": "samoan-coconut-chicken",
-    "name": "Samoan Coconut Chicken",
+    "name": "Samoan Coconut Chicken Curry (kale moa)",
     "meal": "big",
     "cuisine": "Samoan",
-    "time": 44,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "lime",
-        1
+        "chicken-thigh",
+        700
+      ],
+      [
+        "coconut-milk",
+        400
+      ],
+      [
+        "potatoes",
+        400
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
-        "rice",
-        250
+        "garlic",
+        "3pc"
+      ],
+      [
+        "ginger",
+        10
+      ],
+      [
+        "curry-powder",
+        8
       ],
       [
         "oil",
-        15
+        20
+      ],
+      [
+        "salt",
+        4
+      ]
+    ],
+    "steps": [
+      "Cut {chicken-thigh} into large pieces, season with {salt} and brown in {oil} for 6 minutes. Remove.",
+      "Soften sliced {onion} with grated {ginger} and crushed {garlic} in the same pan for 5 minutes, then stir in {curry-powder} for 1 minute.",
+      "Return the chicken, add {coconut-milk}, 100 ml water and {potatoes} cut into 3 cm chunks. Cover and simmer for 30 minutes until the chicken and potatoes are tender and the sauce has thickened."
+    ]
+  },
+  {
+    "id": "samoan-panikeke",
+    "name": "Panikeke (Samoan banana pancakes)",
+    "meal": "morning",
+    "cuisine": "Samoan",
+    "time": 25,
+    "serves": 4,
+    "ing": [
+      [
+        "banana",
+        "3pc"
+      ],
+      [
+        "flour",
+        200
+      ],
+      [
+        "sugar",
+        30
+      ],
+      [
+        "baking-powder",
+        6
+      ],
+      [
+        "milk",
+        150
+      ],
+      [
+        "oil",
+        60
+      ],
+      [
+        "salt",
+        1
+      ]
+    ],
+    "steps": [
+      "Mash the {banana} until smooth and stir in the {sugar} and {milk}.",
+      "Mix {flour}, {baking-powder} and {salt}, then fold into the banana to make a thick, dropping batter.",
+      "Heat {oil} in a frying pan over medium heat and drop in heaped tablespoons of batter. Fry for 2–3 minutes per side until deep golden.",
+      "Drain on kitchen paper and serve warm."
+    ]
+  },
+  {
+    "id": "samoan-supo-esi",
+    "name": "Supo Esi (Samoan papaya and coconut pudding)",
+    "meal": "treat",
+    "cuisine": "Samoan",
+    "time": 35,
+    "serves": 4,
+    "ing": [
+      [
+        "papaya",
+        600
+      ],
+      [
+        "coconut-milk",
+        400
+      ],
+      [
+        "sugar",
+        50
+      ],
+      [
+        "cornstarch",
+        25
+      ],
+      [
+        "salt",
+        1
+      ]
+    ],
+    "steps": [
+      "Peel and deseed the {papaya} and cut into 2 cm cubes.",
+      "Simmer the papaya with {coconut-milk}, {sugar} and {salt} for 12 minutes until the fruit is soft.",
+      "Mix {cornstarch} with 3 tablespoons cold water, stir into the pan and cook for 3 minutes until thickened.",
+      "Serve warm or chilled."
+    ]
+  },
+  {
+    "id": "samoan-taro-faapapa",
+    "name": "Taro Fa'apapa (taro baked in coconut cream)",
+    "meal": "big",
+    "cuisine": "Samoan",
+    "time": 70,
+    "serves": 4,
+    "ing": [
+      [
+        "taro",
+        800
+      ],
+      [
+        "coconut-milk",
+        400
+      ],
+      [
+        "onion",
+        "1pc"
       ],
       [
         "salt",
         3
-      ],
-      [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {onion} until fragrant.",
-      "Add the {lime} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {coconut-milk} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
-    ]
-  },
-  {
-    "id": "sapasui-style-noodle-stir-fry",
-    "name": "Sapasui-Style Noodle Stir-Fry",
-    "meal": "big",
-    "cuisine": "Samoan",
-    "time": 51,
-    "serves": 4,
-    "ing": [
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ]
-    ],
-    "steps": [
-      "Add the {coconut-milk} and {sweet-potato}; stir well so the ingredients are evenly coated.",
-      "Add the {coconut-milk} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "samoan-banana-coconut-bake",
-    "name": "Samoan Banana Coconut Bake",
-    "meal": "big",
-    "cuisine": "Samoan",
-    "time": 58,
-    "serves": 4,
-    "ing": [
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "white-fish",
-        450
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {lime} until fragrant.",
-      "Add the {spinach} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {onion} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
-    ]
-  },
-  {
-    "id": "taro-style-coconut-mash",
-    "name": "Taro-Style Coconut Mash",
-    "meal": "big",
-    "cuisine": "Samoan",
-    "time": 65,
-    "serves": 4,
-    "ing": [
-      [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {coconut-milk} until fragrant.",
-      "Add the {white-fish} and {sweet-potato}; stir well so the ingredients are evenly coated.",
-      "Add the {coconut-milk} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Heat the oven to 180 °C. Peel the {taro} and cut into 3 cm chunks; boil in water for 10 minutes and drain.",
+      "Layer the taro in a baking dish with thinly sliced {onion}.",
+      "Pour over the {coconut-milk} mixed with the {salt}. Cover with foil.",
+      "Bake for 45 minutes until the taro is tender and the cream has thickened."
     ]
   },
   {
     "id": "samoan-fish-and-tomato-stew",
-    "name": "Samoan Fish and Tomato Stew",
+    "name": "Sua I'a (Samoan fish and tomato coconut stew)",
     "meal": "big",
     "cuisine": "Samoan",
-    "time": 36,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "sweet-potato",
-        2
+        "white-fish",
+        600
       ],
       [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
+        "tomato",
+        "3pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
-        "rice",
-        250
+        "ginger",
+        10
       ],
       [
-        "oil",
-        15
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Add the {sweet-potato} and {sweet-potato}; stir well so the ingredients are evenly coated.",
-      "Add the {lime} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "coconut-rice-with-pineapple",
-    "name": "Coconut Rice with Pineapple",
-    "meal": "big",
-    "cuisine": "Samoan",
-    "time": 43,
-    "serves": 4,
-    "ing": [
+        "coconut-milk",
+        300
+      ],
       [
         "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
+        "1pc"
       ],
       [
         "oil",
@@ -462,21 +411,52 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {onion} until fragrant.",
-      "Add the {lime} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {coconut-milk} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Cut {white-fish} into 4 cm chunks and toss with half of the juice of the {lime} and half of the {salt}.",
+      "Soften sliced {onion} and grated {ginger} in {oil} for 5 minutes, add chopped {tomato} and cook for 8 minutes until soft.",
+      "Pour in {coconut-milk}, 150 ml water and the remaining salt and simmer for 5 minutes.",
+      "Add the fish and simmer gently for 8 minutes until opaque. Finish with the remaining lime juice."
+    ]
+  },
+  {
+    "id": "coconut-rice-with-pineapple",
+    "name": "Coconut Rice Pudding with Pineapple",
+    "meal": "treat",
+    "cuisine": "Samoan",
+    "time": 35,
+    "serves": 4,
+    "ing": [
+      [
+        "rice",
+        200
+      ],
+      [
+        "coconut-milk",
+        400
+      ],
+      [
+        "milk",
+        200
+      ],
+      [
+        "sugar",
+        60
+      ],
+      [
+        "pineapple",
+        300
+      ],
+      [
+        "salt",
+        1
+      ]
+    ],
+    "steps": [
+      "Rinse {rice} and simmer with {coconut-milk}, {milk}, {sugar} and {salt} over low heat for 25 minutes, stirring often, until creamy.",
+      "Dice the {pineapple} and cook in a dry pan over medium heat for 4 minutes until the edges caramelise.",
+      "Spoon the pudding into bowls and top with the pineapple. Serve warm."
     ]
   },
   {
@@ -484,128 +464,125 @@ KITCHEN.add(
     "name": "Samoan Coconut Fish and Rice",
     "meal": "big",
     "cuisine": "Samoan",
-    "time": 25,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
         "white-fish",
-        450
+        500
+      ],
+      [
+        "rice",
+        280
       ],
       [
         "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
+        400
       ],
       [
         "lime",
-        1
+        "1pc"
       ],
       [
-        "onion",
-        1
+        "spring-onion",
+        "3pc"
+      ],
+      [
+        "ginger",
+        10
+      ],
+      [
+        "oil",
+        15
+      ],
+      [
+        "salt",
+        4
       ]
     ],
     "steps": [
-      "Add the {white-fish} and {sweet-potato}; stir to combine.",
-      "Add the {coconut-milk} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Rinse {rice} and cook in {coconut-milk} thinned with 250 ml water, grated {ginger} and half of the {salt}, covered, over low heat for 18 minutes. Rest for 5 minutes.",
+      "Season {white-fish} with the remaining salt and the juice of half the {lime}.",
+      "Pan-fry the fish in {oil} over medium-high heat for 3–4 minutes per side until golden and flaking.",
+      "Serve the fish on the rice scattered with sliced {spring-onion}, with the remaining lime in wedges."
     ]
   },
   {
     "id": "samoan-roasted-sweet-potato-with-lime",
     "name": "Samoan Roasted Sweet Potato with Lime",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Samoan",
-    "time": 32,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "spinach",
+        "sweet-potato",
+        800
+      ],
+      [
+        "coconut-milk",
         150
       ],
       [
         "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
+        "1pc"
       ],
       [
         "oil",
-        15
+        20
       ],
       [
         "salt",
         3
       ],
       [
-        "white-fish",
-        450
+        "spring-onion",
+        "2pc"
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {spinach} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 220 °C. Cut {sweet-potato} into thick wedges and toss with {oil} and {salt}.",
+      "Roast for 35 minutes, turning once, until caramelised at the edges.",
+      "Drizzle with warmed {coconut-milk}, squeeze over the {lime} and scatter with sliced {spring-onion}."
     ]
   },
   {
     "id": "samoan-banana-coconut-pudding",
     "name": "Samoan Banana Coconut Pudding",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Samoan",
-    "time": 39,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "white-fish",
-        450
+        "banana",
+        "4pc"
       ],
       [
         "coconut-milk",
-        300
+        400
       ],
       [
-        "sweet-potato",
-        2
+        "sugar",
+        50
       ],
       [
-        "spinach",
-        150
+        "cornstarch",
+        40
       ],
       [
-        "lime",
+        "vanilla",
+        3
+      ],
+      [
+        "salt",
         1
       ]
     ],
     "steps": [
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {coconut-milk} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 180 °C. Mash three-quarters of the {banana} and slice the rest.",
+      "Whisk {coconut-milk} with {sugar}, {cornstarch}, {vanilla} and {salt}, then stir in the mashed banana.",
+      "Pour into a greased baking dish, top with the sliced banana and bake for 35 minutes until set and golden."
     ]
   },
   {
@@ -613,94 +590,68 @@ KITCHEN.add(
     "name": "Samoan Ginger Chicken Parcels",
     "meal": "big",
     "cuisine": "Samoan",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {white-fish} and {sweet-potato}; stir to combine.",
-      "Add the {coconut-milk} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "samoan-taro-style-greens-with-coconut",
-    "name": "Samoan Taro-Style Greens with Coconut",
-    "meal": "big",
-    "cuisine": "Samoan",
-    "time": 53,
-    "serves": 4,
-    "ing": [
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "white-fish",
-        450
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {spinach} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "samoan-pineapple-rice-bowl",
-    "name": "Samoan Pineapple Rice Bowl",
-    "meal": "big",
-    "cuisine": "Samoan",
     "time": 60,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "chicken-thigh",
+        600
+      ],
+      [
+        "spinach",
+        200
+      ],
+      [
+        "coconut-milk",
+        200
+      ],
+      [
+        "ginger",
+        15
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "salt",
+        3
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 200 °C. Mix grated {ginger}, crushed {garlic}, {salt} and half of the {coconut-milk} and coat the {chicken-thigh} with it.",
+      "Cut 4 large squares of foil. On each place a pile of {spinach} and sliced {onion}, top with the chicken and spoon over the remaining coconut milk.",
+      "Fold into sealed parcels and bake on a tray for 40 minutes until the chicken is cooked through.",
+      "Rest for 5 minutes, open carefully and serve with the juices."
+    ]
+  },
+  {
+    "id": "samoan-pisupo-cabbage",
+    "name": "Pisupo (corned beef) with Cabbage in Coconut Cream",
+    "meal": "big",
+    "cuisine": "Samoan",
+    "time": 30,
+    "serves": 4,
+    "ing": [
+      [
+        "corned-beef",
+        340
+      ],
+      [
+        "cabbage",
+        500
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "coconut-milk",
+        300
       ],
       [
         "oil",
@@ -708,33 +659,65 @@ KITCHEN.add(
       ],
       [
         "salt",
-        3
+        1
       ],
       [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
+        "black-pepper",
         1
       ]
     ],
     "steps": [
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {coconut-milk} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Slice the {onion} and shred the {cabbage}.",
+      "Soften the onion in {oil} for 4 minutes, add the {corned-beef} broken into chunks and fry for 4 minutes.",
+      "Add the cabbage, {coconut-milk}, {black-pepper} and {salt}; cover and simmer for 12 minutes until tender and creamy."
+    ]
+  },
+  {
+    "id": "samoan-sua-oso",
+    "name": "Sua Oso (Samoan oxtail soup)",
+    "meal": "big",
+    "cuisine": "Samoan",
+    "time": 190,
+    "serves": 4,
+    "ing": [
+      [
+        "beef-oxtail",
+        1000
+      ],
+      [
+        "taro",
+        400
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "carrot",
+        "2pc"
+      ],
+      [
+        "celery",
+        "2pc"
+      ],
+      [
+        "ginger",
+        15
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "black-pepper",
+        2
+      ]
+    ],
+    "steps": [
+      "Sear {beef-oxtail} in a dry, hot heavy pot for 8 minutes until browned; it releases its own fat.",
+      "Add sliced {onion}, {ginger}, 1.8 litres water, {salt} and {black-pepper}. Bring to the boil, skim, cover and simmer gently for 2 hours 15 minutes until the meat is very tender.",
+      "Add {carrot} and {celery} in chunks and {taro} in cubes and cook for 25 minutes.",
+      "Season to taste and serve in deep bowls."
     ]
   },
   {
@@ -742,62 +725,28 @@ KITCHEN.add(
     "name": "Samoan Coconut Pumpkin Soup",
     "meal": "big",
     "cuisine": "Samoan",
-    "time": 31,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "white-fish",
-        450
+        "pumpkin",
+        800
       ],
       [
         "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
+        400
       ],
       [
         "onion",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {white-fish} and {sweet-potato}; stir to combine.",
-      "Add the {coconut-milk} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "samoan-lime-fish-with-herbs",
-    "name": "Samoan Lime Fish with Herbs",
-    "meal": "big",
-    "cuisine": "Samoan",
-    "time": 38,
-    "serves": 4,
-    "ing": [
-      [
-        "spinach",
-        150
+        "1pc"
       ],
       [
-        "lime",
-        1
+        "garlic",
+        "2pc"
       ],
       [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
+        "ginger",
+        15
       ],
       [
         "oil",
@@ -808,15 +757,58 @@ KITCHEN.add(
         3
       ],
       [
-        "white-fish",
-        450
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {spinach} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Soften chopped {onion}, {garlic} and {ginger} in {oil} for 5 minutes.",
+      "Add cubed {pumpkin}, 500 ml water and the {salt}; simmer for 20 minutes until soft.",
+      "Blend with the {coconut-milk} until smooth, reheat gently for 5 minutes and season with {black-pepper}."
+    ]
+  },
+  {
+    "id": "samoan-lime-fish-with-herbs",
+    "name": "Samoan Lime Fish with Herbs",
+    "meal": "big",
+    "cuisine": "Samoan",
+    "time": 35,
+    "serves": 4,
+    "ing": [
+      [
+        "white-fish",
+        600
+      ],
+      [
+        "lime",
+        "2pc"
+      ],
+      [
+        "coriander",
+        15
+      ],
+      [
+        "spring-onion",
+        "3pc"
+      ],
+      [
+        "ginger",
+        10
+      ],
+      [
+        "oil",
+        15
+      ],
+      [
+        "salt",
+        3
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 200 °C. Mix the juice of one {lime}, grated {ginger}, {oil} and {salt}.",
+      "Place {white-fish} fillets on foil, spoon over the marinade, scatter with sliced {spring-onion} and half of the {coriander} and fold into parcels.",
+      "Bake for 15 minutes until opaque and flaking.",
+      "Open the parcels, scatter with the remaining coriander and serve with wedges of the second lime."
     ]
   }
 ]

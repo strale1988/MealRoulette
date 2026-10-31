@@ -4,7 +4,7 @@ KITCHEN.add(
   {
     "id": "tajik-qurutob",
     "name": "Qurutob-inspired flatbread and yogurt salad",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Tajik",
     "time": 25,
     "serves": 4,
@@ -19,15 +19,15 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "cucumber",
-        1
+        "1pc"
       ],
       [
         "red-onion",
-        1
+        "1pc"
       ],
       [
         "dill",
@@ -38,80 +38,6 @@ KITCHEN.add(
       "Tear {flatbread} into bite-sized pieces and arrange in a shallow bowl.",
       "Whisk {yogurt} with a little water and salt until pourable; spoon over bread.",
       "Top with sliced {tomato}, {cucumber}, {red-onion} and {dill}; serve immediately."
-    ]
-  },
-  {
-    "id": "tajik-osh",
-    "name": "Tajik osh (carrot and beef pilaf)",
-    "meal": "big",
-    "cuisine": "Tajik",
-    "time": 75,
-    "serves": 4,
-    "ing": [
-      [
-        "rice",
-        350
-      ],
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "carrot",
-        3
-      ],
-      [
-        "onion",
-        2
-      ],
-      [
-        "cumin",
-        5
-      ],
-      [
-        "oil",
-        40
-      ]
-    ],
-    "steps": [
-      "Brown {beef-chuck} in {oil}, add {onion} and sliced {carrot}.",
-      "Season with {cumin}; add rinsed {rice} and hot water to cover.",
-      "Simmer covered until rice is tender; rest 10 minutes and fluff."
-    ]
-  },
-  {
-    "id": "tajik-sambusa",
-    "name": "Sambusa baraki (baked meat pastries)",
-    "meal": "big",
-    "cuisine": "Tajik",
-    "time": 50,
-    "serves": 4,
-    "ing": [
-      [
-        "puff-pastry",
-        500
-      ],
-      [
-        "beef-mince",
-        350
-      ],
-      [
-        "onion",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "eggs",
-        1
-      ]
-    ],
-    "steps": [
-      "Mix {beef-mince}, chopped {onion} and {cumin}; season well.",
-      "Cut {puff-pastry} into squares, fill and fold into triangles; seal edges.",
-      "Brush with beaten {eggs} and bake at 200°C until crisp and golden."
     ]
   },
   {
@@ -128,15 +54,15 @@ KITCHEN.add(
       ],
       [
         "potatoes",
-        2
+        "2pc"
       ],
       [
         "carrot",
-        2
+        "2pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "tomato",
@@ -151,45 +77,6 @@ KITCHEN.add(
       "Cover {beef-chuck} with {water}, bring to a simmer and skim.",
       "Add {onion}, {carrot}, {potatoes} and {tomato}.",
       "Simmer gently until beef and vegetables are tender; season and serve with bread."
-    ]
-  },
-  {
-    "id": "tajik-qurutob-inspired-flatbread-bowl",
-    "name": "Tajik Qurutob-Inspired Flatbread Bowl",
-    "meal": "big",
-    "cuisine": "Tajik",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ]
-    ],
-    "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {carrot} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
     ]
   },
   {
@@ -295,41 +182,66 @@ KITCHEN.add(
   },
   {
     "id": "tajik-noodle-soup-with-beef",
-    "name": "Tajik Noodle Soup with Beef",
+    "name": "Tajik noodle soup with beef",
     "meal": "big",
     "cuisine": "Tajik",
-    "time": 51,
+    "time": 100,
     "serves": 4,
     "ing": [
       [
+        "beef-chuck",
+        400
+      ],
+      [
+        "oil",
+        25
+      ],
+      [
         "onion",
-        1
+        "1pc"
       ],
       [
         "carrot",
-        2
+        "2pc"
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
+        "garlic",
+        "3pc"
       ],
       [
         "cumin",
         3
       ],
       [
-        "garlic",
-        2
+        "tomato",
+        "2pc"
+      ],
+      [
+        "beef-stock",
+        1000
+      ],
+      [
+        "potatoes",
+        250
+      ],
+      [
+        "noodles",
+        200
+      ],
+      [
+        "black-pepper",
+        1
+      ],
+      [
+        "dill",
+        10
       ]
     ],
     "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {onion} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {rice} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Cut {beef-chuck} into small cubes. Brown in {oil} in a large pot for 6 minutes, then add diced {onion} and {carrot} and cook for 5 minutes.",
+      "Add {garlic}, {cumin}, chopped {tomato} and {beef-stock}. Bring to the boil, skim, then cover and simmer for 1 hour until the beef is tender.",
+      "Add diced {potatoes} and simmer for 15 minutes.",
+      "Cook the {noodles} separately according to the packet and divide between bowls. Ladle over the soup, season with {black-pepper} and scatter with chopped {dill}."
     ]
   },
   {
@@ -534,45 +446,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "tajik-beef-and-onion-pilaf",
-    "name": "Tajik Beef and Onion Pilaf",
-    "meal": "big",
-    "cuisine": "Tajik",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ]
-    ],
-    "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
-    ]
-  },
-  {
     "id": "tajik-pumpkin-and-herb-dumplings",
     "name": "Tajik Pumpkin and Herb Dumplings",
     "meal": "big",
@@ -622,89 +495,55 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "tajik-carrot-and-chickpea-soup",
-    "name": "Tajik Carrot and Chickpea Soup",
-    "meal": "big",
+    "id": "tajik-flatbread-with-yogurt-dip",
+    "name": "Tajik flatbread (non) with garlic yogurt dip",
+    "meal": "bite",
     "cuisine": "Tajik",
-    "time": 39,
+    "time": 90,
     "serves": 4,
     "ing": [
       [
-        "garlic",
-        2
+        "flour",
+        300
       ],
       [
-        "oil",
-        20
+        "yeast",
+        5
       ],
       [
         "salt",
-        3
+        4
       ],
       [
-        "beef-chuck",
-        450
+        "water",
+        180
       ],
       [
-        "onion",
-        1
+        "oil",
+        15
       ],
       [
-        "carrot",
-        2
+        "sesame-seeds",
+        10
       ],
       [
-        "rice",
+        "yogurt",
         250
       ],
       [
-        "potatoes",
-        2
+        "garlic",
+        "1pc"
+      ],
+      [
+        "dill",
+        10
       ]
     ],
     "steps": [
-      "Add the {garlic} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "tajik-flatbread-with-yogurt-dip",
-    "name": "Tajik Flatbread with Yogurt Dip",
-    "meal": "big",
-    "cuisine": "Tajik",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ]
-    ],
-    "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Mix {flour}, {yeast} and {salt}, add {water} and {oil} and knead for 8 minutes into a smooth dough. Cover and prove for 1 hour.",
+      "Heat the oven to 240 °C with a tray inside. Divide the dough into 4 rounds, flatten, press the centres thin with your fingers and prick with a fork. Brush with water and sprinkle with {sesame-seeds}.",
+      "Bake on the hot tray for 10–12 minutes until puffed and golden.",
+      "Mix {yogurt} with crushed {garlic} and chopped {dill} and serve with the warm bread."
     ]
   },
   {
@@ -766,92 +605,6 @@ KITCHEN.add(
       "Stir in garlic, {ground-coriander}, {cumin}, {salt} and {black-pepper} for 1 minute, then add the tomatoes and cook 5 minutes until they collapse.",
       "Add the potatoes and 150 ml water, cover and simmer for 25 minutes until the potatoes are tender and the sauce is thick.",
       "Scatter chopped {parsley} and serve from the pan."
-    ]
-  },
-  {
-    "id": "tajik-herbed-cucumber-salad",
-    "name": "Tajik Herbed Cucumber Salad",
-    "meal": "big",
-    "cuisine": "Tajik",
-    "time": 60,
-    "serves": 4,
-    "ing": [
-      [
-        "garlic",
-        2
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ]
-    ],
-    "steps": [
-      "Add the {garlic} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "tajik-lamb-style-noodle-broth",
-    "name": "Tajik Lamb-Style Noodle Broth",
-    "meal": "big",
-    "cuisine": "Tajik",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ]
-    ],
-    "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
     ]
   },
   {

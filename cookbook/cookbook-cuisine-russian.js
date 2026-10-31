@@ -63,36 +63,44 @@ KITCHEN.add(
     "name": "Shchi (Russian cabbage soup)",
     "meal": "big",
     "cuisine": "Russian",
-    "time": 90,
-    "serves": 2,
+    "time": 110,
+    "serves": 4,
     "ing": [
-      [
-        "cabbage",
-        200
-      ],
       [
         "beef-chuck",
         450
       ],
       [
-        "potatoes",
-        350
-      ],
-      [
-        "carrot",
-        150
+        "beef-stock",
+        1200
       ],
       [
         "onion",
         "1pc"
       ],
       [
-        "beef-stock",
-        450
+        "carrot",
+        "1pc"
+      ],
+      [
+        "oil",
+        15
+      ],
+      [
+        "cabbage",
+        300
+      ],
+      [
+        "potatoes",
+        350
       ],
       [
         "bay-leaf",
         2
+      ],
+      [
+        "black-pepper",
+        1
       ],
       [
         "sour-cream",
@@ -101,25 +109,13 @@ KITCHEN.add(
       [
         "dill",
         10
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "oil",
-        15
       ]
     ],
     "steps": [
-      "Heat {oil} in a soup pot and soften {onion} without browning.",
-      "Add {beef-stock} and {cabbage}, simmering gently until the main ingredient is tender.",
-      "Simmer the beef in stock until tender, then add cabbage and potatoes; finish with dill and a spoon of sour cream at the table.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Put the {beef-chuck} and {beef-stock} in a pot, bring to the boil, skim, then simmer for 1 hour until tender. Lift out the beef, cut into pieces and return it.",
+      "Meanwhile soften diced {onion} and grated {carrot} in {oil} for 6 minutes.",
+      "Add the shredded {cabbage}, diced {potatoes}, {bay-leaf} and the fried vegetables to the pot and simmer for 20 minutes until tender.",
+      "Season with {black-pepper} and serve with {sour-cream} and chopped {dill}."
     ]
   },
   {
@@ -127,36 +123,40 @@ KITCHEN.add(
     "name": "Solyanka (Russian sour-and-smoky mixed meat soup)",
     "meal": "big",
     "cuisine": "Russian",
-    "time": 40,
-    "serves": 2,
+    "time": 45,
+    "serves": 4,
     "ing": [
       [
-        "smoked-sausage",
-        250
-      ],
-      [
-        "ham",
-        100
-      ],
-      [
-        "beef-stock",
-        450
-      ],
-      [
-        "pickles",
-        50
-      ],
-      [
-        "canned-tomatoes",
-        200
+        "oil",
+        15
       ],
       [
         "onion",
         "1pc"
       ],
       [
-        "olives",
-        100
+        "smoked-sausage",
+        250
+      ],
+      [
+        "ham",
+        120
+      ],
+      [
+        "pickles",
+        80
+      ],
+      [
+        "canned-tomatoes",
+        200
+      ],
+      [
+        "beef-stock",
+        1000
+      ],
+      [
+        "black-olives",
+        60
       ],
       [
         "lemon",
@@ -167,23 +167,15 @@ KITCHEN.add(
         100
       ],
       [
-        "salt",
-        3
-      ],
-      [
         "black-pepper",
         1
-      ],
-      [
-        "oil",
-        15
       ]
     ],
     "steps": [
-      "Heat {oil} in a soup pot and soften {onion} without browning.",
-      "Add {beef-stock} and {smoked-sausage}, simmering gently until the main ingredient is tender.",
-      "Fry onion and sliced smoked meats, stir in chopped pickles and tomato, then add stock and simmer so the broth becomes tangy and savoury; finish each bowl with lemon.",
-      "Finish with a little {lemon} if needed, taste for seasoning and serve while the texture is at its best."
+      "Heat {oil} in a pot and cook sliced {onion} for 5 minutes. Add the sliced {smoked-sausage} and diced {ham} and fry for 5 minutes.",
+      "Stir in the chopped {pickles} and {canned-tomatoes} and cook for 5 minutes.",
+      "Add the {beef-stock} and {black-olives} and simmer for 20 minutes. Season with {black-pepper}.",
+      "Serve each bowl with a slice of {lemon} and a spoonful of {sour-cream}."
     ]
   },
   {
@@ -196,502 +188,7 @@ KITCHEN.add(
     "ing": [
       [
         "cottage-cheese",
-        200
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "flour",
-        120
-      ],
-      [
-        "sugar",
-        35
-      ],
-      [
-        "vanilla",
-        3
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "sour-cream",
-        100
-      ],
-      [
-        "berries",
-        200
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Prepare {cottage-cheese} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {cottage-cheese} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Drain the cheese well and mix gently with egg, sugar and just enough flour to bind; form small thick cakes and pan-fry slowly so the centres cook without burning the crust.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
-    ]
-  },
-  {
-    "id": "ru-olivier",
-    "name": "Olivier salad (Russian potato and vegetable salad)",
-    "meal": "light",
-    "cuisine": "Russian",
-    "time": 40,
-    "serves": 2,
-    "ing": [
-      [
-        "potatoes",
-        350
-      ],
-      [
-        "carrot",
-        150
-      ],
-      [
-        "peas",
-        100
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "pickles",
-        50
-      ],
-      [
-        "ham",
-        100
-      ],
-      [
-        "mayonnaise",
-        100
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Prepare {potatoes} and cut the remaining vegetables or fruit into even bite-sized pieces.",
-      "Mix the dressing ingredients separately and taste for a balance of salt, acidity and sweetness.",
-      "Boil potatoes and carrots whole, cool completely and dice evenly with the egg, pickles and ham; fold through mayonnaise lightly and chill before serving.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
-    ]
-  },
-  {
-    "id": "ru-medovik",
-    "name": "Medovik (Russian honey layer cake)",
-    "meal": "treat",
-    "cuisine": "Russian",
-    "time": 100,
-    "serves": 2,
-    "ing": [
-      [
-        "honey",
-        100
-      ],
-      [
-        "sugar",
-        35
-      ],
-      [
-        "butter",
-        35
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "flour",
-        120
-      ],
-      [
-        "baking-soda",
-        100
-      ],
-      [
-        "sour-cream",
-        100
-      ],
-      [
-        "vanilla",
-        3
-      ]
-    ],
-    "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {honey} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Warm honey, butter and sugar together, beat in egg and baking soda, then bake several thin layers; sandwich the cooled layers with sour-cream filling and chill overnight.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
-    ]
-  },
-  {
-    "id": "ru-pirozhki",
-    "name": "Baked pirozhki with cabbage and egg filling",
-    "meal": "bite",
-    "cuisine": "Russian",
-    "time": 100,
-    "serves": 2,
-    "ing": [
-      [
-        "flour",
-        120
-      ],
-      [
-        "yeast",
-        7
-      ],
-      [
-        "milk",
-        250
-      ],
-      [
-        "butter",
-        35
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "cabbage",
-        200
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ]
-    ],
-    "steps": [
-      "Mix {flour} with the remaining dough ingredients to make a workable dough or batter; knead or beat until even.",
-      "Rest or prove the mixture as needed, shape it, then bake, steam or griddle until cooked through.",
-      "Make a soft yeast dough and let it rise, cook the cabbage-onion filling until dry, then fill and seal small rolls; brush with egg and bake until golden.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
-    ]
-  },
-  {
-    "id": "ru-draniki",
-    "name": "Draniki (Belarusian-Russian style crisp potato pancakes)",
-    "meal": "morning",
-    "cuisine": "Russian",
-    "time": 30,
-    "serves": 2,
-    "ing": [
-      [
-        "potatoes",
-        350
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "flour",
-        120
-      ],
-      [
-        "sour-cream",
-        100
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Prepare {potatoes} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {potatoes} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Grate potatoes and onion finely, squeeze out excess liquid, bind with egg and a little flour, then fry thin spoonfuls until both sides are deeply crisp.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
-    ]
-  },
-  {
-    "id": "ru-blini",
-    "name": "Blini (thin Russian yeast pancakes)",
-    "meal": "morning",
-    "cuisine": "Russian",
-    "time": 70,
-    "serves": 2,
-    "ing": [
-      [
-        "flour",
-        120
-      ],
-      [
-        "milk",
-        250
-      ],
-      [
-        "yeast",
-        7
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "butter",
-        35
-      ],
-      [
-        "sugar",
-        35
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "sour-cream",
-        100
-      ],
-      [
-        "smoked-salmon",
-        150
-      ]
-    ],
-    "steps": [
-      "Whisk the batter until smooth and let it rest briefly so the flour hydrates.",
-      "Cook {flour} in a lightly greased pan over medium heat, turning or folding once the surface sets.",
-      "Make a loose yeast batter and allow it to bubble, then cook small thin pancakes in a buttered pan; serve warm with sour cream or smoked salmon.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
-    ]
-  },
-  {
-    "id": "ru-kasha-mushrooms",
-    "name": "Buckwheat kasha with mushrooms and browned onion",
-    "meal": "big",
-    "cuisine": "Russian",
-    "time": 30,
-    "serves": 2,
-    "ing": [
-      [
-        "buckwheat",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "vegetable-stock",
-        450
-      ],
-      [
-        "butter",
-        35
-      ],
-      [
-        "dill",
-        10
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Prepare and measure all ingredients, then heat the pan or pot over medium heat.",
-      "Cook {buckwheat} with the seasonings until the dish reaches its intended texture and the flavours meld.",
-      "Toast the buckwheat briefly, simmer it in stock until fluffy, and fold in separately browned mushrooms and onion just before serving.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
-    ]
-  },
-  {
-    "id": "russian-beef-stroganoff",
-    "name": "Russian Beef Stroganoff",
-    "meal": "big",
-    "cuisine": "Russian",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {butter} in a heavy pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir well so the ingredients are evenly coated.",
-      "Add the {eggs} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "russian-cabbage-and-mushroom-pirozhki",
-    "name": "Russian Cabbage and Mushroom Pirozhki",
-    "meal": "big",
-    "cuisine": "Russian",
-    "time": 120,
-    "serves": 4,
-    "ing": [
-      [
-        "flour",
         300
-      ],
-      [
-        "yeast",
-        7
-      ],
-      [
-        "milk",
-        150
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "butter",
-        50
-      ],
-      [
-        "cabbage",
-        300
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "dill",
-        10
-      ],
-      [
-        "salt",
-        4
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Warm {milk} until lukewarm and stir in {yeast}. Mix with {flour}, half of the {salt}, one of the {eggs} and 20 g melted {butter}; knead for 8 minutes until smooth. Cover and let rise for 1 hour until doubled.",
-      "Finely chop {onion}, shred {cabbage} and chop {mushrooms}. Melt the remaining butter and cook the onion for 5 minutes, then the cabbage for 12 minutes until soft and lightly golden.",
-      "Add the mushrooms and cook 6 minutes until the moisture has evaporated. Stir in chopped {dill}, {black-pepper} and the remaining salt, then cool completely.",
-      "Heat the oven to 200 °C. Divide the dough into 12 pieces, flatten each into a 10 cm round, spoon in filling, pinch the edges shut and place seam-side down on a tray. Rest 20 minutes.",
-      "Beat the second of the {eggs}, brush it over the pirozhki and bake for 18–20 minutes until deep golden."
-    ]
-  },
-  {
-    "id": "russian-shchi-cabbage-soup",
-    "name": "Russian Shchi Cabbage Soup",
-    "meal": "big",
-    "cuisine": "Russian",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
-    ]
-  },
-  {
-    "id": "russian-syrniki-cheese-pancakes",
-    "name": "Russian Syrniki Cheese Pancakes",
-    "meal": "morning,treat",
-    "cuisine": "Russian",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "cottage-cheese",
-        400
       ],
       [
         "eggs",
@@ -706,12 +203,227 @@ KITCHEN.add(
         30
       ],
       [
+        "vanilla",
+        2
+      ],
+      [
         "salt",
         1
       ],
       [
-        "butter",
+        "oil",
         30
+      ],
+      [
+        "sour-cream",
+        100
+      ],
+      [
+        "berries",
+        150
+      ]
+    ],
+    "steps": [
+      "Drain the {cottage-cheese} well and mash with the {eggs}, {sugar}, {vanilla} and {salt}. Stir in {flour} to make a soft dough.",
+      "Shape into 8 small thick cakes and dust lightly with a little extra flour.",
+      "Fry in {oil} over medium-low heat for 3–4 minutes per side until golden and cooked through.",
+      "Serve warm with {sour-cream} and {berries}."
+    ]
+  },
+  {
+    "id": "ru-olivier",
+    "name": "Olivier salad (Russian potato and vegetable salad)",
+    "meal": "bite",
+    "cuisine": "Russian",
+    "time": 45,
+    "serves": 4,
+    "ing": [
+      [
+        "potatoes",
+        400
+      ],
+      [
+        "carrot",
+        "2pc"
+      ],
+      [
+        "eggs",
+        "4pc"
+      ],
+      [
+        "peas",
+        150
+      ],
+      [
+        "pickles",
+        100
+      ],
+      [
+        "ham",
+        200
+      ],
+      [
+        "mayonnaise",
+        150
+      ],
+      [
+        "salt",
+        2
+      ],
+      [
+        "black-pepper",
+        1
+      ]
+    ],
+    "steps": [
+      "Boil the {potatoes} and {carrot} whole for 20 minutes until tender, and the {eggs} for 9 minutes. Cool completely.",
+      "Peel and dice the potatoes, carrots and eggs evenly, along with the {pickles} and {ham}.",
+      "Mix with the {peas}, {mayonnaise}, {salt} and {black-pepper}. Chill for 30 minutes before serving."
+    ]
+  },
+  {
+    "id": "ru-medovik",
+    "name": "Medovik (Russian honey layer cake)",
+    "meal": "treat",
+    "cuisine": "Russian",
+    "time": 120,
+    "serves": 10,
+    "ing": [
+      [
+        "honey",
+        120
+      ],
+      [
+        "sugar",
+        150
+      ],
+      [
+        "butter",
+        100
+      ],
+      [
+        "eggs",
+        "2pc"
+      ],
+      [
+        "baking-soda",
+        8
+      ],
+      [
+        "flour",
+        400
+      ],
+      [
+        "sour-cream",
+        500
+      ],
+      [
+        "icing-sugar",
+        60
+      ],
+      [
+        "vanilla",
+        3
+      ]
+    ],
+    "steps": [
+      "Heat the {honey}, {sugar} and {butter} in a pan, stirring, until melted. Stir in the {baking-soda}, which will foam, then cool for 5 minutes and beat in the {eggs}.",
+      "Mix in the {flour} to a soft dough, divide into 6 and roll each into a thin 22 cm round.",
+      "Bake the layers at 180 °C for 5 minutes each until golden. Trim into neat rounds and crush the trimmings for the topping.",
+      "Whisk the {sour-cream} with {icing-sugar} and {vanilla}. Stack the layers with the cream between them, cover the cake and sprinkle with crumbs. Chill overnight."
+    ]
+  },
+  {
+    "id": "ru-pirozhki",
+    "name": "Baked pirozhki with cabbage and egg filling",
+    "meal": "bite",
+    "cuisine": "Russian",
+    "time": 120,
+    "serves": 4,
+    "ing": [
+      [
+        "flour",
+        400
+      ],
+      [
+        "yeast",
+        7
+      ],
+      [
+        "sugar",
+        10
+      ],
+      [
+        "salt",
+        5
+      ],
+      [
+        "milk",
+        200
+      ],
+      [
+        "butter",
+        50
+      ],
+      [
+        "eggs",
+        "3pc"
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "cabbage",
+        300
+      ]
+    ],
+    "steps": [
+      "Warm the {milk} with the {butter}, then mix with {flour}, {yeast}, {sugar}, {salt} and 1 of the {eggs}. Knead for 8 minutes, cover and prove for 1 hour. Hard-boil 1 egg for 9 minutes, cool and chop.",
+      "Heat the {oil} and cook diced {onion} and shredded {cabbage} for 12 minutes until soft and dry. Cool and stir in the chopped egg.",
+      "Divide the dough into 12 pieces, flatten, fill with the cabbage mixture and pinch to seal.",
+      "Place seam-side down on a tray, brush with the remaining beaten egg and bake at 200 °C for 18–20 minutes until golden."
+    ]
+  },
+  {
+    "id": "ru-draniki",
+    "name": "Draniki (Belarusian-Russian style crisp potato pancakes)",
+    "meal": "morning",
+    "cuisine": "Russian",
+    "time": 35,
+    "serves": 2,
+    "ing": [
+      [
+        "potatoes",
+        500
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "flour",
+        30
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
+        1
+      ],
+      [
+        "oil",
+        60
       ],
       [
         "sour-cream",
@@ -719,103 +431,163 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Drain {cottage-cheese} in a sieve for 10 minutes, pressing out excess liquid, then mash it smooth in a bowl.",
-      "Mix in {eggs}, {sugar}, {salt} and about two-thirds of the {flour} to make a soft dough that holds its shape.",
-      "With floured hands shape into 8 thick patties and dust them with the remaining flour.",
-      "Melt {butter} in a frying pan over medium-low heat and fry the patties for 3 minutes per side until deep golden and set in the middle.",
-      "Serve warm with {sour-cream}."
+      "Grate the {potatoes} and {onion} finely and squeeze out as much liquid as possible.",
+      "Mix with the {eggs}, {flour}, {salt} and {black-pepper}.",
+      "Heat the {oil} in a wide skillet. Fry thin spoonfuls of batter for 3–4 minutes per side until deeply crisp. Drain on a rack.",
+      "Serve hot with {sour-cream}."
     ]
   },
   {
-    "id": "russian-buckwheat-with-mushrooms",
-    "name": "Russian Buckwheat with Mushrooms",
-    "meal": "big",
+    "id": "ru-blini",
+    "name": "Blini (thin Russian yeast pancakes)",
+    "meal": "morning",
     "cuisine": "Russian",
-    "time": 39,
+    "time": 70,
     "serves": 4,
     "ing": [
       [
-        "parsley",
-        10
+        "milk",
+        500
       ],
       [
-        "black-pepper",
-        2
+        "yeast",
+        7
+      ],
+      [
+        "sugar",
+        15
+      ],
+      [
+        "flour",
+        250
       ],
       [
         "salt",
         3
       ],
       [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
         "eggs",
-        3
+        "2pc"
       ],
       [
-        "cheese",
-        100
+        "butter",
+        50
       ],
       [
-        "mushrooms",
+        "sour-cream",
+        150
+      ],
+      [
+        "smoked-salmon",
         150
       ]
     ],
     "steps": [
-      "Add the {parsley} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Warm half the {milk} and stir in the {yeast} and {sugar}. Whisk in {flour} and {salt} and leave for 45 minutes until bubbly.",
+      "Whisk in the {eggs}, the remaining milk and half the melted {butter} to make a thin batter.",
+      "Brush a non-stick pan with a little butter and cook thin pancakes for 1 minute per side, adding more butter as you go.",
+      "Serve warm topped with {sour-cream} and {smoked-salmon}."
+    ]
+  },
+  {
+    "id": "ru-kasha-mushrooms",
+    "name": "Buckwheat kasha with mushrooms and browned onion",
+    "meal": "big",
+    "cuisine": "Russian",
+    "time": 35,
+    "serves": 2,
+    "ing": [
+      [
+        "buckwheat",
+        200
+      ],
+      [
+        "vegetable-stock",
+        400
+      ],
+      [
+        "butter",
+        40
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "mushrooms",
+        250
+      ],
+      [
+        "dill",
+        10
+      ],
+      [
+        "black-pepper",
+        1
+      ]
+    ],
+    "steps": [
+      "Toast the {buckwheat} in a dry pot for 3 minutes, then add the {vegetable-stock}, cover and simmer for 15 minutes until the liquid is absorbed. Rest for 5 minutes.",
+      "Meanwhile melt the {butter} in a pan and cook sliced {onion} for 10 minutes until browned. Add sliced {mushrooms} and cook for 8 minutes.",
+      "Fold the mushrooms and onion into the kasha, season with {black-pepper} and scatter with chopped {dill}."
     ]
   },
   {
     "id": "russian-creamy-mushroom-and-potato-soup",
-    "name": "Russian Creamy Mushroom and Potato Soup",
+    "name": "Russian creamy mushroom and potato soup",
     "meal": "big",
     "cuisine": "Russian",
-    "time": 46,
+    "time": 45,
     "serves": 4,
     "ing": [
+      [
+        "butter",
+        30
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "mushrooms",
+        400
+      ],
       [
         "potatoes",
         400
       ],
       [
-        "onion",
+        "vegetable-stock",
+        1000
+      ],
+      [
+        "bay-leaf",
         1
       ],
       [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
+        "sour-cream",
         100
       ],
       [
-        "mushrooms",
-        150
+        "dill",
+        10
       ],
       [
-        "butter",
-        20
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Melt the {butter} in a large pot and soften diced {onion} for 5 minutes.",
+      "Add sliced {mushrooms} and cook for 8 minutes until golden.",
+      "Add diced {potatoes}, {vegetable-stock} and {bay-leaf}, bring to the boil and simmer for 15 minutes. Remove the bay leaf.",
+      "Stir in the {sour-cream}, season with {black-pepper} and serve with chopped {dill}."
     ]
   },
   {
     "id": "russian-herbed-cheese-omelette",
     "name": "Russian Herbed Cheese Omelette",
-    "meal": "morning,big",
+    "meal": "morning",
     "cuisine": "Russian",
     "time": 20,
     "serves": 4,
@@ -862,88 +634,105 @@ KITCHEN.add(
   },
   {
     "id": "russian-apple-and-cinnamon-bake",
-    "name": "Russian Apple and Cinnamon Bake",
-    "meal": "big",
+    "name": "Russian apple sharlotka",
+    "meal": "treat",
     "cuisine": "Russian",
     "time": 60,
-    "serves": 4,
+    "serves": 6,
     "ing": [
       [
-        "parsley",
-        10
+        "butter",
+        20
       ],
       [
-        "black-pepper",
-        2
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
-        1
+        "apple",
+        "5pc"
       ],
       [
         "eggs",
+        "4pc"
+      ],
+      [
+        "sugar",
+        150
+      ],
+      [
+        "flour",
+        150
+      ],
+      [
+        "cinnamon",
         3
       ],
       [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
+        "vanilla",
+        2
       ]
     ],
     "steps": [
-      "Add the {parsley} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 180 °C and grease a 22 cm tin with the {butter}. Peel, core and slice the {apple} and arrange in the tin.",
+      "Whisk the {eggs} and {sugar} for 5 minutes until thick and pale. Fold in the {flour}, {cinnamon} and {vanilla}.",
+      "Pour the batter over the apples and bake for 40 minutes until golden and a skewer comes out clean."
     ]
   },
   {
     "id": "russian-cabbage-and-bean-stew",
-    "name": "Russian Cabbage and Bean Stew",
+    "name": "Russian cabbage and bean stew",
     "meal": "big",
     "cuisine": "Russian",
-    "time": 31,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "potatoes",
-        400
+        "oil",
+        25
       ],
       [
         "onion",
+        "1pc"
+      ],
+      [
+        "carrot",
+        "2pc"
+      ],
+      [
+        "tomato-paste",
+        30
+      ],
+      [
+        "cabbage",
+        500
+      ],
+      [
+        "potatoes",
+        300
+      ],
+      [
+        "white-beans",
+        400
+      ],
+      [
+        "vegetable-stock",
+        600
+      ],
+      [
+        "bay-leaf",
         1
       ],
       [
-        "eggs",
-        3
+        "black-pepper",
+        1
       ],
       [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
+        "dill",
+        10
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Heat {oil} in a large pot and soften diced {onion} and {carrot} for 6 minutes. Stir in the {tomato-paste} for 1 minute.",
+      "Add shredded {cabbage}, diced {potatoes}, {vegetable-stock} and {bay-leaf}. Cover and simmer for 20 minutes.",
+      "Add the drained {white-beans} and simmer for 10 minutes.",
+      "Season with {black-pepper} and serve with chopped {dill}."
     ]
   },
   {

@@ -2,100 +2,6 @@
 KITCHEN.add(
 [
   {
-    "id": "tr-imam-bayildi",
-    "name": "Imam bayildi (stuffed aubergines)",
-    "meal": "big",
-    "cuisine": "Turkish",
-    "time": 75,
-    "serves": 2,
-    "ing": [
-      [
-        "aubergine",
-        "2pc"
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "tomato",
-        "2pc"
-      ],
-      [
-        "garlic",
-        "3pc"
-      ],
-      [
-        "olive-oil",
-        50
-      ],
-      [
-        "parsley",
-        10
-      ],
-      [
-        "salt",
-        2
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 190 °C. Slit {aubergine} lengthways without cutting through and fry in half the {olive-oil} for 8 minutes until browned.",
-      "Cook sliced {onion} in the rest of the {olive-oil} for 8 minutes, then add {garlic}, diced {tomato} and {salt} and cook 5 minutes. Stir in chopped {parsley}.",
-      "Stuff the filling into the aubergines, place in a baking dish with a splash of water and bake 40 minutes."
-    ]
-  },
-  {
-    "id": "tr-mercimek-corbasi",
-    "name": "Turkish red lentil soup (mercimek çorbası)",
-    "meal": "big",
-    "cuisine": "Turkish",
-    "time": 35,
-    "serves": 3,
-    "ing": [
-      [
-        "red-lentils",
-        150
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "carrot",
-        "1pc"
-      ],
-      [
-        "cumin",
-        2
-      ],
-      [
-        "paprika",
-        2
-      ],
-      [
-        "vegetable-stock",
-        800
-      ],
-      [
-        "lemon",
-        "0.5pc"
-      ],
-      [
-        "butter",
-        20
-      ],
-      [
-        "olive-oil",
-        15
-      ]
-    ],
-    "steps": [
-      "Cook diced {onion} and {carrot} in {olive-oil} for 6 minutes.",
-      "Add {red-lentils}, {cumin} and {vegetable-stock} and simmer 20 minutes until the lentils fall apart. Blend until smooth.",
-      "Melt {butter} with {paprika}, drizzle over the soup and serve with a squeeze of {lemon}."
-    ]
-  },
-  {
     "id": "cilbir-turkish-eggs",
     "name": "Çılbır (poached eggs on garlic yogurt)",
     "meal": "morning",
@@ -306,7 +212,7 @@ KITCHEN.add(
   {
     "id": "world-turkish-menemen",
     "name": "Turkish menemen (eggs with peppers and tomato)",
-    "meal": "morning,big",
+    "meal": "morning",
     "cuisine": "Turkish",
     "time": 20,
     "serves": 2,
@@ -552,143 +458,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "turkish-menemen",
-    "name": "Menemen (Turkish eggs with tomato and pepper)",
-    "meal": "big",
-    "cuisine": "Turkish",
-    "time": 20,
-    "serves": 2,
-    "ing": [
-      [
-        "eggs",
-        "4pc"
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "red-pepper",
-        "1pc"
-      ],
-      [
-        "onion",
-        "0.5pc"
-      ],
-      [
-        "olive-oil",
-        20
-      ],
-      [
-        "paprika",
-        3
-      ],
-      [
-        "bread",
-        160
-      ]
-    ],
-    "steps": [
-      "Dice the {onion} and {red-pepper}; chop the {tomato}. Heat the {olive-oil} in a skillet and soften the onion and pepper.",
-      "Stir in the {paprika} and tomato and cook 8–10 minutes until juicy and slightly thickened.",
-      "Beat the {eggs} lightly and pour into the pan. Stir gently over low heat until just softly set; serve immediately with {bread}."
-    ]
-  },
-  {
-    "id": "turkish-imam-bayildi",
-    "name": "İmam bayıldı (stuffed aubergines)",
-    "meal": "big",
-    "cuisine": "Turkish",
-    "time": 60,
-    "serves": 4,
-    "ing": [
-      [
-        "aubergine",
-        600
-      ],
-      [
-        "onion",
-        "2pc"
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "garlic",
-        "4pc"
-      ],
-      [
-        "olive-oil",
-        45
-      ],
-      [
-        "parsley",
-        12
-      ],
-      [
-        "lemon",
-        "0.5pc"
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 190 °C. Halve the {aubergine} lengthwise and score the flesh. Brush with some {olive-oil} and roast 20 minutes.",
-      "Slice the {onion}, chop the {tomato} and mince the {garlic}. Cook them in the remaining oil until soft and jammy; stir in chopped {parsley}.",
-      "Spoon the filling over the aubergine halves and bake 25–30 minutes more until very tender. Finish with juice from the {lemon}; serve warm or at room temperature."
-    ]
-  },
-  {
-    "id": "turkish-mercimek-corbasi",
-    "name": "Mercimek çorbası (Turkish red lentil soup)",
-    "meal": "big",
-    "cuisine": "Turkish",
-    "time": 40,
-    "serves": 4,
-    "ing": [
-      [
-        "red-lentils",
-        250
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "carrot",
-        150
-      ],
-      [
-        "potatoes",
-        150
-      ],
-      [
-        "tomato-paste",
-        25
-      ],
-      [
-        "cumin",
-        4
-      ],
-      [
-        "paprika",
-        3
-      ],
-      [
-        "vegetable-stock",
-        1000
-      ],
-      [
-        "lemon",
-        "1pc"
-      ]
-    ],
-    "steps": [
-      "Dice the {onion}, {carrot} and {potatoes}. Cook the onion in a pot with a little oil until soft, then stir in the {tomato-paste}, {cumin} and {paprika}.",
-      "Add the rinsed {red-lentils}, carrot, potatoes and {vegetable-stock}. Simmer 25–30 minutes until the lentils and vegetables are very soft.",
-      "Blend until smooth and finish with juice from the {lemon}. Thin with hot water if needed and serve warm."
-    ]
-  },
-  {
     "id": "turkish-pide",
     "name": "Turkish pide with spiced beef",
     "meal": "big",
@@ -864,61 +633,6 @@ KITCHEN.add(
       "Spread thinly over the {lavash} on a tray.",
       "Bake 8 minutes until the edges are crisp and the lamb is cooked.",
       "Top with chopped {parsley} and squeeze over {lemon}."
-    ]
-  },
-  {
-    "id": "turkish-lahmacun-style-flatbread",
-    "name": "Turkish-inspired spiced beef flatbreads",
-    "meal": "big",
-    "cuisine": "Turkish",
-    "time": 25,
-    "serves": 2,
-    "ing": [
-      [
-        "pita-bread",
-        "4pc"
-      ],
-      [
-        "beef-mince",
-        250
-      ],
-      [
-        "tomato",
-        180
-      ],
-      [
-        "red-pepper",
-        100
-      ],
-      [
-        "onion",
-        "0.5pc"
-      ],
-      [
-        "garlic",
-        "2pc"
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "paprika",
-        3
-      ],
-      [
-        "parsley",
-        10
-      ],
-      [
-        "lemon",
-        "0.5pc"
-      ]
-    ],
-    "steps": [
-      "Finely chop {tomato}, {red-pepper}, {onion} and {garlic}; mix with {beef-mince}, {cumin} and {paprika}.",
-      "Spread a thin layer of the mixture over {pita-bread}. Bake at 220 °C for 10–12 minutes until the beef is cooked through and the edges crisp.",
-      "Top with chopped {parsley} and a squeeze of {lemon} juice. Serve folded or rolled."
     ]
   },
   {
@@ -1248,7 +962,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Dice the {tomato}, {cucumber}, {onion} and {red-pepper} into small cubes and chop the {parsley}.",
-      "Toss with the {olive-oil}, {lemon-juice}, {sumac} and {salt} and serve right away."
+      "Whisk the {olive-oil}, {lemon-juice}, {sumac} and {salt} together.",
+      "Toss the vegetables and parsley with the dressing and serve right away."
     ]
   },
   {
@@ -1290,7 +1005,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Cook the chopped {onion} in the {butter} for 5 minutes. Stir in the {tomato-paste} for 1 minute.",
-      "Add the {bulgur}, drained {chickpeas}, {vegetable-stock} and {salt}. Cover and simmer for 12 minutes, then rest for 10 minutes off the heat and fluff."
+      "Add the {bulgur}, drained {chickpeas}, {vegetable-stock} and {salt}. Cover and simmer for 12 minutes.",
+      "Rest for 10 minutes off the heat, then fluff with a fork."
     ]
   },
   {
@@ -1368,110 +1084,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-turkish-imam-bayildi",
-    "name": "Turkish imam bayıldı stuffed eggplant",
-    "meal": "big",
-    "cuisine": "Turkish",
-    "time": 65,
-    "serves": 4,
-    "ing": [
-      [
-        "aubergine",
-        4
-      ],
-      [
-        "onion",
-        2
-      ],
-      [
-        "tomato",
-        350
-      ],
-      [
-        "garlic",
-        4
-      ],
-      [
-        "parsley",
-        20
-      ],
-      [
-        "olive-oil",
-        60
-      ],
-      [
-        "sugar",
-        5
-      ],
-      [
-        "salt",
-        5
-      ]
-    ],
-    "steps": [
-      "Heat oven to 190 °C. Halve the {aubergine} lengthwise and score the flesh. Brush with some {olive-oil} and roast cut-side down for 25 minutes.",
-      "Cook sliced {onion} slowly in remaining oil until soft. Add minced {garlic}, chopped {tomato}, {sugar} and {salt}; simmer 10 minutes.",
-      "Turn eggplant cut-side up and press a hollow into each half. Spoon in the onion-tomato mixture.",
-      "Cover loosely and bake 25–30 minutes until very tender. Cool to room temperature and finish with chopped {parsley}."
-    ]
-  },
-  {
-    "id": "turkish-lahmacun",
-    "name": "Lahmacun thin flatbreads with spiced beef",
-    "meal": "big",
-    "cuisine": "Turkish",
-    "time": 45,
-    "serves": 2,
-    "ing": [
-      [
-        "flatbread",
-        400
-      ],
-      [
-        "beef-mince",
-        300
-      ],
-      [
-        "tomato",
-        "1pc"
-      ],
-      [
-        "red-pepper",
-        "1pc"
-      ],
-      [
-        "onion",
-        "0.5pc"
-      ],
-      [
-        "garlic",
-        "2pc"
-      ],
-      [
-        "parsley",
-        20
-      ],
-      [
-        "paprika",
-        4
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "olive-oil",
-        15
-      ]
-    ],
-    "steps": [
-      "Finely mince {tomato}, {red-pepper}, {onion}, {garlic} and {parsley}; mix with {beef-mince}, {paprika}, {cumin} and {olive-oil}.",
-      "Divide {flatbread} into four pieces and roll very thin.",
-      "Spread a thin layer of meat mixture edge to edge. Bake on a preheated tray at 240 °C for 7–9 minutes until crisp and beef is cooked.",
-      "Serve rolled with lemon and fresh herbs if available."
-    ]
-  },
-  {
     "id": "turkish-hunkar-begendi",
     "name": "Hünkâr beğendi lamb stew over smoky eggplant purée",
     "meal": "big",
@@ -1485,19 +1097,19 @@ KITCHEN.add(
       ],
       [
         "aubergine",
-        2
+        "2pc"
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "beef-stock",
@@ -1556,7 +1168,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        1
+        "1pc"
       ],
       [
         "yogurt",
@@ -1599,7 +1211,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "potatoes",
@@ -1607,7 +1219,7 @@ KITCHEN.add(
       ],
       [
         "carrot",
-        1
+        "1pc"
       ],
       [
         "tomato-paste",
@@ -1686,7 +1298,7 @@ KITCHEN.add(
   {
     "id": "turkish-mercimek-koftesi",
     "name": "Mercimek köftesi (Turkish red lentil and bulgur patties)",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Turkish",
     "time": 35,
     "serves": 3,
@@ -1701,7 +1313,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "tomato-paste",
@@ -1764,7 +1376,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "pine-nuts",
@@ -1810,43 +1422,43 @@ KITCHEN.add(
     "name": "Künefe (Turkish shredded pastry with melted cheese and syrup)",
     "meal": "treat",
     "cuisine": "Turkish",
-    "time": 35,
-    "serves": 2,
+    "time": 45,
+    "serves": 4,
     "ing": [
       [
-        "phyllo-pastry",
+        "sugar",
         150
       ],
       [
-        "mozzarella",
-        100
-      ],
-      [
-        "butter",
-        35
-      ],
-      [
-        "sugar",
-        35
-      ],
-      [
         "water",
-        350
+        150
       ],
       [
         "lemon-juice",
-        20
+        10
+      ],
+      [
+        "phyllo-pastry",
+        250
+      ],
+      [
+        "butter",
+        100
+      ],
+      [
+        "mozzarella",
+        200
       ],
       [
         "pistachios",
-        100
+        40
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {phyllo-pastry} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Toss shredded pastry with melted butter, sandwich cheese between two layers and cook in a shallow pan until deeply golden; pour over lemon syrup immediately and scatter pistachios.",
-      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
+      "Boil {sugar}, {water} and {lemon-juice} for 8 minutes into a light syrup, then cool completely.",
+      "Heat the oven to 200 °C. Shred the {phyllo-pastry} finely and toss with melted {butter} until every strand is coated.",
+      "Press half into a buttered 20 cm pan, cover with grated {mozzarella} and top with the rest, pressing down firmly.",
+      "Bake for 25–30 minutes until deep golden. Pour the cool syrup over the hot künefe, scatter with chopped {pistachios} and serve at once."
     ]
   }
 ]

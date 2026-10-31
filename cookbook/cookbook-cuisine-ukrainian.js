@@ -6,40 +6,48 @@ KITCHEN.add(
     "name": "Ukrainian borshch with beetroot, cabbage and beef",
     "meal": "big",
     "cuisine": "Ukrainian",
-    "time": 95,
-    "serves": 2,
+    "time": 110,
+    "serves": 4,
     "ing": [
       [
         "beef-chuck",
         450
       ],
       [
-        "fresh-beetroot",
-        200
-      ],
-      [
-        "cabbage",
-        200
-      ],
-      [
-        "potatoes",
-        350
-      ],
-      [
-        "carrot",
-        150
+        "beef-stock",
+        1000
       ],
       [
         "onion",
         "1pc"
       ],
       [
-        "tomato-paste",
+        "carrot",
+        "2pc"
+      ],
+      [
+        "fresh-beetroot",
+        300
+      ],
+      [
+        "oil",
         20
       ],
       [
-        "beef-stock",
-        450
+        "tomato-paste",
+        30
+      ],
+      [
+        "potatoes",
+        300
+      ],
+      [
+        "cabbage",
+        250
+      ],
+      [
+        "black-pepper",
+        1
       ],
       [
         "sour-cream",
@@ -48,85 +56,13 @@ KITCHEN.add(
       [
         "dill",
         10
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "oil",
-        15
       ]
     ],
     "steps": [
-      "Heat {oil} in a soup pot and soften {onion} without browning.",
-      "Add {beef-stock} and {beef-chuck}, simmering gently until the main ingredient is tender.",
-      "Cook the beef until tender; add beetroot and tomato paste first to preserve the deep colour, then add cabbage and potatoes and simmer until just soft.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
-    ]
-  },
-  {
-    "id": "ua-holubtsi",
-    "name": "Holubtsi (Ukrainian cabbage rolls with rice and meat)",
-    "meal": "big",
-    "cuisine": "Ukrainian",
-    "time": 80,
-    "serves": 2,
-    "ing": [
-      [
-        "cabbage",
-        100
-      ],
-      [
-        "pork-mince",
-        350
-      ],
-      [
-        "rice",
-        180
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "carrot",
-        150
-      ],
-      [
-        "canned-tomatoes",
-        200
-      ],
-      [
-        "vegetable-stock",
-        450
-      ],
-      [
-        "sour-cream",
-        100
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "oil",
-        15
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 190 °C and lightly grease a baking dish or line a tray.",
-      "Prepare {pork-mince} with the other listed ingredients, layer or shape the mixture evenly and season it well.",
-      "Blanch cabbage leaves until pliable, mix mince with partly cooked rice, roll into tight parcels and nestle seam-side down in tomato sauce; cover and bake until tender.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Put {beef-chuck} in a pot with the {beef-stock}, bring to the boil, skim, then simmer for 1 hour 15 minutes until tender. Lift out, shred and keep the stock.",
+      "Meanwhile fry diced {onion}, grated {carrot} and grated {fresh-beetroot} in {oil} for 8 minutes, then stir in the {tomato-paste} and cook for 2 minutes.",
+      "Add diced {potatoes} to the stock and simmer for 10 minutes. Add the shredded {cabbage} and the fried vegetables and simmer for 12 minutes until tender.",
+      "Return the beef, season with {black-pepper} and serve topped with {sour-cream} and chopped {dill}."
     ]
   },
   {
@@ -134,12 +70,12 @@ KITCHEN.add(
     "name": "Deruny (Ukrainian potato pancakes with sour cream)",
     "meal": "morning",
     "cuisine": "Ukrainian",
-    "time": 30,
+    "time": 35,
     "serves": 2,
     "ing": [
       [
         "potatoes",
-        350
+        450
       ],
       [
         "onion",
@@ -147,19 +83,11 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        "2pc"
+        "1pc"
       ],
       [
         "flour",
-        120
-      ],
-      [
-        "sour-cream",
-        100
-      ],
-      [
-        "oil",
-        15
+        40
       ],
       [
         "salt",
@@ -168,13 +96,21 @@ KITCHEN.add(
       [
         "black-pepper",
         1
+      ],
+      [
+        "oil",
+        60
+      ],
+      [
+        "sour-cream",
+        100
       ]
     ],
     "steps": [
-      "Prepare {potatoes} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {potatoes} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Grate potatoes finely, squeeze well, bind with onion, egg and flour, then shallow-fry small pancakes until crisp; drain on a rack rather than stacking.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Grate the {potatoes} and {onion} finely and squeeze out as much liquid as you can in a clean cloth.",
+      "Mix with the {eggs}, {flour}, {salt} and {black-pepper}.",
+      "Heat {oil} in a wide skillet over medium-high heat. Drop in spoonfuls of batter, flatten slightly and fry for 3–4 minutes per side until crisp and golden. Drain on a rack.",
+      "Serve hot with {sour-cream}."
     ]
   },
   {
@@ -182,47 +118,47 @@ KITCHEN.add(
     "name": "Pampushky garlic rolls to serve with borshch",
     "meal": "bite",
     "cuisine": "Ukrainian",
-    "time": 90,
-    "serves": 2,
+    "time": 120,
+    "serves": 4,
     "ing": [
       [
         "flour",
-        120
+        300
       ],
       [
         "yeast",
         7
       ],
       [
-        "water",
-        350
+        "sugar",
+        8
       ],
       [
-        "sugar",
-        35
+        "salt",
+        5
+      ],
+      [
+        "water",
+        180
       ],
       [
         "oil",
-        15
+        40
       ],
       [
         "garlic",
-        3
+        "4pc"
       ],
       [
         "parsley",
         10
-      ],
-      [
-        "salt",
-        3
       ]
     ],
     "steps": [
-      "Mix {flour} with the remaining dough ingredients to make a workable dough or batter; knead or beat until even.",
-      "Rest or prove the mixture as needed, shape it, then bake, steam or griddle until cooked through.",
-      "Knead a soft yeast dough, let it rise until doubled, form small rolls and bake until golden; brush the hot tops with crushed garlic, oil and parsley.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Mix {flour}, {yeast}, {sugar} and {salt}. Add the {water} and 15 ml of the {oil} and knead for 8 minutes into a soft dough. Cover and prove for 1 hour.",
+      "Divide into 12 balls, place on a lined tray and prove for 30 minutes.",
+      "Bake at 200 °C for 18 minutes until golden.",
+      "Crush the {garlic} with the remaining {oil} and chopped {parsley}, brush over the hot rolls and serve."
     ]
   },
   {
@@ -230,32 +166,32 @@ KITCHEN.add(
     "name": "Banosh (Carpathian cornmeal porridge with cheese)",
     "meal": "big",
     "cuisine": "Ukrainian",
-    "time": 25,
+    "time": 30,
     "serves": 2,
     "ing": [
-      [
-        "cornmeal",
-        120
-      ],
-      [
-        "sour-cream",
-        100
-      ],
-      [
-        "butter",
-        35
-      ],
-      [
-        "feta",
-        80
-      ],
       [
         "bacon",
         120
       ],
       [
-        "salt",
-        3
+        "water",
+        500
+      ],
+      [
+        "cornmeal",
+        150
+      ],
+      [
+        "sour-cream",
+        150
+      ],
+      [
+        "butter",
+        30
+      ],
+      [
+        "feta",
+        80
       ],
       [
         "black-pepper",
@@ -263,10 +199,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare and measure all ingredients, then heat the pan or pot over medium heat.",
-      "Cook {cornmeal} with the seasonings until the dish reaches its intended texture and the flavours meld.",
-      "Whisk cornmeal slowly into simmering sour cream and water, stirring until thick and smooth; top with browned bacon and crumbled cheese.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Fry the {bacon} in a dry pan for 6 minutes until crisp. Set aside, keeping the fat.",
+      "Bring the {water} to a simmer with the {sour-cream}. Whisk in the {cornmeal} slowly and cook, stirring, for 15 minutes until thick and smooth.",
+      "Stir in the {butter} and {black-pepper}.",
+      "Spoon into bowls and top with the bacon, its fat and crumbled {feta}."
     ]
   },
   {
@@ -275,11 +211,11 @@ KITCHEN.add(
     "meal": "treat",
     "cuisine": "Ukrainian",
     "time": 45,
-    "serves": 2,
+    "serves": 4,
     "ing": [
       [
         "flour",
-        120
+        125
       ],
       [
         "milk",
@@ -290,35 +226,35 @@ KITCHEN.add(
         "2pc"
       ],
       [
+        "salt",
+        1
+      ],
+      [
+        "butter",
+        40
+      ],
+      [
         "cottage-cheese",
-        200
+        250
+      ],
+      [
+        "sugar",
+        30
+      ],
+      [
+        "vanilla",
+        2
       ],
       [
         "sour-cream",
         100
-      ],
-      [
-        "butter",
-        35
-      ],
-      [
-        "sugar",
-        35
-      ],
-      [
-        "vanilla",
-        3
-      ],
-      [
-        "salt",
-        3
       ]
     ],
     "steps": [
-      "Whisk the batter until smooth and let it rest briefly so the flour hydrates.",
-      "Cook {cottage-cheese} in a lightly greased pan over medium heat, turning or folding once the surface sets.",
-      "Cook very thin crêpes, mix farmer cheese with sugar and vanilla, roll the filling inside each crêpe and bake briefly in butter until warmed through.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Whisk {flour}, {milk}, {eggs} and {salt} into a smooth thin batter. Rest for 15 minutes.",
+      "Melt half the {butter} in a non-stick pan and cook thin crêpes, about 1 minute per side.",
+      "Mix {cottage-cheese} with {sugar} and {vanilla}. Spoon onto each crêpe and fold into parcels.",
+      "Fry the parcels in the remaining {butter} until golden on both sides and serve with {sour-cream}."
     ]
   },
   {
@@ -326,47 +262,47 @@ KITCHEN.add(
     "name": "Kyiv cake-inspired hazelnut meringue layer cake",
     "meal": "treat",
     "cuisine": "Ukrainian",
-    "time": 120,
-    "serves": 2,
+    "time": 150,
+    "serves": 8,
     "ing": [
       [
-        "eggs",
-        "2pc"
+        "egg-whites",
+        200
       ],
       [
         "sugar",
-        35
+        200
       ],
       [
-        "walnuts",
-        40
+        "hazelnut-meal",
+        150
       ],
       [
         "flour",
-        120
+        20
       ],
       [
         "butter",
-        35
+        200
       ],
       [
         "condensed-milk",
-        100
-      ],
-      [
-        "cocoa",
-        20
+        120
       ],
       [
         "vanilla",
         3
+      ],
+      [
+        "cocoa",
+        15
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine None with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Whip egg whites to stiff peaks, fold through toasted nuts and a little flour, bake low and slow into crisp layers, then sandwich with buttercream and chill.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 140 °C and line three baking trays with a 20 cm circle each. Whisk the {egg-whites} to stiff peaks, gradually add the {sugar} until glossy, then fold in {hazelnut-meal} and {flour}.",
+      "Spread the meringue over the three circles and bake for 1 hour until dry and crisp. Cool completely.",
+      "Beat the soft {butter} with {condensed-milk} and {vanilla} until light and fluffy.",
+      "Sandwich the layers with the buttercream and cover the top and sides. Dust with {cocoa} and chill for 3 hours before slicing."
     ]
   },
   {
@@ -374,11 +310,19 @@ KITCHEN.add(
     "name": "Uzvar (Ukrainian dried-fruit compote)",
     "meal": "treat",
     "cuisine": "Ukrainian",
-    "time": 35,
-    "serves": 2,
+    "time": 40,
+    "serves": 4,
     "ing": [
       [
-        "dates",
+        "apple",
+        "2pc"
+      ],
+      [
+        "pear",
+        "2pc"
+      ],
+      [
+        "dried-prunes",
         80
       ],
       [
@@ -386,64 +330,67 @@ KITCHEN.add(
         50
       ],
       [
-        "apple",
-        2
-      ],
-      [
-        "pear",
-        100
-      ],
-      [
         "water",
-        350
-      ],
-      [
-        "honey",
-        100
+        1500
       ],
       [
         "cinnamon",
         2
+      ],
+      [
+        "honey",
+        40
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {dates} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Simmer dried fruit gently with water and cinnamon until the liquid is fragrant but the fruit holds its shape; sweeten lightly with honey after cooling.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Rinse the dried {dried-prunes} and {raisins}. Slice the {apple} and {pear}.",
+      "Put everything in a pot with the {water} and {cinnamon} and bring to a boil, then simmer gently for 25 minutes.",
+      "Take off the heat, cover and leave to steep until cool. Stir in the {honey} and serve warm or chilled."
     ]
   },
   {
     "id": "ua-green-borshch",
-    "name": "Green borshch with sorrel-style greens and egg",
+    "name": "Green borshch with greens and egg",
     "meal": "big",
     "cuisine": "Ukrainian",
-    "time": 35,
-    "serves": 2,
+    "time": 40,
+    "serves": 4,
     "ing": [
       [
-        "spinach",
-        150
-      ],
-      [
-        "potatoes",
-        350
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "carrot",
-        150
+        "oil",
+        20
       ],
       [
         "onion",
         "1pc"
       ],
       [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "potatoes",
+        400
+      ],
+      [
         "vegetable-stock",
-        450
+        1200
+      ],
+      [
+        "spinach",
+        250
+      ],
+      [
+        "eggs",
+        "4pc"
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "black-pepper",
+        1
       ],
       [
         "sour-cream",
@@ -451,43 +398,31 @@ KITCHEN.add(
       ],
       [
         "dill",
-        10
-      ],
-      [
-        "lemon",
-        "1pc"
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "oil",
         15
       ]
     ],
     "steps": [
-      "Heat {oil} in a soup pot and soften {onion} without browning.",
-      "Add {vegetable-stock} and {spinach}, simmering gently until the main ingredient is tender.",
-      "Simmer potatoes and vegetables in stock until tender, add greens at the end for a bright tang, then ladle over chopped boiled egg and finish with sour cream.",
-      "Finish with a little {lemon} if needed, taste for seasoning and serve while the texture is at its best."
+      "Soften diced {onion} and grated {carrot} in {oil} for 6 minutes.",
+      "Add diced {potatoes} and {vegetable-stock}, bring to the boil and simmer for 15 minutes.",
+      "Meanwhile boil the {eggs} for 8 minutes, cool, peel and halve.",
+      "Add the shredded {spinach} to the soup and cook for 3 minutes. Season with the juice of the {lemon} and {black-pepper}. Serve with the eggs, {sour-cream} and chopped {dill}."
     ]
   },
   {
     "id": "ua-hrechanyky",
-    "name": "Hrechanyky (buckwheat and minced-meat patties)",
+    "name": "Hrechanyky (buckwheat and minced-beef patties)",
     "meal": "big",
     "cuisine": "Ukrainian",
-    "time": 40,
-    "serves": 2,
+    "time": 45,
+    "serves": 4,
     "ing": [
       [
         "buckwheat",
-        100
+        150
+      ],
+      [
+        "water",
+        300
       ],
       [
         "beef-mince",
@@ -499,73 +434,34 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        "2pc"
+        "1pc"
       ],
       [
         "garlic",
-        3
+        "2pc"
       ],
       [
         "flour",
-        120
-      ],
-      [
-        "oil",
-        15
+        30
       ],
       [
         "salt",
-        3
+        4
       ],
       [
         "black-pepper",
         1
+      ],
+      [
+        "oil",
+        40
       ]
     ],
     "steps": [
-      "Prepare {beef-mince} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {beef-mince} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Cook buckwheat and cool it before mixing with mince, onion and egg; shape compact patties and fry until browned and cooked through.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
-    ]
-  },
-  {
-    "id": "ukrainian-borscht-beet-soup",
-    "name": "Ukrainian Borscht Beet Soup",
-    "meal": "big",
-    "cuisine": "Ukrainian",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {butter} in a heavy pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir well so the ingredients are evenly coated.",
-      "Add the {eggs} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Simmer the {buckwheat} in the {water} with a pinch of the {salt}, covered, for 15 minutes until the water is absorbed. Cool.",
+      "Mix the buckwheat with {beef-mince}, grated {onion}, {eggs}, crushed {garlic}, the rest of the {salt} and {black-pepper}.",
+      "Shape into 8 patties and dust lightly with {flour}.",
+      "Fry in {oil} over medium heat for 5 minutes per side until browned and cooked through."
     ]
   },
   {
@@ -619,41 +515,54 @@ KITCHEN.add(
   },
   {
     "id": "ukrainian-chicken-kyiv-inspired-cutlets",
-    "name": "Ukrainian Chicken Kyiv-Inspired Cutlets",
+    "name": "Chicken Kyiv-style cutlets",
     "meal": "big",
     "cuisine": "Ukrainian",
-    "time": 25,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
+        "butter",
         100
       ],
       [
-        "mushrooms",
-        150
+        "garlic",
+        "2pc"
       ],
       [
-        "butter",
-        20
+        "dill",
+        10
+      ],
+      [
+        "chicken-breast",
+        "4pc"
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "flour",
+        40
+      ],
+      [
+        "eggs",
+        "2pc"
+      ],
+      [
+        "breadcrumbs",
+        120
+      ],
+      [
+        "oil",
+        100
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Mash the soft {butter} with crushed {garlic}, chopped {dill} and a pinch of the {salt}. Shape into a log, wrap and freeze for 30 minutes.",
+      "Flatten each {chicken-breast} between sheets of cling film to 1 cm. Season with the remaining {salt}, put a piece of butter in the centre of each and roll tightly, tucking in the ends.",
+      "Dust with {flour}, dip in beaten {eggs} and coat in {breadcrumbs}.",
+      "Fry in {oil} for 3 minutes per side until golden, then bake at 190 °C for 15 minutes until cooked through."
     ]
   },
   {
@@ -715,95 +624,61 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "ukrainian-deruny-potato-pancakes",
-    "name": "Ukrainian Deruny Potato Pancakes",
+    "id": "ukrainian-creamy-mushroom-and-potato-soup",
+    "name": "Ukrainian creamy mushroom and potato soup",
     "meal": "big",
     "cuisine": "Ukrainian",
-    "time": 39,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "parsley",
+        "butter",
+        30
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "mushrooms",
+        400
+      ],
+      [
+        "potatoes",
+        400
+      ],
+      [
+        "vegetable-stock",
+        1000
+      ],
+      [
+        "cream",
+        100
+      ],
+      [
+        "dill",
         10
       ],
       [
         "black-pepper",
-        2
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
         1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
       ]
     ],
     "steps": [
-      "Add the {parsley} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "ukrainian-creamy-mushroom-and-potato-soup",
-    "name": "Ukrainian Creamy Mushroom and Potato Soup",
-    "meal": "big",
-    "cuisine": "Ukrainian",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Melt the {butter} in a large pot and soften diced {onion} and {carrot} for 6 minutes.",
+      "Add sliced {mushrooms} and cook for 8 minutes until their liquid has evaporated.",
+      "Add diced {potatoes} and {vegetable-stock}, bring to the boil and simmer for 15 minutes.",
+      "Stir in the {cream}, season with {black-pepper} and serve with chopped {dill}."
     ]
   },
   {
     "id": "ukrainian-herbed-cheese-omelette",
     "name": "Ukrainian Herbed Cheese Omelette",
-    "meal": "morning,big",
+    "meal": "morning",
     "cuisine": "Ukrainian",
     "time": 20,
     "serves": 4,
@@ -842,88 +717,106 @@ KITCHEN.add(
   },
   {
     "id": "ukrainian-apple-and-cinnamon-bake",
-    "name": "Ukrainian Apple and Cinnamon Bake",
-    "meal": "big",
+    "name": "Ukrainian apple charlotte (sharlotka)",
+    "meal": "treat",
     "cuisine": "Ukrainian",
     "time": 60,
-    "serves": 4,
+    "serves": 6,
     "ing": [
       [
-        "parsley",
-        10
+        "butter",
+        20
       ],
       [
-        "black-pepper",
-        2
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
-        1
+        "apple",
+        "5pc"
       ],
       [
         "eggs",
-        3
+        "3pc"
       ],
       [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
+        "sugar",
         150
+      ],
+      [
+        "flour",
+        150
+      ],
+      [
+        "baking-powder",
+        5
+      ],
+      [
+        "cinnamon",
+        4
       ]
     ],
     "steps": [
-      "Add the {parsley} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 180 °C and grease a 22 cm tin with the {butter}. Peel, core and slice the {apple} and arrange in the tin.",
+      "Whisk the {eggs} and {sugar} for 5 minutes until thick and pale.",
+      "Fold in the {flour}, {baking-powder} and {cinnamon} and pour over the apples.",
+      "Bake for 40 minutes until golden and a skewer comes out clean. Cool slightly and serve."
     ]
   },
   {
     "id": "ukrainian-cabbage-and-bean-stew",
-    "name": "Ukrainian Cabbage and Bean Stew",
+    "name": "Ukrainian cabbage and bean stew",
     "meal": "big",
     "cuisine": "Ukrainian",
-    "time": 31,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "potatoes",
-        400
+        "oil",
+        25
       ],
       [
         "onion",
+        "1pc"
+      ],
+      [
+        "carrot",
+        "2pc"
+      ],
+      [
+        "tomato-paste",
+        30
+      ],
+      [
+        "cabbage",
+        500
+      ],
+      [
+        "potatoes",
+        300
+      ],
+      [
+        "white-beans",
+        400
+      ],
+      [
+        "vegetable-stock",
+        600
+      ],
+      [
+        "bay-leaf",
         1
       ],
       [
-        "eggs",
-        3
+        "black-pepper",
+        1
       ],
       [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
+        "dill",
+        10
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Heat {oil} in a large pot and soften diced {onion} and {carrot} for 6 minutes. Stir in the {tomato-paste} for 1 minute.",
+      "Add shredded {cabbage}, diced {potatoes}, {vegetable-stock} and {bay-leaf}. Bring to the boil, cover and simmer for 20 minutes.",
+      "Add the drained {white-beans} and simmer for 10 minutes more.",
+      "Season with {black-pepper} and serve with chopped {dill}."
     ]
   },
   {

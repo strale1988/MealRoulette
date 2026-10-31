@@ -27,7 +27,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -39,7 +39,7 @@ KITCHEN.add(
       ],
       [
         "water",
-        350
+        150
       ],
       [
         "salt",
@@ -65,8 +65,8 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "flatbread",
-        "2pc"
+        "roti",
+        "4pc"
       ],
       [
         "eggs",
@@ -82,7 +82,7 @@ KITCHEN.add(
       ],
       [
         "leek",
-        1
+        "1pc"
       ],
       [
         "chicken-thigh",
@@ -98,7 +98,7 @@ KITCHEN.add(
       ],
       [
         "oil",
-        15
+        30
       ],
       [
         "salt",
@@ -110,10 +110,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare {flatbread} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {flatbread} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Slice the flatbread thinly and chop it repeatedly on a hot pan with two spatulas; add egg, chicken and vegetables so the pieces pick up the curry seasoning.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Slice {chicken-thigh} into thin strips and toss with {curry-powder}, {salt} and {black-pepper}. Shred the {roti} into 1 cm strips, shred the {cabbage}, grate the {carrot} and slice the {leek}.",
+      "Heat {oil} in a large wok over high heat and stir-fry the chicken for 6 minutes until cooked; push to the side.",
+      "Add the leek, cabbage and carrot and stir-fry for 3 minutes. Push aside, crack in the {eggs} and scramble for 1 minute.",
+      "Add the roti and {soy-sauce} and chop and toss with two spatulas for 3 minutes until the pieces are hot and slightly crisp."
     ]
   },
   {
@@ -139,62 +139,13 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "oil",
-        15
       ]
     ],
     "steps": [
-      "Rinse {rice} if it is uncooked; prepare the other ingredients while it drains.",
-      "Warm the cooking fat and season the main ingredients before adding the grain.",
-      "Combine the ingredients with {water} and cook covered until the rice is tender and the liquid is absorbed.",
-      "Cook rice until very soft, stir in coconut milk and salt, then press firmly into a shallow tray while warm and cut into diamonds once set.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
-    ]
-  },
-  {
-    "id": "lk-pol-sambol",
-    "name": "Pol sambol (fresh coconut, chilli and lime relish)",
-    "meal": "bite",
-    "cuisine": "Sri Lankan",
-    "time": 10,
-    "serves": 2,
-    "ing": [
-      [
-        "coconut-flakes",
-        30
-      ],
-      [
-        "red-onion",
-        "1pc"
-      ],
-      [
-        "red-chilli",
-        1
-      ],
-      [
-        "lime",
-        "1pc"
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "fish-sauce",
-        15
-      ]
-    ],
-    "steps": [
-      "Prepare {coconut-flakes} and cut the remaining vegetables or fruit into even bite-sized pieces.",
-      "Mix the dressing ingredients separately and taste for a balance of salt, acidity and sweetness.",
-      "Pound the onion, chilli and salt together before adding coconut and lime; the mixture should be punchy, moist and coarse rather than a smooth paste.",
-      "Finish with a little {lime} if needed, taste for seasoning and serve while the texture is at its best."
+      "Rinse the {rice} and cook in the {water} with the {salt} over medium heat, covered, for 20 minutes until very soft and the water is absorbed.",
+      "Stir in the {coconut-milk} and cook, stirring, for 5 minutes until thick and sticky.",
+      "Press firmly into a wet shallow tray, about 2 cm thick, and cool for 10 minutes.",
+      "Cut into diamonds and serve warm."
     ]
   },
   {
@@ -219,7 +170,7 @@ KITCHEN.add(
       ],
       [
         "sugar",
-        35
+        10
       ],
       [
         "eggs",
@@ -232,13 +183,17 @@ KITCHEN.add(
       [
         "oil",
         15
+      ],
+      [
+        "water",
+        100
       ]
     ],
     "steps": [
-      "Whisk the batter until smooth and let it rest briefly so the flour hydrates.",
-      "Cook {rice-flour} in a lightly greased pan over medium heat, turning or folding once the surface sets.",
-      "Rest the fermented rice-flour batter until lightly bubbly, swirl a small ladleful around a hot curved pan and crack an egg into the centre before covering to set.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Whisk {rice-flour}, {yeast}, {sugar} and {salt} with the {coconut-milk} and {water} into a smooth batter. Cover and ferment for 1 hour until bubbly.",
+      "Heat a small, deep non-stick pan or wok over medium heat and brush it lightly with {oil}.",
+      "Pour in a small ladle of batter and swirl it up the sides so the edges are thin and the centre thick. Crack one of the {eggs} into the centre, cover and cook for 3 minutes until the white sets and the edges crisp.",
+      "Slide out and repeat with the remaining batter and the second egg."
     ]
   },
   {
@@ -259,7 +214,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        "1pc"
+        "2pc"
       ],
       [
         "green-beans",
@@ -279,15 +234,15 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "beef-stock",
         450
       ],
       [
-        "banana",
-        2
+        "plantain",
+        "1pc"
       ],
       [
         "salt",
@@ -299,14 +254,15 @@ KITCHEN.add(
       ],
       [
         "oil",
-        15
+        30
       ]
     ],
     "steps": [
-      "Heat the oven to 190 °C and lightly grease a baking dish or line a tray.",
-      "Prepare {rice} with the other listed ingredients, layer or shape the mixture evenly and season it well.",
-      "Cook the rice and meat mixture separately, arrange with vegetables and egg in parcels, and bake covered so the flavours meld; use banana leaves if available for wrapping.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 190 °C. Boil the {eggs} for 9 minutes, cool, peel and halve.",
+      "Cook the {rice} in 360 ml of the {beef-stock} with a pinch of {salt}, covered, for 15 minutes.",
+      "Soften chopped {onion} and {garlic} in half of the {oil} for 5 minutes, add {cinnamon}, {cardamom}, {black-pepper} and the {beef-mince} and brown for 8 minutes. Add the remaining stock and simmer for 12 minutes until moist and reduced; season with salt.",
+      "Fry the sliced {plantain} and trimmed {green-beans} in the remaining oil for 5 minutes until golden and tender.",
+      "Divide the rice, curry, plantain, beans and egg between two foil parcels (or banana leaves if available), seal and bake for 20 minutes."
     ]
   },
   {
@@ -331,7 +287,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -383,7 +339,7 @@ KITCHEN.add(
     "ing": [
       [
         "eggs",
-        "2pc"
+        "3pc"
       ],
       [
         "coconut-milk",
@@ -391,7 +347,7 @@ KITCHEN.add(
       ],
       [
         "brown-sugar",
-        30
+        80
       ],
       [
         "cardamom",
@@ -407,10 +363,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {eggs} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Whisk eggs gently with coconut milk and brown sugar, strain into small moulds and steam in a covered water bath until just set; chill before serving.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 160 °C and boil a kettle.",
+      "Whisk {eggs} gently with {brown-sugar}, {coconut-milk}, {cardamom}, {nutmeg} and {vanilla} until the sugar dissolves; strain into two small heatproof dishes.",
+      "Cover with foil, set in a roasting tin and pour in hot water to halfway up the dishes. Bake for 30 minutes until just set with a slight wobble.",
+      "Cool, then chill for at least 1 hour before serving."
     ]
   },
   {
@@ -427,7 +383,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -539,41 +495,58 @@ KITCHEN.add(
   },
   {
     "id": "sri-lankan-dhal-curry",
-    "name": "Sri Lankan Dhal Curry",
+    "name": "Sri Lankan Dhal Curry (parippu)",
     "meal": "big",
     "cuisine": "Sri Lankan",
-    "time": 30,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        400
-      ],
-      [
-        "rice",
+        "red-lentils",
         250
       ],
       [
-        "soy-sauce",
-        25
+        "coconut-milk",
+        200
       ],
       [
-        "ginger",
-        10
+        "onion",
+        "1pc"
       ],
       [
         "garlic",
+        "3pc"
+      ],
+      [
+        "turmeric",
         2
       ],
       [
-        "spring-onion",
+        "curry-leaves",
+        5
+      ],
+      [
+        "mustard-seeds",
         2
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {soy-sauce} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Rinse the {red-lentils} and simmer in 600 ml water with the {turmeric} and {salt} for 15 minutes until soft and creamy.",
+      "Stir in the {coconut-milk} and simmer for 5 minutes.",
+      "Heat {oil}, add the {mustard-seeds} until they pop, then the {curry-leaves}, sliced {onion}, crushed {garlic} and sliced {green-chilli} for 6 minutes until golden.",
+      "Stir the tempered onion mixture into the dhal and serve hot."
     ]
   },
   {
@@ -612,48 +585,73 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "sri-lankan-chicken-curry",
-    "name": "Sri Lankan Chicken Curry",
+    "id": "sri-lankan-devilled-chicken",
+    "name": "Devilled Chicken (Sri Lankan sweet-hot stir-fry)",
     "meal": "big",
     "cuisine": "Sri Lankan",
-    "time": 25,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
         "chicken-thigh",
-        400
+        500
       ],
       [
-        "rice",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "soy-sauce",
-        25
-      ],
-      [
-        "ginger",
-        10
+        "red-pepper",
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "3pc"
+      ],
+      [
+        "ginger",
+        15
+      ],
+      [
+        "ketchup",
+        60
+      ],
+      [
+        "soy-sauce",
+        20
+      ],
+      [
+        "chilli-flakes",
+        3
+      ],
+      [
+        "cornstarch",
+        15
+      ],
+      [
+        "sugar",
+        10
+      ],
+      [
+        "oil",
+        40
       ],
       [
         "spring-onion",
-        2
+        "3pc"
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Cut the {chicken-thigh} into 2 cm pieces and toss with half of the {soy-sauce} and the {cornstarch}.",
+      "Heat half of the {oil} in a wok and fry the chicken for 6 minutes until golden and cooked through; remove.",
+      "Add the remaining oil, fry wedges of {onion} and {red-pepper} for 3 minutes, then crushed {garlic}, grated {ginger} and {chilli-flakes} for 1 minute.",
+      "Stir in the {ketchup}, {sugar}, the remaining soy sauce and 3 tablespoons water, return the chicken and toss for 3 minutes until glazed. Scatter with sliced {spring-onion}."
     ]
   },
   {
     "id": "sri-lankan-pol-roti-flatbread",
     "name": "Sri Lankan Pol Roti Flatbread",
-    "meal": "morning,bite",
+    "meal": "morning",
     "cuisine": "Sri Lankan",
     "time": 35,
     "serves": 4,
@@ -751,42 +749,59 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "sri-lankan-ginger-garlic-noodle-bowl",
-    "name": "Sri Lankan Ginger Garlic Noodle Bowl",
+    "id": "sri-lankan-egg-vegetable-noodles",
+    "name": "Sri Lankan Egg and Vegetable Noodles",
     "meal": "big",
     "cuisine": "Sri Lankan",
-    "time": 46,
+    "time": 25,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        400
+        "noodles",
+        300
       ],
       [
-        "rice",
-        250
+        "eggs",
+        "2pc"
       ],
       [
-        "soy-sauce",
-        25
+        "cabbage",
+        200
+      ],
+      [
+        "carrot",
+        "2pc"
+      ],
+      [
+        "spring-onion",
+        "3pc"
+      ],
+      [
+        "garlic",
+        "3pc"
       ],
       [
         "ginger",
         10
       ],
       [
-        "garlic",
-        2
+        "soy-sauce",
+        30
       ],
       [
-        "spring-onion",
-        2
+        "curry-powder",
+        4
+      ],
+      [
+        "oil",
+        30
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Cook the {noodles} according to the packet, drain and rinse. Shred the {cabbage}, cut the {carrot} into matchsticks and slice the {spring-onion}.",
+      "Heat {oil} in a wok, fry crushed {garlic} and grated {ginger} for 30 seconds, then the carrot and cabbage for 4 minutes.",
+      "Push the vegetables aside, crack in the {eggs} and scramble for 1 minute.",
+      "Add the noodles, {soy-sauce} and {curry-powder} and toss over high heat for 3 minutes. Scatter with the spring onion."
     ]
   },
   {
@@ -910,42 +925,59 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "sri-lankan-coconut-vegetable-curry",
-    "name": "Sri Lankan Coconut Vegetable Curry",
+    "id": "sri-lankan-beetroot-curry",
+    "name": "Sri Lankan Beetroot Curry",
     "meal": "big",
     "cuisine": "Sri Lankan",
-    "time": 31,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        400
+        "beetroot",
+        500
       ],
       [
-        "rice",
-        250
+        "coconut-milk",
+        200
       ],
       [
-        "soy-sauce",
-        25
-      ],
-      [
-        "ginger",
-        10
+        "onion",
+        "1pc"
       ],
       [
         "garlic",
+        "3pc"
+      ],
+      [
+        "curry-powder",
+        8
+      ],
+      [
+        "curry-leaves",
+        5
+      ],
+      [
+        "mustard-seeds",
         2
       ],
       [
-        "spring-onion",
-        2
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Peel the {beetroot} and cut into 2 cm cubes. Chop the {onion}, crush the {garlic} and slice the {green-chilli}.",
+      "Heat {oil}, add the {mustard-seeds} until they pop, then the {curry-leaves} and onion for 5 minutes. Add the garlic, chilli and {curry-powder} for 1 minute.",
+      "Add the beetroot, {salt} and 150 ml water, cover and cook for 15 minutes.",
+      "Pour in the {coconut-milk} and simmer uncovered for 10 minutes until the beetroot is tender and the sauce is thick and deep red."
     ]
   },
   {

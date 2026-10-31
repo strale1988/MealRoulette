@@ -19,7 +19,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "oil",
@@ -31,15 +31,15 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Finely chop {spinach} and simmer in {vegetable-stock} until soft and silky.",
-      "Fry sliced {garlic} briefly in {oil} until fragrant, taking care not to burn it.",
-      "Stir garlic oil into the greens, season and finish with {lemon-juice}."
+      "Finely chop {spinach} and simmer in {vegetable-stock} for 12 minutes until soft and silky.",
+      "Fry sliced {garlic} in {oil} for 1–2 minutes until fragrant, taking care not to burn it.",
+      "Stir the garlic oil into the greens and finish with {lemon-juice}."
     ]
   },
   {
     "id": "sudanese-kisra",
     "name": "Kisra-style fermented sorghum flatbread",
-    "meal": "bake",
+    "meal": "bite",
     "cuisine": "Sudanese",
     "time": 30,
     "serves": 4,
@@ -59,8 +59,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Whisk {wholemeal-flour}, {water} and {salt} into a thin batter; traditionally ferment overnight for a tangier flavour.",
-      "Heat a nonstick skillet and spread a very thin layer of batter.",
-      "Cook briefly until set and pliable; stack under a cloth and serve with stew."
+      "Heat a non-stick skillet over medium heat and spread a very thin layer of batter.",
+      "Cook for 1–2 minutes until set and pliable; stack under a cloth and serve with stew."
     ]
   },
   {
@@ -81,11 +81,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "vegetable-stock",
@@ -97,15 +97,15 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Soften {onion} and {garlic}; add {tomato} and simmer to a thick base.",
-      "Add {okra} and {vegetable-stock}; cook gently until tender without stirring too vigorously.",
-      "Season and finish with {lemon-juice}."
+      "Soften {onion} and {garlic} for 5 minutes; add {tomato} and simmer for 10 minutes to a thick base.",
+      "Add {okra} and {vegetable-stock}; cook gently for 20 minutes until tender, without stirring too vigorously.",
+      "Finish with {lemon-juice} and serve hot."
     ]
   },
   {
     "id": "sudanese-shai-bil-laban",
     "name": "Sudanese spiced milk tea",
-    "meal": "drink",
+    "meal": "morning",
     "cuisine": "Sudanese",
     "time": 15,
     "serves": 4,
@@ -132,47 +132,65 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Bring {water} and {cardamom} to a gentle simmer.",
-      "Add {milk} and {sugar}; heat without boiling over.",
+      "Bring {water}, {cardamom} and a pinch of {black-pepper} to a gentle simmer for 5 minutes.",
+      "Add {milk} and {sugar}; heat for 4 minutes without letting it boil over.",
       "Strain and serve hot."
     ]
   },
   {
     "id": "sudanese-ful-medames",
     "name": "Sudanese Ful Medames",
-    "meal": "big",
+    "meal": "morning",
     "cuisine": "Sudanese",
     "time": 30,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
+        "broad-beans",
         500
       ],
       [
-        "onion",
-        1
-      ],
-      [
         "tomato",
-        300
+        "2pc"
       ],
       [
-        "peanut-butter",
-        50
+        "onion",
+        "1pc"
       ],
       [
-        "rice",
-        250
+        "garlic",
+        "3pc"
       ],
       [
-        "spinach",
-        150
+        "cumin",
+        3
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "olive-oil",
+        40
+      ],
+      [
+        "parsley",
+        10
+      ],
+      [
+        "feta",
+        60
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Chop the {onion} and {tomato} and crush the {garlic}.",
+      "Simmer the {broad-beans} in 200 ml water with half of the {cumin} for 10 minutes, then mash roughly and keep warm.",
+      "Stir the garlic, remaining cumin, the juice of the {lemon}, half of the {olive-oil} and the {salt} into the beans.",
+      "Serve topped with the tomato, onion, crumbled {feta} and {parsley}, drizzled with the remaining oil."
     ]
   },
   {
@@ -284,38 +302,54 @@ KITCHEN.add(
     "name": "Sudanese Tomato Chicken Stew",
     "meal": "big",
     "cuisine": "Sudanese",
-    "time": 51,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "onion",
-        1
+        "chicken-thigh",
+        700
       ],
       [
         "tomato",
-        300
+        "4pc"
       ],
       [
-        "peanut-butter",
-        50
+        "onion",
+        "2pc"
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
+        "garlic",
+        "3pc"
       ],
       [
         "ginger",
         10
+      ],
+      [
+        "tomato-paste",
+        20
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "cinnamon",
+        1
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {onion} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Season {chicken-thigh} with {salt} and {cumin} and brown in {oil} for 5 minutes per side. Remove.",
+      "Cook sliced {onion} for 8 minutes, add crushed {garlic}, grated {ginger} and {cinnamon} for 1 minute, then chopped {tomato} and {tomato-paste} for 10 minutes.",
+      "Return the chicken with 150 ml water, cover and simmer for 30 minutes until tender and the sauce is thick."
     ]
   },
   {
@@ -519,41 +553,54 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "sudanese-spiced-rice-with-vegetables",
-    "name": "Sudanese Spiced Rice with Vegetables",
-    "meal": "big",
+    "id": "sudanese-salata-aswad",
+    "name": "Salata Aswad bil Dakwa (Sudanese aubergine and peanut salad)",
+    "meal": "bite",
     "cuisine": "Sudanese",
-    "time": 25,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
+        "aubergine",
+        "2pc"
       ],
       [
         "peanut-butter",
-        50
+        40
       ],
       [
-        "rice",
-        250
+        "tomato",
+        "2pc"
       ],
       [
-        "spinach",
-        150
+        "garlic",
+        "2pc"
+      ],
+      [
+        "lemon",
+        "1pc"
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "olive-oil",
+        30
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "parsley",
+        10
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Heat the oven to 220 °C. Prick the {aubergine} and roast for 35 minutes until collapsed; cool slightly, then peel.",
+      "Mash the flesh with crushed {garlic}, {peanut-butter}, {cumin}, {salt} and the juice of the {lemon}.",
+      "Fold in diced {tomato}, drizzle with {olive-oil} and scatter with {parsley}. Serve with flatbread."
     ]
   },
   {
@@ -613,88 +660,99 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "sudanese-grilled-fish-with-lime",
-    "name": "Sudanese Grilled Fish with Lime",
+    "id": "sudanese-fried-fish-lime",
+    "name": "Sudanese Spiced Fried Fish with Lime",
     "meal": "big",
     "cuisine": "Sudanese",
-    "time": 39,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "white-fish",
+        700
+      ],
+      [
+        "flour",
+        50
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "lime",
+        "2pc"
       ],
       [
         "oil",
-        20
+        80
       ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
+        "cilantro",
+        10
       ]
     ],
     "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Mix crushed {garlic}, {cumin}, {salt} and the juice of one {lime}, rub over the {white-fish} and rest for 15 minutes.",
+      "Dust the fish lightly with {flour}.",
+      "Heat the {oil} in a wide pan over medium-high heat and fry the fish for 3–4 minutes per side until golden and crisp.",
+      "Scatter with {cilantro} and serve with wedges of the remaining lime."
     ]
   },
   {
     "id": "sudanese-chicken-and-greens-pot",
-    "name": "Sudanese Chicken and Greens Pot",
+    "name": "Sudanese Chicken and Spinach Stew",
     "meal": "big",
     "cuisine": "Sudanese",
-    "time": 46,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
         "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
+        600
       ],
       [
         "spinach",
-        150
+        300
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "tomato-paste",
+        30
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Season {chicken-thigh} with half of the {salt} and brown in {oil} for 5 minutes per side. Remove.",
+      "Soften sliced {onion} and crushed {garlic} for 5 minutes, then stir in {tomato-paste} and {cumin} for 2 minutes.",
+      "Return the chicken with 400 ml water and the remaining salt, cover and simmer for 25 minutes.",
+      "Stir in the {spinach} and cook for 5 minutes until wilted."
     ]
   },
   {
@@ -749,88 +807,78 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "sudanese-herbed-flatbread",
-    "name": "Sudanese Herbed Flatbread",
-    "meal": "big",
+    "id": "sudanese-gurasa",
+    "name": "Gurasa (Sudanese thick griddle bread)",
+    "meal": "bite",
     "cuisine": "Sudanese",
-    "time": 60,
+    "time": 70,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "flour",
+        300
       ],
       [
-        "oil",
-        20
+        "yeast",
+        5
+      ],
+      [
+        "sugar",
+        5
       ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        500
+        "water",
+        190
       ],
       [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
+        "oil",
+        20
       ]
     ],
     "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Mix {flour}, {yeast}, {sugar} and {salt} with the {water} and knead for 8 minutes. Cover and rise for 40 minutes.",
+      "Divide into 6 balls and flatten each into a 12 cm disc; rest for 10 minutes.",
+      "Brush a hot pan with the {oil} and cook each disc for 3 minutes per side until puffed and golden. Stack under a cloth."
     ]
   },
   {
-    "id": "sudanese-coconut-rice-bowl",
-    "name": "Sudanese Coconut Rice Bowl",
-    "meal": "big",
+    "id": "sudanese-aseeda",
+    "name": "Aseeda (Sudanese porridge with butter and honey)",
+    "meal": "morning",
     "cuisine": "Sudanese",
-    "time": 31,
+    "time": 20,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
+        "flour",
+        150
+      ],
+      [
+        "water",
         500
       ],
       [
-        "onion",
-        1
+        "butter",
+        30
       ],
       [
-        "tomato",
-        300
+        "honey",
+        40
       ],
       [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
+        "salt",
+        2
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Bring the {water} and {salt} to the boil in a heavy pot.",
+      "Whisk in the {flour} gradually, beating constantly with a wooden spoon to avoid lumps.",
+      "Cook on low heat for 8 minutes, stirring, until thick, smooth and glossy.",
+      "Shape into mounds in bowls, make a well in each and add {butter} and {honey}."
     ]
   },
   {

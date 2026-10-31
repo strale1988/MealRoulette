@@ -11,7 +11,7 @@ KITCHEN.add(
     "ing": [
       [
         "baguette",
-        1
+        "1pc"
       ],
       [
         "pork-tenderloin",
@@ -27,11 +27,11 @@ KITCHEN.add(
       ],
       [
         "carrot",
-        1
+        "1pc"
       ],
       [
         "cucumber",
-        1
+        "1pc"
       ],
       [
         "rice-vinegar",
@@ -60,7 +60,7 @@ KITCHEN.add(
   {
     "id": "left-chicken-rice-paper-rolls",
     "name": "Fresh rolls with leftover chicken",
-    "meal": "big,bite",
+    "meal": "big",
     "cuisine": "Vietnamese",
     "time": 25,
     "serves": 2,
@@ -282,61 +282,6 @@ KITCHEN.add(
       "Char the halved {onion} and sliced {ginger} in a dry pan until fragrant. Add them to the {chicken-stock} with the {cinnamon} and {star-anise} and simmer 10 minutes.",
       "Add the {chicken-thigh} and poach gently until cooked through. Lift out, shred the chicken, season the broth with {fish-sauce} and strain if desired.",
       "Prepare the {rice-noodles} according to the packet and divide among bowls. Add chicken, hot broth, {beansprouts} and {coriander}; serve with wedges of {lime}."
-    ]
-  },
-  {
-    "id": "vietnamese-banh-mi",
-    "name": "Bánh mì-style pork baguette",
-    "meal": "big",
-    "cuisine": "Vietnamese",
-    "time": 30,
-    "serves": 2,
-    "ing": [
-      [
-        "pork",
-        300
-      ],
-      [
-        "bread",
-        2
-      ],
-      [
-        "carrot",
-        120
-      ],
-      [
-        "vinegar",
-        25
-      ],
-      [
-        "sugar",
-        10
-      ],
-      [
-        "cucumber",
-        120
-      ],
-      [
-        "coriander",
-        12
-      ],
-      [
-        "mayonnaise",
-        40
-      ],
-      [
-        "soy-sauce",
-        20
-      ],
-      [
-        "fresh-chilli",
-        "1pc"
-      ]
-    ],
-    "steps": [
-      "Cut the {carrot} into matchsticks and toss with the {vinegar} and {sugar}; leave to pickle for 15 minutes. Slice the {cucumber} and {fresh-chilli}.",
-      "Slice the {pork} thinly and sear in a hot pan; add the {soy-sauce} and cook until glazed and fully cooked.",
-      "Split the {bread}, spread with {mayonnaise}, then fill with pork, pickled carrot, cucumber, {coriander} and chilli to taste."
     ]
   },
   {
@@ -829,7 +774,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Cook the {rice}. Mince {garlic} and {ginger}.",
-      "Cook {brown-sugar} in a skillet with a tablespoon of water until syrupy, then add pork and stir to coat. Cook until browned and cooked through.",
+      "Cook {brown-sugar} in a skillet with a tablespoon of water until syrupy, then add the {pork-mince} and stir to coat. Cook until browned and cooked through.",
       "Add garlic, ginger and {fish-sauce}; simmer until glossy. Finish with {spring-onion} and {lime} juice and serve over rice."
     ]
   },
@@ -1310,178 +1255,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-vietnamese-bun-cha",
-    "name": "Vietnamese caramel pork noodle bowls",
-    "meal": "big",
-    "cuisine": "Vietnamese",
-    "time": 35,
-    "serves": 4,
-    "ing": [
-      [
-        "pork-mince",
-        450
-      ],
-      [
-        "rice-noodles",
-        250
-      ],
-      [
-        "fish-sauce",
-        35
-      ],
-      [
-        "sugar",
-        25
-      ],
-      [
-        "garlic",
-        3
-      ],
-      [
-        "lime",
-        2
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "cucumber",
-        1
-      ],
-      [
-        "mint",
-        15
-      ],
-      [
-        "cilantro",
-        15
-      ]
-    ],
-    "steps": [
-      "Mix half the {fish-sauce}, minced {garlic} and a teaspoon of {sugar} into the {pork-mince}; shape into small patties.",
-      "Cook remaining {sugar} in a small pan until amber, carefully add 60 ml water and the remaining fish sauce and lime juice; stir to make a dressing.",
-      "Grill or pan-sear pork patties until browned and cooked through. Prepare {rice-noodles} according to packet instructions.",
-      "Serve noodles with pork, ribbons of {carrot}, sliced {cucumber}, {mint} and {cilantro}; spoon over the sweet-sour dressing."
-    ]
-  },
-  {
-    "id": "world-vietnamese-banh-xeo",
-    "name": "Vietnamese crispy turmeric pancakes",
-    "meal": "big",
-    "cuisine": "Vietnamese",
-    "time": 35,
-    "serves": 4,
-    "ing": [
-      [
-        "rice-flour",
-        180
-      ],
-      [
-        "coconut-milk",
-        150
-      ],
-      [
-        "water",
-        180
-      ],
-      [
-        "turmeric",
-        4
-      ],
-      [
-        "prawns",
-        250
-      ],
-      [
-        "bean-sprouts",
-        180
-      ],
-      [
-        "spring-onion",
-        2
-      ],
-      [
-        "lettuce",
-        1
-      ],
-      [
-        "fish-sauce",
-        25
-      ],
-      [
-        "lime",
-        1
-      ]
-    ],
-    "steps": [
-      "Whisk {rice-flour}, {coconut-milk}, {water}, {turmeric} and sliced {spring-onion} into a thin batter; rest 15 minutes.",
-      "Sear the {prawns} in a lightly oiled nonstick skillet until just pink. Remove and keep warm.",
-      "Pour a thin layer of batter into the hot pan, scatter shrimp and {bean-sprouts} over one half, cover briefly, then uncover and cook until the base is crisp. Fold in half.",
-      "Serve pancakes with {lettuce} leaves and a dipping sauce made from {fish-sauce}, lime juice and water."
-    ]
-  },
-  {
-    "id": "vietnamese-banh-xeo",
-    "name": "Crisp Vietnamese turmeric crepes with prawns",
-    "meal": "big",
-    "cuisine": "Vietnamese",
-    "time": 35,
-    "serves": 2,
-    "ing": [
-      [
-        "rice-flour",
-        150
-      ],
-      [
-        "coconut-milk",
-        100
-      ],
-      [
-        "water",
-        180
-      ],
-      [
-        "turmeric",
-        3
-      ],
-      [
-        "prawns",
-        200
-      ],
-      [
-        "bean-sprouts",
-        120
-      ],
-      [
-        "spring-onion",
-        30
-      ],
-      [
-        "lettuce",
-        8
-      ],
-      [
-        "fish-sauce",
-        20
-      ],
-      [
-        "lime",
-        "1pc"
-      ],
-      [
-        "oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Whisk {rice-flour}, {coconut-milk}, {water}, {turmeric} and sliced {spring-onion}; rest 10 minutes.",
-      "Sear {prawns} in a hot oiled skillet, add a ladle of batter and swirl into a thin crepe.",
-      "Scatter {bean-sprouts} over one half, cover and cook until edges crisp; fold and slide out.",
-      "Mix {fish-sauce}, lime juice and a splash of water for dipping. Serve with {lettuce} leaves."
-    ]
-  },
-  {
     "id": "vietnamese-caramel-salmon",
     "name": "Vietnamese caramel salmon with ginger and fish sauce",
     "meal": "big",
@@ -1507,7 +1280,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "lime-juice",
@@ -1515,7 +1288,7 @@ KITCHEN.add(
       ],
       [
         "spring-onion",
-        2
+        "2pc"
       ],
       [
         "black-pepper",
@@ -1562,7 +1335,7 @@ KITCHEN.add(
       ],
       [
         "spring-onion",
-        4
+        "4pc"
       ],
       [
         "peanuts",
@@ -1609,7 +1382,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -1617,11 +1390,11 @@ KITCHEN.add(
       ],
       [
         "fresh-chilli",
-        1
+        "1pc"
       ],
       [
         "spring-onion",
-        3
+        "3pc"
       ],
       [
         "oil",
@@ -1652,15 +1425,15 @@ KITCHEN.add(
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
         "red-onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "soy-sauce",
@@ -1688,7 +1461,7 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        1
+        "1pc"
       ]
     ],
     "steps": [
@@ -1719,7 +1492,7 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        3
+        "3pc"
       ],
       [
         "tofu",
@@ -1739,7 +1512,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "spring-onion",
@@ -1790,7 +1563,7 @@ KITCHEN.add(
       ],
       [
         "shallot",
-        2
+        "2pc"
       ],
       [
         "fish-sauce",
@@ -1829,11 +1602,11 @@ KITCHEN.add(
       ],
       [
         "lemongrass",
-        1
+        15
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "fish-sauce",
@@ -1888,15 +1661,15 @@ KITCHEN.add(
       ],
       [
         "carrot",
-        2
+        "2pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "lemongrass",
@@ -1932,7 +1705,7 @@ KITCHEN.add(
       ],
       [
         "bread-rolls",
-        3
+        "3pc"
       ]
     ],
     "steps": [
@@ -1982,114 +1755,6 @@ KITCHEN.add(
       "Melt {sugar} in a small pan until amber; carefully divide the caramel among four ramekins.",
       "Whisk {eggs} and {egg-yolks} gently with {condensed-milk}, {milk}, cooled {coffee} and {vanilla}; strain into the ramekins.",
       "Set ramekins in a hot-water bath and bake at 160 °C for 30–35 minutes until just set. Chill thoroughly, then turn out to serve."
-    ]
-  },
-  {
-    "id": "vietnamese-caramel-pork",
-    "name": "Thịt kho caramel pork",
-    "meal": "big",
-    "cuisine": "Vietnamese",
-    "time": 60,
-    "serves": 3,
-    "ing": [
-      [
-        "pork",
-        600
-      ],
-      [
-        "eggs",
-        "3pc"
-      ],
-      [
-        "fish-sauce",
-        40
-      ],
-      [
-        "brown-sugar",
-        50
-      ],
-      [
-        "garlic",
-        "3pc"
-      ],
-      [
-        "shallot",
-        "2pc"
-      ],
-      [
-        "water",
-        400
-      ],
-      [
-        "black-pepper",
-        2
-      ]
-    ],
-    "steps": [
-      "Hard-boil {eggs}, peel and set aside.",
-      "Melt {brown-sugar} in a heavy pot with a splash of water until deep amber; carefully add a little more water.",
-      "Add chopped {garlic}, {shallot} and pork pieces; toss to coat. Add {fish-sauce} and {water}.",
-      "Add eggs and simmer gently until pork is tender and sauce is glossy; finish with {black-pepper}."
-    ]
-  },
-  {
-    "id": "vn-cha-ca-la-vong",
-    "name": "Chả cá Lã Vọng-inspired turmeric fish with dill",
-    "meal": "big",
-    "cuisine": "Vietnamese",
-    "time": 30,
-    "serves": 2,
-    "ing": [
-      [
-        "white-fish",
-        350
-      ],
-      [
-        "turmeric",
-        2
-      ],
-      [
-        "ginger",
-        12
-      ],
-      [
-        "fish-sauce",
-        15
-      ],
-      [
-        "lemon-juice",
-        20
-      ],
-      [
-        "dill",
-        10
-      ],
-      [
-        "spring-onion",
-        "2pc"
-      ],
-      [
-        "rice-noodles",
-        180
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Prepare {white-fish} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {white-fish} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Marinate fish with turmeric, ginger and fish sauce, sear until golden, then toss with plenty of dill and spring onion; serve over rice noodles with a squeeze of lime.",
-      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
     ]
   }
 ]

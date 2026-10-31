@@ -27,7 +27,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "spring-onion",
@@ -35,7 +35,7 @@ KITCHEN.add(
       ],
       [
         "cucumber",
-        1
+        "1pc"
       ],
       [
         "soy-sauce",
@@ -139,15 +139,15 @@ KITCHEN.add(
     "ing": [
       [
         "flour",
-        120
+        200
       ],
       [
         "water",
-        350
+        100
       ],
       [
         "oil",
-        15
+        30
       ],
       [
         "butter",
@@ -159,14 +159,13 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        "2pc"
+        "1pc"
       ]
     ],
     "steps": [
-      "Mix {flour} with the remaining dough ingredients to make a workable dough or batter; knead or beat until even.",
-      "Rest or prove the mixture as needed, shape it, then bake, steam or griddle until cooked through.",
-      "Knead a supple dough, rest it well, stretch it paper-thin and fold with oil into layers; coil, rest again, then flatten and griddle until crisp in spots.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Mix {flour} and {salt}, add the {eggs}, 20 g of the {oil} and the {water} and knead for 8 minutes to a smooth, supple dough. Divide into 4 balls, coat with the remaining oil and rest covered for 1 hour.",
+      "Stretch each ball on an oiled surface until paper-thin, brush with melted {butter}, then fold or coil into a spiral and rest for 10 minutes.",
+      "Flatten each coil gently and cook on a hot greased griddle for 2–3 minutes per side until golden and crisp in spots. Crush lightly with your hands to fluff the layers and serve warm."
     ]
   },
   {
@@ -259,7 +258,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "onion",
@@ -268,6 +267,10 @@ KITCHEN.add(
       [
         "curry-powder",
         5
+      ],
+      [
+        "turmeric",
+        2
       ],
       [
         "eggs",
@@ -291,11 +294,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cook {noodles} according to its packet, drain and reserve a little cooking water.",
-      "Heat {oil} in a wok or large skillet; stir-fry {onion} and {garlic} with the main ingredients.",
-      "Toss the noodles through the sauce over high heat so they absorb the seasoning without turning soft.",
-      "Blend cooked sweet potato into a turmeric-spiced gravy, season with tamarind and soy, then pour over noodles and garnish with egg and lime.",
-      "Finish with a little {lime} if needed, taste for seasoning and serve while the texture is at its best."
+      "Peel and chop the {sweet-potato} and boil for 15 minutes until soft. Boil the {eggs} for 8 minutes, cool, peel and halve.",
+      "Fry chopped {onion} and {garlic} in {oil} for 5 minutes, then add {curry-powder} and {turmeric} for 1 minute.",
+      "Add the sweet potato and {vegetable-stock} and simmer for 8 minutes, then blend until smooth. Return to the pot, stir in {tamarind-paste}, {soy-sauce}, {salt} and {black-pepper} and simmer for 5 minutes into a thick gravy.",
+      "Cook the {noodles} according to the packet, drain and divide into bowls.",
+      "Ladle the gravy over, top with the egg and serve with {lime} wedges."
     ]
   },
   {
@@ -319,20 +322,16 @@ KITCHEN.add(
         25
       ],
       [
-        "vinegar",
-        15
-      ],
-      [
         "black-vinegar",
-        120
+        30
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "vegetable-stock",
-        450
+        200
       ],
       [
         "mushrooms",
@@ -340,7 +339,7 @@ KITCHEN.add(
       ],
       [
         "fresh-chilli",
-        1
+        "1pc"
       ],
       [
         "sesame-oil",
@@ -360,59 +359,46 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cook {noodles} according to its packet, drain and reserve a little cooking water.",
-      "Heat {oil} in a wok or large skillet; stir-fry {garlic} with the main ingredients.",
-      "Toss the noodles through the sauce over high heat so they absorb the seasoning without turning soft.",
-      "Season the bowl with black vinegar, soy, chilli and sesame oil; top with savoury minced pork and mushrooms, then toss hot noodles through so they pick up the dressing.",
-      "Finish with a little {vinegar} if needed, taste for seasoning and serve while the texture is at its best."
+      "Slice the {mushrooms} and finely chop the {garlic} and {fresh-chilli}.",
+      "Heat {oil} in a wok, fry the garlic for 30 seconds, then add {pork-mince} and brown for 5 minutes, breaking it up. Add the mushrooms and half of the {soy-sauce} and cook for 4 minutes. Season with {salt} and {black-pepper}.",
+      "Warm the {vegetable-stock} with the {black-vinegar}, remaining soy sauce, {sesame-oil} and chilli.",
+      "Cook the {noodles} according to the packet, drain and toss with the dressing in bowls. Top with the pork and mushrooms."
     ]
   },
   {
-    "id": "sg-kaya-toast",
-    "name": "Kaya toast-inspired coconut jam toast with soft eggs",
+    "id": "sg-kopitiam-soft-eggs",
+    "name": "Kopitiam soft-boiled eggs with buttered toast",
     "meal": "morning",
     "cuisine": "Singaporean",
-    "time": 30,
+    "time": 15,
     "serves": 2,
     "ing": [
+      [
+        "eggs",
+        "4pc"
+      ],
       [
         "bread",
         "4pc"
       ],
       [
         "butter",
-        35
+        30
       ],
       [
-        "eggs",
-        "2pc"
+        "soy-sauce",
+        10
       ],
       [
-        "coconut-milk",
-        250
-      ],
-      [
-        "sugar",
-        35
-      ],
-      [
-        "vanilla",
-        3
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
+        "white-pepper",
         1
       ]
     ],
     "steps": [
-      "Prepare and measure all ingredients, then heat the pan or pot over medium heat.",
-      "Cook {bread} with the seasonings until the dish reaches its intended texture and the flavours meld.",
-      "Cook coconut milk and sugar into a thick fragrant spread, toast bread until crisp, sandwich with butter and coconut jam, and serve beside soft-cooked eggs.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Lower the {eggs} into boiling water and cook for exactly 6 minutes, then run under cold water for 20 seconds.",
+      "Toast the {bread} until golden and spread generously with {butter}.",
+      "Crack the eggs into two small bowls and season each with {soy-sauce} and a pinch of {white-pepper}.",
+      "Serve with the toast for dipping."
     ]
   },
   {
@@ -445,7 +431,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "sesame-oil",
@@ -469,10 +455,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a soup pot and soften {garlic} without browning.",
-      "Add {fish-stock} and {white-fish}, simmering gently until the main ingredient is tender.",
-      "Shape seasoned minced fish into small balls and poach in stock until they float; cook noodles separately and serve with greens, garlic oil and a splash of soy.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Mince the {white-fish} finely, then mix with the {eggs}, half of the {salt} and the {black-pepper} and beat until sticky. Shape into 12 small balls.",
+      "Fry sliced {garlic} in {oil} for 2 minutes until golden; set aside with the oil.",
+      "Bring the {fish-stock} to a simmer with the remaining salt and poach the fish balls for 5 minutes until they float. Add the {bok-choy} for 1 minute.",
+      "Cook the {noodles} according to the packet and divide among bowls; ladle the stock, fish balls and bok choy over.",
+      "Top with the garlic oil, {soy-sauce} and {sesame-oil}."
     ]
   },
   {
@@ -480,12 +467,12 @@ KITCHEN.add(
     "name": "Singapore-style coconut chiffon cake",
     "meal": "treat",
     "cuisine": "Singaporean",
-    "time": 55,
-    "serves": 2,
+    "time": 70,
+    "serves": 6,
     "ing": [
       [
         "eggs",
-        "2pc"
+        "4pc"
       ],
       [
         "flour",
@@ -493,15 +480,15 @@ KITCHEN.add(
       ],
       [
         "sugar",
-        35
+        100
       ],
       [
         "coconut-milk",
-        250
+        120
       ],
       [
         "oil",
-        15
+        60
       ],
       [
         "baking-powder",
@@ -514,13 +501,17 @@ KITCHEN.add(
       [
         "coconut-flakes",
         30
+      ],
+      [
+        "pandan-leaves",
+        15
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {eggs} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Whip egg whites separately to soft peaks, fold into a coconut-milk batter, pour into an ungreased tube tin and bake until the cake springs back; invert to cool.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 170 °C. Blend the {pandan-leaves} with the {coconut-milk} and strain, pressing well, to get a green coconut-pandan liquid.",
+      "Separate the {eggs}. Whisk the yolks with half of the {sugar}, the {oil}, {vanilla} and the pandan milk, then fold in {flour} and {baking-powder} until smooth.",
+      "Whisk the whites to soft peaks, add the remaining sugar gradually until stiff and glossy, and fold into the batter in three additions.",
+      "Pour into an ungreased 20 cm tube tin, sprinkle with {coconut-flakes} and bake for 40 minutes until it springs back. Invert and cool completely before removing."
     ]
   },
   {
@@ -532,8 +523,8 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "beans",
-        200
+        "red-bean-paste",
+        120
       ],
       [
         "sweetcorn",
@@ -557,49 +548,74 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine None with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Cook {beans} until tender and chill them; mound shaved ice over the {beans} and sweet corn, drizzle with sweetened condensed milk and top with a little ice cream.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Freeze the {water} in ice-cube trays the day before, then crush the ice finely in a blender or with a rolling pin in a bag.",
+      "Warm the {sugar} with 3 tablespoons of water until dissolved to make a light syrup; cool.",
+      "Divide the {red-bean-paste} and drained {sweetcorn} between two bowls and mound the crushed ice on top.",
+      "Drizzle with the syrup and {condensed-milk}, top with a scoop of {vanilla-ice-cream} and serve at once."
     ]
   },
   {
-    "id": "singaporean-hainanese-style-chicken-rice",
-    "name": "Singaporean Hainanese-Style Chicken Rice",
+    "id": "singaporean-chicken-satay",
+    "name": "Chicken Satay with Peanut Sauce",
     "meal": "big",
     "cuisine": "Singaporean",
-    "time": 30,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
         "chicken-thigh",
-        400
+        600
       ],
       [
-        "rice",
-        250
+        "peanut-butter",
+        80
       ],
       [
         "soy-sauce",
-        25
+        30
       ],
       [
         "ginger",
-        10
+        15
       ],
       [
         "garlic",
+        "4pc"
+      ],
+      [
+        "turmeric",
+        3
+      ],
+      [
+        "ground-coriander",
+        3
+      ],
+      [
+        "cumin",
         2
       ],
       [
-        "spring-onion",
-        2
+        "sugar",
+        20
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "cucumber",
+        "1pc"
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {soy-sauce} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Slice {chicken-thigh} into 2 cm strips. Mix half of the {soy-sauce}, half of the crushed {garlic}, half of the grated {ginger}, {turmeric}, {ground-coriander}, {cumin}, half of the {sugar} and 15 g of the {oil}, toss with the chicken and marinate for at least 30 minutes.",
+      "Thread the chicken onto soaked skewers and grill or griddle over high heat for 8–10 minutes, turning, until charred and cooked through.",
+      "For the sauce, fry the remaining garlic and ginger in the remaining oil for 1 minute, stir in {peanut-butter}, the remaining soy sauce and sugar, the juice of half the {lime} and 150 ml warm water, and simmer for 4 minutes.",
+      "Serve the skewers with the sauce, sliced {cucumber} and the remaining lime in wedges."
     ]
   },
   {
@@ -664,38 +680,59 @@ KITCHEN.add(
     "name": "Singaporean Chili Crab-Inspired Shrimp",
     "meal": "big",
     "cuisine": "Singaporean",
-    "time": 25,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        400
+        "prawns",
+        500
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "soy-sauce",
-        25
-      ],
-      [
-        "ginger",
-        10
+        "tomato",
+        "3pc"
       ],
       [
         "garlic",
-        2
+        "3pc"
+      ],
+      [
+        "ginger",
+        15
+      ],
+      [
+        "red-chilli",
+        "2pc"
+      ],
+      [
+        "sambal-oelek",
+        20
+      ],
+      [
+        "soy-sauce",
+        20
+      ],
+      [
+        "sugar",
+        15
+      ],
+      [
+        "eggs",
+        "2pc"
+      ],
+      [
+        "oil",
+        20
       ],
       [
         "spring-onion",
-        2
+        "2pc"
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Blend {tomato}, {garlic}, {ginger} and {red-chilli} into a coarse paste.",
+      "Fry the paste with {sambal-oelek} in {oil} in a wok for 6 minutes until thick, then add {soy-sauce}, {sugar} and 100 ml water and simmer for 4 minutes.",
+      "Add the {prawns} and cook for 4 minutes until pink and curled.",
+      "Beat the {eggs} and drizzle them in slowly, stirring gently into ribbons. Scatter with sliced {spring-onion} and serve."
     ]
   },
   {
@@ -761,7 +798,7 @@ KITCHEN.add(
   {
     "id": "singaporean-kaya-toast",
     "name": "Singaporean Kaya Toast",
-    "meal": "morning,treat",
+    "meal": "morning",
     "cuisine": "Singaporean",
     "time": 45,
     "serves": 4,
@@ -799,38 +836,51 @@ KITCHEN.add(
     "name": "Singaporean Ginger Garlic Noodle Bowl",
     "meal": "big",
     "cuisine": "Singaporean",
-    "time": 46,
+    "time": 25,
     "serves": 4,
     "ing": [
+      [
+        "noodles",
+        300
+      ],
       [
         "chicken-thigh",
         400
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "soy-sauce",
-        25
-      ],
-      [
         "ginger",
-        10
+        20
       ],
       [
         "garlic",
-        2
+        "4pc"
       ],
       [
         "spring-onion",
-        2
+        "3pc"
+      ],
+      [
+        "soy-sauce",
+        30
+      ],
+      [
+        "sesame-oil",
+        10
+      ],
+      [
+        "bok-choy",
+        200
+      ],
+      [
+        "oil",
+        20
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Slice {chicken-thigh} thinly and mix with half of the {soy-sauce} and half of the grated {ginger}. Cook the {noodles} according to the packet and drain.",
+      "Stir-fry the chicken in {oil} over high heat for 5 minutes until browned; remove.",
+      "Fry crushed {garlic} and the remaining ginger for 30 seconds, then add halved {bok-choy} and 3 tablespoons water for 3 minutes.",
+      "Return the chicken, add the noodles and the remaining soy sauce and toss for 2 minutes. Finish with {sesame-oil} and sliced {spring-onion}."
     ]
   },
   {
@@ -890,98 +940,71 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "singaporean-chicken-with-scallion-rice",
-    "name": "Singaporean Chicken with Scallion Rice",
+    "id": "singaporean-coconut-vegetable-curry",
+    "name": "Sayur Lodeh (Singaporean coconut vegetable curry)",
     "meal": "big",
     "cuisine": "Singaporean",
-    "time": 60,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        600
+        "coconut-milk",
+        400
       ],
       [
-        "rice",
+        "cabbage",
         250
       ],
       [
-        "spring-onion",
-        "5pc"
+        "green-beans",
+        150
       ],
       [
-        "ginger",
-        20
+        "carrot",
+        "2pc"
+      ],
+      [
+        "tofu",
+        200
+      ],
+      [
+        "onion",
+        "1pc"
       ],
       [
         "garlic",
         "3pc"
       ],
       [
-        "soy-sauce",
-        20
+        "ginger",
+        15
       ],
       [
-        "sesame-oil",
-        10
+        "turmeric",
+        3
       ],
       [
-        "chicken-stock",
-        700
+        "red-chilli",
+        "1pc"
       ],
       [
         "oil",
-        30
+        20
+      ],
+      [
+        "vegetable-stock",
+        300
       ],
       [
         "salt",
-        2
+        3
       ]
     ],
     "steps": [
-      "Poach {chicken-thigh} in simmering {chicken-stock} with half of the {ginger} (sliced) for 20 minutes until cooked through. Lift out, plunge into cold water and drain; keep the stock.",
-      "Fry crushed {garlic} in 15 g of the {oil} for 1 minute, add {rice} for 2 minutes, then cook in 450 ml of the hot stock with {salt}, covered, on low heat for 15 minutes.",
-      "Slice {spring-onion}, mix with the remaining grated ginger and hot oil to make a relish.",
-      "Slice the chicken, drizzle with {soy-sauce} and {sesame-oil} and serve over the rice with the relish."
-    ]
-  },
-  {
-    "id": "singaporean-coconut-vegetable-curry",
-    "name": "Singaporean Coconut Vegetable Curry",
-    "meal": "big",
-    "cuisine": "Singaporean",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        400
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "soy-sauce",
-        25
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "garlic",
-        2
-      ],
-      [
-        "spring-onion",
-        2
-      ]
-    ],
-    "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Blend {onion}, {garlic}, {ginger}, {turmeric} and {red-chilli} with a splash of water into a paste and fry in {oil} for 5 minutes.",
+      "Add {vegetable-stock}, sliced {carrot} and cubed {tofu} and simmer for 8 minutes.",
+      "Add the {cabbage} in chunks and the halved {green-beans} and simmer for 7 minutes.",
+      "Stir in the {coconut-milk} and {salt} and heat gently for 5 minutes without boiling hard."
     ]
   },
   {

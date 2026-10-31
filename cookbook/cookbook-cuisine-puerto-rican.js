@@ -11,7 +11,7 @@ KITCHEN.add(
     "ing": [
       [
         "plantain",
-        3
+        "3pc"
       ],
       [
         "pork-belly",
@@ -220,7 +220,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Brown the {chicken-thigh} in a pot; add diced {onion}, {red-pepper} and crushed {garlic}. Stir in {oregano}.",
+      "Season the {chicken-thigh} with {salt} and brown in a pot; add diced {onion}, {red-pepper} and crushed {garlic}. Stir in {oregano}.",
       "Add {canned-tomatoes} and {chicken-stock}; simmer 15 minutes. Stir in {rice} and cook 15–18 minutes, stirring often, until the rice is soft and the broth thickens.",
       "Add {peas} and sliced {olives} for the final 5 minutes. Check the chicken is cooked through and finish with {coriander}."
     ]
@@ -235,7 +235,7 @@ KITCHEN.add(
     "ing": [
       [
         "plantain",
-        2
+        "2pc"
       ],
       [
         "beef-strips",
@@ -276,7 +276,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Season {beef-strips} with crushed {garlic}, {salt} and a squeeze of {lime}; sear until cooked to preference.",
-      "Peel {plantain}, slice lengthwise into long slabs and fry until soft. Flatten gently, fry again until crisp and drain well.",
+      "Peel {plantain}, slice lengthwise into long slabs and fry in {oil} until soft. Flatten gently, fry again until crisp and drain well.",
       "Use two plantain slabs as bread. Spread with {mayonnaise}, add sliced beef, {cheese}, {lettuce} and {tomato}, then top with another plantain slab."
     ]
   },
@@ -426,44 +426,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "puerto-rican-arroz-con-gandules",
-    "name": "Puerto Rican Arroz con Gandules",
-    "meal": "big",
-    "cuisine": "Puerto Rican",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
     "id": "puerto-rican-picadillo",
     "name": "Puerto Rican Picadillo",
     "meal": "big",
@@ -588,79 +550,54 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "puerto-rican-mofongo-inspired-plantain-mash",
-    "name": "Puerto Rican Mofongo-Inspired Plantain Mash",
-    "meal": "big",
-    "cuisine": "Puerto Rican",
-    "time": 51,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
     "id": "puerto-rican-habichuelas-guisadas",
-    "name": "Puerto Rican Habichuelas Guisadas",
+    "name": "Puerto Rican habichuelas guisadas (stewed beans)",
     "meal": "big",
     "cuisine": "Puerto Rican",
-    "time": 25,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "oil",
+        20
       ],
       [
-        "black-beans",
-        250
+        "sofrito",
+        60
       ],
       [
-        "rice",
-        250
+        "garlic",
+        "2pc"
       ],
       [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
+        "oregano",
         2
       ],
       [
-        "red-pepper",
-        1
+        "potatoes",
+        300
+      ],
+      [
+        "kidney-beans",
+        800
+      ],
+      [
+        "tomato-sauce",
+        100
+      ],
+      [
+        "water",
+        300
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Heat {oil} in a pot and cook the {sofrito}, crushed {garlic} and {oregano} for 3 minutes.",
+      "Add diced {potatoes}, the drained {kidney-beans}, {tomato-sauce}, {water} and {salt}.",
+      "Bring to the boil, then simmer for 25 minutes until the potatoes are tender and the sauce is thick. Serve with rice."
     ]
   },
   {
@@ -769,45 +706,6 @@ KITCHEN.add(
       "Warm {olive-oil} in a wide pan over medium heat, add the garlic and {chilli-flakes} and cook for 1 minute until fragrant but not browned.",
       "Add the prawns and cook for 2 minutes per side until pink and just cooked through.",
       "Squeeze over the juice of {lime}, scatter chopped {parsley} and serve at once."
-    ]
-  },
-  {
-    "id": "puerto-rican-black-bean-and-rice-bowl",
-    "name": "Puerto Rican Black Bean and Rice Bowl",
-    "meal": "big",
-    "cuisine": "Puerto Rican",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ]
-    ],
-    "steps": [
-      "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
     ]
   },
   {
@@ -958,45 +856,50 @@ KITCHEN.add(
   },
   {
     "id": "puerto-rican-corn-and-cheese-bake",
-    "name": "Puerto Rican Corn and Cheese Bake",
+    "name": "Puerto Rican corn pudding with cheese (budín de maíz)",
     "meal": "big",
     "cuisine": "Puerto Rican",
-    "time": 38,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "black-beans",
-        250
+        "butter",
+        40
       ],
       [
-        "rice",
-        250
+        "sweetcorn",
+        400
       ],
       [
-        "tomato",
-        250
+        "eggs",
+        "3pc"
       ],
       [
-        "plantain",
+        "milk",
+        200
+      ],
+      [
+        "sugar",
+        50
+      ],
+      [
+        "cornmeal",
+        60
+      ],
+      [
+        "cheddar",
+        80
+      ],
+      [
+        "salt",
         2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
       ]
     ],
     "steps": [
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {black-beans} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Heat the oven to 180 °C and grease a baking dish with a little of the {butter}.",
+      "Blend the {sweetcorn} with {eggs}, {milk}, {sugar}, {cornmeal}, {salt} and the remaining melted {butter}.",
+      "Stir in most of the grated {cheddar} and pour into the dish. Top with the rest of the cheese.",
+      "Bake for 40 minutes until set and golden. Cool for 10 minutes before cutting."
     ]
   }
 ]

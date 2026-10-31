@@ -43,7 +43,7 @@ KITCHEN.add(
       ],
       [
         "fresh-chilli",
-        1
+        "1pc"
       ]
     ],
     "steps": [
@@ -126,7 +126,7 @@ KITCHEN.add(
     "name": "Taiwanese beef noodle soup with star anise and greens",
     "meal": "big",
     "cuisine": "Taiwanese",
-    "time": 120,
+    "time": 150,
     "serves": 2,
     "ing": [
       [
@@ -139,7 +139,7 @@ KITCHEN.add(
       ],
       [
         "soy-sauce",
-        25
+        40
       ],
       [
         "dark-soy-sauce",
@@ -147,31 +147,39 @@ KITCHEN.add(
       ],
       [
         "ginger",
-        12
+        15
       ],
       [
         "garlic",
-        3
+        "4pc"
+      ],
+      [
+        "spring-onion",
+        "3pc"
+      ],
+      [
+        "doubanjiang",
+        20
       ],
       [
         "star-anise",
-        100
+        3
       ],
       [
         "beef-stock",
-        450
+        600
+      ],
+      [
+        "water",
+        600
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "bok-choy",
-        100
-      ],
-      [
-        "salt",
-        3
+        150
       ],
       [
         "black-pepper",
@@ -183,10 +191,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a soup pot and soften {garlic} and {ginger} without browning.",
-      "Add {beef-stock} and {beef-chuck}, simmering gently until the main ingredient is tender.",
-      "Brown beef, simmer it with ginger, soy and star anise until tender, then strain or skim the broth and serve over separately cooked noodles with greens.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cut {beef-chuck} into 4 cm chunks. Blanch in boiling water for 3 minutes, then drain and rinse.",
+      "Heat {oil} in a heavy pot and fry sliced {ginger}, smashed {garlic}, the white parts of {spring-onion} and {doubanjiang} for 2 minutes until fragrant. Add the beef and brown for 5 minutes.",
+      "Add {soy-sauce}, {dark-soy-sauce}, {star-anise}, quartered {tomato}, {beef-stock} and {water}. Bring to the boil, then cover and simmer very gently for 2 hours until the beef is tender.",
+      "Boil the {noodles} in a separate pot according to the packet, adding the {bok-choy} for the last minute. Drain.",
+      "Divide noodles and greens between bowls, ladle over beef and broth, and finish with {black-pepper} and the sliced green spring-onion tops."
     ]
   },
   {
@@ -194,16 +203,16 @@ KITCHEN.add(
     "name": "Gua bao (Taiwanese steamed pork belly buns)",
     "meal": "big",
     "cuisine": "Taiwanese",
-    "time": 110,
-    "serves": 2,
+    "time": 140,
+    "serves": 4,
     "ing": [
       [
         "pork-belly",
-        350
+        500
       ],
       [
         "soy-sauce",
-        25
+        60
       ],
       [
         "brown-sugar",
@@ -211,30 +220,14 @@ KITCHEN.add(
       ],
       [
         "ginger",
-        12
+        15
       ],
       [
         "garlic",
-        3
+        "4pc"
       ],
       [
         "star-anise",
-        100
-      ],
-      [
-        "flour",
-        120
-      ],
-      [
-        "yeast",
-        7
-      ],
-      [
-        "milk",
-        250
-      ],
-      [
-        "salt",
         3
       ],
       [
@@ -242,59 +235,27 @@ KITCHEN.add(
         1
       ],
       [
-        "oil",
-        15
-      ]
-    ],
-    "steps": [
-      "Bring the steaming water or cooking liquid to a steady simmer and prepare the ingredients in even-sized portions.",
-      "Cook {pork-belly} gently until just set or tender, taking care not to boil hard or overcook the texture.",
-      "Braise pork belly with soy, ginger and star anise until spoon-tender; make a soft yeasted dough, steam folded buns and fill them with sliced pork and pan juices.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
-    ]
-  },
-  {
-    "id": "tw-popcorn-chicken",
-    "name": "Taiwanese popcorn chicken with five-spice basil salt",
-    "meal": "bite",
-    "cuisine": "Taiwanese",
-    "time": 35,
-    "serves": 2,
-    "ing": [
-      [
-        "chicken-thigh",
+        "water",
         400
       ],
       [
-        "soy-sauce",
-        25
-      ],
-      [
-        "garlic",
-        3
-      ],
-      [
-        "ginger",
-        12
+        "oil",
+        20
       ],
       [
         "flour",
+        250
+      ],
+      [
+        "yeast",
+        5
+      ],
+      [
+        "milk",
         120
       ],
       [
-        "cornstarch",
-        100
-      ],
-      [
-        "basil",
-        10
-      ],
-      [
-        "chinese-five-spice",
-        100
-      ],
-      [
-        "oil",
+        "sugar",
         15
       ],
       [
@@ -302,15 +263,20 @@ KITCHEN.add(
         3
       ],
       [
-        "black-pepper",
-        1
+        "peanuts",
+        30
+      ],
+      [
+        "coriander",
+        15
       ]
     ],
     "steps": [
-      "Prepare {chicken-thigh} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {chicken-thigh} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Marinate bite-sized chicken in soy, garlic and ginger, coat with flour and cornstarch, fry until crisp and toss with five-spice salt and fried basil leaves.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cut {pork-belly} into 5 cm slabs and brown on all sides in half the {oil} in a heavy pot for 8 minutes.",
+      "Add {soy-sauce}, {brown-sugar}, sliced {ginger}, smashed {garlic}, {star-anise}, {black-pepper} and {water}. Bring to the boil, cover and simmer on low heat for 1 hour 30 minutes until meltingly tender.",
+      "Meanwhile warm {milk} until lukewarm and stir in {yeast} and {sugar}. Mix with {flour} and {salt} into a soft dough, knead for 8 minutes, then cover and prove for 1 hour.",
+      "Divide the dough into 8 balls, roll each into an oval, brush with the remaining {oil} and fold in half. Rest for 20 minutes, then steam for 10 minutes.",
+      "Slice the pork. Fill the buns with pork, spoon over some reduced braising liquid and top with crushed {peanuts} and chopped {coriander}."
     ]
   },
   {
@@ -323,27 +289,27 @@ KITCHEN.add(
     "ing": [
       [
         "noodles",
-        180
+        200
       ],
       [
         "pork-mince",
-        350
+        200
       ],
       [
         "prawns",
-        250
+        150
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "soy-sauce",
-        25
+        30
       ],
       [
         "fish-stock",
-        450
+        500
       ],
       [
         "spring-onion",
@@ -351,15 +317,11 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        "1pc"
+        "2pc"
       ],
       [
         "sesame-oil",
-        10
-      ],
-      [
-        "salt",
-        3
+        5
       ],
       [
         "black-pepper",
@@ -371,104 +333,112 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cook {noodles} according to its packet, drain and reserve a little cooking water.",
-      "Heat {oil} in a wok or large skillet; stir-fry {garlic} and {spring-onion} with the main ingredients.",
-      "Toss the noodles through the sauce over high heat so they absorb the seasoning without turning soft.",
-      "Cook a small, concentrated pork sauce with garlic and soy, poach prawns separately and assemble over noodles with a little hot stock, scallions and egg.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat {oil} in a pan and fry minced {garlic} for 30 seconds. Add {pork-mince} and cook for 6 minutes until browned, then stir in half the {soy-sauce} and the {black-pepper}. Add 100 ml of the {fish-stock} and simmer for 10 minutes to make the pork sauce.",
+      "Boil the {eggs} for 7 minutes, cool in cold water, then peel and halve.",
+      "Bring the remaining {fish-stock} to a simmer with the rest of the {soy-sauce}. Poach the {prawns} for 2–3 minutes until pink, then lift out.",
+      "Cook the {noodles} according to the packet and divide between bowls. Ladle over the hot stock, top with pork sauce, prawns and egg, and finish with sliced {spring-onion} and a few drops of {sesame-oil}."
     ]
   },
   {
     "id": "tw-pineapple-cakes",
-    "name": "Taiwanese pineapple cake-style buttery filled biscuits",
+    "name": "Taiwanese pineapple cakes",
     "meal": "treat",
     "cuisine": "Taiwanese",
-    "time": 45,
-    "serves": 2,
+    "time": 75,
+    "serves": 4,
     "ing": [
       [
-        "flour",
-        120
-      ],
-      [
-        "butter",
-        35
+        "canned-pineapple",
+        300
       ],
       [
         "sugar",
-        35
+        60
+      ],
+      [
+        "flour",
+        200
+      ],
+      [
+        "butter",
+        110
+      ],
+      [
+        "icing-sugar",
+        40
       ],
       [
         "eggs",
-        "2pc"
+        "1pc"
       ],
       [
         "ground-almonds",
-        50
-      ],
-      [
-        "jam",
-        50
+        30
       ],
       [
         "vanilla",
-        3
+        2
       ],
       [
         "salt",
-        3
+        1
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {flour} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Make a tender butter dough, wrap small portions around thick fruit jam, press into rectangular moulds and bake until pale gold; cool fully before unmoulding.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Drain and finely chop the {canned-pineapple}. Cook with {sugar} in a small pan over medium heat for 15–20 minutes, stirring, until thick and jammy. Cool, then roll into 8 small balls.",
+      "Heat the oven to 170 °C and line a tray. Beat the softened {butter} with {icing-sugar}, {salt} and {vanilla} until creamy, then beat in the {eggs}.",
+      "Mix in {flour} and {ground-almonds} to a soft dough and chill for 15 minutes.",
+      "Divide the dough into 8 portions, flatten each, wrap around a pineapple ball and press into a small square.",
+      "Bake for 20–25 minutes until pale golden. Cool completely on the tray before eating."
     ]
   },
   {
     "id": "tw-bawan",
-    "name": "Ba-wan-inspired translucent starch dumplings with pork filling",
+    "name": "Ba-wan (Taiwanese translucent starch dumplings with pork filling)",
     "meal": "big",
     "cuisine": "Taiwanese",
-    "time": 55,
+    "time": 60,
     "serves": 2,
     "ing": [
       [
         "rice-flour",
-        100
+        70
       ],
       [
         "cornstarch",
-        100
-      ],
-      [
-        "pork-mince",
-        350
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "soy-sauce",
-        25
-      ],
-      [
-        "garlic",
-        3
-      ],
-      [
-        "ginger",
-        12
+        30
       ],
       [
         "water",
-        350
+        250
+      ],
+      [
+        "pork-mince",
+        200
+      ],
+      [
+        "mushrooms",
+        80
+      ],
+      [
+        "bamboo-shoots",
+        60
+      ],
+      [
+        "soy-sauce",
+        20
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "ginger",
+        5
       ],
       [
         "salt",
-        3
+        2
       ],
       [
         "black-pepper",
@@ -480,51 +450,51 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare a cohesive filling around {pork-mince}, season it and allow it to cool if hot.",
-      "Shape or wrap the filling securely, then steam, simmer or bake until the wrapper is cooked and the centre is hot.",
-      "Cook the pork and mushroom filling with soy and ginger, make a thick translucent starch dough, wrap the filling and steam until the outer layer turns glossy.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the {oil} in a pan and fry minced {garlic} and {ginger} for 30 seconds. Add {pork-mince} and cook for 5 minutes, then stir in chopped {mushrooms}, {bamboo-shoots}, {soy-sauce} and {black-pepper} and cook 3 minutes more. Cool.",
+      "Whisk {rice-flour}, {cornstarch}, {salt} and {water} in a saucepan over medium heat, stirring constantly, for about 4 minutes until it becomes a thick, translucent, sticky paste.",
+      "Lightly oil 4 small heatproof bowls. Spoon in a layer of paste, add the filling and cover with more paste.",
+      "Steam over boiling water for 20 minutes until translucent. Cool for 5 minutes, loosen with a knife and turn out."
     ]
   },
   {
     "id": "tw-douhua",
-    "name": "Douhua-inspired silky tofu pudding with ginger syrup",
+    "name": "Douhua (silky tofu pudding with ginger syrup)",
     "meal": "treat",
     "cuisine": "Taiwanese",
     "time": 20,
     "serves": 2,
     "ing": [
       [
-        "tofu",
-        100
+        "silken-tofu",
+        300
       ],
       [
         "ginger",
-        12
+        20
       ],
       [
         "brown-sugar",
-        30
+        40
       ],
       [
         "water",
-        350
+        150
       ],
       [
-        "vanilla",
-        3
+        "peanuts",
+        30
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {tofu} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Warm tofu gently until silky, simmer brown sugar and ginger into a light syrup, then serve the chilled tofu with the warm syrup poured over just before eating.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Simmer {brown-sugar}, sliced {ginger} and {water} in a small pan for 10 minutes until lightly syrupy, then strain.",
+      "Put the {silken-tofu} in a heatproof bowl set over a pan of barely simmering water and warm gently for 5 minutes.",
+      "Toast the {peanuts} in a dry pan for 3 minutes and crush roughly.",
+      "Scoop thin, silky slices of tofu into two bowls, pour over the warm ginger syrup and top with peanuts."
     ]
   },
   {
     "id": "tw-oyster-omelette",
-    "name": "Taiwanese night-market seafood and sweet-potato-starch omelette",
+    "name": "Taiwanese oyster omelette (o-a-jian)",
     "meal": "big",
     "cuisine": "Taiwanese",
     "time": 20,
@@ -532,50 +502,50 @@ KITCHEN.add(
     "ing": [
       [
         "eggs",
-        "2pc"
+        "4pc"
       ],
       [
-        "prawns",
-        250
-      ],
-      [
-        "sweetcorn",
-        120
+        "oysters",
+        150
       ],
       [
         "cornstarch",
-        100
+        40
+      ],
+      [
+        "water",
+        80
       ],
       [
         "fish-sauce",
-        15
-      ],
-      [
-        "lettuce",
-        100
-      ],
-      [
-        "sweet-chilli-sauce",
-        20
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
+        5
       ],
       [
         "black-pepper",
         1
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "lettuce",
+        80
+      ],
+      [
+        "spring-onion",
+        "2pc"
+      ],
+      [
+        "sweet-chilli-sauce",
+        40
       ]
     ],
     "steps": [
-      "Prepare {eggs} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {eggs} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Make a thin starch slurry and set it in a hot pan, add beaten egg and prawns, fold in the greens and finish with a light sweet-chilli dressing.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Whisk {cornstarch} with {water} until smooth and season with {fish-sauce} and {black-pepper}. Beat the {eggs} in a separate bowl.",
+      "Heat half the {oil} in a large non-stick pan. Add the {oysters} and cook for 1 minute, then pour in the starch mixture and cook for 1–2 minutes until it turns translucent and sticky.",
+      "Pour the beaten eggs over, drizzle with the remaining {oil} and cook for 2–3 minutes until set and crisp underneath.",
+      "Lay shredded {lettuce} on two plates, slide the omelette on top, then drizzle with {sweet-chilli-sauce} and scatter over sliced {spring-onion}."
     ]
   },
   {
@@ -632,84 +602,6 @@ KITCHEN.add(
       "Heat {sesame-oil} with {oil} in a wok, fry the ginger and garlic for 2 minutes until golden, then add the mushrooms and fry on high heat for 5 minutes until browned.",
       "Add {soy-sauce}, {dark-soy-sauce}, {sugar} and {black-pepper} and cook 4 minutes until the sauce reduces to a sticky glaze.",
       "Toss in {basil} off the heat until it wilts and serve at once."
-    ]
-  },
-  {
-    "id": "taiwanese-three-cup-chicken",
-    "name": "Taiwanese Three-Cup Chicken",
-    "meal": "big",
-    "cuisine": "Taiwanese",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        400
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "soy-sauce",
-        25
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "garlic",
-        2
-      ],
-      [
-        "spring-onion",
-        2
-      ]
-    ],
-    "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {soy-sauce} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "taiwanese-beef-noodle-soup",
-    "name": "Taiwanese Beef Noodle Soup",
-    "meal": "big",
-    "cuisine": "Taiwanese",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        400
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "soy-sauce",
-        25
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "garlic",
-        2
-      ],
-      [
-        "spring-onion",
-        2
-      ]
-    ],
-    "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
     ]
   },
   {
@@ -771,7 +663,7 @@ KITCHEN.add(
   {
     "id": "taiwanese-scallion-pancakes",
     "name": "Taiwanese Scallion Pancakes",
-    "meal": "morning,bite",
+    "meal": "bite",
     "cuisine": "Taiwanese",
     "time": 50,
     "serves": 4,
@@ -806,41 +698,66 @@ KITCHEN.add(
   },
   {
     "id": "taiwanese-braised-tofu",
-    "name": "Taiwanese Braised Tofu",
+    "name": "Taiwanese braised tofu with mushrooms",
     "meal": "big",
     "cuisine": "Taiwanese",
-    "time": 46,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        400
+        "tofu",
+        600
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "soy-sauce",
-        25
+        "oil",
+        30
       ],
       [
         "ginger",
-        10
+        15
       ],
       [
         "garlic",
-        2
+        "3pc"
       ],
       [
         "spring-onion",
-        2
+        "3pc"
+      ],
+      [
+        "mushrooms",
+        150
+      ],
+      [
+        "soy-sauce",
+        40
+      ],
+      [
+        "rice-wine",
+        30
+      ],
+      [
+        "sugar",
+        10
+      ],
+      [
+        "water",
+        200
+      ],
+      [
+        "cornstarch",
+        10
+      ],
+      [
+        "sesame-oil",
+        5
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Cut {tofu} into 3 cm slabs and pat dry. Pan-fry in {oil} over medium-high heat for 3–4 minutes per side until golden, then remove.",
+      "In the same pan fry sliced {ginger}, smashed {garlic} and the white parts of {spring-onion} for 1 minute. Add sliced {mushrooms} and cook for 3 minutes.",
+      "Pour in {soy-sauce}, {rice-wine}, {sugar} and {water}. Return the tofu, cover and simmer for 12 minutes.",
+      "Mix {cornstarch} with a little cold water, stir it in and simmer for 1 minute until the sauce is glossy. Finish with {sesame-oil} and the green spring-onion tops."
     ]
   },
   {
@@ -959,41 +876,58 @@ KITCHEN.add(
   },
   {
     "id": "taiwanese-chicken-with-scallion-rice",
-    "name": "Taiwanese Chicken with Scallion Rice",
+    "name": "Taiwanese poached chicken with scallion-ginger oil rice",
     "meal": "big",
     "cuisine": "Taiwanese",
-    "time": 31,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
         "chicken-thigh",
-        400
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "soy-sauce",
-        25
+        600
       ],
       [
         "ginger",
-        10
-      ],
-      [
-        "garlic",
-        2
+        25
       ],
       [
         "spring-onion",
-        2
+        "6pc"
+      ],
+      [
+        "rice-wine",
+        30
+      ],
+      [
+        "water",
+        900
+      ],
+      [
+        "rice",
+        280
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "oil",
+        40
+      ],
+      [
+        "soy-sauce",
+        30
+      ],
+      [
+        "sesame-oil",
+        10
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Put {chicken-thigh} in a pot with half the {ginger}, 2 of the {spring-onion} and the {rice-wine}. Cover with {water}, bring to a gentle simmer, cover and cook for 20 minutes. Turn off the heat and rest in the liquid for 10 minutes.",
+      "Meanwhile cook the {rice} according to the packet.",
+      "Finely slice the remaining spring onions and chop the remaining ginger and the {garlic}. Put them in a heatproof bowl with the {soy-sauce}. Heat the {oil} until just smoking and pour it over to make the scallion-ginger oil.",
+      "Slice the chicken, serve over the rice, spoon over the oil and finish with a few drops of {sesame-oil}."
     ]
   },
   {

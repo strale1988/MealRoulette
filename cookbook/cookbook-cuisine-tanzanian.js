@@ -23,7 +23,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Bring salted {water} to a boil in a heavy saucepan.",
+      "Bring {water} to a boil with the {salt} in a heavy saucepan.",
       "Rain in {cornmeal} gradually, stirring vigorously to prevent lumps.",
       "Cook, turning and pressing the mixture against the pan, until thick and pulling away from the sides."
     ]
@@ -46,11 +46,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "cumin",
@@ -68,48 +68,9 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "tanzanian-mchuzi-wa-samaki",
-    "name": "Coconut fish curry",
-    "meal": "big",
-    "cuisine": "Tanzanian",
-    "time": 35,
-    "serves": 4,
-    "ing": [
-      [
-        "white-fish",
-        600
-      ],
-      [
-        "coconut-milk",
-        400
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "curry-powder",
-        8
-      ],
-      [
-        "lime-juice",
-        20
-      ]
-    ],
-    "steps": [
-      "Soften {onion} and stir in {curry-powder}. Add {tomato} and cook until saucy.",
-      "Pour in {coconut-milk} and simmer 5 minutes.",
-      "Add {white-fish} and poach gently until cooked; finish with {lime-juice}."
-    ]
-  },
-  {
     "id": "tanzanian-mandazi",
     "name": "Mandazi (coconut cardamom doughnuts)",
-    "meal": "bake",
+    "meal": "bite",
     "cuisine": "Tanzanian",
     "time": 75,
     "serves": 4,
@@ -143,44 +104,6 @@ KITCHEN.add(
       "Mix {flour}, {sugar}, {baking-powder} and {cardamom}; add {coconut-milk} to form a soft dough.",
       "Rest 20 minutes, roll out and cut into triangles.",
       "Fry in hot {oil} until puffed and golden, turning once. Drain and cool slightly."
-    ]
-  },
-  {
-    "id": "tanzanian-pilau-rice",
-    "name": "Tanzanian Pilau Rice",
-    "meal": "big",
-    "cuisine": "Tanzanian",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
     ]
   },
   {
@@ -256,94 +179,51 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "tanzanian-coconut-bean-stew",
-    "name": "Tanzanian Coconut Bean Stew",
+    "id": "chipsi-mayai-style-potato-omelette",
+    "name": "Chipsi mayai (Tanzanian chips omelette)",
     "meal": "big",
     "cuisine": "Tanzanian",
-    "time": 40,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "black-eyed-peas",
-        480
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "garlic",
-        "2pc"
-      ],
-      [
-        "tomato",
-        "2pc"
-      ],
-      [
-        "turmeric",
-        2
+        "potatoes",
+        600
       ],
       [
         "oil",
-        20
+        60
+      ],
+      [
+        "eggs",
+        "6pc"
       ],
       [
         "salt",
         3
-      ]
-    ],
-    "steps": [
-      "Drain {black-eyed-peas}. Chop {onion}, {tomato} and {spinach}; crush {garlic}.",
-      "Cook the onion in {oil} for 5 minutes, add garlic and {turmeric}, then the tomato for 5 minutes.",
-      "Add {black-eyed-peas}, {coconut-milk} and {salt} and simmer for 12 minutes.",
-      "Stir in the spinach and cook 3 minutes until wilted. Serve hot."
-    ]
-  },
-  {
-    "id": "chipsi-mayai-style-potato-omelette",
-    "name": "Chipsi Mayai-Style Potato Omelette",
-    "meal": "big",
-    "cuisine": "Tanzanian",
-    "time": 51,
-    "serves": 4,
-    "ing": [
+      ],
       [
-        "onion",
+        "black-pepper",
         1
       ],
       [
         "tomato",
-        300
+        "2pc"
       ],
       [
-        "peanut-butter",
-        50
+        "red-onion",
+        "1pc"
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "ginger",
-        10
+        "lime",
+        "1pc"
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {onion} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Peel {potatoes}, cut into thin chips and dry well. Heat half the {oil} in a large non-stick pan and fry the chips for 12 minutes until golden and cooked through.",
+      "Make the kachumbari: slice {tomato} and {red-onion} thinly and toss with the juice of {lime} and a pinch of {salt}.",
+      "Beat the {eggs} with the remaining {salt} and the {black-pepper}. Spread the chips evenly in the pan, add the remaining {oil} and pour over the eggs.",
+      "Cook over medium-low heat for 4 minutes until set underneath, flip using a plate and cook for 2 minutes more. Cut into wedges and serve with the kachumbari."
     ]
   },
   {
@@ -543,40 +423,70 @@ KITCHEN.add(
   },
   {
     "id": "tanzanian-spiced-rice-with-vegetables",
-    "name": "Tanzanian Spiced Rice with Vegetables",
+    "name": "Tanzanian vegetable pilau (pilau ya mboga)",
     "meal": "big",
     "cuisine": "Tanzanian",
-    "time": 25,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
+        "rice",
         300
       ],
       [
-        "peanut-butter",
-        50
+        "onion",
+        "1pc"
       ],
       [
-        "rice",
-        250
+        "carrot",
+        "2pc"
       ],
       [
-        "spinach",
-        150
+        "potatoes",
+        200
+      ],
+      [
+        "peas",
+        100
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "ginger",
+        10
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "cinnamon",
+        2
+      ],
+      [
+        "cardamom",
+        2
+      ],
+      [
+        "cloves",
+        1
+      ],
+      [
+        "vegetable-stock",
+        600
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Rinse the {rice} until the water runs clear. Dice the {onion}, {carrot} and {potatoes}.",
+      "Heat {oil} in a heavy pot and fry the onion for 8 minutes until deep golden. Add crushed {garlic}, grated {ginger}, {cumin}, {cinnamon}, {cardamom} and {cloves} and stir for 1 minute.",
+      "Add the carrot and potatoes and fry for 3 minutes, then stir in the rice for 1 minute.",
+      "Pour in the {vegetable-stock}, bring to the boil, cover and cook on the lowest heat for 12 minutes. Stir in the {peas}, cover and cook for 5 minutes more, then rest for 5 minutes off the heat and fluff with a fork."
     ]
   },
   {
@@ -628,87 +538,117 @@ KITCHEN.add(
   },
   {
     "id": "tanzanian-grilled-fish-with-lime",
-    "name": "Tanzanian Grilled Fish with Lime",
+    "name": "Tanzanian grilled fish with coconut-lime marinade",
     "meal": "big",
     "cuisine": "Tanzanian",
-    "time": 39,
+    "time": 35,
     "serves": 4,
     "ing": [
+      [
+        "white-fish",
+        600
+      ],
+      [
+        "lime",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
       [
         "ginger",
         10
       ],
       [
-        "oil",
-        20
+        "turmeric",
+        2
+      ],
+      [
+        "chilli-powder",
+        2
       ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        500
+        "coconut-milk",
+        100
       ],
       [
-        "onion",
-        1
+        "oil",
+        15
       ],
       [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
+        "cilantro",
+        10
       ]
     ],
     "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Mix the juice of one {lime} with crushed {garlic}, grated {ginger}, {turmeric}, {chilli-powder}, {salt} and {coconut-milk}. Coat the {white-fish} and marinate for 20 minutes.",
+      "Heat a griddle pan to high and brush with {oil}. Grill the fish for 4–5 minutes per side until it flakes easily.",
+      "Serve with wedges of the remaining {lime} and chopped {cilantro}."
     ]
   },
   {
     "id": "tanzanian-chicken-and-greens-pot",
-    "name": "Tanzanian Chicken and Greens Pot",
+    "name": "Tanzanian chicken and greens pot (kuku na mchicha)",
     "meal": "big",
     "cuisine": "Tanzanian",
-    "time": 46,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
         "chicken-thigh",
-        500
+        700
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "oil",
+        25
       ],
       [
         "onion",
-        1
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "ginger",
+        10
+      ],
+      [
+        "curry-powder",
+        5
       ],
       [
         "tomato",
-        300
+        "3pc"
       ],
       [
-        "peanut-butter",
-        50
+        "coconut-milk",
+        200
       ],
       [
-        "rice",
-        250
+        "water",
+        200
       ],
       [
         "spinach",
-        150
+        300
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Season the {chicken-thigh} with {salt} and brown in {oil} in a wide pot over medium-high heat for 5 minutes per side. Remove.",
+      "Cook diced {onion} in the same pot for 5 minutes. Add {garlic}, {ginger} and {curry-powder} and stir for 1 minute, then add chopped {tomato} and cook for 6 minutes until pulpy.",
+      "Return the chicken, add {coconut-milk} and {water}, cover and simmer for 30 minutes until cooked through.",
+      "Stir in the {spinach} and cook for 3 minutes until wilted. Serve with ugali or rice."
     ]
   },
   {
@@ -760,87 +700,38 @@ KITCHEN.add(
   },
   {
     "id": "tanzanian-herbed-flatbread",
-    "name": "Tanzanian Herbed Flatbread",
-    "meal": "big",
+    "name": "Tanzanian chapati (layered flatbread)",
+    "meal": "bite",
     "cuisine": "Tanzanian",
-    "time": 60,
+    "time": 75,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
-      ],
-      [
-        "oil",
-        20
+        "flour",
+        400
       ],
       [
         "salt",
-        3
+        4
       ],
       [
-        "chicken-thigh",
-        500
+        "sugar",
+        5
       ],
       [
-        "onion",
-        1
+        "water",
+        220
       ],
       [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
+        "oil",
+        60
       ]
     ],
     "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "tanzanian-coconut-rice-bowl",
-    "name": "Tanzanian Coconut Rice Bowl",
-    "meal": "big",
-    "cuisine": "Tanzanian",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Mix {flour}, {salt} and {sugar}, then knead with {water} and 15 ml of the {oil} for 8 minutes into a soft dough. Cover and rest for 30 minutes.",
+      "Divide into 8 balls and roll each very thin. Brush with oil, roll up into a rope, coil into a snail shape and rest for 10 minutes.",
+      "Roll each coil out again into a 20 cm round.",
+      "Cook in a hot dry pan for 1 minute, flip, brush with oil and cook for 1–2 minutes per side until golden-spotted and layered. Keep warm in a cloth."
     ]
   },
   {

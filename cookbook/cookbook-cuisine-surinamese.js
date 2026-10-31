@@ -110,8 +110,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Simmer {chicken-thigh} in {chicken-stock} with sliced {onion}, crushed {garlic} and {ginger} for 25 minutes. Remove chicken, shred and strain the broth.",
-      "Cook {rice} separately. Return broth and chicken to the pot, stir in {soy-sauce} and warm through.",
+      "Simmer {chicken-thigh} in {chicken-stock} with sliced {onion}, crushed {garlic}, {ginger} and {salt} for 25 minutes. Remove the chicken, shred it and strain the broth.",
+      "Cook {rice} separately. Return the broth and chicken to the pot, stir in {soy-sauce} and warm through for 3 minutes.",
       "Serve with {bean-sprouts}, sliced {spring-onion}, rice and a squeeze of {lime}."
     ]
   },
@@ -158,10 +158,6 @@ KITCHEN.add(
       [
         "thyme",
         2
-      ],
-      [
-        "oil",
-        10
       ],
       [
         "salt",
@@ -219,14 +215,18 @@ KITCHEN.add(
         30
       ],
       [
+        "oil",
+        10
+      ],
+      [
         "salt",
         3
       ]
     ],
     "steps": [
-      "Cook diced {onion} and crushed {garlic} in a little oil; add {chicken-thigh} and brown lightly.",
-      "Whisk {peanut-butter} with a ladle of {chicken-stock} until smooth, then add to the pot with remaining stock, cubed {potatoes}, {soy-sauce} and {chilli-powder}.",
-      "Simmer 20–25 minutes until chicken is fully cooked and potatoes tender. Season with {salt} and garnish with {spring-onion}."
+      "Cook diced {onion} and crushed {garlic} in {oil} for 5 minutes; add {chicken-thigh} and brown lightly for 5 minutes.",
+      "Whisk {peanut-butter} with a ladle of {chicken-stock} until smooth, then add to the pot with the remaining stock, cubed {potatoes}, {soy-sauce} and {chilli-powder}.",
+      "Simmer for 20–25 minutes until the chicken is fully cooked and the potatoes are tender. Season with {salt} and garnish with {spring-onion}."
     ]
   },
   {
@@ -340,41 +340,71 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "surinamese-pom-inspired-chicken-bake",
-    "name": "Surinamese Pom-Inspired Chicken Bake",
+    "id": "surinamese-pastei",
+    "name": "Pastei (Surinamese chicken pastry pie)",
     "meal": "big",
     "cuisine": "Surinamese",
-    "time": 30,
+    "time": 65,
     "serves": 4,
     "ing": [
       [
+        "puff-pastry",
+        300
+      ],
+      [
         "chicken-thigh",
-        450
+        400
       ],
       [
-        "black-beans",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "rice",
-        250
+        "carrot",
+        "1pc"
       ],
       [
-        "tomato",
-        250
+        "peas",
+        80
       ],
       [
-        "plantain",
+        "garlic",
+        "2pc"
+      ],
+      [
+        "chicken-stock",
+        150
+      ],
+      [
+        "flour",
+        20
+      ],
+      [
+        "thyme",
         2
       ],
       [
-        "red-pepper",
+        "black-pepper",
         1
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "eggs",
+        "1pc"
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Heat the oven to 200 °C. Dice the {chicken-thigh}, {onion} and {carrot} and crush the {garlic}.",
+      "Brown the chicken in {oil} for 5 minutes, add the onion, carrot, garlic and {thyme} for 5 minutes, then stir in the {flour} for 1 minute and the {chicken-stock}. Simmer for 8 minutes until thick, add the {peas}, {salt} and {black-pepper} and cool.",
+      "Roll out the {puff-pastry}, cut 4 rounds about 15 cm wide, fill with the chicken mixture, fold over and seal the edges with a fork.",
+      "Brush with beaten {eggs} and bake for 25 minutes until puffed and golden."
     ]
   },
   {
@@ -496,41 +526,59 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "surinamese-saoto-inspired-chicken-soup",
-    "name": "Surinamese Saoto-Inspired Chicken Soup",
+    "id": "surinamese-gado-gado",
+    "name": "Gado-gado (Surinamese vegetables, egg and peanut sauce)",
     "meal": "big",
     "cuisine": "Surinamese",
-    "time": 51,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "potatoes",
+        400
       ],
       [
-        "black-beans",
-        250
+        "green-beans",
+        200
       ],
       [
-        "rice",
-        250
+        "cabbage",
+        200
       ],
       [
-        "tomato",
-        250
+        "eggs",
+        "4pc"
       ],
       [
-        "plantain",
+        "peanut-butter",
+        100
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "soy-sauce",
+        30
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "sugar",
+        10
+      ],
+      [
+        "chilli-flakes",
         2
-      ],
-      [
-        "red-pepper",
-        1
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Boil the {potatoes} in water for 15 minutes, adding the {green-beans} for the last 4 minutes and the shredded {cabbage} for the last 2 minutes; drain.",
+      "Boil the {eggs} for 9 minutes, cool, peel and halve.",
+      "For the sauce, warm the {peanut-butter} with 150 ml water, crushed {garlic}, {soy-sauce}, {sugar}, {chilli-flakes} and the juice of the {lime}, stirring for 4 minutes until smooth.",
+      "Arrange the potatoes, vegetables and eggs on plates and spoon the sauce over."
     ]
   },
   {
@@ -668,37 +716,46 @@ KITCHEN.add(
     "name": "Surinamese Green Bean Coconut Stew",
     "meal": "big",
     "cuisine": "Surinamese",
-    "time": 25,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "green-beans",
+        600
       ],
       [
-        "black-beans",
-        250
+        "coconut-milk",
+        300
       ],
       [
-        "rice",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "tomato",
-        250
+        "garlic",
+        "3pc"
       ],
       [
-        "plantain",
-        2
+        "ginger",
+        10
       ],
       [
-        "red-pepper",
-        1
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Trim and halve the {green-beans}. Chop the {onion}, crush the {garlic}, grate the {ginger} and slice the {green-chilli}.",
+      "Fry the onion in {oil} for 5 minutes, add the garlic, ginger and chilli for 1 minute.",
+      "Add the beans, {coconut-milk} and {salt} and simmer for 12 minutes until the beans are tender and the sauce is creamy."
     ]
   },
   {
@@ -798,41 +855,58 @@ KITCHEN.add(
   },
   {
     "id": "surinamese-black-bean-and-rice-bowl",
-    "name": "Surinamese Black Bean and Rice Bowl",
+    "name": "Surinamese Black Bean and Rice Bowl with Fried Plantain",
     "meal": "big",
     "cuisine": "Surinamese",
-    "time": 46,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
+        "rice",
+        250
       ],
       [
         "black-beans",
         250
       ],
       [
-        "rice",
-        250
+        "plantain",
+        "2pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
       ],
       [
         "tomato",
-        250
+        "2pc"
       ],
       [
-        "plantain",
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "oil",
+        50
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "thyme",
         2
       ]
     ],
     "steps": [
-      "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Cook the {rice} in 500 ml water with half of the {salt}, covered, on low heat for 15 minutes.",
+      "Soften chopped {onion} and crushed {garlic} in 15 g of the {oil} for 5 minutes. Add {thyme}, chopped {tomato} and the whole {green-chilli} and cook for 6 minutes, then add the {black-beans} and 100 ml water and simmer for 10 minutes.",
+      "Slice the ripe {plantain} on a diagonal and fry in the remaining oil for 2–3 minutes per side until deep golden; sprinkle with the remaining salt.",
+      "Serve the rice topped with the beans and plantain."
     ]
   },
   {
@@ -994,42 +1068,51 @@ KITCHEN.add(
     "name": "Surinamese Corn and Cheese Bake",
     "meal": "big",
     "cuisine": "Surinamese",
-    "time": 38,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "black-beans",
-        250
+        "sweetcorn",
+        400
       ],
       [
-        "rice",
-        250
+        "cheddar",
+        120
       ],
       [
-        "tomato",
-        250
+        "eggs",
+        "3pc"
       ],
       [
-        "plantain",
+        "milk",
+        200
+      ],
+      [
+        "flour",
+        30
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "butter",
+        20
+      ],
+      [
+        "salt",
         2
       ],
       [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
+        "black-pepper",
         1
       ]
     ],
     "steps": [
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {black-beans} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Heat the oven to 180 °C and grease a 20 cm dish with half of the {butter}.",
+      "Soften the diced {onion} in the remaining butter for 5 minutes.",
+      "Whisk the {eggs}, {milk}, {flour}, {salt} and {black-pepper}, then stir in the {sweetcorn}, onion and most of the grated {cheddar}.",
+      "Pour into the dish, top with the remaining cheese and bake for 35 minutes until set and golden."
     ]
   }
 ]

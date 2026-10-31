@@ -15,7 +15,7 @@ KITCHEN.add(
       ],
       [
         "plantain",
-        1
+        "1pc"
       ],
       [
         "cabbage",
@@ -258,7 +258,7 @@ KITCHEN.add(
       ],
       [
         "plantain",
-        1
+        "1pc"
       ],
       [
         "sweet-potato",
@@ -301,40 +301,46 @@ KITCHEN.add(
   },
   {
     "id": "nicaraguan-gallo-pinto",
-    "name": "Nicaraguan Gallo Pinto",
+    "name": "Nicaraguan gallo pinto (rice and red beans)",
     "meal": "big",
     "cuisine": "Nicaraguan",
-    "time": 30,
+    "time": 40,
     "serves": 4,
     "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
       [
         "rice",
         250
       ],
       [
-        "tomato",
-        250
+        "oil",
+        25
       ],
       [
-        "plantain",
-        2
+        "onion",
+        "1pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "kidney-beans",
+        400
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Cook the {rice} according to the packet, then cool for 10 minutes so it fries well.",
+      "Heat {oil} in a wide pan and soften diced {onion} and {red-pepper} for 6 minutes. Add the {garlic} for 1 minute.",
+      "Add the drained {kidney-beans} with a splash of water and {salt} and simmer for 5 minutes, mashing a few.",
+      "Stir in the rice and fry for 8 minutes, stirring, until everything is hot and lightly crisp."
     ]
   },
   {
@@ -392,105 +398,6 @@ KITCHEN.add(
       "Cut 8 squares of foil or baking paper. Spread a layer of dough in the centre of each, then top with pork, a slice of potato, tomato, onion and pepper, and a little more dough.",
       "Fold into tight, sealed parcels and tie or crimp the edges.",
       "Steam the parcels for 1 hour 30 minutes, until the pork is tender and the masa is firm. Rest 10 minutes before unwrapping."
-    ]
-  },
-  {
-    "id": "nicaraguan-indio-viejo-inspired-beef-stew",
-    "name": "Nicaraguan Indio Viejo-Inspired Beef Stew",
-    "meal": "big",
-    "cuisine": "Nicaraguan",
-    "time": 130,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        500
-      ],
-      [
-        "masa-harina",
-        80
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "tomato",
-        "2pc"
-      ],
-      [
-        "red-pepper",
-        "1pc"
-      ],
-      [
-        "garlic",
-        "3pc"
-      ],
-      [
-        "mint",
-        10
-      ],
-      [
-        "lime",
-        "1pc"
-      ],
-      [
-        "oil",
-        30
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Simmer {beef-chuck} in 1 litre of water with a quarter of the onion, {salt} and {black-pepper} for 1 hour 15 minutes until very tender. Lift out, shred finely and keep the broth.",
-      "Chop the rest of the {onion}, {tomato} and {red-pepper}; crush {garlic}. Cook them in {oil} for 8 minutes until soft.",
-      "Whisk {masa-harina} into 150 ml cold broth until smooth, then stir into the vegetables with 500 ml more broth.",
-      "Add the shredded beef and simmer for 15 minutes, stirring, until thick and silky.",
-      "Stir in torn {mint} and the juice of {lime} and serve hot."
-    ]
-  },
-  {
-    "id": "nicaraguan-vigoron-style-cabbage-bowl",
-    "name": "Nicaraguan Vigorón-Style Cabbage Bowl",
-    "meal": "big",
-    "cuisine": "Nicaraguan",
-    "time": 51,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
     ]
   },
   {
@@ -603,40 +510,33 @@ KITCHEN.add(
   },
   {
     "id": "nicaraguan-sweet-plantains",
-    "name": "Nicaraguan Sweet Plantains",
-    "meal": "big",
+    "name": "Nicaraguan fried sweet plantains with cheese",
+    "meal": "bite",
     "cuisine": "Nicaraguan",
-    "time": 25,
+    "time": 20,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
         "plantain",
-        2
+        "3pc"
       ],
       [
-        "red-pepper",
+        "oil",
+        60
+      ],
+      [
+        "salt",
         1
+      ],
+      [
+        "queso-fresco",
+        80
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Peel the very ripe {plantain} and slice on the diagonal into 1.5 cm pieces.",
+      "Heat the {oil} in a wide pan over medium heat and fry the plantain for 3 minutes per side until deep golden and caramelised.",
+      "Drain, sprinkle with {salt} and serve with crumbled {queso-fresco}."
     ]
   },
   {
@@ -737,45 +637,6 @@ KITCHEN.add(
       "Drain and rinse {kidney-beans}. Dice {tomato} and {avocado}, and slice {red-onion} thinly.",
       "Whisk the juice of {lime} with {oil} and {salt}.",
       "Toss {kidney-beans}, the tomato and the onion with the dressing, then fold in the avocado and chopped {cilantro} gently. Serve at once."
-    ]
-  },
-  {
-    "id": "nicaraguan-black-bean-and-rice-bowl",
-    "name": "Nicaraguan Black Bean and Rice Bowl",
-    "meal": "big",
-    "cuisine": "Nicaraguan",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ]
-    ],
-    "steps": [
-      "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
     ]
   },
   {
@@ -914,45 +775,46 @@ KITCHEN.add(
   },
   {
     "id": "nicaraguan-corn-and-cheese-bake",
-    "name": "Nicaraguan Corn and Cheese Bake",
+    "name": "Nicaraguan sweetcorn and cheese cake (pastel de elote)",
     "meal": "big",
     "cuisine": "Nicaraguan",
-    "time": 38,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "black-beans",
-        250
+        "butter",
+        50
       ],
       [
-        "rice",
-        250
+        "sweetcorn",
+        400
       ],
       [
-        "tomato",
-        250
+        "eggs",
+        "3pc"
       ],
       [
-        "plantain",
+        "sugar",
+        60
+      ],
+      [
+        "milk",
+        150
+      ],
+      [
+        "queso-fresco",
+        100
+      ],
+      [
+        "salt",
         2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
       ]
     ],
     "steps": [
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {black-beans} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Heat the oven to 180 °C and grease a baking dish with a little of the {butter}.",
+      "Blend the {sweetcorn} with {eggs}, {sugar}, {milk}, the remaining melted {butter} and {salt} until nearly smooth.",
+      "Stir in most of the crumbled {queso-fresco} and pour into the dish. Top with the rest of the cheese.",
+      "Bake for 40 minutes until set and golden. Cool for 10 minutes before cutting."
     ]
   }
 ]

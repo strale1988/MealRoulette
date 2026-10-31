@@ -2,61 +2,6 @@
 KITCHEN.add(
 [
   {
-    "id": "caribbean-trinidad-pelau",
-    "name": "Trinidad-style chicken pelau",
-    "meal": "big",
-    "cuisine": "Trinidadian",
-    "time": 60,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "rice",
-        280
-      ],
-      [
-        "kidney-beans",
-        300
-      ],
-      [
-        "coconut-milk",
-        200
-      ],
-      [
-        "brown-sugar",
-        20
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "red-pepper",
-        "1pc"
-      ],
-      [
-        "thyme",
-        3
-      ],
-      [
-        "chicken-stock",
-        450
-      ],
-      [
-        "oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Pat the {chicken-thigh} dry and season. Heat the {oil} in a heavy pot and melt the {brown-sugar} until dark amber, carefully avoiding burning it.",
-      "Add the chicken and turn to coat; brown it on all sides. Stir in diced {onion} and {red-pepper}, then the {thyme}.",
-      "Add the {rice}, {kidney-beans}, {coconut-milk} and {chicken-stock}. Cover and simmer gently for 25–30 minutes until the rice and chicken are cooked."
-    ]
-  },
-  {
     "id": "caribbean-trinidad-doubles",
     "name": "Trinidad doubles chickpea curry on soft flatbread",
     "meal": "big",
@@ -82,7 +27,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -90,7 +35,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "turmeric",
@@ -98,7 +43,7 @@ KITCHEN.add(
       ],
       [
         "fresh-chilli",
-        1
+        "1pc"
       ],
       [
         "water",
@@ -458,44 +403,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "trinidadian-doubles-inspired-chickpea-flatbread",
-    "name": "Trinidadian Doubles-Inspired Chickpea Flatbread",
-    "meal": "big",
-    "cuisine": "Trinidadian",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
     "id": "trinidadian-pelau-chicken-rice",
     "name": "Trinidadian Pelau Chicken Rice",
     "meal": "big",
@@ -626,78 +533,66 @@ KITCHEN.add(
   },
   {
     "id": "trinidadian-curry-channa",
-    "name": "Trinidadian Curry Channa",
+    "name": "Trinidadian curry channa and aloo with roti",
     "meal": "big",
     "cuisine": "Trinidadian",
-    "time": 51,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "oil",
+        25
       ],
       [
-        "black-beans",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "rice",
-        250
+        "garlic",
+        "4pc"
       ],
       [
-        "tomato",
-        250
+        "curry-powder",
+        12
       ],
       [
-        "plantain",
-        2
+        "cumin",
+        3
       ],
       [
-        "red-pepper",
-        1
+        "habanero-pepper",
+        5
+      ],
+      [
+        "potatoes",
+        350
+      ],
+      [
+        "chickpeas",
+        800
+      ],
+      [
+        "water",
+        300
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "cilantro",
+        10
+      ],
+      [
+        "roti",
+        "4pc"
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "trinidadian-bake-and-shark-inspired-fish-sandwich",
-    "name": "Trinidadian Bake and Shark-Inspired Fish Sandwich",
-    "meal": "big",
-    "cuisine": "Trinidadian",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Heat {oil} in a heavy pot and soften diced {onion} for 5 minutes. Add crushed {garlic}, {curry-powder}, {cumin} and the whole {habanero-pepper}; fry for 2 minutes, adding a splash of water to stop it catching.",
+      "Add diced {potatoes}, the drained {chickpeas}, {water} and {salt}. Cover and simmer for 20 minutes until the potatoes are tender, crushing a few to thicken the sauce.",
+      "Warm the {roti} in a dry pan or wrapped in foil in a 160 °C oven for 5 minutes.",
+      "Remove the pepper, stir in chopped {cilantro} and serve the curry with the roti."
     ]
   },
   {
@@ -810,41 +705,58 @@ KITCHEN.add(
   },
   {
     "id": "trinidadian-black-bean-and-rice-bowl",
-    "name": "Trinidadian Black Bean and Rice Bowl",
+    "name": "Trinidadian black beans and coconut rice",
     "meal": "big",
     "cuisine": "Trinidadian",
-    "time": 46,
+    "time": 45,
     "serves": 4,
     "ing": [
+      [
+        "rice",
+        300
+      ],
+      [
+        "coconut-milk",
+        300
+      ],
+      [
+        "water",
+        200
+      ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        450
+        "oil",
+        15
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "thyme",
+        2
       ],
       [
         "black-beans",
-        250
+        400
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "spring-onion",
+        "2pc"
       ]
     ],
     "steps": [
-      "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Rinse the {rice} and cook it with {coconut-milk}, {water} and {salt}: bring to the boil, cover and cook on low heat for 15 minutes, then rest for 5 minutes.",
+      "Heat {oil} in a pan and soften diced {onion} for 5 minutes. Add crushed {garlic} and {thyme} and cook for 1 minute.",
+      "Add the drained {black-beans} and simmer for 10 minutes, mashing a few against the pan to thicken.",
+      "Spoon the beans over the coconut rice and scatter with sliced {spring-onion}."
     ]
   },
   {
@@ -987,45 +899,54 @@ KITCHEN.add(
   },
   {
     "id": "trinidadian-corn-and-cheese-bake",
-    "name": "Trinidadian Corn and Cheese Bake",
+    "name": "Trinidadian corn pie with cheese",
     "meal": "big",
     "cuisine": "Trinidadian",
-    "time": 38,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "black-beans",
-        250
+        "butter",
+        30
       ],
       [
-        "rice",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "tomato",
-        250
+        "sweetcorn",
+        300
       ],
       [
-        "plantain",
+        "cornmeal",
+        120
+      ],
+      [
+        "milk",
+        300
+      ],
+      [
+        "eggs",
+        "2pc"
+      ],
+      [
+        "cheddar",
+        100
+      ],
+      [
+        "thyme",
+        1.5
+      ],
+      [
+        "salt",
         2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
       ]
     ],
     "steps": [
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {black-beans} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Heat the oven to 180 °C and grease a baking dish with a little of the {butter}.",
+      "Melt the rest of the {butter} and soften diced {onion} for 5 minutes. Stir in the {sweetcorn} and {thyme}.",
+      "Whisk {milk}, {eggs}, {cornmeal} and {salt}, then mix in the sweetcorn and most of the grated {cheddar}.",
+      "Pour into the dish, top with the remaining cheese and bake for 35–40 minutes until set and golden."
     ]
   }
 ]

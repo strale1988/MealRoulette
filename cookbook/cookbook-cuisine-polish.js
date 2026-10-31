@@ -2,49 +2,6 @@
 KITCHEN.add(
 [
   {
-    "id": "pl-potato-pancakes",
-    "name": "Polish potato pancakes (placki ziemniaczane)",
-    "meal": "big,morning",
-    "cuisine": "Polish",
-    "time": 35,
-    "serves": 3,
-    "ing": [
-      [
-        "potatoes",
-        600
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "eggs",
-        "1pc"
-      ],
-      [
-        "flour",
-        40
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "oil",
-        60
-      ],
-      [
-        "sour-cream",
-        100
-      ]
-    ],
-    "steps": [
-      "Grate {potatoes} and {onion}, then squeeze out as much liquid as you can.",
-      "Mix with {eggs}, {flour} and {salt}.",
-      "Fry spoonfuls in {oil} over medium heat for 3–4 minutes per side until crisp and golden. Serve with {sour-cream}."
-    ]
-  },
-  {
     "id": "pork-apple-cabbage",
     "name": "Seared pork with apple and mustard cabbage",
     "meal": "big",
@@ -98,62 +55,6 @@ KITCHEN.add(
       "Heat {oil} in a pan over medium-high heat and sear the pork 4–5 minutes per side until cooked through (63 °C). Rest on a plate.",
       "In the same pan melt {butter} and cook sliced {onion} for 5 minutes, then shredded {cabbage} and sliced {apple} for 8 minutes until tender.",
       "Stir in {mustard}, {vinegar} and the rest of the salt, and serve with the pork."
-    ]
-  },
-  {
-    "id": "world-polish-pierogi",
-    "name": "Polish potato and cheese pierogi",
-    "meal": "big",
-    "cuisine": "Polish",
-    "time": 75,
-    "serves": 3,
-    "ing": [
-      [
-        "flour",
-        300
-      ],
-      [
-        "eggs",
-        "1pc"
-      ],
-      [
-        "water",
-        130
-      ],
-      [
-        "potatoes",
-        350
-      ],
-      [
-        "ricotta",
-        140
-      ],
-      [
-        "onion",
-        120
-      ],
-      [
-        "butter",
-        25
-      ],
-      [
-        "sour-cream",
-        100
-      ],
-      [
-        "salt",
-        5
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Boil {potatoes} until tender, mash with {ricotta}, {salt} and {black-pepper}; cool the filling.",
-      "Mix {flour}, {eggs} and {water} into a soft dough. Knead briefly, cover and rest 20 minutes.",
-      "Roll thinly, cut circles, add a spoonful of filling and seal the edges firmly.",
-      "Boil in batches until the pierogi float, then cook 2 minutes more. Fry sliced {onion} in {butter} and serve over the pierogi with {sour-cream}."
     ]
   },
   {
@@ -735,7 +636,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Slice the {cucumber} very thinly, sprinkle with {salt} and leave for 5 minutes, then squeeze out the excess water.",
-      "Mix with the {sour-cream}, chopped {dill}, {lemon-juice} and {sugar}. Serve cold."
+      "Mix the {sour-cream} with the chopped {dill}, {lemon-juice} and {sugar}.",
+      "Fold the cucumber into the dressing and serve cold."
     ]
   },
   {
@@ -906,7 +808,7 @@ KITCHEN.add(
   {
     "id": "pol-racuchy",
     "name": "Racuchy (Polish apple pancakes)",
-    "meal": "morning,treat",
+    "meal": "morning",
     "cuisine": "Polish",
     "time": 25,
     "serves": 2,
@@ -992,231 +894,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Melt the {butter} in a pan over medium-low heat. Add the beaten {eggs} with the {salt} and stir slowly for 2 to 3 minutes until softly set.",
+      "Melt the {butter} in a pan over medium-low heat.",
+      "Add the beaten {eggs} with the {salt} and stir slowly for 2 to 3 minutes until softly set.",
       "Stir in most of the chopped {chives}, season with {black-pepper} and serve on {bread} topped with the rest of the chives."
-    ]
-  },
-  {
-    "id": "world-polish-pierogi-potato-cheese",
-    "name": "Polish pierogi with potato and farmer cheese",
-    "meal": "big",
-    "cuisine": "Polish",
-    "time": 90,
-    "serves": 4,
-    "ing": [
-      [
-        "flour",
-        350
-      ],
-      [
-        "water",
-        180
-      ],
-      [
-        "eggs",
-        "1pc"
-      ],
-      [
-        "potatoes",
-        450
-      ],
-      [
-        "cottage-cheese",
-        180
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "butter",
-        30
-      ],
-      [
-        "salt",
-        7
-      ],
-      [
-        "black-pepper",
-        2
-      ]
-    ],
-    "steps": [
-      "Boil the {potatoes} until tender and mash with {cottage-cheese}, salt and pepper.",
-      "Mix {flour}, {water}, {eggs} and a pinch of salt into a soft dough. Knead briefly, cover and rest 20 minutes.",
-      "Roll thinly, cut circles, fill each with potato-cheese mixture and seal the edges firmly.",
-      "Boil in batches until the pierogi float, then cook 2 minutes more. Serve with {onion} slowly fried in {butter}."
-    ]
-  },
-  {
-    "id": "world-polish-bigos",
-    "name": "Polish hunter’s stew with cabbage and mushrooms",
-    "meal": "big",
-    "cuisine": "Polish",
-    "time": 100,
-    "serves": 6,
-    "ing": [
-      [
-        "pork-shoulder",
-        500
-      ],
-      [
-        "smoked-sausage",
-        250
-      ],
-      [
-        "sauerkraut",
-        500
-      ],
-      [
-        "cabbage",
-        300
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "mushrooms",
-        200
-      ],
-      [
-        "tomato-paste",
-        25
-      ],
-      [
-        "bay-leaf",
-        2
-      ],
-      [
-        "vegetable-stock",
-        500
-      ],
-      [
-        "black-pepper",
-        3
-      ]
-    ],
-    "steps": [
-      "Cut the {pork-shoulder} and {smoked-sausage} into chunks. Brown the pork in a heavy pot.",
-      "Add the chopped {onion} and {mushrooms}; cook until softened, then stir in the {tomato-paste}.",
-      "Add the {sauerkraut}, shredded {cabbage}, {bay-leaf}, {black-pepper} and {vegetable-stock}.",
-      "Cover and simmer very gently for 75–90 minutes, stirring occasionally, until rich and tender. Remove bay leaves before serving."
-    ]
-  },
-  {
-    "id": "polish-zurek",
-    "name": "Żurek sour rye soup with sausage and egg",
-    "meal": "light",
-    "cuisine": "Polish",
-    "time": 45,
-    "serves": 2,
-    "ing": [
-      [
-        "sausage",
-        300
-      ],
-      [
-        "vegetable-stock",
-        800
-      ],
-      [
-        "sourdough-starter",
-        250
-      ],
-      [
-        "potatoes",
-        250
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "garlic",
-        "2pc"
-      ],
-      [
-        "marjoram",
-        3
-      ],
-      [
-        "cream",
-        80
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "bay-leaf",
-        "1pc"
-      ]
-    ],
-    "steps": [
-      "Simmer {sausage} in {vegetable-stock} with {bay-leaf} for 15 minutes; remove sausage and slice.",
-      "Add diced {potatoes}, {onion} and {garlic}; cook until potatoes are tender.",
-      "Stir in {sourdough-starter} and {marjoram}; simmer 5 minutes. Temper {cream} with hot soup, stir it in and return sausage to the pot.",
-      "Serve with halved hard-boiled {eggs}."
-    ]
-  },
-  {
-    "id": "polish-bigos-hunters-stew",
-    "name": "Bigos Polish hunter’s stew with cabbage, sausage and pork",
-    "meal": "big",
-    "cuisine": "Polish",
-    "time": 90,
-    "serves": 2,
-    "ing": [
-      [
-        "cabbage",
-        250
-      ],
-      [
-        "sauerkraut",
-        250
-      ],
-      [
-        "pork-shoulder",
-        250
-      ],
-      [
-        "smoked-sausage",
-        150
-      ],
-      [
-        "bacon",
-        70
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "dried-apricots",
-        30
-      ],
-      [
-        "tomato-paste",
-        20
-      ],
-      [
-        "bay-leaf",
-        1
-      ],
-      [
-        "allspice",
-        2
-      ],
-      [
-        "vegetable-stock",
-        350
-      ]
-    ],
-    "steps": [
-      "Brown cubed {pork-shoulder}, sliced {smoked-sausage} and {bacon} in a heavy pot. Add diced {onion} and cook until softened.",
-      "Stir in shredded {cabbage}, drained {sauerkraut}, {tomato-paste}, chopped {dried-apricots}, {bay-leaf}, {allspice} and {vegetable-stock}.",
-      "Cover and simmer gently for 75–90 minutes, stirring occasionally, until rich and tender. Remove bay leaf before serving."
     ]
   },
   {
@@ -1241,11 +921,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "vegetable-stock",
@@ -1261,7 +941,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        2
+        "2pc"
       ],
       [
         "sour-cream",
@@ -1363,7 +1043,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "vegetable-stock",
@@ -1422,7 +1102,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "butter",
@@ -1493,7 +1173,7 @@ KITCHEN.add(
       ],
       [
         "orange",
-        1
+        "1pc"
       ],
       [
         "salt",
@@ -1540,7 +1220,7 @@ KITCHEN.add(
       ],
       [
         "lemon",
-        1
+        "1pc"
       ],
       [
         "raisins",
@@ -1571,11 +1251,11 @@ KITCHEN.add(
       ],
       [
         "apple",
-        2
+        "2pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "marjoram",
@@ -1638,7 +1318,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "breadcrumbs",
@@ -1666,7 +1346,7 @@ KITCHEN.add(
   {
     "id": "polish-chlodnik",
     "name": "Chłodnik (cold beetroot, cucumber and dill soup)",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Polish",
     "time": 25,
     "serves": 3,
@@ -1677,7 +1357,7 @@ KITCHEN.add(
       ],
       [
         "cucumber",
-        1
+        "1pc"
       ],
       [
         "radish",
@@ -1736,15 +1416,15 @@ KITCHEN.add(
       ],
       [
         "carrot",
-        1
+        "1pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "bay-leaf",
@@ -1787,7 +1467,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        2
+        "2pc"
       ],
       [
         "mustard",
@@ -1825,154 +1505,55 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "polish-roast-duck-apples",
-    "name": "Polish roast duck with apple and marjoram",
-    "meal": "big",
-    "cuisine": "Polish",
-    "time": 75,
-    "serves": 2,
-    "ing": [
-      [
-        "duck-breast",
-        2
-      ],
-      [
-        "apple",
-        2
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "marjoram",
-        3
-      ],
-      [
-        "butter",
-        20
-      ],
-      [
-        "vegetable-stock",
-        120
-      ],
-      [
-        "lemon-juice",
-        10
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Score the skin of {duck-breast}; season with {salt}, {black-pepper} and {marjoram}. Start skin-side down in a cold pan and render until crisp and golden.",
-      "Turn the duck and finish in a 190 °C oven until cooked to your preference; rest before slicing.",
-      "Cook sliced {apple} and {onion} in {butter} in the same pan. Add {vegetable-stock} and {lemon-juice}, simmer to a light sauce and serve over the duck."
-    ]
-  },
-  {
-    "id": "polish-pierogi-potato-cheese",
-    "name": "Pierogi ruskie with potato and farmer cheese",
-    "meal": "big",
-    "cuisine": "Polish",
-    "time": 75,
-    "serves": 4,
-    "ing": [
-      [
-        "flour",
-        350
-      ],
-      [
-        "water",
-        180
-      ],
-      [
-        "eggs",
-        "1pc"
-      ],
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "cottage-cheese",
-        250
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "butter",
-        25
-      ],
-      [
-        "salt",
-        5
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Boil {potatoes} until tender, mash and mix with crumbled {cottage-cheese}, sautéed {onion}, salt and pepper.",
-      "Mix {flour}, {water}, {eggs} and a pinch of salt into a soft dough; rest 20 minutes.",
-      "Roll thin, cut circles, add filling and seal edges firmly.",
-      "Boil in salted water until pierogi float, then cook 2 minutes more; serve with browned {butter} and onion."
-    ]
-  },
-  {
     "id": "pl-karpatka",
     "name": "Karpatka (Polish choux and vanilla custard cake)",
     "meal": "treat",
     "cuisine": "Polish",
-    "time": 75,
-    "serves": 2,
+    "time": 90,
+    "serves": 8,
     "ing": [
       [
-        "flour",
-        120
-      ],
-      [
         "butter",
-        70
+        100
       ],
       [
         "water",
-        350
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "milk",
         250
       ],
       [
+        "flour",
+        150
+      ],
+      [
+        "eggs",
+        "4pc"
+      ],
+      [
+        "milk",
+        500
+      ],
+      [
         "sugar",
-        35
+        120
       ],
       [
         "cornstarch",
-        100
+        40
       ],
       [
         "vanilla",
         3
+      ],
+      [
+        "icing-sugar",
+        20
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {flour} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Cook a choux paste, beat in eggs and bake two uneven golden sheets; sandwich the cooled sheets with thick vanilla pastry cream and dust with icing sugar.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 200 °C. Boil the {water} with the {butter}, tip in the {flour} and stir for 2 minutes until it forms a ball. Cool slightly, then beat in 3 of the {eggs}, one at a time, to make a glossy paste.",
+      "Divide the choux between two lined 20 cm tins, one slightly thicker than the other, and bake for 30 minutes at 180 °C, without opening the oven, until golden and dry. Cool.",
+      "Whisk the remaining egg with the {sugar} and {cornstarch}, heat the {milk} and whisk it in, then return to the pan and stir for 5 minutes until thick. Stir in the {vanilla} and cool completely.",
+      "Spread the custard over the thicker base, top with the thinner layer, chill for 2 hours and dust with {icing-sugar}."
     ]
   }
 ]

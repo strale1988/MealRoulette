@@ -2,15 +2,15 @@
 KITCHEN.add(
 [
   {
-    "id": "senegalese-thieboudienne",
-    "name": "Thieboudienne (fish and rice)",
+    "id": "senegalese-thiebou-yapp",
+    "name": "Thiebou Yapp (Senegalese rice with beef and vegetables)",
     "meal": "big",
     "cuisine": "Senegalese",
-    "time": 85,
+    "time": 100,
     "serves": 4,
     "ing": [
       [
-        "white-fish",
+        "beef-chuck",
         600
       ],
       [
@@ -22,34 +22,39 @@ KITCHEN.add(
         40
       ],
       [
+        "onion",
+        "1pc"
+      ],
+      [
         "carrot",
-        2
+        "2pc"
       ],
       [
         "cabbage",
         250
       ],
       [
-        "onion",
-        1
-      ],
-      [
         "oil",
         30
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Season the {white-fish} and sear it in {oil}; remove.",
-      "Cook the {onion} and {tomato-paste}; add water, {carrot} and {cabbage}, then simmer until nearly tender.",
-      "Add {rice} and return the fish near the end; cook until rice is tender and the broth is absorbed."
+      "Cut {beef-chuck} into 3 cm cubes, season with half of the {salt} and brown in {oil} in a large pot for 8 minutes. Remove.",
+      "Soften sliced {onion} in the pot for 5 minutes, add {tomato-paste} and cook for 2 minutes. Return the beef, add 1.2 litres water and simmer covered for 45 minutes.",
+      "Add {carrot} and {cabbage} in large chunks and cook for 20 minutes; lift out the vegetables and keep warm.",
+      "Add {rice} and the remaining salt to the broth, cover and cook on low heat for 18 minutes. Serve the rice topped with the beef and vegetables."
     ]
   },
   {
-    "id": "senegalese-yassa-chicken",
-    "name": "Poulet yassa (lemon-onion chicken)",
+    "id": "senegalese-mafe",
+    "name": "Mafé au Poulet (Senegalese chicken peanut stew)",
     "meal": "big",
     "cuisine": "Senegalese",
-    "time": 65,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
@@ -57,51 +62,12 @@ KITCHEN.add(
         700
       ],
       [
-        "onion",
-        3
-      ],
-      [
-        "lemon-juice",
-        60
-      ],
-      [
-        "mustard",
-        25
-      ],
-      [
-        "oil",
-        25
-      ],
-      [
-        "rice",
-        250
-      ]
-    ],
-    "steps": [
-      "Marinate the {chicken-thigh} with sliced {onion}, {lemon-juice} and {mustard} for at least 30 minutes.",
-      "Brown chicken in {oil}; add marinade onions and a splash of water.",
-      "Cover and simmer until tender and tangy. Serve with cooked {rice}."
-    ]
-  },
-  {
-    "id": "senegalese-mafe",
-    "name": "Mafé (peanut tomato stew)",
-    "meal": "big",
-    "cuisine": "Senegalese",
-    "time": 60,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        500
-      ],
-      [
         "peanut-butter",
         100
       ],
       [
         "tomato",
-        300
+        "3pc"
       ],
       [
         "sweet-potato",
@@ -109,23 +75,32 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
-        "beef-stock",
-        700
+        "chicken-stock",
+        600
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Brown the {beef-chuck} and soften the {onion}.",
-      "Add {tomato}, {beef-stock} and cubed {sweet-potato}; simmer until beef is tender.",
-      "Whisk {peanut-butter} with hot stew liquid, stir back in and simmer until creamy."
+      "Brown {chicken-thigh} in {oil} for 5 minutes per side and remove. Soften sliced {onion} in the same pot for 5 minutes.",
+      "Add chopped {tomato} and cook for 6 minutes. Return the chicken, add {chicken-stock} and {salt} and simmer covered for 20 minutes.",
+      "Add {sweet-potato} in chunks and cook for 15 minutes.",
+      "Whisk {peanut-butter} with a ladle of the hot liquid, stir it in and simmer for 8 minutes until thick and creamy."
     ]
   },
   {
     "id": "senegalese-acara",
     "name": "Accara (black-eyed pea fritters)",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Senegalese",
     "time": 35,
     "serves": 4,
@@ -136,11 +111,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "red-chilli",
-        1
+        "1pc"
       ],
       [
         "salt",
@@ -152,47 +127,62 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Soak {dried-black-eyed-peas} overnight, rub off skins if possible, then blend with {onion}, {red-chilli} and {salt} to a thick batter.",
-      "Beat the batter until light.",
-      "Drop spoonfuls into hot {oil} and fry until crisp outside and cooked through."
+      "Soak {dried-black-eyed-peas} overnight, rub off the skins if possible, then blend with {onion}, {red-chilli} and {salt} to a thick batter.",
+      "Beat the batter vigorously for 3 minutes until light.",
+      "Drop spoonfuls into {oil} heated to 180 °C and fry for 3–4 minutes, turning, until crisp outside and cooked through."
     ]
   },
   {
-    "id": "yassa-inspired-lemon-onion-chicken",
-    "name": "Yassa-Inspired Lemon Onion Chicken",
+    "id": "senegalese-yassa-poisson",
+    "name": "Yassa Poisson (Senegalese lemon-onion fish with rice)",
     "meal": "big",
     "cuisine": "Senegalese",
-    "time": 30,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        500
+        "white-fish",
+        700
       ],
       [
         "onion",
-        1
+        "4pc"
       ],
       [
-        "tomato",
-        300
+        "lemon-juice",
+        60
       ],
       [
-        "peanut-butter",
-        50
+        "mustard",
+        25
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "oil",
+        40
       ],
       [
         "rice",
         250
       ],
       [
-        "spinach",
-        150
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Mix {lemon-juice}, {mustard}, crushed {garlic}, chopped {green-chilli} and half of the {salt}. Rub a third of it into {white-fish} and rest for 15 minutes.",
+      "Cook {rice} in 500 ml water with the remaining salt, covered, over low heat for 15 minutes.",
+      "Slice the {onion} and cook in half of the {oil} over medium heat for 15 minutes until soft and golden. Add the rest of the marinade and 100 ml water and simmer for 5 minutes.",
+      "Fry the fish in the remaining oil for 3 minutes per side until golden.",
+      "Serve the fish and rice smothered in the onion sauce."
     ]
   },
   {
@@ -335,40 +325,49 @@ KITCHEN.add(
   {
     "id": "senegalese-black-eyed-pea-salad",
     "name": "Senegalese Black-Eyed Pea Salad",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Senegalese",
-    "time": 51,
+    "time": 20,
     "serves": 4,
     "ing": [
       [
-        "onion",
-        1
+        "black-eyed-peas",
+        480
+      ],
+      [
+        "red-onion",
+        "1pc"
       ],
       [
         "tomato",
-        300
+        "2pc"
       ],
       [
-        "peanut-butter",
-        50
+        "lemon",
+        "1pc"
       ],
       [
-        "rice",
-        250
+        "olive-oil",
+        30
       ],
       [
-        "spinach",
-        150
+        "parsley",
+        15
       ],
       [
-        "ginger",
-        10
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "salt",
+        2
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {onion} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Drain and rinse the {black-eyed-peas}.",
+      "Dice the {red-onion} and {tomato} and finely chop the {green-chilli} and {parsley}.",
+      "Whisk the juice of the {lemon} with {olive-oil} and {salt}.",
+      "Toss everything together and rest for 10 minutes before serving."
     ]
   },
   {
@@ -580,40 +579,54 @@ KITCHEN.add(
   },
   {
     "id": "senegalese-spiced-rice-with-vegetables",
-    "name": "Senegalese Spiced Rice with Vegetables",
+    "name": "Senegalese Vegetable Rice (riz aux légumes)",
     "meal": "big",
     "cuisine": "Senegalese",
-    "time": 25,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
+        "rice",
         300
       ],
       [
-        "peanut-butter",
-        50
+        "tomato-paste",
+        40
       ],
       [
-        "rice",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "spinach",
+        "carrot",
+        "2pc"
+      ],
+      [
+        "green-beans",
         150
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        4
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Chop the {onion}, dice the {carrot}, trim and halve the {green-beans} and crush the {garlic}.",
+      "Soften the onion in {oil} for 5 minutes, then add the garlic, whole {green-chilli} and {tomato-paste} and cook for 3 minutes.",
+      "Add the carrot, beans, 600 ml water and {salt} and simmer for 10 minutes.",
+      "Stir in the {rice}, cover and cook on low heat for 18 minutes until the water is absorbed. Remove the chilli and fluff with a fork."
     ]
   },
   {
@@ -668,46 +681,51 @@ KITCHEN.add(
     "name": "Senegalese Grilled Fish with Lime",
     "meal": "big",
     "cuisine": "Senegalese",
-    "time": 39,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "white-fish",
+        700
+      ],
+      [
+        "lime",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "parsley",
+        15
+      ],
+      [
+        "green-chilli",
+        "1pc"
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        500
-      ],
-      [
         "onion",
-        1
+        "1pc"
       ],
       [
         "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
+        "2pc"
       ]
     ],
     "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Crush {garlic} with {parsley}, {green-chilli}, half of the {salt} and half of the {oil}. Add the juice of one {lime} and rub into {white-fish}; marinate for 20 minutes.",
+      "Heat a grill or griddle to high (about 220 °C) and cook the fish for 4–5 minutes per side until charred and flaking.",
+      "Dice the {onion} and {tomato} and toss with the remaining oil and salt and a squeeze of the second lime.",
+      "Serve the fish with the salad and wedges of the remaining lime."
     ]
   },
   {
@@ -715,37 +733,51 @@ KITCHEN.add(
     "name": "Senegalese Chicken and Greens Pot",
     "meal": "big",
     "cuisine": "Senegalese",
-    "time": 46,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
         "chicken-thigh",
-        500
+        600
       ],
       [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
+        "spinach",
         300
       ],
       [
-        "peanut-butter",
-        50
+        "onion",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        3
       ],
       [
         "rice",
         250
-      ],
-      [
-        "spinach",
-        150
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Season {chicken-thigh} with half of the {salt} and brown in {oil} for 5 minutes per side. Remove.",
+      "Soften sliced {onion} and crushed {garlic} in the pot for 5 minutes, add chopped {tomato} and the whole {green-chilli} and cook for 8 minutes.",
+      "Return the chicken with 300 ml water, cover and simmer for 25 minutes. Meanwhile cook {rice} in 500 ml water with the remaining salt, covered, for 15 minutes.",
+      "Stir the {spinach} into the stew for the last 5 minutes until wilted. Serve with the rice."
     ]
   },
   {
@@ -798,11 +830,78 @@ KITCHEN.add(
   {
     "id": "senegalese-herbed-flatbread",
     "name": "Senegalese Herbed Flatbread",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Senegalese",
-    "time": 60,
+    "time": 75,
     "serves": 4,
     "ing": [
+      [
+        "flour",
+        300
+      ],
+      [
+        "yeast",
+        5
+      ],
+      [
+        "water",
+        190
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
+        "parsley",
+        15
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "salt",
+        4
+      ]
+    ],
+    "steps": [
+      "Mix {flour}, {yeast}, {salt}, {water} and 10 g of the {oil}; knead for 8 minutes. Cover and rise for 45 minutes.",
+      "Divide into 6 balls and roll each into a 5 mm disc. Mix crushed {garlic} and chopped {parsley} with the remaining oil.",
+      "Cook on a hot dry pan for 2 minutes per side until puffed and spotted, then brush with the herb oil."
+    ]
+  },
+  {
+    "id": "senegalese-coconut-rice-bowl",
+    "name": "Senegalese Coconut Rice Bowl",
+    "meal": "big",
+    "cuisine": "Senegalese",
+    "time": 45,
+    "serves": 4,
+    "ing": [
+      [
+        "rice",
+        250
+      ],
+      [
+        "coconut-milk",
+        300
+      ],
+      [
+        "sweet-potato",
+        400
+      ],
+      [
+        "spinach",
+        150
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
       [
         "ginger",
         10
@@ -813,71 +912,14 @@ KITCHEN.add(
       ],
       [
         "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
+        4
       ]
     ],
     "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "senegalese-coconut-rice-bowl",
-    "name": "Senegalese Coconut Rice Bowl",
-    "meal": "big",
-    "cuisine": "Senegalese",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Heat the oven to 220 °C. Toss cubed {sweet-potato} with half of the {oil} and half of the {salt} and roast for 25 minutes.",
+      "Soften diced {onion}, {garlic} and grated {ginger} in the remaining oil for 4 minutes. Add {rice}, {coconut-milk}, 250 ml water and the remaining salt, cover and cook on low heat for 15 minutes.",
+      "Stir the {spinach} through the rice and let it wilt for 3 minutes.",
+      "Serve the rice in bowls topped with the roasted sweet potato."
     ]
   },
   {

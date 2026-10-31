@@ -6,24 +6,16 @@ KITCHEN.add(
     "name": "Thukpa (Nepali Himalayan noodle soup)",
     "meal": "big",
     "cuisine": "Nepali",
-    "time": 35,
+    "time": 40,
     "serves": 2,
     "ing": [
       [
-        "noodles",
-        180
-      ],
-      [
         "chicken-thigh",
-        400
+        350
       ],
       [
-        "carrot",
-        150
-      ],
-      [
-        "cabbage",
-        200
+        "oil",
+        15
       ],
       [
         "ginger",
@@ -31,38 +23,42 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "chicken-stock",
-        450
+        900
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "cabbage",
+        150
       ],
       [
         "soy-sauce",
-        25
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "salt",
-        3
+        15
       ],
       [
         "black-pepper",
         1
       ],
       [
-        "oil",
-        15
+        "noodles",
+        180
+      ],
+      [
+        "cilantro",
+        10
       ]
     ],
     "steps": [
-      "Heat {oil} in a soup pot and soften {garlic} and {ginger} without browning.",
-      "Add {chicken-stock} and {noodles}, simmering gently until the main ingredient is tender.",
-      "Build a ginger-garlic broth, cook the chicken and vegetables until tender, then add noodles only for the final minutes so they do not over-soften.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Slice the {chicken-thigh} thinly. Heat {oil} in a pot and fry grated {ginger} and crushed {garlic} for 1 minute. Add the chicken and cook for 4 minutes.",
+      "Pour in the {chicken-stock} and simmer for 12 minutes.",
+      "Add the {carrot} cut into sticks and the shredded {cabbage} and simmer for 5 minutes. Season with {soy-sauce} and {black-pepper}.",
+      "Cook the {noodles} separately for 3–4 minutes, drain and divide between bowls. Ladle over the soup and top with chopped {cilantro}."
     ]
   },
   {
@@ -70,51 +66,38 @@ KITCHEN.add(
     "name": "Sel roti (Nepali ring-shaped rice bread)",
     "meal": "morning",
     "cuisine": "Nepali",
-    "time": 35,
+    "time": 40,
     "serves": 2,
     "ing": [
       [
         "rice-flour",
-        100
+        200
       ],
       [
         "banana",
-        2
+        "1pc"
       ],
       [
         "sugar",
-        35
+        40
       ],
       [
         "milk",
-        250
+        200
       ],
       [
         "cardamom",
-        2
+        1
       ],
       [
         "oil",
-        15
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
+        300
       ]
     ],
     "steps": [
-      "Prepare {rice-flour} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {rice-flour} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Blend the rice flour with mashed banana and milk into a thick pourable batter, rest it briefly, then pour rings into medium-hot oil and fry until crisp outside.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Mash the {banana} and whisk with {rice-flour}, {sugar}, {milk} and {cardamom} into a thick, pourable batter. Rest for 15 minutes.",
+      "Heat the {oil} in a deep, wide pan to about 170 °C.",
+      "Pour the batter in a ring through a funnel or squeeze bottle, spiralling into 10 cm circles. Fry for 2 minutes per side until golden and crisp, then drain on paper."
     ]
   },
   {
@@ -122,59 +105,63 @@ KITCHEN.add(
     "name": "Chatamari (Nepali rice-flour crepe with egg and mince)",
     "meal": "big",
     "cuisine": "Nepali",
-    "time": 30,
+    "time": 35,
     "serves": 2,
     "ing": [
       [
         "rice-flour",
-        100
+        150
       ],
       [
         "water",
-        350
+        250
+      ],
+      [
+        "salt",
+        3
       ],
       [
         "beef-mince",
-        400
+        200
       ],
       [
-        "eggs",
-        "2pc"
+        "oil",
+        20
       ],
       [
         "tomato",
-        2
+        "1pc"
       ],
       [
         "red-onion",
         "1pc"
       ],
       [
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "eggs",
+        "2pc"
+      ],
+      [
         "cilantro",
         10
-      ],
-      [
-        "green-chilli",
-        1
-      ],
-      [
-        "salt",
-        3
       ]
     ],
     "steps": [
-      "Whisk the batter until smooth and let it rest briefly so the flour hydrates.",
-      "Cook {rice-flour} in a lightly greased pan over medium heat, turning or folding once the surface sets.",
-      "Spread a thin rice-flour batter in a covered pan, scatter seasoned mince over the surface and crack an egg into the centre; cook until the base is crisp and the topping set.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Whisk {rice-flour}, {water} and {salt} into a smooth thin batter and rest for 10 minutes.",
+      "Fry {beef-mince} in half the {oil} for 6 minutes with diced {tomato}, {red-onion} and chopped {green-chilli} until dry.",
+      "Heat the remaining oil in a non-stick pan with a lid. Spread half the batter thinly, scatter over half the mince and crack one of the {eggs} into the centre.",
+      "Cover and cook for 3–4 minutes until the base is crisp and the egg is set. Repeat with the rest and top with chopped {cilantro}."
     ]
   },
   {
     "id": "np-choila",
-    "name": "Choila (charred Nepali spiced meat salad)",
+    "name": "Choila (charred Nepali spiced chicken salad)",
     "meal": "big",
     "cuisine": "Nepali",
-    "time": 35,
+    "time": 40,
     "serves": 2,
     "ing": [
       [
@@ -182,47 +169,47 @@ KITCHEN.add(
         400
       ],
       [
-        "ginger",
-        12
-      ],
-      [
-        "garlic",
-        3
-      ],
-      [
-        "red-chilli",
-        1
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "lemon-juice",
-        20
-      ],
-      [
-        "mustard-seeds",
-        100
-      ],
-      [
-        "oil",
-        15
+        "turmeric",
+        2
       ],
       [
         "salt",
         3
       ],
       [
-        "black-pepper",
-        1
+        "ginger",
+        15
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "mustard-seeds",
+        3
+      ],
+      [
+        "red-chilli",
+        "2pc"
+      ],
+      [
+        "lemon-juice",
+        20
+      ],
+      [
+        "oil",
+        20
       ]
     ],
     "steps": [
-      "Season {chicken-thigh} and coat it with the aromatics and marinade ingredients; rest briefly while the grill heats.",
-      "Grill or sear {chicken-thigh} over medium-high heat, turning as needed until cooked through and lightly charred.",
-      "Char the chicken over high heat, rest and slice it, then toss while still warm with toasted mustard seeds, chilli, ginger and lemon.",
-      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
+      "Marinate the {chicken-thigh} with {turmeric}, {salt}, grated {ginger}, crushed {garlic} and {cumin} for 20 minutes.",
+      "Grill or sear the chicken over high heat for 12 minutes, turning, until cooked through and lightly charred. Rest for 5 minutes, then slice.",
+      "Toast the {mustard-seeds} in a dry pan for 1 minute. Heat the {oil} until hot and fry the chopped {red-chilli} for 30 seconds.",
+      "Toss the warm chicken with the mustard seeds, chilli oil and {lemon-juice}."
     ]
   },
   {
@@ -230,24 +217,12 @@ KITCHEN.add(
     "name": "Kwati (Nepali mixed-bean soup)",
     "meal": "big",
     "cuisine": "Nepali",
-    "time": 80,
+    "time": 45,
     "serves": 2,
     "ing": [
       [
-        "chickpeas",
-        200
-      ],
-      [
-        "white-beans",
-        200
-      ],
-      [
-        "kidney-beans",
-        200
-      ],
-      [
-        "lentils",
-        180
+        "oil",
+        20
       ],
       [
         "onion",
@@ -255,7 +230,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -270,27 +245,34 @@ KITCHEN.add(
         2
       ],
       [
+        "chickpeas",
+        200
+      ],
+      [
+        "white-beans",
+        200
+      ],
+      [
+        "kidney-beans",
+        200
+      ],
+      [
+        "lentils",
+        200
+      ],
+      [
         "vegetable-stock",
-        450
+        600
       ],
       [
         "salt",
         3
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "oil",
-        15
       ]
     ],
     "steps": [
-      "Heat {oil} in a soup pot and soften {onion} and {garlic} without browning.",
-      "Add {vegetable-stock} and {chickpeas}, simmering gently until the main ingredient is tender.",
-      "Soak the mixed legumes if dried, cook until tender, then temper cumin, ginger and garlic in oil and stir the aromatic mixture into the broth.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat {oil} in a pot and soften diced {onion} for 5 minutes. Add {garlic}, {ginger}, {cumin} and {turmeric} and stir for 1 minute.",
+      "Add the drained {chickpeas}, {white-beans}, {kidney-beans} and {lentils}.",
+      "Pour in the {vegetable-stock}, add the {salt} and simmer for 25 minutes, mashing a few beans to thicken the soup."
     ]
   },
   {
@@ -315,7 +297,7 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "ginger",
@@ -323,7 +305,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "cumin",
@@ -355,50 +337,42 @@ KITCHEN.add(
   },
   {
     "id": "np-yomari",
-    "name": "Yomari-inspired steamed rice-flour parcels with sweet filling",
+    "name": "Yomari (Nepali steamed rice-flour parcels with sweet filling)",
     "meal": "treat",
     "cuisine": "Nepali",
-    "time": 45,
+    "time": 60,
     "serves": 2,
     "ing": [
       [
-        "rice-flour",
-        100
+        "sesame-seeds",
+        15
       ],
       [
         "brown-sugar",
-        30
-      ],
-      [
-        "sesame-seeds",
-        10
+        50
       ],
       [
         "coconut-flakes",
         30
       ],
       [
+        "rice-flour",
+        200
+      ],
+      [
         "water",
-        350
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
+        150
       ],
       [
         "oil",
-        15
+        10
       ]
     ],
     "steps": [
-      "Prepare a cohesive filling around {rice-flour}, season it and allow it to cool if hot.",
-      "Shape or wrap the filling securely, then steam, simmer or bake until the wrapper is cooked and the centre is hot.",
-      "Knead a soft rice-flour dough, shape it into pointed hollow parcels, fill with brown sugar, coconut and sesame, then steam until the outside turns glossy.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Toast the {sesame-seeds} in a dry pan for 2 minutes and mix with {brown-sugar} and {coconut-flakes} for the filling.",
+      "Knead {rice-flour} with hot {water} into a smooth, soft dough. Divide into 6 balls.",
+      "Flatten each ball, fill with a spoonful of the filling and pinch into a pointed, fig-shaped parcel.",
+      "Brush a steamer with the {oil} and steam the parcels for 15 minutes until glossy. Serve warm."
     ]
   },
   {
@@ -406,7 +380,7 @@ KITCHEN.add(
     "name": "Dal bhat tarkari (lentils, rice and vegetable curry)",
     "meal": "big",
     "cuisine": "Nepali",
-    "time": 45,
+    "time": 50,
     "serves": 2,
     "ing": [
       [
@@ -415,27 +389,15 @@ KITCHEN.add(
       ],
       [
         "red-lentils",
-        180
-      ],
-      [
-        "potatoes",
-        350
-      ],
-      [
-        "cauliflower",
-        250
+        150
       ],
       [
         "turmeric",
-        2
-      ],
-      [
-        "cumin",
         3
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -443,23 +405,30 @@ KITCHEN.add(
       ],
       [
         "oil",
-        15
+        25
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "potatoes",
+        250
+      ],
+      [
+        "cauliflower",
+        250
       ],
       [
         "salt",
         3
-      ],
-      [
-        "black-pepper",
-        1
       ]
     ],
     "steps": [
-      "Rinse {rice} if it is uncooked; prepare the other ingredients while it drains.",
-      "Heat {oil} and soften {garlic} and {ginger}, then cook the main filling until fragrant.",
-      "Cook covered or steam as appropriate until the grains are tender and the flavours have blended.",
-      "Cook rice separately; simmer lentils with turmeric and garlic, and prepare a dry potato-cauliflower tarkari so the plate has distinct textures rather than one mixed stew.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Rinse the {rice} and cook according to the packet.",
+      "Simmer the {red-lentils} in water with half the {turmeric}, half the {garlic} and the {salt} for 20 minutes until soft and creamy.",
+      "Heat the {oil} and fry the {cumin}, the remaining garlic, grated {ginger} and the remaining turmeric for 1 minute. Add diced {potatoes} and {cauliflower} florets and cook, covered, for 15 minutes, stirring now and then, to make a dry tarkari.",
+      "Serve the rice with the dal ladled over and the vegetable tarkari alongside."
     ]
   },
   {
@@ -467,16 +436,16 @@ KITCHEN.add(
     "name": "Chicken sekuwa (Nepali charcoal-style skewers)",
     "meal": "big",
     "cuisine": "Nepali",
-    "time": 40,
+    "time": 75,
     "serves": 2,
     "ing": [
       [
         "chicken-thigh",
-        400
+        450
       ],
       [
         "yogurt",
-        150
+        100
       ],
       [
         "lemon-juice",
@@ -484,11 +453,11 @@ KITCHEN.add(
       ],
       [
         "ginger",
-        12
+        15
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "cumin",
@@ -496,51 +465,38 @@ KITCHEN.add(
       ],
       [
         "fenugreek",
-        100
+        1
       ],
       [
         "paprika",
         3
       ],
       [
-        "oil",
-        15
-      ],
-      [
         "salt",
         3
       ],
       [
-        "black-pepper",
-        1
+        "oil",
+        15
       ]
     ],
     "steps": [
-      "Season {chicken-thigh} and coat it with the aromatics and marinade ingredients; rest briefly while the grill heats.",
-      "Grill or sear {chicken-thigh} over medium-high heat, turning as needed until cooked through and lightly charred.",
-      "Marinate chunks in yogurt and toasted spices, thread onto skewers and grill until lightly charred while turning often for even cooking.",
-      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
+      "Mix {yogurt}, {lemon-juice}, grated {ginger}, crushed {garlic}, {cumin}, {fenugreek}, {paprika}, {salt} and half the {oil}. Coat the cubed {chicken-thigh} and marinate for at least 1 hour.",
+      "Thread the chicken onto skewers.",
+      "Grill over high heat or under a hot grill for 12–15 minutes, turning often and brushing with the remaining oil, until charred and cooked through."
     ]
   },
   {
     "id": "np-gundruk-soup",
-    "name": "Nepali-style fermented-greens and potato soup",
+    "name": "Nepali-style tangy greens and potato soup",
     "meal": "big",
     "cuisine": "Nepali",
-    "time": 35,
+    "time": 40,
     "serves": 2,
     "ing": [
       [
-        "cabbage",
-        200
-      ],
-      [
-        "potatoes",
-        350
-      ],
-      [
-        "tomato",
-        2
+        "oil",
+        15
       ],
       [
         "ginger",
@@ -548,102 +504,66 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "2pc"
       ],
       [
         "cumin",
         3
       ],
       [
-        "water",
-        350
+        "potatoes",
+        300
       ],
       [
-        "lemon",
-        "1pc"
+        "tomato",
+        "2pc"
+      ],
+      [
+        "water",
+        700
       ],
       [
         "salt",
         3
       ],
       [
-        "black-pepper",
-        1
+        "cabbage",
+        200
       ],
       [
-        "oil",
-        15
+        "lemon",
+        "1pc"
       ]
     ],
     "steps": [
-      "Heat {oil} in a soup pot and soften {garlic} and {ginger} without browning.",
-      "Add {water} and {cabbage}, simmering gently until the main ingredient is tender.",
-      "Sauté aromatics, add potato and tomato with water and simmer until soft; add finely sliced greens late in the cooking and finish with lemon for a pleasantly tangy broth.",
-      "Finish with a little {lemon} if needed, taste for seasoning and serve while the texture is at its best."
+      "Heat {oil} in a pot and fry grated {ginger}, crushed {garlic} and {cumin} for 1 minute.",
+      "Add diced {potatoes}, chopped {tomato}, {water} and {salt}. Simmer for 15 minutes until the potatoes are soft.",
+      "Add the finely sliced {cabbage} and simmer for 5 minutes. Finish with the juice of the {lemon} for a tangy broth."
     ]
   },
   {
-    "id": "nepali-dal-bhat-lentils-and-rice",
-    "name": "Nepali Dal Bhat Lentils and Rice",
+    "id": "nepali-momo-inspired-dumplings",
+    "name": "Nepali chicken momo with ginger and cilantro",
     "meal": "big",
     "cuisine": "Nepali",
-    "time": 30,
+    "time": 70,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
+        "flour",
+        300
+      ],
+      [
+        "water",
+        150
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "chicken-mince",
         400
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "soy-sauce",
-        25
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "garlic",
-        2
-      ],
-      [
-        "spring-onion",
-        2
-      ]
-    ],
-    "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {soy-sauce} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "nepali-aloo-tama-inspired-potato-stew",
-    "name": "Nepali Aloo Tama-Inspired Potato Stew",
-    "meal": "big",
-    "cuisine": "Nepali",
-    "time": 45,
-    "serves": 4,
-    "ing": [
-      [
-        "potatoes",
-        600
-      ],
-      [
-        "tamarind-paste",
-        15
-      ],
-      [
-        "chickpeas",
-        240
-      ],
-      [
-        "tomato",
-        "2pc"
       ],
       [
         "onion",
@@ -658,74 +578,27 @@ KITCHEN.add(
         15
       ],
       [
-        "turmeric",
-        2
+        "cilantro",
+        15
       ],
       [
         "cumin",
-        2
-      ],
-      [
-        "fenugreek",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "oil",
-        30
-      ],
-      [
-        "salt",
         3
-      ]
-    ],
-    "steps": [
-      "Peel {potatoes} and cut into 3 cm chunks. Chop {onion} and {tomato}; crush {garlic}; grate {ginger}. Drain {chickpeas}.",
-      "Heat {oil}, add {cumin} and {fenugreek} for 20 seconds, then the onion for 5 minutes, garlic, ginger and {turmeric} for 1 minute, and the tomato for 5 minutes.",
-      "Add the potatoes, {tamarind-paste}, {salt} and 500 ml water, cover and simmer for 20 minutes.",
-      "Add {chickpeas} and simmer 5 minutes. Scatter chopped {cilantro} and serve."
-    ]
-  },
-  {
-    "id": "nepali-momo-inspired-dumplings",
-    "name": "Nepali Momo-Inspired Dumplings",
-    "meal": "big",
-    "cuisine": "Nepali",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        400
-      ],
-      [
-        "rice",
-        250
       ],
       [
         "soy-sauce",
-        25
+        15
       ],
       [
-        "ginger",
-        10
-      ],
-      [
-        "garlic",
-        2
-      ],
-      [
-        "spring-onion",
-        2
+        "oil",
+        15
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Mix {flour}, {water} and half the {salt} into a firm dough. Knead for 5 minutes, cover and rest for 30 minutes.",
+      "Mix {chicken-mince} with finely chopped {onion}, crushed {garlic}, grated {ginger}, chopped {cilantro}, {cumin}, {soy-sauce}, {oil} and the remaining salt.",
+      "Roll the dough thin, cut 9 cm circles, put a spoonful of filling in each and pleat into round parcels.",
+      "Steam over boiling water for 12 minutes until the wrappers are translucent and the filling is cooked through."
     ]
   },
   {
@@ -854,41 +727,54 @@ KITCHEN.add(
   },
   {
     "id": "nepali-ginger-garlic-noodle-bowl",
-    "name": "Nepali Ginger Garlic Noodle Bowl",
+    "name": "Nepali ginger and garlic vegetable noodle bowl",
     "meal": "big",
     "cuisine": "Nepali",
-    "time": 46,
+    "time": 25,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        400
+        "noodles",
+        300
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "soy-sauce",
-        25
+        "oil",
+        30
       ],
       [
         "ginger",
-        10
+        15
       ],
       [
         "garlic",
-        2
+        "4pc"
+      ],
+      [
+        "carrot",
+        "2pc"
+      ],
+      [
+        "cabbage",
+        200
       ],
       [
         "spring-onion",
+        "4pc"
+      ],
+      [
+        "soy-sauce",
+        40
+      ],
+      [
+        "chilli-flakes",
         2
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Cook the {noodles} according to the packet, drain and toss with a little of the {oil}.",
+      "Heat the remaining oil in a wok and fry grated {ginger} and crushed {garlic} for 30 seconds. Add the {carrot} cut into sticks and the shredded {cabbage} and stir-fry for 4 minutes.",
+      "Add the noodles, {soy-sauce} and {chilli-flakes} and toss for 2 minutes.",
+      "Serve scattered with sliced {spring-onion}."
     ]
   },
   {
@@ -1009,41 +895,69 @@ KITCHEN.add(
   },
   {
     "id": "nepali-coconut-vegetable-curry",
-    "name": "Nepali Coconut Vegetable Curry",
+    "name": "Nepali coconut vegetable curry",
     "meal": "big",
     "cuisine": "Nepali",
-    "time": 31,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        400
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "soy-sauce",
+        "oil",
         25
       ],
       [
-        "ginger",
-        10
+        "onion",
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "3pc"
       ],
       [
-        "spring-onion",
-        2
+        "ginger",
+        15
+      ],
+      [
+        "turmeric",
+        3
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "potatoes",
+        300
+      ],
+      [
+        "cauliflower",
+        250
+      ],
+      [
+        "coconut-milk",
+        300
+      ],
+      [
+        "peas",
+        100
+      ],
+      [
+        "garam-masala",
+        3
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "cilantro",
+        10
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Heat {oil} in a pot and soften diced {onion} for 5 minutes. Add {garlic}, {ginger}, {turmeric} and {cumin} and cook for 1 minute.",
+      "Add diced {potatoes}, {cauliflower} florets, {coconut-milk} and {salt}. Cover and simmer for 20 minutes.",
+      "Stir in the {peas} and {garam-masala} and cook for 5 minutes. Serve topped with chopped {cilantro}."
     ]
   },
   {

@@ -19,11 +19,11 @@ KITCHEN.add(
       ],
       [
         "carrot",
-        3
+        "3pc"
       ],
       [
         "onion",
-        2
+        "2pc"
       ],
       [
         "cumin",
@@ -38,158 +38,6 @@ KITCHEN.add(
       "Brown {beef-chuck} in {oil}; add sliced {onion} and cook golden.",
       "Add matchstick {carrot} and {cumin}; cook until softened.",
       "Add rinsed {rice} and hot water to cover. Simmer covered until rice is tender, then rest before serving."
-    ]
-  },
-  {
-    "id": "uzbek-lagman",
-    "name": "Lagman-style beef and vegetable noodles",
-    "meal": "big",
-    "cuisine": "Uzbek",
-    "time": 55,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-strips",
-        400
-      ],
-      [
-        "pasta",
-        350
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "garlic",
-        2
-      ]
-    ],
-    "steps": [
-      "Brown {beef-strips}; add {onion}, {garlic} and {red-pepper}.",
-      "Add {tomato} and a little water; simmer until beef is tender and sauce rich.",
-      "Serve over cooked {pasta}, using thick noodles if available."
-    ]
-  },
-  {
-    "id": "uzbek-manti",
-    "name": "Uzbek manti (steamed beef dumplings)",
-    "meal": "big",
-    "cuisine": "Uzbek",
-    "time": 65,
-    "serves": 4,
-    "ing": [
-      [
-        "flour",
-        300
-      ],
-      [
-        "water",
-        150
-      ],
-      [
-        "beef-mince",
-        350
-      ],
-      [
-        "onion",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "oil",
-        15
-      ]
-    ],
-    "steps": [
-      "Mix {flour} and {water} into a firm dough; rest 20 minutes.",
-      "Combine {beef-mince}, finely chopped {onion}, {cumin} and {oil}; season.",
-      "Roll dough thin, cut squares, fill and seal. Steam 25–30 minutes until cooked through."
-    ]
-  },
-  {
-    "id": "uzbek-achichuk",
-    "name": "Achichuk tomato and onion salad",
-    "meal": "light",
-    "cuisine": "Uzbek",
-    "time": 15,
-    "serves": 4,
-    "ing": [
-      [
-        "tomato",
-        350
-      ],
-      [
-        "red-onion",
-        1
-      ],
-      [
-        "salt",
-        2
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "coriander",
-        5
-      ]
-    ],
-    "steps": [
-      "Slice {tomato} and {red-onion} very thinly.",
-      "Toss with {salt}, {black-pepper} and chopped {coriander}.",
-      "Let stand 5 minutes and serve alongside plov or grilled meat."
-    ]
-  },
-  {
-    "id": "uzbek-plov-with-beef-and-carrots",
-    "name": "Uzbek Plov with Beef and Carrots",
-    "meal": "big",
-    "cuisine": "Uzbek",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ]
-    ],
-    "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {carrot} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
     ]
   },
   {
@@ -312,41 +160,50 @@ KITCHEN.add(
   },
   {
     "id": "samsa-style-meat-pies",
-    "name": "Samsa-Style Meat Pies",
+    "name": "Samsa (Uzbek baked lamb and onion pastries)",
     "meal": "big",
     "cuisine": "Uzbek",
-    "time": 51,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
+        "lamb-mince",
+        400
+      ],
+      [
         "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
+        "2pc"
       ],
       [
         "cumin",
         3
       ],
       [
-        "garlic",
-        2
+        "black-pepper",
+        1
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "puff-pastry",
+        375
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "sesame-seeds",
+        10
       ]
     ],
     "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {onion} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {rice} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Heat the oven to 200 °C. Mix {lamb-mince} with finely diced {onion}, {cumin}, {black-pepper} and {salt}.",
+      "Cut the {puff-pastry} into 8 squares. Put a spoonful of filling in the centre of each and fold into triangles, pinching the edges.",
+      "Brush with beaten {eggs} and sprinkle with {sesame-seeds}.",
+      "Bake for 25–30 minutes until puffed and deep golden and the filling is cooked through."
     ]
   },
   {
@@ -545,45 +402,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "uzbek-beef-and-onion-pilaf",
-    "name": "Uzbek Beef and Onion Pilaf",
-    "meal": "big",
-    "cuisine": "Uzbek",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ]
-    ],
-    "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
-    ]
-  },
-  {
     "id": "uzbek-pumpkin-and-herb-dumplings",
     "name": "Uzbek Pumpkin and Herb Dumplings",
     "meal": "big",
@@ -638,88 +456,114 @@ KITCHEN.add(
   },
   {
     "id": "uzbek-carrot-and-chickpea-soup",
-    "name": "Uzbek Carrot and Chickpea Soup",
+    "name": "Uzbek lamb and chickpea soup (nohat shurva)",
     "meal": "big",
     "cuisine": "Uzbek",
-    "time": 39,
+    "time": 100,
     "serves": 4,
     "ing": [
-      [
-        "garlic",
-        2
-      ],
       [
         "oil",
-        20
+        25
       ],
       [
-        "salt",
-        3
-      ],
-      [
-        "beef-chuck",
-        450
+        "lamb",
+        300
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
+        "3pc"
       ],
       [
         "potatoes",
-        2
-      ]
-    ],
-    "steps": [
-      "Add the {garlic} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "uzbek-flatbread-with-yogurt-dip",
-    "name": "Uzbek Flatbread with Yogurt Dip",
-    "meal": "big",
-    "cuisine": "Uzbek",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        450
+        300
       ],
       [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
+        "tomato",
+        "2pc"
       ],
       [
         "cumin",
         3
+      ],
+      [
+        "chickpeas",
+        400
+      ],
+      [
+        "vegetable-stock",
+        900
+      ],
+      [
+        "salt",
+        2
+      ],
+      [
+        "cilantro",
+        10
       ]
     ],
     "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Brown the cubed {lamb} in {oil} in a large pot for 6 minutes. Add diced {onion} and {carrot} and cook for 5 minutes.",
+      "Add chopped {tomato}, {cumin}, the drained {chickpeas}, {vegetable-stock} and {salt}. Bring to the boil, then cover and simmer for 1 hour.",
+      "Add diced {potatoes} and simmer for 15 minutes until tender.",
+      "Serve scattered with chopped {cilantro}."
+    ]
+  },
+  {
+    "id": "uzbek-flatbread-with-yogurt-dip",
+    "name": "Uzbek non (flatbread) with garlic yogurt dip",
+    "meal": "bite",
+    "cuisine": "Uzbek",
+    "time": 90,
+    "serves": 4,
+    "ing": [
+      [
+        "flour",
+        300
+      ],
+      [
+        "yeast",
+        5
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "water",
+        180
+      ],
+      [
+        "oil",
+        15
+      ],
+      [
+        "nigella-seeds",
+        4
+      ],
+      [
+        "yogurt",
+        250
+      ],
+      [
+        "garlic",
+        "1pc"
+      ],
+      [
+        "cilantro",
+        10
+      ]
+    ],
+    "steps": [
+      "Mix {flour}, {yeast} and {salt}, add the {water} and {oil} and knead for 8 minutes. Cover and prove for 1 hour.",
+      "Heat the oven to 240 °C with a tray inside. Divide into 4 rounds, flatten, press the centres thin and prick with a fork. Brush with water and sprinkle with {nigella-seeds}.",
+      "Bake for 10–12 minutes until golden.",
+      "Stir {yogurt} with crushed {garlic} and chopped {cilantro} and serve with the warm bread."
     ]
   },
   {
@@ -777,88 +621,49 @@ KITCHEN.add(
   },
   {
     "id": "uzbek-herbed-cucumber-salad",
-    "name": "Uzbek Herbed Cucumber Salad",
-    "meal": "big",
+    "name": "Uzbek cucumber and radish salad with herbs",
+    "meal": "bite",
     "cuisine": "Uzbek",
-    "time": 60,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "garlic",
-        2
+        "cucumber",
+        "3pc"
+      ],
+      [
+        "radish",
+        100
+      ],
+      [
+        "spring-onion",
+        "3pc"
+      ],
+      [
+        "dill",
+        10
+      ],
+      [
+        "cilantro",
+        10
       ],
       [
         "oil",
-        20
+        15
+      ],
+      [
+        "vinegar",
+        10
       ],
       [
         "salt",
-        3
-      ],
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
         2
       ]
     ],
     "steps": [
-      "Add the {garlic} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "uzbek-lamb-style-noodle-broth",
-    "name": "Uzbek Lamb-Style Noodle Broth",
-    "meal": "big",
-    "cuisine": "Uzbek",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ]
-    ],
-    "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Slice the {cucumber} and {radish} thinly and slice the {spring-onion}.",
+      "Whisk {oil}, {vinegar} and {salt}.",
+      "Toss the vegetables with the dressing and the chopped {dill} and {cilantro}. Serve chilled."
     ]
   },
   {

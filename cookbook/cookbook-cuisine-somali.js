@@ -14,12 +14,12 @@ KITCHEN.add(
         300
       ],
       [
-        "beef-chuck",
+        "beef-strips",
         300
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "tomato-paste",
@@ -35,9 +35,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Brown {beef-chuck} with {onion}; add {tomato-paste} and {cumin}.",
+      "Brown {beef-strips} with chopped {onion} in a heavy pot for 8 minutes; stir in {tomato-paste} and {cumin} for 1 minute.",
       "Stir in rinsed {rice} and {beef-stock}; bring to a simmer.",
-      "Cover and cook on low until rice is tender and the meat is cooked through."
+      "Cover and cook on the lowest heat for 18 minutes until the rice is tender and the meat is cooked through; rest for 5 minutes and fluff."
     ]
   },
   {
@@ -58,15 +58,15 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "coriander",
-        4
+        15
       ],
       [
         "pasta",
@@ -74,26 +74,26 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Brown {beef-strips}; add {onion} and {garlic} and cook until fragrant.",
-      "Add {tomato} and {coriander}; simmer until beef is tender and sauce thickens.",
-      "Serve over cooked {pasta}."
+      "Brown {beef-strips} in a wide pan for 6 minutes; add chopped {onion} and {garlic} and cook for 4 minutes until fragrant.",
+      "Add chopped {tomato} and {coriander}; simmer for 15 minutes until the beef is tender and the sauce thickens. Meanwhile cook the {pasta} as the packet directs.",
+      "Serve the sauce over the {pasta}."
     ]
   },
   {
     "id": "somali-sambusa",
     "name": "Somali sambusa (spiced meat pastries)",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Somali",
     "time": 45,
     "serves": 4,
     "ing": [
       [
-        "pork-mince",
+        "beef-mince",
         350
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "cumin",
@@ -101,11 +101,11 @@ KITCHEN.add(
       ],
       [
         "coriander",
-        3
+        10
       ],
       [
         "phyllo-pastry",
-        8
+        120
       ],
       [
         "oil",
@@ -113,15 +113,15 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cook {pork-mince} with chopped {onion}, {cumin} and {coriander} until browned; cool.",
+      "Cook {beef-mince} with chopped {onion}, {cumin} and {coriander} for 8 minutes until browned; cool.",
       "Cut {phyllo-pastry} into strips and fold around small spoonfuls of filling into triangles.",
-      "Seal edges and fry in hot {oil} until crisp and golden."
+      "Seal the edges with a little water and fry in {oil} heated to 180 °C for 2–3 minutes per side until crisp and golden."
     ]
   },
   {
     "id": "somali-malawah",
     "name": "Malawah (Somali sweet flatbread)",
-    "meal": "bake",
+    "meal": "morning",
     "cuisine": "Somali",
     "time": 25,
     "serves": 4,
@@ -132,7 +132,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        2
+        "2pc"
       ],
       [
         "milk",
@@ -149,46 +149,44 @@ KITCHEN.add(
     ],
     "steps": [
       "Whisk {flour}, {eggs}, {milk} and {sugar} into a smooth thin batter.",
-      "Melt a little {butter} in a skillet and pour in a thin layer of batter.",
-      "Cook until golden on both sides; repeat and serve warm."
+      "Melt a little {butter} in a skillet over medium heat and pour in a thin layer of batter.",
+      "Cook for 2 minutes per side until golden; repeat with the remaining batter and serve warm."
     ]
   },
   {
-    "id": "somali-bariis-iskukaris-spiced-rice",
-    "name": "Somali Bariis Iskukaris Spiced Rice",
-    "meal": "big",
+    "id": "somali-soor",
+    "name": "Soor (Somali cornmeal porridge with butter and sugar)",
+    "meal": "morning",
     "cuisine": "Somali",
-    "time": 30,
+    "time": 20,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        500
+        "cornmeal",
+        200
       ],
       [
-        "onion",
-        1
+        "water",
+        800
       ],
       [
-        "tomato",
-        300
+        "butter",
+        30
       ],
       [
-        "peanut-butter",
-        50
+        "sugar",
+        30
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
+        "salt",
+        2
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Bring the {water} and {salt} to the boil in a heavy pot.",
+      "Whisk in the {cornmeal} in a thin stream, stirring constantly to avoid lumps, then reduce the heat to low.",
+      "Cook, stirring often, for 12–15 minutes until thick and pulling away from the sides.",
+      "Serve in bowls with {butter} melted into a well in the middle and {sugar} sprinkled on top."
     ]
   },
   {
@@ -325,47 +323,64 @@ KITCHEN.add(
   },
   {
     "id": "somali-lentil-stew",
-    "name": "Somali Lentil Stew",
+    "name": "Somali Lentil Stew (maraq digir)",
     "meal": "big",
     "cuisine": "Somali",
-    "time": 51,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
+        "green-lentils",
         250
       ],
       [
-        "spinach",
-        150
+        "onion",
+        "1pc"
       ],
       [
-        "ginger",
+        "tomato",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "carrot",
+        "2pc"
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "turmeric",
+        2
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "cilantro",
         10
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {onion} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Rinse the {green-lentils}. Chop the {onion}, {tomato} and {carrot} and crush the {garlic}.",
+      "Cook the onion in {oil} for 5 minutes, add the garlic, {cumin} and {turmeric} for 1 minute, then the tomato for 5 minutes.",
+      "Add the lentils, carrot, 800 ml water and {salt} and simmer for 30 minutes until soft and thick.",
+      "Stir in chopped {cilantro} and serve hot."
     ]
   },
   {
     "id": "canjeero-style-flatbreads",
     "name": "Canjeero-Style Flatbreads",
-    "meal": "morning,big",
+    "meal": "morning",
     "cuisine": "Somali",
     "time": 90,
     "serves": 4,
@@ -563,41 +578,59 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "somali-spiced-rice-with-vegetables",
-    "name": "Somali Spiced Rice with Vegetables",
+    "id": "somali-vegetable-stew",
+    "name": "Somali Vegetable Stew (maraq khudaar)",
     "meal": "big",
     "cuisine": "Somali",
-    "time": 25,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
+        "potatoes",
         500
       ],
       [
-        "onion",
-        1
+        "carrot",
+        "2pc"
       ],
       [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
+        "cabbage",
         250
       ],
       [
-        "spinach",
-        150
+        "tomato",
+        "2pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "turmeric",
+        1
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Chop the {onion} and {tomato}, crush the {garlic} and cut the {potatoes}, {carrot} and {cabbage} into large chunks.",
+      "Cook the onion in {oil} for 5 minutes, add the garlic, {cumin} and {turmeric} for 1 minute, then the tomato for 5 minutes.",
+      "Add the potatoes, carrot, 400 ml water and {salt} and simmer for 12 minutes.",
+      "Add the cabbage and cook for 10 minutes until all the vegetables are tender in a thick sauce."
     ]
   },
   {
@@ -652,84 +685,105 @@ KITCHEN.add(
     "name": "Somali Grilled Fish with Lime",
     "meal": "big",
     "cuisine": "Somali",
-    "time": 39,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "white-fish",
+        700
+      ],
+      [
+        "lime",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "turmeric",
+        2
       ],
       [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
+        "cilantro",
+        10
       ]
     ],
     "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Mix crushed {garlic}, {cumin}, {turmeric}, {salt}, half of the {oil} and the juice of one {lime}. Rub over the {white-fish} and marinate for 20 minutes.",
+      "Heat a grill or heavy pan to high (about 220 °C), brush with the remaining oil and cook the fish for 4–5 minutes per side until charred and flaking.",
+      "Scatter with chopped {cilantro} and serve with wedges of the remaining lime."
     ]
   },
   {
-    "id": "somali-chicken-and-greens-pot",
-    "name": "Somali Chicken and Greens Pot",
+    "id": "somali-maraq-digaag",
+    "name": "Somali Chicken Soup (maraq digaag)",
     "meal": "big",
     "cuisine": "Somali",
-    "time": 46,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
         "chicken-thigh",
-        500
+        700
+      ],
+      [
+        "potatoes",
+        400
+      ],
+      [
+        "carrot",
+        "2pc"
       ],
       [
         "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "ginger",
+        15
+      ],
+      [
+        "cumin",
+        2
+      ],
+      [
+        "black-pepper",
         1
       ],
       [
-        "tomato",
-        300
+        "lime",
+        "1pc"
       ],
       [
-        "peanut-butter",
-        50
+        "salt",
+        3
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
+        "cilantro",
+        10
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Put {chicken-thigh} in a pot with sliced {onion}, crushed {garlic}, {ginger}, {cumin}, {salt} and 1.2 litres water. Bring to the boil, skim and simmer for 25 minutes.",
+      "Add the {potatoes} and {carrot} in chunks and simmer for 20 minutes until tender.",
+      "Season with {black-pepper}, finish with the juice of the {lime} and chopped {cilantro} and serve in deep bowls."
     ]
   },
   {
@@ -780,88 +834,78 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "somali-herbed-flatbread",
-    "name": "Somali Herbed Flatbread",
-    "meal": "big",
+    "id": "somali-sabaayad",
+    "name": "Sabaayad (Somali layered flatbread)",
+    "meal": "morning",
     "cuisine": "Somali",
     "time": 60,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "flour",
+        300
+      ],
+      [
+        "water",
+        170
       ],
       [
         "oil",
-        20
+        40
       ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
+        "butter",
+        20
       ]
     ],
     "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Mix {flour} and {salt}, add the {water} and knead for 8 minutes to a smooth dough. Rest for 20 minutes.",
+      "Divide into 6 balls and roll each very thin, brush with half of the {oil}, fold into a square and rest for 10 minutes.",
+      "Cook on a hot, lightly oiled pan with the remaining oil for 2–3 minutes per side until golden, then brush with {butter} and crush gently to open up the layers."
     ]
   },
   {
-    "id": "somali-coconut-rice-bowl",
-    "name": "Somali Coconut Rice Bowl",
-    "meal": "big",
+    "id": "somali-xalwo",
+    "name": "Xalwo (Somali cardamom halwa)",
+    "meal": "treat",
     "cuisine": "Somali",
-    "time": 31,
-    "serves": 4,
+    "time": 40,
+    "serves": 6,
     "ing": [
       [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
+        "sugar",
         250
       ],
       [
-        "spinach",
-        150
+        "cornstarch",
+        100
+      ],
+      [
+        "ghee",
+        60
+      ],
+      [
+        "cardamom",
+        3
+      ],
+      [
+        "nutmeg",
+        1
+      ],
+      [
+        "water",
+        500
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Grease a shallow dish with a little of the {ghee}.",
+      "Heat the {sugar} with 300 ml of the {water} until dissolved and boiling. Mix the {cornstarch} with the remaining water until smooth.",
+      "Whisk the cornstarch mixture into the syrup and stir constantly over low heat for 15 minutes until thick and translucent, adding the remaining ghee a spoonful at a time.",
+      "Stir in {cardamom} and {nutmeg}, pour into the dish, level and cool for 1 hour until set. Cut into squares."
     ]
   },
   {

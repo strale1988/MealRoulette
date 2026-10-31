@@ -63,7 +63,7 @@ KITCHEN.add(
   {
     "id": "uy-faina-chickpea-flatbread",
     "name": "Fainá (Uruguayan chickpea-flour flatbread)",
-    "meal": "side",
+    "meal": "bite",
     "cuisine": "Uruguayan",
     "time": 35,
     "serves": 2,
@@ -296,97 +296,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "uruguayan-chivito-inspired-steak-sandwich",
-    "name": "Uruguayan Chivito-Inspired Steak Sandwich",
-    "meal": "big",
-    "cuisine": "Uruguayan",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "uruguayan-pascualina-spinach-pie",
-    "name": "Uruguayan Pascualina Spinach Pie",
-    "meal": "big",
-    "cuisine": "Uruguayan",
-    "time": 80,
-    "serves": 4,
-    "ing": [
-      [
-        "puff-pastry",
-        500
-      ],
-      [
-        "spinach",
-        500
-      ],
-      [
-        "ricotta",
-        150
-      ],
-      [
-        "eggs",
-        "5pc"
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "butter",
-        20
-      ],
-      [
-        "nutmeg",
-        1
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 200 °C. Wilt {spinach} in a large pot for 3 minutes, cool, squeeze very dry and chop. Finely chop {onion} and cook in {butter} for 5 minutes.",
-      "Mix the spinach, onion, {ricotta}, one of the {eggs}, {nutmeg}, {salt} and {black-pepper}.",
-      "Line a 24 cm tin with half of the {puff-pastry}. Fill with the spinach mixture, make 4 hollows and crack an egg into each.",
-      "Cover with the remaining pastry, seal the edges and prick the top. Brush with the last beaten egg.",
-      "Bake for 35–40 minutes until deep golden. Cool 10 minutes before cutting."
-    ]
-  },
-  {
     "id": "uruguayan-beef-and-potato-stew",
     "name": "Uruguayan Beef and Potato Stew",
     "meal": "big",
@@ -452,40 +361,54 @@ KITCHEN.add(
   },
   {
     "id": "uruguayan-milanesa-with-lemon",
-    "name": "Uruguayan Milanesa with Lemon",
+    "name": "Uruguayan milanesa with lemon and salad",
     "meal": "big",
     "cuisine": "Uruguayan",
-    "time": 51,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "beef-steak",
+        500
       ],
       [
-        "black-beans",
-        250
+        "flour",
+        40
       ],
       [
-        "rice",
-        250
+        "eggs",
+        "2pc"
       ],
       [
-        "tomato",
-        250
+        "breadcrumbs",
+        120
       ],
       [
-        "plantain",
-        2
+        "salt",
+        3
       ],
       [
-        "red-pepper",
-        1
+        "oil",
+        80
+      ],
+      [
+        "lemon",
+        "2pc"
+      ],
+      [
+        "lettuce",
+        100
+      ],
+      [
+        "parsley",
+        10
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Pound the {beef-steak} into 5 mm thin cutlets and season with {salt}.",
+      "Dust with {flour}, dip in beaten {eggs} and coat well in {breadcrumbs}.",
+      "Fry in {oil} over medium-high heat for 2–3 minutes per side until golden. Drain on paper.",
+      "Serve with wedges of {lemon}, {lettuce} and chopped {parsley}."
     ]
   },
   {
@@ -586,44 +509,6 @@ KITCHEN.add(
       "Rub {chicken-thigh} with a third of the chimichurri and the remaining salt; marinate for 30 minutes.",
       "Grill or pan-fry the chicken over medium-high heat for 6–7 minutes per side until charred and cooked through. Rest 5 minutes.",
       "Serve with the remaining chimichurri spooned over."
-    ]
-  },
-  {
-    "id": "uruguayan-rice-pudding",
-    "name": "Uruguayan Rice Pudding",
-    "meal": "big",
-    "cuisine": "Uruguayan",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
     ]
   },
   {
@@ -740,41 +625,58 @@ KITCHEN.add(
   },
   {
     "id": "uruguayan-chicken-with-tomato-and-peppers",
-    "name": "Uruguayan Chicken with Tomato and Peppers",
+    "name": "Uruguayan chicken in tomato and pepper sauce",
     "meal": "big",
     "cuisine": "Uruguayan",
-    "time": 46,
+    "time": 60,
     "serves": 4,
     "ing": [
+      [
+        "chicken-thigh",
+        700
+      ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        450
+        "olive-oil",
+        25
       ],
       [
-        "black-beans",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "rice",
-        250
+        "red-pepper",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "paprika",
+        4
+      ],
+      [
+        "oregano",
+        2
+      ],
+      [
+        "white-wine",
+        100
       ],
       [
         "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "4pc"
       ]
     ],
     "steps": [
-      "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Season the {chicken-thigh} with {salt} and brown in {olive-oil} for 5 minutes per side. Remove.",
+      "Soften sliced {onion} and {red-pepper} in the same pan for 6 minutes. Add {garlic}, {paprika} and {oregano} for 1 minute.",
+      "Pour in the {white-wine} and let it bubble for 2 minutes, then add chopped {tomato}.",
+      "Return the chicken, cover and simmer for 30 minutes until cooked through and the sauce is thick."
     ]
   },
   {
@@ -901,45 +803,50 @@ KITCHEN.add(
   },
   {
     "id": "uruguayan-cilantro-lime-fish",
-    "name": "Uruguayan Cilantro Lime Fish",
+    "name": "Uruguayan cilantro-lime fish with potatoes",
     "meal": "big",
     "cuisine": "Uruguayan",
-    "time": 38,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "black-beans",
-        250
+        "potatoes",
+        500
       ],
       [
-        "rice",
-        250
+        "olive-oil",
+        30
       ],
       [
-        "tomato",
-        250
+        "salt",
+        3
       ],
       [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
+        "white-fish",
+        600
       ],
       [
         "lime",
-        1
+        "2pc"
+      ],
+      [
+        "cilantro",
+        15
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "tomato",
+        "2pc"
       ]
     ],
     "steps": [
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {black-beans} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Heat the oven to 200 °C. Slice the {potatoes}, toss with half the {olive-oil} and half the {salt} and roast for 20 minutes.",
+      "Mix the juice of one {lime}, chopped {cilantro}, crushed {garlic} and the remaining oil and salt.",
+      "Place the {white-fish} and sliced {tomato} on the potatoes, spoon over the lime mixture and bake for 12 minutes until the fish flakes.",
+      "Serve with wedges of the remaining {lime}."
     ]
   }
 ]

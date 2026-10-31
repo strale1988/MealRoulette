@@ -63,111 +63,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Rinse {rice} and parboil for 6–7 minutes; drain while the grains are still firm.",
+      "Rinse {rice} and parboil in water with the {salt} for 6–7 minutes; drain while the grains are still firm.",
       "Cook sliced {onion} and matchsticks of {carrot} in {butter} until softened. Add {dried-apricots}, {raisins}, {almonds}, {cinnamon}, {ground-cardamom} and {sugar}.",
       "Layer the rice and fruit mixture in a heavy pot, add a splash of water and a little {saffron} steeped in warm water. Cover with a clean towel under the lid.",
       "Steam over very low heat for 25 minutes. Finish with a little zest and juice from {orange}; fluff carefully before serving."
-    ]
-  },
-  {
-    "id": "persian-fesenjan",
-    "leftoverSwaps": [
-      "rice"
-    ],
-    "name": "Fesenjan-style chicken with walnuts and pomegranate",
-    "meal": "big",
-    "cuisine": "Persian",
-    "time": 75,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        600
-      ],
-      [
-        "walnuts",
-        150
-      ],
-      [
-        "pomegranate-seeds",
-        100
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "chicken-stock",
-        500
-      ],
-      [
-        "brown-sugar",
-        15
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "rice",
-        260
-      ]
-    ],
-    "steps": [
-      "Cook the {rice} and keep warm. Grind the {walnuts} finely. Dice the {onion} and brown it in the {oil} in a heavy pot.",
-      "Add the {chicken-thigh} and brown lightly. Stir in the ground walnuts, {chicken-stock} and {brown-sugar}; bring to a very gentle simmer.",
-      "Cook covered for 45–55 minutes, stirring regularly, until the sauce is thick and the chicken tender. Fold in most of the {pomegranate-seeds}; serve with rice and the remaining seeds."
-    ]
-  },
-  {
-    "id": "persian-jeweled-rice",
-    "name": "Persian jeweled rice",
-    "meal": "big",
-    "cuisine": "Persian",
-    "time": 40,
-    "serves": 4,
-    "ing": [
-      [
-        "rice",
-        280
-      ],
-      [
-        "dried-apricots",
-        70
-      ],
-      [
-        "raisins",
-        60
-      ],
-      [
-        "almonds",
-        50
-      ],
-      [
-        "zest-orange",
-        5
-      ],
-      [
-        "saffron",
-        1
-      ],
-      [
-        "cinnamon",
-        2
-      ],
-      [
-        "butter",
-        25
-      ],
-      [
-        "water",
-        500
-      ]
-    ],
-    "steps": [
-      "Rinse the {rice}. Soak the {saffron} in 2 tablespoons of warm water. Slice the {dried-apricots} and roughly chop the {almonds}.",
-      "Melt the {butter} in a saucepan; gently cook the apricots, {raisins}, almonds, {zest-orange} and {cinnamon} for 2–3 minutes.",
-      "Add the rice, {water} and saffron water. Cover and cook on low for 15–18 minutes until the rice is tender; rest 5 minutes, fluff and serve."
     ]
   },
   {
@@ -258,113 +157,6 @@ KITCHEN.add(
       "Rinse the {green-lentils} and simmer in water for 20–25 minutes until just tender; drain. Rinse the {rice}.",
       "Slice the {onion} and cook slowly in the {olive-oil} until golden. Stir in the {raisins} and {cinnamon} for the final minute.",
       "Layer rice and lentils in a pot with the {vegetable-stock}; cover and steam on low until the rice is tender. Top with the caramelized onion and raisin mixture."
-    ]
-  },
-  {
-    "id": "persian-kuku-sabzi",
-    "name": "Kuku sabzi (Persian herb frittata)",
-    "meal": "big",
-    "cuisine": "Persian",
-    "time": 30,
-    "serves": 2,
-    "ing": [
-      [
-        "eggs",
-        "5pc"
-      ],
-      [
-        "parsley",
-        30
-      ],
-      [
-        "coriander",
-        25
-      ],
-      [
-        "dill",
-        20
-      ],
-      [
-        "spinach",
-        80
-      ],
-      [
-        "walnuts",
-        35
-      ],
-      [
-        "barberries",
-        25
-      ],
-      [
-        "flour",
-        15
-      ],
-      [
-        "turmeric",
-        2
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ]
-    ],
-    "steps": [
-      "Finely chop the {parsley}, {coriander}, {dill} and {spinach}. Roughly chop the {walnuts}.",
-      "Beat the {eggs} with {flour}, {turmeric} and {salt}; fold in the herbs, walnuts and {barberries}.",
-      "Heat the {oil} in an oven-safe skillet, pour in the mixture and cook gently until edges begin to set.",
-      "Finish under a medium grill or in a 180 °C oven until the centre is set."
-    ]
-  },
-  {
-    "id": "persian-herb-frittata-kuku",
-    "name": "Persian herb kuku sabzi",
-    "meal": "big",
-    "cuisine": "Persian",
-    "time": 30,
-    "serves": 3,
-    "ing": [
-      [
-        "eggs",
-        "5pc"
-      ],
-      [
-        "parsley",
-        30
-      ],
-      [
-        "coriander",
-        20
-      ],
-      [
-        "dill",
-        15
-      ],
-      [
-        "spinach",
-        80
-      ],
-      [
-        "walnuts",
-        30
-      ],
-      [
-        "barberries",
-        20
-      ],
-      [
-        "turmeric",
-        2
-      ]
-    ],
-    "steps": [
-      "Finely chop {parsley}, {coriander}, {dill} and {spinach}. Roughly chop {walnuts}.",
-      "Beat {eggs} with {turmeric}, salt and pepper. Stir in the herbs, spinach, walnuts and {barberries}.",
-      "Pour into an oiled oven-safe skillet. Cook gently until the base sets, then finish under a grill or in a 180 °C oven until fully set."
     ]
   },
   {
@@ -736,7 +528,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Dice the {cucumber}, {tomato} and {red-onion} into small, even cubes and chop the {mint}.",
-      "Toss with the {lemon-juice}, {olive-oil} and {salt} and serve straight away."
+      "Whisk the {lemon-juice}, {olive-oil} and {salt}.",
+      "Toss everything together and serve straight away."
     ]
   },
   {
@@ -838,114 +631,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-persian-kuku-sabzi",
-    "name": "Persian kuku sabzi herb frittata",
-    "meal": "big",
-    "cuisine": "Persian",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "eggs",
-        "6pc"
-      ],
-      [
-        "parsley",
-        60
-      ],
-      [
-        "cilantro",
-        40
-      ],
-      [
-        "dill",
-        25
-      ],
-      [
-        "spring-onion",
-        3
-      ],
-      [
-        "walnuts",
-        40
-      ],
-      [
-        "barberries",
-        25
-      ],
-      [
-        "turmeric",
-        3
-      ],
-      [
-        "olive-oil",
-        25
-      ],
-      [
-        "salt",
-        4
-      ]
-    ],
-    "steps": [
-      "Finely chop the {parsley}, {cilantro}, {dill} and {spring-onion}. Roughly chop the {walnuts}.",
-      "Beat the {eggs} with {turmeric} and {salt}, then fold in the herbs, walnuts and {barberries}.",
-      "Heat the {olive-oil} in an oven-safe skillet. Add the mixture and cook over low heat for 5 minutes until the edges set.",
-      "Finish in a 180 °C oven for 10–15 minutes until just set. Rest briefly, slice into wedges and serve warm or at room temperature."
-    ]
-  },
-  {
-    "id": "world-persian-fesenjan",
-    "name": "Persian walnut and pomegranate chicken stew",
-    "meal": "big",
-    "cuisine": "Persian",
-    "time": 75,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        700
-      ],
-      [
-        "walnuts",
-        180
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "pomegranate-molasses",
-        70
-      ],
-      [
-        "chicken-stock",
-        500
-      ],
-      [
-        "sugar",
-        10
-      ],
-      [
-        "olive-oil",
-        20
-      ],
-      [
-        "salt",
-        5
-      ],
-      [
-        "black-pepper",
-        2
-      ]
-    ],
-    "steps": [
-      "Pulse the {walnuts} into a fine meal, taking care not to turn them into butter.",
-      "Brown the {chicken-thigh} in {olive-oil}; remove. Soften the chopped {onion} in the same pot.",
-      "Stir in the walnuts and {chicken-stock}, return the chicken, cover and simmer gently for 40 minutes.",
-      "Add the {pomegranate-molasses}, {sugar}, {salt} and {black-pepper}. Simmer uncovered for 15–20 minutes until glossy and tender; serve with rice."
-    ]
-  },
-  {
     "id": "persian-fesenjan-chicken",
     "name": "Fesenjan Persian chicken stew with walnuts and pomegranate",
     "meal": "big",
@@ -967,7 +652,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "chicken-stock",
@@ -1010,7 +695,7 @@ KITCHEN.add(
     "ing": [
       [
         "eggs",
-        5
+        "5pc"
       ],
       [
         "parsley",
@@ -1060,65 +745,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "persian-zereshk-polo-chicken",
-    "name": "Zereshk polo saffron rice with barberries and chicken",
-    "meal": "big",
-    "cuisine": "Persian",
-    "time": 50,
-    "serves": 2,
-    "ing": [
-      [
-        "rice",
-        180
-      ],
-      [
-        "chicken-thigh",
-        350
-      ],
-      [
-        "barberries",
-        35
-      ],
-      [
-        "butter",
-        30
-      ],
-      [
-        "saffron",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "lemon-juice",
-        15
-      ],
-      [
-        "sugar",
-        8
-      ],
-      [
-        "turmeric",
-        2
-      ],
-      [
-        "salt",
-        4
-      ],
-      [
-        "pistachios",
-        15
-      ]
-    ],
-    "steps": [
-      "Rinse and parboil {rice} until nearly tender; drain. Bloom {saffron} in a tablespoon of hot water.",
-      "Brown {chicken-thigh} with sliced {onion}, {turmeric} and {salt}; add a splash of water, cover and cook until tender.",
-      "Sauté {barberries} briefly in {butter} with {sugar} and {lemon-juice}. Steam the rice with saffron and remaining butter, then top with barberries and chopped {pistachios}; serve with chicken."
-    ]
-  },
-  {
     "id": "persian-tahchin-chicken",
     "name": "Tahchin (saffron chicken rice cake with crisp crust)",
     "meal": "big",
@@ -1152,7 +778,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "lemon-juice",
@@ -1211,11 +837,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        2
+        "2pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "turmeric",
@@ -1262,7 +888,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "parsley",
@@ -1321,7 +947,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "saffron",
@@ -1341,7 +967,7 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "2pc"
       ]
     ],
     "steps": [
@@ -1368,7 +994,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "tomato-paste",
@@ -1427,7 +1053,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "tomato-paste",
@@ -1439,7 +1065,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "turmeric",
@@ -1569,7 +1195,7 @@ KITCHEN.add(
   {
     "id": "persian-salad-olivieh",
     "name": "Salad olivieh (Persian chicken, potato and egg salad)",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Persian",
     "time": 40,
     "serves": 3,
@@ -1584,7 +1210,7 @@ KITCHEN.add(
       ],
       [
         "carrot",
-        1
+        "1pc"
       ],
       [
         "eggs",
@@ -1626,105 +1252,39 @@ KITCHEN.add(
     "name": "Tahdig (Persian saffron rice with a crisp golden crust)",
     "meal": "big",
     "cuisine": "Persian",
-    "time": 55,
-    "serves": 2,
-    "ing": [
-      [
-        "rice",
-        180
-      ],
-      [
-        "yogurt",
-        150
-      ],
-      [
-        "saffron",
-        100
-      ],
-      [
-        "butter",
-        35
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Rinse {rice} if it is uncooked; prepare the other ingredients while it drains.",
-      "Warm the cooking fat and season the main ingredients before adding the grain.",
-      "Combine the ingredients with {yogurt} and cook covered until the rice is tender and the liquid is absorbed.",
-      "Parboil rinsed rice, spread a yogurt-saffron layer over the base of an oiled pot, mound rice above it and steam over low heat until a crisp crust forms underneath.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
-    ]
-  },
-  {
-    "id": "pe-zereshk-polo",
-    "name": "Zereshk polo with saffron chicken and barberry rice",
-    "meal": "big",
-    "cuisine": "Persian",
     "time": 60,
     "serves": 2,
     "ing": [
       [
         "rice",
-        180
+        200
       ],
       [
-        "chicken-thigh",
-        400
+        "salt",
+        6
       ],
       [
-        "barberries",
+        "yogurt",
         100
       ],
       [
         "saffron",
-        100
+        1
       ],
       [
-        "onion",
-        "1pc"
+        "oil",
+        20
       ],
       [
         "butter",
-        35
-      ],
-      [
-        "almonds",
         40
-      ],
-      [
-        "chicken-stock",
-        450
-      ],
-      [
-        "sugar",
-        35
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
       ]
     ],
     "steps": [
-      "Rinse {rice} if it is uncooked; prepare the other ingredients while it drains.",
-      "Heat {butter} and soften {onion}, then cook the main filling until fragrant.",
-      "Combine the ingredients with {chicken-stock} and cook covered until the rice is tender and the liquid is absorbed.",
-      "Cook the rice until nearly tender, steam with saffron butter and separately sauté barberries with a little sugar; roast or braise the chicken with onion and serve over the rice with toasted almonds.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Rinse the {rice} until the water runs clear. Boil in plenty of water with {salt} for 6 minutes, then drain.",
+      "Steep the {saffron} in 3 tablespoons hot water. Mix one-third of the rice with {yogurt}, half the saffron water and the {oil}.",
+      "Melt half the {butter} in a non-stick pot, spread the yogurt rice over the base, then mound the remaining rice on top. Poke a few holes with a spoon handle, drizzle with the remaining saffron water and dot with the rest of the butter.",
+      "Wrap the lid in a clean tea towel and cook on high for 5 minutes, then on the lowest heat for 40 minutes. Turn out onto a plate so the golden crust is on top."
     ]
   }
 ]

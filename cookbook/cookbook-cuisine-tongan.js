@@ -4,7 +4,7 @@ KITCHEN.add(
   {
     "id": "tongan-ota-ika",
     "name": "Ota ika (coconut lime fish salad)",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Tongan",
     "time": 25,
     "serves": 4,
@@ -23,11 +23,11 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        1
+        "1pc"
       ],
       [
         "red-onion",
-        1
+        "1pc"
       ]
     ],
     "steps": [
@@ -54,7 +54,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "spinach",
@@ -85,11 +85,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "tomato",
-        2
+        "2pc"
       ]
     ],
     "steps": [
@@ -116,7 +116,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "lemon-juice",
@@ -124,7 +124,7 @@ KITCHEN.add(
       ],
       [
         "fresh-chilli",
-        1
+        "1pc"
       ]
     ],
     "steps": [
@@ -135,149 +135,175 @@ KITCHEN.add(
   },
   {
     "id": "tongan-lu-style-coconut-greens",
-    "name": "Tongan Lu-Style Coconut Greens",
+    "name": "Tongan coconut greens (lu-style) with sweet potato",
     "meal": "big",
     "cuisine": "Tongan",
     "time": 30,
     "serves": 4,
     "ing": [
       [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
         "sweet-potato",
-        2
+        500
       ],
       [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
+        "salt",
+        3
       ],
       [
         "onion",
-        1
+        "1pc"
+      ],
+      [
+        "coconut-milk",
+        400
+      ],
+      [
+        "spinach",
+        400
       ]
     ],
     "steps": [
-      "Add the {white-fish} and {sweet-potato}; stir well so the ingredients are evenly coated.",
-      "Add the {coconut-milk} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Peel and cube the {sweet-potato} and boil in water with a little {salt} for 15 minutes until tender. Drain.",
+      "Slice the {onion} and simmer with the {coconut-milk} in a wide pan for 10 minutes.",
+      "Add the {spinach}, cover and simmer for 5 minutes until tender in the coconut cream, then stir.",
+      "Serve the greens spooned over the sweet potato."
     ]
   },
   {
     "id": "tongan-coconut-fish-parcels",
-    "name": "Tongan Coconut Fish Parcels",
+    "name": "Tongan coconut fish parcels with rice",
     "meal": "big",
     "cuisine": "Tongan",
-    "time": 37,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "sweet-potato",
-        2
+        "white-fish",
+        600
       ],
       [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
+        "coconut-milk",
+        200
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
-        "rice",
-        250
+        "tomato",
+        "2pc"
       ],
       [
-        "oil",
-        15
+        "lime",
+        "1pc"
       ],
       [
         "salt",
         3
+      ],
+      [
+        "black-pepper",
+        1
+      ],
+      [
+        "rice",
+        280
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Add the {sweet-potato} and {sweet-potato}; stir well so the ingredients are evenly coated.",
-      "Add the {lime} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Heat the oven to 200 °C. Cut 4 large squares of foil. Slice the {onion} and {tomato}.",
+      "Divide the onion and tomato between the foil squares and top each with a portion of {white-fish}. Season with {salt} and {black-pepper}, spoon over the {coconut-milk} and squeeze over the {lime}.",
+      "Fold the foil to seal the parcels and bake for 20 minutes.",
+      "Meanwhile cook the {rice} according to the packet. Open the parcels and serve with the rice and juices."
     ]
   },
   {
     "id": "tongan-roast-root-vegetable-bowl",
-    "name": "Tongan Roast Root Vegetable Bowl",
+    "name": "Tongan roast sweet potato and pumpkin bowl with coconut",
     "meal": "big",
     "cuisine": "Tongan",
-    "time": 44,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "lime",
-        1
+        "sweet-potato",
+        600
       ],
       [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
+        "pumpkin",
+        300
       ],
       [
         "oil",
-        15
+        30
       ],
       [
         "salt",
         3
       ],
       [
-        "white-fish",
-        450
-      ],
-      [
         "coconut-milk",
-        300
+        200
       ],
       [
-        "sweet-potato",
-        2
+        "lime",
+        "1pc"
+      ],
+      [
+        "spinach",
+        100
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {onion} until fragrant.",
-      "Add the {lime} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {coconut-milk} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Heat the oven to 220 °C. Cut the {sweet-potato} and {pumpkin} into 3 cm chunks, toss with {oil} and {salt} and roast for 35 minutes, turning once, until caramelised.",
+      "Warm the {coconut-milk} gently with the zest of the {lime}.",
+      "Wilt the {spinach} in a hot pan for 1–2 minutes.",
+      "Divide the vegetables and spinach between bowls, spoon over the warm coconut milk and squeeze over the lime juice."
     ]
   },
   {
     "id": "tongan-chicken-and-coconut-stew",
-    "name": "Tongan Chicken and Coconut Stew",
+    "name": "Tongan chicken and coconut stew with sweet potato",
     "meal": "big",
     "cuisine": "Tongan",
-    "time": 51,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
+        "chicken-thigh",
+        700
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "ginger",
+        15
+      ],
+      [
         "coconut-milk",
-        300
+        400
+      ],
+      [
+        "water",
+        200
       ],
       [
         "sweet-potato",
-        2
+        500
+      ],
+      [
+        "salt",
+        3
       ],
       [
         "spinach",
@@ -285,101 +311,79 @@ KITCHEN.add(
       ],
       [
         "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
+        "1pc"
       ]
     ],
     "steps": [
-      "Add the {coconut-milk} and {sweet-potato}; stir well so the ingredients are evenly coated.",
-      "Add the {coconut-milk} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Season the {chicken-thigh} with {salt} and brown in {oil} in a large pot for 4 minutes per side. Remove.",
+      "Cook diced {onion} in the same pot for 5 minutes, then add {garlic} and {ginger} and stir for 1 minute.",
+      "Return the chicken and add {coconut-milk}, {water} and cubed {sweet-potato}. Cover and simmer for 30 minutes until the chicken is cooked through and the potato is tender.",
+      "Stir in the {spinach} for 3 minutes until wilted and finish with the juice of the {lime}."
     ]
   },
   {
     "id": "tongan-banana-coconut-pudding",
-    "name": "Tongan Banana Coconut Pudding",
-    "meal": "big",
+    "name": "Tongan banana and coconut pudding",
+    "meal": "treat",
     "cuisine": "Tongan",
-    "time": 58,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "spinach",
-        150
+        "banana",
+        "4pc"
       ],
       [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
+        "butter",
         15
       ],
       [
-        "salt",
-        3
+        "flour",
+        100
       ],
       [
-        "white-fish",
-        450
+        "sugar",
+        40
+      ],
+      [
+        "salt",
+        1
+      ],
+      [
+        "coconut-milk",
+        300
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {lime} until fragrant.",
-      "Add the {spinach} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {onion} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Heat the oven to 180 °C and grease a baking dish with the {butter}.",
+      "Mash 3 of the {banana} and mix with {flour}, {sugar} and {salt}.",
+      "Stir in the {coconut-milk} to make a thick batter, pour into the dish and top with the remaining banana, sliced.",
+      "Bake for 35 minutes until golden and just set. Serve warm."
     ]
   },
   {
     "id": "taro-style-coconut-mash-tongan-home-style",
-    "name": "Taro-Style Coconut Mash — Tongan Home-Style",
+    "name": "Tongan taro mash with coconut cream and fried onion",
     "meal": "big",
     "cuisine": "Tongan",
-    "time": 65,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "white-fish",
-        450
+        "taro",
+        700
+      ],
+      [
+        "salt",
+        3
       ],
       [
         "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
+        200
       ],
       [
         "onion",
-        1
-      ],
-      [
-        "rice",
-        250
+        "1pc"
       ],
       [
         "oil",
@@ -387,432 +391,293 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {coconut-milk} until fragrant.",
-      "Add the {white-fish} and {sweet-potato}; stir well so the ingredients are evenly coated.",
-      "Add the {coconut-milk} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Peel and cube the {taro} and boil in water with the {salt} for 25 minutes until very tender. Drain.",
+      "Mash with the {coconut-milk} until smooth and creamy.",
+      "Slice the {onion} and fry in {oil} for 8 minutes until golden, then spoon over the mash."
     ]
   },
   {
     "id": "tongan-tomato-fish-soup",
-    "name": "Tongan Tomato Fish Soup",
+    "name": "Tongan tomato and coconut fish soup",
     "meal": "big",
     "cuisine": "Tongan",
-    "time": 36,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
+        "oil",
+        15
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
-        "rice",
-        250
+        "garlic",
+        "2pc"
       ],
       [
-        "oil",
-        15
+        "tomato",
+        "4pc"
+      ],
+      [
+        "sweet-potato",
+        300
+      ],
+      [
+        "water",
+        600
+      ],
+      [
+        "coconut-milk",
+        200
+      ],
+      [
+        "white-fish",
+        400
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "lime",
+        "1pc"
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Add the {sweet-potato} and {sweet-potato}; stir well so the ingredients are evenly coated.",
-      "Add the {lime} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Heat {oil} in a large pot and soften diced {onion} for 5 minutes. Add {garlic} and chopped {tomato} and cook for 6 minutes.",
+      "Add the cubed {sweet-potato} and {water} and simmer for 12 minutes.",
+      "Stir in the {coconut-milk} and {salt}, add the {white-fish} in chunks and simmer gently for 5 minutes until just cooked.",
+      "Finish with the juice of the {lime}."
     ]
   },
   {
     "id": "coconut-pumpkin-bake",
-    "name": "Coconut Pumpkin Bake",
-    "meal": "big",
-    "cuisine": "Tongan",
-    "time": 43,
-    "serves": 4,
-    "ing": [
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {onion} until fragrant.",
-      "Add the {lime} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {coconut-milk} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
-    ]
-  },
-  {
-    "id": "tongan-coconut-fish-and-rice",
-    "name": "Tongan Coconut Fish and Rice",
-    "meal": "big",
-    "cuisine": "Tongan",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {white-fish} and {sweet-potato}; stir to combine.",
-      "Add the {coconut-milk} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "tongan-roasted-sweet-potato-with-lime",
-    "name": "Tongan Roasted Sweet Potato with Lime",
-    "meal": "big",
-    "cuisine": "Tongan",
-    "time": 32,
-    "serves": 4,
-    "ing": [
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "white-fish",
-        450
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {spinach} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "tongan-ginger-chicken-parcels",
-    "name": "Tongan Ginger Chicken Parcels",
-    "meal": "big",
-    "cuisine": "Tongan",
-    "time": 39,
-    "serves": 4,
-    "ing": [
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {coconut-milk} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "tongan-taro-style-greens-with-coconut",
-    "name": "Tongan Taro-Style Greens with Coconut",
-    "meal": "big",
-    "cuisine": "Tongan",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {white-fish} and {sweet-potato}; stir to combine.",
-      "Add the {coconut-milk} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "tongan-pineapple-rice-bowl",
-    "name": "Tongan Pineapple Rice Bowl",
-    "meal": "big",
-    "cuisine": "Tongan",
-    "time": 53,
-    "serves": 4,
-    "ing": [
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "white-fish",
-        450
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {spinach} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "tongan-coconut-pumpkin-soup",
-    "name": "Tongan Coconut Pumpkin Soup",
+    "name": "Coconut pumpkin bake",
     "meal": "big",
     "cuisine": "Tongan",
     "time": 60,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "pumpkin",
+        800
       ],
       [
-        "oil",
-        15
+        "onion",
+        "1pc"
+      ],
+      [
+        "coconut-milk",
+        300
+      ],
+      [
+        "ginger",
+        10
       ],
       [
         "salt",
         3
       ],
       [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
+        "black-pepper",
         1
       ]
     ],
     "steps": [
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {coconut-milk} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 190 °C. Slice the {pumpkin} 1.5 cm thick and layer in a baking dish with sliced {onion}.",
+      "Mix the {coconut-milk} with grated {ginger}, {salt} and {black-pepper} and pour over.",
+      "Cover with foil and bake for 30 minutes, then uncover and bake for 15 minutes more until tender and golden at the edges."
     ]
   },
   {
-    "id": "tongan-lime-fish-with-herbs",
-    "name": "Tongan Lime Fish with Herbs",
+    "id": "tongan-ginger-chicken-parcels",
+    "name": "Tongan ginger-lime chicken parcels with sweet potato",
     "meal": "big",
     "cuisine": "Tongan",
-    "time": 31,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "white-fish",
-        450
+        "chicken-thigh",
+        600
+      ],
+      [
+        "ginger",
+        20
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "coconut-milk",
+        100
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "sweet-potato",
+        400
+      ],
+      [
+        "oil",
+        15
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 200 °C. Cube the {sweet-potato}, toss with {oil} and spread in a tray.",
+      "Mix grated {ginger}, crushed {garlic}, the juice of the {lime}, {coconut-milk} and {salt}. Coat the {chicken-thigh} in the mixture.",
+      "Wrap the chicken in 4 foil parcels with the marinade and place on the tray with the sweet potato.",
+      "Bake for 40 minutes until the chicken is cooked through (75 °C) and the sweet potato is tender."
+    ]
+  },
+  {
+    "id": "tongan-pineapple-rice-bowl",
+    "name": "Tongan pineapple coconut rice bowl",
+    "meal": "big",
+    "cuisine": "Tongan",
+    "time": 35,
+    "serves": 4,
+    "ing": [
+      [
+        "rice",
+        300
       ],
       [
         "coconut-milk",
         300
       ],
       [
-        "sweet-potato",
-        2
+        "water",
+        250
       ],
       [
-        "spinach",
-        150
+        "salt",
+        3
+      ],
+      [
+        "pineapple",
+        250
+      ],
+      [
+        "oil",
+        10
+      ],
+      [
+        "spring-onion",
+        "3pc"
       ],
       [
         "lime",
-        1
+        "1pc"
+      ]
+    ],
+    "steps": [
+      "Rinse the {rice}. Combine with {coconut-milk}, {water} and {salt} in a pot, bring to the boil, cover and cook on low heat for 15 minutes. Rest for 5 minutes.",
+      "Chop the {pineapple} and fry in {oil} over high heat for 4 minutes until caramelised at the edges.",
+      "Fold the pineapple through the rice and serve topped with sliced {spring-onion} and wedges of {lime}."
+    ]
+  },
+  {
+    "id": "tongan-coconut-pumpkin-soup",
+    "name": "Tongan coconut pumpkin soup",
+    "meal": "big",
+    "cuisine": "Tongan",
+    "time": 45,
+    "serves": 4,
+    "ing": [
+      [
+        "oil",
+        15
       ],
       [
         "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "ginger",
+        10
+      ],
+      [
+        "pumpkin",
+        800
+      ],
+      [
+        "vegetable-stock",
+        600
+      ],
+      [
+        "coconut-milk",
+        400
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "salt",
+        2
+      ],
+      [
+        "black-pepper",
         1
       ]
     ],
     "steps": [
-      "Add the {white-fish} and {sweet-potato}; stir to combine.",
-      "Add the {coconut-milk} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Heat {oil} in a large pot and soften chopped {onion} for 5 minutes. Add {garlic} and {ginger} and cook for 1 minute.",
+      "Add cubed {pumpkin} and {vegetable-stock}, bring to the boil and simmer for 20 minutes until very soft.",
+      "Blend until smooth, stir in the {coconut-milk} and warm through. Season with {salt} and {black-pepper} and finish with the juice of the {lime}."
     ]
   },
   {
     "id": "tongan-cassava-style-vegetable-bake",
-    "name": "Tongan Cassava-Style Vegetable Bake",
+    "name": "Tongan cassava and coconut bake",
     "meal": "big",
     "cuisine": "Tongan",
-    "time": 38,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
+        "yuca-frozen",
+        600
       ],
       [
         "salt",
         3
       ],
       [
-        "white-fish",
-        450
+        "onion",
+        "1pc"
+      ],
+      [
+        "spinach",
+        100
+      ],
+      [
+        "coconut-milk",
+        300
+      ],
+      [
+        "oil",
+        15
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {spinach} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Boil the {yuca-frozen} in water with the {salt} for 20 minutes until tender, then drain and slice.",
+      "Heat the oven to 190 °C. Fry sliced {onion} in {oil} for 5 minutes, then stir in the {spinach} until wilted.",
+      "Layer the cassava and the onion-spinach mixture in a baking dish, pour over the {coconut-milk} and bake for 25 minutes until bubbling and golden."
     ]
   }
 ]
