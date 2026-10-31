@@ -160,7 +160,7 @@ K.resolve=(r,n,ctx)=>{
     let have=F.has(id)||id==="water"||!!(ctx.basic&&pan);
     if(!cooked[i.id]&&!have&&e.sub){const alt=[...F].find(x=>x!==id&&K.ING[x].sub===e.sub&&!taken.has(x));if(alt){sw[i.id]=alt;taken.add(alt);id=alt;e=K.ING[id];have=true}}
     const s=sq[i.id],a=s?s.a:i.a*k,u=s?s.u:i.u;
-    return{id,name:e.name,a,u,txt:fmt(a,u),have,pantry:pan,was:i.id,leftoverSwap:!!cooked[i.id]};
+    return{id,name:e.name,a,u,txt:fmt(a,u),have,pantry:pan,was:i.id,leftoverSwap:!!cooked[i.id],sec:i.sec||""};
   });
   const nm=id=>K.name(sw[id]||id);
   const steps=r.steps.map(rawStep=>{
@@ -209,7 +209,8 @@ K.resolve=(r,n,ctx)=>{
 K.nutri=(ing,n)=>{let kc=0,p=0;ing.forEach(i=>{const e=K.ING[i.id];if(!e)return;const g=i.u==="pcs"?i.a*(e.gpp||80):i.a;kc+=g*e.kcal/100;p+=g*e.p/100});return{kcal:Math.round(kc/n/10)*10,p:Math.round(p/n)}};
 
 /* ---------- recipes ---------- */
-// {id, name, meal:"big"|"wake,bite"|..., cuisine?, time (min), serves, ing:[[id, grams | "2pc"]], steps:["... {id} ..."], note?, legacy?}
+// {id, name, meal:"big"|"wake,bite"|..., cuisine?, time (min), serves, ing:[[id, grams | "2pc", section?]], steps:["... {id} ..."], note?, legacy?}
+// section (optional third item, e.g. ["bread-flour",500,"Bun"]): the card groups ingredients under that heading; a section named like a thing the app can teach (Bun, Pickles, Pesto...) also gets one "make it" link. 2-23 letters, capital first.
 K.add=list=>list.forEach(r=>{
   const who=r.id||"(no id)",bad0=K.problems.length;
   const P=m=>E(who,m),Wn=m=>W(who,m);
@@ -225,10 +226,11 @@ K.add=list=>list.forEach(r=>{
   if(r.craft&&!K.CRAFTS.some(c=>c.id===r.craft))P("unknown craft '"+r.craft+"' (add the tool to K.CRAFTS in kitchen.js)");
   const seen=new Set(),ing=(r.ing||[]).map(a=>{
     const id=a[0],v=a[1],pc=typeof v==="string"&&/^[\d.]+pc$/.test(v),amt=pc?parseFloat(v):v;
+    let sec=typeof a[2]==="string"?a[2].trim():"";if(sec&&!/^[A-Z][A-Za-z ]{1,22}$/.test(sec)){Wn("section name '"+sec+"' must be 2-23 letters or spaces and start with a capital; ignored");sec=""}
     if(!K.ING[id])P("unknown ingredient '"+id+"' (add it to ingredients.js)");
     if(seen.has(id))P("ingredient listed twice: "+id);seen.add(id);
     if(!(amt>0))P("bad amount for "+id+": "+v+" (grams as a number, pieces as '2pc')");
-    return{id,a:amt,u:pc?"pcs":"g"};
+    return{id,a:amt,u:pc?"pcs":"g",sec};
   });
   if(ing.length<2)P("needs at least 2 ingredients");
   const steps=r.steps||[];
