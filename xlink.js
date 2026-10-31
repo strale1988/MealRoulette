@@ -11,15 +11,15 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",
 const T={
  bun:{l:"Make buns",k:"craft",id:"bread",s:{t:"rolls"}},
  loaf:{l:"Make bread",k:"craft",id:"bread",s:{t:"lean"}},
- pickle:{l:"Quick pickle",k:"ferm",m:"quick",items:["cucumber"]},
- pickleOnion:{l:"Quick pickle",k:"ferm",m:"quick",items:["onion"]},
- pickleJal:{l:"Quick pickle",k:"ferm",m:"quick",items:["jalapeno"]},
- pickleBeet:{l:"Quick pickle",k:"ferm",m:"quick",items:["beet"]},
- pickleDaikon:{l:"Quick pickle",k:"ferm",m:"quick",items:["daikon"]},
- pickleCarrot:{l:"Quick pickle",k:"ferm",m:"quick",items:["carrot"]},
- kimchi:{l:"Make kimchi",k:"ferm",m:"kimchi",items:["napa"]},
- kraut:{l:"Make kraut",k:"ferm",m:"kraut",items:["green"]},
- hot:{l:"Make hot sauce",k:"ferm",m:"hot",items:["jalapeno"]},
+ pickle:{l:"Quick pickle",k:"ferm",m:"quick",u:"Use your pickles",items:["cucumber"]},
+ pickleOnion:{l:"Quick pickle",k:"ferm",m:"quick",u:"Use your pickles",items:["onion"]},
+ pickleJal:{l:"Quick pickle",k:"ferm",m:"quick",u:"Use your pickles",items:["jalapeno"]},
+ pickleBeet:{l:"Quick pickle",k:"ferm",m:"quick",u:"Use your pickles",items:["beet"]},
+ pickleDaikon:{l:"Quick pickle",k:"ferm",m:"quick",u:"Use your pickles",items:["daikon"]},
+ pickleCarrot:{l:"Quick pickle",k:"ferm",m:"quick",u:"Use your pickles",items:["carrot"]},
+ kimchi:{l:"Make kimchi",k:"ferm",m:"kimchi",u:"Use your kimchi",items:["napa"]},
+ kraut:{l:"Make kraut",k:"ferm",m:"kraut",u:"Use your kraut",items:["green"]},
+ hot:{l:"Make hot sauce",k:"ferm",m:"hot",u:"Use your hot sauce",items:["jalapeno"]},
  mayo:{l:"Make mayo",k:"craft",id:"sauce",s:{t:"mayo"}},
  pesto:{l:"Make pesto",k:"craft",id:"sauce",s:{t:"pesto"}},
  guac:{l:"Make guacamole",k:"craft",id:"sauce",s:{t:"guac"}},
@@ -51,6 +51,8 @@ const same=(t,ctx)=>{if(!ctx)return false;
  if(t.k==="craft")return ctx.tool===t.id&&Object.keys(t.s).every(k=>ctx.s&&String(ctx.s[k])===String(t.s[k]));
  return ctx.ferm===t.m};
 
+/* a ferment you already have ready in My kitchen: the pill says so and opens the batch list instead of a new recipe */
+const owned=t=>{try{return !!(t.k==="ferm"&&t.u&&window.FERMENT&&window.FERMENT.have&&window.FERMENT.have(t.m==="quick"?["quick","brine"]:t.m))}catch(e){return false}};
 const destName=t=>{
  if(t.k==="ferm")return "Fermentation station";
  const kc=((window.KITCHEN&&window.KITCHEN.CRAFTS)||[]).find(c=>c.id===t.id);return kc?kc.name:"Craft"};
@@ -58,8 +60,8 @@ const destName=t=>{
 /* the pill for one ingredient line: "" when there is nothing to link to. ctx = {tool, s} on Craft cards, {ferm} on Ferment cards */
 const pill=(key,ctx)=>{
  const t=T[key];if(!t||same(t,ctx))return "";
- const to=destName(t);
- return `<button type="button" class="xl" data-xl="${esc(key)}" title="Opens ${esc(to)}" aria-label="${esc(t.l)}: opens ${esc(to)}">${esc(t.l)}</button>`};
+ const have=owned(t),to=have?"My kitchen":destName(t),lab=have?t.u:t.l;
+ return `<button type="button" class="xl" data-xl="${esc(key)}" title="Opens ${esc(to)}" aria-label="${esc(lab)}: opens ${esc(to)}">${esc(lab)}</button>`};
 const btn=(name,id,ctx)=>pill(find(name,id),ctx);
 /* a whole section can link too: the "Bun" section of a burger gets one "Make buns" pill instead of one on every line */
 const SEC=[[/^buns?$/i,"bun"]];
@@ -94,7 +96,8 @@ const go=key=>{
  const o=here(),arrive=tab=>{if(o&&o.from!==tab)stack.push(Object.assign(o,{to:tab})); // remembered only once the target really opens
   window.setTab(tab)};
  try{
-  if(t.k==="craft"){
+  if(owned(t)){leave();arrive("kit");setTimeout(()=>{const b=document.getElementById("fmbatches");if(b)b.scrollIntoView({block:"start"})},80)}
+  else if(t.k==="craft"){
    if(!window.CRAFT||!window.CRAFT.applyShare)return;
    leave();if(!window.CRAFT.applyShare({id:t.id,s:t.s}))return;
    arrive(t.id);toCard(t.id)}
