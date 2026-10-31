@@ -476,6 +476,6 @@ function applyShare(d){ // a shared setup: validate every id against the real me
  enter();save();build();return true;
 }
 const snap=()=>{const m=cur();return{m:m.id,items:selItems(m),arom:selArom(m),g:amount(m),sal:ST.sal,temp:ST.temp}}; // the setup as it is now, for "Back to ..." links
-const have=ids=>ST.batches.some(b=>[].concat(ids).includes(b.m)&&isReady(b)); // is a batch of this method ready in My kitchen?
+const have=(ids,w)=>ST.batches.some(b=>[].concat(ids).includes(b.m)&&isReady(b)&&(!w||new RegExp(w,"i").test(b.title))); // is a batch of this method ready in My kitchen? (w: a word the batch title must contain, e.g. "onion")
 window.FERMENT={rebuild:build,methods:M,applyShare,snap,have};
 })();

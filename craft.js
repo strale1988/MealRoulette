@@ -11,6 +11,7 @@ const I=n=>`<svg class="i"><use href="#i-${n}"/></svg>`;
 const {rg,G,ML,P1,eggs,hm,people}=window.CRAFTLIB;
 const KEY="mr-craft";let ST={};try{ST=JSON.parse(localStorage.getItem(KEY)||"{}")||{}}catch(e){}
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(ST))}catch(e){}};
+const SEEDED={}; // tools already opened in this visit (see seedDefault)
 /* copy to the clipboard; falls back to a hidden textarea + execCommand where the Clipboard API is missing or refused (older browsers, non-secure pages). Resolves true/false. */
 const copyText=async t=>{
  try{if(navigator.clipboard&&navigator.clipboard.writeText){await navigator.clipboard.writeText(t);return true}}catch(e){}
@@ -248,6 +249,7 @@ function ingHTML(r,id,s){
  return G.map((g,k)=>{const head=g.l||(labelled&&k>0?"Also":"");
   return(head?`<div class="ingh"><span>${esc(head)}</span>${g.l?sec(g.l):""}</div>`:"")+`<ul class="ing">${g.r.map(x=>{const n=g.l?cap1(x.n):x.raw;return`<li><span>${esc(n)}${X?X.btn(n,null,ctx):""}</span><span class="q">${esc(x.q)}</span></li>`}).join("")}</ul>`}).join("")}
 function draw(id){
+ seedDefault(id);
  const T=TOOLS[id],s=cfg(id),root=document.getElementById("tab-"+id);if(!root)return;
  const nm=c=>esc(c.label.replace(/\s*\(.*$/,"").toLowerCase().replace(/^how many\s*/,"").replace(/^how much to make$/,"")||"amount"); // "Flour" -> "flour", "How many cookies" -> "cookies"
  const vis=T.ctl.filter(c=>!c.only||[].concat(c.only).includes(s[T.main||"t"]));
@@ -271,11 +273,20 @@ function draw(id){
 }
 /* ---- card buttons: the same set and order as the Cook card: Start cooking · Spin again, then Save · Copy list · Share · Like · Not for me ---- */
 const FK="mr-craftfav",favs=()=>{try{return JSON.parse(localStorage.getItem(FK)||"[]")||[]}catch(e){return[]}},setFavs=f=>{try{localStorage.setItem(FK,JSON.stringify(f.slice(0,60)))}catch(e){}};
+/* Saved builds: tap one to load it. Each can be renamed ("Friday burgers"), marked "Start here" (the tool opens with that build ready, once per visit; one per tool),
+   or removed. A build is found again by its tool and settings (sig), so renaming and defaults survive the list being re-sorted. */
+function seedDefault(id){if(SEEDED[id])return;try{const d=favs().find(x=>x.id===id&&x.def&&x.s);SEEDED[id]=1;if(d)Object.assign(cfg(id),d.s)}catch(e){}} // once per tool per visit, never over a shared link or a link pill
 function drawFavs(id){
  const root=document.getElementById("tab-"+id),el=root&&root.querySelector("[data-fav]");if(!el)return;
- const f=favs().filter(x=>x.id===id);
- el.innerHTML=f.length?`<h3>${I("heart")}Saved</h3>`+f.map((x,i)=>`<button data-fi="${i}">${I("heart")}${esc(x.title)}</button>`).join(""):"";
- el.onclick=e=>{const b=e.target.closest("button[data-fi]");if(!b)return;const x=f[+b.dataset.fi];if(!x)return;Object.assign(cfg(id),x.s);save();draw(id);const c=root.querySelector(".card");if(c)c.scrollIntoView({behavior:"smooth",block:"start"})};
+ const f=favs().filter(x=>x.id===id),nm=x=>x.name||x.title;
+ el.innerHTML=f.length?`<h3>${I("heart")}Saved</h3>`+f.map((x,i)=>`<div class="frow"><button type="button" class="fm" data-fi="${i}">${I("heart")}<span>${esc(nm(x))}</span></button><button type="button" class="fa" data-fd="${i}" aria-pressed="${!!x.def}" title="Open this tool with this build ready each time you visit">Start here</button><button type="button" class="fa" data-fr="${i}" aria-label="Rename ${esc(nm(x))}">Rename</button><button type="button" class="fa" data-fx="${i}" aria-label="Remove ${esc(nm(x))}">${I("x")}</button></div>`).join(""):"";
+ const edit=(x,fn)=>{const all=favs(),t=all.find(y=>y.id===x.id&&y.sig===x.sig);if(!t)return;fn(t,all);setFavs(all.filter(Boolean));drawFavs(id);const o=root.querySelector("[data-out] .pzsave");if(o)draw(id)};
+ el.onclick=e=>{const b=e.target.closest("button");if(!b)return;const g=k=>b.dataset[k]!==undefined?f[+b.dataset[k]]:null;
+  const x=g("fi");
+  if(x){Object.assign(cfg(id),x.s);save();draw(id);const c=root.querySelector(".card");if(c)c.scrollIntoView({behavior:"smooth",block:"start"});return}
+  const d=g("fd");if(d){edit(d,(t,all)=>{const on=!t.def;all.forEach(y=>{if(y.id===id)y.def=false});t.def=on});return}
+  const r=g("fr");if(r){const n=prompt("Name this build",nm(r));if(n===null)return;edit(r,t=>{const v=n.trim().slice(0,40);if(v&&v!==t.title)t.name=v;else delete t.name});return}
+  const rm=g("fx");if(rm){if(confirm("Remove \u201c"+nm(rm)+"\u201d from your saved builds?"))edit(rm,(t,all)=>{all.splice(all.indexOf(t),1)})}};
 }
 function decorate(id,T,r,root,s){
  root.classList.add("crafttab");
@@ -283,6 +294,7 @@ function decorate(id,T,r,root,s){
  const row=root.querySelector("[data-out] .row");if(!row)return;
  const go=row.querySelector("[data-a=start]"),sv=row.querySelector(".pzsave"),sh=row.querySelector("[data-a=share]"),sig=JSON.stringify(s);
  go.onclick=()=>{if(window.__cook)window.__cook({title:r.title,steps:r.steps,list:r.ing})};
+ if(window.__dinner&&!row.querySelector("[data-a=plan]")){const pl=document.createElement("button");pl.type="button";pl.dataset.a="plan";pl.innerHTML=I("clock")+"Plan dinner";pl.onclick=()=>window.__dinner({title:r.title,steps:r.steps});go.after(pl)}
  const has=()=>favs().some(x=>x.id===id&&x.sig===sig),paint=()=>{sv.setAttribute("aria-pressed",String(has()));sv.innerHTML=I("heart")+(has()?"Saved":"Save")};
  sv.onclick=()=>{let f=favs();if(has())f=f.filter(x=>!(x.id===id&&x.sig===sig));else f.unshift({id,title:r.title,sig,s:JSON.parse(sig)});setFavs(f);paint();drawFavs(id);navigator.vibrate&&navigator.vibrate(15)};paint();
  sh.onclick=async()=>{const text=r.title+"\n\nIngredients\n"+r.ing.map(i=>"• "+i[0]+" – "+i[1]).join("\n")+"\n\nMethod\n"+r.steps.map((x,k)=>(k+1)+". "+x).join("\n")+"\n\nMade with Meal Roulette";
@@ -346,6 +358,6 @@ const applyShare=d=>{const id=d&&typeof d.id==="string"?d.id:"",T=Object.prototy
   if(c.tg){const m=c.tg.find(x=>String(x[0])===String(v));if(m)n[c.k]=m[0]}
   else if(c.ms){if(Array.isArray(v))n[c.k]=c.ms.map(x=>x[0]).filter(x=>v.includes(x))}
   else if(c.step){const x=Number(v);if(Number.isFinite(x))n[c.k]=Math.min(c.step[1],Math.max(c.step[0],x))}});
- Object.assign(cfg(id),n);save();draw(id);return id};
+ SEEDED[id]=1;Object.assign(cfg(id),n);save();draw(id);return id};
 window.CRAFT={tools:TOOLS,cfg,spin:spinTool,applyShare,redraw:()=>Object.keys(TOOLS).forEach(id=>{if(document.getElementById("tab-"+id)){draw(id);drawFavs(id)}})};
 })();
