@@ -275,7 +275,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        "0.25pc"
+        "0.5pc"
       ],
       [
         "coriander",
@@ -322,7 +322,7 @@ KITCHEN.add(
       ],
       [
         "corn-tortillas",
-        6
+        "6pc"
       ],
       [
         "lime",
@@ -378,7 +378,7 @@ KITCHEN.add(
       ],
       [
         "corn-tortillas",
-        6
+        "6pc"
       ],
       [
         "cabbage",
@@ -429,234 +429,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-enchiladas",
-    "name": "Chicken enchiladas verdes-style",
-    "meal": "big",
-    "cuisine": "Mexican",
-    "time": 45,
-    "serves": 3,
-    "ing": [
-      [
-        "chicken-breast",
-        350
-      ],
-      [
-        "corn-tortillas",
-        6
-      ],
-      [
-        "salsa-tomato",
-        300
-      ],
-      [
-        "onion",
-        100
-      ],
-      [
-        "garlic",
-        8
-      ],
-      [
-        "cheddar",
-        130
-      ],
-      [
-        "sour-cream",
-        90
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "oil",
-        12
-      ],
-      [
-        "coriander",
-        10
-      ]
-    ],
-    "steps": [
-      "Poach {chicken-breast} gently until cooked through; cool slightly and shred.",
-      "Cook diced {onion} in {oil}; add {garlic}, {cumin} and shredded chicken. Stir in a spoonful of {salsa-tomato}.",
-      "Fill warmed {corn-tortillas} with the chicken mixture, roll tightly and arrange seam-side down in a baking dish.",
-      "Cover with remaining {salsa-tomato} and grated {cheddar}; bake at 190°C for 20 minutes until bubbling. Serve with {sour-cream} and {coriander}."
-    ]
-  },
-  {
-    "id": "world-pork-pineapple-tacos",
-    "name": "Pork and pineapple tacos",
-    "meal": "big",
-    "cuisine": "Mexican",
-    "time": 35,
-    "serves": 2,
-    "ing": [
-      [
-        "pork",
-        300
-      ],
-      [
-        "pineapple",
-        150
-      ],
-      [
-        "red-onion",
-        100
-      ],
-      [
-        "corn-tortillas",
-        6
-      ],
-      [
-        "lime",
-        "1pc"
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "paprika",
-        3
-      ],
-      [
-        "chilli-powder",
-        2
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "coriander",
-        10
-      ],
-      [
-        "salt",
-        3
-      ]
-    ],
-    "steps": [
-      "Slice {pork} thinly and toss with {cumin}, {paprika}, {chilli-powder} and {salt}.",
-      "Sear in {oil} over high heat until browned and fully cooked. Add diced {pineapple} for the last 2 minutes to caramelize lightly.",
-      "Finely slice {red-onion} and toss with juice from half the {lime}.",
-      "Serve the pork in warmed {corn-tortillas} with the onion, chopped {coriander} and remaining {lime}."
-    ]
-  },
-  {
-    "id": "world-elote",
-    "name": "Mexican street corn (elote-style)",
-    "meal": "bite",
-    "cuisine": "Mexican",
-    "time": 20,
-    "serves": 2,
-    "ing": [
-      [
-        "sweetcorn",
-        350
-      ],
-      [
-        "mayonnaise",
-        35
-      ],
-      [
-        "feta",
-        45
-      ],
-      [
-        "lime",
-        "1pc"
-      ],
-      [
-        "chilli-powder",
-        2
-      ],
-      [
-        "coriander",
-        8
-      ],
-      [
-        "oil",
-        8
-      ]
-    ],
-    "steps": [
-      "Pat {sweetcorn} dry and toss with {oil}.",
-      "Char the kernels in a hot skillet, stirring occasionally, until browned in spots.",
-      "Remove from the heat and mix with {mayonnaise}, crumbled {feta} and juice of {lime}.",
-      "Sprinkle with {chilli-powder} and chopped {coriander}; serve warm."
-    ]
-  },
-  {
-    "id": "world-chicken-mole-inspired",
-    "name": "Chicken with quick cocoa-chilli sauce",
-    "meal": "big",
-    "cuisine": "Mexican",
-    "time": 40,
-    "serves": 2,
-    "ing": [
-      [
-        "chicken-thigh",
-        350
-      ],
-      [
-        "onion",
-        100
-      ],
-      [
-        "garlic",
-        10
-      ],
-      [
-        "canned-tomatoes",
-        250
-      ],
-      [
-        "peanuts",
-        25
-      ],
-      [
-        "cocoa",
-        8
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "cinnamon",
-        1
-      ],
-      [
-        "chilli-powder",
-        2
-      ],
-      [
-        "chicken-stock",
-        250
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "rice",
-        140
-      ],
-      [
-        "salt",
-        4
-      ]
-    ],
-    "steps": [
-      "Cook {rice}. Brown {chicken-thigh} in {oil} on all sides, then transfer to a plate.",
-      "Cook {onion} and {garlic} until soft. Add {cumin}, {cinnamon}, {chilli-powder} and {cocoa}; stir for 30 seconds.",
-      "Add {canned-tomatoes}, {peanuts} and {chicken-stock}; simmer 10 minutes, then blend until smooth.",
-      "Return the chicken and simmer 15–18 minutes until fully cooked. Season with {salt} and serve with rice."
-    ]
-  },
-  {
     "id": "world-breakfast-burrito",
     "name": "Breakfast burrito",
     "meal": "morning",
@@ -670,7 +442,7 @@ KITCHEN.add(
       ],
       [
         "corn-tortillas",
-        4
+        "4pc"
       ],
       [
         "black-beans",
@@ -1109,58 +881,6 @@ KITCHEN.add(
       "Drain and flake the {crabmeat}. Mix with {mayonnaise}, finely chopped {chipotle-adobo}, juice from {lime} and {salt}.",
       "Toast or fry the {corn-tortillas} until crisp. Shred the {lettuce}; slice the {avocado} and {red-onion}.",
       "Top each tostada with lettuce, chipotle crab, avocado and onion; serve immediately."
-    ]
-  },
-  {
-    "id": "chicken-fajitas-flour-tortillas",
-    "name": "Chicken fajitas with flour tortillas",
-    "meal": "big",
-    "cuisine": "Mexican",
-    "time": 30,
-    "serves": 2,
-    "ing": [
-      [
-        "chicken-breast",
-        300
-      ],
-      [
-        "red-pepper",
-        200
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "taco-seasoning",
-        8
-      ],
-      [
-        "flour-tortillas",
-        "4pc"
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "lime",
-        "1pc"
-      ],
-      [
-        "sour-cream",
-        60
-      ],
-      [
-        "salsa-tomato",
-        60
-      ]
-    ],
-    "steps": [
-      "Slice {chicken-breast}, {red-pepper} and {onion} into strips. Toss the chicken with {taco-seasoning} and half the {oil}.",
-      "Cook the chicken in a very hot pan for 6 minutes until browned and cooked through (74 °C); set aside.",
-      "Fry the pepper and onion in the remaining {oil} for 6 minutes until softened and charred in places. Return the chicken and squeeze over {lime}.",
-      "Warm the {flour-tortillas} and serve with the fajita mix, {sour-cream} and {salsa-tomato}."
     ]
   },
   {
@@ -1990,49 +1710,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "mexican-elote-style-corn-salad",
-    "name": "Mexican street corn salad",
-    "meal": "bite",
-    "cuisine": "Mexican",
-    "time": 15,
-    "serves": 3,
-    "ing": [
-      [
-        "sweetcorn",
-        300
-      ],
-      [
-        "mayonnaise",
-        25
-      ],
-      [
-        "sour-cream",
-        35
-      ],
-      [
-        "lime",
-        "1pc"
-      ],
-      [
-        "queso-fresco",
-        50
-      ],
-      [
-        "chilli-powder",
-        2
-      ],
-      [
-        "coriander",
-        8
-      ]
-    ],
-    "steps": [
-      "Char {sweetcorn} in a very hot dry skillet, stirring occasionally, until golden in spots. Let cool slightly.",
-      "Mix {mayonnaise}, {sour-cream} and {lime} juice in a bowl.",
-      "Toss corn with the dressing, crumbled {queso-fresco}, {chilli-powder} and chopped {coriander}. Serve warm or chilled."
-    ]
-  },
-  {
     "id": "mexican-poblano-style-pepper-pasta",
     "name": "Creamy chipotle pepper pasta",
     "meal": "big",
@@ -2078,7 +1755,7 @@ KITCHEN.add(
   {
     "id": "world-poblano-corn-tacos",
     "name": "Charred corn and pepper tacos",
-    "meal": "big,bite",
+    "meal": "big",
     "time": 25,
     "serves": 3,
     "ing": [
@@ -2128,225 +1805,9 @@ KITCHEN.add(
     "cuisine": "Mexican"
   },
   {
-    "id": "world-sopa-de-lima-inspired",
-    "name": "Lime and vegetable tortilla soup",
-    "meal": "big",
-    "time": 30,
-    "serves": 3,
-    "ing": [
-      [
-        "vegetable-stock",
-        800
-      ],
-      [
-        "canned-tomatoes",
-        250
-      ],
-      [
-        "onion",
-        100
-      ],
-      [
-        "garlic",
-        8
-      ],
-      [
-        "sweetcorn",
-        120
-      ],
-      [
-        "black-beans",
-        220
-      ],
-      [
-        "lime",
-        "2pc"
-      ],
-      [
-        "corn-tortillas",
-        "3pc"
-      ],
-      [
-        "cumin",
-        2
-      ],
-      [
-        "coriander",
-        10
-      ]
-    ],
-    "steps": [
-      "Dice {onion} and cook in a little oil for 5 minutes. Add {garlic} and {cumin}.",
-      "Add {canned-tomatoes} and {vegetable-stock}; simmer for 10 minutes. Add {sweetcorn} and drained {black-beans} and cook another 5 minutes.",
-      "Cut {corn-tortillas} into thin strips and toast in a dry pan until crisp.",
-      "Season soup with juice from {lime}. Serve with tortilla strips and chopped {coriander}."
-    ],
-    "cuisine": "Mexican"
-  },
-  {
-    "id": "world-sweet-potato-enchiladas",
-    "name": "Sweet potato and black bean enchiladas",
-    "meal": "big",
-    "time": 45,
-    "serves": 4,
-    "ing": [
-      [
-        "sweet-potato",
-        400
-      ],
-      [
-        "black-beans",
-        440
-      ],
-      [
-        "corn-tortillas",
-        "6pc"
-      ],
-      [
-        "canned-tomatoes",
-        350
-      ],
-      [
-        "cheddar",
-        120
-      ],
-      [
-        "onion",
-        100
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "paprika",
-        3
-      ],
-      [
-        "olive-oil",
-        12
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 200°C. Cube {sweet-potato} and roast with {olive-oil}, {cumin} and {paprika} for 20 minutes.",
-      "Mix roasted sweet potato with drained {black-beans} and half the grated {cheddar}.",
-      "Spoon filling into {corn-tortillas}, roll and place seam-side down in a baking dish. Cover with {canned-tomatoes} mixed with diced {onion}.",
-      "Scatter remaining cheese on top and bake for 20 minutes until bubbling."
-    ],
-    "cuisine": "Mexican"
-  },
-  {
-    "id": "world-mexican-chiles-rellenos",
-    "name": "Mexican roasted poblano peppers with cheese",
-    "meal": "big",
-    "cuisine": "Mexican",
-    "time": 45,
-    "serves": 4,
-    "ing": [
-      [
-        "poblano-pepper",
-        4
-      ],
-      [
-        "monterey-jack",
-        220
-      ],
-      [
-        "eggs",
-        "3pc"
-      ],
-      [
-        "flour",
-        30
-      ],
-      [
-        "canned-tomatoes",
-        400
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "garlic",
-        2
-      ],
-      [
-        "olive-oil",
-        25
-      ],
-      [
-        "salt",
-        4
-      ]
-    ],
-    "steps": [
-      "Char the {poblano-pepper} under a hot grill, turning until blistered. Cover 10 minutes, peel carefully and make a slit to remove seeds.",
-      "Fill peppers with {monterey-jack} and secure the openings with toothpicks if needed.",
-      "Blend {canned-tomatoes}, {onion} and {garlic}; simmer in {olive-oil} for 10 minutes and season with {salt}.",
-      "Separate the {eggs}; whip whites to soft peaks and fold in yolks and {flour}. Coat peppers, pan-fry until golden and serve over tomato sauce."
-    ]
-  },
-  {
-    "id": "world-mexican-sopa-de-lima",
-    "name": "Yucatán lime and chicken soup",
-    "meal": "big",
-    "cuisine": "Mexican",
-    "time": 40,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-breast",
-        500
-      ],
-      [
-        "chicken-stock",
-        1200
-      ],
-      [
-        "lime",
-        3
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "garlic",
-        2
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "oregano",
-        3
-      ],
-      [
-        "corn-tortillas",
-        "4pc"
-      ],
-      [
-        "cilantro",
-        15
-      ]
-    ],
-    "steps": [
-      "Poach the {chicken-breast} in {chicken-stock} until cooked; remove and shred, keeping the broth.",
-      "Cook diced {onion}, {garlic}, {tomato} and {red-pepper} in a little oil until softened. Add {oregano} and pour in the broth.",
-      "Simmer 15 minutes, then return shredded chicken and add juice of two {lime}. Adjust seasoning.",
-      "Cut {corn-tortillas} into thin strips and bake or fry until crisp. Serve soup with tortilla strips, sliced remaining lime and {cilantro}."
-    ]
-  },
-  {
     "id": "mexican-sopa-de-lima",
     "name": "Yucatán lime chicken soup",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Mexican",
     "time": 35,
     "serves": 2,
@@ -2395,8 +1856,8 @@ KITCHEN.add(
     "steps": [
       "Simmer {chicken-thigh} in {chicken-stock} until cooked; lift out, shred and reserve broth.",
       "Fry sliced {onion} and {garlic} in {oil}; add diced {tomato} and {oregano}, cooking until soft.",
-      "Add broth and shredded chicken; simmer 10 minutes and season.",
-      "Cut {corn-tortillas} into strips and crisp in a skillet. Serve soup with lime juice and tortilla strips."
+      "Add broth and shredded chicken; simmer 10 minutes and season with {salt}.",
+      "Cut {corn-tortillas} into strips and crisp in a skillet. Serve soup with the juice of {lime} and tortilla strips."
     ]
   },
   {
@@ -2452,113 +1913,6 @@ KITCHEN.add(
       "Brown {beef-mince} in {oil}; add diced {onion} and cook until soft.",
       "Add diced {potatoes} and {carrot}, chopped {tomato}, {cumin}, {cinnamon} and {salt}.",
       "Cover and simmer 20 minutes, stirring occasionally and adding a splash of water if needed. Stir in {raisins} for the last 5 minutes."
-    ]
-  },
-  {
-    "id": "mexican-elote-cups",
-    "name": "Street-corn esquites with lime and cotija",
-    "meal": "bite",
-    "cuisine": "Mexican",
-    "time": 20,
-    "serves": 2,
-    "ing": [
-      [
-        "sweetcorn",
-        400
-      ],
-      [
-        "mayonnaise",
-        35
-      ],
-      [
-        "sour-cream",
-        35
-      ],
-      [
-        "lime",
-        "1pc"
-      ],
-      [
-        "fresh-chilli",
-        2
-      ],
-      [
-        "cotija",
-        50
-      ],
-      [
-        "cilantro",
-        10
-      ]
-    ],
-    "steps": [
-      "Char {sweetcorn} in a hot dry skillet, stirring until kernels blister.",
-      "Mix {mayonnaise}, {sour-cream}, lime zest and juice, and {fresh-chilli}.",
-      "Fold sauce through hot corn, top with crumbled {cotija} and chopped {cilantro}."
-    ]
-  },
-  {
-    "id": "mexican-mole-chicken",
-    "name": "Chicken with quick dark mole-style sauce",
-    "meal": "big",
-    "cuisine": "Mexican",
-    "time": 50,
-    "serves": 2,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "garlic",
-        "3pc"
-      ],
-      [
-        "chilli-flakes",
-        2
-      ],
-      [
-        "cocoa",
-        8
-      ],
-      [
-        "peanut-butter",
-        25
-      ],
-      [
-        "sesame-seeds",
-        10
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "chicken-stock",
-        300
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        4
-      ]
-    ],
-    "steps": [
-      "Toast {chilli-flakes} briefly in a dry pan, then soak in hot water for 10 minutes.",
-      "Brown {chicken-thigh} in {oil}; set aside. Cook {onion} and {garlic} until soft, then add {tomato}, {cumin}, {cocoa}, {peanut-butter}, {sesame-seeds} and drained chilli.",
-      "Blend sauce smooth with {chicken-stock}; return to pan with chicken.",
-      "Cover and simmer 25–30 minutes until chicken is cooked and sauce is thick. Season."
     ]
   },
   {
@@ -2667,7 +2021,7 @@ KITCHEN.add(
     ],
     "steps": [
       "Simmer {tomatillos}, half the {onion}, {garlic} and {green-chilli} until soft. Blend with {coriander} and salt to make salsa verde.",
-      "Poach {chicken-thigh} until cooked, shred and mix with a spoonful of salsa. Warm {corn-tortillas} until pliable, fill with chicken and roll.",
+      "Poach {chicken-thigh} until cooked, shred and mix with a spoonful of salsa. Warm {corn-tortillas} in the {oil} until pliable, fill with chicken and roll.",
       "Arrange in a baking dish, cover with remaining salsa and {cheese}; bake at 200 °C for 15 minutes. Finish with {sour-cream} and sliced onion."
     ]
   },
@@ -2689,7 +2043,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "cumin",
@@ -2705,7 +2059,7 @@ KITCHEN.add(
       ],
       [
         "red-onion",
-        1
+        "1pc"
       ],
       [
         "corn-tortillas",
@@ -2744,15 +2098,15 @@ KITCHEN.add(
       ],
       [
         "green-chilli",
-        2
+        "2pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "cumin",
@@ -2782,65 +2136,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "mexican-sopa-de-tortilla",
-    "name": "Sopa de tortilla tomato soup with avocado and crisp tortilla",
-    "meal": "big",
-    "cuisine": "Mexican",
-    "time": 35,
-    "serves": 2,
-    "ing": [
-      [
-        "tomato",
-        4
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "garlic",
-        2
-      ],
-      [
-        "vegetable-stock",
-        700
-      ],
-      [
-        "chipotle-adobo",
-        10
-      ],
-      [
-        "tortilla-chips",
-        80
-      ],
-      [
-        "avocado",
-        1
-      ],
-      [
-        "cotija",
-        40
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "olive-oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ]
-    ],
-    "steps": [
-      "Soften diced {onion} and {garlic} in {olive-oil}; add chopped {tomato} and cook until pulpy.",
-      "Add {chipotle-adobo} and {vegetable-stock}; simmer 15 minutes, then blend until smooth and season with {salt}.",
-      "Serve with {tortilla-chips}, diced {avocado}, crumbled {cotija} and chopped {cilantro}."
-    ]
-  },
-  {
     "id": "mexican-albondigas-soup",
     "name": "Mexican albóndigas soup with mint and vegetables",
     "meal": "big",
@@ -2858,7 +2153,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        1
+        "1pc"
       ],
       [
         "mint",
@@ -2870,15 +2165,15 @@ KITCHEN.add(
       ],
       [
         "zucchini",
-        1
+        "1pc"
       ],
       [
         "potatoes",
-        1
+        "1pc"
       ],
       [
         "tomato",
-        3
+        "3pc"
       ],
       [
         "chicken-stock",
@@ -2890,7 +2185,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "salt",
@@ -2906,7 +2201,7 @@ KITCHEN.add(
   {
     "id": "mexican-aguachile-shrimp",
     "name": "Chilled lime shrimp aguachile-style salad",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Mexican",
     "time": 20,
     "serves": 2,
@@ -2921,15 +2216,15 @@ KITCHEN.add(
       ],
       [
         "cucumber",
-        1
+        "1pc"
       ],
       [
         "red-onion",
-        1
+        "1pc"
       ],
       [
         "green-chilli",
-        2
+        "2pc"
       ],
       [
         "cilantro",
@@ -2941,7 +2236,7 @@ KITCHEN.add(
       ],
       [
         "avocado",
-        1
+        "1pc"
       ]
     ],
     "steps": [
@@ -2988,7 +2283,7 @@ KITCHEN.add(
       ],
       [
         "red-onion",
-        1
+        "1pc"
       ],
       [
         "red-wine-vinegar",
@@ -3023,11 +2318,11 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
@@ -3051,7 +2346,7 @@ KITCHEN.add(
       ],
       [
         "corn-tortillas",
-        6
+        "6pc"
       ],
       [
         "mozzarella",
@@ -3071,14 +2366,14 @@ KITCHEN.add(
   {
     "id": "mexican-calabacitas-elote",
     "name": "Calabacitas con elote zucchini and sweetcorn skillet",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Mexican",
     "time": 25,
     "serves": 2,
     "ing": [
       [
         "zucchini",
-        2
+        "2pc"
       ],
       [
         "sweetcorn",
@@ -3086,15 +2381,15 @@ KITCHEN.add(
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "cotija",
@@ -3126,7 +2421,7 @@ KITCHEN.add(
   {
     "id": "mexican-refried-pinto-beans",
     "name": "Refried pinto beans with onion and cumin",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Mexican",
     "time": 25,
     "serves": 2,
@@ -3137,11 +2432,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "cumin",
@@ -3173,14 +2468,14 @@ KITCHEN.add(
   {
     "id": "mexican-molletes",
     "name": "Molletes toasted bolillos with beans and melted cheese",
-    "meal": "quick",
+    "meal": "bite",
     "cuisine": "Mexican",
     "time": 15,
     "serves": 2,
     "ing": [
       [
         "bread-rolls",
-        2
+        "2pc"
       ],
       [
         "pinto-beans",
@@ -3196,7 +2491,7 @@ KITCHEN.add(
       ],
       [
         "avocado",
-        1
+        "1pc"
       ]
     ],
     "steps": [
@@ -3267,7 +2562,7 @@ KITCHEN.add(
   {
     "id": "mexican-arroz-rojo",
     "name": "Mexican arroz rojo red rice with tomato and peas",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Mexican",
     "time": 30,
     "serves": 2,
@@ -3278,15 +2573,15 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "chicken-stock",
@@ -3322,7 +2617,7 @@ KITCHEN.add(
   {
     "id": "mexican-chorizo-queso-fundido",
     "name": "Queso fundido with chorizo and roasted peppers",
-    "meal": "quick",
+    "meal": "bite",
     "cuisine": "Mexican",
     "time": 20,
     "serves": 2,
@@ -3341,7 +2636,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "corn-tortillas",
@@ -3368,7 +2663,7 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "black-beans",
@@ -3380,7 +2675,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "chilli-powder",
@@ -3415,65 +2710,6 @@ KITCHEN.add(
       "Brown {pork-mince} with diced {onion}; add chopped {tomato}, {black-beans}, {sweetcorn}, {chilli-powder}, {cumin} and half the {salt}. Simmer until thick.",
       "Mix {cornmeal}, {baking-powder}, remaining salt and {milk} into a thick batter; fold in half the grated {cheddar}.",
       "Spread pork filling in a baking dish, top with cornmeal batter and remaining cheese, then bake at 190 °C for 25–30 minutes until set and golden."
-    ]
-  },
-  {
-    "id": "mexican-cochinita-pibil-inspired",
-    "name": "Cochinita pibil-inspired orange and paprika slow pork",
-    "meal": "big",
-    "cuisine": "Mexican",
-    "time": 120,
-    "serves": 3,
-    "ing": [
-      [
-        "pork-shoulder",
-        700
-      ],
-      [
-        "paprika",
-        30
-      ],
-      [
-        "orange-juice",
-        100
-      ],
-      [
-        "lime-juice",
-        30
-      ],
-      [
-        "garlic",
-        4
-      ],
-      [
-        "cumin",
-        2
-      ],
-      [
-        "oregano",
-        3
-      ],
-      [
-        "red-onion",
-        1
-      ],
-      [
-        "vinegar",
-        20
-      ],
-      [
-        "salt",
-        4
-      ],
-      [
-        "corn-tortillas",
-        6
-      ]
-    ],
-    "steps": [
-      "Blend {paprika}, {orange-juice}, {lime-juice}, {garlic}, {cumin}, {oregano} and {salt}. Coat {pork-shoulder} and marinate 30 minutes or overnight.",
-      "Cover tightly and roast at 160 °C for 2 hours until the pork is very tender and shreds easily.",
-      "Toss thinly sliced {red-onion} with {vinegar} and a pinch of salt. Shred the pork in its juices and serve in warm {corn-tortillas} with pickled onion."
     ]
   },
   {
@@ -3537,15 +2773,15 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        3
+        "3pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "green-olives",
@@ -3557,7 +2793,7 @@ KITCHEN.add(
       ],
       [
         "jalapeno",
-        1
+        "1pc"
       ],
       [
         "oregano",
@@ -3600,19 +2836,19 @@ KITCHEN.add(
       ],
       [
         "carrot",
-        2
+        "2pc"
       ],
       [
         "zucchini",
-        1
+        "1pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "chipotle-adobo",
@@ -3628,7 +2864,7 @@ KITCHEN.add(
       ],
       [
         "avocado",
-        1
+        "1pc"
       ],
       [
         "cilantro",
@@ -3659,7 +2895,7 @@ KITCHEN.add(
       ],
       [
         "corn-tortillas",
-        6
+        "6pc"
       ],
       [
         "onion",
@@ -3926,14 +3162,26 @@ KITCHEN.add(
   {
     "id": "left-beef-quesadillas",
     "name": "Cheesy quesadillas with leftover beef",
-    "meal": "big,bite",
+    "meal": "big",
     "cuisine": "Mexican",
-    "time": 20,
+    "time": 15,
     "serves": 2,
     "ing": [
       [
+        "oil",
+        20
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
         "left-beef",
         250
+      ],
+      [
+        "salsa-tomato",
+        100
       ],
       [
         "corn-tortillas",
@@ -3941,26 +3189,13 @@ KITCHEN.add(
       ],
       [
         "cheddar",
-        100
-      ],
-      [
-        "salsa-tomato",
-        80
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "oil",
-        15
+        120
       ]
     ],
     "steps": [
-      "Shred or thinly slice the {left-beef} and finely chop the {onion}.",
-      "Warm the {oil} in a pan and soften the onion; add the beef and a spoonful of {salsa-tomato} to warm through.",
-      "Scatter the beef mixture and grated {cheddar} over half of each {corn-tortillas}, then fold closed.",
-      "Toast in a dry skillet until crisp on both sides and the cheese melts. Serve with the remaining {salsa-tomato}."
+      "Heat half the {oil} in a pan and soften diced {onion} for 4 minutes. Stir in the shredded {left-beef} and {salsa-tomato} and warm through for 3 minutes.",
+      "Divide the beef mixture and grated {cheddar} between 2 of the {corn-tortillas}, top with the other 2 and press down.",
+      "Cook in the remaining {oil} for 2–3 minutes per side until crisp and the cheese has melted. Cut into wedges."
     ]
   },
   {
@@ -4004,70 +3239,6 @@ KITCHEN.add(
       "Heat the oven to 200 °C. Spread {tortilla-chips} on a tray and scatter over {black-beans} and grated {cheddar}.",
       "Bake 8 minutes until melted.",
       "Top with {salsa-tomato}, {pickled-jalapenos}, {sour-cream} and a squeeze of {lime}."
-    ]
-  },
-  {
-    "id": "mx-cochinita-pibil",
-    "name": "Cochinita pibil-inspired citrus achiote pork",
-    "meal": "big",
-    "cuisine": "Mexican",
-    "time": 180,
-    "serves": 2,
-    "ing": [
-      [
-        "pork-shoulder",
-        500
-      ],
-      [
-        "orange",
-        1
-      ],
-      [
-        "lemon-juice",
-        20
-      ],
-      [
-        "vinegar",
-        15
-      ],
-      [
-        "garlic",
-        3
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "paprika",
-        3
-      ],
-      [
-        "oregano",
-        100
-      ],
-      [
-        "red-onion",
-        "1pc"
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "oil",
-        15
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 190 °C and season the main ingredient evenly with the listed aromatics and spices.",
-      "Roast {pork-shoulder} until cooked through and browned; baste once or twice with the pan juices if available.",
-      "Marinate pork overnight in citrus, vinegar and spices, cover tightly and roast slowly until it shreds easily; toss the meat in the reduced pan juices.",
-      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
     ]
   },
   {
@@ -4181,7 +3352,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm and lightly crisp the {corn-tortillas} in a dry skillet. Mash the {black-beans} with a splash of water and spread over each tortilla.",
+      "Warm and lightly crisp the {corn-tortillas} in a skillet with the {oil}. Mash the {black-beans} with a splash of water and spread over each tortilla.",
       "Scatter over {cheese} and heat under a grill or in a covered pan until the cheese melts and the tortilla is crisp at the edges.",
       "Top with finely shredded {cabbage}, sliced {radish}, {avocado} and {salsa-tomato}; finish with {lime} juice just before serving."
     ]

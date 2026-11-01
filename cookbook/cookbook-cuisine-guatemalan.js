@@ -320,41 +320,59 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "pepian-inspired-chicken-stew",
-    "name": "Pepián-Inspired Chicken Stew",
+    "id": "guatemalan-caldo-de-pollo",
+    "name": "Caldo de Pollo (Guatemalan chicken and vegetable soup)",
     "meal": "big",
     "cuisine": "Guatemalan",
-    "time": 30,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
         "chicken-thigh",
-        450
+        700
       ],
       [
-        "black-beans",
-        250
+        "potatoes",
+        300
       ],
       [
-        "rice",
-        250
+        "carrot",
+        "2pc"
       ],
       [
-        "tomato",
-        250
+        "sweetcorn",
+        200
       ],
       [
-        "plantain",
-        2
+        "chayote",
+        200
       ],
       [
-        "red-pepper",
-        1
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "cilantro",
+        15
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "water",
+        2000
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Put the {chicken-thigh} in a large pot with the {water}, the halved {onion}, crushed {garlic} and {salt}. Bring to the boil, skim and simmer for 25 minutes.",
+      "Add the {potatoes} and {carrot} in chunks and the {sweetcorn} and simmer for 15 minutes.",
+      "Add the peeled, chopped {chayote} and cook for 10 minutes until tender.",
+      "Scatter with chopped {cilantro} and serve in deep bowls."
     ]
   },
   {
@@ -472,41 +490,63 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "jocon-inspired-green-chicken",
-    "name": "Jocón-Inspired Green Chicken",
+    "id": "guatemalan-arroz-con-pollo",
+    "name": "Guatemalan Arroz con Pollo (chicken and vegetable rice)",
     "meal": "big",
     "cuisine": "Guatemalan",
-    "time": 51,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
         "rice",
-        250
+        300
+      ],
+      [
+        "chicken-thigh",
+        600
+      ],
+      [
+        "carrot",
+        "2pc"
+      ],
+      [
+        "peas",
+        100
+      ],
+      [
+        "onion",
+        "1pc"
       ],
       [
         "tomato",
-        250
+        "2pc"
       ],
       [
-        "plantain",
-        2
+        "garlic",
+        "2pc"
       ],
       [
-        "red-pepper",
-        1
+        "chicken-stock",
+        600
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "cilantro",
+        10
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Season the {chicken-thigh} with half of the {salt} and brown in the {oil} for 5 minutes per side. Remove.",
+      "Soften the chopped {onion} and crushed {garlic} in the pan for 5 minutes, add the chopped {tomato} for 5 minutes, then the {rice} and diced {carrot} for 1 minute.",
+      "Pour in the {chicken-stock} and the remaining salt, return the chicken, cover and cook on low heat for 20 minutes.",
+      "Scatter the {peas} on top for the last 5 minutes, then rest for 5 minutes and finish with chopped {cilantro}."
     ]
   },
   {
@@ -623,33 +663,43 @@ KITCHEN.add(
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
+        "eggs",
+        "6pc"
       ],
       [
         "tomato",
-        250
+        "4pc"
       ],
       [
-        "plantain",
-        2
+        "onion",
+        "1pc"
       ],
       [
-        "red-pepper",
-        1
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "cilantro",
+        10
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-beans",
+        240
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Chop the {tomato} and {onion} and finely chop the {green-chilli}. Soften the onion and chilli in the {oil} for 4 minutes, then add the tomato and {salt} and cook for 8 minutes into a thick salsa.",
+      "Warm the {black-beans} in a small pan with a splash of water for 5 minutes.",
+      "Make 6 wells in the salsa, crack in the {eggs}, cover and cook for 5 minutes until the whites are set.",
+      "Scatter with chopped {cilantro} and serve with the beans."
     ]
   },
   {
@@ -752,42 +802,38 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "guatemalan-black-bean-and-rice-bowl",
-    "name": "Guatemalan Black Bean and Rice Bowl",
-    "meal": "big",
+    "id": "guatemalan-frijoles-volteados",
+    "name": "Frijoles Volteados (Guatemalan refried black beans)",
+    "meal": "bite",
     "cuisine": "Guatemalan",
-    "time": 46,
+    "time": 25,
     "serves": 4,
     "ing": [
       [
+        "black-beans",
+        480
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "oil",
+        40
+      ],
+      [
+        "sour-cream",
+        60
+      ],
+      [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
       ]
     ],
     "steps": [
-      "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Fry the chopped {onion} in the {oil} for 6 minutes until golden.",
+      "Add the drained {black-beans}, the {salt} and 100 ml water and mash coarsely, cooking for 10 minutes, stirring, until thick.",
+      "Fold the beans into an oval shape in the pan and serve with a spoonful of {sour-cream}."
     ]
   },
   {
@@ -930,46 +976,38 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "guatemalan-corn-and-cheese-bake",
-    "name": "Guatemalan Corn and Cheese Bake",
-    "meal": "big",
+    "id": "guatemalan-atol-de-elote",
+    "name": "Atol de Elote (Guatemalan sweet corn drink)",
+    "meal": "morning",
     "cuisine": "Guatemalan",
-    "time": 38,
+    "time": 25,
     "serves": 4,
     "ing": [
       [
-        "black-beans",
-        250
+        "sweetcorn",
+        400
       ],
       [
-        "rice",
-        250
+        "milk",
+        500
       ],
       [
-        "tomato",
-        250
+        "sugar",
+        60
       ],
       [
-        "plantain",
+        "cinnamon",
         2
       ],
       [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
+        "salt",
         1
       ]
     ],
     "steps": [
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {black-beans} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Blend the {sweetcorn} with the {milk} until smooth and strain through a sieve.",
+      "Pour into a pot with the {sugar}, {cinnamon} and {salt} and simmer over low heat for 15 minutes, stirring constantly, until thick.",
+      "Serve hot in mugs."
     ]
   }
 ]

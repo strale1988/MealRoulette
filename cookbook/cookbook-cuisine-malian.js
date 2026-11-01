@@ -23,7 +23,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "sweet-potato",
@@ -58,11 +58,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "carrot",
-        1
+        "1pc"
       ],
       [
         "green-beans",
@@ -93,11 +93,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "oil",
@@ -117,14 +117,14 @@ KITCHEN.add(
   {
     "id": "malian-beignets",
     "name": "Malian banana fritters",
-    "meal": "bake",
+    "meal": "bite",
     "cuisine": "Malian",
     "time": 30,
     "serves": 4,
     "ing": [
       [
         "banana",
-        3
+        "3pc"
       ],
       [
         "flour",
@@ -147,108 +147,6 @@ KITCHEN.add(
       "Mash {banana}; mix with {flour}, {sugar} and {baking-powder} into a thick batter.",
       "Drop small spoonfuls into hot {oil}.",
       "Fry, turning, until golden and cooked through; drain and serve warm."
-    ]
-  },
-  {
-    "id": "malian-peanut-chicken",
-    "name": "Malian Peanut Chicken",
-    "meal": "big",
-    "cuisine": "Malian",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "tiguadege-na-inspired-peanut-stew",
-    "name": "Tiguadege Na-Inspired Peanut Stew",
-    "meal": "big",
-    "cuisine": "Malian",
-    "time": 70,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        600
-      ],
-      [
-        "peanut-butter",
-        100
-      ],
-      [
-        "tomato",
-        "2pc"
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "garlic",
-        "3pc"
-      ],
-      [
-        "sweet-potato",
-        250
-      ],
-      [
-        "carrot",
-        "2pc"
-      ],
-      [
-        "cabbage",
-        200
-      ],
-      [
-        "green-chilli",
-        "1pc"
-      ],
-      [
-        "chicken-stock",
-        600
-      ],
-      [
-        "oil",
-        30
-      ],
-      [
-        "salt",
-        3
-      ]
-    ],
-    "steps": [
-      "Season {chicken-thigh} with {salt}. Chop {onion} and {tomato}; crush {garlic}; cut {sweet-potato}, {carrot} and {cabbage} into large chunks.",
-      "Brown the chicken in {oil} for 4 minutes per side. Add the onion, garlic, tomato and {green-chilli} and cook 8 minutes.",
-      "Whisk {peanut-butter} into {chicken-stock} until smooth and pour in. Cover and simmer for 20 minutes.",
-      "Add the sweet potato, carrot and cabbage and simmer for 25 minutes until tender and the stew is thick. Serve hot."
     ]
   },
   {
@@ -301,45 +199,6 @@ KITCHEN.add(
       "Slice {carrot}, shred {cabbage}, chop {onion} and {tomato}, crush {garlic}.",
       "Cook the onion in {oil} for 4 minutes, add garlic and {cumin}, then the carrot for 5 minutes, the cabbage for 5 minutes and the tomato for 3 minutes with the remaining salt.",
       "Spoon the millet into bowls and top with the vegetables."
-    ]
-  },
-  {
-    "id": "malian-jollof-style-rice",
-    "name": "Malian Jollof-Style Rice",
-    "meal": "big",
-    "cuisine": "Malian",
-    "time": 51,
-    "serves": 4,
-    "ing": [
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "ginger",
-        10
-      ]
-    ],
-    "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {onion} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
     ]
   },
   {
@@ -459,49 +318,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "sweet-potato-and-peanut-soup",
-    "name": "Sweet Potato and Peanut Soup",
-    "meal": "big",
-    "cuisine": "Malian",
-    "time": 45,
-    "serves": 4,
-    "ing": [
-      [
-        "sweet-potato",
-        600
-      ],
-      [
-        "peanuts",
-        80
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "garlic",
-        "2pc"
-      ],
-      [
-        "vegetable-stock",
-        900
-      ],
-      [
-        "cumin",
-        2
-      ],
-      [
-        "salt",
-        3
-      ]
-    ],
-    "steps": [
-      "Toast {peanuts} in a dry pan for 4 minutes. Peel {sweet-potato} and cut into chunks; chop {onion}; crush {garlic}.",
-      "Simmer the sweet potato, onion, garlic, {cumin} and {vegetable-stock} for 20 minutes until soft.",
-      "Add the peanuts and {salt} and blend until smooth and creamy. Reheat gently and serve."
-    ]
-  },
-  {
     "id": "malian-bean-and-greens-stew",
     "name": "Malian Bean and Greens Stew",
     "meal": "big",
@@ -554,44 +370,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "malian-spiced-rice-with-vegetables",
-    "name": "Malian Spiced Rice with Vegetables",
-    "meal": "big",
-    "cuisine": "Malian",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
-  {
     "id": "malian-tomato-and-bean-stew",
     "name": "Malian Tomato and Bean Stew",
     "meal": "big",
@@ -636,91 +414,6 @@ KITCHEN.add(
       "Drain {black-beans}. Chop {onion} and {tomato}; crush {garlic}.",
       "Cook the onion in {oil} for 5 minutes, add garlic, {green-chilli} and tomato and cook 10 minutes until thick.",
       "Add {black-beans}, 100 ml water and {salt}, simmer for 10 minutes, then stir in {peanut-butter} and cook 3 minutes more. Serve hot."
-    ]
-  },
-  {
-    "id": "malian-grilled-fish-with-lime",
-    "name": "Malian Grilled Fish with Lime",
-    "meal": "big",
-    "cuisine": "Malian",
-    "time": 39,
-    "serves": 4,
-    "ing": [
-      [
-        "ginger",
-        10
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ]
-    ],
-    "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "malian-chicken-and-greens-pot",
-    "name": "Malian Chicken and Greens Pot",
-    "meal": "big",
-    "cuisine": "Malian",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
     ]
   },
   {
@@ -772,87 +465,41 @@ KITCHEN.add(
   },
   {
     "id": "malian-herbed-flatbread",
-    "name": "Malian Herbed Flatbread",
-    "meal": "big",
+    "name": "Malian tapalapa-style bread",
+    "meal": "bite",
     "cuisine": "Malian",
-    "time": 60,
-    "serves": 4,
+    "time": 120,
+    "serves": 6,
     "ing": [
       [
-        "ginger",
-        10
+        "flour",
+        500
       ],
       [
-        "oil",
-        20
+        "yeast",
+        7
+      ],
+      [
+        "sugar",
+        15
       ],
       [
         "salt",
-        3
+        6
       ],
       [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
+        "water",
         300
       ],
       [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
+        "oil",
+        30
       ]
     ],
     "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "malian-coconut-rice-bowl",
-    "name": "Malian Coconut Rice Bowl",
-    "meal": "big",
-    "cuisine": "Malian",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Mix {flour}, {yeast}, {sugar} and {salt}. Add the {water} and {oil} and knead for 10 minutes into a smooth dough. Cover and prove for 1 hour.",
+      "Shape into 2 long, thick oval loaves, place on a tray, and prove for 30 minutes.",
+      "Slash the tops and bake at 220 °C for 25 minutes until golden and crusty. Cool slightly before slicing."
     ]
   },
   {

@@ -102,7 +102,7 @@ KITCHEN.add(
   {
     "id": "lemon-crepes",
     "name": "French lemon and sugar crêpes",
-    "meal": "morning,treat",
+    "meal": "treat",
     "cuisine": "French",
     "time": 30,
     "serves": 3,
@@ -211,7 +211,7 @@ KITCHEN.add(
       ],
       [
         "lemon",
-        1
+        "1pc"
       ],
       [
         "eggs",
@@ -223,10 +223,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat oven to 200 °C. Wilt {spinach}, cool and squeeze very dry; mix with {cream-cheese}, chopped {dill}, lemon zest and {black-pepper}.",
-      "Roll {puff-pastry} on a lined tray. Place half the spinach mixture in the centre, set {salmon} on top and spread with remaining mixture.",
-      "Fold pastry over the salmon and seal the edges. Turn seam-side down and score the top lightly. Brush with beaten {eggs}.",
-      "Bake 30–35 minutes until deeply golden and the salmon is just cooked. Rest 8 minutes before slicing."
+      "Heat the oven to 200 °C. Wilt the {spinach}, cool and squeeze very dry; mix with the {cream-cheese}, chopped {dill}, the zest of the {lemon} and the {black-pepper}.",
+      "Roll the {puff-pastry} on a lined tray. Place half of the spinach mixture in the centre, set the {salmon} on top and spread with the remaining mixture.",
+      "Fold the pastry over the salmon and seal the edges. Turn seam-side down and score the top lightly. Brush with beaten {eggs}.",
+      "Bake for 30–35 minutes until deeply golden and the salmon is just cooked. Rest for 8 minutes before slicing."
     ]
   },
   {
@@ -251,11 +251,11 @@ KITCHEN.add(
       ],
       [
         "shallot",
-        2
+        "2pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "thyme",
@@ -324,7 +324,7 @@ KITCHEN.add(
       ],
       [
         "lemon",
-        "0.5pc"
+        30
       ],
       [
         "parsley",
@@ -503,42 +503,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-apple-tarte-tatin",
-    "name": "French apple tarte Tatin",
-    "meal": "treat",
-    "cuisine": "French",
-    "time": 55,
-    "serves": 6,
-    "ing": [
-      [
-        "apple",
-        700
-      ],
-      [
-        "puff-pastry",
-        250
-      ],
-      [
-        "butter",
-        60
-      ],
-      [
-        "sugar",
-        130
-      ],
-      [
-        "cinnamon",
-        1
-      ]
-    ],
-    "steps": [
-      "Peel, core and halve {apple}. Melt {butter} and {sugar} in an oven-safe skillet until the sugar turns amber.",
-      "Arrange the apples tightly in the caramel, rounded-side down; cook 8–10 minutes until they begin to soften. Sprinkle with {cinnamon}.",
-      "Lay {puff-pastry} over the apples and tuck the edges down around the fruit; cut a small steam vent.",
-      "Bake at 200°C for 25–30 minutes until the pastry is deeply golden. Rest 5 minutes, then carefully invert onto a plate."
-    ]
-  },
-  {
     "id": "world-baked-salmon-dill",
     "name": "Oven-baked salmon with dill yogurt",
     "meal": "big",
@@ -584,170 +548,6 @@ KITCHEN.add(
       "Place {salmon} on a lined tray; brush with {olive-oil}, season with {salt} and {black-pepper}, and add slices of {lemon}.",
       "Bake at 200°C for 12–15 minutes, depending on thickness, until the fish flakes easily.",
       "Mix {yogurt} with chopped {dill} and a little lemon juice. Serve alongside the salmon and potatoes."
-    ]
-  },
-  {
-    "id": "world-croque-monsieur",
-    "name": "Croque monsieur",
-    "meal": "bite",
-    "cuisine": "French",
-    "time": 20,
-    "serves": 2,
-    "ing": [
-      [
-        "bread",
-        160
-      ],
-      [
-        "ham",
-        90
-      ],
-      [
-        "gruyere",
-        100
-      ],
-      [
-        "butter",
-        20
-      ],
-      [
-        "flour",
-        12
-      ],
-      [
-        "milk",
-        120
-      ],
-      [
-        "mustard",
-        8
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Make a quick white sauce: melt half the {butter}, stir in {flour}, then whisk in {milk} until thick. Season with {black-pepper}.",
-      "Spread {mustard} on {bread}, add {ham} and some {gruyere}, then close the sandwiches.",
-      "Spread a little white sauce on top and add remaining {gruyere}.",
-      "Bake or grill at 220°C for 8–10 minutes until golden and bubbling; serve hot."
-    ]
-  },
-  {
-    "id": "world-ratatouille",
-    "name": "Ratatouille provençale",
-    "meal": "big",
-    "cuisine": "French",
-    "time": 55,
-    "serves": 3,
-    "ing": [
-      [
-        "aubergine",
-        250
-      ],
-      [
-        "zucchini",
-        250
-      ],
-      [
-        "red-pepper",
-        180
-      ],
-      [
-        "onion",
-        130
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "garlic",
-        12
-      ],
-      [
-        "olive-oil",
-        30
-      ],
-      [
-        "thyme",
-        3
-      ],
-      [
-        "basil",
-        8
-      ],
-      [
-        "salt",
-        4
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Cut {aubergine}, {zucchini}, {red-pepper}, {onion} and {tomato} into bite-sized pieces.",
-      "Cook {onion} in {olive-oil} for 5 minutes, then add {garlic}, {red-pepper} and {aubergine}; cook 8 minutes.",
-      "Add {zucchini}, {tomato}, {thyme}, {salt} and {black-pepper}; cover and simmer gently for 25–30 minutes.",
-      "Uncover to reduce any excess liquid and finish with torn {basil}."
-    ]
-  },
-  {
-    "id": "world-french-onion-soup",
-    "name": "French onion soup with Gruyère toast",
-    "meal": "big",
-    "cuisine": "French",
-    "time": 60,
-    "serves": 2,
-    "ing": [
-      [
-        "onion",
-        500
-      ],
-      [
-        "butter",
-        35
-      ],
-      [
-        "olive-oil",
-        8
-      ],
-      [
-        "vegetable-stock",
-        700
-      ],
-      [
-        "white-wine",
-        70
-      ],
-      [
-        "thyme",
-        2
-      ],
-      [
-        "bread",
-        120
-      ],
-      [
-        "gruyere",
-        100
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "salt",
-        3
-      ]
-    ],
-    "steps": [
-      "Slice {onion} thinly. Cook slowly with {butter} and {olive-oil} for 30–35 minutes, stirring until deeply golden.",
-      "Pour in {white-wine} and scrape up the browned bits. Add {vegetable-stock} and {thyme}; simmer 15 minutes, then season with {salt} and {black-pepper}.",
-      "Toast {bread}, top with grated {gruyere} and grill until melted and bubbling.",
-      "Ladle the soup into bowls and serve with the cheese toast."
     ]
   },
   {
@@ -876,53 +676,6 @@ KITCHEN.add(
       "Add {canned-tomatoes}, {vegetable-stock}, cubed {potatoes} and {salt}; simmer 15 minutes until the potatoes are nearly tender.",
       "Add chunks of {white-fish} and {prawns}; simmer gently 5–7 minutes until the fish flakes and the prawns are opaque. Season with {fish-sauce} if needed.",
       "Finish with {parsley} and serve with toasted {bread} to dip into the broth."
-    ]
-  },
-  {
-    "id": "french-quiche-lorraine",
-    "name": "Quiche Lorraine",
-    "meal": "big",
-    "cuisine": "French",
-    "time": 65,
-    "serves": 6,
-    "ing": [
-      [
-        "puff-pastry",
-        250
-      ],
-      [
-        "bacon",
-        160
-      ],
-      [
-        "eggs",
-        "3pc"
-      ],
-      [
-        "cream",
-        250
-      ],
-      [
-        "gruyere",
-        100
-      ],
-      [
-        "onion",
-        "0.5pc"
-      ],
-      [
-        "nutmeg",
-        1
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 190 °C. Line a tart tin with the {puff-pastry}, prick the base and chill while preparing the filling.",
-      "Cook the {bacon} and sliced {onion} in a pan until lightly golden. Beat the {eggs} with the {cream}, {nutmeg} and {black-pepper}; stir in grated {gruyere}.",
-      "Spread the bacon and onion in the pastry shell, pour over the egg mixture and bake 35–40 minutes until puffed and just set. Rest 10 minutes before slicing."
     ]
   },
   {
@@ -1095,7 +848,7 @@ KITCHEN.add(
       ],
       [
         "zest-orange",
-        3
+        8
       ],
       [
         "honey",
@@ -1286,7 +1039,7 @@ KITCHEN.add(
       ],
       [
         "lemon",
-        "0.5pc"
+        30
       ]
     ],
     "steps": [
@@ -1321,7 +1074,7 @@ KITCHEN.add(
       ],
       [
         "lemon",
-        "0.5pc"
+        30
       ],
       [
         "bacon",
@@ -1485,58 +1238,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-ratatouille-beans",
-    "name": "Ratatouille with white beans",
-    "meal": "big",
-    "time": 40,
-    "serves": 3,
-    "ing": [
-      [
-        "aubergine",
-        250
-      ],
-      [
-        "zucchini",
-        250
-      ],
-      [
-        "red-pepper",
-        180
-      ],
-      [
-        "canned-tomatoes",
-        400
-      ],
-      [
-        "white-beans",
-        240
-      ],
-      [
-        "onion",
-        100
-      ],
-      [
-        "garlic",
-        8
-      ],
-      [
-        "olive-oil",
-        20
-      ],
-      [
-        "thyme",
-        2
-      ]
-    ],
-    "steps": [
-      "Cube {aubergine} and {zucchini}; dice {red-pepper} and {onion}.",
-      "Heat {olive-oil} in a heavy pot. Brown aubergine in batches, then set aside. Cook onion and pepper for 5 minutes.",
-      "Add {garlic}, {thyme}, zucchini and {canned-tomatoes}. Return aubergine and simmer gently for 20 minutes.",
-      "Stir in drained {white-beans} and cook for 5 minutes more. Season and serve warm or at room temperature."
-    ],
-    "cuisine": "French"
-  },
-  {
     "id": "world-leek-potato-gratin",
     "name": "Leek and potato gratin",
     "meal": "big",
@@ -1561,7 +1262,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        5
+        "5pc"
       ],
       [
         "gruyere",
@@ -1583,58 +1284,6 @@ KITCHEN.add(
       "Remove foil, top with grated {gruyere} and bake another 20–25 minutes until golden and tender."
     ],
     "cuisine": "French"
-  },
-  {
-    "id": "world-french-ratatouille",
-    "name": "Provençal ratatouille",
-    "meal": "big",
-    "cuisine": "French",
-    "time": 55,
-    "serves": 4,
-    "ing": [
-      [
-        "aubergine",
-        400
-      ],
-      [
-        "zucchini",
-        400
-      ],
-      [
-        "red-pepper",
-        2
-      ],
-      [
-        "tomato",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "garlic",
-        3
-      ],
-      [
-        "olive-oil",
-        40
-      ],
-      [
-        "thyme",
-        3
-      ],
-      [
-        "basil",
-        15
-      ]
-    ],
-    "steps": [
-      "Cut {aubergine}, {zucchini} and {red-pepper} into even chunks; chop {onion} and {garlic}.",
-      "Brown eggplant in batches in some {olive-oil}; set aside. Sauté zucchini and peppers separately until lightly golden.",
-      "Soften onion and garlic in the remaining oil. Add chopped {tomato} and {thyme}; simmer 10 minutes.",
-      "Return all vegetables to the pot and simmer gently 20–25 minutes until tender but distinct. Finish with torn {basil}."
-    ]
   },
   {
     "id": "world-french-quiche-lorraine",
@@ -1683,7 +1332,7 @@ KITCHEN.add(
   {
     "id": "french-tarte-tatin",
     "name": "Apple tarte tatin",
-    "meal": "sweet",
+    "meal": "treat",
     "cuisine": "French",
     "time": 55,
     "serves": 6,
@@ -1706,7 +1355,7 @@ KITCHEN.add(
       ],
       [
         "lemon",
-        "0.5pc"
+        30
       ]
     ],
     "steps": [
@@ -1738,7 +1387,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "nutmeg",
@@ -1777,20 +1426,19 @@ KITCHEN.add(
       ],
       [
         "red-pepper",
-        2
+        "2pc"
       ],
-      
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "tomato",
-        3
+        "3pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "black-olives",
@@ -1837,7 +1485,7 @@ KITCHEN.add(
       ],
       [
         "sausages",
-        2
+        200
       ],
       [
         "bacon",
@@ -1849,11 +1497,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "tomato-paste",
@@ -1900,7 +1548,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "leek",
@@ -1952,7 +1600,7 @@ KITCHEN.add(
   {
     "id": "french-crepes-suzette",
     "name": "Crêpes Suzette with orange butter sauce",
-    "meal": "sweet",
+    "meal": "treat",
     "cuisine": "French",
     "time": 35,
     "serves": 2,
@@ -1963,7 +1611,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        2
+        "2pc"
       ],
       [
         "milk",
@@ -1975,7 +1623,7 @@ KITCHEN.add(
       ],
       [
         "orange",
-        2
+        "2pc"
       ],
       [
         "sugar",
@@ -2022,7 +1670,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        1
+        "1pc"
       ],
       [
         "breadcrumbs",
@@ -2069,7 +1717,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "cream",
@@ -2112,7 +1760,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        3
+        "3pc"
       ],
       [
         "ham",
@@ -2136,9 +1784,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Whisk {buckwheat}, {water} and {salt} into a thin batter and rest 10 minutes.",
-      "Cook thin galettes in a hot buttered pan until set; flip and add {ham}, grated {gruyere} and one {eggs} to each.",
-      "Fold the edges toward the centre and cook until the egg white sets and cheese melts. Season with {black-pepper}."
+      "Whisk {buckwheat}, {water} and {salt} into a thin batter and rest for 10 minutes.",
+      "Cook thin galettes in a hot pan brushed with {butter} until set; flip and add {ham}, grated {gruyere} and one of the {eggs} to each.",
+      "Fold the edges toward the centre and cook until the egg white sets and the cheese melts. Season with {black-pepper}."
     ]
   },
   {
@@ -2155,7 +1803,7 @@ KITCHEN.add(
       ],
       [
         "zucchini",
-        2
+        "2pc"
       ],
       [
         "goat-cheese",
@@ -2167,7 +1815,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        1
+        "1pc"
       ],
       [
         "thyme",
@@ -2202,7 +1850,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        4
+        "4pc"
       ],
       [
         "anchovies",
@@ -2273,7 +1921,7 @@ KITCHEN.add(
   {
     "id": "french-soupe-au-pistou",
     "name": "Soupe au pistou (Provençal vegetable, bean and basil soup)",
-    "meal": "light",
+    "meal": "big",
     "cuisine": "French",
     "time": 45,
     "serves": 3,
@@ -2288,11 +1936,11 @@ KITCHEN.add(
       ],
       [
         "zucchini",
-        1
+        "1pc"
       ],
       [
         "carrot",
-        1
+        "1pc"
       ],
       [
         "potatoes",
@@ -2312,7 +1960,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "parmesan",
@@ -2336,7 +1984,7 @@ KITCHEN.add(
   {
     "id": "french-beef-bourguignon",
     "name": "Beef bourguignon with red wine",
-    "meal": "big,fancy",
+    "meal": "big",
     "cuisine": "French",
     "time": 150,
     "serves": 4,
@@ -2501,115 +2149,6 @@ KITCHEN.add(
       "Beat the {cream-cheese} and {sugar} until smooth. Beat in the {eggs} one at a time, then the {cream} and {vanilla}.",
       "Fold in the {flour} and pour into the tin.",
       "Bake 40–50 minutes until deeply browned on top and still slightly wobbly in the centre. Cool completely before slicing."
-    ]
-  },
-  {
-    "id": "fr-ratatouille",
-    "name": "Ratatouille niçoise with slowly cooked summer vegetables",
-    "meal": "light",
-    "cuisine": "French",
-    "time": 50,
-    "serves": 2,
-    "ing": [
-      [
-        "aubergine",
-        1
-      ],
-      [
-        "zucchini",
-        1
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "tomato",
-        2
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "garlic",
-        3
-      ],
-      [
-        "thyme",
-        3
-      ],
-      [
-        "olive-oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Heat {olive-oil} in a heavy pan; soften {onion} and {garlic}.",
-      "Add {aubergine} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {tomato} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Brown each vegetable in batches, then return them to the pan with tomato and thyme and cook gently until the flavours meld while the pieces still hold shape.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
-    ]
-  },
-  {
-    "id": "fr-tartiflette",
-    "name": "Tartiflette-inspired French Alpine potato and cheese gratin",
-    "meal": "big",
-    "cuisine": "French",
-    "time": 55,
-    "serves": 2,
-    "ing": [
-      [
-        "potatoes",
-        350
-      ],
-      [
-        "bacon",
-        120
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "brie",
-        100
-      ],
-      [
-        "cream",
-        150
-      ],
-      [
-        "white-wine",
-        100
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "oil",
-        15
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 190 °C and lightly grease a baking dish or line a tray.",
-      "Prepare {potatoes} with the other listed ingredients, layer or shape the mixture evenly and season it well.",
-      "Parboil sliced potatoes, soften onions with smoked bacon and deglaze with white wine; layer with cream and pieces of brie, then bake until bubbling and bronzed.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
   }
 ]

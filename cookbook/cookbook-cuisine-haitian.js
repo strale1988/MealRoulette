@@ -19,11 +19,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "thyme",
@@ -52,8 +52,8 @@ KITCHEN.add(
     ],
     "steps": [
       "Soak dried {shiitake-mushrooms} in hot water for 15 minutes; strain and reserve the soaking liquid. Chop the mushrooms.",
-      "Cook diced {onion} and {garlic} in {oil}; add {thyme}, {ground-cloves}, chopped mushrooms and {soy-sauce}.",
-      "Add {rice}, {vegetable-stock} and enough mushroom soaking liquid to make the total liquid about twice the rice volume. Cover and cook over low heat until tender."
+      "Cook diced {onion} and {garlic} in {oil} for 5 minutes; add {thyme}, {ground-cloves}, the chopped mushrooms and {soy-sauce} and cook for 2 minutes.",
+      "Add {rice}, {vegetable-stock}, {salt} and enough mushroom soaking liquid to make the total liquid about twice the volume of the rice. Cover and cook over low heat for 20 minutes until tender, then rest for 5 minutes."
     ]
   },
   {
@@ -212,7 +212,7 @@ KITCHEN.add(
   {
     "id": "ht-pikliz-spicy-pickled-cabbage",
     "name": "Pikliz (Haitian hot pickled cabbage and carrot relish)",
-    "meal": "side",
+    "meal": "bite",
     "cuisine": "Haitian",
     "time": 20,
     "serves": 2,
@@ -375,97 +375,67 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "haitian-joumou-inspired-pumpkin-soup",
-    "name": "Haitian Joumou-Inspired Pumpkin Soup",
+    "id": "haitian-legim",
+    "name": "Legim (Haitian mixed vegetable and beef stew)",
     "meal": "big",
     "cuisine": "Haitian",
-    "time": 30,
+    "time": 65,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "beef-chuck",
+        400
       ],
       [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "haitian-griot-style-pork",
-    "name": "Haitian Griot-Style Pork",
-    "meal": "big",
-    "cuisine": "Haitian",
-    "time": 120,
-    "serves": 4,
-    "ing": [
-      [
-        "pork-shoulder",
-        700
-      ],
-      [
-        "orange",
+        "aubergine",
         "1pc"
       ],
       [
-        "lime",
-        "1pc"
+        "cabbage",
+        250
       ],
       [
-        "garlic",
-        "4pc"
+        "carrot",
+        "2pc"
+      ],
+      [
+        "spinach",
+        150
       ],
       [
         "onion",
         "1pc"
       ],
       [
-        "green-chilli",
-        "1pc"
+        "garlic",
+        "3pc"
       ],
       [
         "thyme",
         2
       ],
       [
+        "tomato-paste",
+        30
+      ],
+      [
+        "habanero-pepper",
+        "1pc"
+      ],
+      [
         "oil",
-        60
+        30
       ],
       [
         "salt",
-        4
-      ],
-      [
-        "black-pepper",
-        1
+        3
       ]
     ],
     "steps": [
-      "Cut {pork-shoulder} into 4 cm cubes. Marinate with the juice of {orange} and {lime}, crushed {garlic}, sliced {onion}, {green-chilli}, {thyme}, {salt} and {black-pepper} for at least 1 hour.",
-      "Put the pork and marinade in a pot, add 200 ml water, cover and simmer for 1 hour until tender.",
-      "Uncover and cook until the liquid has fully evaporated, about 15 minutes. Lift out the pork and pat dry.",
-      "Heat {oil} in a frying pan and fry the pork for 8–10 minutes, turning, until crisp and deep golden on all sides. Serve hot."
+      "Cut {beef-chuck} into 3 cm cubes, season with half of the {salt} and brown in {oil} for 8 minutes. Add sliced {onion}, crushed {garlic}, {thyme} and {tomato-paste} and cook for 2 minutes.",
+      "Add 500 ml water and the whole {habanero-pepper}, cover and simmer for 30 minutes until the beef is tender.",
+      "Add the {carrot} in chunks, cubed {aubergine} and the {cabbage} and simmer for 15 minutes, mashing some of the vegetables into the stew to thicken it.",
+      "Stir in the {spinach} and the remaining salt for 3 minutes, then remove the habanero."
     ]
   },
   {
@@ -525,53 +495,23 @@ KITCHEN.add(
     "name": "Haitian Chicken with Epis Seasoning",
     "meal": "big",
     "cuisine": "Haitian",
-    "time": 51,
+    "time": 70,
     "serves": 4,
     "ing": [
       [
         "chicken-thigh",
-        450
+        700
       ],
       [
-        "black-beans",
-        250
+        "parsley",
+        30
       ],
       [
-        "rice",
-        250
+        "garlic",
+        "5pc"
       ],
       [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "haitian-pikliz-cabbage-slaw",
-    "name": "Haitian Pikliz Cabbage Slaw",
-    "meal": "bite",
-    "cuisine": "Haitian",
-    "time": 130,
-    "serves": 4,
-    "ing": [
-      [
-        "cabbage",
-        400
-      ],
-      [
-        "carrot",
+        "onion",
         "1pc"
       ],
       [
@@ -579,31 +519,27 @@ KITCHEN.add(
         "1pc"
       ],
       [
-        "green-chilli",
-        "2pc"
-      ],
-      [
-        "vinegar",
-        150
+        "thyme",
+        3
       ],
       [
         "lime",
         "1pc"
       ],
       [
-        "cloves",
-        1
+        "oil",
+        40
       ],
       [
         "salt",
-        3
+        4
       ]
     ],
     "steps": [
-      "Shred {cabbage} finely, grate {carrot} and thinly slice {red-pepper} and {green-chilli}.",
-      "Pack everything into a clean jar with {cloves} and {salt}.",
-      "Pour over {vinegar} and the juice of {lime} until covered, then press down and seal.",
-      "Refrigerate for at least 2 hours, ideally overnight, until the cabbage is tangy and hot. Serve cold as a condiment."
+      "Blend the {parsley}, {garlic}, half of the {onion}, the {red-pepper}, {thyme}, the juice of the {lime}, half of the {oil} and the {salt} into a thick epis paste.",
+      "Rub the epis over the {chicken-thigh} and marinate for at least 30 minutes.",
+      "Brown the chicken in the remaining oil for 5 minutes per side, add 150 ml water and the remaining onion, sliced, then cover and simmer for 30 minutes until cooked through.",
+      "Uncover and reduce the sauce for 5 minutes. Serve hot."
     ]
   },
   {
@@ -611,37 +547,43 @@ KITCHEN.add(
     "name": "Haitian Plantain and Bean Bowl",
     "meal": "big",
     "cuisine": "Haitian",
-    "time": 25,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "plantain",
+        "3pc"
       ],
       [
         "black-beans",
-        250
+        480
       ],
       [
-        "rice",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "tomato",
-        250
+        "garlic",
+        "3pc"
       ],
       [
-        "plantain",
+        "thyme",
         2
       ],
       [
-        "red-pepper",
-        1
+        "oil",
+        80
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Soften chopped {onion} and {garlic} in 15 g of the {oil} for 5 minutes, add {thyme}, the {black-beans}, 100 ml water and half of the {salt} and simmer for 15 minutes, mashing some of the beans, until thick.",
+      "Peel the {plantain}, cut into 3 cm chunks and fry in the remaining oil for 3 minutes per side until golden. Lift out and flatten each piece with the bottom of a glass.",
+      "Return the flattened plantain to the hot oil for 2 minutes per side until crisp and sprinkle with the remaining salt.",
+      "Serve the crisp plantain over the beans."
     ]
   },
   {
@@ -753,42 +695,55 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "haitian-black-bean-and-rice-bowl",
-    "name": "Haitian Black Bean and Rice Bowl",
-    "meal": "big",
+    "id": "haitian-espageti",
+    "name": "Haitian Espageti (breakfast spaghetti with sausage and ketchup)",
+    "meal": "morning",
     "cuisine": "Haitian",
-    "time": 46,
+    "time": 25,
     "serves": 4,
     "ing": [
       [
+        "pasta",
+        320
+      ],
+      [
+        "sausages",
+        250
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "red-pepper",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "ketchup",
+        60
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
+        "black-pepper",
+        1
+      ],
+      [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
       ]
     ],
     "steps": [
-      "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Cook the {pasta} in boiling water with the {salt} according to the packet; drain, keeping a cup of the water.",
+      "Slice the {sausages} and fry in the {oil} for 5 minutes, then add sliced {onion}, {red-pepper} and crushed {garlic} for 5 minutes.",
+      "Stir in the {ketchup}, {black-pepper} and a splash of the pasta water for 2 minutes.",
+      "Toss with the pasta and serve hot."
     ]
   },
   {
@@ -934,46 +889,54 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "haitian-corn-and-cheese-bake",
-    "name": "Haitian Corn and Cheese Bake",
-    "meal": "big",
+    "id": "haitian-pen-patat",
+    "name": "Pen Patat (Haitian sweet potato pudding)",
+    "meal": "treat",
     "cuisine": "Haitian",
-    "time": 38,
-    "serves": 4,
+    "time": 75,
+    "serves": 6,
     "ing": [
       [
-        "black-beans",
-        250
+        "sweet-potato",
+        600
       ],
       [
-        "rice",
-        250
+        "coconut-milk",
+        200
       ],
       [
-        "tomato",
-        250
+        "brown-sugar",
+        80
       ],
       [
-        "plantain",
+        "butter",
+        40
+      ],
+      [
+        "cinnamon",
         2
       ],
       [
-        "red-pepper",
+        "nutmeg",
         1
       ],
       [
-        "cilantro",
-        10
+        "vanilla",
+        3
       ],
       [
-        "lime",
-        1
+        "eggs",
+        "2pc"
+      ],
+      [
+        "flour",
+        40
       ]
     ],
     "steps": [
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {black-beans} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Heat the oven to 180 °C and grease a baking dish with a little of the {butter}. Peel the {sweet-potato}, boil for 15–20 minutes until soft and mash smooth.",
+      "Mix in the {coconut-milk}, {brown-sugar}, the remaining butter (melted), {cinnamon}, {nutmeg}, {vanilla}, {eggs} and {flour}.",
+      "Pour into the dish and bake for 35 minutes until set and browned on top. Cool before slicing."
     ]
   }
 ]

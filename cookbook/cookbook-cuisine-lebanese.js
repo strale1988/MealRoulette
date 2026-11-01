@@ -6,20 +6,20 @@ KITCHEN.add(
     "name": "Baked kibbeh with spiced beef and bulgur shell",
     "meal": "big",
     "cuisine": "Lebanese",
-    "time": 50,
-    "serves": 2,
+    "time": 70,
+    "serves": 4,
     "ing": [
       [
-        "beef-mince",
-        400
+        "bulgur-fine",
+        200
       ],
       [
-        "bulgur-fine",
-        120
+        "beef-mince",
+        500
       ],
       [
         "onion",
-        "1pc"
+        "2pc"
       ],
       [
         "cumin",
@@ -31,26 +31,30 @@ KITCHEN.add(
       ],
       [
         "allspice",
-        2
-      ],
-      [
-        "olive-oil",
-        15
+        3
       ],
       [
         "salt",
-        3
+        4
       ],
       [
         "black-pepper",
         1
+      ],
+      [
+        "olive-oil",
+        40
+      ],
+      [
+        "pine-nuts",
+        30
       ]
     ],
     "steps": [
-      "Heat the oven to 190 °C and lightly grease a baking dish or line a tray.",
-      "Prepare {beef-mince} with the other listed ingredients, layer or shape the mixture evenly and season it well.",
-      "Soak fine bulgur briefly and squeeze dry, mix with seasoned mince into a firm shell mixture, layer with a spiced onion filling and score the top before baking.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Soak the {bulgur-fine} in cold water for 10 minutes, then squeeze dry. Knead with 300 g of the {beef-mince}, 1 grated {onion}, {cumin}, {cinnamon}, {allspice}, {salt} and {black-pepper} until a smooth paste forms.",
+      "Fry the remaining diced onion in half the {olive-oil} for 6 minutes, add the remaining mince and cook for 8 minutes, then stir in the {pine-nuts}.",
+      "Heat the oven to 190 °C. Press half the shell mixture into an oiled baking dish, spread over the filling and cover with the rest of the shell, smoothing the top.",
+      "Score into diamonds, drizzle with the remaining oil and bake for 35 minutes until browned and cooked through."
     ]
   },
   {
@@ -58,68 +62,72 @@ KITCHEN.add(
     "name": "Manakish with za’atar and olive oil",
     "meal": "morning",
     "cuisine": "Lebanese",
-    "time": 80,
-    "serves": 2,
+    "time": 90,
+    "serves": 4,
     "ing": [
       [
         "flour",
-        120
+        300
       ],
       [
         "yeast",
-        7
-      ],
-      [
-        "water",
-        350
-      ],
-      [
-        "olive-oil",
-        15
-      ],
-      [
-        "zaatar",
         5
       ],
       [
         "salt",
-        3
+        4
+      ],
+      [
+        "water",
+        180
+      ],
+      [
+        "olive-oil",
+        60
+      ],
+      [
+        "zaatar",
+        30
       ]
     ],
     "steps": [
-      "Mix {flour} with the remaining dough ingredients to make a workable dough or batter; knead or beat until even.",
-      "Rest or prove the mixture as needed, shape it, then bake, steam or griddle until cooked through.",
-      "Knead a soft flatbread dough and let it rise, stretch into small rounds, spread za’atar mixed with olive oil over the surface and bake hot until puffed and browned.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Mix {flour}, {yeast} and {salt}. Add the {water} and 20 ml of the {olive-oil} and knead for 8 minutes. Cover and prove for 1 hour.",
+      "Heat the oven to 240 °C with a tray inside. Divide the dough into 4 balls and stretch each into a 18 cm round.",
+      "Mix the {zaatar} with the remaining {olive-oil} and spread over the rounds, leaving a rim.",
+      "Bake on the hot tray for 8–10 minutes until puffed and golden."
     ]
   },
   {
     "id": "lb-fattoush",
     "name": "Fattoush with toasted pita and sumac dressing",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Lebanese",
-    "time": 20,
-    "serves": 2,
+    "time": 25,
+    "serves": 4,
     "ing": [
-      [
-        "lettuce",
-        100
-      ],
-      [
-        "cucumber",
-        1
-      ],
-      [
-        "tomato",
-        2
-      ],
-      [
-        "radish",
-        80
-      ],
       [
         "pita-bread",
         "2pc"
+      ],
+      [
+        "olive-oil",
+        50
+      ],
+      [
+        "lettuce",
+        200
+      ],
+      [
+        "cucumber",
+        "2pc"
+      ],
+      [
+        "tomato",
+        "3pc"
+      ],
+      [
+        "radish",
+        100
       ],
       [
         "mint",
@@ -127,19 +135,15 @@ KITCHEN.add(
       ],
       [
         "parsley",
-        10
+        15
       ],
       [
         "sumac",
-        3
+        5
       ],
       [
         "lemon-juice",
-        20
-      ],
-      [
-        "olive-oil",
-        15
+        40
       ],
       [
         "salt",
@@ -147,10 +151,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare {lettuce} and cut the remaining vegetables or fruit into even bite-sized pieces.",
-      "Whisk {olive-oil} with {lemon-juice} and the seasoning to make a bright dressing.",
-      "Toast or fry pita pieces until crisp, chop vegetables roughly and toss with mint and parsley; dress with lemon, olive oil and sumac just before serving.",
-      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
+      "Heat the oven to 200 °C. Tear the {pita-bread} into pieces, toss with half the {olive-oil} and bake for 8 minutes until crisp.",
+      "Chop the {lettuce}, {cucumber}, {tomato} and {radish} roughly and toss with chopped {mint} and {parsley}.",
+      "Whisk the remaining {olive-oil} with the {lemon-juice}, {sumac} and {salt}.",
+      "Toss the salad with the dressing and the crisp pita just before serving."
     ]
   },
   {
@@ -158,12 +162,12 @@ KITCHEN.add(
     "name": "Shish taouk (Lebanese lemon-yogurt chicken skewers)",
     "meal": "big",
     "cuisine": "Lebanese",
-    "time": 35,
-    "serves": 2,
+    "time": 45,
+    "serves": 4,
     "ing": [
       [
         "chicken-thigh",
-        400
+        700
       ],
       [
         "yogurt",
@@ -171,15 +175,15 @@ KITCHEN.add(
       ],
       [
         "lemon-juice",
-        20
+        40
       ],
       [
         "garlic",
-        3
+        "4pc"
       ],
       [
         "paprika",
-        3
+        4
       ],
       [
         "cumin",
@@ -187,11 +191,11 @@ KITCHEN.add(
       ],
       [
         "olive-oil",
-        15
+        30
       ],
       [
         "salt",
-        3
+        4
       ],
       [
         "black-pepper",
@@ -199,10 +203,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Season {chicken-thigh} and coat it with the aromatics and marinade ingredients; rest briefly while the grill heats.",
-      "Grill or sear {chicken-thigh} over medium-high heat, turning as needed until cooked through and lightly charred.",
-      "Marinate chicken chunks in yogurt, garlic, lemon and spices, thread onto skewers and grill until charred at the edges; rest briefly before serving.",
-      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
+      "Mix {yogurt}, {lemon-juice}, crushed {garlic}, {paprika}, {cumin}, {olive-oil}, {salt} and {black-pepper}. Coat the cubed {chicken-thigh} and marinate for at least 2 hours.",
+      "Thread the chicken onto skewers.",
+      "Grill over high heat or under a hot grill for 12–15 minutes, turning, until charred at the edges and cooked through. Rest for 5 minutes before serving."
     ]
   },
   {
@@ -210,16 +213,12 @@ KITCHEN.add(
     "name": "Arayes (pita stuffed with spiced beef and crisped)",
     "meal": "big",
     "cuisine": "Lebanese",
-    "time": 25,
-    "serves": 2,
+    "time": 30,
+    "serves": 4,
     "ing": [
       [
         "beef-mince",
-        400
-      ],
-      [
-        "pita-bread",
-        "2pc"
+        500
       ],
       [
         "onion",
@@ -227,11 +226,11 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "2pc"
       ],
       [
         "parsley",
-        10
+        20
       ],
       [
         "cumin",
@@ -239,26 +238,29 @@ KITCHEN.add(
       ],
       [
         "allspice",
-        2
-      ],
-      [
-        "olive-oil",
-        15
+        3
       ],
       [
         "salt",
-        3
+        4
       ],
       [
         "black-pepper",
         1
+      ],
+      [
+        "pita-bread",
+        "4pc"
+      ],
+      [
+        "olive-oil",
+        30
       ]
     ],
     "steps": [
-      "Season {beef-mince} and coat it with the aromatics and marinade ingredients; rest briefly while the grill heats.",
-      "Grill or sear {beef-mince} over medium-high heat, turning as needed until cooked through and lightly charred.",
-      "Mix mince with finely chopped onion, herbs and spices, spread a thin layer inside pita pockets, brush with oil and grill or toast until the bread is crisp and the filling cooked.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Mix {beef-mince} with grated {onion}, crushed {garlic}, chopped {parsley}, {cumin}, {allspice}, {salt} and {black-pepper}.",
+      "Cut the {pita-bread} in half to make pockets and stuff each with a thin layer of the mince mixture, pressing it flat.",
+      "Brush the outsides with {olive-oil} and cook on a hot griddle or in a 200 °C oven for 10–12 minutes, turning once, until the bread is crisp and the meat is cooked through."
     ]
   },
   {
@@ -266,80 +268,80 @@ KITCHEN.add(
     "name": "Muhallabieh (Lebanese milk pudding with orange blossom)",
     "meal": "treat",
     "cuisine": "Lebanese",
-    "time": 20,
-    "serves": 2,
+    "time": 25,
+    "serves": 4,
     "ing": [
       [
         "milk",
-        250
+        750
       ],
       [
         "cornstarch",
-        100
+        50
       ],
       [
         "sugar",
-        35
+        60
       ],
       [
         "orange-blossom-water",
-        120
+        15
       ],
       [
         "pistachios",
-        100
+        30
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {milk} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Whisk cornstarch with a little cold milk, heat the rest with sugar, then stir together over low heat until thick and glossy; flavour with orange-blossom water, chill and scatter pistachios over the top.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Whisk the {cornstarch} with 100 ml of the {milk} until smooth.",
+      "Heat the remaining milk with the {sugar} until steaming, then whisk in the cornstarch mixture and stir over medium-low heat for 8 minutes until thick and glossy.",
+      "Stir in the {orange-blossom-water}, pour into 4 glasses and chill for 2 hours.",
+      "Serve topped with chopped {pistachios}."
     ]
   },
   {
     "id": "lb-sayadieh",
-    "name": "Sayadieh (Lebanese spiced fish and caramelized onion rice)",
+    "name": "Sayadieh (Lebanese spiced fish and caramelised onion rice)",
     "meal": "big",
     "cuisine": "Lebanese",
-    "time": 40,
-    "serves": 2,
+    "time": 50,
+    "serves": 4,
     "ing": [
       [
-        "white-fish",
-        350
-      ],
-      [
-        "rice",
-        180
+        "olive-oil",
+        60
       ],
       [
         "onion",
-        "1pc"
+        "3pc"
+      ],
+      [
+        "white-fish",
+        600
       ],
       [
         "cumin",
-        3
+        4
       ],
       [
         "ground-coriander",
         3
       ],
       [
+        "rice",
+        300
+      ],
+      [
         "fish-stock",
-        450
+        700
       ],
       [
         "lemon",
         "1pc"
       ],
       [
-        "olive-oil",
-        15
-      ],
-      [
         "salt",
-        3
+        4
       ],
       [
         "black-pepper",
@@ -347,11 +349,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Rinse {rice} if it is uncooked; prepare the other ingredients while it drains.",
-      "Heat {olive-oil} and soften {onion}, then cook the main filling until fragrant.",
-      "Combine the ingredients with {fish-stock} and cook covered until the rice is tender and the liquid is absorbed.",
-      "Brown onions deeply to colour the stock, toast the rice with cumin and coriander, then cook it in the onion stock and serve with separately seared fish and lemon.",
-      "Finish with a little {lemon} if needed, taste for seasoning and serve while the texture is at its best."
+      "Heat half the {olive-oil} in a pot and cook sliced {onion} over medium heat for 20 minutes until deep brown.",
+      "Season the {white-fish} with half the {cumin}, {salt} and {black-pepper}. Pan-fry in a separate pan with 1 tablespoon of the remaining oil for 3 minutes per side. Set aside.",
+      "Stir the {rice}, remaining cumin and the {ground-coriander} into the onions with the remaining oil. Add the {fish-stock}, bring to the boil, cover and cook on low for 15 minutes.",
+      "Serve the rice topped with the fish and wedges of {lemon}."
     ]
   },
   {
@@ -359,20 +360,32 @@ KITCHEN.add(
     "name": "Spinach fatayer (Lebanese lemony spinach pastries)",
     "meal": "bite",
     "cuisine": "Lebanese",
-    "time": 90,
-    "serves": 2,
+    "time": 100,
+    "serves": 4,
     "ing": [
       [
         "flour",
-        120
+        400
       ],
       [
         "yeast",
         7
       ],
       [
+        "water",
+        220
+      ],
+      [
+        "salt",
+        5
+      ],
+      [
+        "olive-oil",
+        60
+      ],
+      [
         "spinach",
-        150
+        400
       ],
       [
         "red-onion",
@@ -380,19 +393,11 @@ KITCHEN.add(
       ],
       [
         "lemon-juice",
-        20
-      ],
-      [
-        "olive-oil",
-        15
+        40
       ],
       [
         "sumac",
-        3
-      ],
-      [
-        "salt",
-        3
+        5
       ],
       [
         "black-pepper",
@@ -400,10 +405,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat the oven to 190 °C and lightly grease a baking dish or line a tray.",
-      "Prepare {spinach} with the other listed ingredients, layer or shape the mixture evenly and season it well.",
-      "Wilt spinach and squeeze out excess moisture, mix with onion, lemon and sumac, fill small dough rounds and pinch into triangles; bake until golden and sealed.",
-      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
+      "Mix {flour}, {yeast} and half the {salt}. Add the {water} and half the {olive-oil} and knead for 8 minutes. Cover and prove for 1 hour.",
+      "Wilt the {spinach} in a hot pan, cool and squeeze out all the liquid. Chop and mix with finely diced {red-onion}, {lemon-juice}, {sumac}, the remaining salt, {black-pepper} and the rest of the oil.",
+      "Heat the oven to 200 °C. Roll the dough thin, cut into 10 cm rounds, put filling in the centre and pinch into triangles.",
+      "Bake on a lined tray for 15–18 minutes until golden."
     ]
   },
   {
@@ -411,28 +416,20 @@ KITCHEN.add(
     "name": "Kafta bil sanieh (baked meat patties with potato and tomato)",
     "meal": "big",
     "cuisine": "Lebanese",
-    "time": 50,
-    "serves": 2,
+    "time": 55,
+    "serves": 4,
     "ing": [
       [
         "beef-mince",
-        400
+        600
       ],
       [
         "parsley",
-        10
+        20
       ],
       [
         "onion",
         "1pc"
-      ],
-      [
-        "potatoes",
-        350
-      ],
-      [
-        "tomato",
-        2
       ],
       [
         "cumin",
@@ -440,67 +437,67 @@ KITCHEN.add(
       ],
       [
         "allspice",
-        2
-      ],
-      [
-        "olive-oil",
-        15
+        3
       ],
       [
         "salt",
-        3
+        4
       ],
       [
         "black-pepper",
         1
+      ],
+      [
+        "potatoes",
+        600
+      ],
+      [
+        "tomato",
+        "4pc"
+      ],
+      [
+        "olive-oil",
+        40
       ]
     ],
     "steps": [
-      "Heat the oven to 190 °C and lightly grease a baking dish or line a tray.",
-      "Prepare {beef-mince} with the other listed ingredients, layer or shape the mixture evenly and season it well.",
-      "Mix mince with parsley, onion and spices, press into a shallow baking dish, layer potato and tomato slices over the top and bake until the potatoes are tender.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 200 °C. Mix {beef-mince} with chopped {parsley}, grated {onion}, {cumin}, {allspice}, {salt} and {black-pepper}.",
+      "Press into a thin layer in a large baking dish, or shape into long oval patties.",
+      "Slice the {potatoes} and {tomato} and arrange over and around the meat. Drizzle with the {olive-oil}.",
+      "Bake for 40 minutes until the potatoes are tender and the meat is cooked through."
     ]
   },
   {
     "id": "lb-moghrabieh",
-    "name": "Moghrabieh-inspired pearl couscous with chickpeas and chicken",
+    "name": "Moghrabieh-inspired pearl couscous with chicken and chickpeas",
     "meal": "big",
     "cuisine": "Lebanese",
-    "time": 50,
-    "serves": 2,
+    "time": 55,
+    "serves": 4,
     "ing": [
       [
-        "couscous",
-        160
+        "oil",
+        30
       ],
       [
         "chicken-thigh",
-        400
-      ],
-      [
-        "chickpeas",
-        200
+        700
       ],
       [
         "onion",
-        "1pc"
-      ],
-      [
-        "chicken-stock",
-        450
+        "2pc"
       ],
       [
         "cumin",
-        3
+        4
       ],
       [
         "cinnamon",
-        2
+        3
       ],
       [
         "caraway",
-        100
+        3
       ],
       [
         "salt",
@@ -511,446 +508,162 @@ KITCHEN.add(
         1
       ],
       [
-        "oil",
-        15
+        "chicken-stock",
+        900
+      ],
+      [
+        "couscous",
+        300
+      ],
+      [
+        "chickpeas",
+        400
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion}.",
-      "Add {chicken-thigh} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {chicken-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Brown chicken with onion and warm spices, simmer until tender, then cook pearl couscous in the seasoned stock and fold through {chickpeas} before serving.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the {oil} in a wide pot and brown the {chicken-thigh} for 4 minutes per side. Remove.",
+      "Soften sliced {onion} in the same pot for 6 minutes, then add {cumin}, {cinnamon}, {caraway}, {salt} and {black-pepper} for 1 minute.",
+      "Return the chicken, add the {chicken-stock} and simmer for 25 minutes until the chicken is cooked through. Lift out the chicken.",
+      "Stir the {couscous} and drained {chickpeas} into the stock, cover and cook on low for 10 minutes until tender. Shred the chicken and serve it on top."
     ]
   },
   {
     "id": "lebanese-mujadara-lentils-and-rice",
-    "name": "Lebanese Mujadara Lentils and Rice",
+    "name": "Lebanese mujadara (lentils and rice with crisp onions)",
     "meal": "big",
     "cuisine": "Lebanese",
-    "time": 30,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "potatoes",
-        400
+        "green-lentils",
+        200
+      ],
+      [
+        "water",
+        900
+      ],
+      [
+        "olive-oil",
+        60
       ],
       [
         "onion",
-        1
+        "3pc"
       ],
       [
-        "eggs",
-        3
+        "cumin",
+        4
       ],
       [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {butter} in a heavy pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir well so the ingredients are evenly coated.",
-      "Add the {eggs} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "lebanese-fattoush-salad",
-    "name": "Lebanese Fattoush Salad",
-    "meal": "big",
-    "cuisine": "Lebanese",
-    "time": 37,
-    "serves": 4,
-    "ing": [
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
-      ],
-      [
-        "parsley",
-        10
-      ],
-      [
-        "black-pepper",
-        2
+        "rice",
+        200
       ],
       [
         "salt",
-        3
-      ]
-    ],
-    "steps": [
-      "Warm the {butter} in a heavy pan and soften the {cheese} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {eggs} and {eggs}; stir well so the ingredients are evenly coated.",
-      "Add the {mushrooms} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
-    ]
-  },
-  {
-    "id": "lebanese-shish-taouk-chicken",
-    "name": "Lebanese Shish Taouk Chicken",
-    "meal": "big",
-    "cuisine": "Lebanese",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "potatoes",
-        400
+        4
       ],
       [
-        "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
+        "yogurt",
         150
-      ],
-      [
-        "butter",
-        20
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Simmer the {green-lentils} in the {water} for 15 minutes.",
+      "Meanwhile fry sliced {onion} in the {olive-oil} over medium-high heat for 20 minutes until dark golden and crisp. Remove half for the topping.",
+      "Add the {rice}, {cumin} and {salt} to the lentils with the remaining onions. Cover and cook on low for 18 minutes until the rice is tender.",
+      "Serve topped with the crisp onions and {yogurt}."
     ]
   },
   {
     "id": "lebanese-batata-harra-spiced-potatoes",
-    "name": "Lebanese Batata Harra Spiced Potatoes",
-    "meal": "big",
+    "name": "Lebanese batata harra (spicy potatoes with garlic and coriander)",
+    "meal": "bite",
     "cuisine": "Lebanese",
-    "time": 32,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "cheese",
-        100
+        "potatoes",
+        800
       ],
       [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
-      ],
-      [
-        "parsley",
-        10
-      ],
-      [
-        "black-pepper",
-        2
+        "olive-oil",
+        50
       ],
       [
         "salt",
+        4
+      ],
+      [
+        "garlic",
+        "4pc"
+      ],
+      [
+        "chilli-flakes",
         3
       ],
       [
-        "potatoes",
-        400
-      ]
-    ],
-    "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "lebanese-spinach-fatayer",
-    "name": "Lebanese Spinach Fatayer",
-    "meal": "big",
-    "cuisine": "Lebanese",
-    "time": 39,
-    "serves": 4,
-    "ing": [
-      [
-        "parsley",
-        10
-      ],
-      [
-        "black-pepper",
-        2
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {parsley} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "lebanese-creamy-mushroom-and-potato-soup",
-    "name": "Lebanese Creamy Mushroom and Potato Soup",
-    "meal": "big",
-    "cuisine": "Lebanese",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
+        "cilantro",
         20
+      ],
+      [
+        "lemon",
+        "1pc"
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Cut the {potatoes} into 2 cm cubes and boil in salted water for 6 minutes. Drain well.",
+      "Heat the {olive-oil} in a wide pan and fry the potatoes for 15 minutes, turning, until golden and crisp.",
+      "Add crushed {garlic}, {chilli-flakes} and {salt} for the last 2 minutes.",
+      "Toss with chopped {cilantro} and the juice of the {lemon}."
     ]
   },
   {
     "id": "lebanese-herbed-cheese-omelette",
-    "name": "Lebanese Herbed Cheese Omelette",
-    "meal": "big",
+    "name": "Lebanese herb omelette (eggah) with feta",
+    "meal": "morning",
     "cuisine": "Lebanese",
-    "time": 53,
-    "serves": 4,
+    "time": 25,
+    "serves": 3,
     "ing": [
       [
-        "cheese",
-        100
+        "eggs",
+        "6pc"
       ],
       [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
+        "parsley",
         20
       ],
       [
-        "parsley",
-        10
+        "spring-onion",
+        "3pc"
       ],
       [
-        "black-pepper",
-        2
+        "feta",
+        80
       ],
       [
-        "salt",
-        3
-      ],
-      [
-        "potatoes",
-        400
-      ]
-    ],
-    "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "lebanese-apple-and-cinnamon-bake",
-    "name": "Lebanese Apple and Cinnamon Bake",
-    "meal": "big",
-    "cuisine": "Lebanese",
-    "time": 60,
-    "serves": 4,
-    "ing": [
-      [
-        "parsley",
-        10
-      ],
-      [
-        "black-pepper",
-        2
+        "flour",
+        15
       ],
       [
         "salt",
-        3
+        2
       ],
       [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
+        "black-pepper",
         1
       ],
       [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
+        "olive-oil",
+        30
       ]
     ],
     "steps": [
-      "Add the {parsley} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "lebanese-cabbage-and-bean-stew",
-    "name": "Lebanese Cabbage and Bean Stew",
-    "meal": "big",
-    "cuisine": "Lebanese",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
-    ]
-  },
-  {
-    "id": "lebanese-roasted-root-vegetables",
-    "name": "Lebanese Roasted Root Vegetables",
-    "meal": "big",
-    "cuisine": "Lebanese",
-    "time": 38,
-    "serves": 4,
-    "ing": [
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
-      ],
-      [
-        "parsley",
-        10
-      ],
-      [
-        "black-pepper",
-        2
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "potatoes",
-        400
-      ]
-    ],
-    "steps": [
-      "Warm the {butter} in a pan and soften the {mushrooms} until fragrant.",
-      "Stir in the {parsley} and cook briefly to release its aroma.",
-      "Add the {cheese} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Beat the {eggs} with the {flour}, {salt} and {black-pepper}. Stir in chopped {parsley}, sliced {spring-onion} and crumbled {feta}.",
+      "Heat the {olive-oil} in a non-stick pan over medium heat and pour in the mixture.",
+      "Cook for 5 minutes until the base is set, then flip using a plate, or finish under a hot grill for 3 minutes, until golden. Cut into wedges."
     ]
   }
 ]

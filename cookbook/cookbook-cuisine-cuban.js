@@ -2,124 +2,6 @@
 KITCHEN.add(
 [
   {
-    "id": "world-cuban-black-beans-rice",
-    "leftoverSwaps": [
-      "rice"
-    ],
-    "name": "Cuban black beans and rice",
-    "meal": "big",
-    "cuisine": "Cuban",
-    "time": 25,
-    "serves": 2,
-    "ing": [
-      [
-        "black-beans",
-        440
-      ],
-      [
-        "rice",
-        160
-      ],
-      [
-        "onion",
-        100
-      ],
-      [
-        "red-pepper",
-        100
-      ],
-      [
-        "garlic",
-        10
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "oregano",
-        2
-      ],
-      [
-        "vinegar",
-        12
-      ],
-      [
-        "olive-oil",
-        15
-      ],
-      [
-        "bay-leaf",
-        1
-      ],
-      [
-        "salt",
-        4
-      ]
-    ],
-    "steps": [
-      "Cook {rice} separately until fluffy.",
-      "Cook diced {onion} and {red-pepper} in {olive-oil} until soft. Add {garlic}, {cumin}, {oregano} and {bay-leaf}; stir 30 seconds.",
-      "Add {black-beans} with a little of their liquid and simmer 12–15 minutes, mashing a few to thicken.",
-      "Season with {vinegar} and {salt}; remove the bay leaf and serve over rice."
-    ]
-  },
-  {
-    "id": "caribbean-cuban-picadillo",
-    "name": "Cuban picadillo",
-    "meal": "big",
-    "cuisine": "Cuban",
-    "time": 35,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-mince",
-        500
-      ],
-      [
-        "rice",
-        260
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "red-pepper",
-        "1pc"
-      ],
-      [
-        "canned-tomatoes",
-        300
-      ],
-      [
-        "green-olives",
-        70
-      ],
-      [
-        "raisins",
-        35
-      ],
-      [
-        "cumin",
-        4
-      ],
-      [
-        "garlic",
-        "2pc"
-      ],
-      [
-        "olive-oil",
-        15
-      ]
-    ],
-    "steps": [
-      "Cook the {rice}. Dice the {onion} and {red-pepper}; mince the {garlic}.",
-      "Heat the {olive-oil} and cook the vegetables until soft. Add the {beef-mince} and {cumin}, breaking up the meat until browned.",
-      "Stir in the {canned-tomatoes}, chopped {green-olives} and {raisins}. Simmer 15–20 minutes until rich, then spoon over the rice."
-    ]
-  },
-  {
     "id": "car-plantain-black-beans",
     "name": "Fried plantains with Cuban-style black beans and rice",
     "meal": "big",
@@ -180,7 +62,7 @@ KITCHEN.add(
     "ing": [
       [
         "bread-rolls",
-        2
+        "2pc"
       ],
       [
         "left-beef",
@@ -295,11 +177,11 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
         "cumin",
@@ -351,7 +233,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "lime",
@@ -363,7 +245,7 @@ KITCHEN.add(
       ],
       [
         "oregano",
-        100
+        2
       ],
       [
         "salt",
@@ -375,10 +257,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare {beef-chuck} with the seasoning, then heat {olive-oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {beef-chuck} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Boil beef until tender, shred it and toss with garlic and lime, then spread in a hot skillet and fry in batches until the edges become crisp; finish with raw onion.",
-      "Finish with a little {lime} if needed, taste for seasoning and serve while the texture is at its best."
+      "Simmer the {beef-chuck} in water with half of the {salt} for 75 minutes until very tender; cool and shred.",
+      "Toss the shredded beef with the crushed {garlic}, the juice of the {lime}, the {oregano}, the remaining salt and the {black-pepper}.",
+      "Fry in the {olive-oil} in a very hot pan in batches, pressing flat, for 5 minutes until crisp at the edges; add the sliced {red-onion} for the last 2 minutes."
     ]
   },
   {
@@ -386,7 +267,7 @@ KITCHEN.add(
     "name": "Cuban mojo roast pork with orange, lime and garlic",
     "meal": "big",
     "cuisine": "Cuban",
-    "time": 150,
+    "time": 190,
     "serves": 2,
     "ing": [
       [
@@ -395,7 +276,7 @@ KITCHEN.add(
       ],
       [
         "orange",
-        1
+        "1pc"
       ],
       [
         "lemon-juice",
@@ -403,11 +284,11 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "oregano",
-        100
+        2
       ],
       [
         "cumin",
@@ -427,10 +308,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat the oven to 190 °C and season the main ingredient evenly with the listed aromatics and spices.",
-      "Roast {pork-shoulder} until cooked through and browned; baste once or twice with the pan juices if available.",
-      "Pierce the pork and rub the citrus-garlic marinade deep into the meat; roast covered until tender, then uncover to brown the surface and slice across the grain.",
-      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
+      "Mix the juice of the {orange}, the {lemon-juice}, crushed {garlic}, {oregano}, {cumin}, {olive-oil}, {salt} and {black-pepper} into a mojo.",
+      "Score the {pork-shoulder}, coat with the mojo and marinate for at least 1 hour.",
+      "Roast covered at 160 °C for 2 hours, then uncover and roast for 10 minutes until browned.",
+      "Rest for 10 minutes and pull or slice, spooning over the juices."
     ]
   },
   {
@@ -528,35 +409,34 @@ KITCHEN.add(
       ],
       [
         "salt",
-        3
+        1
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {eggs} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Cook sugar to a deep amber caramel and coat the mould, whisk eggs with the milks and vanilla without foaming, then bake in a water bath until just set and chill thoroughly.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 160 °C. Melt the {sugar} in a pan until amber and pour into two ramekins.",
+      "Blend the {eggs}, {condensed-milk}, {evaporated-milk}, {vanilla} and {salt} until smooth and strain into the ramekins.",
+      "Set in a tin of hot water and bake for 40 minutes until just set. Chill before turning out."
     ]
   },
   {
     "id": "cu-yuca-mojo",
-    "name": "Yuca-style root vegetable with Cuban mojo garlic sauce",
-    "meal": "side",
+    "name": "Yuca con mojo (cassava with garlic-citrus sauce)",
+    "meal": "bite",
     "cuisine": "Cuban",
-    "time": 35,
+    "time": 40,
     "serves": 2,
     "ing": [
       [
-        "potatoes",
-        350
+        "cassava",
+        500
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "olive-oil",
-        15
+        40
       ],
       [
         "lemon-juice",
@@ -564,11 +444,11 @@ KITCHEN.add(
       ],
       [
         "orange",
-        1
+        "1pc"
       ],
       [
         "oregano",
-        100
+        2
       ],
       [
         "salt",
@@ -580,10 +460,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare and measure all ingredients, then heat the pan or pot over medium heat.",
-      "Cook {potatoes} with the seasonings until the dish reaches its intended texture and the flavours meld.",
-      "Boil the root vegetables until tender, warm olive oil with garlic without browning it, add citrus and oregano, then pour the hot mojo over the drained pieces.",
-      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
+      "Peel the {cassava}, remove the woody core, cut into chunks and boil in water with the {salt} for 25 minutes until tender; drain.",
+      "Warm the {olive-oil} with the sliced {garlic} for 1 minute without browning, then add the juice of the {orange}, the {lemon-juice}, {oregano} and {black-pepper}.",
+      "Pour the hot mojo over the cassava and serve."
     ]
   },
   {
@@ -591,7 +470,7 @@ KITCHEN.add(
     "name": "Cuban picadillo bowl with rice and crisp plantain",
     "meal": "big",
     "cuisine": "Cuban",
-    "time": 40,
+    "time": 50,
     "serves": 2,
     "ing": [
       [
@@ -616,7 +495,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "cumin",
@@ -628,11 +507,11 @@ KITCHEN.add(
       ],
       [
         "plantain",
-        2
+        "2pc"
       ],
       [
         "oil",
-        15
+        60
       ],
       [
         "salt",
@@ -644,10 +523,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare and measure all ingredients, then heat the pan or pot over medium heat.",
-      "Cook {beef-mince} with the seasonings until the dish reaches its intended texture and the flavours meld.",
-      "Cook the mince with tomato, olive and raisin until the sauce thickens; serve over rice with separate twice-fried plantain coins for sweet-savoury contrast.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cook the {rice} in 360 ml water with a pinch of the {salt}, covered, for 15 minutes.",
+      "Fry the chopped {onion}, crushed {garlic} and {cumin} in half of the {oil} for 5 minutes, add the {beef-mince} and brown for 8 minutes.",
+      "Add the {canned-tomatoes}, {green-olives}, {raisins}, the remaining salt and the {black-pepper} and simmer for 15 minutes.",
+      "Slice the {plantain} and fry in the remaining oil for 3 minutes per side until golden. Serve the picadillo over the rice with the plantain."
     ]
   },
   {
@@ -655,7 +534,7 @@ KITCHEN.add(
     "name": "Cuban ham croquetas with creamy béchamel centre",
     "meal": "bite",
     "cuisine": "Cuban",
-    "time": 45,
+    "time": 120,
     "serves": 2,
     "ing": [
       [
@@ -668,7 +547,7 @@ KITCHEN.add(
       ],
       [
         "flour",
-        120
+        100
       ],
       [
         "milk",
@@ -684,7 +563,7 @@ KITCHEN.add(
       ],
       [
         "oil",
-        15
+        300
       ],
       [
         "nutmeg",
@@ -700,10 +579,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare {ham} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {ham} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Cook a very thick béchamel, fold in finely minced ham and chill until firm; shape small cylinders, coat in egg and breadcrumbs, then fry until crisp and golden.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Melt the {butter}, stir in 40 g of the {flour} for 2 minutes and whisk in the {milk} until a very thick béchamel forms.",
+      "Fold in the finely diced {ham}, {nutmeg}, {salt} and {black-pepper}; spread in a tray and chill for at least 1 hour.",
+      "Shape into small cylinders; coat in the remaining flour, beaten {eggs} and {breadcrumbs}.",
+      "Fry in the {oil} at 180 °C for 2–3 minutes until golden and crisp."
     ]
   },
   {
@@ -711,7 +590,7 @@ KITCHEN.add(
     "name": "Cuban guava-style cream-cheese puff pastries",
     "meal": "treat",
     "cuisine": "Cuban",
-    "time": 25,
+    "time": 35,
     "serves": 2,
     "ing": [
       [
@@ -736,10 +615,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {puff-pastry} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Cut pastry into squares, add a narrow strip of jam and cream cheese, fold and seal edges firmly, brush with egg and bake until puffed and deeply golden.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 200 °C. Roll out the {puff-pastry} and cut into 8 squares.",
+      "Beat the {cream-cheese} with the {sugar} and spoon onto the centres with a little {jam}.",
+      "Fold the corners to the middle, press to seal and brush with the beaten {eggs}.",
+      "Bake for 18 minutes until puffed and golden."
     ]
   },
   {
@@ -871,7 +750,7 @@ KITCHEN.add(
   {
     "id": "cux-fufu-de-platano-inspired",
     "name": "Fufu de plátano-inspired Cuban mashed plantain with garlic oil",
-    "meal": "side",
+    "meal": "bite",
     "cuisine": "Cuban",
     "time": 30,
     "serves": 2,
@@ -963,41 +842,63 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "cuban-black-bean-and-rice-bowl",
-    "name": "Cuban Black Bean and Rice Bowl",
+    "id": "cuban-boliche",
+    "name": "Boliche (Cuban pot roast stuffed with chorizo)",
     "meal": "big",
     "cuisine": "Cuban",
-    "time": 25,
+    "time": 190,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "beef-chuck",
+        900
       ],
       [
-        "black-beans",
-        250
+        "chorizo",
+        100
       ],
       [
-        "rice",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "tomato",
-        250
+        "garlic",
+        "4pc"
       ],
       [
-        "plantain",
+        "canned-tomatoes",
+        200
+      ],
+      [
+        "olive-oil",
+        30
+      ],
+      [
+        "oregano",
         2
       ],
       [
-        "red-pepper",
+        "cumin",
+        3
+      ],
+      [
+        "white-wine",
+        100
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
         1
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Cut a deep slit lengthways through the {beef-chuck}, push in the {chorizo} and tie with string. Rub with the crushed {garlic}, {cumin}, {oregano}, {salt} and {black-pepper}.",
+      "Brown the roast in the {olive-oil} in a heavy pot for 10 minutes and remove; soften the sliced {onion} for 5 minutes.",
+      "Add the {white-wine} and boil for 2 minutes, then the {canned-tomatoes}. Return the roast, cover and cook at 160 °C for 2 hours 30 minutes until tender.",
+      "Slice and serve with the sauce."
     ]
   },
   {

@@ -27,7 +27,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "eggs",
@@ -60,7 +60,7 @@ KITCHEN.add(
   {
     "id": "swedish-gravlax",
     "name": "Gravlax (dill-cured salmon with mustard sauce)",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Swedish",
     "time": 1440,
     "serves": 4,
@@ -103,7 +103,7 @@ KITCHEN.add(
       ],
       [
         "rye-bread",
-        4
+        "4pc"
       ]
     ],
     "steps": [
@@ -126,7 +126,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        2
+        "2pc"
       ],
       [
         "anchovies",
@@ -173,11 +173,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "carrot",
-        1
+        "1pc"
       ],
       [
         "thyme",
@@ -244,7 +244,7 @@ KITCHEN.add(
       ],
       [
         "bread",
-        4
+        "4pc"
       ],
       [
         "butter",
@@ -330,7 +330,7 @@ KITCHEN.add(
     "ing": [
       [
         "bread",
-        8
+        "8pc"
       ],
       [
         "cream-cheese",
@@ -350,7 +350,7 @@ KITCHEN.add(
       ],
       [
         "cucumber",
-        1
+        "1pc"
       ],
       [
         "dill",
@@ -546,7 +546,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "eggs",
@@ -597,11 +597,11 @@ KITCHEN.add(
       ],
       [
         "carrot",
-        2
+        "2pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "allspice",
@@ -715,7 +715,7 @@ KITCHEN.add(
       ],
       [
         "banana",
-        2
+        "2pc"
       ],
       [
         "bacon",
@@ -766,11 +766,11 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "mustard",
@@ -817,7 +817,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "brown-sugar",
@@ -943,7 +943,7 @@ KITCHEN.add(
   {
     "id": "swedish-beetroot-apple-salad",
     "name": "Swedish beetroot and apple salad with mustard dressing",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Swedish",
     "time": 15,
     "serves": 2,
@@ -954,7 +954,7 @@ KITCHEN.add(
       ],
       [
         "apple",
-        1
+        "1pc"
       ],
       [
         "pickles",
@@ -994,14 +994,14 @@ KITCHEN.add(
   {
     "id": "swedish-pressgurka",
     "name": "Pressgurka (Swedish pressed cucumber with dill)",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Swedish",
     "time": 20,
     "serves": 2,
     "ing": [
       [
         "cucumber",
-        1
+        "1pc"
       ],
       [
         "vinegar",
@@ -1039,24 +1039,24 @@ KITCHEN.add(
     "name": "Knäckebröd (Swedish rye crispbread)",
     "meal": "bite",
     "cuisine": "Swedish",
-    "time": 35,
-    "serves": 2,
+    "time": 60,
+    "serves": 4,
     "ing": [
       [
-        "rye-bread",
-        "4pc"
+        "rye-flour",
+        150
       ],
       [
         "wholemeal-flour",
-        120
+        100
       ],
       [
         "yeast",
-        7
+        5
       ],
       [
         "water",
-        350
+        150
       ],
       [
         "salt",
@@ -1068,10 +1068,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Mix {wholemeal-flour} with the remaining dough ingredients to make a workable dough or batter; knead or beat until even.",
-      "Rest or prove the mixture as needed, shape it, then bake, steam or griddle until cooked through.",
-      "Roll the rye dough very thin, prick it all over and bake until dry and crisp; cool on a rack so steam cannot soften the crackers.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Mix {rye-flour}, {wholemeal-flour}, {yeast}, {salt} and {cumin-seeds} with the {water} and knead for 5 minutes. Rest for 30 minutes.",
+      "Heat the oven to 200 °C. Roll the dough 2 mm thin on baking parchment, prick all over with a fork and cut into rectangles.",
+      "Bake for 12–15 minutes until dry and crisp, then cool on a rack so steam cannot soften the crackers."
     ]
   },
   {
@@ -1079,20 +1078,20 @@ KITCHEN.add(
     "name": "Hallongrottor (Swedish raspberry thumbprint cookies)",
     "meal": "treat",
     "cuisine": "Swedish",
-    "time": 25,
-    "serves": 2,
+    "time": 35,
+    "serves": 4,
     "ing": [
       [
         "flour",
-        120
+        200
       ],
       [
         "butter",
-        35
+        100
       ],
       [
         "sugar",
-        35
+        60
       ],
       [
         "vanilla",
@@ -1100,18 +1099,18 @@ KITCHEN.add(
       ],
       [
         "jam",
-        50
+        60
       ],
       [
         "baking-powder",
-        5
+        3
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {flour} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Cream butter and sugar, mix in flour and vanilla, roll small balls and press a thumbprint into each; fill with jam and bake until pale gold.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 180 °C. Cream the {butter}, {sugar} and {vanilla} until pale.",
+      "Mix in the {flour} and {baking-powder} to a soft dough and roll into 20 small balls.",
+      "Place on a lined tray, press a thumbprint into each and fill with {jam}.",
+      "Bake for 15 minutes until pale gold; cool on the tray."
     ]
   },
   {
@@ -1119,28 +1118,28 @@ KITCHEN.add(
     "name": "Swedish blåbärspaj (blueberry crumble pie)",
     "meal": "treat",
     "cuisine": "Swedish",
-    "time": 35,
-    "serves": 2,
+    "time": 45,
+    "serves": 4,
     "ing": [
       [
         "berries",
-        200
+        300
       ],
       [
         "flour",
-        120
+        100
       ],
       [
         "butter",
-        35
+        80
       ],
       [
         "sugar",
-        35
+        60
       ],
       [
         "oats",
-        100
+        80
       ],
       [
         "cinnamon",
@@ -1152,10 +1151,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {berries} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Toss berries with a little sugar, cover with a crumbly oat-and-butter topping and bake until the fruit bubbles at the edges and the crumble turns golden.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 180 °C. Toss the {berries} with 20 g of the {sugar} and the {vanilla} in a baking dish.",
+      "Rub the cold {butter} into the {flour}, {oats}, {cinnamon} and remaining sugar until crumbly.",
+      "Scatter the crumble over the berries and bake for 30 minutes until bubbling at the edges and golden on top."
     ]
   },
   {
@@ -1163,16 +1161,16 @@ KITCHEN.add(
     "name": "Kroppkakor (Swedish potato dumplings with pork filling)",
     "meal": "big",
     "cuisine": "Swedish",
-    "time": 50,
-    "serves": 2,
+    "time": 65,
+    "serves": 4,
     "ing": [
       [
         "potatoes",
-        350
+        600
       ],
       [
         "flour",
-        120
+        150
       ],
       [
         "bacon",
@@ -1196,10 +1194,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare a cohesive filling around {potatoes}, season it and allow it to cool if hot.",
-      "Shape or wrap the filling securely, then steam, simmer or bake until the wrapper is cooked and the centre is hot.",
-      "Mix cooled mashed potato with flour into a soft dough, fill each dumpling with browned bacon and onion, seal carefully and simmer until the dumplings float and are cooked through.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Boil the {potatoes} in their skins for 25 minutes, then cool, peel and mash finely.",
+      "Fry diced {bacon} and chopped {onion} in the {butter} for 8 minutes, season with {black-pepper} and cool.",
+      "Knead the mash with the {flour} and half of the {salt} into a soft dough. Divide into 8 balls, flatten each, fill with the bacon mixture and seal into smooth rounds.",
+      "Simmer in water with the remaining salt for 20 minutes until they float and are cooked through."
     ]
   },
   {
@@ -1231,8 +1229,8 @@ KITCHEN.add(
         35
       ],
       [
-        "fresh-beetroot",
-        200
+        "pickled-beetroot",
+        100
       ],
       [
         "pickles",
@@ -1248,10 +1246,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare {potatoes} with the seasoning, then heat {butter} in a wide skillet to a steady medium-high heat.",
-      "Cook {potatoes} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Dice potato, roast meat and onion evenly, fry in batches until crisp at the edges and top with a fried egg; serve with pickled beetroot for acidity.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Peel the {potatoes}, cut into 1 cm cubes and boil in water with the {salt} for 6 minutes until just tender; drain and dry well. Dice the {onion} and {left-beef} into similar cubes.",
+      "Melt half of the {butter} in a wide skillet over medium-high heat and fry the potatoes in a single layer for 8 minutes until golden and crisp; remove.",
+      "Fry the onion in the same pan for 3 minutes, add the beef for 4 minutes, then return the potatoes and season with {black-pepper}.",
+      "Fry the {eggs} in the remaining butter for 3 minutes and serve on the hash with sliced {pickled-beetroot} and {pickles}."
     ]
   },
   {
@@ -1260,11 +1258,11 @@ KITCHEN.add(
     "meal": "treat",
     "cuisine": "Swedish",
     "time": 100,
-    "serves": 2,
+    "serves": 6,
     "ing": [
       [
         "flour",
-        120
+        300
       ],
       [
         "yeast",
@@ -1272,38 +1270,38 @@ KITCHEN.add(
       ],
       [
         "milk",
-        250
+        150
       ],
       [
         "butter",
-        35
-      ],
-      [
-        "sugar",
-        35
-      ],
-      [
-        "saffron",
-        100
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "raisins",
         50
       ],
       [
+        "sugar",
+        50
+      ],
+      [
+        "saffron",
+        0.5
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "raisins",
+        30
+      ],
+      [
         "salt",
-        3
+        2
       ]
     ],
     "steps": [
-      "Mix {flour} with the remaining dough ingredients to make a workable dough or batter; knead or beat until even.",
-      "Rest or prove the mixture as needed, shape it, then bake, steam or griddle until cooked through.",
-      "Bloom saffron in warm milk, knead into a soft enriched dough and let it rise; shape into S-curves, press raisins into the spirals and bake until golden.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Warm the {milk} with the {saffron} and {butter} until the butter melts, then cool to lukewarm.",
+      "Mix {flour}, {yeast}, {sugar} and {salt}, add the saffron milk and half of the beaten {eggs} and knead for 8 minutes into a soft dough. Rise for 1 hour.",
+      "Divide into 8 pieces, roll into 25 cm ropes and shape into S-curves. Press a few {raisins} into each curl and rise for 30 minutes.",
+      "Brush with the remaining egg and bake at 200 °C for 10–12 minutes until golden."
     ]
   },
   {
@@ -1311,51 +1309,51 @@ KITCHEN.add(
     "name": "Pepparkakor (Swedish crisp ginger and spice biscuits)",
     "meal": "treat",
     "cuisine": "Swedish",
-    "time": 35,
-    "serves": 2,
+    "time": 90,
+    "serves": 8,
     "ing": [
       [
         "flour",
-        120
+        300
       ],
       [
         "butter",
-        35
+        100
       ],
       [
         "brown-sugar",
-        30
+        100
       ],
       [
-        "honey",
+        "golden-syrup",
         100
       ],
       [
         "cinnamon",
-        2
+        4
       ],
       [
-        "ginger",
-        12
+        "ground-ginger",
+        4
       ],
       [
         "ground-cloves",
-        100
+        2
       ],
       [
         "baking-soda",
-        100
+        4
       ],
       [
         "eggs",
-        "2pc"
+        "1pc"
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {flour} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Mix a dark spice syrup with butter and sugar, work into flour with egg and baking soda, chill the dough until firm, roll thin and bake until crisp.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Warm the {golden-syrup}, {brown-sugar} and {butter} until melted, then cool slightly.",
+      "Mix {flour}, {cinnamon}, {ground-ginger}, {ground-cloves} and {baking-soda}, then stir in the syrup mixture and {eggs} to make a dough. Wrap and chill for 1 hour.",
+      "Heat the oven to 200 °C. Roll the dough 2 mm thin on a floured surface and cut out shapes.",
+      "Bake on lined trays for 5–7 minutes until crisp and golden at the edges; cool on a rack."
     ]
   },
   {
@@ -1388,14 +1386,14 @@ KITCHEN.add(
       ],
       [
         "cornstarch",
-        100
+        10
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {milk} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Heat milk and cream with vanilla, temper the yolks gradually, then cook over low heat while stirring until the sauce coats a spoon; chill before serving.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the {milk}, {cream} and {vanilla} until steaming.",
+      "Whisk the {egg-yolks}, {sugar} and {cornstarch} in a bowl and pour in the hot milk gradually, whisking.",
+      "Return to the pan over low heat and stir constantly for 4–5 minutes until the sauce coats a spoon; do not let it boil.",
+      "Strain and serve warm or chilled with fruit puddings."
     ]
   }
 ]

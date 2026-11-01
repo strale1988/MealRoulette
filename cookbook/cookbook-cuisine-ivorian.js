@@ -19,11 +19,11 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "red-onion",
-        1
+        "1pc"
       ],
       [
         "lemon-juice",
@@ -58,15 +58,15 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "aubergine",
-        1
+        "1pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
         "thyme",
@@ -82,14 +82,14 @@ KITCHEN.add(
   {
     "id": "ivorian-alloco",
     "name": "Alloco (fried ripe plantain)",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Ivorian",
     "time": 20,
     "serves": 4,
     "ing": [
       [
         "plantain",
-        3
+        "3pc"
       ],
       [
         "oil",
@@ -101,11 +101,11 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        1
+        "1pc"
       ],
       [
         "red-onion",
-        1
+        "1pc"
       ]
     ],
     "steps": [
@@ -124,7 +124,7 @@ KITCHEN.add(
     "ing": [
       [
         "plantain",
-        2
+        "2pc"
       ],
       [
         "sweet-potato",
@@ -143,100 +143,6 @@ KITCHEN.add(
       "Peel and chunk the {plantain} and {sweet-potato}; boil until very tender.",
       "Drain thoroughly and pound or mash until smooth and elastic, adding {butter} and {salt}.",
       "Serve warm alongside a rich stew or soup."
-    ]
-  },
-  {
-    "id": "ivorian-attieke-style-fish-bowl",
-    "name": "Ivorian Attiéké-Style Fish Bowl",
-    "meal": "big",
-    "cuisine": "Ivorian",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "kedjenou-style-chicken-pot",
-    "name": "Kedjenou-Style Chicken Pot",
-    "meal": "big",
-    "cuisine": "Ivorian",
-    "time": 85,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        800
-      ],
-      [
-        "tomato",
-        "3pc"
-      ],
-      [
-        "onion",
-        "2pc"
-      ],
-      [
-        "garlic",
-        "4pc"
-      ],
-      [
-        "ginger",
-        20
-      ],
-      [
-        "green-chilli",
-        "1pc"
-      ],
-      [
-        "aubergine",
-        "1pc"
-      ],
-      [
-        "thyme",
-        2
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ]
-    ],
-    "steps": [
-      "Season {chicken-thigh} with {salt} and {thyme}. Slice {onion}, chop {tomato} and {aubergine}, crush {garlic}, grate {ginger} and halve {green-chilli}.",
-      "Heat {oil} in a heavy pot, brown the chicken for 4 minutes per side, then add everything else without any water.",
-      "Seal the pot with foil under the lid so no steam escapes and cook on the lowest heat for 1 hour, shaking the pot (never stirring) every 10 minutes so nothing sticks.",
-      "Uncover; the chicken will be tender in its own concentrated juices. Serve hot."
     ]
   },
   {
@@ -293,45 +199,6 @@ KITCHEN.add(
       "Brown the chicken in {oil} for 4 minutes per side. Add the blended mixture and fry for 10 minutes.",
       "Whisk {peanut-butter} into {chicken-stock} until smooth and pour it over the chicken.",
       "Cover and simmer for 30 minutes until the chicken is tender and the sauce is thick with oil floating on top. Serve hot."
-    ]
-  },
-  {
-    "id": "plantain-and-tomato-sauce",
-    "name": "Plantain and Tomato Sauce",
-    "meal": "big",
-    "cuisine": "Ivorian",
-    "time": 51,
-    "serves": 4,
-    "ing": [
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "ginger",
-        10
-      ]
-    ],
-    "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {onion} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
     ]
   },
   {
@@ -563,44 +430,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "ivorian-spiced-rice-with-vegetables",
-    "name": "Ivorian Spiced Rice with Vegetables",
-    "meal": "big",
-    "cuisine": "Ivorian",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
-  {
     "id": "ivorian-tomato-and-bean-stew",
     "name": "Ivorian Tomato and Bean Stew",
     "meal": "big",
@@ -648,88 +477,54 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "ivorian-chicken-and-greens-pot",
-    "name": "Ivorian Chicken and Greens Pot",
+    "id": "ivorian-peanut-and-sweet-potato-soup",
+    "name": "Ivorian peanut and sweet potato soup",
     "meal": "big",
     "cuisine": "Ivorian",
-    "time": 39,
+    "time": 45,
     "serves": 4,
     "ing": [
+      [
+        "oil",
+        15
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
       [
         "ginger",
         10
       ],
       [
-        "oil",
-        20
+        "tomato",
+        "2pc"
+      ],
+      [
+        "sweet-potato",
+        500
+      ],
+      [
+        "peanut-butter",
+        80
+      ],
+      [
+        "vegetable-stock",
+        800
       ],
       [
         "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
+        2
       ]
     ],
     "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "ivorian-peanut-and-sweet-potato-soup",
-    "name": "Ivorian Peanut and Sweet Potato Soup",
-    "meal": "big",
-    "cuisine": "Ivorian",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Heat {oil} in a large pot and soften diced {onion} for 5 minutes. Add {garlic} and {ginger} and cook for 1 minute.",
+      "Add chopped {tomato} and cook for 5 minutes, then add cubed {sweet-potato} and {vegetable-stock}. Simmer for 20 minutes until soft.",
+      "Whisk in the {peanut-butter} and {salt} and simmer for 5 minutes. Blend half the soup for a creamy texture and stir back in."
     ]
   },
   {
@@ -774,91 +569,6 @@ KITCHEN.add(
       "Finely chop {parsley}, {spring-onion} and {garlic} and knead them into the dough.",
       "Divide into 6 balls and roll each into a 5 mm thick round.",
       "Cook in a hot, lightly oiled pan for 3 minutes per side until puffed and golden, brushing with the remaining oil. Serve warm."
-    ]
-  },
-  {
-    "id": "ivorian-coconut-rice-bowl",
-    "name": "Ivorian Coconut Rice Bowl",
-    "meal": "big",
-    "cuisine": "Ivorian",
-    "time": 60,
-    "serves": 4,
-    "ing": [
-      [
-        "ginger",
-        10
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ]
-    ],
-    "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "ivorian-ginger-lentil-curry",
-    "name": "Ivorian Ginger Lentil Curry",
-    "meal": "big",
-    "cuisine": "Ivorian",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
     ]
   },
   {

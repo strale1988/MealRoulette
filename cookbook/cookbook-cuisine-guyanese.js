@@ -2,61 +2,6 @@
 KITCHEN.add(
 [
   {
-    "id": "gy-guyanese-pepperpot-inspired-beef",
-    "name": "Guyanese pepperpot-inspired beef stew with warm spices",
-    "meal": "big",
-    "cuisine": "Guyanese",
-    "time": 110,
-    "serves": 2,
-    "ing": [
-      [
-        "beef-chuck",
-        600
-      ],
-      [
-        "brown-sugar",
-        20
-      ],
-      [
-        "cinnamon",
-        "1pc"
-      ],
-      [
-        "ground-cloves",
-        3
-      ],
-      [
-        "allspice",
-        2
-      ],
-      [
-        "garlic",
-        "4pc"
-      ],
-      [
-        "habanero-pepper",
-        "1pc"
-      ],
-      [
-        "beef-stock",
-        700
-      ],
-      [
-        "soy-sauce",
-        10
-      ],
-      [
-        "salt",
-        4
-      ]
-    ],
-    "steps": [
-      "Brown the {beef-chuck} in a heavy pot. Add crushed {garlic}, {brown-sugar}, {cinnamon}, {ground-cloves}, {allspice} and {salt}.",
-      "Add {beef-stock} and {soy-sauce}; bring to a simmer. Add the whole {habanero-pepper} for aroma, keeping it intact for gentler heat.",
-      "Cover and simmer gently for 90 minutes until the beef is very tender and the sauce is dark and spiced. Remove cinnamon and cloves before serving."
-    ]
-  },
-  {
     "id": "gy-cook-up-rice",
     "name": "Guyanese cook-up rice with beans, coconut and chicken",
     "meal": "big",
@@ -320,41 +265,58 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "guyanese-cook-up-rice",
-    "name": "Guyanese Cook-Up Rice",
+    "id": "guyanese-metemgee",
+    "name": "Metemgee (Guyanese coconut stew with ground provisions)",
     "meal": "big",
     "cuisine": "Guyanese",
-    "time": 30,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "cassava",
+        400
       ],
       [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
+        "sweet-potato",
+        "2pc"
       ],
       [
         "plantain",
+        "2pc"
+      ],
+      [
+        "coconut-milk",
+        400
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "thyme",
         2
       ],
       [
-        "red-pepper",
-        1
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "water",
+        500
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Peel the {cassava}, remove the woody core and cut into 4 cm chunks. Peel the {sweet-potato} and {plantain} and cut into chunks.",
+      "Simmer the sliced {onion}, crushed {garlic}, {thyme}, whole {green-chilli}, {coconut-milk}, {water} and {salt} for 5 minutes.",
+      "Add the cassava and simmer for 15 minutes, then add the sweet potato and plantain and cook for 15 minutes more until everything is tender and the sauce is thick."
     ]
   },
   {
@@ -475,37 +437,55 @@ KITCHEN.add(
     "name": "Guyanese Pumpkin Curry",
     "meal": "big",
     "cuisine": "Guyanese",
-    "time": 51,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "pumpkin",
+        700
       ],
       [
-        "black-beans",
-        250
+        "coconut-milk",
+        200
       ],
       [
-        "rice",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "tomato",
-        250
+        "garlic",
+        "3pc"
       ],
       [
-        "plantain",
+        "curry-powder",
+        10
+      ],
+      [
+        "cumin",
         2
       ],
       [
-        "red-pepper",
-        1
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "thyme",
+        2
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Cut the {pumpkin} into 3 cm cubes. Chop the {onion}, crush the {garlic} and slice the {green-chilli}.",
+      "Soften the onion in the {oil} for 5 minutes, add the garlic, chilli, {curry-powder}, {cumin} and {thyme} for 1 minute.",
+      "Add the pumpkin, {salt} and 100 ml water, cover and cook for 15 minutes.",
+      "Pour in the {coconut-milk} and simmer uncovered for 8 minutes until the pumpkin is soft and the sauce is thick."
     ]
   },
   {
@@ -601,37 +581,59 @@ KITCHEN.add(
     "name": "Guyanese Fish Curry",
     "meal": "big",
     "cuisine": "Guyanese",
-    "time": 25,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "white-fish",
+        600
       ],
       [
-        "black-beans",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "rice",
-        250
+        "garlic",
+        "3pc"
+      ],
+      [
+        "curry-powder",
+        10
       ],
       [
         "tomato",
-        250
+        "2pc"
       ],
       [
-        "plantain",
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "coconut-milk",
+        200
+      ],
+      [
+        "oil",
+        25
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "thyme",
         2
       ],
       [
-        "red-pepper",
-        1
+        "lime",
+        "1pc"
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Cut the {white-fish} into 4 cm chunks and season with the {salt} and the juice of half the {lime}.",
+      "Soften the sliced {onion} in the {oil} for 5 minutes, add crushed {garlic}, {curry-powder}, {thyme} and sliced {green-chilli} for 1 minute, then the chopped {tomato} for 5 minutes.",
+      "Pour in the {coconut-milk} and 100 ml water and simmer for 5 minutes.",
+      "Add the fish and simmer gently for 6–8 minutes until cooked through; finish with the remaining lime juice."
     ]
   },
   {
@@ -747,42 +749,59 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "guyanese-black-bean-and-rice-bowl",
-    "name": "Guyanese Black Bean and Rice Bowl",
+    "id": "guyanese-aloo-roti",
+    "name": "Aloo Roti (Guyanese potato-filled flatbread)",
     "meal": "big",
     "cuisine": "Guyanese",
-    "time": 46,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "salt",
-        3
+        "flour",
+        400
       ],
       [
-        "chicken-thigh",
-        450
+        "baking-powder",
+        6
       ],
       [
-        "black-beans",
-        250
+        "water",
+        230
       ],
       [
-        "rice",
-        250
+        "oil",
+        60
       ],
       [
-        "tomato",
-        250
+        "potatoes",
+        400
       ],
       [
-        "plantain",
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "curry-powder",
+        10
+      ],
+      [
+        "cumin",
         2
+      ],
+      [
+        "salt",
+        4
       ]
     ],
     "steps": [
-      "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Mix the {flour}, {baking-powder} and half of the {salt}, add the {water} and 20 g of the {oil} and knead for 8 minutes. Rest for 30 minutes.",
+      "Boil the cubed {potatoes} for 12 minutes and drain. Fry the chopped {onion}, crushed {garlic}, {curry-powder} and {cumin} in 20 g of the oil for 5 minutes, add the potatoes, the remaining salt and 100 ml water, mash roughly and simmer for 5 minutes; cool.",
+      "Divide the dough into 4 balls, fill each with the potato, seal and roll out about 3 mm thick.",
+      "Cook on a hot griddle brushed with the remaining oil for 2–3 minutes per side until blistered and golden."
     ]
   },
   {
@@ -928,46 +947,47 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "guyanese-corn-and-cheese-bake",
-    "name": "Guyanese Corn and Cheese Bake",
-    "meal": "big",
+    "id": "guyanese-cheese-rolls",
+    "name": "Guyanese Cheese Rolls",
+    "meal": "bite",
     "cuisine": "Guyanese",
-    "time": 38,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "black-beans",
-        250
+        "flour",
+        300
       ],
       [
-        "rice",
-        250
+        "butter",
+        100
       ],
       [
-        "tomato",
-        250
+        "cheddar",
+        150
       ],
       [
-        "plantain",
+        "baking-powder",
+        5
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "milk",
+        60
+      ],
+      [
+        "salt",
         2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
       ]
     ],
     "steps": [
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {black-beans} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Heat the oven to 200 °C. Rub the {butter} into the {flour}, {baking-powder} and {salt}.",
+      "Mix in the beaten {eggs} and {milk} to a soft dough, then roll into a rectangle about 5 mm thick.",
+      "Scatter with the grated {cheddar}, roll up from the long side and cut into 8 slices.",
+      "Bake for 20 minutes until golden."
     ]
   }
 ]

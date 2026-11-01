@@ -23,7 +23,7 @@ KITCHEN.add(
       ],
       [
         "plantain",
-        1
+        "1pc"
       ],
       [
         "cabbage",
@@ -294,7 +294,7 @@ KITCHEN.add(
     "ing": [
       [
         "plantain",
-        2
+        "2pc"
       ],
       [
         "black-beans",
@@ -330,144 +330,25 @@ KITCHEN.add(
   {
     "id": "gallo-pinto-breakfast-rice",
     "name": "Gallo Pinto Breakfast Rice",
-    "meal": "big",
+    "meal": "morning",
     "cuisine": "Costa Rican",
-    "time": 30,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
-      ],
-      [
         "black-beans",
-        250
+        400
       ],
       [
         "rice",
         250
       ],
       [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "onion",
+        "1pc"
       ],
       [
         "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "costa-rican-olla-de-carne",
-    "name": "Costa Rican Olla de Carne",
-    "meal": "big",
-    "cuisine": "Costa Rican",
-    "time": 130,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        500
-      ],
-      [
-        "potatoes",
-        300
-      ],
-      [
-        "carrot",
-        "2pc"
-      ],
-      [
-        "plantain",
-        "1pc"
-      ],
-      [
-        "sweetcorn",
-        200
-      ],
-      [
-        "cabbage",
-        200
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "garlic",
-        "3pc"
-      ],
-      [
-        "cilantro",
-        15
-      ],
-      [
-        "beef-stock",
-        1200
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Cut {beef-chuck} into 4 cm chunks. Chop {onion}, crush {garlic}, and cut {potatoes}, {carrot}, the unripe {plantain} and {cabbage} into large chunks.",
-      "Put the beef, onion, garlic, {beef-stock}, {salt} and {black-pepper} in a large pot, bring to a boil, skim, then cover and simmer for 1 hour 15 minutes until the beef is nearly tender.",
-      "Add the carrot, plantain and potatoes and simmer 20 minutes.",
-      "Add {sweetcorn} and {cabbage} and cook 10 minutes until all the vegetables are tender.",
-      "Stir in chopped {cilantro} and serve in deep bowls with plenty of broth."
-    ]
-  },
-  {
-    "id": "casado-style-rice-and-beans-plate",
-    "name": "Casado-Style Rice and Beans Plate",
-    "meal": "big",
-    "cuisine": "Costa Rican",
-    "time": 55,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "black-beans",
-        480
-      ],
-      [
-        "plantain",
-        "2pc"
-      ],
-      [
-        "cabbage",
-        150
-      ],
-      [
-        "tomato",
-        "1pc"
-      ],
-      [
-        "lime",
-        "1pc"
-      ],
-      [
-        "onion",
         "1pc"
       ],
       [
@@ -475,21 +356,23 @@ KITCHEN.add(
         10
       ],
       [
+        "eggs",
+        "4pc"
+      ],
+      [
         "oil",
-        40
+        30
       ],
       [
         "salt",
-        4
+        3
       ]
     ],
     "steps": [
-      "Cook {rice} in 500 ml water with a pinch of {salt}, covered, on low heat for 15 minutes; rest 5 minutes.",
-      "Season {chicken-thigh} with salt and fry in half of the {oil} for 6 minutes per side until cooked through. Rest, then slice.",
-      "Fry sliced ripe {plantain} in the remaining oil for 2–3 minutes per side until deep golden and caramelised; drain.",
-      "Cook chopped {onion} in the same pan for 4 minutes, add drained {black-beans}, a splash of water and salt, and simmer 10 minutes, mashing a few against the pan.",
-      "Shred {cabbage}, dice {tomato}, and dress with the juice of {lime}, chopped {cilantro} and a pinch of salt.",
-      "Serve each plate with rice, beans, chicken, plantain and salad side by side."
+      "Cook the {rice} in 500 ml water with half of the {salt}, covered, on low heat for 15 minutes, then spread out and cool for 10 minutes.",
+      "Fry the chopped {onion} and {red-pepper} in half of the {oil} for 5 minutes, then add the {black-beans} with 3 tablespoons of their liquid for 5 minutes.",
+      "Stir in the rice and remaining salt and cook for 5 minutes until hot and slightly crisp; fold in chopped {cilantro}.",
+      "Fry the {eggs} in the remaining oil and serve on top."
     ]
   },
   {
@@ -497,37 +380,51 @@ KITCHEN.add(
     "name": "Costa Rican Picadillo de Papa",
     "meal": "big",
     "cuisine": "Costa Rican",
-    "time": 51,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "potatoes",
+        600
       ],
       [
-        "black-beans",
+        "beef-mince",
         250
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "onion",
+        "1pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "cilantro",
+        10
+      ],
+      [
+        "tomato-paste",
+        20
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Peel the {potatoes} and cut into 1 cm cubes. Chop the {onion} and {red-pepper} and crush the {garlic}.",
+      "Fry the onion, pepper and garlic in the {oil} for 5 minutes, add the {beef-mince} and brown for 6 minutes, then stir in the {tomato-paste}.",
+      "Add the potatoes, 150 ml water and the {salt}, cover and cook for 15 minutes until tender.",
+      "Finish with chopped {cilantro}."
     ]
   },
   {
@@ -641,41 +538,42 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "costa-rican-black-bean-soup",
-    "name": "Costa Rican Black Bean Soup",
-    "meal": "big",
+    "id": "costa-rican-ceviche",
+    "name": "Ceviche Costarricense (lime-cured fish)",
+    "meal": "bite",
     "cuisine": "Costa Rican",
-    "time": 25,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "white-fish",
+        500
       ],
       [
-        "black-beans",
-        250
+        "lime",
+        "6pc"
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "red-onion",
+        "1pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
+      ],
+      [
+        "cilantro",
+        15
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Dice the {white-fish} into 1 cm cubes (use very fresh fish suitable for eating raw) and cover with the juice of the {lime} and half of the {salt}; refrigerate for 20 minutes until opaque.",
+      "Finely dice the {red-onion} and {red-pepper} and chop the {cilantro}.",
+      "Mix into the fish with the remaining salt and serve at once with crackers or plantain chips."
     ]
   },
   {
@@ -757,42 +655,42 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "costa-rican-black-bean-and-rice-bowl",
-    "name": "Costa Rican Black Bean and Rice Bowl",
-    "meal": "big",
+    "id": "costa-rican-arroz-con-leche",
+    "name": "Arroz con Leche (Costa Rican rice pudding)",
+    "meal": "treat",
     "cuisine": "Costa Rican",
-    "time": 46,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "salt",
+        "rice",
+        150
+      ],
+      [
+        "milk",
+        700
+      ],
+      [
+        "sugar",
+        80
+      ],
+      [
+        "cinnamon",
+        2
+      ],
+      [
+        "vanilla",
         3
       ],
       [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "salt",
+        1
       ]
     ],
     "steps": [
-      "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Simmer the {rice} in 300 ml water with the {salt} for 10 minutes until the water is absorbed.",
+      "Add the {milk}, {sugar}, {cinnamon} and {vanilla} and simmer gently for 30 minutes, stirring often, until thick and creamy.",
+      "Serve warm or chilled."
     ]
   },
   {
@@ -896,32 +794,24 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "costa-rican-lime-cabbage-slaw",
-    "name": "Costa Rican Lime Cabbage Slaw",
+    "id": "costa-rican-tortilla-de-queso",
+    "name": "Tortillas de Queso (Costa Rican cheese corn tortillas)",
     "meal": "bite",
     "cuisine": "Costa Rican",
-    "time": 15,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "cabbage",
-        400
+        "masa-harina",
+        250
       ],
       [
-        "carrot",
-        "2pc"
+        "queso-fresco",
+        200
       ],
       [
-        "red-onion",
-        "1pc"
-      ],
-      [
-        "lime",
-        "2pc"
-      ],
-      [
-        "mayonnaise",
-        40
+        "butter",
+        30
       ],
       [
         "salt",
@@ -929,52 +819,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Shred {cabbage} finely, grate {carrot} and slice {red-onion} very thinly.",
-      "Toss with {salt} and the juice of {lime} and let stand for 5 minutes.",
-      "Stir in {mayonnaise} until everything is lightly coated, chill for 10 minutes and serve."
-    ]
-  },
-  {
-    "id": "costa-rican-corn-and-cheese-bake",
-    "name": "Costa Rican Corn and Cheese Bake",
-    "meal": "big",
-    "cuisine": "Costa Rican",
-    "time": 38,
-    "serves": 4,
-    "ing": [
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
-      ]
-    ],
-    "steps": [
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {black-beans} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Mix the {masa-harina} and {salt} with about 300 ml warm water into a soft dough and rest for 10 minutes.",
+      "Knead in the crumbled {queso-fresco}, divide into 8 balls and press each into a 10 cm disc.",
+      "Cook on a hot, lightly buttered griddle with the {butter} for 3 minutes per side until golden and the cheese softens."
     ]
   }
 ]

@@ -61,68 +61,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "hungarian-paprika-chicken",
-    "name": "Hungarian paprika chicken with pasta",
-    "meal": "big",
-    "cuisine": "Hungarian",
-    "time": 55,
-    "serves": 2,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        "2pc"
-      ],
-      [
-        "red-pepper",
-        150
-      ],
-      [
-        "paprika",
-        10
-      ],
-      [
-        "garlic",
-        "2pc"
-      ],
-      [
-        "canned-tomatoes",
-        200
-      ],
-      [
-        "sour-cream",
-        80
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "water",
-        150
-      ],
-      [
-        "pasta",
-        200
-      ]
-    ],
-    "steps": [
-      "Cut {chicken-thigh} into large pieces and season with half the {salt}. Dice {onion} and {red-pepper}; crush {garlic}.",
-      "Heat {oil} in a pot over medium-high heat and brown the chicken 5 minutes. Set aside.",
-      "Lower the heat and cook the onion for 8 minutes until soft. Take the pot off the heat and stir in {paprika} and the garlic for 30 seconds; paprika burns quickly.",
-      "Add the pepper, {canned-tomatoes}, {water}, the rest of the salt and the chicken. Cover and simmer 25 minutes until cooked through (74 °C).",
-      "Meanwhile cook {pasta} in salted boiling water for 10 minutes and drain.",
-      "Stir {sour-cream} into the sauce and serve over the pasta."
-    ]
-  },
-  {
     "id": "world-hungarian-goulash",
     "name": "Hungarian beef goulash",
     "meal": "big",
@@ -235,61 +173,6 @@ KITCHEN.add(
       "Cut the {beef-strips} into cubes. Dice the {onion}, {potatoes} and {carrot}; mince the {garlic}.",
       "Soften the onion in a heavy pot with a little oil, then take the pot off the heat and stir in the {paprika} and {caraway}. Add the beef and garlic and return to the heat.",
       "Stir in the {tomato-paste} and {beef-stock}. Cover and simmer gently for 60 minutes, then add the potatoes and carrot and cook another 25–30 minutes until everything is tender."
-    ]
-  },
-  {
-    "id": "hungarian-chicken-paprikash",
-    "name": "Chicken paprikash",
-    "meal": "big",
-    "cuisine": "Hungarian",
-    "time": 45,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        600
-      ],
-      [
-        "onion",
-        "2pc"
-      ],
-      [
-        "paprika",
-        10
-      ],
-      [
-        "tomato",
-        150
-      ],
-      [
-        "red-pepper",
-        "1pc"
-      ],
-      [
-        "chicken-stock",
-        350
-      ],
-      [
-        "sour-cream",
-        180
-      ],
-      [
-        "flour",
-        15
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "bread",
-        200
-      ]
-    ],
-    "steps": [
-      "Finely chop the {onion}; dice the {tomato} and {red-pepper}. Brown the {chicken-thigh} in the {oil}, then remove to a plate.",
-      "Cook the onion until soft. Remove the pan from the heat, stir in the {paprika}, then add tomato, pepper and the chicken with the {chicken-stock}. Cover and simmer 25–30 minutes.",
-      "Mix the {sour-cream} with the {flour} and a spoonful of hot sauce, then stir into the pan off the boil. Warm gently until thickened and serve with {bread}."
     ]
   },
   {
@@ -790,8 +673,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cook the {egg-pasta} in salted water according to the packet and drain. Fry the diced {bacon} until crisp.",
-      "Toss the pasta with the {quark} and {sour-cream} off the heat, season with {salt} and {black-pepper}, and top with the bacon and its fat."
+      "Cook the {egg-pasta} in boiling water with the {salt} according to the packet; drain.",
+      "Fry the diced {bacon} in a dry pan for 6 minutes until crisp, keeping the fat.",
+      "Toss the hot pasta with the {quark} and {sour-cream} off the heat, season with {black-pepper} and top with the bacon and its fat."
     ]
   },
   {
@@ -836,8 +720,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cook the chopped {onion} and {red-pepper} in the {oil} for 5 minutes. Add the diced {tomato} and {paprika} and cook for 2 minutes.",
-      "Pour in the beaten {eggs} with the {salt} and stir gently for 2 to 3 minutes until just set. Serve with {bread}."
+      "Cook the chopped {onion} and {red-pepper} in the {oil} for 5 minutes.",
+      "Add the diced {tomato} and {paprika} and cook for 2 minutes.",
+      "Pour in the beaten {eggs} with the {salt} and stir gently for 2–3 minutes until just set. Serve with {bread}."
     ]
   },
   {
@@ -939,54 +824,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-hungarian-lecso",
-    "name": "Hungarian lecsó pepper and tomato stew",
-    "meal": "big",
-    "cuisine": "Hungarian",
-    "time": 35,
-    "serves": 4,
-    "ing": [
-      [
-        "red-pepper",
-        600
-      ],
-      [
-        "tomato",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "smoked-sausage",
-        180
-      ],
-      [
-        "paprika",
-        10
-      ],
-      [
-        "olive-oil",
-        20
-      ],
-      [
-        "salt",
-        4
-      ],
-      [
-        "eggs",
-        "2pc"
-      ]
-    ],
-    "steps": [
-      "Slice the {red-pepper}, {onion} and {smoked-sausage}; roughly chop the {tomato}.",
-      "Warm the {olive-oil} and cook the onion until soft. Add sausage and {paprika}, stirring briefly so the spice does not burn.",
-      "Add peppers, tomatoes and {salt}. Cover and simmer 20 minutes until saucy but the peppers still hold their shape.",
-      "For a richer finish, crack in the {eggs}, cover and cook until set, or serve the stew with crusty bread."
-    ]
-  },
-  {
     "id": "hungarian-hortobagyi-pancakes",
     "name": "Hortobágyi palacsinta (savory chicken-filled crêpes)",
     "meal": "big",
@@ -1000,7 +837,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "paprika",
@@ -1059,7 +896,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "paprika",
@@ -1322,7 +1159,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "paprika",
@@ -1354,7 +1191,7 @@ KITCHEN.add(
   {
     "id": "hungarian-cukkinifozelek",
     "name": "Zucchini főzelék with dill and sour cream",
-    "meal": "light",
+    "meal": "big",
     "cuisine": "Hungarian",
     "time": 25,
     "serves": 2,
@@ -1365,7 +1202,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "dill",
@@ -1467,7 +1304,7 @@ KITCHEN.add(
     "ing": [
       [
         "aubergine",
-        2
+        "2pc"
       ],
       [
         "onion",
@@ -1495,7 +1332,7 @@ KITCHEN.add(
       ],
       [
         "rye-bread",
-        4
+        "4pc"
       ]
     ],
     "steps": [
@@ -1546,7 +1383,7 @@ KITCHEN.add(
       ],
       [
         "rye-bread",
-        4
+        "4pc"
       ]
     ],
     "steps": [
@@ -1560,7 +1397,7 @@ KITCHEN.add(
     "name": "Bakonyi sertésszelet (Hungarian pork with paprika and mushrooms)",
     "meal": "big",
     "cuisine": "Hungarian",
-    "time": 45,
+    "time": 40,
     "serves": 2,
     "ing": [
       [
@@ -1569,7 +1406,7 @@ KITCHEN.add(
       ],
       [
         "mushrooms",
-        150
+        250
       ],
       [
         "onion",
@@ -1577,7 +1414,7 @@ KITCHEN.add(
       ],
       [
         "paprika",
-        3
+        5
       ],
       [
         "sour-cream",
@@ -1585,15 +1422,15 @@ KITCHEN.add(
       ],
       [
         "vegetable-stock",
-        450
+        150
       ],
       [
         "flour",
-        120
+        30
       ],
       [
         "oil",
-        15
+        30
       ],
       [
         "salt",
@@ -1605,11 +1442,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a heavy pan; soften {onion}.",
-      "Add {pork} and brown or sauté it as appropriate for the dish; stir in the seasoning.",
-      "Add {vegetable-stock} and bring to a gentle simmer; cook until the main ingredient is tender and the sauce is concentrated.",
-      "Brown pork slices, soften onion and mushrooms with paprika, add stock and simmer until tender; stir in sour cream off the boil and thicken lightly with flour.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cut the {pork} into 1 cm thick slices, season with {salt} and {black-pepper} and dust with half of the {flour}. Slice the {mushrooms} and {onion}.",
+      "Brown the pork in half of the {oil} for 3 minutes per side; remove.",
+      "Cook the onion in the remaining oil for 5 minutes, add the mushrooms for 6 minutes until golden, then stir in the {paprika} off the heat for 20 seconds.",
+      "Sprinkle over the remaining flour, add the {vegetable-stock} and simmer for 5 minutes until thickened. Return the pork for 5 minutes, then remove from the heat and stir in the {sour-cream}."
     ]
   },
   {
@@ -1617,12 +1453,12 @@ KITCHEN.add(
     "name": "Rakott káposzta (Hungarian layered cabbage and pork bake)",
     "meal": "big",
     "cuisine": "Hungarian",
-    "time": 60,
+    "time": 65,
     "serves": 2,
     "ing": [
       [
         "savoy-cabbage",
-        100
+        400
       ],
       [
         "pork-mince",
@@ -1630,15 +1466,15 @@ KITCHEN.add(
       ],
       [
         "rice",
-        180
+        150
       ],
       [
         "sour-cream",
-        100
+        150
       ],
       [
         "bacon",
-        120
+        100
       ],
       [
         "onion",
@@ -1646,7 +1482,7 @@ KITCHEN.add(
       ],
       [
         "paprika",
-        3
+        5
       ],
       [
         "oil",
@@ -1654,7 +1490,7 @@ KITCHEN.add(
       ],
       [
         "salt",
-        3
+        4
       ],
       [
         "black-pepper",
@@ -1662,10 +1498,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat the oven to 190 °C and lightly grease a baking dish or line a tray.",
-      "Prepare {savoy-cabbage} with the other listed ingredients, layer or shape the mixture evenly and season it well.",
-      "Blanch cabbage leaves until pliable, cook rice and paprika-seasoned pork separately, then layer them with sour cream and browned bacon; bake until the layers set and the top turns golden.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 190 °C. Shred the {savoy-cabbage}, blanch for 3 minutes, drain and squeeze dry.",
+      "Cook the {rice} in 300 ml water with half of the {salt} for 12 minutes. Fry diced {onion} in the {oil}, add the {pork-mince} and brown for 8 minutes, then stir in the {paprika}, remaining salt and {black-pepper}.",
+      "Layer the cabbage, rice and pork mixture in a greased dish, repeating, and finish with a layer of cabbage. Spread over the {sour-cream} and scatter with diced {bacon}.",
+      "Bake for 35 minutes until set and the bacon is crisp."
     ]
   }
 ]

@@ -6,12 +6,12 @@ KITCHEN.add(
     "name": "Nasi lemak with coconut rice and sambal",
     "meal": "big",
     "cuisine": "Malaysian",
-    "time": 35,
+    "time": 45,
     "serves": 2,
     "ing": [
       [
         "rice",
-        180
+        200
       ],
       [
         "coconut-milk",
@@ -19,47 +19,42 @@ KITCHEN.add(
       ],
       [
         "water",
-        350
-      ],
-      [
-        "sambal-oelek",
-        15
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "cucumber",
-        1
-      ],
-      [
-        "peanuts",
-        30
-      ],
-      [
-        "anchovies",
-        3
+        200
       ],
       [
         "salt",
         3
       ],
       [
-        "black-pepper",
-        1
+        "eggs",
+        "2pc"
       ],
       [
         "oil",
-        15
+        20
+      ],
+      [
+        "anchovies",
+        30
+      ],
+      [
+        "peanuts",
+        40
+      ],
+      [
+        "cucumber",
+        "1pc"
+      ],
+      [
+        "sambal-oelek",
+        30
       ]
     ],
     "steps": [
-      "Rinse {rice} if it is uncooked; prepare the other ingredients while it drains.",
-      "Warm the cooking fat and season the main ingredients before adding the grain.",
-      "Combine the ingredients with {water} and cook covered until the rice is tender and the liquid is absorbed.",
-      "Cook the rice gently in coconut milk and water until fragrant; serve with a concentrated chilli sambal, sliced cucumber, egg, peanuts and crisp anchovies.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Rinse the {rice} and cook with {coconut-milk}, {water} and {salt}: bring to the boil, cover and cook on low heat for 15 minutes, then rest for 5 minutes.",
+      "Boil the {eggs} for 8 minutes, cool, peel and halve.",
+      "Heat the {oil} and fry the {anchovies} for 2 minutes until crisp, then the {peanuts} for 1 minute. Drain.",
+      "Serve the rice with the {sambal-oelek}, sliced {cucumber}, egg, anchovies and peanuts."
     ]
   },
   {
@@ -67,67 +62,59 @@ KITCHEN.add(
     "name": "Assam laksa-inspired sour fish noodle soup",
     "meal": "big",
     "cuisine": "Malaysian",
-    "time": 40,
+    "time": 45,
     "serves": 2,
     "ing": [
       [
-        "white-fish",
-        350
-      ],
-      [
-        "rice-noodles",
-        180
-      ],
-      [
-        "tamarind-paste",
-        20
+        "fish-stock",
+        900
       ],
       [
         "lemongrass",
-        1
+        20
       ],
       [
         "ginger",
-        12
+        15
       ],
       [
         "red-chilli",
-        1
+        "2pc"
       ],
       [
-        "cucumber",
-        1
-      ],
-      [
-        "red-onion",
-        "1pc"
-      ],
-      [
-        "cilantro",
-        10
+        "tamarind-paste",
+        30
       ],
       [
         "fish-sauce",
         15
       ],
       [
-        "salt",
-        3
+        "white-fish",
+        400
       ],
       [
-        "black-pepper",
-        1
+        "rice-noodles",
+        200
       ],
       [
-        "oil",
-        15
+        "cucumber",
+        "1pc"
+      ],
+      [
+        "red-onion",
+        "1pc"
+      ],
+      [
+        "mint",
+        10
       ]
     ],
     "steps": [
-      "Heat {oil} in a soup pot and soften {red-onion} and {ginger} without browning.",
-      "Add the stock or water with {white-fish} and simmer gently until tender.",
-      "Build a sharp tamarind broth with bruised lemongrass and chilli, poach the fish, flake it into the soup and pour over cooked rice noodles.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Bring the {fish-stock} to a simmer with bruised {lemongrass}, sliced {ginger}, chopped {red-chilli}, {tamarind-paste} and {fish-sauce}. Simmer for 15 minutes.",
+      "Add the {white-fish} and poach gently for 6 minutes, then lift out and flake.",
+      "Cook the {rice-noodles} according to the packet and divide between bowls.",
+      "Ladle the hot broth over, top with the fish, sliced {cucumber} and {red-onion} and torn {mint}."
     ]
   },
   {
@@ -135,12 +122,12 @@ KITCHEN.add(
     "name": "Ayam percik (grilled chicken with spiced coconut sauce)",
     "meal": "big",
     "cuisine": "Malaysian",
-    "time": 45,
+    "time": 55,
     "serves": 2,
     "ing": [
       [
         "chicken-thigh",
-        400
+        500
       ],
       [
         "coconut-milk",
@@ -148,7 +135,7 @@ KITCHEN.add(
       ],
       [
         "lemongrass",
-        1
+        20
       ],
       [
         "ginger",
@@ -156,15 +143,15 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "red-chilli",
-        1
+        "2pc"
       ],
       [
         "turmeric",
-        2
+        3
       ],
       [
         "lemon-juice",
@@ -175,19 +162,15 @@ KITCHEN.add(
         3
       ],
       [
-        "black-pepper",
-        1
-      ],
-      [
         "oil",
         15
       ]
     ],
     "steps": [
-      "Season {chicken-thigh} and coat it with the aromatics and marinade ingredients; rest briefly while the grill heats.",
-      "Grill or sear {chicken-thigh} over medium-high heat, turning as needed until cooked through and lightly charred.",
-      "Simmer part of the coconut-spice mixture until thick, grill the marinated chicken and brush with the reduced sauce in the final minutes.",
-      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
+      "Blend the {lemongrass}, {ginger}, {garlic}, {red-chilli}, {turmeric} and {salt} to a paste. Rub half over the {chicken-thigh} and marinate for 30 minutes.",
+      "Cook the remaining paste in the {oil} for 3 minutes, add the {coconut-milk} and simmer for 10 minutes until thick. Stir in the {lemon-juice}.",
+      "Grill the chicken for 15–18 minutes, turning, until cooked through, brushing with the sauce in the last 5 minutes.",
+      "Serve with the remaining sauce."
     ]
   },
   {
@@ -208,11 +191,11 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "red-chilli",
-        1
+        "1pc"
       ],
       [
         "onion",
@@ -220,7 +203,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -256,23 +239,51 @@ KITCHEN.add(
   },
   {
     "id": "my-roti-jala",
-    "name": "Roti jala (lacy Malaysian curry crepes)",
+    "name": "Roti jala (lacy Malaysian crepes) with chicken curry",
     "meal": "big",
     "cuisine": "Malaysian",
-    "time": 45,
-    "serves": 2,
+    "time": 60,
+    "serves": 4,
     "ing": [
       [
+        "oil",
+        20
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "curry-powder",
+        12
+      ],
+      [
+        "chicken-thigh",
+        500
+      ],
+      [
+        "coconut-milk",
+        250
+      ],
+      [
+        "water",
+        150
+      ],
+      [
         "flour",
-        120
+        200
       ],
       [
         "eggs",
-        "2pc"
+        "1pc"
       ],
       [
         "milk",
-        250
+        300
       ],
       [
         "turmeric",
@@ -284,34 +295,14 @@ KITCHEN.add(
       ],
       [
         "butter",
-        35
-      ],
-      [
-        "chicken-thigh",
-        400
-      ],
-      [
-        "coconut-milk",
-        250
-      ],
-      [
-        "curry-powder",
-        5
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "garlic",
-        3
+        30
       ]
     ],
     "steps": [
-      "Whisk the batter until smooth and let it rest briefly so the flour hydrates.",
-      "Cook {flour} in a lightly greased pan over medium heat, turning or folding once the surface sets.",
-      "Whisk a thin turmeric batter and stream it through a small-hole dispenser in a lacy pattern; fold the tender crepes and serve beside the separately simmered coconut chicken curry.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the {oil} and soften diced {onion} for 5 minutes. Add {garlic} and {curry-powder} for 1 minute, then add the cubed {chicken-thigh}, {coconut-milk} and {water}. Simmer for 25 minutes until the chicken is tender.",
+      "Whisk {flour}, {eggs}, {milk}, {turmeric} and {salt} into a thin batter.",
+      "Brush a non-stick pan with a little of the {butter}. Pour the batter through a small-holed jug or squeeze bottle in a lacy circular pattern and cook for 1 minute without turning. Fold into quarters and repeat.",
+      "Serve the roti jala with the chicken curry."
     ]
   },
   {
@@ -319,28 +310,28 @@ KITCHEN.add(
     "name": "Nasi kerabu-inspired herb rice with crisp vegetables",
     "meal": "big",
     "cuisine": "Malaysian",
-    "time": 35,
+    "time": 45,
     "serves": 2,
     "ing": [
       [
         "rice",
-        180
+        200
+      ],
+      [
+        "lemongrass",
+        15
       ],
       [
         "coconut-flakes",
         30
       ],
       [
-        "lemongrass",
-        1
-      ],
-      [
         "cucumber",
-        1
+        "1pc"
       ],
       [
         "green-beans",
-        150
+        100
       ],
       [
         "red-onion",
@@ -364,23 +355,14 @@ KITCHEN.add(
       ],
       [
         "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "oil",
-        15
+        2
       ]
     ],
     "steps": [
-      "Rinse {rice} if it is uncooked; prepare the other ingredients while it drains.",
-      "Heat {oil} and soften {red-onion}, then cook the main filling until fragrant.",
-      "Cook covered or steam as appropriate until the grains are tender and the flavours have blended.",
-      "Cook fragrant rice, finely slice the raw vegetables and herbs, then arrange them separately around the rice so each bite keeps its fresh crunch.",
-      "Finish with a little {lime} if needed, taste for seasoning and serve while the texture is at its best."
+      "Rinse the {rice} and cook with bruised {lemongrass} and {salt} according to the packet. Remove the lemongrass.",
+      "Toast the {coconut-flakes} in a dry pan for 2 minutes.",
+      "Finely slice the {cucumber}, blanched {green-beans} and {red-onion} and chop the {cilantro} and {mint}.",
+      "Mix the juice of the {lime} with the {fish-sauce}. Serve the rice with the vegetables and herbs arranged around it, scattered with coconut and dressed with the lime mixture."
     ]
   },
   {
@@ -388,20 +370,32 @@ KITCHEN.add(
     "name": "Mee rebus (noodles in thick spiced sweet-potato gravy)",
     "meal": "big",
     "cuisine": "Malaysian",
-    "time": 40,
+    "time": 45,
     "serves": 2,
     "ing": [
-      [
-        "noodles",
-        180
-      ],
       [
         "sweet-potato",
         300
       ],
       [
         "vegetable-stock",
-        450
+        700
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "curry-powder",
+        8
       ],
       [
         "soy-sauce",
@@ -409,19 +403,15 @@ KITCHEN.add(
       ],
       [
         "tamarind-paste",
-        20
+        15
       ],
       [
-        "garlic",
-        3
+        "salt",
+        2
       ],
       [
-        "onion",
-        "1pc"
-      ],
-      [
-        "curry-powder",
-        5
+        "noodles",
+        200
       ],
       [
         "eggs",
@@ -430,26 +420,13 @@ KITCHEN.add(
       [
         "lime",
         "1pc"
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "oil",
-        15
       ]
     ],
     "steps": [
-      "Cook {noodles} according to its packet, drain and reserve a little cooking water.",
-      "Heat {oil} in a wok or large skillet; stir-fry {onion} and {garlic} with the main ingredients.",
-      "Toss the noodles through the sauce over high heat so they absorb the seasoning without turning soft.",
-      "Boil sweet potato until soft and blend it into the broth to thicken the gravy naturally; pour over noodles and top with egg and lime.",
-      "Finish with a little {lime} if needed, taste for seasoning and serve while the texture is at its best."
+      "Boil the {sweet-potato} in the {vegetable-stock} for 15 minutes until very soft, then blend until smooth.",
+      "Heat the {oil} and fry diced {onion}, {garlic} and {curry-powder} for 4 minutes. Add the blended gravy, {soy-sauce}, {tamarind-paste} and {salt} and simmer for 10 minutes.",
+      "Boil the {eggs} for 8 minutes, cool, peel and halve. Cook the {noodles} according to the packet.",
+      "Divide the noodles between bowls, pour over the gravy and top with egg and wedges of {lime}."
     ]
   },
   {
@@ -457,47 +434,47 @@ KITCHEN.add(
     "name": "Kuih seri muka (layered coconut sticky-rice cake)",
     "meal": "treat",
     "cuisine": "Malaysian",
-    "time": 65,
-    "serves": 2,
+    "time": 70,
+    "serves": 8,
     "ing": [
       [
         "glutinous-rice",
-        180
-      ],
-      [
-        "coconut-milk",
         250
       ],
       [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "sugar",
-        35
-      ],
-      [
-        "flour",
-        120
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "vanilla",
-        3
+        "coconut-milk",
+        400
       ],
       [
         "salt",
         3
+      ],
+      [
+        "eggs",
+        "3pc"
+      ],
+      [
+        "sugar",
+        100
+      ],
+      [
+        "flour",
+        50
+      ],
+      [
+        "water",
+        150
+      ],
+      [
+        "spinach",
+        30
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {glutinous-rice} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Steam the coconut sticky-rice base until firm, pour over the green custard layer and steam gently again until set; cool completely before cutting neat squares.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Soak the {glutinous-rice} for 2 hours, drain and spread in a lined 20 cm tin. Pour over 150 ml of the {coconut-milk} mixed with half the {salt}. Steam for 25 minutes until firm, then press flat.",
+      "Blend the {spinach} with the {water}, strain, and whisk with the remaining {coconut-milk}, {eggs}, {sugar}, {flour} and the remaining salt into a smooth custard.",
+      "Pour over the rice and steam gently for 25 minutes until just set.",
+      "Cool completely before cutting into squares."
     ]
   },
   {
@@ -518,7 +495,7 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "onion",
@@ -526,7 +503,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "lime",
@@ -558,15 +535,15 @@ KITCHEN.add(
   },
   {
     "id": "my-kerabu-mango",
-    "name": "Kerabu mangga (green mango and herb salad)",
-    "meal": "light",
+    "name": "Kerabu mangga (mango and herb salad)",
+    "meal": "bite",
     "cuisine": "Malaysian",
     "time": 15,
     "serves": 2,
     "ing": [
       [
         "mango",
-        1
+        "1pc"
       ],
       [
         "red-onion",
@@ -574,7 +551,7 @@ KITCHEN.add(
       ],
       [
         "red-chilli",
-        1
+        "1pc"
       ],
       [
         "peanuts",
@@ -590,7 +567,7 @@ KITCHEN.add(
       ],
       [
         "sugar",
-        35
+        15
       ],
       [
         "mint",
@@ -602,49 +579,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare {mango} and cut the remaining vegetables or fruit into even bite-sized pieces.",
-      "Mix the dressing ingredients separately and taste for a balance of salt, acidity and sweetness.",
-      "Cut the mango into fine matchsticks, dissolve sugar into lime and fish sauce, then toss just before serving so the fruit remains crisp.",
-      "Finish with a little {lime} if needed, taste for seasoning and serve while the texture is at its best."
-    ]
-  },
-  {
-    "id": "malaysian-nasi-lemak-inspired-coconut-rice",
-    "name": "Malaysian Nasi Lemak-Inspired Coconut Rice",
-    "meal": "big",
-    "cuisine": "Malaysian",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        400
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "soy-sauce",
-        25
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "garlic",
-        2
-      ],
-      [
-        "spring-onion",
-        2
-      ]
-    ],
-    "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {soy-sauce} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Cut the {mango} into thin matchsticks and thinly slice the {red-onion} and {red-chilli}. Toast and crush the {peanuts}.",
+      "Stir the juice of the {lime}, {fish-sauce} and {sugar} until the sugar dissolves.",
+      "Toss the mango, onion and chilli with the dressing, {mint} and {cilantro}, and top with the peanuts just before serving."
     ]
   },
   {
@@ -706,41 +643,66 @@ KITCHEN.add(
   },
   {
     "id": "malaysian-chicken-satay-with-peanut-sauce",
-    "name": "Malaysian Chicken Satay with Peanut Sauce",
+    "name": "Malaysian chicken satay with peanut sauce",
     "meal": "big",
     "cuisine": "Malaysian",
-    "time": 25,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
         "chicken-thigh",
-        400
+        600
       ],
       [
-        "rice",
-        250
+        "lemongrass",
+        15
       ],
       [
-        "soy-sauce",
-        25
+        "garlic",
+        "3pc"
       ],
       [
         "ginger",
         10
       ],
       [
-        "garlic",
-        2
+        "turmeric",
+        3
       ],
       [
-        "spring-onion",
-        2
+        "oil",
+        30
+      ],
+      [
+        "sugar",
+        15
+      ],
+      [
+        "soy-sauce",
+        30
+      ],
+      [
+        "peanut-butter",
+        100
+      ],
+      [
+        "coconut-milk",
+        150
+      ],
+      [
+        "tamarind-paste",
+        10
+      ],
+      [
+        "sambal-oelek",
+        15
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Blend the {lemongrass}, {garlic}, {ginger}, {turmeric}, half the {sugar}, the {soy-sauce} and half the {oil}. Coat the cubed {chicken-thigh} and marinate for at least 1 hour.",
+      "Heat the remaining oil and fry the {sambal-oelek} for 1 minute, then whisk in {peanut-butter}, {coconut-milk}, {tamarind-paste} and the remaining sugar. Simmer for 6 minutes until thick.",
+      "Thread the chicken onto skewers and grill for 10–12 minutes, turning, until charred and cooked through.",
+      "Serve the satay with the peanut sauce."
     ]
   },
   {
@@ -870,41 +832,62 @@ KITCHEN.add(
   },
   {
     "id": "malaysian-ginger-garlic-noodle-bowl",
-    "name": "Malaysian Ginger Garlic Noodle Bowl",
+    "name": "Malaysian ginger-garlic chicken noodles (mee goreng-style)",
     "meal": "big",
     "cuisine": "Malaysian",
-    "time": 46,
+    "time": 25,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        400
+        "noodles",
+        300
       ],
       [
-        "rice",
-        250
+        "oil",
+        30
       ],
       [
-        "soy-sauce",
-        25
+        "chicken-breast",
+        300
       ],
       [
         "ginger",
-        10
+        15
       ],
       [
         "garlic",
-        2
+        "4pc"
+      ],
+      [
+        "cabbage",
+        150
+      ],
+      [
+        "carrot",
+        "1pc"
+      ],
+      [
+        "soy-sauce",
+        40
+      ],
+      [
+        "sambal-oelek",
+        10
+      ],
+      [
+        "eggs",
+        "2pc"
       ],
       [
         "spring-onion",
-        2
+        "3pc"
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Cook the {noodles} according to the packet and drain.",
+      "Heat the {oil} in a wok and stir-fry the sliced {chicken-breast} for 4 minutes. Add grated {ginger} and crushed {garlic} and cook for 30 seconds.",
+      "Add shredded {cabbage} and the {carrot} cut into sticks and stir-fry for 3 minutes. Push to the side, scramble the {eggs} in the pan, then mix everything together.",
+      "Add the noodles, {soy-sauce} and {sambal-oelek} and toss for 2 minutes. Serve scattered with sliced {spring-onion}."
     ]
   },
   {
@@ -1029,41 +1012,61 @@ KITCHEN.add(
   },
   {
     "id": "malaysian-coconut-vegetable-curry",
-    "name": "Malaysian Coconut Vegetable Curry",
+    "name": "Malaysian vegetable curry in coconut milk (sayur lemak)",
     "meal": "big",
     "cuisine": "Malaysian",
-    "time": 31,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        400
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "soy-sauce",
+        "oil",
         25
       ],
       [
-        "ginger",
-        10
+        "onion",
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "3pc"
       ],
       [
-        "spring-onion",
-        2
+        "ginger",
+        15
+      ],
+      [
+        "curry-powder",
+        12
+      ],
+      [
+        "potatoes",
+        300
+      ],
+      [
+        "cauliflower",
+        250
+      ],
+      [
+        "green-beans",
+        150
+      ],
+      [
+        "coconut-milk",
+        400
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "cilantro",
+        10
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Heat the {oil} and soften diced {onion} for 5 minutes. Add {garlic}, {ginger} and {curry-powder} and cook for 1 minute.",
+      "Add diced {potatoes}, {cauliflower} florets, {coconut-milk} and {salt}. Cover and simmer for 15 minutes.",
+      "Add the {green-beans} and cook for 8 minutes until tender. Serve topped with chopped {cilantro}."
     ]
   },
   {

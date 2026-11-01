@@ -15,7 +15,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        2
+        "2pc"
       ],
       [
         "flour",
@@ -23,7 +23,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        1
+        "1pc"
       ],
       [
         "water",
@@ -35,7 +35,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Simmer {beef-chuck} in water until very tender; reserve the broth.",
+      "Simmer {beef-chuck} in {beef-stock} and enough water to cover until very tender; reserve the broth.",
       "Mix {flour}, {eggs} and {water} into a firm dough, rest, roll thin and cut into wide noodles.",
       "Boil noodles in broth until tender. Serve with sliced {onion}, beef and a ladle of broth."
     ]
@@ -43,7 +43,7 @@ KITCHEN.add(
   {
     "id": "kazakh-baursak",
     "name": "Baursak (Kazakh fried dough bites)",
-    "meal": "bake",
+    "meal": "bite",
     "cuisine": "Kazakh",
     "time": 70,
     "serves": 4,
@@ -97,7 +97,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "oil",
@@ -117,7 +117,7 @@ KITCHEN.add(
   {
     "id": "kazakh-shelpek",
     "name": "Shelpek (Kazakh flatbread)",
-    "meal": "bake",
+    "meal": "bite",
     "cuisine": "Kazakh",
     "time": 30,
     "serves": 4,
@@ -146,182 +146,46 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "beshbarmak-inspired-beef-noodles",
-    "name": "Beshbarmak-Inspired Beef Noodles",
-    "meal": "big",
+    "id": "kazakh-millet-porridge",
+    "name": "Kazakh sweet millet porridge",
+    "meal": "morning",
     "cuisine": "Kazakh",
-    "time": 30,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ]
-    ],
-    "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {carrot} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "kazakh-baursak-fried-breads",
-    "name": "Kazakh Baursak Fried Breads",
-    "meal": "bite",
-    "cuisine": "Kazakh",
-    "time": 90,
-    "serves": 4,
-    "ing": [
-      [
-        "flour",
-        400
-      ],
-      [
-        "yeast",
-        7
-      ],
-      [
-        "milk",
+        "millet",
         200
       ],
       [
-        "sugar",
-        20
+        "milk",
+        500
+      ],
+      [
+        "water",
+        300
+      ],
+      [
+        "salt",
+        2
       ],
       [
         "butter",
         30
       ],
       [
-        "eggs",
-        "1pc"
-      ],
-      [
-        "salt",
-        4
-      ],
-      [
-        "oil",
-        300
-      ]
-    ],
-    "steps": [
-      "Warm {milk} until lukewarm and stir in {yeast} and {sugar}. Let it foam for 5 minutes.",
-      "Mix with {flour}, {eggs}, {salt} and melted {butter} and knead for 8 minutes into a soft, smooth dough. Cover and let rise for 1 hour until doubled.",
-      "Roll the dough 1.5 cm thick and cut into 4 cm diamonds or squares. Rest them for 10 minutes.",
-      "Heat {oil} in a deep pan to 170 °C. Fry the pieces in small batches for 2–3 minutes, turning once, until puffed and deep golden. Drain on paper towel and serve warm."
-    ]
-  },
-  {
-    "id": "kuurdak-style-beef-and-potatoes",
-    "name": "Kuurdak-Style Beef and Potatoes",
-    "meal": "big",
-    "cuisine": "Kazakh",
-    "time": 75,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        400
-      ],
-      [
-        "potatoes",
-        500
-      ],
-      [
-        "onion",
-        "2pc"
-      ],
-      [
-        "garlic",
-        "2pc"
-      ],
-      [
-        "cumin",
-        2
-      ],
-      [
-        "oil",
+        "sugar",
         30
       ],
       [
-        "dill",
-        10
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
+        "raisins",
+        40
       ]
     ],
     "steps": [
-      "Cut {beef-chuck} into 1.5 cm cubes; slice {onion} into half-moons; peel {potatoes} and cut into 2 cm cubes.",
-      "Heat {oil} in a heavy pan until very hot and brown the beef in two batches for 5 minutes each. Return it all to the pan with {salt} and {black-pepper}.",
-      "Add the onion and cook for 6 minutes until softened, then stir in crushed {garlic} and {cumin} for 1 minute.",
-      "Pour in 150 ml water, cover and simmer for 35 minutes until the beef is nearly tender.",
-      "Add the potatoes, cover and cook for 20 minutes more until they are soft. Scatter chopped {dill} and serve."
-    ]
-  },
-  {
-    "id": "kazakh-millet-porridge",
-    "name": "Kazakh Millet Porridge",
-    "meal": "big",
-    "cuisine": "Kazakh",
-    "time": 51,
-    "serves": 4,
-    "ing": [
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "garlic",
-        2
-      ]
-    ],
-    "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {onion} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {rice} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Rinse the {millet} well. Bring the {milk}, {water} and {salt} to a simmer in a pot.",
+      "Add the millet and cook gently for 25 minutes, stirring often, until thick and tender.",
+      "Stir in the {butter}, {sugar} and {raisins} and serve warm."
     ]
   },
   {
@@ -504,94 +368,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "pumpkin-manty-dumplings",
-    "name": "Pumpkin Manty Dumplings",
-    "meal": "big",
-    "cuisine": "Kazakh",
-    "time": 85,
-    "serves": 4,
-    "ing": [
-      [
-        "flour",
-        300
-      ],
-      [
-        "salt",
-        4
-      ],
-      [
-        "pumpkin",
-        500
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "butter",
-        40
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "cumin",
-        1
-      ],
-      [
-        "sour-cream",
-        100
-      ]
-    ],
-    "steps": [
-      "Mix {flour} and half of the {salt} with about 140 ml warm water and knead for 8 minutes. Cover and rest for 30 minutes.",
-      "Finely dice {pumpkin} and {onion} and mix with half of the {butter}, melted, {black-pepper}, {cumin} and the remaining salt.",
-      "Roll the dough 2 mm thin and cut 12 cm squares. Put a spoonful of filling in the middle of each and pinch the four corners together over it.",
-      "Brush a steamer lightly with some of the remaining butter, arrange the manty with space between them and steam for 35 minutes until the dough is glossy and the pumpkin is soft.",
-      "Brush with the last of the butter and serve with {sour-cream}."
-    ]
-  },
-  {
-    "id": "kazakh-beef-and-onion-pilaf",
-    "name": "Kazakh Beef and Onion Pilaf",
-    "meal": "big",
-    "cuisine": "Kazakh",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ]
-    ],
-    "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
-    ]
-  },
-  {
     "id": "kazakh-pumpkin-and-herb-dumplings",
     "name": "Kazakh Pumpkin and Herb Dumplings",
     "meal": "big",
@@ -642,88 +418,113 @@ KITCHEN.add(
   },
   {
     "id": "kazakh-carrot-and-chickpea-soup",
-    "name": "Kazakh Carrot and Chickpea Soup",
+    "name": "Kazakh carrot and chickpea soup",
     "meal": "big",
     "cuisine": "Kazakh",
-    "time": 39,
+    "time": 45,
     "serves": 4,
     "ing": [
-      [
-        "garlic",
-        2
-      ],
       [
         "oil",
         20
       ],
       [
-        "salt",
-        3
-      ],
-      [
-        "beef-chuck",
-        450
-      ],
-      [
         "onion",
-        1
+        "1pc"
       ],
       [
         "carrot",
-        2
+        "3pc"
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ]
-    ],
-    "steps": [
-      "Add the {garlic} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "kazakh-flatbread-with-yogurt-dip",
-    "name": "Kazakh Flatbread with Yogurt Dip",
-    "meal": "big",
-    "cuisine": "Kazakh",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
+        "garlic",
+        "2pc"
       ],
       [
         "cumin",
         3
+      ],
+      [
+        "chickpeas",
+        400
+      ],
+      [
+        "potatoes",
+        250
+      ],
+      [
+        "vegetable-stock",
+        900
+      ],
+      [
+        "salt",
+        2
+      ],
+      [
+        "dill",
+        10
       ]
     ],
     "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Heat {oil} in a large pot and soften diced {onion} and {carrot} for 8 minutes. Add {garlic} and {cumin} for 1 minute.",
+      "Add the drained {chickpeas}, diced {potatoes}, {vegetable-stock} and {salt}. Simmer for 25 minutes until tender.",
+      "Serve with chopped {dill}."
+    ]
+  },
+  {
+    "id": "kazakh-flatbread-with-yogurt-dip",
+    "name": "Kazakh flatbread with garlic yogurt dip",
+    "meal": "bite",
+    "cuisine": "Kazakh",
+    "time": 90,
+    "serves": 4,
+    "ing": [
+      [
+        "flour",
+        300
+      ],
+      [
+        "yeast",
+        5
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "milk",
+        100
+      ],
+      [
+        "water",
+        80
+      ],
+      [
+        "oil",
+        15
+      ],
+      [
+        "sesame-seeds",
+        10
+      ],
+      [
+        "yogurt",
+        250
+      ],
+      [
+        "garlic",
+        "1pc"
+      ],
+      [
+        "dill",
+        10
+      ]
+    ],
+    "steps": [
+      "Mix {flour}, {yeast} and {salt}. Add {milk}, {water} and {oil} and knead for 8 minutes into a smooth dough. Cover and prove for 1 hour.",
+      "Heat the oven to 240 °C with a tray inside. Divide the dough into 4 rounds, flatten, press the centres thin and prick with a fork. Brush with water and sprinkle with {sesame-seeds}.",
+      "Bake for 10–12 minutes until golden.",
+      "Mix {yogurt} with crushed {garlic} and chopped {dill} and serve with the warm bread."
     ]
   },
   {
@@ -789,88 +590,45 @@ KITCHEN.add(
   },
   {
     "id": "kazakh-herbed-cucumber-salad",
-    "name": "Kazakh Herbed Cucumber Salad",
-    "meal": "big",
+    "name": "Kazakh cucumber, tomato and herb salad",
+    "meal": "bite",
     "cuisine": "Kazakh",
-    "time": 60,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "garlic",
-        2
+        "cucumber",
+        "3pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "red-onion",
+        "1pc"
+      ],
+      [
+        "dill",
+        10
+      ],
+      [
+        "parsley",
+        10
       ],
       [
         "oil",
-        20
+        15
       ],
       [
         "salt",
-        3
-      ],
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
         2
       ]
     ],
     "steps": [
-      "Add the {garlic} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "kazakh-lamb-style-noodle-broth",
-    "name": "Kazakh Lamb-Style Noodle Broth",
-    "meal": "big",
-    "cuisine": "Kazakh",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ]
-    ],
-    "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Slice the {cucumber} and {tomato} and thinly slice the {red-onion}.",
+      "Toss with chopped {dill}, {parsley}, the {oil} and {salt}.",
+      "Leave for 5 minutes so the juices mingle, then serve."
     ]
   },
   {

@@ -277,7 +277,7 @@ KITCHEN.add(
   {
     "id": "left-chicken-yogurt-wraps",
     "name": "Chicken, cucumber and mint yogurt wraps",
-    "meal": "big,bite",
+    "meal": "big",
     "cuisine": "Middle Eastern",
     "time": 10,
     "serves": 2,
@@ -357,7 +357,7 @@ KITCHEN.add(
   {
     "id": "shakshuka",
     "name": "Shakshuka",
-    "meal": "morning,big",
+    "meal": "morning",
     "cuisine": "Middle Eastern",
     "time": 30,
     "serves": 2,
@@ -410,182 +410,6 @@ KITCHEN.add(
       "Add {canned-tomatoes} and {salt} and simmer 10 minutes until thick.",
       "Make 4 wells, crack in {eggs}, cover and cook 6–8 minutes until the whites are set.",
       "Scatter with {parsley}."
-    ]
-  },
-  {
-    "id": "homemade-hummus",
-    "name": "Homemade hummus with carrot sticks",
-    "meal": "bite",
-    "cuisine": "Middle Eastern",
-    "time": 10,
-    "serves": 2,
-    "ing": [
-      [
-        "chickpeas",
-        240
-      ],
-      [
-        "tahini",
-        40
-      ],
-      [
-        "lemon",
-        "1pc"
-      ],
-      [
-        "garlic",
-        "1pc"
-      ],
-      [
-        "cumin",
-        1
-      ],
-      [
-        "salt",
-        2
-      ],
-      [
-        "water",
-        50
-      ],
-      [
-        "olive-oil",
-        30
-      ],
-      [
-        "carrot",
-        250
-      ]
-    ],
-    "steps": [
-      "Drain and rinse {chickpeas}.",
-      "Blend them with {tahini}, the juice of {lemon}, {garlic}, {cumin}, {salt} and {water} for 2–3 minutes, scraping down the sides, until very smooth.",
-      "Add {olive-oil} and blend 30 seconds more.",
-      "Cut {carrot} into sticks and serve with the hummus."
-    ]
-  },
-  {
-    "id": "world-tabbouleh",
-    "name": "Lebanese tabbouleh",
-    "meal": "bite",
-    "cuisine": "Middle Eastern",
-    "time": 25,
-    "serves": 3,
-    "ing": [
-      [
-        "bulgur-fine",
-        90
-      ],
-      [
-        "tomato",
-        220
-      ],
-      [
-        "cucumber",
-        150
-      ],
-      [
-        "parsley",
-        45
-      ],
-      [
-        "mint",
-        15
-      ],
-      [
-        "spring-onion",
-        50
-      ],
-      [
-        "lemon",
-        "1pc"
-      ],
-      [
-        "olive-oil",
-        25
-      ],
-      [
-        "salt",
-        3
-      ]
-    ],
-    "steps": [
-      "Cover {bulgur-fine} with hot water and leave 15–20 minutes until tender; drain very well and fluff.",
-      "Dice {tomato} and {cucumber} finely. Chop {parsley}, {mint} and {spring-onion}.",
-      "Toss everything with {olive-oil}, juice of {lemon} and {salt}.",
-      "Chill for 10 minutes if possible so the herbs and lemon brighten the grains."
-    ]
-  },
-  {
-    "id": "world-chicken-shawarma",
-    "name": "Chicken shawarma bowl",
-    "meal": "big",
-    "cuisine": "Middle Eastern",
-    "time": 35,
-    "serves": 2,
-    "ing": [
-      [
-        "chicken-thigh",
-        350
-      ],
-      [
-        "yogurt",
-        100
-      ],
-      [
-        "lemon",
-        "1pc"
-      ],
-      [
-        "garlic",
-        12
-      ],
-      [
-        "cumin",
-        4
-      ],
-      [
-        "ground-coriander",
-        4
-      ],
-      [
-        "paprika",
-        4
-      ],
-      [
-        "turmeric",
-        2
-      ],
-      [
-        "cinnamon",
-        1
-      ],
-      [
-        "olive-oil",
-        12
-      ],
-      [
-        "rice",
-        150
-      ],
-      [
-        "cucumber",
-        120
-      ],
-      [
-        "tomato",
-        150
-      ],
-      [
-        "tahini",
-        30
-      ]
-    ],
-    "steps": [
-      "Mix {yogurt}, juice of half the {lemon}, {garlic}, {cumin}, {ground-coriander}, {paprika}, {turmeric}, {cinnamon} and {olive-oil}.",
-      "Coat {chicken-thigh} in the marinade and leave for 15–20 minutes. Cook {rice} while it marinates.",
-      "Roast or pan-sear the chicken until browned and cooked through, then slice thinly.",
-      "Serve over rice with chopped {cucumber} and {tomato}. Thin {tahini} with lemon juice and water for a dressing."
     ]
   },
   {
@@ -803,49 +627,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "middle-eastern-mujaddara",
-    "name": "Mujaddara (lentils and rice with onions)",
-    "meal": "big",
-    "cuisine": "Middle Eastern",
-    "time": 50,
-    "serves": 4,
-    "ing": [
-      [
-        "green-lentils",
-        200
-      ],
-      [
-        "rice",
-        180
-      ],
-      [
-        "onion",
-        "3pc"
-      ],
-      [
-        "olive-oil",
-        45
-      ],
-      [
-        "cumin",
-        4
-      ],
-      [
-        "yogurt",
-        150
-      ],
-      [
-        "water",
-        800
-      ]
-    ],
-    "steps": [
-      "Rinse the {green-lentils}; put them in a pot with the {water} and simmer 25–30 minutes until nearly tender. Drain if there is excess water.",
-      "Slice the {onion} thinly and fry in the {olive-oil} over medium-low heat until deeply golden and crisp at the edges. Reserve some for topping.",
-      "Add the {rice} and {cumin} to the lentils with enough water to cook the rice. Cover and cook 15–18 minutes until tender; rest 5 minutes and serve with onions and {yogurt}."
-    ]
-  },
-  {
     "id": "middle-eastern-kofta-kebabs",
     "name": "Middle Eastern beef kofta kebabs",
     "meal": "big",
@@ -950,62 +731,6 @@ KITCHEN.add(
       "Roast the {chicken-thigh} at 210 °C until browned and fully cooked, about 25 minutes.",
       "Put the {couscous} in a bowl, pour over hot {vegetable-stock}, cover for 5 minutes, then fluff.",
       "Serve chicken with couscous, diced {cucumber}, chopped {mint} and remaining {lemon} juice."
-    ]
-  },
-  {
-    "id": "middle-eastern-lamb-kofta",
-    "name": "Lamb kofta with labneh",
-    "meal": "big",
-    "cuisine": "Middle Eastern",
-    "time": 30,
-    "serves": 2,
-    "ing": [
-      [
-        "lamb",
-        350
-      ],
-      [
-        "onion",
-        80
-      ],
-      [
-        "parsley",
-        15
-      ],
-      [
-        "cumin",
-        4
-      ],
-      [
-        "ground-coriander",
-        4
-      ],
-      [
-        "paprika",
-        3
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "labneh",
-        120
-      ],
-      [
-        "pita-bread",
-        "2pc"
-      ],
-      [
-        "cucumber",
-        120
-      ]
-    ],
-    "steps": [
-      "Finely grate the {onion}; mix with {lamb}, chopped {parsley}, {cumin}, {ground-coriander}, {paprika} and {salt}.",
-      "Shape around skewers or into short oval patties. Grill or sear, turning, until browned and cooked through.",
-      "Slice the {cucumber}; season the {labneh} with a little salt and water to loosen.",
-      "Serve kofta with warm {pita-bread}, cucumber and labneh."
     ]
   },
   {
@@ -1184,74 +909,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "falafel-spiced-chickpea-patties-pita",
-    "name": "Spiced chickpea patties in pita",
-    "meal": "big",
-    "cuisine": "Middle Eastern",
-    "time": 35,
-    "serves": 2,
-    "ing": [
-      [
-        "chickpeas",
-        240
-      ],
-      [
-        "onion",
-        "0.5pc"
-      ],
-      [
-        "garlic",
-        "2pc"
-      ],
-      [
-        "parsley",
-        15
-      ],
-      [
-        "coriander",
-        10
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "flour",
-        20
-      ],
-      [
-        "oil",
-        40
-      ],
-      [
-        "pita-bread",
-        "2pc"
-      ],
-      [
-        "hummus",
-        60
-      ],
-      [
-        "tomato",
-        "1pc"
-      ],
-      [
-        "cucumber",
-        100
-      ],
-      [
-        "salt",
-        2
-      ]
-    ],
-    "steps": [
-      "Drain {chickpeas}. Pulse with {onion}, {garlic}, {parsley}, {coriander}, {cumin}, {flour} and {salt} until coarse but holding together. Rest 10 minutes.",
-      "Shape into 8 small patties and shallow-fry in {oil} for 3 minutes per side until deep golden.",
-      "Warm the {pita-bread} and split open. Spread with {hummus}.",
-      "Fill with patties, sliced {tomato} and {cucumber}."
-    ]
-  },
-  {
     "id": "halloumi-veg-lavash-wraps",
     "name": "Halloumi and roasted vegetable lavash wraps",
     "meal": "big",
@@ -1344,49 +1001,6 @@ KITCHEN.add(
       "Brown {lamb} in half the {olive-oil} for 8 minutes with {cumin}, {paprika} and {salt}.",
       "Spread {hummus} in shallow bowls, make a well and spoon in the lamb.",
       "Top with pine nuts, {parsley} and the remaining {olive-oil}; serve with warmed {pita-bread}."
-    ]
-  },
-  {
-    "id": "zaatar-labneh-flatbreads",
-    "name": "Za'atar flatbreads with labneh and tomatoes",
-    "meal": "morning,bite",
-    "cuisine": "Middle Eastern",
-    "time": 12,
-    "serves": 2,
-    "ing": [
-      [
-        "lavash",
-        "2pc"
-      ],
-      [
-        "labneh",
-        100
-      ],
-      [
-        "zaatar",
-        8
-      ],
-      [
-        "tomato",
-        "2pc"
-      ],
-      [
-        "olive-oil",
-        20
-      ],
-      [
-        "cucumber",
-        100
-      ],
-      [
-        "mint",
-        5
-      ]
-    ],
-    "steps": [
-      "Mix {zaatar} with {olive-oil} and brush over the {lavash}. Toast in a hot dry pan for 1 minute per side.",
-      "Spread with {labneh} and top with sliced {tomato} and {cucumber}.",
-      "Scatter with torn {mint}."
     ]
   },
   {
@@ -1501,348 +1115,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "middle-eastern-mujadara",
-    "name": "Mujadara lentils and caramelized onions",
-    "meal": "big",
-    "cuisine": "Middle Eastern",
-    "time": 45,
-    "serves": 3,
-    "ing": [
-      [
-        "green-lentils",
-        180
-      ],
-      [
-        "rice",
-        150
-      ],
-      [
-        "onion",
-        "2pc"
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "olive-oil",
-        30
-      ],
-      [
-        "yogurt",
-        100
-      ],
-      [
-        "parsley",
-        8
-      ]
-    ],
-    "steps": [
-      "Rinse {green-lentils} and simmer in water until nearly tender; drain, reserving a little liquid.",
-      "Thinly slice {onion}. Cook slowly in {olive-oil} for 20–25 minutes, stirring often, until deeply golden. Remove half for garnish.",
-      "Add {rice} and {cumin} to the pot with the lentils and enough water to cook the rice. Cover and simmer until tender. Top with onions, {parsley} and {yogurt}."
-    ]
-  },
-  {
-    "id": "middle-eastern-roasted-cauliflower-tahini",
-    "name": "Roasted cauliflower with tahini chickpeas",
-    "meal": "big",
-    "cuisine": "Middle Eastern",
-    "time": 35,
-    "serves": 2,
-    "ing": [
-      [
-        "cauliflower",
-        400
-      ],
-      [
-        "chickpeas",
-        240
-      ],
-      [
-        "tahini",
-        35
-      ],
-      [
-        "lemon",
-        "1pc"
-      ],
-      [
-        "garlic",
-        "1pc"
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "olive-oil",
-        20
-      ],
-      [
-        "parsley",
-        8
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 220 °C. Cut {cauliflower} into florets and toss with {olive-oil} and {cumin}. Roast 25 minutes until browned.",
-      "Warm drained {chickpeas} in a pan with a splash of water and a pinch of salt.",
-      "Whisk {tahini}, {lemon} juice, crushed {garlic} and enough water to make a pourable sauce. Serve cauliflower and {chickpeas} with the sauce and {parsley}."
-    ]
-  },
-  {
-    "id": "world-mujadara-rice-lentils",
-    "name": "Mujadara rice and lentils with onions",
-    "meal": "big",
-    "time": 40,
-    "serves": 4,
-    "ing": [
-      [
-        "brown-lentils",
-        180
-      ],
-      [
-        "rice",
-        180
-      ],
-      [
-        "onion",
-        300
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "olive-oil",
-        30
-      ],
-      [
-        "vegetable-stock",
-        700
-      ],
-      [
-        "yogurt",
-        100
-      ],
-      [
-        "parsley",
-        10
-      ]
-    ],
-    "steps": [
-      "Rinse {brown-lentils} and simmer in water for 15 minutes until partly tender; drain.",
-      "Slice {onion} thinly. Cook slowly in {olive-oil} for 15–20 minutes until deeply golden, reserving some for garnish.",
-      "Add {rice}, {cumin}, lentils and {vegetable-stock}. Cover and simmer gently until rice and lentils are tender, about 20 minutes.",
-      "Rest for 5 minutes, fluff and top with reserved onions and chopped {parsley}. Serve with {yogurt}."
-    ],
-    "cuisine": "Middle Eastern"
-  },
-  {
-    "id": "world-fattoush-chickpea-salad",
-    "name": "Fattoush-inspired chickpea salad",
-    "meal": "bite,big",
-    "time": 18,
-    "serves": 3,
-    "ing": [
-      [
-        "chickpeas",
-        300
-      ],
-      [
-        "cucumber",
-        180
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "lettuce",
-        120
-      ],
-      [
-        "radish",
-        80
-      ],
-      [
-        "flatbread",
-        1
-      ],
-      [
-        "lemon",
-        "1pc"
-      ],
-      [
-        "olive-oil",
-        25
-      ],
-      [
-        "sumac",
-        3
-      ],
-      [
-        "mint",
-        8
-      ]
-    ],
-    "steps": [
-      "Tear {flatbread} into pieces and toast until crisp.",
-      "Chop {cucumber}, {tomato}, {lettuce} and {radish}; rinse and drain {chickpeas}.",
-      "Whisk lemon juice from {lemon}, {olive-oil}, {sumac}, salt and pepper.",
-      "Toss vegetables and {chickpeas} with the dressing, then add toasted flatbread and chopped {mint} just before serving."
-    ],
-    "cuisine": "Middle Eastern"
-  },
-  {
-    "id": "world-middle-eastern-mujadara",
-    "name": "Middle Eastern lentils and rice with crispy onions",
-    "meal": "big",
-    "cuisine": "Middle Eastern",
-    "time": 45,
-    "serves": 4,
-    "ing": [
-      [
-        "lentils",
-        200
-      ],
-      [
-        "rice",
-        200
-      ],
-      [
-        "onion",
-        3
-      ],
-      [
-        "cumin",
-        5
-      ],
-      [
-        "coriander",
-        4
-      ],
-      [
-        "olive-oil",
-        45
-      ],
-      [
-        "vegetable-stock",
-        700
-      ],
-      [
-        "yogurt",
-        150
-      ]
-    ],
-    "steps": [
-      "Rinse the {lentils} and simmer in water for 10–12 minutes until partly tender; drain.",
-      "Slice the {onion} thinly. Fry slowly in {olive-oil} until deep brown and crisp; remove half for topping.",
-      "Add {cumin} and {coriander} to the remaining onions, then stir in {rice}, {lentils} and {vegetable-stock}. Cover and simmer 18–20 minutes until tender.",
-      "Rest covered 10 minutes, fluff gently and top with reserved crispy onions. Serve with {yogurt}."
-    ]
-  },
-  {
-    "id": "world-middle-eastern-musakhan",
-    "name": "Palestinian sumac chicken and onion flatbreads",
-    "meal": "big",
-    "cuisine": "Middle Eastern",
-    "time": 55,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        800
-      ],
-      [
-        "onion",
-        3
-      ],
-      [
-        "sumac",
-        18
-      ],
-      [
-        "olive-oil",
-        50
-      ],
-      [
-        "flatbread",
-        4
-      ],
-      [
-        "pine-nuts",
-        35
-      ],
-      [
-        "allspice",
-        3
-      ],
-      [
-        "salt",
-        5
-      ]
-    ],
-    "steps": [
-      "Heat oven to 210 °C. Toss {chicken-thigh} with {olive-oil}, half the {sumac}, {allspice} and {salt}. Roast 30–35 minutes until cooked.",
-      "Slice {onion} thinly and cook slowly in a generous splash of olive oil until soft and golden, about 20 minutes.",
-      "Stir remaining sumac through the onions and toast the {pine-nuts} in a dry pan until golden.",
-      "Spread onions over warm {flatbread}, top with chicken and pine nuts, and spoon over roasting juices."
-    ]
-  },
-  {
-    "id": "middle-eastern-shakshuka",
-    "name": "Shakshuka eggs in spiced tomato and pepper sauce",
-    "meal": "big",
-    "cuisine": "Middle Eastern",
-    "time": 25,
-    "serves": 2,
-    "ing": [
-      [
-        "eggs",
-        "4pc"
-      ],
-      [
-        "tomato",
-        400
-      ],
-      [
-        "red-pepper",
-        "1pc"
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "garlic",
-        "2pc"
-      ],
-      [
-        "cumin",
-        4
-      ],
-      [
-        "paprika",
-        4
-      ],
-      [
-        "olive-oil",
-        20
-      ],
-      [
-        "salt",
-        4
-      ]
-    ],
-    "steps": [
-      "Cook diced {onion} and sliced {red-pepper} in {olive-oil} until soft.",
-      "Add minced {garlic}, {cumin} and {paprika}; stir 30 seconds, then add chopped {tomato} and {salt}.",
-      "Simmer until thick and saucy, about 10 minutes. Make four wells and crack in {eggs}.",
-      "Cover and cook gently until whites are set and yolks remain soft."
-    ]
-  },
-  {
     "id": "middle-eastern-musakhan-rolls",
     "name": "Musakhan rolls (sumac chicken and caramelized onion wraps)",
     "meal": "big",
@@ -1856,7 +1128,7 @@ KITCHEN.add(
       ],
       [
         "red-onion",
-        2
+        "2pc"
       ],
       [
         "sumac",
@@ -1911,7 +1183,7 @@ KITCHEN.add(
       ],
       [
         "aubergine",
-        1
+        "1pc"
       ],
       [
         "cauliflower",
@@ -1919,7 +1191,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "cumin",
@@ -1974,7 +1246,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        2
+        "2pc"
       ],
       [
         "pine-nuts",
@@ -2299,58 +1571,6 @@ KITCHEN.add(
       "Mix {semolina}, {flour}, {sugar}, {turmeric} and {baking-powder}.",
       "Stir in {milk} and {oil} until combined; spread in the tin and scatter {pistachios} on top.",
       "Bake 25–30 minutes until set and lightly golden. Cool before cutting."
-    ]
-  },
-  {
-    "id": "me-musakhan",
-    "name": "Musakhan (Palestinian sumac chicken with caramelized onions)",
-    "meal": "big",
-    "cuisine": "Middle Eastern",
-    "time": 55,
-    "serves": 2,
-    "ing": [
-      [
-        "chicken-thigh",
-        400
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "sumac",
-        3
-      ],
-      [
-        "olive-oil",
-        15
-      ],
-      [
-        "flatbread",
-        "2pc"
-      ],
-      [
-        "pine-nuts",
-        100
-      ],
-      [
-        "chicken-stock",
-        450
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 190 °C and season the main ingredient evenly with the listed aromatics and spices.",
-      "Roast {chicken-thigh} until cooked through and browned; baste once or twice with the pan juices if available.",
-      "Cook onions slowly in olive oil and sumac until soft and deeply savoury; roast the seasoned chicken until tender, spoon the onions and pan juices over flatbread and finish with toasted pine nuts.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
     ]
   }
 ]

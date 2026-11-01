@@ -23,15 +23,15 @@ KITCHEN.add(
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ]
     ],
     "steps": [
@@ -62,7 +62,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        2
+        "2pc"
       ],
       [
         "black-pepper",
@@ -89,7 +89,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        2
+        "2pc"
       ],
       [
         "flour",
@@ -97,7 +97,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        1
+        "1pc"
       ],
       [
         "water",
@@ -113,7 +113,7 @@ KITCHEN.add(
   {
     "id": "kyrgyz-boorsok",
     "name": "Boorsok (fried Kyrgyz bread)",
-    "meal": "bake",
+    "meal": "bite",
     "cuisine": "Kyrgyz",
     "time": 65,
     "serves": 4,
@@ -143,45 +143,6 @@ KITCHEN.add(
       "Combine {milk}, {yeast} and {sugar}; mix with {flour} into a soft dough.",
       "Let rise until doubled, then roll and cut into small squares.",
       "Fry in hot {oil} until golden and puffed; drain before serving."
-    ]
-  },
-  {
-    "id": "kyrgyz-lagman-noodle-soup",
-    "name": "Kyrgyz Lagman Noodle Soup",
-    "meal": "big",
-    "cuisine": "Kyrgyz",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ]
-    ],
-    "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {carrot} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
     ]
   },
   {
@@ -238,140 +199,51 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "beshbarmak-style-lamb-and-noodles",
-    "name": "Beshbarmak-Style Lamb and Noodles",
-    "meal": "big",
-    "cuisine": "Kyrgyz",
-    "time": 150,
-    "serves": 4,
-    "ing": [
-      [
-        "lamb",
-        700
-      ],
-      [
-        "onion",
-        "3pc"
-      ],
-      [
-        "flour",
-        300
-      ],
-      [
-        "eggs",
-        "1pc"
-      ],
-      [
-        "salt",
-        5
-      ],
-      [
-        "bay-leaf",
-        2
-      ],
-      [
-        "black-pepper",
-        2
-      ],
-      [
-        "dill",
-        15
-      ]
-    ],
-    "steps": [
-      "Put {lamb} in a large pot, cover with 1.5 litres of cold water and bring to a boil. Skim, add {bay-leaf}, {black-pepper} and half of the {salt}, then simmer gently for 1 hour 30 minutes until the meat is very tender.",
-      "Meanwhile mix {flour}, {eggs} and the remaining salt with about 100 ml water and knead into a stiff dough. Rest 30 minutes, roll very thin and cut into 6 cm squares.",
-      "Lift out the lamb, keep it warm and slice or tear it. Strain the broth and bring it back to a boil.",
-      "Slice {onion} into thin rings and blanch in the boiling broth for 2 minutes; lift out. Boil the noodle squares in the broth for 6–8 minutes.",
-      "Pile the noodles on a platter with the lamb and onions, scatter {dill} and serve the broth alongside in cups."
-    ]
-  },
-  {
     "id": "kyrgyz-samsa-hand-pies",
-    "name": "Kyrgyz Samsa Hand Pies",
+    "name": "Kyrgyz samsa (baked lamb and onion pastries)",
     "meal": "big",
     "cuisine": "Kyrgyz",
-    "time": 51,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
+        "lamb-mince",
+        400
+      ],
+      [
         "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
+        "2pc"
       ],
       [
         "cumin",
         3
       ],
       [
-        "garlic",
-        2
-      ]
-    ],
-    "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {onion} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {rice} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "pumpkin-manti-dumplings",
-    "name": "Pumpkin Manti Dumplings",
-    "meal": "big",
-    "cuisine": "Kyrgyz",
-    "time": 90,
-    "serves": 4,
-    "ing": [
-      [
-        "flour",
-        300
-      ],
-      [
-        "salt",
-        4
-      ],
-      [
-        "pumpkin",
-        300
-      ],
-      [
-        "lamb-mince",
-        150
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "cumin",
-        1
-      ],
-      [
         "black-pepper",
         1
       ],
       [
-        "yogurt",
-        100
+        "salt",
+        3
+      ],
+      [
+        "puff-pastry",
+        375
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "sesame-seeds",
+        10
       ]
     ],
     "steps": [
-      "Mix {flour} and half of the {salt} with about 140 ml warm water and knead 8 minutes. Cover and rest 30 minutes.",
-      "Dice {pumpkin} into 5 mm cubes and finely chop {onion}. Mix with {lamb-mince}, {cumin}, {black-pepper} and the remaining salt.",
-      "Roll the dough 2 mm thin, cut 10 cm squares, put a spoonful of filling on each and pinch the corners together.",
-      "Steam the manti in an oiled steamer, leaving space between them, for 40 minutes until the pumpkin is soft and the meat is cooked.",
-      "Serve hot with {yogurt}."
+      "Heat the oven to 200 °C. Mix {lamb-mince} with finely diced {onion}, {cumin}, {black-pepper} and {salt}.",
+      "Cut the {puff-pastry} into 8 squares. Put a spoonful of filling in the centre of each and fold into triangles, pinching the edges.",
+      "Brush with beaten {eggs} and sprinkle with {sesame-seeds}.",
+      "Bake for 25–30 minutes until puffed and deep golden and the filling is cooked through."
     ]
   },
   {
@@ -489,7 +361,7 @@ KITCHEN.add(
   {
     "id": "kymyz-style-yogurt-drink",
     "name": "Kymyz-Style Yogurt Drink",
-    "meal": "extra",
+    "meal": "bite",
     "cuisine": "Kyrgyz",
     "time": 10,
     "serves": 4,
@@ -520,45 +392,6 @@ KITCHEN.add(
       "Whisk the kefir with the milk, {sugar} and {salt} until smooth and slightly frothy.",
       "Just before serving, stir in the sparkling water to add a light fizz.",
       "Pour into cold glasses and drink straight away."
-    ]
-  },
-  {
-    "id": "kyrgyz-beef-and-onion-pilaf",
-    "name": "Kyrgyz Beef and Onion Pilaf",
-    "meal": "big",
-    "cuisine": "Kyrgyz",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ]
-    ],
-    "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
     ]
   },
   {
@@ -604,88 +437,105 @@ KITCHEN.add(
   },
   {
     "id": "kyrgyz-carrot-and-chickpea-soup",
-    "name": "Kyrgyz Carrot and Chickpea Soup",
+    "name": "Kyrgyz carrot and chickpea soup",
     "meal": "big",
     "cuisine": "Kyrgyz",
-    "time": 39,
+    "time": 45,
     "serves": 4,
     "ing": [
-      [
-        "garlic",
-        2
-      ],
       [
         "oil",
         20
       ],
       [
-        "salt",
-        3
-      ],
-      [
-        "beef-chuck",
-        450
-      ],
-      [
         "onion",
-        1
+        "1pc"
       ],
       [
         "carrot",
-        2
+        "3pc"
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ]
-    ],
-    "steps": [
-      "Add the {garlic} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "kyrgyz-flatbread-with-yogurt-dip",
-    "name": "Kyrgyz Flatbread with Yogurt Dip",
-    "meal": "big",
-    "cuisine": "Kyrgyz",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
+        "tomato-paste",
+        20
       ],
       [
         "cumin",
         3
+      ],
+      [
+        "chickpeas",
+        400
+      ],
+      [
+        "potatoes",
+        250
+      ],
+      [
+        "vegetable-stock",
+        900
+      ],
+      [
+        "salt",
+        2
+      ],
+      [
+        "cilantro",
+        10
       ]
     ],
     "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Heat {oil} in a large pot and soften diced {onion} and {carrot} for 8 minutes. Stir in the {tomato-paste} and {cumin} for 1 minute.",
+      "Add the drained {chickpeas}, diced {potatoes}, {vegetable-stock} and {salt}. Simmer for 25 minutes until tender.",
+      "Serve scattered with chopped {cilantro}."
+    ]
+  },
+  {
+    "id": "kyrgyz-flatbread-with-yogurt-dip",
+    "name": "Kyrgyz flatbread with garlic yogurt dip",
+    "meal": "bite",
+    "cuisine": "Kyrgyz",
+    "time": 40,
+    "serves": 4,
+    "ing": [
+      [
+        "flour",
+        300
+      ],
+      [
+        "baking-powder",
+        6
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "yogurt",
+        320
+      ],
+      [
+        "water",
+        80
+      ],
+      [
+        "oil",
+        15
+      ],
+      [
+        "garlic",
+        "1pc"
+      ],
+      [
+        "dill",
+        8
+      ]
+    ],
+    "steps": [
+      "Mix {flour}, {baking-powder} and {salt}. Stir in 120 g of the {yogurt} and the {water} to make a soft dough. Knead briefly and rest for 15 minutes.",
+      "Divide into 4 pieces and roll each into a 20 cm round.",
+      "Cook in a hot, lightly oiled pan ({oil}) for 2–3 minutes per side until puffed and golden.",
+      "Mix the remaining {yogurt} with crushed {garlic} and chopped {dill} and serve with the warm bread."
     ]
   },
   {
@@ -742,88 +592,45 @@ KITCHEN.add(
   },
   {
     "id": "kyrgyz-herbed-cucumber-salad",
-    "name": "Kyrgyz Herbed Cucumber Salad",
-    "meal": "big",
+    "name": "Kyrgyz cucumber and radish salad with herbs",
+    "meal": "bite",
     "cuisine": "Kyrgyz",
-    "time": 60,
+    "time": 15,
     "serves": 4,
     "ing": [
       [
-        "garlic",
-        2
+        "cucumber",
+        "3pc"
+      ],
+      [
+        "radish",
+        100
+      ],
+      [
+        "spring-onion",
+        "3pc"
+      ],
+      [
+        "dill",
+        10
       ],
       [
         "oil",
-        20
+        15
+      ],
+      [
+        "vinegar",
+        10
       ],
       [
         "salt",
-        3
-      ],
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
         2
       ]
     ],
     "steps": [
-      "Add the {garlic} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "kyrgyz-lamb-style-noodle-broth",
-    "name": "Kyrgyz Lamb-Style Noodle Broth",
-    "meal": "big",
-    "cuisine": "Kyrgyz",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        450
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "potatoes",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ]
-    ],
-    "steps": [
-      "Stir in the {cumin} and cook briefly to release its aroma.",
-      "Add the {beef-chuck} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Slice the {cucumber} and {radish} thinly and slice the {spring-onion}.",
+      "Whisk the {oil}, {vinegar} and {salt}.",
+      "Toss the vegetables with the dressing and chopped {dill}. Serve chilled."
     ]
   },
   {

@@ -35,7 +35,7 @@ KITCHEN.add(
       ],
       [
         "orange",
-        "0.5pc"
+        75
       ],
       [
         "cumin",
@@ -126,52 +126,16 @@ KITCHEN.add(
     "cuisine": "Brazilian"
   },
   {
-    "id": "world-brazilian-brigadeiro",
-    "name": "Brazilian chocolate brigadeiros",
-    "meal": "treat",
-    "time": 25,
-    "serves": 12,
-    "ing": [
-      [
-        "condensed-milk",
-        395
-      ],
-      [
-        "cocoa",
-        25
-      ],
-      [
-        "butter",
-        20
-      ],
-      [
-        "coconut-flakes",
-        50
-      ],
-      [
-        "vanilla",
-        2
-      ]
-    ],
-    "steps": [
-      "Combine {condensed-milk}, {cocoa}, {butter} and {vanilla} in a heavy saucepan.",
-      "Cook over medium-low heat, stirring constantly, for 10–15 minutes until very thick and the mixture pulls away from the base of the pan.",
-      "Spread on a greased plate and cool completely. Lightly grease your hands and roll into small balls.",
-      "Roll the balls in {coconut-flakes} and chill until firm."
-    ],
-    "cuisine": "Brazilian"
-  },
-  {
     "id": "br-pao-de-queijo",
     "name": "Pão de queijo (Brazilian cheese bread)",
     "meal": "bite",
     "cuisine": "Brazilian",
-    "time": 35,
+    "time": 40,
     "serves": 2,
     "ing": [
       [
-        "tapioca-pearls",
-        100
+        "tapioca-starch",
+        150
       ],
       [
         "eggs",
@@ -187,11 +151,11 @@ KITCHEN.add(
       ],
       [
         "milk",
-        250
+        100
       ],
       [
         "oil",
-        15
+        50
       ],
       [
         "salt",
@@ -199,10 +163,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Mix {tapioca-pearls} with the remaining dough ingredients to make a workable dough or batter; knead or beat until even.",
-      "Rest or prove the mixture as needed, shape it, then bake, steam or griddle until cooked through.",
-      "Mix the tapioca-based dough with the cheeses until elastic, roll into small balls and bake until puffed with crisp shells.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 200 °C. Bring the {milk}, {oil} and {salt} to the boil and pour over the {tapioca-starch}; mix and cool for 5 minutes.",
+      "Beat in the {eggs} one at a time, then the grated {cheddar} and {parmesan}, and knead to a sticky dough.",
+      "Roll into 12 balls on a lined tray and bake for 20–25 minutes until puffed and golden."
     ]
   },
   {
@@ -210,7 +173,7 @@ KITCHEN.add(
     "name": "Coxinha chicken croquettes",
     "meal": "bite",
     "cuisine": "Brazilian",
-    "time": 65,
+    "time": 75,
     "serves": 2,
     "ing": [
       [
@@ -227,7 +190,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "flour",
@@ -247,7 +210,7 @@ KITCHEN.add(
       ],
       [
         "oil",
-        15
+        300
       ],
       [
         "salt",
@@ -259,10 +222,11 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare {chicken-thigh} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {chicken-thigh} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Cook and shred the chicken, reduce its stock into a thick dough, wrap the filling in teardrop shapes, then crumb and fry until crisp.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Poach the {chicken-thigh} in the {chicken-stock} with half of the {salt} for 20 minutes; lift out, shred and keep 250 ml of the stock.",
+      "Fry the chopped {onion} and {garlic} in the {butter} for 5 minutes, mix with the chicken and {black-pepper} and cool.",
+      "Bring the reserved stock to the boil, add the {flour} and stir for 4 minutes until it forms a smooth ball; cool and season with the remaining salt.",
+      "Wrap the dough around spoonfuls of filling in teardrop shapes; dip in beaten {eggs} and roll in {breadcrumbs}.",
+      "Heat the {oil} to 180 °C and fry for 4 minutes until deep golden."
     ]
   },
   {
@@ -335,7 +299,7 @@ KITCHEN.add(
     "name": "Tutu de feijão (Brazilian mashed bean purée)",
     "meal": "big",
     "cuisine": "Brazilian",
-    "time": 30,
+    "time": 35,
     "serves": 2,
     "ing": [
       [
@@ -348,7 +312,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "bacon",
@@ -356,7 +320,7 @@ KITCHEN.add(
       ],
       [
         "flour",
-        120
+        40
       ],
       [
         "olive-oil",
@@ -376,10 +340,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare and measure all ingredients, then heat the pan or pot over medium heat.",
-      "Cook {black-beans} with the seasonings until the dish reaches its intended texture and the flavours meld.",
-      "Mash most of the cooked beans, then thicken gradually with flour until the mixture is spoonable; keep some beans whole for texture.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Fry the diced {bacon} for 5 minutes until crisp; set aside.",
+      "Soften the chopped {onion} and {garlic} in the {olive-oil} for 5 minutes, add the {black-beans} and 100 ml water and simmer for 8 minutes, then mash coarsely.",
+      "Stir in the {flour} gradually and cook for 5 minutes until thick; season with the {salt} and {black-pepper}.",
+      "Top with the bacon and chopped {parsley}."
     ]
   },
   {
@@ -404,11 +368,11 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "turmeric",
@@ -473,7 +437,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "cheddar",
@@ -512,7 +476,7 @@ KITCHEN.add(
     "name": "Escondidinho de carne (layered beef and cassava-style mash bake)",
     "meal": "big",
     "cuisine": "Brazilian",
-    "time": 55,
+    "time": 60,
     "serves": 2,
     "ing": [
       [
@@ -521,7 +485,7 @@ KITCHEN.add(
       ],
       [
         "potatoes",
-        350
+        600
       ],
       [
         "onion",
@@ -529,7 +493,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "tomato-paste",
@@ -537,7 +501,7 @@ KITCHEN.add(
       ],
       [
         "beef-stock",
-        450
+        150
       ],
       [
         "butter",
@@ -545,7 +509,7 @@ KITCHEN.add(
       ],
       [
         "milk",
-        250
+        100
       ],
       [
         "cheddar",
@@ -565,10 +529,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat the oven to 190 °C and lightly grease a baking dish or line a tray.",
-      "Prepare {beef-mince} with the other listed ingredients, layer or shape the mixture evenly and season it well.",
-      "Make a thick, well-seasoned beef filling and cover it fully with buttery mash; bake until the cheese forms a golden crust.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 200 °C. Boil the peeled {potatoes} for 18 minutes, drain and mash with the {butter}, {milk} and half of the {salt}.",
+      "Fry the chopped {onion} and {garlic} in the {oil} for 5 minutes, add the {beef-mince} and brown for 8 minutes, then stir in the {tomato-paste}, {beef-stock}, remaining salt and {black-pepper} and simmer for 10 minutes.",
+      "Spread the beef in a baking dish, cover with the mash and top with the grated {cheddar}.",
+      "Bake for 20 minutes until golden and bubbling."
     ]
   },
   {
@@ -581,19 +545,15 @@ KITCHEN.add(
     "ing": [
       [
         "condensed-milk",
-        100
+        200
       ],
       [
         "cocoa",
-        20
+        30
       ],
       [
         "butter",
-        35
-      ],
-      [
-        "dark-chocolate",
-        100
+        15
       ],
       [
         "sugar",
@@ -601,10 +561,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {condensed-milk} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Stir constantly over low heat until the mixture pulls away from the pan, cool completely, then roll into small balls and coat lightly with cocoa.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Stir the {condensed-milk}, {cocoa} and {butter} in a pan over medium-low heat for 10 minutes until the mixture pulls away from the base of the pan; cool completely.",
+      "With buttered hands, roll into 12 small balls.",
+      "Roll in the {sugar} and serve in paper cases."
     ]
   },
   {
@@ -612,20 +571,20 @@ KITCHEN.add(
     "name": "Quindim (Brazilian coconut and egg-yolk custards)",
     "meal": "treat",
     "cuisine": "Brazilian",
-    "time": 45,
+    "time": 55,
     "serves": 2,
     "ing": [
       [
         "egg-yolks",
-        "2pc"
+        "4pc"
       ],
       [
         "sugar",
-        35
+        120
       ],
       [
         "coconut-flakes",
-        30
+        50
       ],
       [
         "butter",
@@ -637,10 +596,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {egg-yolks} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Whisk yolks gently with sugar and coconut without incorporating too much air, pour into buttered moulds and bake in a shallow water bath until just set.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 180 °C and grease 4 ramekins. Melt the {butter}.",
+      "Whisk the {egg-yolks} with the {sugar}, then stir in the butter, {coconut-flakes} and {vanilla}.",
+      "Pour into the ramekins, set in a tin of hot water and bake for 30 minutes until set and golden on top.",
+      "Cool completely before unmoulding."
     ]
   },
   {
@@ -652,8 +611,8 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "black-beans",
-        200
+        "black-eyed-peas",
+        240
       ],
       [
         "onion",
@@ -661,19 +620,19 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "oil",
-        15
+        300
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "red-chilli",
-        1
+        "1pc"
       ],
       [
         "lime",
@@ -689,10 +648,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare {black-beans} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {black-beans} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Mash the beans into a coarse paste, beat until light, shape into small patties and fry until crisp; serve with a sharp tomato-chilli relish.",
-      "Finish with a little {lime} if needed, taste for seasoning and serve while the texture is at its best."
+      "Blend the drained {black-eyed-peas} with half of the {onion}, one {garlic} clove, the {salt} and {black-pepper} into a thick paste and beat for 3 minutes until light.",
+      "Heat the {oil} to 180 °C and fry spoonfuls of the paste for 3–4 minutes per side until crisp and golden.",
+      "For the relish, dice the {tomato}, remaining onion, {red-chilli} and remaining garlic and toss with the juice of the {lime}. Serve with the fritters."
     ]
   },
   {
@@ -918,9 +876,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Season the {pork} with {salt} and {black-pepper}; pan-fry in a little {oil} until cooked through and browned.",
-      "Mash half the {beans} with their cooking liquid and stir in {cornmeal} gradually to make a thick, soft {beans} purée. Keep warm.",
-      "Sauté sliced {collard-greens} with minced {garlic} in {oil}. Fry the {eggs}; serve the pork with the {beans} mixture, greens and eggs."
+      "Season the {pork} with {salt} and {black-pepper}; pan-fry in a little of the {oil} until cooked through and browned.",
+      "Mash half the {beans} with their cooking liquid and stir in {cornmeal} gradually to make a thick, soft bean purée. Keep warm.",
+      "Sauté the sliced {collard-greens} with the minced {garlic} and chopped {onion} in the remaining oil. Fry the {eggs}; serve the pork with the bean purée, greens and eggs."
     ]
   },
   {

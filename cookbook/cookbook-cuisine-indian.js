@@ -177,7 +177,7 @@ KITCHEN.add(
   {
     "id": "left-fish-kedgeree",
     "name": "Kedgeree with leftover fish and rice",
-    "meal": "big,wake",
+    "meal": "morning",
     "cuisine": "Indian",
     "time": 20,
     "serves": 2,
@@ -275,7 +275,7 @@ KITCHEN.add(
   {
     "id": "left-veg-pakoras",
     "name": "Crispy pakoras from leftover vegetables",
-    "meal": "big,bite",
+    "meal": "bite",
     "cuisine": "Indian",
     "time": 25,
     "serves": 2,
@@ -343,8 +343,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Blend {mango}, {yogurt}, {milk}, {honey} and {ground-cardamom} until smooth.",
-      "Serve cold."
+      "Peel and stone the {mango} and put it in a blender.",
+      "Add the {yogurt}, {milk}, {honey} and {ground-cardamom} and blend until smooth.",
+      "Pour into two glasses and serve cold."
     ]
   },
   {
@@ -564,274 +565,6 @@ KITCHEN.add(
       "Add {canned-tomatoes} and the rest of the salt. Cover and simmer 20 minutes until the chicken is cooked through (74 °C).",
       "Meanwhile simmer {rice} with twice its weight of water, covered, on low for 12 minutes. Rest 5 minutes.",
       "Take the curry off the heat, stir in {yogurt} and serve over the rice with {coriander}."
-    ]
-  },
-  {
-    "id": "world-butter-chicken",
-    "name": "Murgh makhani (butter chicken)",
-    "meal": "big",
-    "cuisine": "Indian",
-    "time": 45,
-    "serves": 2,
-    "ing": [
-      [
-        "chicken-thigh",
-        350
-      ],
-      [
-        "yogurt",
-        100
-      ],
-      [
-        "garam-masala",
-        5
-      ],
-      [
-        "turmeric",
-        2
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "garlic",
-        12
-      ],
-      [
-        "ginger",
-        12
-      ],
-      [
-        "onion",
-        120
-      ],
-      [
-        "canned-tomatoes",
-        300
-      ],
-      [
-        "butter",
-        35
-      ],
-      [
-        "cream",
-        100
-      ],
-      [
-        "chilli-powder",
-        2
-      ],
-      [
-        "salt",
-        4
-      ],
-      [
-        "coriander",
-        10
-      ]
-    ],
-    "steps": [
-      "Mix {yogurt}, half the {garlic}, half the {ginger}, {garam-masala}, {turmeric}, {cumin}, {chilli-powder} and {salt}; coat {chicken-thigh} and marinate 20 minutes.",
-      "Sear the chicken in a hot pan until browned; set aside. Soften {onion} in a little {butter}, then add the remaining {garlic} and {ginger}.",
-      "Add {canned-tomatoes} and simmer 12 minutes. Blend until smooth, then stir in remaining {butter} and {cream}.",
-      "Return the chicken and simmer gently 12–15 minutes until cooked through. Finish with chopped {coriander}."
-    ]
-  },
-  {
-    "id": "world-chana-masala",
-    "name": "Punjabi chana masala",
-    "meal": "big",
-    "cuisine": "Indian",
-    "time": 35,
-    "serves": 2,
-    "ing": [
-      [
-        "chickpeas",
-        440
-      ],
-      [
-        "onion",
-        120
-      ],
-      [
-        "tomato",
-        180
-      ],
-      [
-        "garlic",
-        10
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "ground-coriander",
-        4
-      ],
-      [
-        "garam-masala",
-        4
-      ],
-      [
-        "turmeric",
-        2
-      ],
-      [
-        "chilli-powder",
-        1
-      ],
-      [
-        "oil",
-        18
-      ],
-      [
-        "lemon",
-        "0.5pc"
-      ],
-      [
-        "coriander",
-        12
-      ],
-      [
-        "salt",
-        4
-      ]
-    ],
-    "steps": [
-      "Heat {oil}; toast {cumin}, {ground-coriander}, {turmeric} and {chilli-powder} for 30 seconds.",
-      "Add diced {onion} and cook until golden, then stir in {garlic} and {ginger}.",
-      "Add chopped {tomato} and cook down. Stir in {chickpeas}, {garam-masala} and a splash of water; simmer 15 minutes, mashing a few with a spoon to thicken.",
-      "Season with {salt}, squeeze over {lemon} and finish with {coriander}."
-    ]
-  },
-  {
-    "id": "world-palak-paneer",
-    "name": "Palak paneer (spinach and paneer curry)",
-    "meal": "big",
-    "cuisine": "Indian",
-    "time": 35,
-    "serves": 2,
-    "ing": [
-      [
-        "paneer",
-        250
-      ],
-      [
-        "spinach",
-        300
-      ],
-      [
-        "onion",
-        100
-      ],
-      [
-        "tomato",
-        150
-      ],
-      [
-        "garlic",
-        10
-      ],
-      [
-        "ginger",
-        8
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "garam-masala",
-        3
-      ],
-      [
-        "cream",
-        50
-      ],
-      [
-        "oil",
-        18
-      ],
-      [
-        "salt",
-        4
-      ]
-    ],
-    "steps": [
-      "Blanch {spinach} for 1 minute, cool quickly and blend to a smooth purée.",
-      "Cube {paneer} and sear in half the {oil} until golden; remove from the pan.",
-      "Cook {onion} in the remaining {oil}; add {garlic}, {ginger} and {cumin}. Stir in {tomato} and cook until soft.",
-      "Add the spinach purée and {garam-masala}; simmer 5 minutes. Stir in {cream} and {paneer}, warm through and season with {salt}."
-    ]
-  },
-  {
-    "id": "world-aloo-gobi",
-    "name": "Aloo gobi (potato and cauliflower)",
-    "meal": "big",
-    "cuisine": "Indian",
-    "time": 35,
-    "serves": 2,
-    "ing": [
-      [
-        "potatoes",
-        300
-      ],
-      [
-        "cauliflower",
-        350
-      ],
-      [
-        "onion",
-        100
-      ],
-      [
-        "tomato",
-        150
-      ],
-      [
-        "garlic",
-        8
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "turmeric",
-        3
-      ],
-      [
-        "ground-coriander",
-        4
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "coriander",
-        10
-      ],
-      [
-        "salt",
-        4
-      ]
-    ],
-    "steps": [
-      "Heat {oil}; toast {cumin}, {turmeric} and {ground-coriander} briefly.",
-      "Add diced {onion}; cook until softened, then add {garlic} and {ginger}.",
-      "Stir in cubed {potatoes} and florets of {cauliflower}; toss to coat. Add a splash of water, cover and cook 15 minutes, stirring occasionally.",
-      "Add chopped {tomato} and {salt}; cook uncovered until the vegetables are tender and the sauce clings. Finish with {coriander}."
     ]
   },
   {
@@ -1953,180 +1686,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "lamb-keema-peas-roti",
-    "name": "Lamb keema with peas and roti",
-    "meal": "big",
-    "cuisine": "Indian",
-    "time": 40,
-    "serves": 2,
-    "ing": [
-      [
-        "lamb",
-        300
-      ],
-      [
-        "peas",
-        100
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "garlic",
-        "2pc"
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "tomato-paste",
-        15
-      ],
-      [
-        "garam-masala",
-        4
-      ],
-      [
-        "cumin-seeds",
-        3
-      ],
-      [
-        "turmeric",
-        2
-      ],
-      [
-        "roti",
-        "4pc"
-      ],
-      [
-        "yogurt",
-        60
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        2
-      ]
-    ],
-    "steps": [
-      "Fry {cumin-seeds} in {oil} for 30 seconds; add diced {onion} and cook 8 minutes until golden.",
-      "Add {garlic}, grated {ginger}, {turmeric} and {tomato-paste}; cook 2 minutes.",
-      "Brown {lamb} in the pan for 8 minutes, then add {garam-masala}, {salt} and a splash of water; simmer 10 minutes. Stir in {peas} for the last 3.",
-      "Serve with warmed {roti} and {yogurt}."
-    ]
-  },
-  {
-    "id": "indian-saag-paneer",
-    "name": "Saag paneer with warm naan",
-    "meal": "big",
-    "cuisine": "Indian",
-    "time": 30,
-    "serves": 2,
-    "ing": [
-      [
-        "paneer",
-        250
-      ],
-      [
-        "spinach",
-        300
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "garlic",
-        "3pc"
-      ],
-      [
-        "ginger",
-        12
-      ],
-      [
-        "cumin-seeds",
-        3
-      ],
-      [
-        "garam-masala",
-        4
-      ],
-      [
-        "cream",
-        50
-      ],
-      [
-        "naan",
-        "2pc"
-      ]
-    ],
-    "steps": [
-      "Cube {paneer} and brown in a little oil; set aside.",
-      "Cook diced {onion} until soft. Add {cumin-seeds}, {garlic} and {ginger}; stir for a minute, then add {spinach} and cook until wilted. Blend or chop the mixture to your preferred texture.",
-      "Stir in {garam-masala}, {cream} and paneer. Simmer gently for 4 minutes and serve with warmed {naan}."
-    ]
-  },
-  {
-    "id": "indian-classic-chana-masala",
-    "name": "Chana masala chickpea curry",
-    "meal": "big",
-    "cuisine": "Indian",
-    "time": 30,
-    "serves": 3,
-    "ing": [
-      [
-        "chickpeas",
-        480
-      ],
-      [
-        "canned-tomatoes",
-        400
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "garlic",
-        "3pc"
-      ],
-      [
-        "ginger",
-        12
-      ],
-      [
-        "cumin-seeds",
-        3
-      ],
-      [
-        "coriander",
-        3
-      ],
-      [
-        "turmeric",
-        2
-      ],
-      [
-        "garam-masala",
-        4
-      ],
-      [
-        "rice",
-        150
-      ]
-    ],
-    "steps": [
-      "Cook the {rice}. Dice {onion}; mince {garlic} and {ginger}.",
-      "Toast {cumin-seeds} in a pan with a little oil, add onion and cook until golden. Stir in garlic, ginger, {coriander} and {turmeric}.",
-      "Add {canned-tomatoes} and simmer 5 minutes. Stir in {chickpeas} and {garam-masala}; simmer 12 minutes. Serve with rice."
-    ]
-  },
-  {
     "id": "indian-aloo-gobi",
     "name": "Aloo gobi cauliflower and potato",
     "meal": "big",
@@ -2176,118 +1735,6 @@ KITCHEN.add(
       "Heat oil, add {cumin-seeds}, then cook diced {onion} until soft. Add {garlic}, {ginger}, {turmeric} and ground {coriander}; stir briefly.",
       "Add potatoes, cauliflower, chopped {tomato} and a splash of water. Cover and cook 20–25 minutes, stirring gently, until tender. Finish with fresh coriander."
     ]
-  },
-  {
-    "id": "extra-world-aloo-gobi",
-    "name": "Aloo gobi cauliflower and potato curry",
-    "meal": "big",
-    "time": 35,
-    "serves": 3,
-    "ing": [
-      [
-        "cauliflower",
-        350
-      ],
-      [
-        "potatoes",
-        250
-      ],
-      [
-        "onion",
-        100
-      ],
-      [
-        "tomato",
-        200
-      ],
-      [
-        "garlic",
-        8
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "turmeric",
-        3
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "garam-masala",
-        3
-      ],
-      [
-        "oil",
-        18
-      ]
-    ],
-    "steps": [
-      "Cut {cauliflower} into florets and cube {potatoes}. Dice {onion}; grate {ginger} and {garlic}.",
-      "Heat {oil} and toast {cumin} briefly. Add onion and cook until golden, then stir in ginger, garlic, {turmeric} and {garam-masala}.",
-      "Add potato, {tomato} and a splash of water. Cover and cook for 10 minutes, then add cauliflower.",
-      "Cook covered for 12–15 minutes until vegetables are tender, stirring gently and adding water if needed."
-    ],
-    "cuisine": "Indian"
-  },
-  {
-    "id": "world-chana-saag",
-    "name": "Chana saag chickpea and spinach curry",
-    "meal": "big",
-    "time": 25,
-    "serves": 3,
-    "ing": [
-      [
-        "chickpeas",
-        440
-      ],
-      [
-        "spinach",
-        250
-      ],
-      [
-        "onion",
-        100
-      ],
-      [
-        "tomato",
-        200
-      ],
-      [
-        "garlic",
-        8
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "ground-coriander",
-        3
-      ],
-      [
-        "garam-masala",
-        3
-      ],
-      [
-        "coconut-milk",
-        120
-      ]
-    ],
-    "steps": [
-      "Cook diced {onion} in a little oil until soft. Add chopped {garlic}, grated {ginger}, {cumin} and {ground-coriander}; stir for 30 seconds.",
-      "Add chopped {tomato} and cook until pulpy. Stir in drained {chickpeas} and {coconut-milk}; simmer for 10 minutes.",
-      "Fold in {spinach} in batches until wilted. Add {garam-masala}, season and simmer for another 3 minutes.",
-      "Serve with rice or flatbread."
-    ],
-    "cuisine": "Indian"
   },
   {
     "id": "world-coconut-vegetable-pulao",
@@ -2348,174 +1795,6 @@ KITCHEN.add(
       "Cover and cook on low for 15 minutes. Rest covered for 5 minutes, then fluff gently."
     ],
     "cuisine": "Indian"
-  },
-  {
-    "id": "world-indian-chana-masala",
-    "name": "Punjabi chana masala chickpea curry",
-    "meal": "big",
-    "cuisine": "Indian",
-    "time": 35,
-    "serves": 4,
-    "ing": [
-      [
-        "chickpeas",
-        800
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        400
-      ],
-      [
-        "garlic",
-        3
-      ],
-      [
-        "ginger",
-        15
-      ],
-      [
-        "cumin",
-        5
-      ],
-      [
-        "coriander",
-        6
-      ],
-      [
-        "garam-masala",
-        5
-      ],
-      [
-        "fresh-chilli",
-        1
-      ],
-      [
-        "lemon",
-        1
-      ]
-    ],
-    "steps": [
-      "Finely chop the {onion}; grate {ginger} and mince {garlic}.",
-      "Cook onion in oil until golden. Add ginger, garlic, {cumin}, {coriander} and {fresh-chilli}; stir 30 seconds.",
-      "Add {tomato} and cook until thick and jammy. Add drained {chickpeas} and 250 ml water; simmer 15–20 minutes.",
-      "Stir in {garam-masala} and juice of the {lemon}. Lightly mash some {chickpeas} to thicken and serve with rice or flatbread."
-    ]
-  },
-  {
-    "id": "world-indian-palak-paneer",
-    "name": "Indian palak paneer spinach and cheese curry",
-    "meal": "big",
-    "cuisine": "Indian",
-    "time": 35,
-    "serves": 4,
-    "ing": [
-      [
-        "spinach",
-        500
-      ],
-      [
-        "paneer",
-        300
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        200
-      ],
-      [
-        "garlic",
-        3
-      ],
-      [
-        "ginger",
-        15
-      ],
-      [
-        "cumin",
-        4
-      ],
-      [
-        "garam-masala",
-        4
-      ],
-      [
-        "cream",
-        60
-      ],
-      [
-        "olive-oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Blanch the {spinach} for 1 minute, cool quickly and blend to a smooth purée.",
-      "Cube the {paneer} and lightly brown in a little oil; set aside. Cook chopped {onion} until soft, then add {garlic}, {ginger} and {cumin}.",
-      "Add {tomato} and cook until reduced. Stir in spinach purée and {garam-masala}; simmer gently for 5 minutes.",
-      "Fold in paneer and {cream}, warm through without boiling hard, and season to taste. Serve with naan or rice."
-    ]
-  },
-  {
-    "id": "world-indian-aloo-gobi",
-    "name": "Indian aloo gobi potato and cauliflower",
-    "meal": "big",
-    "cuisine": "Indian",
-    "time": 35,
-    "serves": 4,
-    "ing": [
-      [
-        "potatoes",
-        450
-      ],
-      [
-        "cauliflower",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "garlic",
-        3
-      ],
-      [
-        "ginger",
-        12
-      ],
-      [
-        "turmeric",
-        4
-      ],
-      [
-        "cumin",
-        4
-      ],
-      [
-        "coriander",
-        5
-      ],
-      [
-        "cilantro",
-        15
-      ]
-    ],
-    "steps": [
-      "Cut {potatoes} into small cubes and divide the {cauliflower} into florets.",
-      "Heat oil in a wide pan; add {cumin}, then chopped {onion}, {garlic} and {ginger}. Cook until fragrant.",
-      "Add {turmeric}, {coriander}, potatoes and cauliflower; toss well. Add {tomato} and 100 ml water, cover and cook 18–22 minutes, stirring carefully.",
-      "Uncover to evaporate excess liquid and finish with chopped {cilantro}. The vegetables should be tender but not mushy."
-    ]
   },
   {
     "id": "indian-vegetable-biryani",
@@ -2583,61 +1862,6 @@ KITCHEN.add(
       "Fry sliced {onion} in {oil} until golden; reserve a handful for topping. Add diced {potatoes}, {carrot}, {peas}, {cumin}, {cinnamon} and {garam-masala}.",
       "Stir in {yogurt} and {salt}, add rice and enough water to just cover. Add {saffron} dissolved in a spoon of warm water.",
       "Cover tightly and cook on low for 18–20 minutes. Rest 10 minutes, fluff and top with fried onion and {mint}."
-    ]
-  },
-  {
-    "id": "indian-masoor-dal",
-    "name": "Red lentil masoor dal with cumin tempering",
-    "meal": "light",
-    "cuisine": "Indian",
-    "time": 30,
-    "serves": 2,
-    "ing": [
-      [
-        "red-lentils",
-        220
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "tomato",
-        200
-      ],
-      [
-        "garlic",
-        "3pc"
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "turmeric",
-        3
-      ],
-      [
-        "cumin",
-        4
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "lemon",
-        "0.5pc"
-      ],
-      [
-        "salt",
-        4
-      ]
-    ],
-    "steps": [
-      "Rinse {red-lentils}; simmer with {turmeric} and 700 ml water for 15–20 minutes until soft.",
-      "Cook diced {onion} in half the {oil}; add {garlic}, {ginger} and chopped {tomato}, then cook until jammy. Stir into lentils.",
-      "Heat remaining oil and toast {cumin} for 30 seconds; pour over the dal. Season with {salt} and {lemon} juice."
     ]
   },
   {
@@ -2788,7 +2012,7 @@ KITCHEN.add(
       ],
       [
         "fresh-chilli",
-        1
+        "1pc"
       ],
       [
         "bread-rolls",
@@ -2923,7 +2147,7 @@ KITCHEN.add(
     "id": "indian-baingan-bharta",
     "name": "Baingan bharta smoky mashed aubergine",
     "cuisine": "Indian",
-    "meal": "light",
+    "meal": "bite",
     "time": 45,
     "serves": 3,
     "ing": [
@@ -2988,11 +2212,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "tomato",
-        1
+        "1pc"
       ],
       [
         "ginger",
@@ -3000,7 +2224,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ground-coriander",
@@ -3055,7 +2279,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "yogurt",
@@ -3075,7 +2299,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "cardamom",
@@ -3122,15 +2346,15 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        1
+        "1pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -3154,7 +2378,7 @@ KITCHEN.add(
       ],
       [
         "red-chilli",
-        1
+        "1pc"
       ],
       [
         "oil",
@@ -3185,7 +2409,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
@@ -3256,11 +2480,11 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "butter",
@@ -3276,7 +2500,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "cumin",
@@ -3311,15 +2535,15 @@ KITCHEN.add(
     "ing": [
       [
         "eggs",
-        4
+        "4pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "yogurt",
@@ -3331,7 +2555,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "cumin",
@@ -3382,16 +2606,15 @@ KITCHEN.add(
       ],
       [
         "red-pepper",
-        2
+        "2pc"
       ],
-      
       [
         "ginger",
         10
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "tandoori-masala",
@@ -3419,7 +2642,7 @@ KITCHEN.add(
   {
     "id": "indian-gujarati-dhokla",
     "name": "Gujarati steamed dhokla with mustard and coriander",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Indian",
     "time": 35,
     "serves": 2,
@@ -3450,7 +2673,7 @@ KITCHEN.add(
       ],
       [
         "green-chilli",
-        1
+        "1pc"
       ],
       [
         "coriander",
@@ -3493,7 +2716,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        2
+        "2pc"
       ],
       [
         "turmeric",
@@ -3556,7 +2779,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "mustard-seeds",
@@ -3572,7 +2795,7 @@ KITCHEN.add(
       ],
       [
         "green-chilli",
-        1
+        "1pc"
       ],
       [
         "oil",
@@ -3607,11 +2830,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "ginger",
@@ -3619,7 +2842,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "cumin",
@@ -3666,11 +2889,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "tomato",
-        1
+        "1pc"
       ],
       [
         "yogurt",
@@ -3682,7 +2905,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "dried-fenugreek-leaves",
@@ -3741,7 +2964,7 @@ KITCHEN.add(
       ],
       [
         "green-chilli",
-        1
+        "1pc"
       ],
       [
         "butter",
@@ -3792,7 +3015,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "cumin-seeds",
@@ -3847,11 +3070,11 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        3
+        "3pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "cream",
@@ -3863,7 +3086,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "garam-masala",
@@ -3902,11 +3125,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -3969,11 +3192,11 @@ KITCHEN.add(
       ],
       [
         "carrot",
-        1
+        "1pc"
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "curry-leaves",
@@ -4062,57 +3285,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "indian-shorshe-maach",
-    "name": "Shorshe maach (Bengali mustard fish curry)",
-    "meal": "big",
-    "cuisine": "Indian",
-    "time": 30,
-    "serves": 2,
-    "ing": [
-      [
-        "white-fish",
-        400
-      ],
-      [
-        "mustard-seeds",
-        25
-      ],
-      [
-        "green-chilli",
-        2
-      ],
-      [
-        "turmeric",
-        3
-      ],
-      [
-        "mustard",
-        10
-      ],
-      [
-        "water",
-        180
-      ],
-      [
-        "oil",
-        25
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "tomato",
-        1
-      ]
-    ],
-    "steps": [
-      "Soak {mustard-seeds} in warm water for 10 minutes, then blend with {green-chilli}, {mustard}, {turmeric} and a splash of water into a paste.",
-      "Rub {white-fish} with {salt} and a little {turmeric}; sear quickly in hot {oil} and set aside.",
-      "Add chopped {tomato} and mustard paste to the pan with {water}; simmer 5 minutes. Return fish and cook gently until flaky."
-    ]
-  },
-  {
     "id": "indian-fish-curry",
     "name": "Kerala coconut fish curry",
     "meal": "big",
@@ -4170,7 +3342,7 @@ KITCHEN.add(
       ],
       [
         "lime",
-        1
+        "1pc"
       ]
     ],
     "steps": [
@@ -4182,31 +3354,55 @@ KITCHEN.add(
   },
   {
     "id": "in-idli-sambar",
-    "name": "Idli with sambar-style lentil and vegetable broth",
+    "name": "Quick idli with sambar-style lentil and vegetable stew",
     "meal": "morning",
     "cuisine": "Indian",
-    "time": 45,
-    "serves": 2,
+    "time": 60,
+    "serves": 4,
     "ing": [
       [
         "rice-flour",
+        150
+      ],
+      [
+        "semolina",
         100
       ],
       [
-        "red-lentils",
-        180
+        "yogurt",
+        200
       ],
       [
-        "tamarind-paste",
-        20
+        "water",
+        150
+      ],
+      [
+        "baking-soda",
+        2
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "red-lentils",
+        120
       ],
       [
         "carrot",
-        150
+        "1pc"
       ],
       [
         "green-beans",
-        150
+        100
+      ],
+      [
+        "tamarind-paste",
+        15
       ],
       [
         "turmeric",
@@ -4214,30 +3410,18 @@ KITCHEN.add(
       ],
       [
         "mustard-seeds",
-        100
-      ],
-      [
-        "curry-leaves",
-        100
-      ],
-      [
-        "salt",
         3
       ],
       [
-        "black-pepper",
-        1
-      ],
-      [
-        "oil",
-        15
+        "curry-leaves",
+        3
       ]
     ],
     "steps": [
-      "Bring the steaming water or cooking liquid to a steady simmer and prepare the ingredients in even-sized portions.",
-      "Cook {rice-flour} gently until just set or tender, taking care not to boil hard or overcook the texture.",
-      "Steam a fermented rice batter in small moulds until springy; separately simmer lentils and vegetables with tamarind and spices for dipping.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Mix {rice-flour}, {semolina}, {yogurt}, {water} and half the {salt} into a thick batter. Rest for 20 minutes, then stir in the {baking-soda}.",
+      "Simmer the {red-lentils} with {turmeric} and 600 ml water for 20 minutes until soft. Add chopped {carrot} and {green-beans}, the {tamarind-paste} and the rest of the salt and cook for 12 minutes.",
+      "Brush idli moulds with a little of the {oil}, fill with batter and steam for 12 minutes until springy.",
+      "Heat the remaining oil, pop the {mustard-seeds} and {curry-leaves} for 30 seconds and stir into the sambar. Serve with the idli."
     ]
   },
   {
@@ -4245,7 +3429,7 @@ KITCHEN.add(
     "name": "Pesarattu (Andhra green-mung crepes with ginger)",
     "meal": "morning",
     "cuisine": "Indian",
-    "time": 35,
+    "time": 40,
     "serves": 2,
     "ing": [
       [
@@ -4253,8 +3437,12 @@ KITCHEN.add(
         180
       ],
       [
-        "rice-flour",
-        100
+        "rice",
+        30
+      ],
+      [
+        "water",
+        250
       ],
       [
         "ginger",
@@ -4262,26 +3450,30 @@ KITCHEN.add(
       ],
       [
         "green-chilli",
-        1
+        "2pc"
       ],
       [
         "cumin",
         3
       ],
       [
-        "oil",
-        15
-      ],
-      [
         "salt",
         3
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "onion",
+        "1pc"
       ]
     ],
     "steps": [
-      "Whisk the batter until smooth and let it rest briefly so the flour hydrates.",
-      "Cook {green-lentils} in a lightly greased pan over medium heat, turning or folding once the surface sets.",
-      "Soak {green-lentils}, blend with ginger, chilli and cumin into a thin batter, then spread directly on a hot oiled pan and cook until crisp.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Soak the {green-lentils} and {rice} in water for 4 hours, then drain.",
+      "Blend with the {water}, {ginger}, {green-chilli}, {cumin} and {salt} into a thin, pourable batter.",
+      "Heat a non-stick pan with a little {oil}. Pour a ladle of batter and spread thinly, scatter with chopped {onion} and drizzle oil around the edge.",
+      "Cook for 2–3 minutes until crisp and golden underneath, fold and serve hot."
     ]
   }
 ]

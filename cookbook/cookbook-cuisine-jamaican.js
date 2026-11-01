@@ -353,9 +353,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Toss {goat-meat} with {curry-powder}, minced {garlic}, {ginger}, thyme and salt; marinate at least 30 minutes.",
+      "Toss {goat-meat} with {curry-powder}, minced {garlic}, {ginger}, {thyme} and salt; marinate at least 30 minutes.",
       "Brown meat in {oil} in batches. Add sliced {onion} and cook until softened.",
-      "Add {vegetable-stock} and {habanero-pepper} whole, cover and simmer gently 1½–2 hours until tender. Add potato chunks for the final 25 minutes; remove the pepper before serving if desired."
+      "Add {vegetable-stock} and {habanero-pepper} whole, cover and simmer gently 1½–2 hours until tender. Add chunks of {potatoes} for the final 25 minutes; remove the pepper before serving if desired."
     ]
   },
   {
@@ -376,19 +376,19 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "tomato",
-        1
+        "1pc"
       ],
       [
         "red-pepper",
-        1
+        "1pc"
       ],
       [
         "fresh-chilli",
-        1
+        "1pc"
       ],
       [
         "oil",
@@ -404,7 +404,7 @@ KITCHEN.add(
       ],
       [
         "bread",
-        2
+        "2pc"
       ]
     ],
     "steps": [
@@ -431,7 +431,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
@@ -451,7 +451,7 @@ KITCHEN.add(
       ],
       [
         "habanero-pepper",
-        1
+        5
       ],
       [
         "soy-sauce",
@@ -537,7 +537,7 @@ KITCHEN.add(
       ],
       [
         "habanero-pepper",
-        1
+        5
       ],
       [
         "garlic",
@@ -592,7 +592,7 @@ KITCHEN.add(
       ],
       [
         "fresh-chilli",
-        2
+        "2pc"
       ],
       [
         "allspice",
@@ -612,7 +612,7 @@ KITCHEN.add(
       ],
       [
         "lime",
-        1
+        "1pc"
       ],
       [
         "soy-sauce",
@@ -958,44 +958,6 @@ KITCHEN.add(
       "Mix chopped {habanero-pepper}, {allspice}, {thyme}, crushed {garlic}, sliced {spring-onion}, {lime} juice, {brown-sugar}, {oil} and {salt}.",
       "Cut {pork-shoulder} into cubes and coat thoroughly in the jerk marinade. Thread onto skewers; marinate at least 20 minutes.",
       "Grill or roast at 220 °C for 12–16 minutes, turning regularly, until browned and cooked through."
-    ]
-  },
-  {
-    "id": "jamaican-black-bean-and-rice-bowl",
-    "name": "Jamaican Black Bean and Rice Bowl",
-    "meal": "big",
-    "cuisine": "Jamaican",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
     ]
   },
   {

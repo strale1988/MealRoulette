@@ -976,7 +976,7 @@ KITCHEN.add(
   {
     "id": "left-spaghetti-frittata",
     "name": "Spaghetti frittata",
-    "meal": "big,bite",
+    "meal": "big",
     "cuisine": "Italian",
     "time": 20,
     "serves": 2,
@@ -1048,7 +1048,7 @@ KITCHEN.add(
   {
     "id": "left-panzanella",
     "name": "Panzanella (tomato and bread salad)",
-    "meal": "big,bite",
+    "meal": "big",
     "cuisine": "Italian",
     "time": 20,
     "serves": 2,
@@ -1126,112 +1126,6 @@ KITCHEN.add(
       "Dice {tomato} and stir with {olive-oil}, torn {basil} and {salt}; leave 5 minutes.",
       "Toast {bread} until golden, then rub with a cut {garlic} clove.",
       "Spoon the tomatoes over the toast and serve at once."
-    ]
-  },
-  {
-    "id": "world-puttanesca",
-    "leftoverSwaps": [
-      "pasta"
-    ],
-    "name": "Spaghetti alla puttanesca",
-    "meal": "big",
-    "cuisine": "Italian",
-    "time": 25,
-    "serves": 2,
-    "ing": [
-      [
-        "pasta",
-        200
-      ],
-      [
-        "canned-tomatoes",
-        300
-      ],
-      [
-        "black-olives",
-        55
-      ],
-      [
-        "capers",
-        18
-      ],
-      [
-        "anchovies",
-        15
-      ],
-      [
-        "garlic",
-        10
-      ],
-      [
-        "olive-oil",
-        22
-      ],
-      [
-        "chilli-flakes",
-        1
-      ],
-      [
-        "parsley",
-        8
-      ]
-    ],
-    "steps": [
-      "Boil {pasta} in salted water until just al dente; reserve a mug of cooking water.",
-      "Warm {olive-oil}; cook {garlic} and {chilli-flakes} briefly, then add {anchovies}, {capers} and {black-olives}, breaking the anchovies down into the oil.",
-      "Stir in {canned-tomatoes} and simmer 12–15 minutes until glossy and thick.",
-      "Toss with {pasta}, loosen with a splash of pasta water and finish with {parsley}."
-    ]
-  },
-  {
-    "id": "world-pasta-alla-norma",
-    "leftoverSwaps": [
-      "pasta"
-    ],
-    "name": "Pasta alla Norma",
-    "meal": "big",
-    "cuisine": "Italian",
-    "time": 35,
-    "serves": 2,
-    "ing": [
-      [
-        "pasta",
-        200
-      ],
-      [
-        "aubergine",
-        300
-      ],
-      [
-        "canned-tomatoes",
-        300
-      ],
-      [
-        "garlic",
-        10
-      ],
-      [
-        "olive-oil",
-        28
-      ],
-      [
-        "ricotta",
-        70
-      ],
-      [
-        "basil",
-        10
-      ],
-      [
-        "salt",
-        3
-      ]
-    ],
-    "steps": [
-      "Cube {aubergine}, season with {salt} and roast or pan-fry in part of the {olive-oil} until golden and tender.",
-      "Cook {pasta} until al dente. In a skillet, warm the remaining {olive-oil} and gently cook {garlic}.",
-      "Add {canned-tomatoes}; simmer 12 minutes, then fold in the {aubergine}.",
-      "Toss the sauce with {pasta}; finish with torn {basil} and spoonfuls of {ricotta}."
     ]
   },
   {
@@ -1350,74 +1244,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-minestrone",
-    "name": "Minestrone soup",
-    "meal": "big",
-    "cuisine": "Italian",
-    "time": 45,
-    "serves": 3,
-    "ing": [
-      [
-        "onion",
-        100
-      ],
-      [
-        "carrot",
-        100
-      ],
-      [
-        "celery",
-        80
-      ],
-      [
-        "zucchini",
-        150
-      ],
-      [
-        "canned-tomatoes",
-        250
-      ],
-      [
-        "white-beans",
-        220
-      ],
-      [
-        "pasta",
-        100
-      ],
-      [
-        "vegetable-stock",
-        800
-      ],
-      [
-        "garlic",
-        8
-      ],
-      [
-        "olive-oil",
-        18
-      ],
-      [
-        "kale",
-        100
-      ],
-      [
-        "parmesan",
-        25
-      ],
-      [
-        "salt",
-        4
-      ]
-    ],
-    "steps": [
-      "Soften diced {onion}, {carrot} and {celery} in {olive-oil} for 8 minutes; add {garlic}.",
-      "Add {zucchini}, {canned-tomatoes} and {vegetable-stock}; simmer 15 minutes.",
-      "Stir in {white-beans}, {pasta} and shredded {kale}; simmer until the pasta is tender, adding water if needed.",
-      "Season with {salt} and serve with {parmesan} grated over each bowl."
-    ]
-  },
-  {
     "id": "world-potato-gnocchi",
     "name": "Homemade potato gnocchi with tomato basil sauce",
     "meal": "big",
@@ -1470,62 +1296,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-arancini",
-    "name": "Mozzarella arancini (crispy rice balls)",
-    "meal": "big",
-    "cuisine": "Italian",
-    "time": 40,
-    "serves": 3,
-    "ing": [
-      [
-        "left-rice",
-        350
-      ],
-      [
-        "mozzarella",
-        120
-      ],
-      [
-        "parmesan",
-        35
-      ],
-      [
-        "eggs",
-        "1pc"
-      ],
-      [
-        "flour",
-        40
-      ],
-      [
-        "breadcrumbs",
-        90
-      ],
-      [
-        "oil",
-        35
-      ],
-      [
-        "canned-tomatoes",
-        220
-      ],
-      [
-        "basil",
-        8
-      ],
-      [
-        "salt",
-        3
-      ]
-    ],
-    "steps": [
-      "Mix cold {left-rice} with {parmesan} and a little {salt}. Cut {mozzarella} into small cubes.",
-      "Take a handful of rice, place a cube of mozzarella in the centre and shape into a compact ball. Chill 10 minutes to firm.",
-      "Coat each ball in {flour}, beaten {eggs} and {breadcrumbs}. Pan-fry in {oil}, turning carefully, until golden and hot through.",
-      "Warm {canned-tomatoes} with torn {basil} into a quick dipping sauce and serve alongside."
-    ]
-  },
-  {
     "id": "world-pasta-limone",
     "leftoverSwaps": [
       "pasta"
@@ -1570,7 +1340,7 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cook {pasta} in salted water until al dente; reserve a mug of cooking water.",
+      "Cook {pasta} in water with the {salt} until al dente; reserve a mug of cooking water.",
       "Melt {butter} gently in a pan and add finely grated zest of {lemon} and {cream}; warm without boiling.",
       "Add the drained pasta and a splash of pasta water. Toss with {parmesan}, juice of half the lemon and {black-pepper} until silky.",
       "Taste, add more lemon as needed and finish with {basil}."
@@ -1777,70 +1547,13 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cook the {pasta} in salted water until al dente; reserve a mug of cooking water.",
+      "Cook the {pasta} in water with the {salt} until al dente; reserve a mug of cooking water.",
       "Toast the {black-pepper} in a wide pan for 30 seconds.",
       "Finely grate the {parmesan}; mix with a little warm pasta water into a thick paste.",
       "Add the drained pasta and cheese paste off the heat, tossing with more cooking water until glossy."
     ],
     "leftoverSwaps": [
       "pasta"
-    ]
-  },
-  {
-    "id": "italian-mushroom-risotto",
-    "name": "Risotto ai funghi (mushroom risotto)",
-    "meal": "big",
-    "cuisine": "Italian",
-    "time": 40,
-    "serves": 2,
-    "ing": [
-      [
-        "rice",
-        180
-      ],
-      [
-        "mushrooms",
-        250
-      ],
-      [
-        "onion",
-        100
-      ],
-      [
-        "butter",
-        30
-      ],
-      [
-        "olive-oil",
-        12
-      ],
-      [
-        "white-wine",
-        70
-      ],
-      [
-        "vegetable-stock",
-        650
-      ],
-      [
-        "parmesan",
-        55
-      ],
-      [
-        "thyme",
-        3
-      ],
-      [
-        "salt",
-        3
-      ]
-    ],
-    "steps": [
-      "Warm the {vegetable-stock} in a saucepan and keep it hot. Dice the {onion} and slice the {mushrooms}.",
-      "Cook the onion in the {olive-oil} and half the {butter} until soft. Add the mushrooms and {thyme}; cook until browned.",
-      "Stir in the {rice} and toast for 1 minute. Add the {white-wine} and let it mostly evaporate.",
-      "Add hot stock a ladle at a time, stirring often, until the rice is creamy and tender, about 18–20 minutes.",
-      "Stir in the remaining {butter}, {parmesan} and {salt}."
     ]
   },
   {
@@ -1901,54 +1614,6 @@ KITCHEN.add(
       "Cook the vegetables in the {olive-oil} until softened, then add garlic and {thyme}.",
       "Add the {canned-tomatoes}, {white-beans} and {vegetable-stock}; simmer for 20 minutes.",
       "Stir in the kale and cook until tender. Serve with toasted {bread}."
-    ]
-  },
-  {
-    "id": "gnocchi-tomato-mozzarella-bake",
-    "name": "Gnocchi tomato and mozzarella bake",
-    "meal": "big",
-    "cuisine": "Italian",
-    "time": 30,
-    "serves": 2,
-    "ing": [
-      [
-        "gnocchi",
-        400
-      ],
-      [
-        "passata",
-        300
-      ],
-      [
-        "mozzarella",
-        125
-      ],
-      [
-        "basil",
-        5
-      ],
-      [
-        "garlic",
-        "2pc"
-      ],
-      [
-        "olive-oil",
-        15
-      ],
-      [
-        "parmesan",
-        20
-      ],
-      [
-        "salt",
-        2
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 210 °C. Soften crushed {garlic} in {olive-oil} for 1 minute, then add {passata} and {salt}; simmer 5 minutes.",
-      "Stir in {gnocchi} (no need to boil) and pour into a baking dish.",
-      "Top with torn {mozzarella} and grated {parmesan}.",
-      "Bake 18 minutes until bubbling and golden; finish with {basil}."
     ]
   },
   {
@@ -2279,57 +1944,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "italian-white-bean-rosemary-soup",
-    "name": "Tuscan white bean and rosemary soup",
-    "meal": "big",
-    "cuisine": "Italian",
-    "time": 30,
-    "serves": 3,
-    "ing": [
-      [
-        "white-beans",
-        480
-      ],
-      [
-        "carrot",
-        "1pc"
-      ],
-      [
-        "celery",
-        80
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "garlic",
-        "2pc"
-      ],
-      [
-        "vegetable-stock",
-        700
-      ],
-      [
-        "rosemary",
-        2
-      ],
-      [
-        "kale",
-        100
-      ],
-      [
-        "parmesan",
-        25
-      ]
-    ],
-    "steps": [
-      "Dice {carrot}, {celery} and {onion}; soften in olive oil for 6 minutes.",
-      "Add {garlic}, {rosemary}, drained {white-beans} and {vegetable-stock}. Simmer for 15 minutes, lightly mashing some beans to thicken.",
-      "Stir in {kale} and cook until wilted. Season and serve with {parmesan}."
-    ]
-  },
-  {
     "id": "italian-lemon-ricotta-cake",
     "name": "Italian lemon ricotta cake",
     "meal": "treat",
@@ -2377,67 +1991,15 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-pasta-e-ceci",
-    "name": "Pasta e ceci, chickpea and pasta soup",
-    "meal": "big",
-    "time": 30,
-    "serves": 3,
-    "ing": [
-      [
-        "chickpeas",
-        440
-      ],
-      [
-        "pasta",
-        120
-      ],
-      [
-        "canned-tomatoes",
-        200
-      ],
-      [
-        "onion",
-        80
-      ],
-      [
-        "garlic",
-        6
-      ],
-      [
-        "rosemary",
-        2
-      ],
-      [
-        "vegetable-stock",
-        700
-      ],
-      [
-        "olive-oil",
-        18
-      ],
-      [
-        "parmesan",
-        25
-      ]
-    ],
-    "steps": [
-      "Cook diced {onion} in {olive-oil} for 5 minutes. Add {garlic} and {rosemary}.",
-      "Add {canned-tomatoes}, {chickpeas} and {vegetable-stock}; simmer for 10 minutes. Mash a few {chickpeas} to thicken the broth.",
-      "Add {pasta} and cook until tender, adding water if the soup becomes too thick.",
-      "Serve with grated {parmesan} and black pepper."
-    ],
-    "cuisine": "Italian"
-  },
-  {
     "id": "world-melanzane-panini",
     "name": "Grilled aubergine and mozzarella panini",
-    "meal": "big,bite",
+    "meal": "big",
     "time": 20,
     "serves": 2,
     "ing": [
       [
         "bread",
-        2
+        "2pc"
       ],
       [
         "aubergine",
@@ -2558,282 +2120,10 @@ KITCHEN.add(
     "steps": [
       "Heat the oven and a baking tray to 240°C. Slice {potatoes} very thinly and toss with half the {olive-oil}, chopped {rosemary} and a pinch of salt.",
       "Stretch {pizza-dough} into a thin round. Brush with remaining oil and rub lightly with cut {garlic}.",
-      "Scatter over mozzarella, arrange potato slices and finish with grated {parmesan}.",
+      "Scatter over the {mozzarella}, arrange potato slices and finish with grated {parmesan}.",
       "Bake on the hot tray for 10–14 minutes until the crust is browned and potato is tender."
     ],
     "cuisine": "Italian"
-  },
-  {
-    "id": "world-italian-risotto-milanese",
-    "name": "Risotto alla Milanese saffron risotto",
-    "meal": "big",
-    "cuisine": "Italian",
-    "time": 35,
-    "serves": 4,
-    "ing": [
-      [
-        "arborio-rice",
-        320
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "butter",
-        55
-      ],
-      [
-        "white-wine",
-        120
-      ],
-      [
-        "vegetable-stock",
-        1000
-      ],
-      [
-        "saffron",
-        0.2
-      ],
-      [
-        "parmesan",
-        70
-      ],
-      [
-        "salt",
-        4
-      ]
-    ],
-    "steps": [
-      "Warm the {vegetable-stock} in a saucepan and steep the {saffron} in a small ladleful. Finely chop the {onion}.",
-      "Cook onion gently in half the {butter} until translucent. Add {arborio-rice} and toast 2 minutes, stirring.",
-      "Pour in {white-wine}; stir until absorbed. Add hot stock a ladle at a time, stirring often and waiting for each addition to absorb.",
-      "After 16–18 minutes, when creamy and al dente, stir in saffron liquid, remaining butter and {parmesan}. Rest 2 minutes and serve."
-    ]
-  },
-  {
-    "id": "world-italian-eggplant-parmigiana",
-    "name": "Melanzane alla parmigiana eggplant bake",
-    "meal": "big",
-    "cuisine": "Italian",
-    "time": 70,
-    "serves": 6,
-    "ing": [
-      [
-        "aubergine",
-        900
-      ],
-      [
-        "canned-tomatoes",
-        700
-      ],
-      [
-        "garlic",
-        3
-      ],
-      [
-        "basil",
-        15
-      ],
-      [
-        "mozzarella",
-        250
-      ],
-      [
-        "parmesan",
-        80
-      ],
-      [
-        "olive-oil",
-        45
-      ],
-      [
-        "salt",
-        6
-      ]
-    ],
-    "steps": [
-      "Slice the {aubergine} into 1 cm rounds, salt lightly and leave 20 minutes; pat dry. Heat the oven to 200 °C.",
-      "Simmer {canned-tomatoes} with minced {garlic}, salt and a little {olive-oil} for 15 minutes; stir in torn {basil}.",
-      "Brush eggplant with oil and roast on trays for 20 minutes until tender and lightly browned.",
-      "Layer tomato sauce, eggplant, {mozzarella} and {parmesan} in a baking dish. Repeat and bake 25–30 minutes until bubbling. Rest 15 minutes before serving."
-    ]
-  },
-  {
-    "id": "italian-risotto-mushroom",
-    "name": "Porcini and mushroom risotto",
-    "meal": "big",
-    "cuisine": "Italian",
-    "time": 40,
-    "serves": 2,
-    "ing": [
-      [
-        "arborio-rice",
-        180
-      ],
-      [
-        "mushrooms",
-        250
-      ],
-      [
-        "vegetable-stock",
-        700
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "white-wine",
-        100
-      ],
-      [
-        "parmesan",
-        50
-      ],
-      [
-        "butter",
-        35
-      ],
-      [
-        "olive-oil",
-        15
-      ],
-      [
-        "garlic",
-        "1pc"
-      ],
-      [
-        "parsley",
-        10
-      ]
-    ],
-    "steps": [
-      "Warm {vegetable-stock} in a saucepan. Sauté sliced {mushrooms} in half the {butter} and set aside.",
-      "Soften diced {onion} in {olive-oil}; add {garlic} and {arborio-rice}, stirring until grains turn translucent at the edges.",
-      "Pour in {white-wine} and let it evaporate. Add warm stock a ladle at a time, stirring often, until rice is creamy and just tender, about 18 minutes.",
-      "Fold in mushrooms, remaining {butter}, grated {parmesan} and chopped {parsley}."
-    ]
-  },
-  {
-    "id": "italian-chicken-piccata",
-    "name": "Chicken piccata with lemon and capers",
-    "meal": "big",
-    "cuisine": "Italian",
-    "time": 25,
-    "serves": 2,
-    "ing": [
-      [
-        "chicken-breast",
-        350
-      ],
-      [
-        "flour",
-        35
-      ],
-      [
-        "butter",
-        35
-      ],
-      [
-        "olive-oil",
-        15
-      ],
-      [
-        "lemon",
-        "1pc"
-      ],
-      [
-        "capers",
-        25
-      ],
-      [
-        "chicken-stock",
-        180
-      ],
-      [
-        "parsley",
-        10
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Slice {chicken-breast} horizontally into thin cutlets; season and dust with {flour}.",
-      "Sear in {olive-oil} and half the {butter} for 3–4 minutes per side until cooked; set aside.",
-      "Add {chicken-stock}, lemon juice and {capers} to the pan; simmer 3 minutes, scraping up browned bits.",
-      "Whisk in remaining {butter}, return chicken briefly to the sauce and finish with {parsley}."
-    ]
-  },
-  {
-    "id": "italian-minestrone",
-    "name": "Minestrone with beans and seasonal vegetables",
-    "meal": "light",
-    "cuisine": "Italian",
-    "time": 40,
-    "serves": 2,
-    "ing": [
-      [
-        "cannellini-beans",
-        240
-      ],
-      [
-        "pasta",
-        100
-      ],
-      [
-        "carrot",
-        120
-      ],
-      [
-        "celery",
-        100
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "zucchini",
-        180
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "vegetable-stock",
-        900
-      ],
-      [
-        "garlic",
-        "2pc"
-      ],
-      [
-        "olive-oil",
-        20
-      ],
-      [
-        "parmesan",
-        30
-      ],
-      [
-        "basil",
-        8
-      ]
-    ],
-    "steps": [
-      "Soften diced {onion}, {carrot} and {celery} in {olive-oil} for 8 minutes. Add {garlic}.",
-      "Add diced {zucchini}, chopped {tomato} and {vegetable-stock}; simmer 15 minutes.",
-      "Stir in drained {cannellini-beans} and {pasta}; simmer until pasta is tender, adding water if needed.",
-      "Serve with {basil} and grated {parmesan}."
-    ]
   },
   {
     "id": "italian-arancini",
@@ -2894,7 +2184,7 @@ KITCHEN.add(
   {
     "id": "italian-panna-cotta",
     "name": "Vanilla panna cotta with berry compote",
-    "meal": "sweet",
+    "meal": "treat",
     "cuisine": "Italian",
     "time": 25,
     "serves": 4,
@@ -2999,116 +2289,10 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "italian-pasta-e-fagioli",
-    "name": "Pasta e fagioli bean soup",
-    "cuisine": "Italian",
-    "meal": "light",
-    "time": 40,
-    "serves": 4,
-    "ing": [
-      [
-        "white-beans",
-        400
-      ],
-      [
-        "pasta",
-        120
-      ],
-      [
-        "carrot",
-        "1pc"
-      ],
-      [
-        "celery",
-        "1pc"
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "garlic",
-        "2pc"
-      ],
-      [
-        "passata",
-        200
-      ],
-      [
-        "vegetable-stock",
-        900
-      ],
-      [
-        "rosemary",
-        2
-      ],
-      [
-        "olive-oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Dice {carrot}, {celery} and {onion}; cook in {olive-oil} for 8 minutes. Add {garlic} and {rosemary} and stir briefly.",
-      "Add {passata}, {white-beans} and {vegetable-stock}. Simmer 15 minutes, mashing a few beans to thicken.",
-      "Add {pasta} and cook until tender, adding extra water if needed. Season and finish with olive oil."
-    ]
-  },
-  {
-    "id": "italian-chicken-cacciatore",
-    "name": "Chicken cacciatore with olives",
-    "cuisine": "Italian",
-    "meal": "big",
-    "time": 60,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        "6pc"
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "red-pepper",
-        "1pc"
-      ],
-      [
-        "garlic",
-        "3pc"
-      ],
-      [
-        "passata",
-        400
-      ],
-      [
-        "white-wine",
-        150
-      ],
-      [
-        "olives",
-        80
-      ],
-      [
-        "oregano",
-        2
-      ],
-      [
-        "olive-oil",
-        20
-      ]
-    ],
-    "steps": [
-      "Brown {chicken-thigh} in {olive-oil} on all sides; transfer to a plate.",
-      "Cook sliced {onion} and {red-pepper} until softened. Add {garlic}, then pour in {white-wine} and reduce by half.",
-      "Add {passata}, {olives} and {oregano}. Return chicken, cover and simmer 30–35 minutes until cooked through and tender."
-    ]
-  },
-  {
     "id": "italian-panzanella",
     "name": "Tuscan panzanella bread salad",
     "cuisine": "Italian",
-    "meal": "light",
+    "meal": "bite",
     "time": 20,
     "serves": 3,
     "ing": [
@@ -3152,45 +2336,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "italian-spaghetti-carbonara",
-    "name": "Spaghetti carbonara with egg, pecorino-style cheese and bacon",
-    "meal": "big",
-    "cuisine": "Italian",
-    "time": 25,
-    "serves": 2,
-    "ing": [
-      [
-        "pasta",
-        180
-      ],
-      [
-        "bacon",
-        100
-      ],
-      [
-        "eggs",
-        2
-      ],
-      [
-        "parmesan",
-        60
-      ],
-      [
-        "black-pepper",
-        2
-      ],
-      [
-        "salt",
-        2
-      ]
-    ],
-    "steps": [
-      "Cook {pasta} in salted water until al dente; reserve a mug of the cooking water.",
-      "Crisp diced {bacon} in a pan. Beat {eggs} with grated {parmesan} and plenty of {black-pepper}.",
-      "Toss drained pasta with the bacon off the heat, then quickly stir in the egg mixture with a splash of pasta water until glossy and creamy."
-    ]
-  },
-  {
     "id": "italian-gnocchi-sorrentina",
     "name": "Gnocchi alla Sorrentina baked with tomato and mozzarella",
     "meal": "big",
@@ -3220,7 +2365,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "olive-oil",
@@ -3240,7 +2385,7 @@ KITCHEN.add(
   {
     "id": "italian-sicilian-caponata",
     "name": "Sicilian caponata with aubergine, capers and olives",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Italian",
     "time": 40,
     "serves": 2,
@@ -3255,11 +2400,11 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "red-onion",
-        1
+        "1pc"
       ],
       [
         "green-olives",
@@ -3299,7 +2444,7 @@ KITCHEN.add(
   {
     "id": "italian-farinata-chickpea-flatbread",
     "name": "Ligurian farinata chickpea and rosemary flatbread",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Italian",
     "time": 40,
     "serves": 2,
@@ -3353,7 +2498,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "white-wine",
@@ -3400,7 +2545,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "fennel",
@@ -3412,7 +2557,7 @@ KITCHEN.add(
       ],
       [
         "lemon",
-        1
+        "1pc"
       ],
       [
         "olive-oil",
@@ -3451,7 +2596,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        1
+        "1pc"
       ],
       [
         "flour",
@@ -3506,12 +2651,11 @@ KITCHEN.add(
       ],
       [
         "red-pepper",
-        2
+        "2pc"
       ],
-      
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "ciabatta",
@@ -3546,7 +2690,7 @@ KITCHEN.add(
     "ing": [
       [
         "zucchini",
-        2
+        "2pc"
       ],
       [
         "beef-mince",
@@ -3554,7 +2698,7 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        1
+        "1pc"
       ],
       [
         "breadcrumbs",
@@ -3566,7 +2710,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "parsley",
@@ -3613,7 +2757,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        1
+        "1pc"
       ],
       [
         "pasta",
@@ -3633,7 +2777,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "parsley",
@@ -3715,7 +2859,7 @@ KITCHEN.add(
       ],
       [
         "orange",
-        1
+        "1pc"
       ],
       [
         "black-olives",
@@ -3762,15 +2906,15 @@ KITCHEN.add(
       ],
       [
         "carrot",
-        1
+        "1pc"
       ],
       [
         "celery",
-        1
+        "1pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "bay-leaf",
@@ -3804,7 +2948,7 @@ KITCHEN.add(
     "steps": [
       "Simmer {veal-shank} gently with {carrot}, {celery}, {onion}, {bay-leaf} and enough water to cover until tender, 40–45 minutes. Cool in the broth, then slice thinly.",
       "Blend {tuna}, {mayonnaise}, {capers}, {anchovies} and {lemon-juice} into a smooth sauce; thin with a spoon of cooking broth if needed.",
-      "Arrange veal slices on a platter, spoon over the {tuna} sauce and chill at least 30 minutes. Finish with extra capers."
+      "Arrange veal slices on a platter, spoon over the {tuna} sauce and chill at least 30 minutes. Finish with extra capers and {black-pepper}."
     ]
   },
   {
@@ -3821,7 +2965,7 @@ KITCHEN.add(
       ],
       [
         "prosciutto",
-        4
+        40
       ],
       [
         "sage",
@@ -3849,8 +2993,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Lay {prosciutto} and a {sage} leaf on each thin veal slice; secure with a toothpick and lightly dust the underside with {flour}.",
-      "Melt half the {butter} in a skillet and cook the veal prosciutto-side down first, then turn briefly until just cooked. Season with {black-pepper}.",
+      "Lay {prosciutto} and a {sage} leaf on each thin {chicken-breast} cutlet; secure with a toothpick and lightly dust the underside with {flour}.",
+      "Melt half the {butter} in a skillet and cook the chicken prosciutto-side down first, then turn and cook 3–4 minutes until cooked through. Season with {black-pepper} and {salt}.",
       "Remove the meat; add {white-wine} to the pan and reduce, scraping up browned bits. Whisk in remaining {butter} and spoon sauce over the saltimbocca."
     ]
   },
@@ -3884,7 +3028,7 @@ KITCHEN.add(
       ],
       [
         "lemon",
-        1
+        "1pc"
       ],
       [
         "jam",
@@ -4085,7 +3229,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ricotta",
@@ -4137,7 +3281,7 @@ KITCHEN.add(
       ],
       [
         "red-onion",
-        1
+        "1pc"
       ],
       [
         "olive-oil",
@@ -4197,14 +3341,15 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Mix {tuna}, {white-beans}, thinly sliced {red-onion}, {olive-oil}, juice of the {lemon} and chopped {parsley}.",
-      "Toast {bread} and pile the salad on top."
+      "Drain the {tuna} and {white-beans}.",
+      "Mix with thinly sliced {red-onion}, {olive-oil}, the juice of the {lemon} and chopped {parsley}.",
+      "Toast the {bread} and pile the salad on top."
     ]
   },
   {
     "id": "left-rice-arancini",
     "name": "Crispy rice balls from leftover rice",
-    "meal": "big,bite",
+    "meal": "bite",
     "cuisine": "Italian",
     "time": 35,
     "serves": 2,
@@ -4292,7 +3437,7 @@ KITCHEN.add(
   {
     "id": "left-roast-veg-frittata",
     "name": "Roast vegetable and feta frittata",
-    "meal": "big,wake",
+    "meal": "big",
     "cuisine": "Italian",
     "time": 20,
     "serves": 2,
@@ -4372,50 +3517,6 @@ KITCHEN.add(
       "Dice the {tomato} and {cucumber}; halve the {black-olives}.",
       "Whisk the {olive-oil} with juice from the {lemon}, salt, and pepper.",
       "Toss everything with the dressing and crumble the {feta} over the top."
-    ]
-  },
-  {
-    "id": "stale-bread-tomato-soup",
-    "name": "Tomato soup thickened with stale bread",
-    "meal": "big",
-    "cuisine": "Italian",
-    "time": 30,
-    "serves": 2,
-    "ing": [
-      [
-        "stale-bread",
-        180
-      ],
-      [
-        "canned-tomatoes",
-        400
-      ],
-      [
-        "vegetable-stock",
-        500
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "garlic",
-        10
-      ],
-      [
-        "olive-oil",
-        20
-      ],
-      [
-        "basil",
-        10
-      ]
-    ],
-    "steps": [
-      "Chop the {onion} and cook it in the {olive-oil} until soft; add the chopped {garlic} for 30 seconds.",
-      "Pour in the {canned-tomatoes} and {vegetable-stock}; simmer for 10 minutes.",
-      "Tear the {stale-bread} into the pot and simmer until it softens and thickens the soup.",
-      "Blend until smooth or leave rustic, then tear the {basil} over the top."
     ]
   },
   {
@@ -4509,55 +3610,51 @@ KITCHEN.add(
     "name": "Bagna càuda (Piedmontese warm anchovy and garlic dip)",
     "meal": "bite",
     "cuisine": "Italian",
-    "time": 25,
-    "serves": 2,
+    "time": 30,
+    "serves": 4,
     "ing": [
       [
-        "anchovies",
-        3
-      ],
-      [
-        "garlic",
-        3
-      ],
-      [
         "olive-oil",
-        15
+        100
       ],
       [
         "butter",
-        35
+        50
       ],
       [
-        "carrot",
-        150
+        "garlic",
+        "6pc"
       ],
       [
-        "celery",
-        80
-      ],
-      [
-        "radish",
-        80
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "salt",
-        3
+        "anchovies",
+        40
       ],
       [
         "black-pepper",
         1
+      ],
+      [
+        "carrot",
+        "2pc"
+      ],
+      [
+        "celery",
+        "2pc"
+      ],
+      [
+        "radish",
+        100
+      ],
+      [
+        "red-pepper",
+        "1pc"
       ]
     ],
     "steps": [
-      "Prepare and measure all ingredients, then heat the pan or pot over medium heat.",
-      "Cook {anchovies} with the seasonings until the dish reaches its intended texture and the flavours meld.",
-      "Warm anchovies and sliced garlic very gently in olive oil and butter until they melt into a savoury dip; keep warm and serve with crisp raw or blanched vegetables for dipping.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cut the {carrot}, {celery}, {radish} and {red-pepper} into sticks and arrange on a platter.",
+      "Gently warm the {olive-oil} and {butter} in a small pan over low heat. Add the finely sliced {garlic} and cook for 10 minutes without browning.",
+      "Add the chopped {anchovies} and stir for 5 minutes until they melt into a smooth sauce. Season with {black-pepper}.",
+      "Keep the dip warm and serve with the vegetables for dipping."
     ]
   },
   {
@@ -4565,44 +3662,44 @@ KITCHEN.add(
     "name": "Pasta con le sarde (Sicilian pasta with sardines and fennel)",
     "meal": "big",
     "cuisine": "Italian",
-    "time": 35,
+    "time": 40,
     "serves": 2,
     "ing": [
       [
         "pasta",
-        180
-      ],
-      [
-        "sardines",
         200
       ],
       [
-        "fennel",
-        100
-      ],
-      [
-        "raisins",
-        50
-      ],
-      [
-        "pine-nuts",
-        100
+        "olive-oil",
+        40
       ],
       [
         "onion",
         "1pc"
       ],
       [
+        "fennel",
+        200
+      ],
+      [
+        "sardines",
+        200
+      ],
+      [
+        "raisins",
+        40
+      ],
+      [
+        "pine-nuts",
+        30
+      ],
+      [
         "saffron",
-        100
+        1
       ],
       [
         "breadcrumbs",
-        60
-      ],
-      [
-        "olive-oil",
-        15
+        50
       ],
       [
         "lemon",
@@ -4618,10 +3715,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {olive-oil} in a wok or large skillet; stir-fry {onion} with the main ingredients.",
-      "Toss the noodles through the sauce over high heat so they absorb the seasoning without turning soft.",
-      "Soften onion and fennel in olive oil, add {sardines} and a pinch of saffron, then fold in raisins and pine nuts; toss with pasta and finish with toasted breadcrumbs and lemon.",
-      "Finish with a little {lemon} if needed, taste for seasoning and serve while the texture is at its best."
+      "Cook the {pasta} in salted water according to the packet and reserve a cup of the water.",
+      "Toast the {breadcrumbs} in half the {olive-oil} until golden and set aside.",
+      "Soften diced {onion} and {fennel} in the remaining oil for 8 minutes. Add the {raisins}, {pine-nuts} and {saffron} dissolved in a little hot water.",
+      "Add the {sardines} and break them up as they warm through, about 4 minutes. Toss with the pasta and a splash of cooking water, season with {salt} and {black-pepper} and finish with the zest and juice of the {lemon} and the breadcrumbs."
     ]
   }
 ]

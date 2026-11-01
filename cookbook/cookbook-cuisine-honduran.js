@@ -39,68 +39,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Warm the {flour-tortillas} in a dry skillet until soft and pliable. Warm the {beans} and mash with a splash of water.",
-      "Spread {beans} across each tortilla; add grated {cheese}, a spoon of {sour-cream} and sliced {avocado}.",
+      "Warm the {flour-tortillas} in a dry skillet for 30 seconds per side until soft and pliable. Heat the {beans} in the {oil} with the {salt} for 5 minutes, mashing with a splash of water.",
+      "Spread the beans across each tortilla; add grated {cheese}, a spoon of {sour-cream} and sliced {avocado}.",
       "Fold the tortillas in half and serve immediately while warm."
-    ]
-  },
-  {
-    "id": "hn-pollo-chuco",
-    "name": "Pollo chuco-inspired Honduran fried chicken with cabbage and sauce",
-    "meal": "big",
-    "cuisine": "Honduran",
-    "time": 45,
-    "serves": 2,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "potatoes",
-        350
-      ],
-      [
-        "flour",
-        80
-      ],
-      [
-        "paprika",
-        3
-      ],
-      [
-        "garlic-powder",
-        3
-      ],
-      [
-        "cabbage",
-        120
-      ],
-      [
-        "tomato",
-        100
-      ],
-      [
-        "mayonnaise",
-        40
-      ],
-      [
-        "oil",
-        500
-      ],
-      [
-        "salt",
-        4
-      ],
-      [
-        "lime",
-        "1pc"
-      ]
-    ],
-    "steps": [
-      "Season {chicken-thigh} with {paprika}, {garlic-powder} and {salt}; dredge lightly in {flour}. Fry in hot {oil} until golden and fully cooked.",
-      "Cut {potatoes} into thin fries and fry until crisp. Shred {cabbage} and toss with chopped {tomato}, {mayonnaise} and a squeeze of {lime}.",
-      "Serve chicken over fries with the cabbage salad and extra lime."
     ]
   },
   {
@@ -274,7 +215,7 @@ KITCHEN.add(
       ],
       [
         "plantain",
-        1
+        "1pc"
       ],
       [
         "potatoes",
@@ -316,41 +257,60 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "honduran-baleadas-with-beans",
-    "name": "Honduran Baleadas with Beans",
+    "id": "honduran-plato-tipico",
+    "name": "Plato Típico Hondureño (grilled steak, beans, rice and fried plantain)",
     "meal": "big",
     "cuisine": "Honduran",
-    "time": 30,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "beef-steak",
+        500
       ],
       [
-        "black-beans",
-        250
+        "kidney-beans",
+        400
       ],
       [
         "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
+        200
       ],
       [
         "plantain",
-        2
+        "2pc"
       ],
       [
-        "red-pepper",
-        1
+        "queso-fresco",
+        100
+      ],
+      [
+        "sour-cream",
+        60
+      ],
+      [
+        "avocado",
+        "1pc"
+      ],
+      [
+        "oil",
+        60
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "garlic",
+        "2pc"
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Rub the {beef-steak} with crushed {garlic} and half of the {salt} and rest for 15 minutes. Cook the {rice} in 400 ml water with a pinch of the remaining salt, covered, on low heat for 15 minutes.",
+      "Warm the {kidney-beans} with 100 ml water for 10 minutes, mashing some of them.",
+      "Slice the {plantain} and fry in half of the {oil} for 3 minutes per side until golden; set aside.",
+      "Sear the steak in the remaining oil for 4 minutes per side, rest for 5 minutes and slice.",
+      "Serve the steak with the rice, beans, plantain, crumbled {queso-fresco}, {sour-cream} and sliced {avocado}."
     ]
   },
   {
@@ -477,37 +437,43 @@ KITCHEN.add(
     "name": "Honduran Bean and Cheese Pupusas",
     "meal": "big",
     "cuisine": "Honduran",
-    "time": 51,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "masa-harina",
+        300
       ],
       [
-        "black-beans",
+        "refried-beans",
         250
       ],
       [
-        "rice",
-        250
+        "cheese",
+        200
       ],
       [
-        "tomato",
-        250
+        "cabbage",
+        200
       ],
       [
-        "plantain",
-        2
+        "vinegar",
+        40
       ],
       [
-        "red-pepper",
-        1
+        "salt",
+        4
+      ],
+      [
+        "oil",
+        20
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Shred the {cabbage} finely and toss with the {vinegar} and half of the {salt}; leave to pickle while you make the pupusas.",
+      "Mix the {masa-harina} with 450 ml warm water and the remaining salt into a soft dough and rest for 10 minutes.",
+      "Mix the {refried-beans} with grated {cheese}. Divide the dough into 8 balls, flatten each, fill with a spoonful of the mixture, close and pat into 1 cm discs.",
+      "Cook on a hot griddle brushed with the {oil} for 4–5 minutes per side until speckled brown. Serve with the cabbage."
     ]
   },
   {
@@ -623,41 +589,46 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "honduran-cabbage-lime-slaw",
-    "name": "Honduran Cabbage Lime Slaw",
-    "meal": "big",
+    "id": "honduran-ceviche",
+    "name": "Honduran Ceviche de Pescado (lime-cured fish)",
+    "meal": "bite",
     "cuisine": "Honduran",
-    "time": 25,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "white-fish",
+        500
       ],
       [
-        "black-beans",
-        250
+        "lime",
+        "6pc"
       ],
       [
-        "rice",
-        250
+        "red-onion",
+        "1pc"
       ],
       [
         "tomato",
-        250
+        "2pc"
       ],
       [
-        "plantain",
-        2
+        "cilantro",
+        15
       ],
       [
-        "red-pepper",
-        1
+        "green-chilli",
+        "1pc"
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Dice the {white-fish} into 1 cm cubes (use very fresh fish suitable for eating raw) and cover with the juice of the {lime} and the {salt}; refrigerate for 20 minutes until opaque.",
+      "Finely dice the {red-onion} and {tomato} and chop the {cilantro} and {green-chilli}.",
+      "Mix the vegetables into the fish with a little of the lime juice and serve at once with crackers or tortilla chips."
     ]
   },
   {
@@ -786,42 +757,59 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "honduran-black-bean-and-rice-bowl",
-    "name": "Honduran Black Bean and Rice Bowl",
+    "id": "honduran-tamales",
+    "name": "Honduran Tamales with Pork and Potato",
     "meal": "big",
     "cuisine": "Honduran",
-    "time": 46,
-    "serves": 4,
+    "time": 140,
+    "serves": 6,
     "ing": [
       [
-        "salt",
-        3
+        "masa-harina",
+        400
       ],
       [
-        "chicken-thigh",
-        450
+        "pork-shoulder",
+        500
       ],
       [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
+        "potatoes",
         250
       ],
       [
         "tomato",
-        250
+        "3pc"
       ],
       [
-        "plantain",
-        2
+        "onion",
+        "1pc"
+      ],
+      [
+        "red-pepper",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "oil",
+        60
+      ],
+      [
+        "salt",
+        5
+      ],
+      [
+        "chicken-stock",
+        500
       ]
     ],
     "steps": [
-      "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Cut the {pork-shoulder} into 3 cm cubes. Blend the {tomato}, {onion}, {red-pepper} and {garlic}, fry in half of the {oil} for 5 minutes, add the pork and 300 ml of the {chicken-stock} and simmer for 45 minutes until tender, adding the diced {potatoes} for the last 15 minutes.",
+      "Mix the {masa-harina} with the remaining stock, the remaining oil and the {salt} into a soft dough.",
+      "Spread the dough on squares of foil (or banana leaf), add a spoonful of the filling and wrap into tight parcels.",
+      "Steam over simmering water for 1 hour until firm."
     ]
   },
   {
@@ -971,46 +959,38 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "honduran-corn-and-cheese-bake",
-    "name": "Honduran Corn and Cheese Bake",
-    "meal": "big",
+    "id": "honduran-atol-de-elote",
+    "name": "Atol de Elote (Honduran sweet corn porridge)",
+    "meal": "morning",
     "cuisine": "Honduran",
-    "time": 38,
+    "time": 25,
     "serves": 4,
     "ing": [
       [
-        "black-beans",
-        250
+        "sweetcorn",
+        400
       ],
       [
-        "rice",
-        250
+        "milk",
+        500
       ],
       [
-        "tomato",
-        250
+        "sugar",
+        60
       ],
       [
-        "plantain",
+        "cinnamon",
         2
       ],
       [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
+        "salt",
         1
       ]
     ],
     "steps": [
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {black-beans} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Blend the {sweetcorn} with the {milk} until smooth and strain through a sieve.",
+      "Pour into a pot with the {sugar}, {cinnamon} and {salt} and simmer over low heat for 15 minutes, stirring constantly, until thick.",
+      "Serve hot in mugs or bowls."
     ]
   }
 ]

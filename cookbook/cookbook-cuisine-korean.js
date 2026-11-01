@@ -4,7 +4,7 @@ KITCHEN.add(
   {
     "id": "left-rice-pancakes",
     "name": "Savory pancakes from leftover rice",
-    "meal": "big,wake",
+    "meal": "morning",
     "cuisine": "Korean",
     "time": 20,
     "serves": 2,
@@ -67,7 +67,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Layer grated {cheddar} and chopped {kimchi} between slices of {bread}. Butter the outsides with {butter}.",
+      "Layer grated {cheddar} and chopped {kimchi} between slices of {bread}.",
+      "Butter the outsides of the sandwiches with {butter}.",
       "Toast in a pan for 3 minutes per side until crisp and melted."
     ]
   },
@@ -132,130 +133,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-bulgogi",
-    "name": "Korean bulgogi beef",
-    "meal": "big",
-    "cuisine": "Korean",
-    "time": 30,
-    "serves": 2,
-    "ing": [
-      [
-        "beef-strips",
-        320
-      ],
-      [
-        "soy-sauce",
-        30
-      ],
-      [
-        "honey",
-        15
-      ],
-      [
-        "sesame-oil",
-        10
-      ],
-      [
-        "garlic",
-        10
-      ],
-      [
-        "ginger",
-        8
-      ],
-      [
-        "pear",
-        100
-      ],
-      [
-        "spring-onion",
-        40
-      ],
-      [
-        "sesame-seeds",
-        10
-      ],
-      [
-        "rice",
-        150
-      ],
-      [
-        "lettuce",
-        120
-      ]
-    ],
-    "steps": [
-      "Grate {pear} into a bowl and mix with {soy-sauce}, {honey}, {sesame-oil}, minced {garlic} and {ginger}.",
-      "Toss {beef-strips} with the marinade and leave for 15 minutes while preparing {rice}.",
-      "Sear the beef in a very hot skillet in a single layer, working in batches if needed, until browned and just cooked.",
-      "Sprinkle with sliced {spring-onion} and {sesame-seeds}; serve with rice and {lettuce} leaves for wrapping."
-    ]
-  },
-  {
-    "id": "world-bibimbap",
-    "name": "Korean bibimbap bowl",
-    "meal": "big",
-    "cuisine": "Korean",
-    "time": 35,
-    "serves": 2,
-    "ing": [
-      [
-        "rice",
-        160
-      ],
-      [
-        "beef-mince",
-        220
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "carrot",
-        100
-      ],
-      [
-        "spinach",
-        100
-      ],
-      [
-        "mushrooms",
-        120
-      ],
-      [
-        "cucumber",
-        100
-      ],
-      [
-        "gochujang",
-        25
-      ],
-      [
-        "soy-sauce",
-        15
-      ],
-      [
-        "sesame-oil",
-        12
-      ],
-      [
-        "garlic",
-        8
-      ],
-      [
-        "sesame-seeds",
-        8
-      ]
-    ],
-    "steps": [
-      "Cook {rice}. Mix {gochujang}, {soy-sauce} and half the {sesame-oil} to make a serving sauce.",
-      "Sauté matchsticks of {carrot}, sliced {mushrooms} and {spinach} separately with a little {garlic} and remaining {sesame-oil}; keep each topping distinct.",
-      "Cook {beef-mince} with the remaining {garlic} until browned and fully cooked. Fry {eggs} sunny-side up.",
-      "Divide the rice between bowls and arrange the beef, vegetables and sliced {cucumber} on top. Add the eggs, sauce and {sesame-seeds}; mix at the table."
-    ]
-  },
-  {
     "id": "world-korean-pajeon",
     "name": "Korean spring onion pancake (pajeon)",
     "meal": "big",
@@ -305,66 +182,6 @@ KITCHEN.add(
       "Heat half the {oil} in a skillet; arrange the spring onions and {prawns} in a single layer and pour the batter over them.",
       "Cook 4–5 minutes until the underside is crisp, flip carefully and cook until the prawns are opaque and the batter is set.",
       "Mix {soy-sauce}, {vinegar} and {chilli-flakes} for a dipping sauce; cut the pancake into wedges."
-    ]
-  },
-  {
-    "id": "world-korean-japchae",
-    "name": "Korean japchae-style sweet potato noodles",
-    "meal": "big",
-    "cuisine": "Korean",
-    "time": 30,
-    "serves": 2,
-    "ing": [
-      [
-        "sweet-potato-noodles",
-        180
-      ],
-      [
-        "beef-strips",
-        180
-      ],
-      [
-        "spinach",
-        120
-      ],
-      [
-        "carrot",
-        100
-      ],
-      [
-        "mushrooms",
-        100
-      ],
-      [
-        "soy-sauce",
-        25
-      ],
-      [
-        "sesame-oil",
-        15
-      ],
-      [
-        "sugar",
-        8
-      ],
-      [
-        "garlic",
-        8
-      ],
-      [
-        "sesame-seeds",
-        10
-      ],
-      [
-        "spring-onion",
-        30
-      ]
-    ],
-    "steps": [
-      "Cook {sweet-potato-noodles} according to the package directions, rinse briefly and drain well.",
-      "Mix {soy-sauce}, {sesame-oil}, {sugar} and minced {garlic}; toss half the sauce with the {beef-strips}.",
-      "Sear the beef until cooked through. Sauté sliced {carrot}, {mushrooms} and {spinach} separately until just tender.",
-      "Toss noodles with the remaining sauce, beef and vegetables until evenly coated. Finish with {sesame-seeds} and {spring-onion}."
     ]
   },
   {
@@ -723,53 +540,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "korean-kimchi-left-rice-skillet",
-    "name": "Kimchi fried rice with egg",
-    "meal": "big",
-    "cuisine": "Korean",
-    "time": 15,
-    "serves": 2,
-    "ing": [
-      [
-        "left-rice",
-        350
-      ],
-      [
-        "kimchi",
-        120
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "spring-onion",
-        35
-      ],
-      [
-        "gochujang",
-        15
-      ],
-      [
-        "soy-sauce",
-        10
-      ],
-      [
-        "sesame-oil",
-        8
-      ],
-      [
-        "sesame-seeds",
-        5
-      ]
-    ],
-    "steps": [
-      "Use cold cooked {left-rice}; break up any clumps. Chop {kimchi} and reserve a little of its juice.",
-      "Stir-fry kimchi in a hot pan for 2 minutes. Add {gochujang}, {soy-sauce} and rice; toss until piping hot and evenly coated.",
-      "Fry {eggs} separately and place on the rice. Finish with {spring-onion}, {sesame-oil} and {sesame-seeds}."
-    ]
-  },
-  {
     "id": "korean-bulgogi-mushroom-lettuce-wraps",
     "name": "Korean-style mushroom lettuce wraps",
     "meal": "big",
@@ -821,114 +591,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-korean-gochujang-tofu-bowl",
-    "name": "Gochujang tofu rice bowl",
-    "meal": "big",
-    "time": 25,
-    "serves": 2,
-    "ing": [
-      [
-        "tofu",
-        300
-      ],
-      [
-        "gochujang",
-        20
-      ],
-      [
-        "soy-sauce",
-        15
-      ],
-      [
-        "honey",
-        10
-      ],
-      [
-        "rice",
-        140
-      ],
-      [
-        "cucumber",
-        120
-      ],
-      [
-        "carrot",
-        100
-      ],
-      [
-        "sesame-seeds",
-        8
-      ],
-      [
-        "sesame-oil",
-        8
-      ]
-    ],
-    "steps": [
-      "Cook {rice}. Press {tofu} dry and cut into cubes.",
-      "Mix {gochujang}, {soy-sauce}, {honey}, {sesame-oil} and 1 tablespoon of water.",
-      "Brown tofu in a skillet, pour over the sauce and toss until sticky and heated through.",
-      "Serve over rice with sliced {cucumber}, grated {carrot} and {sesame-seeds}."
-    ],
-    "cuisine": "Korean"
-  },
-  {
-    "id": "world-korean-bibimbap",
-    "name": "Korean bibimbap rice bowls",
-    "meal": "big",
-    "cuisine": "Korean",
-    "time": 40,
-    "serves": 4,
-    "ing": [
-      [
-        "rice",
-        300
-      ],
-      [
-        "beef-mince",
-        350
-      ],
-      [
-        "spinach",
-        200
-      ],
-      [
-        "carrot",
-        2
-      ],
-      [
-        "mushrooms",
-        200
-      ],
-      [
-        "eggs",
-        "4pc"
-      ],
-      [
-        "soy-sauce",
-        35
-      ],
-      [
-        "gochujang",
-        50
-      ],
-      [
-        "sesame-oil",
-        20
-      ],
-      [
-        "garlic",
-        3
-      ]
-    ],
-    "steps": [
-      "Cook the {rice}. Mix {gochujang} with a little water and a teaspoon of {sesame-oil} to make a spoonable sauce.",
-      "Cook the {beef-mince} with half the {soy-sauce} and minced {garlic} until browned. Sauté sliced {mushrooms} and julienned {carrot} separately.",
-      "Wilt the {spinach} and season lightly with the remaining {soy-sauce} and a few drops of sesame oil. Fry the {eggs} sunny-side up.",
-      "Divide rice among bowls and arrange beef and vegetables in separate sections. Top each with an egg and serve with gochujang sauce to taste."
-    ]
-  },
-  {
     "id": "world-korean-kimchi-pancakes",
     "name": "Korean kimchi pancakes",
     "meal": "bite",
@@ -950,7 +612,7 @@ KITCHEN.add(
       ],
       [
         "spring-onion",
-        2
+        "2pc"
       ],
       [
         "soy-sauce",
@@ -975,7 +637,7 @@ KITCHEN.add(
   {
     "id": "korean-bibim-guksu",
     "name": "Spicy cold Korean noodles with cucumber",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Korean",
     "time": 20,
     "serves": 2,
@@ -1105,7 +767,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -1121,7 +783,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "sesame-oil",
@@ -1176,7 +838,7 @@ KITCHEN.add(
       ],
       [
         "spring-onion",
-        2
+        "2pc"
       ],
       [
         "sesame-seeds",
@@ -1211,7 +873,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "soy-sauce",
@@ -1219,11 +881,11 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        2
+        "2pc"
       ],
       [
         "spring-onion",
-        3
+        "3pc"
       ],
       [
         "nori",
@@ -1247,18 +909,18 @@ KITCHEN.add(
   {
     "id": "korean-street-toast",
     "name": "Korean street toast with cabbage, egg and cheese",
-    "meal": "quick",
+    "meal": "bite",
     "cuisine": "Korean",
     "time": 20,
     "serves": 2,
     "ing": [
       [
         "bread",
-        4
+        "4pc"
       ],
       [
         "eggs",
-        3
+        "3pc"
       ],
       [
         "cabbage",
@@ -1270,7 +932,7 @@ KITCHEN.add(
       ],
       [
         "spring-onion",
-        2
+        "2pc"
       ],
       [
         "cheddar",
@@ -1306,7 +968,7 @@ KITCHEN.add(
   {
     "id": "korean-corn-cheese",
     "name": "Korean corn cheese with mozzarella and scallions",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Korean",
     "time": 15,
     "serves": 2,
@@ -1333,7 +995,7 @@ KITCHEN.add(
       ],
       [
         "spring-onion",
-        2
+        "2pc"
       ],
       [
         "black-pepper",
@@ -1349,7 +1011,7 @@ KITCHEN.add(
   {
     "id": "korean-oi-muchim-cucumber",
     "name": "Oi muchim Korean spicy cucumber salad",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Korean",
     "time": 15,
     "serves": 2,
@@ -1376,7 +1038,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "sugar",
@@ -1388,7 +1050,7 @@ KITCHEN.add(
       ],
       [
         "spring-onion",
-        2
+        "2pc"
       ]
     ],
     "steps": [
@@ -1447,7 +1109,7 @@ KITCHEN.add(
       ],
       [
         "spring-onion",
-        2
+        "2pc"
       ]
     ],
     "steps": [
@@ -1502,11 +1164,11 @@ KITCHEN.add(
       ],
       [
         "spring-onion",
-        3
+        "3pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ]
     ],
     "steps": [
@@ -1518,7 +1180,7 @@ KITCHEN.add(
   {
     "id": "korean-kongguksu",
     "name": "Cold Korean tofu-sesame noodle soup",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Korean",
     "time": 25,
     "serves": 2,
@@ -1541,7 +1203,7 @@ KITCHEN.add(
       ],
       [
         "cucumber",
-        1
+        "1pc"
       ],
       [
         "salt",
@@ -1580,7 +1242,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "spring-onion",
@@ -1651,7 +1313,7 @@ KITCHEN.add(
   {
     "id": "korean-gamja-jorim",
     "name": "Gamja jorim (Korean soy-braised potatoes)",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Korean",
     "time": 30,
     "serves": 3,
@@ -1670,7 +1332,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "water",
@@ -1749,62 +1411,6 @@ KITCHEN.add(
       "Add chopped {kimchi}, {onion} and {garlic}; fry for 5 minutes.",
       "Stir in {gochujang} and {gochugaru}, pour in {vegetable-stock} and simmer 20 minutes.",
       "Add cubes of {tofu}; simmer 5 minutes more and garnish with {spring-onion}."
-    ]
-  },
-  {
-    "id": "korean-bulgogi-beef",
-    "name": "Bulgogi marinated beef lettuce wraps",
-    "meal": "big",
-    "cuisine": "Korean",
-    "time": 30,
-    "serves": 3,
-    "ing": [
-      [
-        "beef-strips",
-        450
-      ],
-      [
-        "soy-sauce",
-        45
-      ],
-      [
-        "pear",
-        100
-      ],
-      [
-        "garlic",
-        "3pc"
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "brown-sugar",
-        15
-      ],
-      [
-        "sesame-oil",
-        12
-      ],
-      [
-        "spring-onion",
-        30
-      ],
-      [
-        "lettuce",
-        150
-      ],
-      [
-        "sesame-seeds",
-        8
-      ]
-    ],
-    "steps": [
-      "Blend or grate {pear}; mix with {soy-sauce}, {garlic}, {ginger}, {brown-sugar} and {sesame-oil}.",
-      "Toss {beef-strips} in marinade and rest 20 minutes.",
-      "Sear beef in batches in a very hot skillet until caramelized; add sliced {spring-onion}.",
-      "Sprinkle with {sesame-seeds} and serve in {lettuce} leaves."
     ]
   },
   {
@@ -1916,128 +1522,58 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "ko-japchae",
-    "name": "Japchae (Korean glass noodles with vegetables and beef)",
-    "meal": "big",
-    "cuisine": "Korean",
-    "time": 35,
-    "serves": 2,
-    "ing": [
-      [
-        "sweet-potato-noodles",
-        160
-      ],
-      [
-        "beef-strips",
-        350
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "carrot",
-        150
-      ],
-      [
-        "shiitake-mushrooms",
-        100
-      ],
-      [
-        "soy-sauce",
-        25
-      ],
-      [
-        "sesame-oil",
-        10
-      ],
-      [
-        "garlic",
-        3
-      ],
-      [
-        "sugar",
-        35
-      ],
-      [
-        "sesame-seeds",
-        10
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "oil",
-        15
-      ]
-    ],
-    "steps": [
-      "Cook {sweet-potato-noodles} according to its packet, drain and reserve a little cooking water.",
-      "Heat {oil} in a wok or large skillet; stir-fry {garlic} with the main ingredients.",
-      "Toss the noodles through the sauce over high heat so they absorb the seasoning without turning soft.",
-      "Cook glass noodles separately, stir-fry each vegetable briefly to keep its colour, then toss everything with soy, sesame oil and a little sugar before serving.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
-    ]
-  },
-  {
     "id": "ko-bossam",
-    "name": "Bossam (Korean boiled pork slices with garlic and greens)",
+    "name": "Bossam (Korean boiled pork belly with greens and kimchi)",
     "meal": "big",
     "cuisine": "Korean",
-    "time": 75,
-    "serves": 2,
+    "time": 90,
+    "serves": 4,
     "ing": [
       [
         "pork-belly",
-        350
+        700
       ],
       [
-        "garlic",
-        3
+        "water",
+        1500
       ],
       [
         "ginger",
-        12
-      ],
-      [
-        "soy-sauce",
-        25
-      ],
-      [
-        "lettuce",
-        100
-      ],
-      [
-        "kimchi",
-        120
-      ],
-      [
-        "gochujang",
         20
       ],
       [
+        "garlic",
+        "4pc"
+      ],
+      [
+        "soy-sauce",
+        40
+      ],
+      [
+        "spring-onion",
+        "2pc"
+      ],
+      [
         "salt",
-        3
+        4
       ],
       [
-        "black-pepper",
-        1
+        "lettuce",
+        150
       ],
       [
-        "oil",
-        15
+        "kimchi",
+        200
+      ],
+      [
+        "gochujang",
+        30
       ]
     ],
     "steps": [
-      "Bring the steaming water or cooking liquid to a steady simmer and prepare the ingredients in even-sized portions.",
-      "Cook {pork-belly} gently until just set or tender, taking care not to boil hard or overcook the texture.",
-      "Simmer pork slowly with garlic and ginger until tender, rest and slice thinly; serve with lettuce, kimchi and a dab of gochujang for wrapping at the table.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Put the {pork-belly} in a pot with the {water}, {ginger}, half the {garlic}, {soy-sauce}, {spring-onion} and {salt}. Bring to the boil, skim, then cover and simmer gently for 1 hour until tender.",
+      "Rest the pork in its liquid for 10 minutes, then lift out and slice thinly.",
+      "Slice the remaining {garlic}. Serve the pork with {lettuce} leaves, {kimchi}, {gochujang} and the garlic so everyone can wrap their own parcels."
     ]
   }
 ]

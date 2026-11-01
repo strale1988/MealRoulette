@@ -2,56 +2,9 @@
 KITCHEN.add(
 [
   {
-    "id": "world-irish-colcannon",
-    "leftoverSwaps": [
-      "potatoes"
-    ],
-    "name": "Irish colcannon",
-    "meal": "big",
-    "time": 30,
-    "serves": 2,
-    "ing": [
-      [
-        "potatoes",
-        500
-      ],
-      [
-        "cabbage",
-        180
-      ],
-      [
-        "spring-onion",
-        40
-      ],
-      [
-        "butter",
-        35
-      ],
-      [
-        "milk",
-        80
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Boil {potatoes} in salted water until tender; drain well and mash.",
-      "Finely shred {cabbage} and cook in a little water until tender; drain. Warm {milk} with sliced {spring-onion}.",
-      "Beat the cabbage and warm milk mixture into the mash with {butter}; season with {salt} and {black-pepper}.",
-      "Make a well in the centre and add a small knob of butter if desired; serve hot."
-    ],
-    "cuisine": "Irish"
-  },
-  {
     "id": "bake-cheese-herb-soda-farls",
     "name": "Irish-style cheddar and herb soda farls",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Irish",
     "time": 30,
     "serves": 2,
@@ -93,35 +46,35 @@ KITCHEN.add(
   },
   {
     "id": "ie-colcannon",
-    "name": "Colcannon (Irish mashed potatoes with cabbage and scallions)",
+    "name": "Colcannon (Irish mashed potatoes with cabbage and spring onions)",
     "meal": "big",
     "cuisine": "Irish",
-    "time": 30,
-    "serves": 2,
+    "time": 40,
+    "serves": 4,
     "ing": [
       [
         "potatoes",
-        350
+        800
       ],
       [
         "cabbage",
-        200
+        300
       ],
       [
         "spring-onion",
-        "2pc"
+        "4pc"
       ],
       [
         "butter",
-        35
+        80
       ],
       [
         "milk",
-        250
+        150
       ],
       [
         "salt",
-        3
+        4
       ],
       [
         "black-pepper",
@@ -129,10 +82,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare and measure all ingredients, then heat the pan or pot over medium heat.",
-      "Cook {potatoes} with the seasonings until the dish reaches its intended texture and the flavours meld.",
-      "Boil potatoes until fluffy, wilt finely sliced cabbage in butter, then fold it through the mash with warm milk and scallions; make a small well for extra butter.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Peel and chunk the {potatoes} and boil in salted water for 20 minutes until fluffy. Drain and return to the pot to steam dry.",
+      "Melt half the {butter} in a pan, wilt the finely shredded {cabbage} with sliced {spring-onion} for 6 minutes.",
+      "Mash the potatoes with the warm {milk}, {salt} and {black-pepper}, then fold in the cabbage.",
+      "Serve in bowls with a well of the remaining {butter} in the centre."
     ]
   },
   {
@@ -190,31 +143,31 @@ KITCHEN.add(
   },
   {
     "id": "ie-champ",
-    "name": "Irish champ potatoes with spring onion butter",
+    "name": "Irish champ (mashed potatoes with spring onion butter)",
     "meal": "big",
     "cuisine": "Irish",
-    "time": 25,
-    "serves": 2,
+    "time": 30,
+    "serves": 4,
     "ing": [
       [
         "potatoes",
-        350
+        800
       ],
       [
         "spring-onion",
-        "2pc"
-      ],
-      [
-        "butter",
-        35
+        "6pc"
       ],
       [
         "milk",
-        250
+        200
+      ],
+      [
+        "butter",
+        80
       ],
       [
         "salt",
-        3
+        4
       ],
       [
         "black-pepper",
@@ -222,10 +175,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare and measure all ingredients, then heat the pan or pot over medium heat.",
-      "Cook {potatoes} with the seasonings until the dish reaches its intended texture and the flavours meld.",
-      "Warm sliced spring onions in milk, mash hot potatoes until smooth and beat in the green onion milk with butter; season generously with black pepper.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Peel and chunk the {potatoes} and boil in salted water for 20 minutes until tender. Drain.",
+      "Warm the sliced {spring-onion} in the {milk} for 5 minutes over low heat.",
+      "Mash the potatoes until smooth and beat in the green onion milk, half the {butter}, {salt} and {black-pepper}.",
+      "Serve with a well of the remaining {butter} in the centre."
     ]
   },
   {
@@ -233,51 +186,55 @@ KITCHEN.add(
     "name": "Barmbrack (Irish fruit loaf)",
     "meal": "treat",
     "cuisine": "Irish",
-    "time": 110,
-    "serves": 2,
+    "time": 130,
+    "serves": 8,
     "ing": [
       [
+        "raisins",
+        150
+      ],
+      [
+        "water",
+        200
+      ],
+      [
         "flour",
-        120
+        400
       ],
       [
         "yeast",
         7
       ],
       [
-        "water",
-        350
-      ],
-      [
-        "raisins",
-        50
-      ],
-      [
         "brown-sugar",
-        30
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "butter",
-        35
-      ],
-      [
-        "cinnamon",
-        2
+        60
       ],
       [
         "salt",
-        3
+        4
+      ],
+      [
+        "cinnamon",
+        4
+      ],
+      [
+        "milk",
+        200
+      ],
+      [
+        "butter",
+        50
+      ],
+      [
+        "eggs",
+        "1pc"
       ]
     ],
     "steps": [
-      "Mix {flour} with the remaining dough ingredients to make a workable dough or batter; knead or beat until even.",
-      "Rest or prove the mixture as needed, shape it, then bake, steam or griddle until cooked through.",
-      "Soak raisins in warm water until plump, knead them into a lightly spiced yeast dough and leave to rise; bake as a loaf and slice only after it cools.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Soak the {raisins} in hot {water} for 30 minutes, then drain well.",
+      "Warm the {milk} with the {butter} until lukewarm. Mix with {flour}, {yeast}, {brown-sugar}, {salt}, {cinnamon} and the {eggs} into a soft dough and knead for 8 minutes. Knead in the raisins.",
+      "Shape into a loaf, place in a lined 900 g tin, cover and prove for 1 hour.",
+      "Bake at 180 °C for 40–45 minutes until deep golden and hollow-sounding. Cool before slicing and serve buttered."
     ]
   },
   {
@@ -285,43 +242,42 @@ KITCHEN.add(
     "name": "Boxty (Irish potato cakes with grated and mashed potato)",
     "meal": "morning",
     "cuisine": "Irish",
-    "time": 35,
-    "serves": 2,
+    "time": 40,
+    "serves": 4,
     "ing": [
       [
         "potatoes",
-        350
+        600
       ],
       [
         "flour",
-        120
+        150
       ],
       [
         "buttermilk",
-        200
+        150
       ],
       [
         "baking-soda",
-        100
+        3
       ],
       [
         "salt",
         3
       ],
       [
-        "butter",
-        35
-      ],
-      [
         "black-pepper",
         1
+      ],
+      [
+        "butter",
+        40
       ]
     ],
     "steps": [
-      "Prepare {potatoes} with the seasoning, then heat {butter} in a wide skillet to a steady medium-high heat.",
-      "Cook {potatoes} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Combine grated raw potato with mashed potato and flour, loosen with buttermilk and a pinch of soda, then cook small cakes slowly until the centre is cooked and the edges crisp.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Peel the {potatoes}, boil half until tender and mash. Grate the rest and squeeze out the liquid.",
+      "Mix the mashed and grated potato with {flour}, {baking-soda}, {salt} and {black-pepper}, then add the {buttermilk} to make a thick batter.",
+      "Melt the {butter} in a wide pan over medium heat. Fry spoonfuls of batter for 4–5 minutes per side until golden and cooked through."
     ]
   },
   {
@@ -329,24 +285,24 @@ KITCHEN.add(
     "name": "Irish-style seafood chowder with smoked fish and leeks",
     "meal": "big",
     "cuisine": "Irish",
-    "time": 40,
-    "serves": 2,
+    "time": 45,
+    "serves": 4,
     "ing": [
       [
-        "white-fish",
-        350
-      ],
-      [
-        "smoked-haddock",
-        300
-      ],
-      [
-        "potatoes",
-        350
+        "butter",
+        35
       ],
       [
         "leek",
-        1
+        "1pc"
+      ],
+      [
+        "potatoes",
+        400
+      ],
+      [
+        "fish-stock",
+        700
       ],
       [
         "milk",
@@ -357,20 +313,16 @@ KITCHEN.add(
         150
       ],
       [
-        "fish-stock",
-        450
+        "white-fish",
+        300
+      ],
+      [
+        "smoked-haddock",
+        250
       ],
       [
         "parsley",
         10
-      ],
-      [
-        "butter",
-        35
-      ],
-      [
-        "salt",
-        3
       ],
       [
         "black-pepper",
@@ -378,10 +330,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {butter} in a soup pot and soften {leek} without browning.",
-      "Add {fish-stock} and {white-fish}, simmering gently until the main ingredient is tender.",
-      "Sweat leek in butter, add potatoes and stock until nearly tender, then poach the fish in milk and cream just until it flakes; fold in parsley at the end.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Melt the {butter} in a pot and soften sliced {leek} for 6 minutes without browning.",
+      "Add diced {potatoes} and {fish-stock} and simmer for 12 minutes until nearly tender.",
+      "Pour in {milk} and {cream}, add the {white-fish} and {smoked-haddock} in chunks and poach gently for 5 minutes until just flaking.",
+      "Season with {black-pepper} and stir in chopped {parsley}."
     ]
   },
   {
@@ -389,51 +341,51 @@ KITCHEN.add(
     "name": "Irish apple cake with cinnamon sugar crust",
     "meal": "treat",
     "cuisine": "Irish",
-    "time": 55,
-    "serves": 2,
+    "time": 60,
+    "serves": 8,
     "ing": [
       [
         "apple",
-        2
+        "4pc"
       ],
       [
         "flour",
-        120
-      ],
-      [
-        "butter",
-        35
-      ],
-      [
-        "sugar",
-        35
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "milk",
         250
       ],
       [
+        "butter",
+        120
+      ],
+      [
+        "sugar",
+        100
+      ],
+      [
         "baking-powder",
-        5
+        8
       ],
       [
         "cinnamon",
-        2
+        4
       ],
       [
-        "vanilla",
-        3
+        "eggs",
+        "1pc"
+      ],
+      [
+        "milk",
+        100
+      ],
+      [
+        "brown-sugar",
+        30
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {apple} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Rub butter into flour until crumbly, fold in diced apple and a simple egg-milk batter, then bake until the centre springs back and the top is crisp with cinnamon sugar.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 180 °C and line a 22 cm tin. Peel and dice the {apple}.",
+      "Rub the {butter} into the {flour}, {sugar}, {baking-powder} and half the {cinnamon} until crumbly.",
+      "Stir in the diced apple, then the {eggs} beaten with the {milk}, to make a thick batter. Spoon into the tin.",
+      "Mix the {brown-sugar} with the remaining {cinnamon}, sprinkle on top and bake for 45 minutes until golden."
     ]
   },
   {
@@ -499,30 +451,30 @@ KITCHEN.add(
     "meal": "morning",
     "cuisine": "Irish",
     "time": 30,
-    "serves": 2,
+    "serves": 4,
     "ing": [
       [
         "potatoes",
-        350
-      ],
-      [
-        "flour",
-        120
+        500
       ],
       [
         "butter",
-        35
+        40
       ],
       [
         "salt",
         3
+      ],
+      [
+        "flour",
+        120
       ]
     ],
     "steps": [
-      "Mix {flour} with the remaining dough ingredients to make a workable dough or batter; knead or beat until even.",
-      "Rest or prove the mixture as needed, shape it, then bake, steam or griddle until cooked through.",
-      "Mash the potatoes very smoothly, work in flour and melted butter while warm, roll into a round and cut into four wedges; cook on a dry griddle until spotted and firm.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Peel and boil the {potatoes} until tender, drain and mash until completely smooth.",
+      "Work in the melted {butter}, {salt} and then the {flour} to make a soft dough.",
+      "Roll into a 1 cm thick round and cut into 8 wedges.",
+      "Cook on a dry hot griddle for 3–4 minutes per side until spotted and firm."
     ]
   },
   {
@@ -530,74 +482,34 @@ KITCHEN.add(
     "name": "Irish-style blackberry fool with softly whipped cream",
     "meal": "treat",
     "cuisine": "Irish",
-    "time": 20,
-    "serves": 2,
-    "ing": [
-      [
-        "berries",
-        200
-      ],
-      [
-        "sugar",
-        35
-      ],
-      [
-        "cream",
-        150
-      ],
-      [
-        "vanilla",
-        3
-      ],
-      [
-        "lemon-juice",
-        20
-      ]
-    ],
-    "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {berries} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Cook half the berries with sugar and lemon until syrupy, cool completely, then ripple through softly whipped vanilla cream with the remaining fresh fruit.",
-      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
-    ]
-  },
-  {
-    "id": "irish-colcannon-potato-mash",
-    "name": "Irish Colcannon Potato Mash",
-    "meal": "big",
-    "cuisine": "Irish",
     "time": 25,
     "serves": 4,
     "ing": [
       [
-        "potatoes",
-        400
+        "berries",
+        300
       ],
       [
-        "onion",
-        1
+        "sugar",
+        50
       ],
       [
-        "eggs",
+        "lemon-juice",
+        15
+      ],
+      [
+        "cream",
+        300
+      ],
+      [
+        "vanilla",
         3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Cook half the {berries} with {sugar} and {lemon-juice} for 6 minutes until syrupy. Cool completely.",
+      "Whip the {cream} with the {vanilla} until soft peaks form.",
+      "Fold the cooled berry mixture through the cream to ripple, then spoon into glasses and top with the remaining fresh berries."
     ]
   },
   {
@@ -667,88 +579,78 @@ KITCHEN.add(
   },
   {
     "id": "irish-soda-bread",
-    "name": "Irish Soda Bread",
-    "meal": "big",
+    "name": "Irish soda bread",
+    "meal": "bite",
     "cuisine": "Irish",
-    "time": 39,
-    "serves": 4,
+    "time": 50,
+    "serves": 8,
     "ing": [
       [
-        "parsley",
-        10
+        "flour",
+        500
       ],
       [
-        "black-pepper",
-        2
+        "baking-soda",
+        6
       ],
       [
         "salt",
-        3
+        5
       ],
       [
-        "potatoes",
+        "buttermilk",
         400
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
       ]
     ],
     "steps": [
-      "Add the {parsley} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 220 °C and flour a tray. Mix {flour}, {baking-soda} and {salt} in a bowl.",
+      "Pour in the {buttermilk} and mix quickly with your hand into a soft, sticky dough.",
+      "Shape into a round, place on the tray and cut a deep cross in the top.",
+      "Bake for 15 minutes, then reduce to 200 °C and bake 25–30 minutes until it sounds hollow when tapped. Cool on a rack."
     ]
   },
   {
     "id": "irish-potato-and-leek-soup",
-    "name": "Irish Potato and Leek Soup",
+    "name": "Irish potato and leek soup",
     "meal": "big",
     "cuisine": "Irish",
-    "time": 46,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "potatoes",
-        400
+        "butter",
+        30
       ],
       [
-        "onion",
+        "leek",
+        "2pc"
+      ],
+      [
+        "potatoes",
+        500
+      ],
+      [
+        "vegetable-stock",
+        900
+      ],
+      [
+        "cream",
+        80
+      ],
+      [
+        "black-pepper",
         1
       ],
       [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
+        "chives",
+        8
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Melt the {butter} in a pot and soften sliced {leek} for 8 minutes without browning.",
+      "Add diced {potatoes} and {vegetable-stock} and simmer for 20 minutes until soft.",
+      "Blend until smooth, stir in the {cream} and season with {black-pepper}.",
+      "Serve scattered with snipped {chives}."
     ]
   },
   {
@@ -793,124 +695,94 @@ KITCHEN.add(
   },
   {
     "id": "irish-creamy-mushroom-and-potato-soup",
-    "name": "Irish Creamy Mushroom and Potato Soup",
+    "name": "Irish creamy mushroom and potato soup",
     "meal": "big",
     "cuisine": "Irish",
-    "time": 60,
+    "time": 45,
     "serves": 4,
     "ing": [
+      [
+        "butter",
+        30
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "mushrooms",
+        400
+      ],
+      [
+        "potatoes",
+        300
+      ],
+      [
+        "vegetable-stock",
+        900
+      ],
+      [
+        "cream",
+        100
+      ],
       [
         "parsley",
         10
       ],
       [
         "black-pepper",
-        2
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
         1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
       ]
     ],
     "steps": [
-      "Add the {parsley} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Melt the {butter} in a large pot and soften diced {onion} for 5 minutes.",
+      "Add sliced {mushrooms} and cook for 8 minutes until golden.",
+      "Add diced {potatoes} and {vegetable-stock}, bring to the boil and simmer for 15 minutes.",
+      "Stir in the {cream}, season with {black-pepper} and serve with chopped {parsley}."
     ]
   },
   {
     "id": "irish-herbed-cheese-omelette",
-    "name": "Irish Herbed Cheese Omelette",
-    "meal": "big",
+    "name": "Irish herbed cheese omelette",
+    "meal": "morning",
     "cuisine": "Irish",
-    "time": 31,
-    "serves": 4,
+    "time": 20,
+    "serves": 3,
     "ing": [
       [
-        "potatoes",
-        400
+        "eggs",
+        "6pc"
       ],
       [
-        "onion",
+        "milk",
+        30
+      ],
+      [
+        "salt",
+        2
+      ],
+      [
+        "black-pepper",
         1
       ],
       [
-        "eggs",
-        3
+        "cheddar",
+        80
       ],
       [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
+        "chives",
+        10
       ],
       [
         "butter",
-        20
+        30
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
-    ]
-  },
-  {
-    "id": "irish-apple-and-cinnamon-bake",
-    "name": "Irish Apple and Cinnamon Bake",
-    "meal": "treat",
-    "cuisine": "Irish",
-    "time": 45,
-    "serves": 4,
-    "ing": [
-      [
-        "apple",
-        "4pc"
-      ],
-      [
-        "butter",
-        40
-      ],
-      [
-        "brown-sugar",
-        40
-      ],
-      [
-        "cinnamon",
-        3
-      ],
-      [
-        "oats",
-        40
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 190 °C. Core {apple} and cut into thick wedges; lay them in a baking dish.",
-      "Melt {butter} and mix it with {brown-sugar}, {cinnamon} and {oats} until crumbly.",
-      "Spoon the oat mixture over the apples and bake for 30–35 minutes until the apples are soft and the topping is golden and crisp.",
-      "Cool for 5 minutes and serve warm."
+      "Beat the {eggs} with the {milk}, {salt} and {black-pepper}. Grate the {cheddar} and snip the {chives}.",
+      "Melt half the {butter} in a non-stick pan over medium heat and pour in half the eggs. Cook gently for 3 minutes, lifting the edges, until nearly set.",
+      "Scatter half the cheese and chives over, fold in half and slide onto a plate.",
+      "Repeat with the remaining butter and eggs and share between three."
     ]
   }
 ]

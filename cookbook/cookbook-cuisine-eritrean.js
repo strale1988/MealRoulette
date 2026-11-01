@@ -15,7 +15,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        2
+        "2pc"
       ],
       [
         "tomato-paste",
@@ -27,7 +27,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "beef-stock",
@@ -54,11 +54,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "paprika",
@@ -82,7 +82,7 @@ KITCHEN.add(
   {
     "id": "eritrean-ful",
     "name": "Ful medames Eritrean-style",
-    "meal": "light",
+    "meal": "morning",
     "cuisine": "Eritrean",
     "time": 25,
     "serves": 4,
@@ -93,7 +93,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "lemon-juice",
@@ -105,7 +105,7 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        1
+        "1pc"
       ],
       [
         "parsley",
@@ -132,7 +132,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        2
+        "2pc"
       ],
       [
         "tomato-paste",
@@ -144,7 +144,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        4
+        "4pc"
       ],
       [
         "chicken-stock",
@@ -158,101 +158,46 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "shiro-style-chickpea-stew-eritrean-home-style",
-    "name": "Shiro-Style Chickpea Stew — Eritrean Home-Style",
+    "id": "eritrean-fitfit",
+    "name": "Fit-fit (Eritrean shredded flatbread in spiced tomato sauce)",
     "meal": "big",
     "cuisine": "Eritrean",
     "time": 30,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        500
+        "flatbread",
+        240
+      ],
+      [
+        "berbere",
+        8
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "zigni-inspired-spiced-beef",
-    "name": "Zigni-Inspired Spiced Beef",
-    "meal": "big",
-    "cuisine": "Eritrean",
-    "time": 130,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        700
-      ],
-      [
-        "onion",
-        "3pc"
-      ],
-      [
-        "tomato-paste",
-        40
-      ],
-      [
-        "paprika",
-        5
-      ],
-      [
-        "chilli-flakes",
-        2
-      ],
-      [
-        "cumin",
-        1
-      ],
-      [
-        "ground-coriander",
-        1
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "garlic",
-        "3pc"
+        "2pc"
       ],
       [
         "butter",
         40
       ],
       [
+        "yogurt",
+        100
+      ],
+      [
         "salt",
-        3
+        2
       ]
     ],
     "steps": [
-      "Finely chop {onion} and cook it in a dry heavy pot over medium heat for 10 minutes, stirring, until it has released its water and is lightly golden. Cut {beef-chuck} into 3 cm cubes.",
-      "Add {butter}, {tomato-paste}, {paprika}, {chilli-flakes}, {cumin}, {ground-coriander}, crushed {garlic} and grated {ginger} and fry for 8 minutes until the paste darkens and the fat turns red.",
-      "Add the beef and {salt}, stir to coat, then pour in 300 ml water.",
-      "Cover and simmer very gently for 1 hour 30 minutes until the beef is tender and the sauce is thick and dark. Serve hot."
+      "Tear the {flatbread} into bite-sized pieces.",
+      "Soften the chopped {onion} in the {butter} for 6 minutes, stir in the {berbere} for 1 minute, then add the chopped {tomato}, 100 ml water and the {salt} and simmer for 8 minutes.",
+      "Fold in the flatbread for 3 minutes until it soaks up the sauce, then serve topped with the {yogurt}."
     ]
   },
   {
@@ -303,42 +248,42 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "tsebhi-style-chicken-stew",
-    "name": "Tsebhi-Style Chicken Stew",
-    "meal": "big",
+    "id": "eritrean-hamli",
+    "name": "Hamli (Eritrean sautéed spinach)",
+    "meal": "bite",
     "cuisine": "Eritrean",
-    "time": 51,
+    "time": 25,
     "serves": 4,
     "ing": [
       [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
         "spinach",
-        150
+        500
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
       ],
       [
         "ginger",
         10
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        2
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {onion} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Soften the chopped {onion} in the {oil} for 6 minutes.",
+      "Add the crushed {garlic} and grated {ginger} for 1 minute.",
+      "Add the {spinach} with a splash of water and cook for 8 minutes until wilted and tender; season with the {salt}."
     ]
   },
   {
@@ -533,41 +478,42 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "eritrean-spiced-rice-with-vegetables",
-    "name": "Eritrean Spiced Rice with Vegetables",
-    "meal": "big",
+    "id": "eritrean-genfo",
+    "name": "Genfo (Eritrean wheat porridge with spiced butter)",
+    "meal": "morning",
     "cuisine": "Eritrean",
     "time": 25,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        500
+        "flour",
+        200
       ],
       [
-        "onion",
-        1
+        "water",
+        700
       ],
       [
-        "tomato",
-        300
+        "butter",
+        40
       ],
       [
-        "peanut-butter",
-        50
+        "berbere",
+        5
       ],
       [
-        "rice",
-        250
+        "salt",
+        2
       ],
       [
-        "spinach",
-        150
+        "yogurt",
+        100
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Bring the {water} and {salt} to the boil and whisk in the {flour} gradually, beating constantly to avoid lumps.",
+      "Cook on low heat for 8 minutes, stirring, until thick and smooth.",
+      "Shape into mounds, make a well in each and fill with the {butter} melted with the {berbere}. Serve with the {yogurt}."
     ]
   },
   {
@@ -618,88 +564,101 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "eritrean-grilled-fish-with-lime",
-    "name": "Eritrean Grilled Fish with Lime",
+    "id": "eritrean-asa-tibsi",
+    "name": "Asa Tibsi (Eritrean berbere fried fish)",
     "meal": "big",
     "cuisine": "Eritrean",
-    "time": 39,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "white-fish",
+        700
+      ],
+      [
+        "flour",
+        50
       ],
       [
         "oil",
-        20
+        100
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "berbere",
+        5
+      ],
+      [
+        "lime",
+        "1pc"
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
       ]
     ],
     "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Rub the {white-fish} with the {berbere}, {salt} and the juice of the {lime} and rest for 15 minutes, then dust with the {flour}.",
+      "Fry the fish in half of the {oil} for 4 minutes per side until crisp and golden.",
+      "Cook the sliced {onion}, crushed {garlic} and chopped {tomato} in the remaining oil for 8 minutes and spoon over the fish."
     ]
   },
   {
-    "id": "eritrean-chicken-and-greens-pot",
-    "name": "Eritrean Chicken and Greens Pot",
+    "id": "eritrean-doro-alicha",
+    "name": "Doro Alicha (Eritrean mild chicken stew with eggs)",
     "meal": "big",
     "cuisine": "Eritrean",
-    "time": 46,
+    "time": 70,
     "serves": 4,
     "ing": [
       [
         "chicken-thigh",
-        500
+        700
       ],
       [
         "onion",
-        1
+        "3pc"
       ],
       [
-        "tomato",
-        300
+        "garlic",
+        "3pc"
       ],
       [
-        "peanut-butter",
-        50
+        "ginger",
+        15
       ],
       [
-        "rice",
-        250
+        "turmeric",
+        3
       ],
       [
-        "spinach",
-        150
+        "eggs",
+        "4pc"
+      ],
+      [
+        "oil",
+        40
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Cook the finely chopped {onion} in a dry pot for 8 minutes until softened, then add the {oil} and cook for 5 minutes more.",
+      "Add the crushed {garlic}, grated {ginger} and {turmeric} for 1 minute, then the {chicken-thigh}, {salt} and 400 ml water and simmer for 30 minutes.",
+      "Boil the {eggs} for 9 minutes, peel, score lightly and add to the stew for the last 10 minutes."
     ]
   },
   {
@@ -750,88 +709,93 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "eritrean-herbed-flatbread",
-    "name": "Eritrean Herbed Flatbread",
+    "id": "eritrean-himbasha",
+    "name": "Himbasha (Eritrean celebration bread)",
+    "meal": "bite",
+    "cuisine": "Eritrean",
+    "time": 100,
+    "serves": 6,
+    "ing": [
+      [
+        "flour",
+        400
+      ],
+      [
+        "yeast",
+        7
+      ],
+      [
+        "sugar",
+        30
+      ],
+      [
+        "cardamom",
+        2
+      ],
+      [
+        "oil",
+        40
+      ],
+      [
+        "water",
+        240
+      ],
+      [
+        "salt",
+        4
+      ]
+    ],
+    "steps": [
+      "Mix the {flour}, {yeast}, {sugar}, {cardamom} and {salt} with the {water} and half of the {oil} and knead for 8 minutes. Cover and rise for 1 hour.",
+      "Shape into a 2 cm thick round, press a pattern into the top with a spoon and rest for 15 minutes.",
+      "Brush with the remaining oil and bake at 190 °C for 25 minutes until golden."
+    ]
+  },
+  {
+    "id": "eritrean-beef-tibsi",
+    "name": "Beef Tibsi (Eritrean sautéed spiced beef)",
     "meal": "big",
     "cuisine": "Eritrean",
-    "time": 60,
+    "time": 30,
     "serves": 4,
     "ing": [
+      [
+        "beef-strips",
+        500
+      ],
+      [
+        "onion",
+        "2pc"
+      ],
+      [
+        "tomato",
+        "1pc"
+      ],
+      [
+        "berbere",
+        5
+      ],
+      [
+        "butter",
+        40
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
       [
         "ginger",
         10
       ],
       [
-        "oil",
-        20
-      ],
-      [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
       ]
     ],
     "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "eritrean-coconut-rice-bowl",
-    "name": "Eritrean Coconut Rice Bowl",
-    "meal": "big",
-    "cuisine": "Eritrean",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Fry the sliced {onion} in half of the {butter} for 8 minutes until golden.",
+      "Add the crushed {garlic}, grated {ginger} and {berbere} for 1 minute, then the {beef-strips} and fry over high heat for 5 minutes.",
+      "Add the chopped {tomato}, remaining butter and {salt} and cook for 3 minutes."
     ]
   },
   {

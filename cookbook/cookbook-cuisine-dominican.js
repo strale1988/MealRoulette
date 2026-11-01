@@ -4,7 +4,7 @@ KITCHEN.add(
   {
     "id": "caribbean-mangu",
     "name": "Mangú (Dominican mashed plantains) with onions and eggs",
-    "meal": "wake",
+    "meal": "morning",
     "cuisine": "Dominican",
     "time": 35,
     "serves": 2,
@@ -63,7 +63,7 @@ KITCHEN.add(
       ],
       [
         "plantain",
-        1
+        "1pc"
       ],
       [
         "sweet-potato",
@@ -75,7 +75,7 @@ KITCHEN.add(
       ],
       [
         "sweetcorn",
-        1
+        200
       ],
       [
         "pumpkin",
@@ -83,11 +83,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "cilantro",
@@ -431,102 +431,36 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "dominican-mangu-with-onion",
-    "name": "Dominican Mangú with Onion",
+    "id": "dominican-chicharron-de-pollo",
+    "name": "Chicharrón de Pollo (Dominican fried chicken bites)",
     "meal": "big",
     "cuisine": "Dominican",
-    "time": 30,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
         "chicken-thigh",
-        450
+        700
       ],
       [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "dominican-sancocho-inspired-stew",
-    "name": "Dominican Sancocho-Inspired Stew",
-    "meal": "big",
-    "cuisine": "Dominican",
-    "time": 120,
-    "serves": 4,
-    "ing": [
-      [
-        "beef-chuck",
-        300
-      ],
-      [
-        "chicken-thigh",
-        300
-      ],
-      [
-        "yuca-frozen",
-        250
-      ],
-      [
-        "plantain",
-        "1pc"
-      ],
-      [
-        "pumpkin",
-        250
-      ],
-      [
-        "sweetcorn",
-        200
-      ],
-      [
-        "onion",
-        "1pc"
+        "lime",
+        "2pc"
       ],
       [
         "garlic",
-        "3pc"
-      ],
-      [
-        "cilantro",
-        15
+        "4pc"
       ],
       [
         "oregano",
         2
       ],
       [
-        "lime",
-        "1pc"
-      ],
-      [
-        "beef-stock",
-        1200
+        "flour",
+        60
       ],
       [
         "oil",
-        20
+        300
       ],
       [
         "salt",
@@ -534,11 +468,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cut {beef-chuck} into 3 cm cubes and season with {salt} and {oregano}. Brown in {oil} in a large pot for 6 minutes, add chopped {onion} and crushed {garlic} for 4 minutes.",
-      "Pour in {beef-stock}, cover and simmer for 45 minutes.",
-      "Add {chicken-thigh} (bone-in or boneless) and simmer 20 minutes.",
-      "Cut {yuca-frozen}, the green {plantain} and {pumpkin} into 3 cm chunks. Add the yuca and plantain and cook for 15 minutes, then the pumpkin and {sweetcorn} for 15 minutes more, until the broth thickens.",
-      "Stir in chopped {cilantro} and the juice of {lime} and serve in deep bowls."
+      "Cut the {chicken-thigh} into 4 cm pieces and marinate with the juice of one {lime}, crushed {garlic}, {oregano} and the {salt} for 30 minutes.",
+      "Toss the chicken in the {flour}.",
+      "Heat the {oil} to 175 °C and fry in batches for 7–8 minutes until deep golden and cooked through; drain.",
+      "Serve with wedges of the second lime."
     ]
   },
   {
@@ -602,79 +535,102 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "dominican-pollo-guisado",
-    "name": "Dominican Pollo Guisado",
+    "id": "dominican-bacalao-guisado",
+    "name": "Bacalao Guisado (Dominican stewed salt cod)",
     "meal": "big",
     "cuisine": "Dominican",
-    "time": 51,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "salt-cod",
+        400
       ],
       [
-        "black-beans",
-        250
+        "potatoes",
+        300
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "onion",
+        "1pc"
       ],
       [
         "red-pepper",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "black-olives",
+        40
+      ],
+      [
+        "olive-oil",
+        30
+      ],
+      [
+        "oregano",
+        2
+      ],
+      [
+        "black-pepper",
         1
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Soak the {salt-cod} in cold water for 12–24 hours, changing the water often. Boil for 10 minutes, drain and flake.",
+      "Soften the sliced {onion} and {red-pepper} in the {olive-oil} for 6 minutes, add the crushed {garlic}, {oregano} and chopped {tomato} for 6 minutes.",
+      "Add the diced {potatoes}, 200 ml water and the {black-pepper}, cover and cook for 15 minutes.",
+      "Stir in the cod and {black-olives} and simmer for 8 minutes."
     ]
   },
   {
     "id": "dominican-tostones-with-garlic-dip",
     "name": "Dominican Tostones with Garlic Dip",
-    "meal": "big",
+    "meal": "bite",
     "cuisine": "Dominican",
-    "time": 25,
+    "time": 30,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
         "plantain",
-        2
+        "3pc"
       ],
       [
-        "red-pepper",
-        1
+        "oil",
+        200
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "mayonnaise",
+        60
+      ],
+      [
+        "ketchup",
+        30
+      ],
+      [
+        "lime",
+        "1pc"
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Peel the green {plantain} and cut into 3 cm chunks. Fry in the {oil} at 160 °C for 3 minutes until pale gold; drain and smash flat to 1 cm.",
+      "Refry at 180 °C for 2–3 minutes until crisp and golden; drain and sprinkle with the {salt}.",
+      "Mix the {mayonnaise}, {ketchup}, crushed {garlic} and the juice of the {lime} for the dip and serve alongside."
     ]
   },
   {
@@ -756,42 +712,54 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "dominican-black-bean-and-rice-bowl",
-    "name": "Dominican Black Bean and Rice Bowl",
+    "id": "dominican-habichuelas-guisadas",
+    "name": "Habichuelas Guisadas (Dominican stewed red beans)",
     "meal": "big",
     "cuisine": "Dominican",
-    "time": 46,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
+        "kidney-beans",
+        480
+      ],
+      [
+        "pumpkin",
+        200
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "tomato-paste",
+        30
+      ],
+      [
+        "cilantro",
+        10
+      ],
+      [
+        "oregano",
+        2
+      ],
+      [
+        "oil",
+        20
+      ],
+      [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
       ]
     ],
     "steps": [
-      "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Soften the chopped {onion} and crushed {garlic} in the {oil} for 5 minutes, then stir in the {tomato-paste} and {oregano} for 1 minute.",
+      "Add the {kidney-beans}, diced {pumpkin}, 200 ml water and the {salt} and simmer for 15 minutes, mashing a few beans to thicken.",
+      "Stir in chopped {cilantro} and serve over rice."
     ]
   },
   {
@@ -937,46 +905,47 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "dominican-corn-and-cheese-bake",
-    "name": "Dominican Corn and Cheese Bake",
-    "meal": "big",
+    "id": "dominican-quipes",
+    "name": "Quipes (Dominican fried bulgur and beef croquettes)",
+    "meal": "bite",
     "cuisine": "Dominican",
-    "time": 38,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "black-beans",
-        250
+        "bulgur",
+        200
       ],
       [
-        "rice",
-        250
+        "beef-mince",
+        350
       ],
       [
-        "tomato",
-        250
+        "onion",
+        "1pc"
       ],
       [
-        "plantain",
-        2
+        "cumin",
+        3
       ],
       [
-        "red-pepper",
+        "black-pepper",
         1
       ],
       [
-        "cilantro",
-        10
+        "salt",
+        3
       ],
       [
-        "lime",
-        1
+        "oil",
+        300
       ]
     ],
     "steps": [
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {black-beans} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Soak the {bulgur} in hot water for 15 minutes, drain and squeeze dry.",
+      "Fry the chopped {onion} with 150 g of the {beef-mince} and the {cumin} for 8 minutes; cool.",
+      "Knead the remaining beef into the bulgur with the {salt} and {black-pepper}, shape into ovals around a spoonful of filling and seal.",
+      "Heat the {oil} to 180 °C and fry for 5 minutes, turning, until deep golden and cooked through."
     ]
   }
 ]

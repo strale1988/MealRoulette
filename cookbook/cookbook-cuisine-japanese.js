@@ -54,61 +54,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "teriyaki-tofu-bowl",
-    "name": "Teriyaki tofu and broccoli bowls",
-    "meal": "big",
-    "cuisine": "Japanese",
-    "time": 30,
-    "serves": 2,
-    "ing": [
-      [
-        "tofu",
-        400
-      ],
-      [
-        "soy-sauce",
-        40
-      ],
-      [
-        "mirin",
-        30
-      ],
-      [
-        "sugar",
-        12
-      ],
-      [
-        "ginger",
-        5
-      ],
-      [
-        "broccoli",
-        250
-      ],
-      [
-        "rice",
-        160
-      ],
-      [
-        "sesame-seeds",
-        5
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "cornstarch",
-        10
-      ]
-    ],
-    "steps": [
-      "Cook {rice}. Press and cube {tofu}, toss in {cornstarch} and fry in {oil} for 8 minutes until crisp.",
-      "Whisk {soy-sauce}, {mirin}, {sugar} and grated {ginger}. Pour over the tofu and bubble 2 minutes until sticky.",
-      "Steam {broccoli} for 4 minutes. Serve over the rice with {sesame-seeds}."
-    ]
-  },
-  {
     "id": "tamago-kake-gohan",
     "name": "Egg and nori rice bowl (tamago kake gohan)",
     "meal": "morning",
@@ -169,7 +114,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Boil {edamame} in water with {salt} for 4 minutes and drain.",
+      "Bring a pan of water to the boil with the {salt}.",
+      "Boil the {edamame} for 4 minutes and drain.",
       "Toss with {chilli-flakes} and a squeeze of {lemon}."
     ]
   },
@@ -220,58 +166,6 @@ KITCHEN.add(
       "Add the {chicken-stock} and {soy-sauce}; simmer for 8 minutes.",
       "Cook the {noodles} in the broth according to the packet, then add the sliced {left-pork} to heat through.",
       "Serve in bowls with halved eggs and sliced {spring-onion}."
-    ]
-  },
-  {
-    "id": "world-miso-salmon",
-    "name": "Japanese miso-glazed salmon",
-    "meal": "big",
-    "cuisine": "Japanese",
-    "time": 25,
-    "serves": 2,
-    "ing": [
-      [
-        "salmon",
-        320
-      ],
-      [
-        "miso-paste",
-        30
-      ],
-      [
-        "soy-sauce",
-        15
-      ],
-      [
-        "honey",
-        15
-      ],
-      [
-        "rice-vinegar",
-        10
-      ],
-      [
-        "ginger",
-        8
-      ],
-      [
-        "rice",
-        150
-      ],
-      [
-        "cucumber",
-        120
-      ],
-      [
-        "sesame-seeds",
-        8
-      ]
-    ],
-    "steps": [
-      "Cook {rice} according to the package directions.",
-      "Whisk {miso-paste}, {soy-sauce}, {honey}, {rice-vinegar} and grated {ginger} into a glaze.",
-      "Brush the {salmon} with the glaze and bake at 210°C for 10–14 minutes, until the fish flakes easily.",
-      "Serve with the rice and sliced {cucumber}; sprinkle with {sesame-seeds}."
     ]
   },
   {
@@ -387,50 +281,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-miso-soup",
-    "name": "Japanese miso soup with tofu",
-    "meal": "big",
-    "cuisine": "Japanese",
-    "time": 15,
-    "serves": 2,
-    "ing": [
-      [
-        "miso-paste",
-        35
-      ],
-      [
-        "tofu",
-        180
-      ],
-      [
-        "water",
-        700
-      ],
-      [
-        "nori",
-        3
-      ],
-      [
-        "spring-onion",
-        35
-      ],
-      [
-        "mushrooms",
-        100
-      ],
-      [
-        "soy-sauce",
-        8
-      ]
-    ],
-    "steps": [
-      "Warm {water} in a pot; add sliced {mushrooms} and simmer 4–5 minutes.",
-      "Cut {tofu} into small cubes and add with torn {nori}; warm gently without boiling hard.",
-      "Whisk a ladle of hot broth into {miso-paste} in a small bowl, then stir the mixture back into the pot off the heat.",
-      "Season lightly with {soy-sauce} if needed and garnish with {spring-onion}. Do not boil after adding the miso."
-    ]
-  },
-  {
     "id": "world-yakisoba",
     "name": "Yakisoba-style pork noodles",
     "meal": "big",
@@ -524,46 +374,6 @@ KITCHEN.add(
       "Brush a small non-stick pan with {oil} and pour in a thin layer of egg. When almost set, roll it to one side.",
       "Oil the exposed pan lightly, add another thin layer and lift the existing roll so egg flows underneath; roll again. Repeat until the mixture is used.",
       "Rest briefly, slice into neat pieces and garnish with {spring-onion}."
-    ]
-  },
-  {
-    "id": "world-japanese-onigiri",
-    "name": "Japanese tuna onigiri",
-    "meal": "bite",
-    "cuisine": "Japanese",
-    "time": 30,
-    "serves": 2,
-    "ing": [
-      [
-        "rice",
-        220
-      ],
-      [
-        "tuna",
-        120
-      ],
-      [
-        "mayonnaise",
-        25
-      ],
-      [
-        "soy-sauce",
-        8
-      ],
-      [
-        "nori",
-        4
-      ],
-      [
-        "sesame-seeds",
-        5
-      ]
-    ],
-    "steps": [
-      "Cook {rice} with slightly less water than usual so it is sticky enough to shape; let it cool until safe to handle but still warm.",
-      "Drain {tuna} and mix with {mayonnaise} and {soy-sauce}.",
-      "Wet your hands, add a small scoop of rice, make a hollow, fill with the mixture and cover with more rice. Shape into compact triangles.",
-      "Wrap each onigiri with a strip of {nori} and sprinkle with {sesame-seeds}. Keep chilled if not eating soon."
     ]
   },
   {
@@ -1142,50 +952,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "teriyaki-chicken-rice-bowls",
-    "name": "Teriyaki chicken rice bowls",
-    "meal": "big",
-    "cuisine": "Japanese",
-    "time": 30,
-    "serves": 2,
-    "ing": [
-      [
-        "chicken-thigh",
-        350
-      ],
-      [
-        "teriyaki-sauce",
-        60
-      ],
-      [
-        "rice",
-        150
-      ],
-      [
-        "broccoli",
-        150
-      ],
-      [
-        "sesame-seeds",
-        5
-      ],
-      [
-        "oil",
-        10
-      ],
-      [
-        "water",
-        300
-      ]
-    ],
-    "steps": [
-      "Cook {rice} in {water} in a covered pan on low heat for 12 minutes.",
-      "Brown {chicken-thigh} in {oil} for 8 minutes, then pour in {teriyaki-sauce} and cook 4 minutes until glazed and cooked through (74 °C). Slice.",
-      "Steam {broccoli} for 4 minutes.",
-      "Serve over the rice with {sesame-seeds}."
-    ]
-  },
-  {
     "id": "teriyaki-salmon-rice",
     "name": "Teriyaki salmon with rice and cucumber",
     "meal": "big",
@@ -1231,53 +997,6 @@ KITCHEN.add(
       "Sear {salmon} in {oil} for 3 minutes skin-side down, flip, pour in {teriyaki-sauce} and cook 3 minutes, spooning the glaze over.",
       "Slice {cucumber} and {spring-onion}.",
       "Serve the salmon over rice with cucumber, spring onion and {sesame-seeds}."
-    ]
-  },
-  {
-    "id": "japanese-oyakodon-chicken-egg-rice",
-    "name": "Japanese chicken and egg rice bowl",
-    "meal": "big",
-    "cuisine": "Japanese",
-    "time": 25,
-    "serves": 2,
-    "ing": [
-      [
-        "chicken-thigh",
-        280
-      ],
-      [
-        "eggs",
-        "3pc"
-      ],
-      [
-        "rice",
-        150
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "soy-sauce",
-        25
-      ],
-      [
-        "mirin",
-        25
-      ],
-      [
-        "sake",
-        15
-      ],
-      [
-        "spring-onion",
-        25
-      ]
-    ],
-    "steps": [
-      "Cook the {rice}. Slice {onion} thinly and cut {chicken-thigh} into bite-sized pieces.",
-      "Simmer {soy-sauce}, {mirin}, {sake} and 100 ml water with the onion for 3 minutes. Add chicken and simmer until cooked through.",
-      "Pour lightly beaten {eggs} over the chicken. Cover and cook gently until just set. Spoon over rice and garnish with {spring-onion}."
     ]
   },
   {
@@ -1432,105 +1151,6 @@ KITCHEN.add(
     "cuisine": "Japanese"
   },
   {
-    "id": "world-japanese-okonomiyaki",
-    "name": "Japanese cabbage and pork okonomiyaki",
-    "meal": "big",
-    "cuisine": "Japanese",
-    "time": 30,
-    "serves": 3,
-    "ing": [
-      [
-        "cabbage",
-        450
-      ],
-      [
-        "flour",
-        150
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "water",
-        120
-      ],
-      [
-        "spring-onion",
-        3
-      ],
-      [
-        "pork-belly",
-        180
-      ],
-      [
-        "mayonnaise",
-        40
-      ],
-      [
-        "okonomiyaki-sauce",
-        50
-      ],
-      [
-        "olive-oil",
-        15
-      ]
-    ],
-    "steps": [
-      "Shred the {cabbage} finely and slice the {spring-onion}. Whisk {flour}, {eggs} and {water} into a thick batter.",
-      "Fold cabbage and spring onion through the batter. Heat an oiled skillet over medium heat.",
-      "Spoon into thick rounds and lay thin slices of {pork-belly} on top. Cover and cook 5–6 minutes per side until cooked through and browned.",
-      "Drizzle with {okonomiyaki-sauce} and {mayonnaise}; add bonito flakes or nori if available."
-    ]
-  },
-  {
-    "id": "japanese-salmon-teriyaki",
-    "name": "Salmon teriyaki with sesame broccoli",
-    "meal": "big",
-    "cuisine": "Japanese",
-    "time": 25,
-    "serves": 2,
-    "ing": [
-      [
-        "salmon",
-        350
-      ],
-      [
-        "soy-sauce",
-        35
-      ],
-      [
-        "mirin",
-        30
-      ],
-      [
-        "honey",
-        15
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "broccoli",
-        250
-      ],
-      [
-        "sesame-seeds",
-        8
-      ],
-      [
-        "rice",
-        160
-      ]
-    ],
-    "steps": [
-      "Cook {rice}. Mix {soy-sauce}, {mirin}, {honey} and grated {ginger}.",
-      "Pan-sear {salmon} skin-side down until crisp, turn and cook almost through. Pour in sauce and bubble until lacquered.",
-      "Steam {broccoli} until tender-crisp; sprinkle with {sesame-seeds}. Serve with salmon and rice."
-    ]
-  },
-  {
     "id": "japanese-katsu-curry",
     "name": "Chicken katsu curry with rice",
     "meal": "big",
@@ -1631,53 +1251,9 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "japanese-miso-eggplant",
-    "name": "Nasu dengaku miso-glazed aubergine",
-    "meal": "light",
-    "cuisine": "Japanese",
-    "time": 35,
-    "serves": 2,
-    "ing": [
-      [
-        "aubergine",
-        500
-      ],
-      [
-        "miso-paste",
-        45
-      ],
-      [
-        "mirin",
-        25
-      ],
-      [
-        "sugar",
-        15
-      ],
-      [
-        "sesame-seeds",
-        8
-      ],
-      [
-        "spring-onion",
-        15
-      ],
-      [
-        "oil",
-        15
-      ]
-    ],
-    "steps": [
-      "Halve {aubergine} lengthways and score the flesh in a crosshatch; brush with {oil}.",
-      "Roast cut-side up at 200 °C for 20–25 minutes until soft.",
-      "Mix {miso-paste}, {mirin} and {sugar}; spread over the aubergine and grill 2–3 minutes until bubbling.",
-      "Top with {sesame-seeds} and sliced {spring-onion}."
-    ]
-  },
-  {
     "id": "japanese-chawanmushi",
     "name": "Japanese savoury steamed egg custard",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Japanese",
     "time": 30,
     "serves": 2,
@@ -1708,7 +1284,7 @@ KITCHEN.add(
       ],
       [
         "spring-onion",
-        10
+        "10pc"
       ]
     ],
     "steps": [
@@ -1722,7 +1298,7 @@ KITCHEN.add(
     "id": "japanese-soba-sesame-salad",
     "name": "Cold soba noodles with sesame dressing",
     "cuisine": "Japanese",
-    "meal": "light",
+    "meal": "bite",
     "time": 20,
     "serves": 2,
     "ing": [
@@ -1783,7 +1359,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "rice",
@@ -1811,11 +1387,11 @@ KITCHEN.add(
       ],
       [
         "spring-onion",
-        2
+        "2pc"
       ],
       [
         "eggs",
-        2
+        "2pc"
       ]
     ],
     "steps": [
@@ -1846,11 +1422,11 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        3
+        "3pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "rice",
@@ -1874,7 +1450,7 @@ KITCHEN.add(
       ],
       [
         "spring-onion",
-        2
+        "2pc"
       ]
     ],
     "steps": [
@@ -1897,7 +1473,7 @@ KITCHEN.add(
       ],
       [
         "spring-onion",
-        3
+        "3pc"
       ],
       [
         "soy-sauce",
@@ -1960,7 +1536,7 @@ KITCHEN.add(
       ],
       [
         "spring-onion",
-        2
+        "2pc"
       ],
       [
         "oil",
@@ -2058,7 +1634,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        2
+        "2pc"
       ],
       [
         "nori",
@@ -2164,7 +1740,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "miso-paste",
@@ -2180,7 +1756,7 @@ KITCHEN.add(
       ],
       [
         "spring-onion",
-        2
+        "2pc"
       ],
       [
         "sesame-oil",
@@ -2196,7 +1772,7 @@ KITCHEN.add(
   {
     "id": "japanese-potato-salad",
     "name": "Japanese potato salad with cucumber and carrot",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Japanese",
     "time": 30,
     "serves": 2,
@@ -2258,7 +1834,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "mushrooms",
@@ -2274,7 +1850,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        4
+        "4pc"
       ],
       [
         "milk",
@@ -2296,57 +1872,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "japanese-pork-gyoza",
-    "name": "Pork and cabbage gyoza with ginger dipping sauce",
-    "meal": "big",
-    "cuisine": "Japanese",
-    "time": 40,
-    "serves": 2,
-    "ing": [
-      [
-        "pork-mince",
-        250
-      ],
-      [
-        "cabbage",
-        150
-      ],
-      [
-        "dumpling-skins",
-        20
-      ],
-      [
-        "ginger",
-        12
-      ],
-      [
-        "garlic",
-        2
-      ],
-      [
-        "soy-sauce",
-        20
-      ],
-      [
-        "sesame-oil",
-        8
-      ],
-      [
-        "rice-vinegar",
-        20
-      ],
-      [
-        "oil",
-        15
-      ]
-    ],
-    "steps": [
-      "Finely chop {cabbage}, salt lightly and squeeze dry. Mix with {pork-mince}, grated {ginger}, {garlic}, {soy-sauce} and {sesame-oil}.",
-      "Place a teaspoon of filling on each {dumpling-skins}, moisten the edges, fold and pleat to seal.",
-      "Pan-fry in {oil} until browned underneath, add a splash of water and cover to steam 5–6 minutes. Serve with {rice-vinegar} and extra soy for dipping."
-    ]
-  },
-  {
     "id": "japanese-soboro-don",
     "name": "Soboro don minced chicken and scrambled egg rice bowl",
     "meal": "big",
@@ -2360,7 +1885,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        3
+        "3pc"
       ],
       [
         "rice",
@@ -2400,7 +1925,7 @@ KITCHEN.add(
   {
     "id": "japanese-kakiage-vegetable-fritters",
     "name": "Kakiage mixed vegetable tempura fritters",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Japanese",
     "time": 25,
     "serves": 2,
@@ -2411,7 +1936,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "sweet-potato",
@@ -2447,7 +1972,7 @@ KITCHEN.add(
   {
     "id": "japanese-hiyashi-chuka-cold-noodles",
     "name": "Hiyashi chuka chilled noodles with egg and sesame dressing",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Japanese",
     "time": 25,
     "serves": 2,
@@ -2458,7 +1983,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        2
+        "2pc"
       ],
       [
         "cucumber",
@@ -2517,7 +2042,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "vegetable-stock",
@@ -2541,7 +2066,7 @@ KITCHEN.add(
       ],
       [
         "spring-onion",
-        2
+        "2pc"
       ]
     ],
     "steps": [
@@ -2568,11 +2093,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "carrot",
-        1
+        "1pc"
       ],
       [
         "soy-sauce",
@@ -2692,88 +2217,40 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "japanese-soba-salad",
-    "name": "Cold soba noodle salad with sesame dressing",
-    "meal": "light,big",
-    "cuisine": "Japanese",
-    "time": 20,
-    "serves": 2,
-    "ing": [
-      [
-        "soba-noodles",
-        180
-      ],
-      [
-        "cucumber",
-        150
-      ],
-      [
-        "carrot",
-        100
-      ],
-      [
-        "soy-sauce",
-        20
-      ],
-      [
-        "rice-vinegar",
-        20
-      ],
-      [
-        "sesame-oil",
-        12
-      ],
-      [
-        "honey",
-        10
-      ],
-      [
-        "sesame-seeds",
-        10
-      ],
-      [
-        "spring-onion",
-        20
-      ]
-    ],
-    "steps": [
-      "Cook {soba-noodles} according to packet directions; rinse thoroughly under cold water and drain.",
-      "Julienne {cucumber} and {carrot}; slice {spring-onion}.",
-      "Whisk {soy-sauce}, {rice-vinegar}, {sesame-oil} and {honey}.",
-      "Toss noodles and vegetables with dressing; finish with {sesame-seeds}."
-    ]
-  },
-  {
     "id": "jp-kitsune-udon",
-    "name": "Kitsune udon (Japanese udon with seasoned tofu pouch)",
+    "name": "Kitsune udon (Japanese udon with seasoned fried tofu)",
     "meal": "big",
     "cuisine": "Japanese",
     "time": 25,
     "serves": 2,
     "ing": [
       [
-        "udon-noodles",
-        160
+        "tofu",
+        200
       ],
       [
-        "tofu",
-        100
+        "oil",
+        15
       ],
       [
         "soy-sauce",
-        25
+        40
       ],
       [
         "mirin",
-        100
+        30
       ],
       [
         "sugar",
-        35
+        15
       ],
       [
         "vegetable-stock",
-        450
+        800
+      ],
+      [
+        "udon-noodles",
+        400
       ],
       [
         "spring-onion",
@@ -2781,70 +2258,14 @@ KITCHEN.add(
       ],
       [
         "nori",
-        5
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "oil",
-        15
+        2
       ]
     ],
     "steps": [
-      "Heat {oil} in a wok or large skillet; stir-fry {spring-onion} with the main ingredients.",
-      "Toss the noodles through the sauce over high heat so they absorb the seasoning without turning soft.",
-      "Simmer tofu with soy, mirin and sugar until it absorbs the seasoning; heat the stock separately, cook udon until springy, then serve with the tofu, spring onion and strips of nori.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
-    ]
-  },
-  {
-    "id": "jp-onigiri",
-    "name": "Onigiri (Japanese rice balls with salmon and nori)",
-    "meal": "bite",
-    "cuisine": "Japanese",
-    "time": 25,
-    "serves": 2,
-    "ing": [
-      [
-        "sushi-rice",
-        180
-      ],
-      [
-        "salmon",
-        300
-      ],
-      [
-        "nori",
-        5
-      ],
-      [
-        "sesame-seeds",
-        10
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "oil",
-        15
-      ]
-    ],
-    "steps": [
-      "Prepare and measure all ingredients, then heat the pan or pot over medium heat.",
-      "Cook {sushi-rice} with the seasonings until the dish reaches its intended texture and the flavours meld.",
-      "Season warm sticky rice lightly with salt, shape around flakes of cooked salmon with damp hands and wrap each triangle with a strip of nori just before serving.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Cut the {tofu} into 4 thin slabs, pat dry and fry in {oil} for 3 minutes per side until golden.",
+      "Simmer the tofu with half the {soy-sauce}, the {mirin}, {sugar} and 100 ml of the {vegetable-stock} for 8 minutes until the liquid is almost gone.",
+      "Heat the remaining stock with the rest of the soy sauce. Cook the {udon-noodles} according to the packet and divide between bowls.",
+      "Ladle over the hot broth and top with the tofu, sliced {spring-onion} and strips of {nori}."
     ]
   }
 ]

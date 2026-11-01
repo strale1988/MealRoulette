@@ -4,7 +4,7 @@ KITCHEN.add(
   {
     "id": "dk-smorrebrod",
     "name": "Smørrebrød with rye, beetroot, egg and dill",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Danish",
     "time": 20,
     "serves": 2,
@@ -14,8 +14,8 @@ KITCHEN.add(
         "4pc"
       ],
       [
-        "fresh-beetroot",
-        200
+        "pickled-beetroot",
+        150
       ],
       [
         "eggs",
@@ -43,10 +43,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare {rye-bread} and cut the remaining vegetables or fruit into even bite-sized pieces.",
-      "Mix the dressing ingredients separately and taste for a balance of salt, acidity and sweetness.",
-      "Toast the rye lightly, spread a thin layer of mustard mayonnaise, then arrange beetroot and sliced egg in neat layers; finish with dill and chopped pickles.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Boil the {eggs} for 9 minutes, cool, peel and slice.",
+      "Mix the {mayonnaise} with the {mustard} and spread over the {rye-bread}.",
+      "Top with the {pickled-beetroot}, sliced egg and {pickles}, season with the {salt} and finish with the {dill}."
     ]
   },
   {
@@ -75,11 +74,11 @@ KITCHEN.add(
       ],
       [
         "flour",
-        120
+        25
       ],
       [
         "parsley",
-        10
+        20
       ],
       [
         "salt",
@@ -91,10 +90,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare and measure all ingredients, then heat the pan or pot over medium heat.",
-      "Cook {pork-belly} with the seasonings until the dish reaches its intended texture and the flavours meld.",
-      "Roast or pan-fry thin pork belly slices until crisp; make a simple parsley white sauce and serve with boiled potatoes so the crisp pork stays separate.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Boil the {potatoes} in salted water for 18 minutes and drain.",
+      "Fry the sliced {pork-belly} in a dry pan over medium heat for 12 minutes, turning, until crisp and golden; keep warm.",
+      "Melt the {butter}, stir in the {flour} for 1 minute and whisk in the {milk}; simmer for 8 minutes, then add the chopped {parsley}, {salt} and {black-pepper}.",
+      "Serve the pork with the potatoes and parsley sauce."
     ]
   },
   {
@@ -107,7 +106,7 @@ KITCHEN.add(
     "ing": [
       [
         "apple",
-        2
+        "2pc"
       ],
       [
         "brown-sugar",
@@ -115,7 +114,7 @@ KITCHEN.add(
       ],
       [
         "stale-bread",
-        160
+        100
       ],
       [
         "butter",
@@ -135,10 +134,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {apple} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Cook apples into a chunky compote, toast buttered crumbs with cinnamon sugar until crisp, then layer the cooled apple and crumbs with whipped cream.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Peel, core and slice the {apple} and cook with a splash of water for 10 minutes into a soft compote.",
+      "Crumble the {stale-bread} and fry in the {butter} with the {brown-sugar} and {cinnamon} for 6 minutes until crisp and caramelised.",
+      "Whip the {cream} with the {vanilla} to soft peaks.",
+      "Layer the compote, crumbs and cream in two glasses and serve."
     ]
   },
   {
@@ -146,7 +145,7 @@ KITCHEN.add(
     "name": "Danish pastry pinwheels with vanilla custard",
     "meal": "treat",
     "cuisine": "Danish",
-    "time": 30,
+    "time": 35,
     "serves": 2,
     "ing": [
       [
@@ -175,10 +174,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {puff-pastry} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Cut puff pastry into squares, spoon a little custard into each centre and fold the corners inward; brush with egg and bake until sharply layered and golden.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 200 °C. Roll out the {puff-pastry} and cut into 8 squares; cut a diagonal slit from each corner almost to the centre.",
+      "Stir the {vanilla} into the {custard} and spoon into the centres with a little {jam}. Fold alternate corners to the middle to make pinwheels.",
+      "Brush with the beaten {eggs}, sprinkle with the {sugar} and bake for 18 minutes until golden."
     ]
   },
   {
@@ -207,7 +205,7 @@ KITCHEN.add(
       ],
       [
         "milk",
-        250
+        80
       ],
       [
         "pickles",
@@ -227,10 +225,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare and measure all ingredients, then heat the pan or pot over medium heat.",
-      "Cook {potatoes} with the seasonings until the dish reaches its intended texture and the flavours meld.",
-      "Make smooth buttery mash, fry bacon until crisp and cook sliced onions in the rendered fat until deeply golden; pile the topping over the mash and add chopped pickles.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Boil the peeled {potatoes} in salted water for 18 minutes and drain.",
+      "Fry the diced {bacon} for 6 minutes, then the sliced {onion} in the bacon fat for 6 minutes until golden.",
+      "Mash the potatoes with the {butter}, {milk}, {salt} and {black-pepper}.",
+      "Top with the bacon and onions and serve with the {pickles} and chopped {parsley}."
     ]
   },
   {
@@ -238,7 +236,7 @@ KITCHEN.add(
     "name": "Flæskesteg (Danish roast pork with crackling)",
     "meal": "big",
     "cuisine": "Danish",
-    "time": 110,
+    "time": 130,
     "serves": 2,
     "ing": [
       [
@@ -259,11 +257,11 @@ KITCHEN.add(
       ],
       [
         "vegetable-stock",
-        450
+        300
       ],
       [
         "apple",
-        2
+        "2pc"
       ],
       [
         "oil",
@@ -271,10 +269,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat the oven to 190 °C and season the main ingredient evenly with the listed aromatics and spices.",
-      "Roast {pork-shoulder} until cooked through and browned; baste once or twice with the pan juices if available.",
-      "Score the rind down to the fat without cutting the meat, rub salt into every groove and roast until the crackling blisters; rest before slicing thinly.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 240 °C. Score the rind of the {pork-shoulder}, rub with the {oil}, {salt} and {black-pepper} and place in a roasting tin with the {bay-leaf} and halved {apple}.",
+      "Roast for 20 minutes, then lower to 180 °C, pour the {vegetable-stock} around the meat and roast for 90 minutes until tender and the crackling is crisp.",
+      "Rest for 10 minutes; use the pan juices as gravy and serve with the baked apple."
     ]
   },
   {
@@ -295,11 +292,11 @@ KITCHEN.add(
       ],
       [
         "cornstarch",
-        100
+        25
       ],
       [
         "water",
-        350
+        250
       ],
       [
         "cream",
@@ -311,10 +308,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {berries} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Simmer berries with water and sugar until they release their juice, thicken lightly with cornstarch slurry and chill until softly set; serve with cold cream.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Simmer the {berries} with the {water} and {sugar} for 8 minutes.",
+      "Whisk the {cornstarch} with 3 tablespoons cold water, stir in and cook for 2 minutes until thickened.",
+      "Serve warm or chilled with the {cream} lightly whipped with the {vanilla}."
     ]
   },
   {
@@ -351,10 +347,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {buttermilk} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Whisk egg yolks with sugar until pale, add buttermilk, vanilla and lemon, then chill thoroughly; crumble biscuits over each bowl just before serving.",
-      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
+      "Separate the {eggs}; whisk the yolks with the {sugar} and {vanilla} until pale and thick (keep the whites for another use).",
+      "Whisk in the {buttermilk} and {lemon-juice} and chill for 30 minutes.",
+      "Serve cold with the crushed {digestive-biscuits} on top."
     ]
   },
   {
@@ -375,7 +370,7 @@ KITCHEN.add(
       ],
       [
         "flour",
-        120
+        40
       ],
       [
         "breadcrumbs",
@@ -407,10 +402,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare {pork-mince} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {pork-mince} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Shape thick oval patties, coat in flour, egg and breadcrumbs, then fry gently so the crust browns before the centre dries; serve with peas and potatoes.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Boil the {potatoes} in salted water for 15 minutes and drain.",
+      "Mix the {pork-mince} with one of the {eggs}, the {salt} and {black-pepper} and shape into 4 patties. Coat in the {flour}, the remaining beaten egg and the {breadcrumbs}.",
+      "Fry in the {butter} and {oil} over medium heat for 5 minutes per side until golden and cooked through.",
+      "Cook the {peas} for 4 minutes and serve with the patties and potatoes."
     ]
   },
   {
@@ -418,20 +413,20 @@ KITCHEN.add(
     "name": "Risalamande (Danish almond rice pudding with cherry sauce)",
     "meal": "treat",
     "cuisine": "Danish",
-    "time": 50,
+    "time": 65,
     "serves": 2,
     "ing": [
       [
         "rice",
-        180
+        100
       ],
       [
         "milk",
-        250
+        600
       ],
       [
         "sugar",
-        35
+        60
       ],
       [
         "vanilla",
@@ -451,10 +446,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {rice} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Cook a thick rice pudding in milk and cool completely; fold in chopped almonds and whipped cream, then serve chilled with a warm fruit sauce.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Simmer the {rice} in the {milk} with the {vanilla} for 40 minutes, stirring often, until thick and creamy; cool completely.",
+      "Whip the {cream} to soft peaks and fold into the cool rice with the chopped {almonds} and half of the {sugar}.",
+      "Simmer the {berries} with the remaining sugar for 10 minutes into a sauce and serve over the pudding."
     ]
   },
   {
@@ -462,71 +456,36 @@ KITCHEN.add(
     "name": "Danish Frikadeller Meatballs",
     "meal": "big",
     "cuisine": "Danish",
-    "time": 30,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "potatoes",
-        400
+        "pork-mince",
+        500
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "eggs",
-        3
+        "1pc"
       ],
       [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {butter} in a heavy pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir well so the ingredients are evenly coated.",
-      "Add the {eggs} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "danish-smrrebrd-with-egg-and-dill",
-    "name": "Danish Smørrebrød with Egg and Dill",
-    "meal": "big",
-    "cuisine": "Danish",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "rye-bread",
-        "4pc"
-      ],
-      [
-        "butter",
-        25
-      ],
-      [
-        "eggs",
-        "4pc"
-      ],
-      [
-        "mayonnaise",
+        "flour",
         40
       ],
       [
-        "dill",
-        10
+        "milk",
+        100
+      ],
+      [
+        "butter",
+        40
       ],
       [
         "salt",
-        2
+        4
       ],
       [
         "black-pepper",
@@ -534,10 +493,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Lower {eggs} into boiling water and cook for 8 minutes, then cool under cold running water, peel and slice.",
-      "Butter each slice of {rye-bread} with {butter} right to the edges; this stops the topping soaking in.",
-      "Spread a layer of {mayonnaise} over the butter and arrange the sliced egg on top.",
-      "Chop {dill} and scatter it over the eggs with {salt} and {black-pepper}. Serve open-faced, with a knife and fork."
+      "Mix the {pork-mince} with the grated {onion}, {flour}, {eggs}, {milk}, {salt} and {black-pepper}; rest for 15 minutes.",
+      "Shape into 12 oval patties.",
+      "Fry in the {butter} over medium heat for 5 minutes per side until golden and cooked through."
     ]
   },
   {
@@ -545,7 +503,7 @@ KITCHEN.add(
     "name": "Danish Creamy Potato Leek Soup",
     "meal": "big",
     "cuisine": "Danish",
-    "time": 25,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
@@ -553,30 +511,38 @@ KITCHEN.add(
         400
       ],
       [
+        "leek",
+        "2pc"
+      ],
+      [
         "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
+        "1pc"
       ],
       [
         "butter",
-        20
+        30
+      ],
+      [
+        "vegetable-stock",
+        800
+      ],
+      [
+        "cream",
+        100
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Soften the sliced {leek} and {onion} in the {butter} for 8 minutes.",
+      "Add the diced {potatoes} and {vegetable-stock} and simmer for 18 minutes until tender.",
+      "Blend until smooth, stir in the {cream} and season with the {salt} and {black-pepper}."
     ]
   },
   {
@@ -628,223 +594,239 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "danish-apple-cake",
-    "name": "Danish Apple Cake",
+    "id": "danish-rugbrod",
+    "name": "Rugbrød (Danish rye bread)",
+    "meal": "bite",
+    "cuisine": "Danish",
+    "time": 150,
+    "serves": 8,
+    "ing": [
+      [
+        "rye-flour",
+        400
+      ],
+      [
+        "wholemeal-flour",
+        100
+      ],
+      [
+        "yeast",
+        5
+      ],
+      [
+        "water",
+        350
+      ],
+      [
+        "salt",
+        8
+      ],
+      [
+        "honey",
+        30
+      ]
+    ],
+    "steps": [
+      "Mix the {rye-flour}, {wholemeal-flour}, {yeast} and {salt}, then stir in the {water} and {honey} to a thick, sticky dough.",
+      "Press into a greased loaf tin, cover and leave to rise for 1 hour.",
+      "Bake at 200 °C for 60 minutes until firm and hollow-sounding; cool completely before slicing thinly."
+    ]
+  },
+  {
+    "id": "danish-hakkebof",
+    "name": "Hakkebøf med Løg (Danish beef patties with onions and gravy)",
     "meal": "big",
     "cuisine": "Danish",
-    "time": 39,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "parsley",
-        10
+        "beef-mince",
+        500
       ],
       [
-        "black-pepper",
-        2
+        "onion",
+        "2pc"
+      ],
+      [
+        "butter",
+        40
+      ],
+      [
+        "flour",
+        20
+      ],
+      [
+        "beef-stock",
+        200
+      ],
+      [
+        "potatoes",
+        600
       ],
       [
         "salt",
         3
       ],
       [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
+        "black-pepper",
         1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
       ]
     ],
     "steps": [
-      "Add the {parsley} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Boil the peeled {potatoes} in salted water for 18 minutes and drain. Shape the {beef-mince} with the {salt} and {black-pepper} into 4 patties.",
+      "Fry the sliced {onion} in half of the {butter} for 15 minutes until deep golden; set aside.",
+      "Fry the patties in the remaining butter for 4 minutes per side. Remove, stir the {flour} into the pan and whisk in the {beef-stock}; simmer for 4 minutes into a gravy.",
+      "Serve the patties with the onions, gravy and potatoes."
     ]
   },
   {
-    "id": "danish-creamy-mushroom-and-potato-soup",
-    "name": "Danish Creamy Mushroom and Potato Soup",
-    "meal": "big",
+    "id": "danish-aeggekage",
+    "name": "Æggekage (Danish baked egg and bacon omelette)",
+    "meal": "morning",
     "cuisine": "Danish",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ],
-      [
-        "butter",
-        20
-      ]
-    ],
-    "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
-    ]
-  },
-  {
-    "id": "danish-herbed-cheese-omelette",
-    "name": "Danish Herbed Cheese Omelette",
-    "meal": "morning,big",
-    "cuisine": "Danish",
-    "time": 25,
-    "serves": 4,
+    "time": 35,
+    "serves": 3,
     "ing": [
       [
         "eggs",
-        "8pc"
+        "6pc"
       ],
       [
         "milk",
-        60
+        200
       ],
       [
-        "mushrooms",
-        150
+        "bacon",
+        120
       ],
       [
-        "cheese",
-        100
+        "tomato",
+        "2pc"
+      ],
+      [
+        "chives",
+        10
       ],
       [
         "butter",
+        15
+      ],
+      [
+        "salt",
+        2
+      ],
+      [
+        "black-pepper",
+        1
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 180 °C. Fry the diced {bacon} in the {butter} in an ovenproof pan for 5 minutes.",
+      "Whisk the {eggs} with the {milk}, {salt} and {black-pepper} and pour over the bacon.",
+      "Bake for 20 minutes until puffed and set, then top with sliced {tomato} and chopped {chives}."
+    ]
+  },
+  {
+    "id": "danish-aebleskiver",
+    "name": "Æbleskiver (Danish pancake balls)",
+    "meal": "treat",
+    "cuisine": "Danish",
+    "time": 40,
+    "serves": 4,
+    "ing": [
+      [
+        "flour",
+        200
+      ],
+      [
+        "buttermilk",
+        300
+      ],
+      [
+        "eggs",
+        "2pc"
+      ],
+      [
+        "sugar",
         30
       ],
       [
-        "parsley",
-        10
+        "baking-powder",
+        6
       ],
       [
-        "salt",
+        "cardamom",
         2
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Slice {mushrooms}, grate {cheese} and chop {parsley}. Whisk {eggs} with {milk}, {salt} and {black-pepper}.",
-      "Melt a third of the {butter} in a frying pan and fry the mushrooms over high heat for 5 minutes until golden and dry; tip onto a plate.",
-      "Wipe the pan, melt half of the remaining butter and pour in half the egg mixture. Stir the edges inward for 1 minute, then leave 1–2 minutes until nearly set.",
-      "Scatter half the mushrooms, half the cheese and half the parsley over one side, fold the omelette over and slide it out. Repeat with the rest, then cut each omelette in half to serve four."
-    ]
-  },
-  {
-    "id": "danish-apple-and-cinnamon-bake",
-    "name": "Danish Apple and Cinnamon Bake",
-    "meal": "big",
-    "cuisine": "Danish",
-    "time": 60,
-    "serves": 4,
-    "ing": [
-      [
-        "parsley",
-        10
-      ],
-      [
-        "black-pepper",
-        2
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {parsley} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "danish-cabbage-and-bean-stew",
-    "name": "Danish Cabbage and Bean Stew",
-    "meal": "big",
-    "cuisine": "Danish",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
       ],
       [
         "butter",
-        20
+        60
+      ],
+      [
+        "salt",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Separate the {eggs}. Whisk the yolks with the {buttermilk} and {sugar}, then stir in the {flour}, {baking-powder}, {cardamom}, {salt} and 30 g of melted {butter}.",
+      "Whisk the whites to stiff peaks and fold into the batter.",
+      "Heat an æbleskiver pan, brush each hollow with the remaining butter, fill two-thirds with batter and cook for 5 minutes over medium heat, turning with a skewer, until golden and cooked through."
+    ]
+  },
+  {
+    "id": "danish-gule-aerter",
+    "name": "Gule Ærter (Danish yellow pea soup)",
+    "meal": "big",
+    "cuisine": "Danish",
+    "time": 90,
+    "serves": 4,
+    "ing": [
+      [
+        "yellow-split-peas",
+        300
+      ],
+      [
+        "bacon",
+        150
+      ],
+      [
+        "carrot",
+        "2pc"
+      ],
+      [
+        "leek",
+        "1pc"
+      ],
+      [
+        "celery",
+        "2pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "thyme",
+        2
+      ],
+      [
+        "mustard",
+        15
+      ],
+      [
+        "salt",
+        2
+      ],
+      [
+        "water",
+        1500
+      ]
+    ],
+    "steps": [
+      "Rinse the {yellow-split-peas} and put in a pot with the {water}, the {bacon}, chopped {onion} and {thyme}; bring to the boil and skim.",
+      "Simmer for 45 minutes, then add the diced {carrot}, {leek} and {celery} and simmer for 25 minutes until the peas have broken down.",
+      "Lift out the bacon, slice it, season the soup with the {salt} and serve with the bacon and a spoon of {mustard}."
     ]
   },
   {

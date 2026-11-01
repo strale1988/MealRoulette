@@ -2,70 +2,6 @@
 KITCHEN.add(
 [
   {
-    "id": "world-nasi-goreng",
-    "name": "Indonesian nasi goreng",
-    "meal": "big",
-    "cuisine": "Indonesian",
-    "time": 20,
-    "serves": 2,
-    "ing": [
-      [
-        "left-rice",
-        350
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "prawns",
-        160
-      ],
-      [
-        "shallot",
-        70
-      ],
-      [
-        "garlic",
-        8
-      ],
-      [
-        "sriracha",
-        12
-      ],
-      [
-        "soy-sauce",
-        18
-      ],
-      [
-        "sweetcorn",
-        80
-      ],
-      [
-        "cucumber",
-        100
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "lime",
-        "0.5pc"
-      ],
-      [
-        "spring-onion",
-        30
-      ]
-    ],
-    "steps": [
-      "Break up the cold {left-rice}. Finely chop {shallot} and {garlic}.",
-      "Heat {oil} in a wok and stir-fry {shallot} and {garlic} until fragrant. Add {prawns} and cook until opaque.",
-      "Push the mixture aside, scramble {eggs}, then add {left-rice}, {sweetcorn}, {soy-sauce} and {sriracha}; stir-fry until piping hot.",
-      "Serve with sliced {cucumber}, {spring-onion} and a squeeze of {lime}."
-    ]
-  },
-  {
     "id": "world-malaysian-laksa",
     "name": "Coconut laksa with prawns",
     "meal": "big",
@@ -123,66 +59,6 @@ KITCHEN.add(
       "Heat {sesame-oil} and fry {curry-paste} for 1 minute. Add {chicken-stock} and {coconut-milk}; simmer 8 minutes.",
       "Add {prawns} and {pak-choi}; cook until the prawns are opaque and the greens are tender. Season with {fish-sauce}.",
       "Divide noodles and {beansprouts} between bowls, ladle over the broth and finish with {lime} and {coriander}."
-    ]
-  },
-  {
-    "id": "world-indonesian-satay",
-    "name": "Indonesian satay-style chicken with peanut sauce",
-    "meal": "big",
-    "cuisine": "Indonesian",
-    "time": 35,
-    "serves": 2,
-    "ing": [
-      [
-        "chicken-thigh",
-        350
-      ],
-      [
-        "peanut-butter",
-        55
-      ],
-      [
-        "soy-sauce",
-        20
-      ],
-      [
-        "lime",
-        "1pc"
-      ],
-      [
-        "coconut-milk",
-        100
-      ],
-      [
-        "garlic",
-        8
-      ],
-      [
-        "ginger",
-        8
-      ],
-      [
-        "cumin",
-        2
-      ],
-      [
-        "brown-sugar",
-        8
-      ],
-      [
-        "rice",
-        140
-      ],
-      [
-        "cucumber",
-        100
-      ]
-    ],
-    "steps": [
-      "Mix half the {soy-sauce}, {garlic}, {ginger} and {cumin}; coat cubes of {chicken-thigh} and leave 15 minutes.",
-      "Thread the chicken onto skewers or spread on a tray. Grill or roast at 220°C, turning once, until browned and fully cooked.",
-      "Warm {peanut-butter}, {coconut-milk}, {brown-sugar}, remaining {soy-sauce} and juice of half the {lime} in a small pan, stirring until smooth.",
-      "Cook {rice} and serve with the chicken, peanut sauce, sliced {cucumber} and remaining {lime}."
     ]
   },
   {
@@ -788,7 +664,8 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Mash about half of the {sweetcorn}. Mix with the rest, the {flour}, {eggs}, sliced {spring-onion}, finely chopped {shallot}, {ground-coriander} and {salt} to a thick batter.",
+      "Mash about half of the {sweetcorn} in a bowl.",
+      "Mix with the rest of the corn, the {flour}, {eggs}, sliced {spring-onion}, finely chopped {shallot}, {ground-coriander} and {salt} to a thick batter.",
       "Fry spoonfuls in the {oil} for 2 to 3 minutes per side until golden. Drain and serve warm with the {sambal-oelek} for dipping."
     ]
   },
@@ -946,114 +823,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "world-indonesian-satay-chicken",
-    "name": "Indonesian chicken satay with peanut sauce",
-    "meal": "big",
-    "cuisine": "Indonesian",
-    "time": 35,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        650
-      ],
-      [
-        "soy-sauce",
-        25
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "garlic",
-        3
-      ],
-      [
-        "coriander",
-        4
-      ],
-      [
-        "peanut-butter",
-        100
-      ],
-      [
-        "coconut-milk",
-        180
-      ],
-      [
-        "brown-sugar",
-        12
-      ],
-      [
-        "fresh-chilli",
-        1
-      ]
-    ],
-    "steps": [
-      "Cut the {chicken-thigh} into strips. Mix {soy-sauce}, juice of half the {lime}, minced {garlic} and {coriander}; marinate chicken for 15 minutes.",
-      "Thread chicken onto skewers. Grill or broil, turning, until lightly charred and cooked through.",
-      "Whisk {peanut-butter}, {coconut-milk}, {brown-sugar}, {fresh-chilli} and remaining lime juice in a small saucepan. Warm gently, adding water if needed.",
-      "Serve satay with peanut sauce, cucumber and steamed rice."
-    ]
-  },
-  {
-    "id": "world-indonesian-gado-gado",
-    "name": "Indonesian gado-gado vegetable and peanut salad",
-    "meal": "big",
-    "cuisine": "Indonesian",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "potatoes",
-        350
-      ],
-      [
-        "green-beans",
-        200
-      ],
-      [
-        "bean-sprouts",
-        150
-      ],
-      [
-        "eggs",
-        "3pc"
-      ],
-      [
-        "tofu",
-        250
-      ],
-      [
-        "peanut-butter",
-        100
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "soy-sauce",
-        20
-      ],
-      [
-        "brown-sugar",
-        10
-      ],
-      [
-        "fresh-chilli",
-        1
-      ]
-    ],
-    "steps": [
-      "Boil {potatoes} until tender; steam {green-beans} and blanch {bean-sprouts} briefly. Boil the {eggs} for 8–9 minutes.",
-      "Pan-fry cubed {tofu} until golden on all sides.",
-      "Whisk {peanut-butter} with juice of the {lime}, {soy-sauce}, {brown-sugar}, minced {fresh-chilli} and enough warm water to make a pourable sauce.",
-      "Arrange vegetables, tofu and halved eggs on a platter. Spoon over peanut sauce and serve at room temperature."
-    ]
-  },
-  {
     "id": "indonesian-satay-chicken",
     "name": "Chicken satay with peanut sauce",
     "cuisine": "Indonesian",
@@ -1126,7 +895,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -1134,7 +903,7 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        1
+        "1pc"
       ],
       [
         "cornstarch",
@@ -1150,7 +919,7 @@ KITCHEN.add(
       ],
       [
         "spring-onion",
-        3
+        "3pc"
       ],
       [
         "soy-sauce",
@@ -1193,7 +962,7 @@ KITCHEN.add(
       ],
       [
         "lemongrass",
-        1
+        15
       ],
       [
         "ginger",
@@ -1236,11 +1005,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -1256,7 +1025,7 @@ KITCHEN.add(
       ],
       [
         "lemongrass",
-        1
+        15
       ],
       [
         "bay-leaf",
@@ -1284,14 +1053,14 @@ KITCHEN.add(
   {
     "id": "indonesian-sayur-asem",
     "name": "Sayur asem (tamarind vegetable soup with corn)",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Indonesian",
     "time": 35,
     "serves": 3,
     "ing": [
       [
         "sweetcorn",
-        1
+        150
       ],
       [
         "green-beans",
@@ -1299,11 +1068,11 @@ KITCHEN.add(
       ],
       [
         "zucchini",
-        1
+        "1pc"
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "tamarind-paste",
@@ -1311,11 +1080,11 @@ KITCHEN.add(
       ],
       [
         "shallot",
-        2
+        "2pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "coriander-seeds",
@@ -1358,7 +1127,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "lime-juice",
@@ -1429,7 +1198,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "curry-powder",
@@ -1480,9 +1249,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Soak {glutinous-rice} for at least 3 hours, then drain and grind with a little water into a sticky dough.",
+      "Soak {glutinous-rice} for at least 3 hours, then drain and grind with the {water} into a sticky dough.",
       "Pinch off small pieces, flatten, fill each with a little {brown-sugar} and seal into a ball. Simmer in water until they float, then cook 1 minute more.",
-      "Mix {desiccated-coconut} with {coconut-milk} and a pinch of salt; steam or microwave briefly. Roll drained rice balls in the coconut and serve warm."
+      "Mix {desiccated-coconut} with {coconut-milk} and a pinch of {salt}; steam or microwave briefly. Roll drained rice balls in the coconut and serve warm."
     ]
   },
   {
@@ -1499,7 +1268,7 @@ KITCHEN.add(
       ],
       [
         "shallot",
-        4
+        "4pc"
       ],
       [
         "garlic",
@@ -1515,7 +1284,7 @@ KITCHEN.add(
       ],
       [
         "lemongrass",
-        1
+        15
       ],
       [
         "turmeric",
@@ -1523,7 +1292,7 @@ KITCHEN.add(
       ],
       [
         "fresh-chilli",
-        2
+        "2pc"
       ],
       [
         "coriander-seeds",
@@ -1566,11 +1335,11 @@ KITCHEN.add(
       ],
       [
         "eggs",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "salt",
@@ -1590,7 +1359,7 @@ KITCHEN.add(
       ],
       [
         "fresh-chilli",
-        1
+        "1pc"
       ],
       [
         "cucumber",
@@ -1613,7 +1382,7 @@ KITCHEN.add(
     "ing": [
       [
         "banana",
-        2
+        "2pc"
       ],
       [
         "sweet-potato",
@@ -1647,75 +1416,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "id-sayur-lodeh",
-    "name": "Sayur lodeh (Indonesian coconut vegetable stew)",
-    "meal": "big",
-    "cuisine": "Indonesian",
-    "time": 40,
-    "serves": 2,
-    "ing": [
-      [
-        "coconut-milk",
-        250
-      ],
-      [
-        "green-beans",
-        150
-      ],
-      [
-        "carrot",
-        150
-      ],
-      [
-        "cabbage",
-        200
-      ],
-      [
-        "aubergine",
-        1
-      ],
-      [
-        "tofu",
-        100
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "garlic",
-        3
-      ],
-      [
-        "turmeric",
-        2
-      ],
-      [
-        "vegetable-stock",
-        450
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Cut {aubergine}, {carrot} and {cabbage} into bite-sized pieces and trim {green-beans}. Cut {tofu} into cubes.",
-      "Blend {onion}, {garlic}, {turmeric} and {black-pepper} with a little {vegetable-stock} into a paste.",
-      "Fry the paste in {oil} for 4 minutes until fragrant, then add the remaining {vegetable-stock}, {salt}, the carrot and aubergine, and simmer for 10 minutes.",
-      "Add the green beans, cabbage and tofu and cook 6 minutes.",
-      "Stir in {coconut-milk} and warm gently for 4 minutes without boiling hard. Serve with rice."
-    ]
-  },
-  {
     "id": "id-sate-lilit",
     "name": "Sate lilit (Balinese minced fish and coconut skewers)",
     "meal": "big",
@@ -1725,19 +1425,19 @@ KITCHEN.add(
     "ing": [
       [
         "white-fish",
-        350
+        400
       ],
       [
         "coconut-flakes",
-        30
+        40
       ],
       [
         "lemongrass",
-        1
+        15
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "ginger",
@@ -1745,15 +1445,11 @@ KITCHEN.add(
       ],
       [
         "red-chilli",
-        1
+        "1pc"
       ],
       [
         "lime",
         "1pc"
-      ],
-      [
-        "oil",
-        15
       ],
       [
         "salt",
@@ -1762,13 +1458,17 @@ KITCHEN.add(
       [
         "black-pepper",
         1
+      ],
+      [
+        "oil",
+        15
       ]
     ],
     "steps": [
-      "Season {white-fish} and coat it with the aromatics and marinade ingredients; rest briefly while the grill heats.",
-      "Grill or sear {white-fish} over medium-high heat, turning as needed until cooked through and lightly charred.",
-      "Finely mince the fish with coconut, lemongrass, garlic and ginger; mould the mixture around flat skewers and grill while turning until lightly charred and cooked through.",
-      "Finish with a little {lime} if needed, taste for seasoning and serve while the texture is at its best."
+      "Finely chop the {white-fish} and mix with {coconut-flakes}, finely minced {lemongrass}, crushed {garlic}, grated {ginger}, chopped {red-chilli}, {salt} and {black-pepper}. Squeeze in the juice of half the {lime} and knead until sticky.",
+      "Press the mixture around flat skewers in a long sausage shape.",
+      "Brush with {oil} and grill for 4–5 minutes, turning, until lightly charred and cooked through.",
+      "Serve with wedges of the remaining lime."
     ]
   }
 ]

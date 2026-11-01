@@ -58,15 +58,15 @@ KITCHEN.add(
       ],
       [
         "potatoes",
-        2
+        "2pc"
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "oil",
@@ -82,7 +82,7 @@ KITCHEN.add(
   {
     "id": "kenyan-sukuma-wiki",
     "name": "Sukuma wiki (braised greens)",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Kenyan",
     "time": 20,
     "serves": 4,
@@ -93,11 +93,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "oil",
@@ -111,7 +111,7 @@ KITCHEN.add(
     "steps": [
       "Slice {kale} finely. Soften chopped {onion} in {oil}.",
       "Add chopped {tomato} and cook until pulpy.",
-      "Stir in kale and a splash of water; cover and cook until tender but still green."
+      "Stir in kale, {salt} and a splash of water; cover and cook until tender but still green."
     ]
   },
   {
@@ -132,11 +132,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "cumin",
@@ -151,44 +151,6 @@ KITCHEN.add(
       "Brown {beef-chuck} and sliced {onion}; add {garlic} and {cumin}.",
       "Stir in {rice} until coated, then add {beef-stock}.",
       "Cover and simmer on low until rice is tender and liquid absorbed; rest 10 minutes before fluffing."
-    ]
-  },
-  {
-    "id": "kenyan-githeri-bean-and-corn-stew",
-    "name": "Kenyan Githeri Bean and Corn Stew",
-    "meal": "big",
-    "cuisine": "Kenyan",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
     ]
   },
   {
@@ -305,98 +267,31 @@ KITCHEN.add(
   },
   {
     "id": "irio-style-pea-potato-mash",
-    "name": "Irio-Style Pea Potato Mash",
+    "name": "Irio (Kenyan mashed potatoes, peas and corn)",
     "meal": "big",
     "cuisine": "Kenyan",
-    "time": 51,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "onion",
-        1
+        "potatoes",
+        600
       ],
       [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
+        "peas",
         250
       ],
       [
-        "spinach",
+        "sweetcorn",
         150
       ],
       [
-        "ginger",
-        10
-      ]
-    ],
-    "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {onion} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "kenyan-pilau-rice-kenyan-home-style",
-    "name": "Kenyan Pilau Rice — Kenyan Home-Style",
-    "meal": "big",
-    "cuisine": "Kenyan",
-    "time": 90,
-    "serves": 4,
-    "ing": [
-      [
-        "rice",
-        300
+        "spinach",
+        100
       ],
       [
-        "beef-chuck",
-        400
-      ],
-      [
-        "onion",
-        "2pc"
-      ],
-      [
-        "garlic",
-        "4pc"
-      ],
-      [
-        "ginger",
-        15
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "cardamom",
-        2
-      ],
-      [
-        "cloves",
-        1
-      ],
-      [
-        "cinnamon",
-        2
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "beef-stock",
-        700
-      ],
-      [
-        "oil",
-        40
+        "butter",
+        30
       ],
       [
         "salt",
@@ -404,11 +299,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Cut {beef-chuck} into 3 cm cubes and slice {onion}. Rinse {rice}.",
-      "Heat {oil} in a heavy pot and cook the onion for 12–15 minutes until deep golden brown; this gives pilau its colour.",
-      "Add the beef, crushed {garlic}, grated {ginger}, {cumin}, {cardamom}, {cloves}, {cinnamon}, {black-pepper} and {salt} and brown for 8 minutes.",
-      "Add 300 ml of the {beef-stock}, cover and simmer for 40 minutes until the beef is tender.",
-      "Stir in the rice and remaining stock, bring to a boil, cover and cook on the lowest heat for 18 minutes. Rest 5 minutes and fluff."
+      "Peel and cube the {potatoes} and boil in salted water with the {peas} and {sweetcorn} for 18 minutes until the potatoes are tender.",
+      "Wilt the {spinach} in the {butter} for 2 minutes.",
+      "Drain the vegetables, keeping a little cooking water, and mash coarsely with the spinach and {salt}, adding a splash of water if needed.",
+      "Serve hot, as a side for stews and grilled meat."
     ]
   },
   {
@@ -569,44 +463,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "kenyan-spiced-rice-with-vegetables",
-    "name": "Kenyan Spiced Rice with Vegetables",
-    "meal": "big",
-    "cuisine": "Kenyan",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
-  {
     "id": "kenyan-tomato-and-bean-stew",
     "name": "Kenyan Tomato and Bean Stew",
     "meal": "big",
@@ -659,87 +515,49 @@ KITCHEN.add(
   },
   {
     "id": "kenyan-grilled-fish-with-lime",
-    "name": "Kenyan Grilled Fish with Lime",
+    "name": "Kenyan grilled fish with lime and turmeric",
     "meal": "big",
     "cuisine": "Kenyan",
-    "time": 39,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "white-fish",
+        600
       ],
       [
-        "oil",
-        20
+        "lime",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "turmeric",
+        2
+      ],
+      [
+        "curry-powder",
+        3
       ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        500
+        "oil",
+        20
       ],
       [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
+        "cilantro",
+        10
       ]
     ],
     "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "kenyan-chicken-and-greens-pot",
-    "name": "Kenyan Chicken and Greens Pot",
-    "meal": "big",
-    "cuisine": "Kenyan",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Mix the juice of one {lime} with crushed {garlic}, {turmeric}, {curry-powder}, {salt} and half the {oil}. Coat the {white-fish} and marinate for 20 minutes.",
+      "Heat a griddle pan to high and brush with the remaining {oil}. Grill the fish for 4–5 minutes per side until it flakes easily.",
+      "Serve with wedges of the remaining {lime} and chopped {cilantro}."
     ]
   },
   {
@@ -800,87 +618,85 @@ KITCHEN.add(
   },
   {
     "id": "kenyan-herbed-flatbread",
-    "name": "Kenyan Herbed Flatbread",
-    "meal": "big",
+    "name": "Kenyan chapati (layered flatbread)",
+    "meal": "bite",
     "cuisine": "Kenyan",
-    "time": 60,
+    "time": 75,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "flour",
+        400
+      ],
+      [
+        "salt",
+        4
+      ],
+      [
+        "sugar",
+        5
+      ],
+      [
+        "water",
+        220
       ],
       [
         "oil",
-        20
+        60
+      ]
+    ],
+    "steps": [
+      "Mix {flour}, {salt} and {sugar}, then knead with {water} and 15 ml of the {oil} for 8 minutes into a soft dough. Cover and rest for 30 minutes.",
+      "Divide into 8 balls and roll each very thin. Brush with oil, roll into a rope, coil into a snail shape and rest for 10 minutes.",
+      "Roll each coil into a 20 cm round.",
+      "Cook in a hot dry pan for 1 minute, flip, brush with oil and cook for 1–2 minutes per side until golden-spotted and layered."
+    ]
+  },
+  {
+    "id": "kenyan-coconut-rice-bowl",
+    "name": "Kenyan coconut rice (wali wa nazi) with kachumbari",
+    "meal": "big",
+    "cuisine": "Kenyan",
+    "time": 40,
+    "serves": 4,
+    "ing": [
+      [
+        "rice",
+        300
+      ],
+      [
+        "coconut-milk",
+        300
+      ],
+      [
+        "water",
+        250
       ],
       [
         "salt",
         3
       ],
       [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
         "tomato",
-        300
+        "2pc"
       ],
       [
-        "peanut-butter",
-        50
+        "red-onion",
+        "1pc"
       ],
       [
-        "rice",
-        250
+        "lime",
+        "1pc"
+      ],
+      [
+        "cilantro",
+        10
       ]
     ],
     "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "kenyan-coconut-rice-bowl",
-    "name": "Kenyan Coconut Rice Bowl",
-    "meal": "big",
-    "cuisine": "Kenyan",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Rinse the {rice} and cook with {coconut-milk}, {water} and {salt}: bring to the boil, cover and cook on low heat for 15 minutes, then rest for 5 minutes.",
+      "Slice {tomato} and {red-onion} and toss with the juice of the {lime} and chopped {cilantro}.",
+      "Fluff the rice and serve with the kachumbari."
     ]
   },
   {

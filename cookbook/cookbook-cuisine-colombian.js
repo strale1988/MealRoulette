@@ -6,7 +6,7 @@ KITCHEN.add(
     "name": "Ajiaco bogotano-inspired chicken, potato and corn soup",
     "meal": "big",
     "cuisine": "Colombian",
-    "time": 60,
+    "time": 65,
     "serves": 2,
     "ing": [
       [
@@ -19,7 +19,7 @@ KITCHEN.add(
       ],
       [
         "sweetcorn",
-        120
+        200
       ],
       [
         "chicken-stock",
@@ -27,15 +27,15 @@ KITCHEN.add(
       ],
       [
         "leek",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "cilantro",
-        10
+        15
       ],
       [
         "cream",
@@ -59,10 +59,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a soup pot and soften {garlic} and {leek} without browning.",
-      "Add {chicken-stock} and {chicken-thigh}, simmering gently until the main ingredient is tender.",
-      "Simmer chicken with mixed potatoes and corn until the potatoes partly break down and thicken the broth; shred the chicken and serve with cream and capers.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Soften the sliced {leek} and crushed {garlic} in the {oil} for 5 minutes.",
+      "Add the {chicken-thigh}, {chicken-stock}, 300 ml water, {salt} and {black-pepper} and simmer for 25 minutes; lift out the chicken and shred it.",
+      "Add the diced {potatoes} and the {sweetcorn} and simmer for 20 minutes until the potatoes break down and thicken the soup.",
+      "Return the chicken, ladle into bowls and top with the {cream}, {capers} and chopped {cilantro}."
     ]
   },
   {
@@ -70,7 +70,7 @@ KITCHEN.add(
     "name": "Bandeja paisa-inspired platter with beans, beef, egg and plantain",
     "meal": "big",
     "cuisine": "Colombian",
-    "time": 70,
+    "time": 60,
     "serves": 2,
     "ing": [
       [
@@ -87,7 +87,7 @@ KITCHEN.add(
       ],
       [
         "plantain",
-        2
+        "2pc"
       ],
       [
         "rice",
@@ -95,7 +95,7 @@ KITCHEN.add(
       ],
       [
         "avocado",
-        1
+        "1pc"
       ],
       [
         "bacon",
@@ -103,7 +103,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "onion",
@@ -119,14 +119,14 @@ KITCHEN.add(
       ],
       [
         "oil",
-        15
+        30
       ]
     ],
     "steps": [
-      "Prepare and measure all ingredients, then heat the pan or pot over medium heat.",
-      "Cook {black-beans} with the seasonings until the dish reaches its intended texture and the flavours meld.",
-      "Prepare each component separately: simmer beans until creamy, crisp the bacon, fry the plantain and egg, and serve with rice, beef and avocado arranged side by side.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Soften the chopped {onion} and crushed {garlic} in half of the {oil}, add the {black-beans} and 100 ml water and simmer for 15 minutes. Cook the {rice} in 360 ml water, covered, for 15 minutes.",
+      "Fry the {bacon} for 6 minutes, then brown the {beef-mince} in the same pan for 8 minutes with the {salt} and {black-pepper}.",
+      "Fry the sliced {plantain} in the remaining oil for 3 minutes per side, then fry the {eggs}.",
+      "Arrange the rice, beans, beef, bacon, plantain and eggs on plates and add slices of {avocado}."
     ]
   },
   {
@@ -139,11 +139,11 @@ KITCHEN.add(
     "ing": [
       [
         "plantain",
-        2
+        "2pc"
       ],
       [
         "oil",
-        15
+        150
       ],
       [
         "salt",
@@ -151,7 +151,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "lime",
@@ -163,10 +163,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare {plantain} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {plantain} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Fry thick plantain pieces until just soft, flatten them between parchment, then fry again until crisp and golden; season immediately and serve with garlic-lime dip.",
-      "Finish with a little {lime} if needed, taste for seasoning and serve while the texture is at its best."
+      "Peel the green {plantain} and cut into 3 cm chunks.",
+      "Fry in the {oil} at 160 °C for 3 minutes until pale gold, drain and smash each piece flat to 1 cm.",
+      "Mix the crushed {garlic} with the juice of the {lime}, 2 tablespoons water, half of the {salt} and the {black-pepper}; dip the patacones briefly.",
+      "Refry at 180 °C for 2–3 minutes until crisp and sprinkle with the remaining salt."
     ]
   },
   {
@@ -187,7 +187,7 @@ KITCHEN.add(
       ],
       [
         "milk",
-        250
+        100
       ],
       [
         "butter",
@@ -203,10 +203,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Whisk the batter until smooth and let it rest briefly so the flour hydrates.",
-      "Cook {sweetcorn} in a lightly greased pan over medium heat, turning or folding once the surface sets.",
-      "Blend part of the corn with milk, fold in whole kernels and cornmeal to make a thick batter, then griddle small cakes slowly and sandwich with cheese while hot.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Blend the {sweetcorn} with the {milk} and {salt} and stir in the {cornmeal}; rest for 10 minutes.",
+      "Melt half of the {butter} in a pan and cook spoonfuls of batter into 8 cm cakes for 3 minutes per side until golden.",
+      "Top with the {cheddar}, cover for 1 minute to melt and serve with the remaining butter."
     ]
   },
   {
@@ -214,7 +213,7 @@ KITCHEN.add(
     "name": "Colombian sancocho-inspired chicken and root-vegetable soup",
     "meal": "big",
     "cuisine": "Colombian",
-    "time": 60,
+    "time": 65,
     "serves": 2,
     "ing": [
       [
@@ -227,11 +226,11 @@ KITCHEN.add(
       ],
       [
         "plantain",
-        2
+        "2pc"
       ],
       [
         "sweetcorn",
-        120
+        200
       ],
       [
         "carrot",
@@ -251,7 +250,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "salt",
@@ -267,10 +266,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a soup pot and soften {onion} and {garlic} without browning.",
-      "Add {chicken-stock} and {chicken-thigh}, simmering gently until the main ingredient is tender.",
-      "Start with chicken and stock, then add dense vegetables in stages so each finishes tender; leave the plantain in large chunks and finish with plenty of fresh cilantro.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Soften the chopped {onion} and crushed {garlic} in the {oil} for 5 minutes.",
+      "Add the {chicken-thigh}, {chicken-stock}, 450 ml water, {salt} and {black-pepper} and simmer for 25 minutes.",
+      "Add the {plantain}, {potatoes} and {carrot} in large chunks and the {sweetcorn} and simmer for 20 minutes until tender.",
+      "Scatter with chopped {cilantro} and serve in deep bowls."
     ]
   },
   {
@@ -295,7 +294,7 @@ KITCHEN.add(
       ],
       [
         "sausage",
-        300
+        200
       ],
       [
         "spring-onion",
@@ -307,7 +306,7 @@ KITCHEN.add(
       ],
       [
         "avocado",
-        1
+        "1pc"
       ],
       [
         "salt",
@@ -319,10 +318,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare {left-rice} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {left-rice} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Heat rice and beans together in a skillet until the edges crisp slightly, fry sausage and egg separately, and serve with fresh avocado and scallions.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Fry the sliced {sausage} in the {oil} for 5 minutes, then add the sliced {spring-onion} and {black-beans} for 5 minutes.",
+      "Stir in the {left-rice} for 5 minutes until hot, season with the {salt} and {black-pepper}.",
+      "Fry the {eggs} and serve on top of the calentado with slices of {avocado}."
     ]
   },
   {
@@ -335,7 +333,7 @@ KITCHEN.add(
     "ing": [
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "spring-onion",
@@ -343,7 +341,7 @@ KITCHEN.add(
       ],
       [
         "garlic",
-        3
+        "3pc"
       ],
       [
         "olive-oil",
@@ -363,10 +361,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare and measure all ingredients, then heat the pan or pot over medium heat.",
-      "Cook {tomato} with the seasonings until the dish reaches its intended texture and the flavours meld.",
-      "Cook finely chopped tomato and scallions slowly in oil until jammy and glossy; keep the heat moderate so the sauce sweetens without catching.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Soften the sliced {spring-onion} and crushed {garlic} in the {olive-oil} for 3 minutes, then add the {cumin} for 30 seconds.",
+      "Add the chopped {tomato} and cook for 10 minutes until it breaks down into a thick sauce.",
+      "Season with the {salt} and {black-pepper}."
     ]
   },
   {
@@ -415,10 +412,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {butter} in a soup pot and soften {spring-onion} without browning.",
-      "Add {water} and {eggs}, simmering gently until the main ingredient is tender.",
-      "Warm milk and water with scallions and seasoning, crack eggs directly into the barely simmering liquid and poach until the whites set while yolks stay soft; serve with bread.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Bring the {water} and {milk} to a gentle simmer with the sliced {spring-onion}, {salt} and {black-pepper} for 5 minutes.",
+      "Crack the {eggs} into the soup and poach for 3–4 minutes until the whites are set.",
+      "Fry the {bread} in the {butter} until golden and serve with the soup, scattered with chopped {cilantro}."
     ]
   },
   {
@@ -430,7 +426,7 @@ KITCHEN.add(
     "serves": 2,
     "ing": [
       [
-        "tapioca-pearls",
+        "tapioca-starch",
         100
       ],
       [
@@ -447,7 +443,7 @@ KITCHEN.add(
       ],
       [
         "milk",
-        250
+        60
       ],
       [
         "salt",
@@ -459,10 +455,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Mix {cornmeal} with the remaining dough ingredients to make a workable dough or batter; knead or beat until even.",
-      "Rest or prove the mixture as needed, shape it, then bake, steam or griddle until cooked through.",
-      "Mix the starches with cheese and egg into a soft dough, roll into small balls and bake hot until the rolls puff and the outside is lightly crisp.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 200 °C. Mix the {tapioca-starch}, {cornmeal}, {baking-powder} and {salt}.",
+      "Mash the {cottage-cheese} with the {eggs} and {milk} and work into the dry mix to a soft dough.",
+      "Shape into 8 balls on a lined tray and bake for 20 minutes until puffed and golden."
     ]
   },
   {
@@ -499,22 +494,17 @@ KITCHEN.add(
       ],
       [
         "oil",
-        15
+        300
       ],
       [
         "salt",
         3
-      ],
-      [
-        "black-pepper",
-        1
       ]
     ],
     "steps": [
-      "Prepare {cottage-cheese} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {cottage-cheese} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Knead cheese, flour and egg into a smooth dough, roll small balls and fry in moderately warm oil so they expand and cook through before the surface gets too dark.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Mash the {cottage-cheese} with the {eggs}, {sugar} and {salt}.",
+      "Work in the {cornmeal}, {flour} and {baking-powder} to a soft dough and shape into 12 balls.",
+      "Heat the {oil} to 170 °C and fry for 6 minutes, turning, until golden and puffed. Drain and serve warm."
     ]
   },
   {
@@ -801,41 +791,51 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "colombian-black-bean-and-rice-bowl",
-    "name": "Colombian Black Bean and Rice Bowl",
-    "meal": "big",
+    "id": "colombian-empanadas",
+    "name": "Colombian Empanadas (corn dough with beef and potato)",
+    "meal": "bite",
     "cuisine": "Colombian",
-    "time": 25,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
+        "masa-harina",
         250
       ],
       [
-        "rice",
-        250
+        "beef-mince",
+        300
       ],
       [
-        "tomato",
-        250
+        "potatoes",
+        300
       ],
       [
-        "plantain",
-        2
+        "onion",
+        "1pc"
       ],
       [
-        "red-pepper",
-        1
+        "garlic",
+        "2pc"
+      ],
+      [
+        "cumin",
+        3
+      ],
+      [
+        "oil",
+        300
+      ],
+      [
+        "salt",
+        4
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Boil the diced {potatoes} for 10 minutes and drain. Fry the chopped {onion} and {garlic} in a little of the {oil} for 5 minutes, add the {beef-mince} and {cumin} and brown for 8 minutes, then mix in the potatoes and half of the {salt}; cool.",
+      "Mix the {masa-harina} with the remaining salt and about 300 ml warm water into a soft dough and rest for 10 minutes.",
+      "Roll the dough between plastic sheets, cut 12 cm rounds, fill with the beef mixture, fold over and seal the edges.",
+      "Heat the remaining oil to 175 °C and fry the empanadas for 3 minutes per side until crisp and golden."
     ]
   },
   {
@@ -932,42 +932,51 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "colombian-lime-cabbage-slaw",
-    "name": "Colombian Lime Cabbage Slaw",
-    "meal": "big",
+    "id": "colombian-aborrajados",
+    "name": "Aborrajados (battered cheese-stuffed fried plantain)",
+    "meal": "bite",
     "cuisine": "Colombian",
-    "time": 46,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
         "plantain",
+        "3pc"
+      ],
+      [
+        "mozzarella",
+        150
+      ],
+      [
+        "flour",
+        100
+      ],
+      [
+        "eggs",
+        "1pc"
+      ],
+      [
+        "milk",
+        100
+      ],
+      [
+        "sugar",
+        10
+      ],
+      [
+        "oil",
+        300
+      ],
+      [
+        "salt",
         2
       ]
     ],
     "steps": [
-      "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Peel the very ripe {plantain}, cut each into 2 lengthwise halves, and fry briefly in a little of the {oil} until soft; flatten gently.",
+      "Sandwich a slice of {mozzarella} between two plantain pieces and pinch the edges together.",
+      "Whisk the {flour}, {eggs}, {milk}, {sugar} and {salt} into a thick batter and dip each parcel.",
+      "Fry in the remaining oil at 175 °C for 3 minutes per side until golden and the cheese is melted. Drain and serve hot."
     ]
   },
   {

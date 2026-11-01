@@ -19,11 +19,11 @@ KITCHEN.add(
       ],
       [
         "potatoes",
-        3
+        "3pc"
       ],
       [
         "carrot",
-        2
+        "2pc"
       ],
       [
         "cabbage",
@@ -39,7 +39,7 @@ KITCHEN.add(
   {
     "id": "maori-rewena-bread",
     "name": "Rewena-style potato starter bread",
-    "meal": "bake",
+    "meal": "bite",
     "cuisine": "Maori",
     "time": 180,
     "serves": 4,
@@ -81,7 +81,7 @@ KITCHEN.add(
       ],
       [
         "potatoes",
-        3
+        "3pc"
       ],
       [
         "sweet-potato",
@@ -109,14 +109,14 @@ KITCHEN.add(
   {
     "id": "maori-kina-toast",
     "name": "Kina-inspired sea urchin toast",
-    "meal": "light",
+    "meal": "bite",
     "cuisine": "Maori",
     "time": 15,
     "serves": 4,
     "ing": [
       [
         "bread",
-        4
+        "4pc"
       ],
       [
         "butter",
@@ -139,349 +139,85 @@ KITCHEN.add(
   },
   {
     "id": "maori-kumara-and-coconut-mash",
-    "name": "Māori Kūmara and Coconut Mash",
-    "meal": "big",
+    "name": "Kūmara and coconut mash",
+    "meal": "bite",
     "cuisine": "Maori",
-    "time": 30,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "white-fish",
-        450
+        "sweet-potato",
+        800
       ],
       [
         "coconut-milk",
-        300
+        120
       ],
       [
-        "sweet-potato",
-        2
+        "butter",
+        30
       ],
       [
-        "spinach",
-        150
+        "salt",
+        3
       ],
       [
-        "lime",
-        1
-      ],
-      [
-        "onion",
+        "black-pepper",
         1
       ]
     ],
     "steps": [
-      "Add the {white-fish} and {sweet-potato}; stir well so the ingredients are evenly coated.",
-      "Add the {coconut-milk} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Peel and cube the {sweet-potato} and boil in salted water for 18 minutes until very tender.",
+      "Drain well and let the steam escape for 2 minutes.",
+      "Mash with the {coconut-milk}, {butter}, {salt} and {black-pepper} until smooth."
     ]
   },
   {
     "id": "hangi-inspired-roast-vegetables",
-    "name": "Hāngī-Inspired Roast Vegetables",
+    "name": "Hāngī-inspired roast vegetables",
     "meal": "big",
     "cuisine": "Maori",
-    "time": 37,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
         "sweet-potato",
-        2
+        500
       ],
       [
-        "spinach",
-        150
+        "potatoes",
+        500
       ],
       [
-        "lime",
-        1
+        "pumpkin",
+        400
       ],
       [
         "onion",
-        1
-      ],
-      [
-        "rice",
-        250
+        "1pc"
       ],
       [
         "oil",
-        15
+        40
       ],
       [
         "salt",
-        3
+        4
+      ],
+      [
+        "thyme",
+        2
       ]
     ],
     "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Add the {sweet-potato} and {sweet-potato}; stir well so the ingredients are evenly coated.",
-      "Add the {lime} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
+      "Heat the oven to 220 °C. Cut the {sweet-potato}, {potatoes} and {pumpkin} into large chunks and the {onion} into wedges.",
+      "Toss with {oil}, {salt} and {thyme} in a large roasting tin.",
+      "Roast for 45–50 minutes, turning once, until tender inside and browned at the edges."
     ]
   },
   {
     "id": "maori-fish-with-lemon-and-herbs",
-    "name": "Māori Fish with Lemon and Herbs",
-    "meal": "big",
-    "cuisine": "Maori",
-    "time": 44,
-    "serves": 4,
-    "ing": [
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {onion} until fragrant.",
-      "Add the {lime} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {coconut-milk} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
-    ]
-  },
-  {
-    "id": "rewena-style-potato-bread",
-    "name": "Rewena-Style Potato Bread",
-    "meal": "big",
-    "cuisine": "Maori",
-    "time": 51,
-    "serves": 4,
-    "ing": [
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ]
-    ],
-    "steps": [
-      "Add the {coconut-milk} and {sweet-potato}; stir well so the ingredients are evenly coated.",
-      "Add the {coconut-milk} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "kumara-and-lentil-soup",
-    "name": "Kūmara and Lentil Soup",
-    "meal": "big",
-    "cuisine": "Maori",
-    "time": 58,
-    "serves": 4,
-    "ing": [
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "white-fish",
-        450
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {lime} until fragrant.",
-      "Add the {spinach} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {onion} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
-    ]
-  },
-  {
-    "id": "maori-steamed-pudding",
-    "name": "Māori Steamed Pudding",
-    "meal": "big",
-    "cuisine": "Maori",
-    "time": 65,
-    "serves": 4,
-    "ing": [
-      [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {coconut-milk} until fragrant.",
-      "Add the {white-fish} and {sweet-potato}; stir well so the ingredients are evenly coated.",
-      "Add the {coconut-milk} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "smoky-pumpkin-and-potato-bake",
-    "name": "Smoky Pumpkin and Potato Bake",
-    "meal": "big",
-    "cuisine": "Maori",
-    "time": 36,
-    "serves": 4,
-    "ing": [
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {spinach} until fragrant.",
-      "Add the {sweet-potato} and {sweet-potato}; stir well so the ingredients are evenly coated.",
-      "Add the {lime} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "greens-with-coconut-cream",
-    "name": "Greens with Coconut Cream",
-    "meal": "big",
-    "cuisine": "Maori",
-    "time": 43,
-    "serves": 4,
-    "ing": [
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a heavy pan and soften the {onion} until fragrant.",
-      "Add the {lime} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {coconut-milk} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together.",
-      "Season with {salt} to taste and serve hot."
-    ]
-  },
-  {
-    "id": "maori-coconut-fish-and-rice",
-    "name": "Maori Coconut Fish and Rice",
+    "name": "Pan-fried fish with lemon butter and herbs",
     "meal": "big",
     "cuisine": "Maori",
     "time": 25,
@@ -489,334 +225,308 @@ KITCHEN.add(
     "ing": [
       [
         "white-fish",
-        450
+        600
       ],
       [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {white-fish} and {sweet-potato}; stir to combine.",
-      "Add the {coconut-milk} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "maori-roasted-sweet-potato-with-lime",
-    "name": "Maori Roasted Sweet Potato with Lime",
-    "meal": "big",
-    "cuisine": "Maori",
-    "time": 32,
-    "serves": 4,
-    "ing": [
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
+        "flour",
+        40
       ],
       [
         "salt",
         3
       ],
       [
-        "white-fish",
-        450
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {spinach} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "maori-banana-coconut-pudding",
-    "name": "Maori Banana Coconut Pudding",
-    "meal": "big",
-    "cuisine": "Maori",
-    "time": 39,
-    "serves": 4,
-    "ing": [
+        "black-pepper",
+        1
+      ],
       [
-        "rice",
-        250
+        "butter",
+        50
       ],
       [
         "oil",
+        20
+      ],
+      [
+        "lemon",
+        "2pc"
+      ],
+      [
+        "parsley",
         15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
       ]
     ],
     "steps": [
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {coconut-milk} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Pat the {white-fish} dry, season with {salt} and {black-pepper} and dust lightly with {flour}.",
+      "Heat the {oil} and half the {butter} in a wide pan and fry the fish for 3–4 minutes per side until golden and cooked through. Remove.",
+      "Add the remaining {butter} and the juice of one {lemon} to the pan and swirl for 1 minute. Pour over the fish and scatter with chopped {parsley} and wedges of the remaining {lemon}."
     ]
   },
   {
-    "id": "maori-ginger-chicken-parcels",
-    "name": "Maori Ginger Chicken Parcels",
+    "id": "kumara-and-lentil-soup",
+    "name": "Kūmara and lentil soup",
     "meal": "big",
     "cuisine": "Maori",
-    "time": 46,
+    "time": 45,
     "serves": 4,
     "ing": [
-      [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {white-fish} and {sweet-potato}; stir to combine.",
-      "Add the {coconut-milk} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "maori-taro-style-greens-with-coconut",
-    "name": "Maori Taro-Style Greens with Coconut",
-    "meal": "big",
-    "cuisine": "Maori",
-    "time": 53,
-    "serves": 4,
-    "ing": [
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
       [
         "oil",
-        15
+        20
       ],
       [
-        "salt",
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "cumin",
         3
       ],
       [
-        "white-fish",
-        450
+        "sweet-potato",
+        500
+      ],
+      [
+        "red-lentils",
+        150
+      ],
+      [
+        "vegetable-stock",
+        1000
+      ],
+      [
+        "salt",
+        2
+      ],
+      [
+        "lemon-juice",
+        20
       ]
     ],
     "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {spinach} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the {oil} in a large pot and soften diced {onion} for 5 minutes. Add {garlic} and {cumin} for 1 minute.",
+      "Add cubed {sweet-potato}, rinsed {red-lentils}, {vegetable-stock} and {salt}. Bring to the boil and simmer for 25 minutes until everything is soft.",
+      "Blend until smooth and stir in the {lemon-juice}."
     ]
   },
   {
-    "id": "maori-pineapple-rice-bowl",
-    "name": "Maori Pineapple Rice Bowl",
+    "id": "maori-steamed-pudding",
+    "name": "Māori-style steamed jam pudding",
+    "meal": "treat",
+    "cuisine": "Maori",
+    "time": 100,
+    "serves": 6,
+    "ing": [
+      [
+        "butter",
+        75
+      ],
+      [
+        "sugar",
+        75
+      ],
+      [
+        "eggs",
+        "2pc"
+      ],
+      [
+        "flour",
+        150
+      ],
+      [
+        "baking-powder",
+        6
+      ],
+      [
+        "milk",
+        100
+      ],
+      [
+        "jam",
+        100
+      ]
+    ],
+    "steps": [
+      "Beat the soft {butter} with the {sugar} until pale, then beat in the {eggs} one at a time.",
+      "Fold in the {flour} and {baking-powder} with the {milk} to a soft batter.",
+      "Spoon the {jam} into the base of a greased 1 litre pudding basin, add the batter and cover tightly with pleated foil.",
+      "Steam over simmering water for 1 hour 15 minutes, topping up the water as needed. Turn out and serve hot."
+    ]
+  },
+  {
+    "id": "smoky-pumpkin-and-potato-bake",
+    "name": "Smoky pumpkin and potato bake",
     "meal": "big",
     "cuisine": "Maori",
     "time": 60,
     "serves": 4,
     "ing": [
       [
-        "rice",
-        250
+        "pumpkin",
+        500
+      ],
+      [
+        "potatoes",
+        500
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "smoked-paprika",
+        4
+      ],
+      [
+        "thyme",
+        2
       ],
       [
         "oil",
+        30
+      ],
+      [
+        "salt",
+        3
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 210 °C. Slice the {pumpkin} and {potatoes} into 1 cm slices and slice the {onion}.",
+      "Toss with crushed {garlic}, {smoked-paprika}, {thyme}, {oil} and {salt}, and layer in a baking dish.",
+      "Cover with foil and bake for 30 minutes, then uncover and bake for 20 minutes more until golden and tender."
+    ]
+  },
+  {
+    "id": "greens-with-coconut-cream",
+    "name": "Greens with coconut cream",
+    "meal": "bite",
+    "cuisine": "Maori",
+    "time": 20,
+    "serves": 4,
+    "ing": [
+      [
+        "oil",
         15
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "spinach",
+        400
+      ],
+      [
+        "coconut-milk",
+        200
+      ],
+      [
+        "salt",
+        2
+      ]
+    ],
+    "steps": [
+      "Heat the {oil} and soften sliced {onion} for 5 minutes. Add {garlic} for 1 minute.",
+      "Add the {spinach} and cook for 3 minutes until wilted, then pour in the {coconut-milk} and {salt}.",
+      "Simmer for 5 minutes until the sauce thickens slightly."
+    ]
+  },
+  {
+    "id": "maori-roasted-sweet-potato-with-lime",
+    "name": "Roasted kūmara with lime and spring onion",
+    "meal": "bite",
+    "cuisine": "Maori",
+    "time": 45,
+    "serves": 4,
+    "ing": [
+      [
+        "sweet-potato",
+        800
+      ],
+      [
+        "oil",
+        30
       ],
       [
         "salt",
         3
       ],
       [
-        "white-fish",
-        450
-      ],
-      [
-        "coconut-milk",
-        300
-      ],
-      [
-        "sweet-potato",
-        2
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
         "lime",
-        1
+        "2pc"
+      ],
+      [
+        "spring-onion",
+        "2pc"
       ]
     ],
     "steps": [
-      "Add the {rice} and {rice}; stir to combine.",
-      "Add the {coconut-milk} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 220 °C. Cut the {sweet-potato} into thick wedges, toss with {oil} and {salt} and spread on a tray.",
+      "Roast for 35 minutes, turning once, until soft inside and browned at the edges.",
+      "Squeeze over the juice of the {lime} and scatter with sliced {spring-onion}."
     ]
   },
   {
     "id": "maori-coconut-pumpkin-soup",
-    "name": "Maori Coconut Pumpkin Soup",
+    "name": "Pumpkin soup with coconut cream",
     "meal": "big",
     "cuisine": "Maori",
-    "time": 31,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "white-fish",
-        450
+        "oil",
+        15
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
+      ],
+      [
+        "ginger",
+        10
+      ],
+      [
+        "pumpkin",
+        800
+      ],
+      [
+        "vegetable-stock",
+        600
       ],
       [
         "coconut-milk",
         300
       ],
       [
-        "sweet-potato",
+        "salt",
         2
       ],
       [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
+        "black-pepper",
         1
       ]
     ],
     "steps": [
-      "Add the {white-fish} and {sweet-potato}; stir to combine.",
-      "Add the {coconut-milk} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "maori-lime-fish-with-herbs",
-    "name": "Maori Lime Fish with Herbs",
-    "meal": "big",
-    "cuisine": "Maori",
-    "time": 38,
-    "serves": 4,
-    "ing": [
-      [
-        "spinach",
-        150
-      ],
-      [
-        "lime",
-        1
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "white-fish",
-        450
-      ]
-    ],
-    "steps": [
-      "Warm the {oil} in a pan and soften the {lime} until fragrant.",
-      "Add the {spinach} and {rice}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the {oil} in a large pot and soften chopped {onion} for 5 minutes. Add {garlic} and {ginger} and cook for 1 minute.",
+      "Add cubed {pumpkin} and {vegetable-stock}, bring to the boil and simmer for 20 minutes until soft.",
+      "Blend until smooth, stir in the {coconut-milk}, {salt} and {black-pepper} and warm through."
     ]
   }
 ]

@@ -51,9 +51,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Simmer {potatoes} in {vegetable-stock} with chopped {tomato}, {cumin} and {salt} until tender. Add the {tuna} and poach gently until it flakes.",
-      "Thinly slice the {red-onion} and toss with juice from one {lime} and a pinch of salt; leave to soften for 10 minutes.",
-      "Break the {tuna} into large flakes, taste the broth and serve topped with the lime-pickled onion and {coriander}."
+      "Cook the chopped {tomato} with the {cumin} in the {oil} for 3 minutes, then add the {potatoes}, {vegetable-stock} and {salt} and simmer until the potatoes are tender. Add the {tuna} and poach gently until it flakes.",
+      "Thinly slice the {red-onion} and toss with the juice of one {lime} and a pinch of salt; leave to soften for 10 minutes.",
+      "Break the tuna into large flakes, taste the broth and serve topped with the lime-pickled onion and {coriander}, with wedges of the second lime."
     ]
   },
   {
@@ -371,200 +371,6 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "ecuadorian-locro-de-papa-potato-soup",
-    "name": "Ecuadorian Locro de Papa Potato Soup",
-    "meal": "big",
-    "cuisine": "Ecuadorian",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "ecuadorian-llapingachos-potato-cakes",
-    "name": "Ecuadorian Llapingachos Potato Cakes",
-    "meal": "big",
-    "cuisine": "Ecuadorian",
-    "time": 60,
-    "serves": 4,
-    "ing": [
-      [
-        "potatoes",
-        800
-      ],
-      [
-        "cheese",
-        150
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "paprika",
-        2
-      ],
-      [
-        "butter",
-        30
-      ],
-      [
-        "eggs",
-        "4pc"
-      ],
-      [
-        "avocado",
-        "1pc"
-      ],
-      [
-        "oil",
-        30
-      ],
-      [
-        "salt",
-        3
-      ]
-    ],
-    "steps": [
-      "Peel {potatoes}, boil in salted water for 20 minutes until soft, drain and mash smooth.",
-      "Finely chop {onion} and cook in {butter} with {paprika} for 6 minutes. Mix into the mash with {salt} and let cool slightly.",
-      "Grate {cheese}. Shape the mash into 8 balls, make a dent in each, fill with cheese, close up and flatten into patties.",
-      "Fry the patties in half of the {oil} for 4 minutes per side until crisp and golden.",
-      "Fry {eggs} in the remaining oil, slice {avocado}, and serve a stack of patties topped with an egg and avocado."
-    ]
-  },
-  {
-    "id": "ecuadorian-seco-de-pollo-style-chicken",
-    "name": "Ecuadorian Seco de Pollo-Style Chicken",
-    "meal": "big",
-    "cuisine": "Ecuadorian",
-    "time": 65,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        600
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "onion",
-        "2pc"
-      ],
-      [
-        "red-pepper",
-        "1pc"
-      ],
-      [
-        "tomato",
-        "2pc"
-      ],
-      [
-        "garlic",
-        "3pc"
-      ],
-      [
-        "cilantro",
-        20
-      ],
-      [
-        "cumin",
-        3
-      ],
-      [
-        "beer",
-        150
-      ],
-      [
-        "oil",
-        30
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Season {chicken-thigh} with {salt}, {black-pepper} and half of the {cumin}. Dice {onion}, {red-pepper} and {tomato} and crush {garlic}.",
-      "Heat {oil} in a wide pan and brown the chicken for 5 minutes per side. Remove.",
-      "Cook the onion and pepper for 6 minutes, add garlic and the remaining cumin for 1 minute, then the tomato and {beer}. Simmer for 5 minutes.",
-      "Return the chicken, cover and simmer on low heat for 30 minutes. Meanwhile cook {rice} in 500 ml water, covered, on low heat for 15 minutes.",
-      "Stir in chopped {cilantro} and serve the chicken and sauce over the rice."
-    ]
-  },
-  {
-    "id": "ecuadorian-encebollado-inspired-fish-soup",
-    "name": "Ecuadorian Encebollado-Inspired Fish Soup",
-    "meal": "big",
-    "cuisine": "Ecuadorian",
-    "time": 51,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
     "id": "ecuadorian-quinoa-and-corn-salad",
     "name": "Ecuadorian Quinoa and Corn Salad",
     "meal": "big",
@@ -613,41 +419,46 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "ecuadorian-green-plantain-cakes",
-    "name": "Ecuadorian Green Plantain Cakes",
-    "meal": "big",
+    "id": "ecuadorian-empanadas-de-viento",
+    "name": "Empanadas de Viento (Ecuadorian cheese empanadas)",
+    "meal": "bite",
     "cuisine": "Ecuadorian",
-    "time": 25,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        450
+        "flour",
+        300
       ],
       [
-        "black-beans",
-        250
+        "butter",
+        60
       ],
       [
-        "rice",
-        250
+        "water",
+        120
       ],
       [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
+        "salt",
         2
       ],
       [
-        "red-pepper",
-        1
+        "mozzarella",
+        200
+      ],
+      [
+        "sugar",
+        15
+      ],
+      [
+        "oil",
+        300
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Rub the {butter} into the {flour} and {salt}, add the warm {water} and knead for 8 minutes into a smooth dough. Rest for 20 minutes.",
+      "Roll out thinly, cut 12 cm rounds, fill each with {mozzarella}, fold over and seal the edges.",
+      "Heat the {oil} to 175 °C and fry for 3 minutes per side until puffed and golden. Drain and sprinkle with the {sugar}."
     ]
   },
   {
@@ -747,42 +558,46 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "ecuadorian-black-bean-and-rice-bowl",
-    "name": "Ecuadorian Black Bean and Rice Bowl",
+    "id": "ecuadorian-fritada",
+    "name": "Fritada (Ecuadorian braised-then-fried pork)",
     "meal": "big",
     "cuisine": "Ecuadorian",
-    "time": 46,
+    "time": 100,
     "serves": 4,
     "ing": [
       [
-        "salt",
+        "pork-shoulder",
+        800
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "4pc"
+      ],
+      [
+        "cumin",
         3
       ],
       [
-        "chicken-thigh",
-        450
+        "orange",
+        "1pc"
       ],
       [
-        "black-beans",
-        250
+        "salt",
+        4
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
+        "water",
+        300
       ]
     ],
     "steps": [
-      "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Cut the {pork-shoulder} into 4 cm cubes and put in a wide pot with the {water}, halved {onion}, crushed {garlic}, {cumin}, the juice of the {orange} and the {salt}.",
+      "Simmer uncovered for 1 hour 15 minutes until the liquid has evaporated and the pork is tender.",
+      "Keep cooking for 10 minutes, turning, so the pork fries in its own fat until golden and crisp at the edges."
     ]
   },
   {
@@ -921,46 +736,47 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "ecuadorian-corn-and-cheese-bake",
-    "name": "Ecuadorian Corn and Cheese Bake",
-    "meal": "big",
+    "id": "ecuadorian-humitas",
+    "name": "Humitas (Ecuadorian steamed fresh-corn parcels)",
+    "meal": "bite",
     "cuisine": "Ecuadorian",
-    "time": 38,
+    "time": 60,
     "serves": 4,
     "ing": [
       [
-        "black-beans",
-        250
+        "sweetcorn",
+        400
       ],
       [
-        "rice",
-        250
+        "queso-fresco",
+        100
       ],
       [
-        "tomato",
-        250
+        "eggs",
+        "2pc"
       ],
       [
-        "plantain",
-        2
+        "butter",
+        40
       ],
       [
-        "red-pepper",
-        1
+        "onion",
+        "1pc"
       ],
       [
-        "cilantro",
+        "sugar",
         10
       ],
       [
-        "lime",
-        1
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {black-beans} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Soften the chopped {onion} in the {butter} for 4 minutes.",
+      "Blend the {sweetcorn} with the {eggs}, {sugar} and {salt}, then mix with the onion and crumbled {queso-fresco}.",
+      "Spoon onto squares of foil or corn husks and fold into tight parcels.",
+      "Steam over simmering water for 35 minutes until firm."
     ]
   }
 ]

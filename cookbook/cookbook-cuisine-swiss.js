@@ -65,57 +65,49 @@ KITCHEN.add(
   {
     "id": "ch-cheese-fondue",
     "name": "Swiss cheese fondue with white wine and garlic",
-    "meal": "bite",
+    "meal": "big",
     "cuisine": "Swiss",
     "time": 25,
     "serves": 2,
     "ing": [
       [
         "gruyere",
-        100
+        150
       ],
       [
         "emmental",
-        100
+        150
       ],
       [
         "white-wine",
-        100
+        150
       ],
       [
         "garlic",
-        3
+        "1pc"
       ],
       [
         "cornstarch",
-        100
+        10
       ],
       [
         "lemon-juice",
-        20
+        10
       ],
       [
         "bread",
-        "4pc"
+        "8pc"
       ],
       [
         "black-pepper",
         1
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "oil",
-        15
       ]
     ],
     "steps": [
-      "Prepare and measure all ingredients, then heat the pan or pot over medium heat.",
-      "Cook {gruyere} with the seasonings until the dish reaches its intended texture and the flavours meld.",
-      "Rub the pot with garlic, warm wine gently and add grated cheeses gradually while stirring in a figure-eight; stabilise with cornstarch slurry and keep below a simmer.",
-      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
+      "Cut the {bread} into cubes (slightly stale is best). Grate the {gruyere} and {emmental} and toss with the {cornstarch}.",
+      "Halve the {garlic}, rub it round the inside of a fondue pot or heavy saucepan and discard it. Warm the {white-wine} and {lemon-juice} until steaming but not boiling.",
+      "Add the cheese a handful at a time, stirring in a figure of eight for about 8 minutes until smooth; do not let it simmer.",
+      "Season with {black-pepper} and serve at the table with the bread for dipping."
     ]
   },
   {
@@ -123,7 +115,7 @@ KITCHEN.add(
     "name": "Älplermagronen (Swiss alpine macaroni, potato and cheese bake)",
     "meal": "big",
     "cuisine": "Swiss",
-    "time": 45,
+    "time": 55,
     "serves": 2,
     "ing": [
       [
@@ -152,7 +144,7 @@ KITCHEN.add(
       ],
       [
         "apple",
-        2
+        "2pc"
       ],
       [
         "oil",
@@ -168,10 +160,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat the oven to 190 °C and lightly grease a baking dish or line a tray.",
-      "Prepare {pasta} with the other listed ingredients, layer or shape the mixture evenly and season it well.",
-      "Cook pasta and diced potato until just tender, fold with cream and grated cheese, then bake until bubbling; top with slow-fried onions and serve with apple compote.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 190 °C and grease a baking dish with half of the {butter}. Peel and dice the {potatoes} into 1.5 cm cubes and boil in water with the {salt} for 6 minutes, then add the {pasta} and boil for 9 minutes until just tender; drain.",
+      "Mix with the {cream}, grated {gruyere} and {black-pepper} and tip into the dish.",
+      "Bake for 20 minutes until bubbling and golden.",
+      "Meanwhile slice the {onion} and fry in the {oil} and remaining butter for 15 minutes until golden. Peel, core and chop the {apple} and simmer with a splash of water for 10 minutes into a rough compote. Serve the bake topped with the onions, with the compote alongside."
     ]
   },
   {
@@ -200,7 +192,7 @@ KITCHEN.add(
       ],
       [
         "leek",
-        1
+        "1pc"
       ],
       [
         "potatoes",
@@ -208,11 +200,11 @@ KITCHEN.add(
       ],
       [
         "vegetable-stock",
-        450
+        900
       ],
       [
         "cream",
-        150
+        50
       ],
       [
         "parsley",
@@ -232,27 +224,27 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat {oil} in a soup pot and soften {leek} without browning.",
-      "Add {vegetable-stock} and {barley}, simmering gently until the main ingredient is tender.",
-      "Sweat diced vegetables and bacon, stir in barley, add stock and simmer until the grains are tender; finish with a small splash of cream and parsley.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Dice the {leek}, {carrot}, {celery}, {potatoes} and {bacon}.",
+      "Heat the {oil} in a soup pot, cook the bacon for 4 minutes, then add the leek, carrot and celery for 5 minutes.",
+      "Add the {barley} and {vegetable-stock} and simmer for 40 minutes, adding the potatoes for the last 20 minutes.",
+      "Stir in the {cream}, season with {salt} and {black-pepper} and scatter with chopped {parsley}."
     ]
   },
   {
     "id": "ch-capuns",
-    "name": "Capuns-inspired Swiss chard rolls with creamy herb sauce",
+    "name": "Capuns (Swiss chard dumpling parcels with creamy herb sauce)",
     "meal": "big",
     "cuisine": "Swiss",
     "time": 55,
     "serves": 2,
     "ing": [
       [
-        "cabbage",
-        100
+        "swiss-chard",
+        200
       ],
       [
         "flour",
-        120
+        150
       ],
       [
         "eggs",
@@ -260,7 +252,7 @@ KITCHEN.add(
       ],
       [
         "milk",
-        250
+        100
       ],
       [
         "bacon",
@@ -272,15 +264,15 @@ KITCHEN.add(
       ],
       [
         "chives",
-        100
+        15
       ],
       [
         "cream",
-        150
+        100
       ],
       [
         "vegetable-stock",
-        450
+        200
       ],
       [
         "salt",
@@ -296,10 +288,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Heat the oven to 190 °C and lightly grease a baking dish or line a tray.",
-      "Prepare {cabbage} with the other listed ingredients, layer or shape the mixture evenly and season it well.",
-      "Make a thick herb batter with chopped bacon, wrap spoonfuls in blanched leaves and arrange snugly in a baking dish; add a little stock and cream and bake covered until set.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 190 °C. Blanch the {swiss-chard} leaves for 1 minute, drain, cut out the thick stems and dry on a cloth.",
+      "Beat the {flour}, {eggs}, {milk}, {salt} and {black-pepper} into a thick batter. Fry the diced {bacon} in the {oil} for 4 minutes and stir into the batter with chopped {parsley} and {chives}.",
+      "Put a spoonful of batter on each leaf, roll into parcels and pack snugly in a greased dish.",
+      "Pour over the {vegetable-stock} and {cream}, cover with foil and bake for 30 minutes."
     ]
   },
   {
@@ -307,47 +299,39 @@ KITCHEN.add(
     "name": "Engadiner Nusstorte (Swiss caramel walnut tart)",
     "meal": "treat",
     "cuisine": "Swiss",
-    "time": 60,
-    "serves": 2,
+    "time": 70,
+    "serves": 6,
     "ing": [
       [
         "shortcrust-pastry",
-        250
+        300
       ],
       [
         "walnuts",
-        40
-      ],
-      [
-        "sugar",
-        35
-      ],
-      [
-        "cream",
         150
       ],
       [
-        "honey",
+        "sugar",
         100
       ],
       [
-        "butter",
-        35
-      ],
-      [
-        "flour",
+        "cream",
         120
       ],
       [
-        "salt",
-        3
+        "honey",
+        30
+      ],
+      [
+        "butter",
+        30
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {shortcrust-pastry} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Blind-bake the pastry shell briefly, cook sugar to a light caramel, add cream and walnuts carefully, then fill the shell and bake until the nut layer is set.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 200 °C. Line a 20 cm tin with two-thirds of the {shortcrust-pastry}, prick the base and chill.",
+      "Cook the {sugar} in a dry pan over medium heat for about 5 minutes until golden, then carefully add the {cream}, {butter} and {honey} and stir until smooth. Stir in the chopped {walnuts} and cool for 10 minutes.",
+      "Fill the pastry case, cover with the remaining pastry rolled into a lid, seal and prick.",
+      "Bake for 35 minutes until golden."
     ]
   },
   {
@@ -364,7 +348,7 @@ KITCHEN.add(
       ],
       [
         "apple",
-        2
+        "2pc"
       ],
       [
         "yogurt",
@@ -372,7 +356,7 @@ KITCHEN.add(
       ],
       [
         "cream",
-        150
+        50
       ],
       [
         "lemon-juice",
@@ -388,26 +372,14 @@ KITCHEN.add(
       ],
       [
         "honey",
-        100
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ],
-      [
-        "oil",
-        15
+        20
       ]
     ],
     "steps": [
-      "Prepare and measure all ingredients, then heat the pan or pot over medium heat.",
-      "Cook {oats} with the seasonings until the dish reaches its intended texture and the flavours meld.",
-      "Soak oats in yogurt and a splash of cream, grate apple straight into the bowl with lemon, then fold in chopped walnuts and berries just before serving.",
-      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
+      "Stir the {oats} with the {yogurt} and {cream} and leave to soak for 10 minutes.",
+      "Grate the unpeeled {apple} straight into the bowl with the {lemon-juice} so it stays pale.",
+      "Fold in the chopped {walnuts} and sweeten with the {honey}.",
+      "Top with the {berries} and serve."
     ]
   },
   {
@@ -415,32 +387,32 @@ KITCHEN.add(
     "name": "Zuger Kirschtorte-inspired almond sponge and cream cake",
     "meal": "treat",
     "cuisine": "Swiss",
-    "time": 80,
-    "serves": 2,
+    "time": 90,
+    "serves": 6,
     "ing": [
       [
         "eggs",
-        "2pc"
+        "4pc"
       ],
       [
         "sugar",
-        35
+        100
       ],
       [
         "ground-almonds",
-        50
+        100
       ],
       [
         "flour",
-        120
+        60
       ],
       [
         "butter",
-        35
+        30
       ],
       [
         "cream",
-        150
+        250
       ],
       [
         "vanilla",
@@ -448,14 +420,18 @@ KITCHEN.add(
       ],
       [
         "coffee",
-        100
+        60
+      ],
+      [
+        "jam",
+        80
       ]
     ],
     "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {eggs} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Bake thin almond sponge layers, cool completely, brush lightly with coffee syrup and sandwich with whipped cream; chill well before cutting clean slices.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Heat the oven to 180 °C and line two 20 cm tins. Whisk the {eggs} with 60 g of the {sugar} for about 5 minutes until pale and thick.",
+      "Fold in the {ground-almonds}, {flour} and melted {butter}, divide between the tins and bake for 15 minutes until golden; cool.",
+      "Whip the {cream} with the remaining sugar and the {vanilla} to soft peaks. Brush the sponges with strong brewed {coffee}.",
+      "Sandwich the sponges with the {jam} and cream, cover the top with the rest of the cream and chill for 2 hours before slicing."
     ]
   },
   {
@@ -463,7 +439,7 @@ KITCHEN.add(
     "name": "Swiss rösti with crisp golden potato crust",
     "meal": "big",
     "cuisine": "Swiss",
-    "time": 45,
+    "time": 60,
     "serves": 2,
     "ing": [
       [
@@ -488,10 +464,10 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Prepare {potatoes} with the seasoning, then heat {oil} in a wide skillet to a steady medium-high heat.",
-      "Cook {potatoes} in batches until golden and cooked through; avoid crowding the pan so the crust can crisp.",
-      "Parboil the potatoes, chill and grate coarsely; press into a shallow cake in a buttered pan and cook slowly until a firm golden crust forms before flipping.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
+      "Boil the unpeeled {potatoes} for 10 minutes until just under-cooked, cool completely (at least 30 minutes), then peel and grate coarsely.",
+      "Toss the grated potato with {salt} and {black-pepper}.",
+      "Heat the {oil} and half of the {butter} in a 24 cm non-stick pan over medium heat and press in the potato into an even cake.",
+      "Cook for 10–12 minutes until a golden crust forms, then flip using a plate, add the remaining butter around the edge and cook for 8–10 minutes more."
     ]
   },
   {
@@ -499,90 +475,99 @@ KITCHEN.add(
     "name": "Basler Läckerli (Swiss spiced honey and almond biscuits)",
     "meal": "treat",
     "cuisine": "Swiss",
-    "time": 40,
-    "serves": 2,
-    "ing": [
-      [
-        "honey",
-        100
-      ],
-      [
-        "brown-sugar",
-        30
-      ],
-      [
-        "almonds",
-        40
-      ],
-      [
-        "flour",
-        120
-      ],
-      [
-        "cinnamon",
-        2
-      ],
-      [
-        "ground-cloves",
-        100
-      ],
-      [
-        "orange",
-        1
-      ],
-      [
-        "lemon-juice",
-        20
-      ],
-      [
-        "baking-soda",
-        100
-      ]
-    ],
-    "steps": [
-      "Prepare the mould or baking tray first and measure the ingredients before mixing.",
-      "Combine {honey} with the listed sweet ingredients using the method appropriate to the texture: cream, fold, beat or simmer gently.",
-      "Warm honey and sugar, stir in chopped almonds, zest and spices, then mix into flour with baking soda; press into a slab, bake and glaze while warm.",
-      "Finish with a little {lemon-juice} if needed, taste for seasoning and serve while the texture is at its best."
-    ]
-  },
-  {
-    "id": "swiss-rosti-potato-cakes",
-    "name": "Swiss Rösti Potato Cakes",
-    "meal": "big",
-    "cuisine": "Swiss",
-    "time": 30,
+    "time": 45,
     "serves": 4,
     "ing": [
       [
-        "potatoes",
-        400
+        "flour",
+        200
       ],
       [
-        "onion",
-        1
+        "honey",
+        150
       ],
       [
-        "eggs",
+        "brown-sugar",
+        50
+      ],
+      [
+        "almonds",
+        60
+      ],
+      [
+        "cinnamon",
         3
       ],
       [
-        "cheese",
-        100
+        "ground-cloves",
+        1
       ],
       [
-        "mushrooms",
+        "orange",
+        "1pc"
+      ],
+      [
+        "lemon-juice",
+        15
+      ],
+      [
+        "baking-soda",
+        3
+      ],
+      [
+        "icing-sugar",
+        40
+      ]
+    ],
+    "steps": [
+      "Heat the oven to 180 °C. Warm the {honey} and {brown-sugar} gently until dissolved and cool slightly. Finely chop the {almonds}.",
+      "Mix the {flour}, {baking-soda}, {cinnamon}, {ground-cloves}, almonds and the grated zest of the {orange}, then stir in the honey mixture to a stiff dough.",
+      "Press 1 cm thick onto a lined tray and bake for 20 minutes until firm.",
+      "Mix the {icing-sugar} with the {lemon-juice} and a spoon of water, brush over while warm and cut into bars."
+    ]
+  },
+  {
+    "id": "swiss-kaseschnitte",
+    "name": "Käseschnitte (Swiss baked cheese toast with egg)",
+    "meal": "big",
+    "cuisine": "Swiss",
+    "time": 25,
+    "serves": 4,
+    "ing": [
+      [
+        "bread",
+        "8pc"
+      ],
+      [
+        "white-wine",
         150
+      ],
+      [
+        "swiss-cheese",
+        300
+      ],
+      [
+        "eggs",
+        "4pc"
       ],
       [
         "butter",
         20
+      ],
+      [
+        "black-pepper",
+        1
+      ],
+      [
+        "nutmeg",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a heavy pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir well so the ingredients are evenly coated.",
-      "Add the {eggs} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Heat the oven to 220 °C. Dip the {bread} slices briefly in the {white-wine} and arrange on a tray greased with half of the {butter}.",
+      "Top with grated {swiss-cheese} and season with {black-pepper} and {nutmeg}.",
+      "Bake for 10–12 minutes until bubbling and golden.",
+      "Fry the {eggs} in the remaining butter for 3 minutes and set one on each toast (two per person)."
     ]
   },
   {
@@ -635,42 +620,42 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "swiss-zurcher-style-creamy-beef",
-    "name": "Swiss Zürcher-Style Creamy Beef",
+    "id": "swiss-raclette-potatoes",
+    "name": "Raclette with Potatoes, Ham and Pickles",
     "meal": "big",
     "cuisine": "Swiss",
-    "time": 25,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
         "potatoes",
+        800
+      ],
+      [
+        "swiss-cheese",
         400
       ],
       [
-        "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
+        "pickles",
         100
       ],
       [
-        "mushrooms",
+        "ham",
         150
       ],
       [
-        "butter",
-        20
+        "black-pepper",
+        1
+      ],
+      [
+        "salt",
+        3
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Boil the {potatoes} in their skins in water with the {salt} for 20 minutes; drain and keep warm in a towel.",
+      "Heat the oven grill to 220 °C. Slice the {swiss-cheese}, lay it in small ovenproof dishes and grill for 5–7 minutes until bubbling and browned at the edges.",
+      "Scrape the melted cheese over the potatoes, season with {black-pepper} and serve with the {ham} and {pickles}."
     ]
   },
   {
@@ -729,48 +714,45 @@ KITCHEN.add(
   {
     "id": "swiss-apple-fritters",
     "name": "Swiss Apple Fritters",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Swiss",
-    "time": 39,
+    "time": 35,
     "serves": 4,
     "ing": [
       [
-        "parsley",
-        10
+        "apple",
+        "3pc"
       ],
       [
-        "black-pepper",
-        2
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
-        1
+        "flour",
+        150
       ],
       [
         "eggs",
+        "1pc"
+      ],
+      [
+        "milk",
+        150
+      ],
+      [
+        "sugar",
+        30
+      ],
+      [
+        "cinnamon",
         3
       ],
       [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
+        "oil",
+        300
       ]
     ],
     "steps": [
-      "Add the {parsley} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Whisk the {flour}, {eggs}, {milk} and half of the {sugar} into a smooth batter and rest for 15 minutes.",
+      "Peel and core the {apple} and cut into 1 cm rings.",
+      "Heat the {oil} to 175 °C, dip the rings in the batter and fry for 2–3 minutes per side until golden.",
+      "Drain and toss in the remaining sugar mixed with the {cinnamon}."
     ]
   },
   {
@@ -778,44 +760,57 @@ KITCHEN.add(
     "name": "Swiss Creamy Mushroom and Potato Soup",
     "meal": "big",
     "cuisine": "Swiss",
-    "time": 46,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
+        "mushrooms",
+        300
+      ],
+      [
         "potatoes",
-        400
+        300
       ],
       [
         "onion",
-        1
-      ],
-      [
-        "eggs",
-        3
-      ],
-      [
-        "cheese",
-        100
-      ],
-      [
-        "mushrooms",
-        150
+        "1pc"
       ],
       [
         "butter",
-        20
+        30
+      ],
+      [
+        "vegetable-stock",
+        700
+      ],
+      [
+        "cream",
+        100
+      ],
+      [
+        "parsley",
+        10
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Slice the {mushrooms} and dice the {onion} and {potatoes}.",
+      "Cook the onion and mushrooms in the {butter} over medium-high heat for 8 minutes until golden.",
+      "Add the potatoes and {vegetable-stock} and simmer for 15 minutes until tender.",
+      "Blend about half the soup, return to the pot, stir in the {cream} and season with {salt} and {black-pepper}. Scatter with chopped {parsley}."
     ]
   },
   {
     "id": "swiss-herbed-cheese-omelette",
     "name": "Swiss Herbed Cheese Omelette",
-    "meal": "morning,big",
+    "meal": "morning",
     "cuisine": "Swiss",
     "time": 20,
     "serves": 4,
@@ -859,48 +854,49 @@ KITCHEN.add(
   {
     "id": "swiss-apple-and-cinnamon-bake",
     "name": "Swiss Apple and Cinnamon Bake",
-    "meal": "big",
+    "meal": "treat",
     "cuisine": "Swiss",
     "time": 60,
     "serves": 4,
     "ing": [
       [
-        "parsley",
-        10
+        "stale-bread",
+        200
       ],
       [
-        "black-pepper",
-        2
+        "apple",
+        "4pc"
       ],
       [
-        "salt",
-        3
-      ],
-      [
-        "potatoes",
-        400
-      ],
-      [
-        "onion",
-        1
+        "milk",
+        250
       ],
       [
         "eggs",
+        "2pc"
+      ],
+      [
+        "sugar",
+        40
+      ],
+      [
+        "cinnamon",
         3
       ],
       [
-        "cheese",
-        100
+        "butter",
+        30
       ],
       [
-        "mushrooms",
-        150
+        "raisins",
+        40
       ]
     ],
     "steps": [
-      "Add the {parsley} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through.",
-      "Season with {salt} to taste and serve."
+      "Heat the oven to 180 °C and grease a baking dish with half of the {butter}. Cube the {stale-bread} and soak it in the warmed {milk} for 10 minutes.",
+      "Peel, core and slice the {apple} and cook in the remaining butter with the {sugar} and {cinnamon} for 5 minutes.",
+      "Beat the {eggs}, stir into the bread with the {raisins} and layer with the apples in the dish.",
+      "Bake for 35 minutes until set and golden."
     ]
   },
   {
@@ -908,38 +904,55 @@ KITCHEN.add(
     "name": "Swiss Cabbage and Bean Stew",
     "meal": "big",
     "cuisine": "Swiss",
-    "time": 31,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "potatoes",
+        "cabbage",
         400
       ],
       [
-        "onion",
-        1
+        "white-beans",
+        240
       ],
       [
-        "eggs",
-        3
+        "potatoes",
+        300
       ],
       [
-        "cheese",
+        "bacon",
         100
       ],
       [
-        "mushrooms",
-        150
+        "onion",
+        "1pc"
       ],
       [
-        "butter",
-        20
+        "vegetable-stock",
+        700
+      ],
+      [
+        "caraway",
+        2
+      ],
+      [
+        "oil",
+        15
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "black-pepper",
+        1
       ]
     ],
     "steps": [
-      "Warm the {butter} in a pan and soften the {onion} until fragrant.",
-      "Add the {potatoes} and {potatoes}; stir to combine.",
-      "Cook gently, stirring occasionally, until the ingredients are tender and cooked through."
+      "Dice the {bacon} and chop the {onion} and fry in the {oil} for 6 minutes.",
+      "Add the diced {potatoes}, {caraway} and {vegetable-stock} and simmer for 10 minutes.",
+      "Add the shredded {cabbage}, drained {white-beans} and {salt} and simmer for 15 minutes.",
+      "Season with {black-pepper} and serve hot."
     ]
   },
   {

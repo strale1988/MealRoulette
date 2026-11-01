@@ -19,7 +19,7 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "peanut-butter",
@@ -54,11 +54,11 @@ KITCHEN.add(
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "garlic",
-        2
+        "2pc"
       ],
       [
         "oil",
@@ -85,11 +85,11 @@ KITCHEN.add(
       ],
       [
         "tomato",
-        2
+        "2pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "lemon-juice",
@@ -120,11 +120,11 @@ KITCHEN.add(
       ],
       [
         "plantain",
-        2
+        "2pc"
       ],
       [
         "onion",
-        1
+        "1pc"
       ],
       [
         "tomato",
@@ -142,85 +142,42 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "congolese-peanut-chicken",
-    "name": "Congolese Peanut Chicken",
-    "meal": "big",
+    "id": "congolese-mikate",
+    "name": "Mikate (Congolese fried dough bread)",
+    "meal": "bite",
     "cuisine": "Congolese",
-    "time": 30,
+    "time": 80,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
+        "flour",
         300
       ],
       [
-        "peanut-butter",
-        50
+        "yeast",
+        5
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
-  {
-    "id": "saka-saka-style-greens",
-    "name": "Saka-Saka Style Greens",
-    "meal": "big",
-    "cuisine": "Congolese",
-    "time": 45,
-    "serves": 4,
-    "ing": [
-      [
-        "spinach",
-        600
-      ],
-      [
-        "peanut-butter",
+        "sugar",
         40
       ],
       [
-        "onion",
-        "1pc"
-      ],
-      [
-        "garlic",
-        "3pc"
-      ],
-      [
-        "green-chilli",
-        "1pc"
-      ],
-      [
-        "oil",
-        30
+        "water",
+        180
       ],
       [
         "salt",
-        3
+        2
+      ],
+      [
+        "oil",
+        400
       ]
     ],
     "steps": [
-      "Chop {spinach} finely. Chop {onion}; crush {garlic}.",
-      "Cook the onion in {oil} for 5 minutes, add garlic and {green-chilli} for 2 minutes.",
-      "Add the spinach, 150 ml water and {salt}, cover and cook for 15 minutes until very soft.",
-      "Whisk {peanut-butter} with a splash of the cooking liquid, stir it in and simmer 10 minutes until thick and rich."
+      "Mix the {flour}, {yeast}, {sugar} and {salt} with the {water} and knead for 8 minutes into a soft dough. Cover and rise for 45 minutes.",
+      "Divide into 8 pieces, shape into ovals and rest for 10 minutes.",
+      "Heat the {oil} to 170 °C and fry the mikate for 3 minutes per side until puffed and golden. Drain and serve warm."
     ]
   },
   {
@@ -275,38 +232,50 @@ KITCHEN.add(
     "name": "Congolese Tomato Fish Stew",
     "meal": "big",
     "cuisine": "Congolese",
-    "time": 51,
+    "time": 50,
     "serves": 4,
     "ing": [
       [
-        "onion",
-        1
+        "white-fish",
+        600
       ],
       [
         "tomato",
-        300
+        "4pc"
       ],
       [
-        "peanut-butter",
-        50
+        "onion",
+        "1pc"
       ],
       [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
+        "garlic",
+        "2pc"
       ],
       [
         "ginger",
         10
+      ],
+      [
+        "fresh-chilli",
+        "1pc"
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "rice",
+        250
       ]
     ],
     "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {onion} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
+      "Cook the {rice} in 500 ml water, covered, on low heat for 15 minutes.",
+      "Soften the sliced {onion} in the {oil} for 5 minutes, add the crushed {garlic}, grated {ginger} and chopped {fresh-chilli} for 1 minute, then the chopped {tomato} and {salt} and simmer for 12 minutes.",
+      "Add the {white-fish} in chunks and simmer gently for 8 minutes until just cooked. Serve with the rice."
     ]
   },
   {
@@ -525,41 +494,46 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "congolese-spiced-rice-with-vegetables",
-    "name": "Congolese Spiced Rice with Vegetables",
-    "meal": "big",
+    "id": "congolese-banana-fritters",
+    "name": "Beignets de Banane (Congolese banana fritters)",
+    "meal": "treat",
     "cuisine": "Congolese",
     "time": 25,
     "serves": 4,
     "ing": [
       [
-        "chicken-thigh",
-        500
+        "banana",
+        "4pc"
       ],
       [
-        "onion",
-        1
+        "flour",
+        150
       ],
       [
-        "tomato",
+        "sugar",
+        30
+      ],
+      [
+        "baking-powder",
+        5
+      ],
+      [
+        "milk",
+        80
+      ],
+      [
+        "oil",
         300
       ],
       [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
+        "salt",
+        1
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Mash the {banana} with the {sugar} and {milk}.",
+      "Fold in the {flour}, {baking-powder} and {salt} to a thick batter.",
+      "Heat the {oil} to 170 °C and fry heaped tablespoons for 3 minutes, turning, until golden. Drain and serve warm."
     ]
   },
   {
@@ -611,49 +585,54 @@ KITCHEN.add(
   },
   {
     "id": "congolese-grilled-fish-with-lime",
-    "name": "Congolese Grilled Fish with Lime",
+    "name": "Poisson Braisé (Congolese grilled fish with pili-pili)",
     "meal": "big",
     "cuisine": "Congolese",
-    "time": 39,
+    "time": 40,
     "serves": 4,
     "ing": [
+      [
+        "white-fish",
+        700
+      ],
+      [
+        "lime",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
       [
         "ginger",
         10
       ],
       [
+        "fresh-chilli",
+        "1pc"
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
         "oil",
-        20
+        30
       ],
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
       ]
     ],
     "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
+      "Crush the {garlic} with the {ginger}, {fresh-chilli}, half of the {salt}, half of the {oil} and the juice of one {lime}. Rub into the {white-fish} and marinate for 20 minutes.",
+      "Grill or griddle the fish over high heat for 4–5 minutes per side until charred and flaking.",
+      "Slice the {onion} and {tomato} and toss with the remaining oil and salt.",
+      "Serve the fish with the salad and wedges of the second lime."
     ]
   },
   {
@@ -661,37 +640,51 @@ KITCHEN.add(
     "name": "Congolese Chicken and Greens Pot",
     "meal": "big",
     "cuisine": "Congolese",
-    "time": 46,
+    "time": 55,
     "serves": 4,
     "ing": [
       [
         "chicken-thigh",
-        500
+        600
       ],
       [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
+        "spinach",
         300
       ],
       [
-        "peanut-butter",
-        50
+        "onion",
+        "1pc"
+      ],
+      [
+        "tomato",
+        "2pc"
+      ],
+      [
+        "garlic",
+        "3pc"
+      ],
+      [
+        "fresh-chilli",
+        "1pc"
+      ],
+      [
+        "oil",
+        30
+      ],
+      [
+        "salt",
+        3
       ],
       [
         "rice",
         250
-      ],
-      [
-        "spinach",
-        150
       ]
     ],
     "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Season the {chicken-thigh} with half of the {salt} and brown in the {oil} for 5 minutes per side. Remove.",
+      "Soften the sliced {onion} and crushed {garlic} for 5 minutes, add the chopped {tomato} and whole {fresh-chilli} and cook for 8 minutes.",
+      "Return the chicken with 300 ml water, cover and simmer for 25 minutes. Meanwhile cook the {rice} in 500 ml water with the remaining salt, covered, for 15 minutes.",
+      "Stir the {spinach} into the stew for the last 5 minutes until wilted. Serve with the rice."
     ]
   },
   {
@@ -747,16 +740,63 @@ KITCHEN.add(
     ]
   },
   {
-    "id": "congolese-herbed-flatbread",
-    "name": "Congolese Herbed Flatbread",
-    "meal": "big",
+    "id": "congolese-fried-cassava",
+    "name": "Manioc Frit (Congolese fried cassava)",
+    "meal": "bite",
     "cuisine": "Congolese",
-    "time": 60,
+    "time": 40,
     "serves": 4,
     "ing": [
       [
-        "ginger",
-        10
+        "cassava",
+        800
+      ],
+      [
+        "oil",
+        300
+      ],
+      [
+        "salt",
+        3
+      ],
+      [
+        "chilli-flakes",
+        2
+      ]
+    ],
+    "steps": [
+      "Peel the {cassava}, remove the woody core and cut into thick sticks. Boil in water with half of the {salt} for 15 minutes until just tender; drain and dry well.",
+      "Heat the {oil} to 180 °C and fry the cassava for 6 minutes until crisp and golden.",
+      "Drain and toss with the remaining salt and the {chilli-flakes}."
+    ]
+  },
+  {
+    "id": "congolese-coconut-rice-bowl",
+    "name": "Congolese Coconut Rice with Beans",
+    "meal": "big",
+    "cuisine": "Congolese",
+    "time": 40,
+    "serves": 4,
+    "ing": [
+      [
+        "rice",
+        250
+      ],
+      [
+        "coconut-milk",
+        300
+      ],
+      [
+        "kidney-beans",
+        240
+      ],
+      [
+        "onion",
+        "1pc"
+      ],
+      [
+        "garlic",
+        "2pc"
       ],
       [
         "oil",
@@ -765,70 +805,12 @@ KITCHEN.add(
       [
         "salt",
         3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
       ]
     ],
     "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "congolese-coconut-rice-bowl",
-    "name": "Congolese Coconut Rice Bowl",
-    "meal": "big",
-    "cuisine": "Congolese",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
+      "Soften the chopped {onion} and crushed {garlic} in the {oil} for 5 minutes.",
+      "Add the {rice}, {coconut-milk}, 250 ml water and the {salt}, cover and cook on low heat for 18 minutes.",
+      "Stir in the drained {kidney-beans}, cover and heat for 5 minutes, then rest for 5 minutes and fluff."
     ]
   },
   {
