@@ -246,8 +246,8 @@ function ingHTML(r,id,s){
  const sec=l=>X&&X.sec?X.sec(l,ctx):"",real=x=>x.l&&(cnt[x.l]>1||sec(x.l)),G=[];
  rows.forEach(x=>{const l=real(x)?x.l:"",g=G[G.length-1];if(g&&g.l===l)g.r.push(x);else G.push({l,r:[x]})});
  const labelled=G.some(g=>g.l);
- return G.map((g,k)=>{const head=g.l||(labelled&&k>0?"Also":"");
-  return(head?`<div class="ingh"><span>${esc(head)}</span>${g.l?sec(g.l):""}</div>`:"")+`<ul class="ing">${g.r.map(x=>{const n=g.l?cap1(x.n):x.raw;return`<li><span>${esc(n)}${X?X.btn(n,null,ctx):""}</span><span class="q">${esc(x.q)}</span></li>`}).join("")}</ul>`}).join("")}
+ return G.map((g,k)=>{const head=g.l||(labelled&&k>0?"Also":""),hl=g.l?sec(g.l):"";
+  return(head?`<div class="ingh"><span>${esc(head)}</span>${hl}</div>`:"")+`<ul class="ing">${g.r.map(x=>{const n=g.l?cap1(x.n):x.raw;return`<li><span>${esc(n)}${X&&!hl?X.btn(n,null,ctx):""}</span><span class="q">${esc(x.q)}</span></li>`}).join("")}</ul>`}).join("")}
 function draw(id){
  seedDefault(id);
  const T=TOOLS[id],s=cfg(id),root=document.getElementById("tab-"+id);if(!root)return;
@@ -301,7 +301,7 @@ function decorate(id,T,r,root,s){
   if(window.__shareOut){window.__shareOut("k",{id,s:JSON.parse(sig)},r.title,r.title+(r.meta[0]?" · "+r.meta[0][1]:""),sh,()=>text);return} // a link that reopens this exact build
   try{if(navigator.share)await navigator.share({title:r.title,text});else{flash(sh,"share",await copyText(text)?"Copied":"Couldn't copy")}}catch(e){}};
  try{const m=root.querySelector("[data-out] .meta");if(m&&window.__noteBlock)m.after(window.__noteBlock(r.title))}catch(e){}
- if(window.__thumbs)window.__thumbs(row,r.title,{craft:id},()=>spinTool(id));
+ if(window.__thumbs)window.__thumbs(row,r.title,{craft:id},()=>{const a=row.querySelector("[data-a=rand]");if(a&&a.isConnected)a.click();else spinTool(id)});
  if(window.__tidyRow)window.__tidyRow(row,T.icon);
 }
 

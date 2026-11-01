@@ -1522,6 +1522,15 @@ const FERM=[["kimchi","kimchi",["kimchi"]],["sauerkraut","sauerkraut",["kraut"]]
  ["pickles","pickles",["quick","brine"],"cucumber|gherkin"],["pickled-red-onions","pickled onions",["quick","brine"],"onion"],["pickled-jalapenos","pickled jalapeños",["quick","brine"],"jalape"],["pickled-beets","pickled beets",["quick","brine"],"beet"]];
 const readyFerm=()=>{try{return window.FERMENT&&window.FERMENT.have?FERM.filter(x=>K.ING[x[0]]&&window.FERMENT.have(x[2],x[3])):[]}catch(e){return[]}};
 const fridgeIds=(()=>{let key="",set=new Set();return()=>{const it=items(),rf=readyFerm().map(x=>x[0]),k=it.join("|")+"#"+rf.join(",");if(k!==key){key=k;set=new Set(it.flatMap(x=>K.match(x)).concat(rf))}return set}})();
+/* Cook cards: an ingredient written as ["flour",500,"Bun"] sits under a "Bun" heading, with one link for the whole section when the app can teach it (see xlink.js SEC).
+   A label needs 2+ lines, or a link, to be a section; lines with no label are listed first, or under "Also" when they come after a section. */
+const ingLi=(i,nopill)=>`<li><span>${esc(i.name)}${window.XLINK&&!nopill?XLINK.btn(i.name,i.id,null):""}${missing(i)?'<span class="buy">to buy</span>':""}</span><span class="q">${esc(Q(i))}</span></li>`;
+const ingBlock=ing=>{const X=window.XLINK,cnt={};ing.forEach(i=>{if(i.sec)cnt[i.sec]=(cnt[i.sec]||0)+1});
+  const sec=l=>X&&X.sec?X.sec(l,null):"",by=new Map();
+  ing.forEach(i=>{const l=i.sec&&(cnt[i.sec]>1||sec(i.sec))?i.sec:"";if(!by.has(l))by.set(l,[]);by.get(l).push(i)});
+  const lab=[...by.keys()].some(Boolean);
+  return[...by].map(([l,a],k)=>{const head=l||(lab&&k>0?"Also":""),hl=l?sec(l):"";return(head?`<div class="ingh"><span>${esc(head)}</span>${hl}</div>`:"")+`<ul class="ing">${a.map(i=>ingLi(i,!!hl)).join("")}</ul>`}).join("")}; // a section that already carries the link needs no pill on its own lines
+const cookList=ing=>{const c={};ing.forEach(i=>{if(i.sec)c[i.sec]=(c[i.sec]||0)+1});return ing.map(i=>[(i.sec&&c[i.sec]>1?i.sec+": ":"")+i.name,Q(i)])}; // the cooking-mode panel groups "Label: name" lines
 const missing=i=>!isLeftIng(i)&&items().length>0&&!i.have&&!(S.basic&&(i.pantry||GEN.pantry.test(i.name.toLowerCase())));
 function priorityCount(g){const ids=new Set(S.urgent.flatMap(x=>K.match(x)));return(g.ing||[]).filter(i=>(i.id?[i.id]:K.match(i.name||"")).some(id=>ids.has(id))).length;}
 function bestOf(fn,k){let best=null,bm=1e9;for(let j=0;j<k;j++){const g=fn(),m=g.ing.filter(missing).length*100-priorityCount(g)*30+(S.quick&&g.min>30?1000:0)+(recent(g.title)?50:0);if(m<bm){best=g;bm=m;if(m<=-30)break}}return best}
@@ -1670,7 +1679,7 @@ function show(r,msg){
   <div class="meta"><span>${I("clock")}${r.min} min</span><span>${I("users")}${r.n} ${hasKids()?(r.n>1?"portions":"portion"):(r.n>1?"people":"person")}</span><span>${I(ic)}${ML(S.meal)}</span>${r.remix?`<span>${I("wand")}Whisked</span>`:""}${(()=>{const x=r.ing.length&&r.ing.every(i=>i.id)?K.nutri(r.ing,r.n):GEN.nutri(r.ing,r.n);return x.kcal?`<span title="Rough estimate">${I("flame")}≈${x.kcal} kcal · ${x.p} g protein each</span>`:""})()}</div>
   ${r.desc?`<p class="desc">${esc(cv(r.desc))}</p>`:""}${callout(r)}
   <div class="split"><div><h3>${I("list")}Ingredients <small style="text-transform:none;letter-spacing:0;color:var(--mute)">(tap to tick off)</small></h3>
-  <ul class="ing">${r.ing.map(i=>`<li><span>${esc(i.name)}${window.XLINK?XLINK.btn(i.name,i.id,null):""}${missing(i)?'<span class="buy">to buy</span>':""}</span><span class="q">${esc(Q(i))}</span></li>`).join("")}</ul></div>
+  ${ingBlock(r.ing)}</div>
   <div><h3>${I("chef")}Method</h3><ol>${r.steps.map(s=>`<li><span>${esc(cv(s))}</span></li>`).join("")}</ol></div></div>
   <div class="row"><button id="save">${I("heart")}Save</button><button id="shop">${I("cart")}Copy list</button><button id="again">Again</button></div></div></article>`;
   $("out").querySelectorAll(".ing li").forEach(li=>li.onclick=()=>li.classList.toggle("done"));
@@ -1973,7 +1982,7 @@ function enhance(r){
   card.querySelectorAll("ol li").forEach(li=>{li.tabIndex=0;li.onclick=()=>li.classList.toggle("done");li.onkeydown=e=>{if(e.key===" "||e.key==="Enter"){e.preventDefault();li.click()}}});
   card.querySelectorAll("ul.ing li").forEach(li=>{li.tabIndex=0;li.onkeydown=e=>{if(e.key===" "||e.key==="Enter"){e.preventDefault();li.click()}}});
   const b=document.createElement("button");b.id="cookgo";b.className="go";b.innerHTML=I("flame")+"Start cooking";
-  card.querySelector(".row").prepend(b);b.onclick=()=>cookMode({...r,list:r.ing.map(i=>[i.name,Q(i)])});
+  card.querySelector(".row").prepend(b);b.onclick=()=>cookMode({...r,list:cookList(r.ing)});
   if(window.__dinner){const pl=document.createElement("button");pl.type="button";pl.id="plandn";pl.innerHTML=I("clock")+"Plan dinner";pl.onclick=()=>window.__dinner({title:r.title,steps:r.steps.map(s=>cv(s))});b.after(pl)}
   const sv=$("save");if(sv){const o=sv.onclick;sv.onclick=()=>{o();navigator.vibrate&&navigator.vibrate(15)}}
 }
@@ -2233,7 +2242,7 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
     if(Math.abs(m-9.8)>14){hits=hits.filter(h=>t-h<700);hits.push(t);
       if(hits.length>=3&&t-last>2500){hits=[];last=t;
         const ae=document.activeElement;if(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))return;
-        const H=window.__home;if(H&&H.up()){H.spin();navigator.vibrate&&navigator.vibrate(30);return}if(document.querySelector(".cookov,.reel.on,.fmreel"))return;if(H&&H.roll&&(tab==="cook"||tab==="pizza")&&H.again()){navigator.vibrate&&navigator.vibrate(30);return}
+        const H=window.__home;if(H&&H.up()){H.spin();navigator.vibrate&&navigator.vibrate(30);return}if(document.querySelector(".cookov,.reel.on,.fmreel"))return;if(H&&H.roll&&H.again()){navigator.vibrate&&navigator.vibrate(30);return}
         const b=tab==="cook"?$("spin"):tab==="pizza"?$("pzspin"):tab==="ferm"?document.querySelector("#tab-ferm .fmspin"):document.querySelector("#tab-"+tab+" .fmspin[data-spin]");
         if(b&&!b.disabled){b.click();navigator.vibrate&&navigator.vibrate(30)}}}
   }
