@@ -64,7 +64,7 @@ const pill=(key,ctx)=>{
  return `<button type="button" class="xl" data-xl="${esc(key)}" title="Opens ${esc(to)}" aria-label="${esc(lab)}: opens ${esc(to)}">${esc(lab)}</button>`};
 const btn=(name,id,ctx)=>pill(find(name,id),ctx);
 /* a whole section can link too: the "Bun" section of a burger gets one "Make buns" pill instead of one on every line */
-const SEC=[[/^buns?$/i,"bun"]];
+const SEC=[[/^(burger )?buns?$/i,"bun"],[/^(quick )?pickles?$/i,"pickle"],[/^pesto$/i,"pesto"],[/^guacamole$/i,"guac"],[/^tzatziki$/i,"tzatziki"],[/^b[eé]chamel( sauce)?$/i,"bech"],[/^kimchi$/i,"kimchi"]];
 const sec=(label,ctx)=>{const k=(SEC.find(x=>x[0].test(label))||[])[1];return k?pill(k,ctx):""};
 
 /* open the target: leave any full-screen result first (same calls the Home wheel makes), apply the settings, then switch tab.

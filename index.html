@@ -954,6 +954,16 @@ ul.ing li .q{white-space:normal;text-align:right;flex:0 1 auto;max-width:52%;min
  body::after{content:"Turn your phone upright";position:fixed;inset:0;z-index:99999;display:grid;place-items:center;background:var(--bg);color:var(--ink);font:800 clamp(20px,5vw,30px) Bricolage,"DM Sans",system-ui,sans-serif;text-align:center;padding:24px}
 }
 </style>
+<style id="tap44">
+/* touch devices: small round and pill controls keep their look but get a larger invisible hit area (about 44px) */
+@media (pointer:coarse){
+ .tag button,.tag button.u,.meta .pchip .pm,button.xl{position:relative}
+ .tag button::after,.meta .pchip .pm::after,button.xl::after{content:"";position:absolute;inset:-9px -3px}
+ .meta .pchip .pm::after{inset:-11px}
+ button.xl::after{inset:-12px -4px}
+ .heroback::after{content:"";position:absolute;inset:-4px}
+}
+</style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -1248,7 +1258,14 @@ const I=n=>`<svg class="i"><use href="#i-${n}"/></svg>`;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const rnd=a=>a[Math.floor(Math.random()*a.length)],cap=s=>s[0].toUpperCase()+s.slice(1);
 const shufA=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
-window.mrSpinNames=function(el,names,done){let d=70,t=0;const tick=()=>{el.textContent=names[Math.floor(Math.random()*names.length)];(window.__spinHooks||[]).forEach(f=>{try{f()}catch(e){}});t+=d;if(t>=1500)return setTimeout(done,350);d=Math.round(d*1.15);setTimeout(tick,d)};tick()}; // every spinner shows names the same way for the same time
+/* screen readers: when a spin finishes, say which recipe opened and move focus to its heading (without scrolling) */
+window.__resultReady=function(h){try{
+  if(!h||!h.isConnected)return;const t=h.textContent.trim();if(!t)return;
+  let L=document.getElementById("mrlive");
+  if(!L){L=document.createElement("div");L.id="mrlive";L.setAttribute("role","status");L.setAttribute("aria-live","polite");L.setAttribute("aria-atomic","true");L.style.cssText="position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap";document.body.appendChild(L)}
+  L.textContent="";setTimeout(()=>{L.textContent="Opened "+t},60);
+  if(!h.hasAttribute("tabindex"))h.setAttribute("tabindex","-1");h.style.outline="none";h.focus({preventScroll:true})}catch(e){}};
+window.mrSpinNames=function(el,names,done,peek){let d=70,t=0;const tick=()=>{el.textContent=names[Math.floor(Math.random()*names.length)];(window.__spinHooks||[]).forEach(f=>{try{f()}catch(e){}});t+=d;if(t>=1500)return setTimeout(()=>{let n=null;if(peek){try{n=peek()}catch(e){console.error(e)}}if(n){el.textContent=n;setTimeout(done,750)}else done()},350);d=Math.round(d*1.15);setTimeout(tick,d)};tick()}; // every spinner shows names the same way for the same time
 window.mrNoSpin=()=>{try{return JSON.parse(localStorage.getItem("mr-spins"))===0}catch(e){return false}};
 const store=(k,v)=>{try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||"null");localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}};
 const S=Object.assign({meal:"Main",n:2,pantry:[],diet:{},cuisine:"",strict:true,basic:true,days:5,pm:{Main:true},urgent:[],quick:false,staples:[],useLeftovers:false,leftovers:[],units:"metric",temp:"C"},store("mr-state")||{});
@@ -1700,11 +1717,13 @@ function run(what,single,instant){
   const btns=document.querySelectorAll(".btns button"),rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
   btns.forEach(b=>b.disabled=true);o.innerHTML="";nt.textContent="";
   const names=RECIPES.map(r=>r.title).concat(Object.keys(GEN.cuisines).map(c=>c+" "+rnd(["chicken bowl","stir-fry","curry","traybake","stew"])));
-  const done=()=>{rl.classList.remove("on");btns.forEach(b=>b.disabled=false);if(!pl&&!single){const active=selectedMeals();if(active.length)S.meal=rnd(active);save();}pl?plan(what==="remix"?"remix":""):what==="remix"?invent():go();
-    const c=o.firstElementChild||o;c.scrollIntoView({behavior:"smooth",block:"start"})};
+  let built=false;const build=()=>{if(built)return;built=true;if(!pl&&!single){const active=selectedMeals();if(active.length)S.meal=rnd(active);save();}pl?plan(what==="remix"?"remix":""):what==="remix"?invent():go()};
+  const done=()=>{build();o.style.visibility="";rl.classList.remove("on");btns.forEach(b=>b.disabled=false);
+    const c=o.firstElementChild||o;c.scrollIntoView({behavior:"smooth",block:"start"});if(!instant)__resultReady(o.querySelector(".card h2"))};
   if(rm||instant||mrNoSpin())return done();
   rl.classList.add("on");rl.scrollIntoView({behavior:"smooth",block:"center"});
-  mrSpinNames(rt,names,done);
+  /* the last name on the reel is the recipe that opens: it is built behind the reel, then its title is shown */
+  mrSpinNames(rt,names,done,pl?null:()=>{o.style.visibility="hidden";build();const h=o.querySelector(".card h2");return h&&h.textContent.trim()});
 }
 $("dminus").onclick=()=>{S.days=Math.max(1,S.days-1);save();draw()};$("dplus").onclick=()=>{S.days=Math.min(7,S.days+1);save();draw()};
 /* ---------- plan ---------- */
@@ -1902,6 +1921,9 @@ function pzCard(r,target,msg){
   const sv=target.querySelector(".pzsave");sv.onclick=()=>{const f=store("mr-pzfavs")||[];if(!f.some(x=>x.title===r.title&&x.count===r.count&&x.ferm===r.ferm&&x.pre===r.pre&&x.fresh===r.fresh)){f.unshift(r);store("mr-pzfavs",f.slice(0,30))}pzFavs();sv.innerHTML=I("heart")+"Saved"};
   const sh=target.querySelector(".pzshop");sh.onclick=async()=>{const mm=r.dough?r.ing:r.ing.filter(buy),l=(mm.length?mm:r.ing).map(i=>"• "+i.name+" – "+cv(i.txt)).join("\n");try{await navigator.clipboard.writeText(l);sh.innerHTML=I("cart")+"Copied"}catch(e){$("pznote").textContent=l}};
   const ag=target.querySelector(".pzagain");if(ag)ag.onclick=()=>pzRun(r.remix?"remix":"spin");
+  try{const row=target.querySelector(".row"),steps=(r.sections||[]).flatMap(x=>x.steps||[]).map(cv);
+    if(window.__dinner&&row&&steps.length&&!row.querySelector("[data-a=plan]")){const pl=document.createElement("button");pl.type="button";pl.dataset.a="plan";pl.innerHTML=I("clock")+"Plan dinner";pl.onclick=()=>window.__dinner({title:r.title,steps});
+      const at=row.querySelector(".pzgo");if(at)at.after(pl);else row.querySelector(".pzshop").after(pl)}}catch(e){console.error(e)}
   const go=target.querySelector(".pzgo");if(go)go.onclick=()=>{S.pz.auto=false;save();pzSection("build");scrollTo({top:0})};
 }
 function pzDoughRun(){
@@ -2072,7 +2094,8 @@ pzRun=function(what,instant){
   busy=true;const bs=[...document.querySelectorAll(".pzbtns button")],rt=$("pzrt");
   let names=((window.PZ&&PZ.recipes)||[]).map(x=>x.title||x.name).filter(Boolean);if(!names.length)names=["Margherita","Pepperoni","Diavola","Quattro formaggi","Funghi"];
   bs.forEach(b=>b.disabled=true);o.innerHTML="";$("pzph").style.display="none";$("pznote").textContent="";rl.classList.add("on");rl.scrollIntoView({behavior:"smooth",block:"center"});
-  mrSpinNames(rt,names,()=>{rl.classList.remove("on");bs.forEach(b=>b.disabled=false);busy=false;_pz(what)});
+  let built=false;const build=()=>{if(built)return;built=true;_pz(what)};
+  mrSpinNames(rt,names,()=>{build();o.style.visibility="";rl.classList.remove("on");bs.forEach(b=>b.disabled=false);busy=false;__resultReady(o.querySelector(".card h2"))},()=>{o.style.visibility="hidden";build();const h=o.querySelector(".card h2");return h&&h.textContent.trim()});
 };
 const _ps=pzShow;
 pzShow=function(r,m){_ps(r,m);try{const sv=o.querySelector(".pzsave");if(!r||!sv||o.querySelector("#pzcook"))return;
@@ -2287,16 +2310,18 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
         H.from=false;H.show(true);try{window.__leaveCook&&window.__leaveCook();window.__leavePizza&&window.__leavePizza();window.__leaveFerm&&window.__leaveFerm();window.__leaveCraft&&window.__leaveCraft();setTab("cook")}catch(e){console.error(e)}return true},
       spin(){
         if(busy||!H.up())return;busy=true;sp.classList.add("spinning");const k=pick();
-        const fire=()=>{cycStop();if(rot){const r=rot;rot=null;setTimeout(()=>r.cancel(),500)}H.from=true;H.roll=true;try{k.go(true)}catch(e){console.error(e)}H.hide();busy=false};
+        let built=false;const build=()=>{if(built)return;built=true;H.from=true;H.roll=true;try{k.go(true)}catch(e){console.error(e)}};
+        const fire=()=>{build();cycStop();if(rot){const r=rot;rot=null;setTimeout(()=>r.cancel(),500)}H.hide();busy=false;setTimeout(()=>{const t=typeof tab==="string"?tab:"";__resultReady(document.querySelector("#tab-"+t+" :is(#out,#pzout,[data-out]) .card h2"))},80)};
         if(rm||mrNoSpin()){fire();return}
         landed=false;clearInterval(cyc);cyc=null;ci=-1;if(overlays.length&&!rm){showArt(window.__rndArt?__rndArt(nA(),ci):0);spinLast=performance.now()} // from here the art swaps on the name ticks
         if(pz.animate){const rev=(parseFloat(getComputedStyle(sp).getPropertyValue("--rev"))||2.4)*1000; // constant speed, the same turn time as every other spinner
           rot=pz.animate([{transform:"rotate(1417.5deg)"},{transform:"rotate(1777.5deg)"}],{duration:rev,iterations:Infinity,easing:"linear"})}
         hint.classList.add("tick");hint.style.animation="none";
-        const land=()=>{landed=true;clearInterval(cyc);cyc=null; // the wheel keeps swapping at random to the end, then lands on the art that matches the pick (slices = Pizza night)
+        const peek=()=>{landed=true;clearInterval(cyc);cyc=null; // the wheel keeps swapping at random to the end, then lands on the art that matches the pick (slices = Pizza night)
           if(overlays.length&&!rm){let i;if(k.art==="wedge")i=0;else{do i=Math.floor(Math.random()*nA());while(i===0&&nA()>1)}showArt(i)} // pizza pick lands on the pizza; Cook lands on any other spinner
-          setTimeout(fire,650)};
-        mrSpinNames(hint,names(),land); // same name ticker as the Cook spinner
+          build(); // the recipe is built behind the wheel and its title is the last name shown
+          const t=typeof tab==="string"?tab:"",h=document.querySelector("#tab-"+t+" :is(#out,#pzout,[data-out]) .card h2");return h&&h.textContent.trim()};
+        mrSpinNames(hint,names(),fire,peek); // same name ticker as the Cook spinner
       }};
     Object.defineProperty(H,"from",{configurable:true,enumerable:true,get:()=>_from,set:v=>{_from=!!v;document.documentElement.classList.toggle("homeres",_from)}}); // desktop: a recipe from the wheel shows alone, as a centred card
     const makeReady=()=>{
@@ -2463,16 +2488,21 @@ if(grid&&$("fav")&&$("plans")){
    a pizza replaces the filters, the X on the green bar and the Back button return, Back never leaves the app ---- */
 (function(){
 const small=()=>matchMedia("(max-width:959px)").matches,tabEl=$("tab-pizza");let on=false;
+/* a pizza from the start wheel must show the Build a pizza result (Spin again + close button). If the tab was last left on the Dough lab, that section
+   would show instead (a dough card has neither), so switch to Build for the result and put the person's section back when it closes */
+let prevSec=null;
+const toBuild=()=>{if(S.pz.sec!=="build"){prevSec=S.pz.sec||"dough";pzSection("build")}};
+const restoreSec=()=>{if(prevSec){S.pz.sec=prevSec;prevSec=null;save()}};
 const XB='<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
 function enter(){if(on)return;on=true;tabEl.classList.add("resmode");if(small()){try{history.pushState({mrres:1},"")}catch(e){}}scrollTo({top:0})}
-function leave(){if(!on)return;on=false;const H=window.__home;if(H&&H.from){H.from=false;H.show(true);setTab("cook")}tabEl.classList.remove("resmode");pzShow(null);scrollTo({top:0})}
-window.__leavePizza=()=>{if(on){on=false;tabEl.classList.remove("resmode");pzShow(null);window.__nav&&__nav.drop()}};
+function leave(){if(!on)return;on=false;restoreSec();const H=window.__home;if(H&&H.from){H.from=false;H.show(true);setTab("cook")}tabEl.classList.remove("resmode");pzShow(null);scrollTo({top:0})}
+window.__leavePizza=()=>{if(on){on=false;restoreSec();tabEl.classList.remove("resmode");pzShow(null);window.__nav&&__nav.drop()}};
 function back(){if(history.state&&history.state.mrres)history.back();else leave()}
 addEventListener("popstate",()=>{if(on)leave()});
-const _pr=pzRun;pzRun=function(w,i){enter();return _pr(w,i)}; // the spinning reel already shows on the result screen, like Cook
+const _pr=pzRun;pzRun=function(w,i){toBuild();enter();return _pr(w,i)}; // the spinning reel already shows on the result screen, like Cook
 const _ps=pzShow;pzShow=function(r,m){
   if(r)enter();
-  else if(m&&on){on=false;tabEl.classList.remove("resmode");if(small()&&history.state&&history.state.mrres)history.back()} // nothing to show: back to the filters, keep the message
+  else if(m&&on){on=false;prevSec=null;tabEl.classList.remove("resmode");if(small()&&history.state&&history.state.mrres)history.back()} // nothing to show: back to the filters, keep the message
   _ps(r,m);if(!r)return;
   try{const row=$("pzout").querySelector(".card .row");if(row&&!r.dough){window.__thumbs(row,r.title,{},()=>{const a=row.querySelector(".pzagain");if(a)a.click()});window.__tidyRow(row,"pizza")}}catch(e){console.error(e)}
   try{const h=$("pzout").querySelector(".hero");if(h&&!h.querySelector(".heroback")){const b=document.createElement("button");b.type="button";b.className="heroback";b.setAttribute("aria-label","Back");b.title="Back";b.innerHTML=XB;b.onclick=back;h.append(b)}}catch(e){console.error(e)}};
@@ -2624,6 +2654,7 @@ if(kx){const row=document.createElement("div");row.className="xtra-row";row.inne
   const pr=()=>{$("ratecount").textContent=nr()?nr()+" rated with Like or Not for me. They steer what you get when you spin.":"Tap Like or Not for me on a recipe to steer what you get when you spin.";$("ratereset").disabled=!nr()};pr();
   $("ratereset").onclick=()=>{if(nr()&&confirm("Forget all your Like and Not for me ratings?")){store("mr-rate",{});pr()}};
   document.addEventListener("click",e=>{if(e.target.closest&&e.target.closest(".thumb"))setTimeout(pr,0)});
+  try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist()}catch(e){} // ask the browser not to clear favourites, ferments and the cooking log when space runs low
   /* backup: everything this app keeps lives in localStorage under "mr-" keys, so export/import just copies those */
   const bk=document.createElement("div");bk.className="xtra-row";
   bk.innerHTML='<p><b>Back up your data</b><span id="bkmsg">Favourites, plans, ferments, notes and your cooking log live only in this browser, and clearing site data erases them. Save a copy to keep them safe.</span></p><div class="tg"><button type="button" id="bkexp">Export</button><button type="button" id="bkimp">Import</button></div><input type="file" id="bkfile" accept="application/json,.json" hidden aria-label="Backup file">';

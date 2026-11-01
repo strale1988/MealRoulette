@@ -309,15 +309,17 @@ function decorate(id,T,r,root,s){
 const SPINNING={},RK="mr-craftrecent",recentBuilds=()=>{try{return JSON.parse(localStorage.getItem(RK)||"[]")||[]}catch(e){return[]}},noteBuild=t=>{try{localStorage.setItem(RK,JSON.stringify(recentBuilds().filter(x=>x!==t).concat(t).slice(-40)))}catch(e){}};
 function spinTool(id,instant){
  const T=TOOLS[id],root=document.getElementById("tab-"+id);if(!T||!T.spin||!root||SPINNING[id])return;
- const done=()=>{const wheel=resOn===id,s=cfg(id),rec=recentBuilds();let r,k=0; // a fresh build every time: not one of the last 40 shown, and no stocks or broths from the start wheel
+ let built=false;
+ const build=()=>{if(built)return;built=true;const wheel=resOn===id,s=cfg(id),rec=recentBuilds();let r,k=0; // a fresh build every time: not one of the last 40 shown, and no stocks or broths from the start wheel
   do{T.spin(s);try{r=T.calc(s)}catch(e){r=null;break}k++}while(k<16&&r&&(rec.includes(r.title)||(wheel&&/\b(stocks?|broths?|bouillon)\b/i.test(r.title))));
-  if(r&&r.title)noteBuild(r.title);save();draw(id);const c=root.querySelector(".card");if(c)c.scrollIntoView({behavior:"smooth",block:"start"})};
+  if(r&&r.title)noteBuild(r.title);save();draw(id)};
+ const done=()=>{build();const o=root.querySelector("[data-out]");if(o)o.style.visibility="";const c=root.querySelector(".card");if(c)c.scrollIntoView({behavior:"smooth",block:"start"})};
  if(instant||matchMedia("(prefers-reduced-motion:reduce)").matches||(window.mrNoSpin&&mrNoSpin())||!window.mrSpinNames||!T.art)return done();
  SPINNING[id]=1;const bs=[...root.querySelectorAll("[data-spin]")];bs.forEach(b=>b.disabled=true);
  const rl=document.createElement("div");rl.className="reel on";rl.setAttribute("aria-hidden","true");
  rl.innerHTML=`<div class="stage"><div class="art on">${T.art}</div></div><div class="rtx"><span class="rt"></span><small>${esc(T.spinNote||"Picking something tasty…")}</small></div>`;
  document.body.appendChild(rl);
- mrSpinNames(rl.querySelector(".rt"),T.names||[T.title],()=>{rl.remove();bs.forEach(b=>b.disabled=false);SPINNING[id]=0;done()});
+ mrSpinNames(rl.querySelector(".rt"),T.names||[T.title],()=>{rl.remove();bs.forEach(b=>b.disabled=false);SPINNING[id]=0;done();if(window.__resultReady)__resultReady(root.querySelector("[data-out] .card h2"))},()=>{const o=root.querySelector("[data-out]");if(o)o.style.visibility="hidden";build();const h=root.querySelector("[data-out] .card h2");return h&&h.textContent.trim()}); // the last name shown is the build that opens
 }
 Object.keys(TOOLS).forEach(id=>{
  const T=TOOLS[id],root=document.getElementById("tab-"+id);if(!root)return;
