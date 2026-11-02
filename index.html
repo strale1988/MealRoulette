@@ -2997,6 +2997,42 @@ window.__tidyRow=function(row,icon){
 })();
 
 /* ---- Back goes through the tabs too: every tab change the user makes is one history step, so the phone's Back returns to the previous tab before it ever asks to exit ---- */
+/* ---- Cook headline: greets you by the time of day and the day of the week. Tap it for another line; the small button picks the meal that fits the hour. ---- */
+(function(){
+const h=document.querySelector("#tab-cook .hl"),sub=h&&h.nextElementSibling;if(!h||!sub||sub.tagName!=="P")return;
+const rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+const slotOf=d=>{const H=d.getHours();return H<5?"late":H<10?"morning":H<12?"brunch":H<15?"lunch":H<18?"afternoon":H<22?"dinner":"late"};
+const P={
+ morning:{meal:"Breakfast",nm:"Breakfast",h:["What's for breakfast?","Good morning. What smells good?","Rise and dine: what are we eating?","Coffee on? Now the food."],s:["Eggs, oats or something wild: spin and see.","Start the day on a tasty note.","Pick a mood, then spin.","Big breakfast or quick bite? You decide."]},
+ brunch:{meal:"Breakfast",nm:"Breakfast",h:["Brunch, anyone?","Too late for breakfast, too early for lunch?","What's for brunch?"],s:["The best meal of the day has no rules.","Sweet, savoury or both? Spin and see.","Pick a mood, then spin."]},
+ lunch:{meal:"Main",nm:"a big plate",h:["What's for lunch?","Lunch break: what are we eating?","Hungry yet? Let's fix that."],s:["Something quick, something comforting: your call.","Pick a mood, then spin.","Step away from the desk, the food is waiting."]},
+ afternoon:{meal:"Snack",nm:"a snack",h:["Snack o'clock?","Peckish? Let's fix that.","A little something for the afternoon?"],s:["Small bites, big smiles.","Dinner is still a while away: spin a snack.","Pick a mood, then spin."]},
+ dinner:{meal:"Main",nm:"a big plate",h:["What are we eating tonight?","Dinner time: what's the plan?","Who's cooking tonight?","What's for dinner?"],s:["Pick a mood, then spin.","Let the wheel decide so nobody has to.","Cosy, quick or fancy? Spin and see.","Tonight's dinner is one spin away."]},
+ late:{meal:"Snack",nm:"a snack",h:["Midnight snack?","Still up? Let's find something small.","Late-night cravings?"],s:["Something small, something tasty.","Quiet kitchen, perfect time for a snack.","Pick a mood, then spin."]}
+};
+const DAY={ // extra headlines for the evening and lunch, by day of the week
+ 5:["It's Friday: treat yourself tonight?","Friday night: something good?"],6:["Saturday cooking: go big?","Weekend feast time?"],0:["Sunday dinner: slow and cosy?","Sunday supper, anyone?"],1:["Monday needs a good dinner.","Make Monday taste better?"]};
+let last="",slot="",idx={};
+const pickFrom=(a,k)=>{if(a.length<2)return a[0];let i;do i=Math.floor(Math.random()*a.length);while(i===idx[k]);idx[k]=i;return a[i]};
+const render=anim=>{
+  const d=new Date(),sl=slotOf(d),p=P[sl],day=DAY[d.getDay()];slot=sl;
+  const hs=p.h.concat(sl==="dinner"&&day?day.concat(day):[]);
+  let t=pickFrom(hs,"h"+sl);if(t===last&&hs.length>1)t=pickFrom(hs,"h"+sl);last=t;
+  h.textContent=t;
+  const on=typeof S!=="undefined"&&S.meal===p.meal;
+  sub.innerHTML=esc(pickFrom(p.s,"s"+sl))+(on?"":` <button type="button" class="hchip">Try ${esc(p.nm)}</button>`);
+  const b=sub.querySelector(".hchip");if(b)b.onclick=()=>{const t=document.querySelector(`#meals [data-m="${p.meal}"]`);if(t)t.click();render()};
+  if(anim&&!rm){h.classList.remove("hlpop");void h.offsetWidth;h.classList.add("hlpop")}
+};
+h.tabIndex=0;h.setAttribute("role","button");h.title="Tap for another line";h.style.cursor="pointer";
+h.onclick=()=>render(true);h.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();render(true)}};
+document.getElementById("meals").addEventListener("click",()=>setTimeout(()=>{const p=P[slotOf(new Date())],on=S.meal===p.meal,b=sub.querySelector(".hchip");if(on&&b)b.remove();else if(!on&&!b)render()},0));
+const st=document.createElement("style");st.textContent=".hlpop{animation:hlpop .45s cubic-bezier(.2,1.3,.4,1)}@keyframes hlpop{0%{transform:scale(.94) rotate(-1deg);opacity:.4}100%{transform:none;opacity:1}}.hchip{font:inherit;font-size:13px;font-weight:800;color:var(--acct,var(--acc2));background:transparent;border:1.5px solid currentColor;border-radius:999px;padding:1px 11px;margin-left:6px;cursor:pointer;white-space:nowrap;vertical-align:middle}.hchip:hover{background:var(--soft)}#tab-cook .hl:focus-visible{outline:2px solid var(--ink);outline-offset:4px;border-radius:8px}@media (prefers-reduced-motion:reduce){.hlpop{animation:none}}";
+document.head.appendChild(st);
+render();
+setInterval(()=>{if(!document.hidden&&slotOf(new Date())!==slot)render(true)},60000); // the hour changed: new greeting
+document.addEventListener("visibilitychange",()=>{if(!document.hidden&&slotOf(new Date())!==slot)render(true)});
+})();
 (function(){const N=window.__nav;if(!N||!N.on)return;const _st=setTab;let restoring=false;
   setTab=function(t){const prev=tab,r=_st.apply(this,arguments);
     if(!restoring&&tab!==prev&&!document.querySelector(".splash:not(.out)")&&!(window.__home&&window.__home.from))N.tabPush(prev); // wheel flows manage their own Back (the result screen closes back to the wheel)
