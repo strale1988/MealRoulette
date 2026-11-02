@@ -1972,7 +1972,7 @@ function pzRun(what){
 $("pzspin").onclick=()=>pzRun("spin");$("pzremix").onclick=()=>pzRun("remix");
 $("spin").onclick=()=>run("spin");
 $("logo").onclick=()=>{ // the logo goes back to the start screen (the main roulette)
-  if(window.__home&&window.__home.open())return;
+  if(window.__home&&window.__home.open()){setTimeout(()=>{const H=window.__home;if(H&&H.up())H.spin()},60);return} // back on the start screen, and it spins straight away
   if(document.querySelector(".cookov,.splash:not(.out)")||$("spin").disabled)return;
   const lg=$("logo").firstElementChild;setTab("cook");run("spin",true); // same spinner as the Spin button
   if(!matchMedia("(prefers-reduced-motion:reduce)").matches&&lg.animate)lg.animate([{transform:"rotate(0)"},{transform:"rotate(720deg)"}],{duration:900,easing:"cubic-bezier(.15,.7,.2,1)"})};
