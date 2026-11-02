@@ -2378,8 +2378,12 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
     {const NAMES={"cook-Main":"Big plates","cook-Breakfast":"Breakfasts","cook-Snack":"Snacks","cook-Dessert":"Desserts",pizza:"Pizza night"},CR=(window.KITCHEN&&KITCHEN.CRAFTS)||[],H0=window.__home,WOFF="mr-wheeloff",wOff=()=>new Set(Array.isArray(store(WOFF))?store(WOFF):[]);
       const lab=k=>NAMES[k]||((CR.find(c=>c.id===k)||{}).name)||k;
       const wp=document.createElement("section");wp.className="panel";wp.id="kitwheel";
+      const num=()=>(H0&&H0.count?H0.count():0).toLocaleString("en");
+      const upd=()=>{const e=wp.querySelector("[data-wcount]");if(e)e.textContent=num()};
+      /* diet, household and staple changes elsewhere in My kitchen: refresh the number once their own handlers have run */
+      ["click","change","input"].forEach(t=>document.addEventListener(t,()=>setTimeout(upd,60)));
       const draw=()=>{const a=H0&&H0.kinds?H0.kinds():[],off=wOff();
-        wp.innerHTML=`<div class="lab"><svg class="i"><use href="#i-dice"/></svg>On the start wheel</div><p class="hint">Pick what the wheel may land on. Cookbook recipes cover big plates, breakfasts, snacks and desserts; the rest are Craft builds.</p><p class="hint"><b>${(H0&&H0.count?H0.count():0).toLocaleString("en")}</b> recipes can come up with your diet filters and these choices.</p><div class="tg" role="group" aria-label="On the start wheel">${a.map(k=>`<button type="button" data-wk="${esc(k.key)}" aria-pressed="${!off.has(k.key)}">${esc(lab(k.key))}</button>`).join("")}</div>`;
+        wp.innerHTML=`<div class="lab"><svg class="i"><use href="#i-dice"/></svg>On the start wheel</div><p class="hint">Pick what the wheel may land on. Cookbook recipes cover big plates, breakfasts, snacks and desserts; the rest are Craft builds.</p><p class="hint"><b data-wcount>${num()}</b> recipes can come up with your diet filters and these choices.</p><div class="tg" role="group" aria-label="On the start wheel">${a.map(k=>`<button type="button" data-wk="${esc(k.key)}" aria-pressed="${!off.has(k.key)}">${esc(lab(k.key))}</button>`).join("")}</div>`;
         wp.querySelectorAll("[data-wk]").forEach(b=>b.onclick=()=>{const o=wOff(),k=b.dataset.wk;if(o.has(k))o.delete(k);else{if(a.filter(x=>!o.has(x.key)).length<=1){b.title="Keep at least one on";return}o.add(k)}store(WOFF,[...o]);draw();const f=wp.querySelector(`[data-wk="${k}"]`);if(f)f.focus()})};
       draw();grid.appendChild(wp);}
     const sec=document.createElement("section");sec.className="panel";sec.id="kitextras";
