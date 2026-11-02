@@ -9,6 +9,8 @@
 try{var L=localStorage;if(!L.getItem("mr-keys")){var M={spins:"mr-spins",rate:"mr-rate",mr2:"mr-state",favs2:"mr-favs2",plans2:"mr-plans2",pzfavs:"mr-pzfavs",shake:"mr-shake",shelfview:"mr-shelfview",cooklog:"mr-cooklog",mr_freq:"mr-freq",mr_ages:"mr-ages",mr_pick:"mr-pick",hist3:"mr-hist3",cooknotes:"mr-cooknotes"};
 for(var o in M){var v=L.getItem(o);if(v===null)continue;try{JSON.parse(v)}catch(e){continue}if(L.getItem(M[o])===null)L.setItem(M[o],v);L.removeItem(o)}L.setItem("mr-keys","1")}}catch(e){}</script>
 <script>try{var t=localStorage.getItem("mr-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script>/* when the loading spin has run its course, carry on with the plain endless idle spin from the same angle (360deg = 0deg) */document.addEventListener("animationend",function(e){if(e.animationName==="spDown"&&e.target.style)e.target.style.animation="sp var(--rev) linear infinite"},true)</script>
+<script>/* the spinner size, worked out before the first paint with the same formula the app uses later (setD in the main script), so the start screen does not resize when the app finishes loading */try{var D=Math.round(Math.max(150,Math.min(innerWidth*.58,innerHeight*.34,230))),R=document.documentElement.style;R.setProperty("--D",D+"px");R.setProperty("--kp",(D*.86/168).toFixed(3));R.setProperty("--kw",(D*.86/141).toFixed(3))}catch(e){}</script>
 <script>/* ---- back-button stack: one place that owns the history entries.
    [ root ][ app ][ result screen ][ cooking mode ] : each Back pops exactly one layer; on the first screen Back asks twice before the app closes. ---- */
 (function(){
@@ -44,6 +46,7 @@ window.__nav={
 })();
 </script>
 <link rel="preload" href="fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon-180.png">
@@ -471,7 +474,7 @@ html{scrollbar-gutter:stable}html:has(.splash:not(.out)){overflow:hidden}
 .splash.ready .sp-go{opacity:1;pointer-events:auto;transform:none}.splash.ready .sp-go:hover{transform:translateY(-2px)}.splash.ready .sp-go:active{transform:translateY(1px)}
 .sp-go:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 .sp-wheel{position:relative;width:var(--D);aspect-ratio:1;margin-top:18px;transition:transform .25s cubic-bezier(.3,.7,.2,1);animation:spPop .4s cubic-bezier(.2,.9,.3,1.15) backwards}
-.sp-pizza{will-change:transform;display:block;width:100%;height:100%;padding:0;border:0;border-radius:50%;background:none;cursor:default;animation:spLoad 2.4s cubic-bezier(.2,.7,.2,1) both;-webkit-tap-highlight-color:transparent}
+.sp-pizza{will-change:transform;display:block;width:100%;height:100%;padding:0;border:0;border-radius:50%;background:none;cursor:default;animation:sp var(--rev) linear infinite;--rev:7s;-webkit-tap-highlight-color:transparent}
 .sp-pizza svg{display:block;width:102%;height:102%;margin:-1%}
 .sp-pizza:focus-visible{outline:4px solid var(--acc);outline-offset:6px}
 .splash.ready .sp-pizza:not(:disabled){cursor:pointer}
@@ -481,13 +484,13 @@ html{scrollbar-gutter:stable}html:has(.splash:not(.out)){overflow:hidden}
 .sp-h{margin:0;min-height:2.7em;max-width:30ch;color:var(--mute);font-size:17px;line-height:1.35;transition:opacity .22s ease,transform .22s ease;animation:spIn .4s ease .3s backwards}
 .sp-h.fade{opacity:0;transform:translateY(-6px)}.sp-h.tick{color:var(--ink);font:800 clamp(18px,4.6vw,24px)/1.2 Bricolage,"DM Sans",sans-serif;letter-spacing:-.02em}
 .splash .sp-h{height:60px;min-height:60px;overflow:hidden;flex:none}
-.sp-h .fact{display:block;margin-top:8px;font:600 13px/1.3 "DM Sans",system-ui,sans-serif;color:var(--mute);opacity:.9}
+.sp-h .cn{position:relative;display:inline-block}.sp-h .cn i{visibility:hidden;font-style:normal}.sp-h .cn b{position:absolute;right:0;top:0;font-weight:inherit}
+.sp-h .fact{font-variant-numeric:tabular-nums;display:block;margin-top:8px;font:600 13px/1.3 "DM Sans",system-ui,sans-serif;color:var(--mute);opacity:.9}
 .sp-h .w{display:inline-block;animation:spWord .55s cubic-bezier(.2,.9,.3,1) backwards;animation-delay:calc(var(--w)*60ms)}
 .dots i{display:inline-block;width:.32em;height:.32em;margin-left:.28em;border-radius:50%;background:currentColor;animation:spDot 1.1s ease-in-out infinite}.dots i:nth-child(2){animation-delay:.15s}.dots i:nth-child(3){animation-delay:.3s}
 .sp-wheel{isolation:isolate}
-@keyframes spLoad{from{transform:rotate(0)}to{transform:rotate(1417.5deg)}}
 @keyframes spIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-@keyframes spPop{from{opacity:0;transform:scale(.7) rotate(-30deg)}to{opacity:1;transform:none}}
+@keyframes spPop{from{opacity:0}to{opacity:1}}
 @keyframes spLetter{from{opacity:0;transform:translateY(.6em) rotate(8deg)}to{opacity:1;transform:none}}
 @keyframes spWord{from{opacity:0;transform:translateY(.55em)}to{opacity:1;transform:none}}
 @keyframes spDot{0%,70%,100%{transform:translateY(0);opacity:.4}35%{transform:translateY(-.35em);opacity:1}}
@@ -509,6 +512,24 @@ html{scrollbar-gutter:stable}html:has(.splash:not(.out)){overflow:hidden}
 .sp-go .i{width:20px;height:20px;flex:none}
 @keyframes spWig{92%{transform:rotate(-3deg) translateY(-3px)}96%{transform:rotate(3deg)}}
 @media (prefers-reduced-motion:reduce){.sp-go{animation:none}}
+
+/* loading spin, pure CSS so it starts on the first paint: one turn that begins at 5x the idle speed and slows to exactly the idle speed (7 s a turn) as it ends,
+   then the idle spin takes over from the same angle (360deg = 0deg) with no jump. 3.5 s is what makes the turn add up to a whole 360deg. */
+.splash .sp-pizza{animation:spDown 423.5s linear forwards} /* ONE animation: two stacked ones cannot run on the compositor, so the pizza froze while the app was loading */
+@keyframes spDown{0.0%{transform:rotate(0.0deg)}0.0148%{transform:rotate(15.731deg)}0.0295%{transform:rotate(30.798deg)}0.0443%{transform:rotate(45.224deg)}0.059%{transform:rotate(59.033deg)}0.0738%{transform:rotate(72.248deg)}0.0885%{transform:rotate(84.892deg)}0.1033%{transform:rotate(96.987deg)}0.1181%{transform:rotate(108.555deg)}0.1328%{transform:rotate(119.616deg)}0.1476%{transform:rotate(130.192deg)}0.1623%{transform:rotate(140.304deg)}0.1771%{transform:rotate(149.97deg)}0.1919%{transform:rotate(159.212deg)}0.2066%{transform:rotate(168.047deg)}0.2214%{transform:rotate(176.495deg)}0.2361%{transform:rotate(184.573deg)}0.2509%{transform:rotate(192.3deg)}0.2656%{transform:rotate(199.693deg)}0.2804%{transform:rotate(206.769deg)}0.2952%{transform:rotate(213.544deg)}0.3099%{transform:rotate(220.034deg)}0.3247%{transform:rotate(226.255deg)}0.3394%{transform:rotate(232.223deg)}0.3542%{transform:rotate(237.951deg)}0.3689%{transform:rotate(243.454deg)}0.3837%{transform:rotate(248.746deg)}0.3985%{transform:rotate(253.84deg)}0.4132%{transform:rotate(258.75deg)}0.428%{transform:rotate(263.487deg)}0.4427%{transform:rotate(268.065deg)}0.4575%{transform:rotate(272.493deg)}0.4723%{transform:rotate(276.785deg)}0.487%{transform:rotate(280.95deg)}0.5018%{transform:rotate(284.998deg)}0.5165%{transform:rotate(288.94deg)}0.5313%{transform:rotate(292.786deg)}0.546%{transform:rotate(296.543deg)}0.5608%{transform:rotate(300.221deg)}0.5756%{transform:rotate(303.828deg)}0.5903%{transform:rotate(307.372deg)}0.6051%{transform:rotate(310.859deg)}0.6198%{transform:rotate(314.297deg)}0.6346%{transform:rotate(317.692deg)}0.6494%{transform:rotate(321.049deg)}0.6641%{transform:rotate(324.375deg)}0.6789%{transform:rotate(327.674deg)}0.6936%{transform:rotate(330.951deg)}0.7084%{transform:rotate(334.211deg)}0.7231%{transform:rotate(337.456deg)}0.7379%{transform:rotate(340.691deg)}0.7527%{transform:rotate(343.917deg)}0.7674%{transform:rotate(347.138deg)}0.7822%{transform:rotate(350.356deg)}0.7969%{transform:rotate(353.571deg)}0.8117%{transform:rotate(356.786deg)}0.8264%{transform:rotate(360.0deg)}100%{transform:rotate(21960deg)}}
+@media (prefers-reduced-motion:reduce){.splash .sp-pizza{animation:none}}
+
+/* ---- smoothness: nothing on the start screen resizes, and the rest of the page eases instead of snapping ---- */
+/* the start screen's text block keeps its final size from the first frame (hint line + counter line), so the counter appearing moves nothing */
+.splash .sp-h{height:0;min-height:0;overflow:visible} /* zero height: the text hangs below the wheel and never changes the rows, so the wheel and title stay put when it appears */
+.splash .sp-wheel,.splash .sp-t{will-change:transform}
+.sp-h .fact{min-height:1.3em}
+/* zero-specificity defaults: any transition a component already sets still wins */
+:where(button,a,summary,label,select,input,textarea,.tile,.card,.panel,[role=tab]){transition:background-color .22s ease,border-color .22s ease,color .22s ease,box-shadow .22s ease,opacity .22s ease,transform .22s cubic-bezier(.3,.7,.2,1)}
+:where(.tab:not([hidden])){animation:tabFade .32s ease both}
+@keyframes tabFade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+@media (prefers-reduced-motion:reduce){:where(.tab:not([hidden])){animation:none}:where(button,a,summary,label,select,input,textarea,.tile,.card,.panel,[role=tab]){transition:none}}
 
 /* ---- every spinner turns: the pot itself (handles) and the burger/sandwich plate rim now rotate, and the orbiting ingredients turn slower than the base (their upright counter-turn uses the same time) ---- */
 .toss .potsvg{animation:sp var(--rev) linear infinite}
@@ -2287,11 +2308,15 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
   {const sp=document.getElementById("splash");
   if(sp){
     const pz=sp.querySelector(".sp-pizza"),go=document.getElementById("spgo"),hint=document.getElementById("sph"),rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
-    let ready=false,busy=false;
+    let ready=false,busy=false,load=null;
     let hintHtml="";
-    const mkHint=()=>{const t=canShake&&store("mr-shake")===1?"Tap anywhere or shake your phone to spin a new recipe":"Tap anywhere to spin a new recipe";return (rm?t:t.split(" ").map((w,i)=>`<span class="w" style="--w:${i}">${w}</span>`).join(" "))+funFact()};
-    const funFact=()=>{try{const nf=new Intl.NumberFormat("en"),tot=K.recipes.length,r=wheelCount(),c=window.GEN&&GEN.combos?(v=>v<1e3?v:Math.floor(v/10**(String(Math.floor(v)).length-2))*10**(String(Math.floor(v)).length-2))(GEN.combos()):0; // counted live, so it grows with the cookbook
-      return r?`<span class="fact">${r<tot?`${nf.format(r)} of ${nf.format(tot)} recipes on your wheel`:`${nf.format(r)} recipes`}${c?` · ${nf.format(c)}+ Whisk combinations`:""}</span>`:""}catch(e){return""}};
+    const mkHint=pre=>{const t=canShake&&store("mr-shake")===1?"Tap anywhere or shake your phone to spin a new recipe":"Tap anywhere to spin a new recipe";return (pre?`<span style="visibility:hidden" aria-hidden="true">${t}</span>`:rm?t:t.split(" ").map((w,i)=>`<span class="w" style="--w:${i}">${w}</span>`).join(" "))+funFact(pre&&!rm)};
+    const funFact=(up)=>{try{const nf=new Intl.NumberFormat("en"),tot=K.recipes.length,r=wheelCount(),c=window.GEN&&GEN.combos?(v=>v<1e3?v:Math.floor(v/10**(String(Math.floor(v)).length-2))*10**(String(Math.floor(v)).length-2))(GEN.combos()):0; // counted live, so it grows with the cookbook
+      const n=`<span class="cn"><i aria-hidden="true">${nf.format(r)}</i><b data-to="${r}">${up?0:nf.format(r)}</b></span>`; // the final number holds the width, the live one counts up inside it
+      return r?`<span class="fact">${r<tot?`${n} of ${nf.format(tot)} recipes on your wheel`:`${n} recipes`}${c?` · ${nf.format(c)}+ Whisk combinations`:""}</span>`:""}catch(e){return""}};
+    /* while the start screen loads the counter climbs to the real number, under the same hidden hint text so nothing moves when the hint appears */
+    const countUp=()=>{const e=hint.querySelector(".cn b");if(!e)return;const to=+e.dataset.to,nf=new Intl.NumberFormat("en"),t0=performance.now()+300,D=1900;
+      const f=t=>{if(!e.isConnected)return;const p=Math.min(1,Math.max(0,(t-t0)/D));e.textContent=nf.format(Math.round(to*(1-Math.pow(1-p,3))));if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)};
     const wheel=sp.querySelector(".sp-wheel"),AR=window.__art;let overlays=[];
     const OV=AR?["pot"].concat(Object.keys(window.__craftArts||{})).filter(k=>AR[k]&&!(window.__noMix||[]).includes(k)):[]; // the pizza logo itself is the 4th art
     if(AR&&OV.length){wheel.insertAdjacentHTML("beforeend",OV.map(k=>`<div class="art">${AR[k]}</div>`).join(""));overlays=[...wheel.querySelectorAll(":scope>.art")]}
@@ -2301,7 +2326,7 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
     const cycStart=ms=>{if(!overlays.length||rm)return;clearInterval(cyc);ci=-1;const step=()=>showArt(window.__rndArt?__rndArt(nA(),ci):(ci+1)%nA());step();cyc=setInterval(step,ms||1400)}; // random start, random swaps, never the same art twice in a row
     const cycStop=()=>{clearInterval(cyc);cyc=null;if(overlays.length&&!rm)showArt(window.__rndArt?__rndArt(nA(),ci):0);else{pz.style.visibility="";overlays.forEach(a=>a.classList.remove("on"))}}; // it finishes on a random spinner, every time
     (window.__spinHooks=window.__spinHooks||[]).push(()=>{if(landed||!sp.classList.contains("spinning")||!overlays.length||rm)return;const n=performance.now();if(n-spinLast>=(window.__artStep||620)){spinLast=n;showArt(window.__rndArt?__rndArt(nA(),ci):0)}});
-    cycStart(); // the loading wheel cycles through the same spinners as Cook, then settles on a random one
+    // loading: the pizza just keeps turning at the idle speed; the other spinners only appear once a spin starts
     const names=()=>{const z=((window.PZ&&PZ.recipes)||[]).map(x=>x.title||x.name).filter(Boolean);
       return RECIPES.map(r=>r.title).concat(Object.keys(GEN.cuisines).map(c=>c+" "+rnd(["chicken bowl","stir-fry","curry","traybake","stew"])),z)};
     /* the start wheel mixes the app's spinners: add a kind here (e.g. burger) and it joins the roulette */
@@ -2331,13 +2356,14 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
         if(!sp.isConnected||!ready||document.querySelector(".cookov"))return false;
         H.from=false;H.show(true);try{window.__leaveCook&&window.__leaveCook();window.__leavePizza&&window.__leavePizza();window.__leaveFerm&&window.__leaveFerm();window.__leaveCraft&&window.__leaveCraft();setTab("cook")}catch(e){console.error(e)}return true},
       spin(){
-        if(busy||!H.up())return;busy=true;sp.classList.add("spinning");const k=pick();
+        if(busy||!H.up())return;let a0=0;try{const m=new DOMMatrix(getComputedStyle(pz).transform);a0=Math.atan2(m.b,m.a)*180/Math.PI}catch(e){} // where the idle turn is right now
+        busy=true;sp.classList.add("spinning");const k=pick();
         let built=false;const build=()=>{if(built)return;built=true;H.from=true;H.roll=true;try{k.go(true)}catch(e){console.error(e)}};
         const fire=()=>{build();cycStop();if(rot){const r=rot;rot=null;setTimeout(()=>r.cancel(),500)}H.hide();busy=false;setTimeout(()=>{const t=typeof tab==="string"?tab:"";__resultReady(document.querySelector("#tab-"+t+" :is(#out,#pzout,[data-out]) .card h2"))},80)};
         if(rm||mrNoSpin()){fire();return}
         landed=false;clearInterval(cyc);cyc=null;ci=-1;if(overlays.length&&!rm){showArt(window.__rndArt?__rndArt(nA(),ci):0);spinLast=performance.now()} // from here the art swaps on the name ticks
         if(pz.animate){const rev=(parseFloat(getComputedStyle(sp).getPropertyValue("--rev"))||2.4)*1000; // constant speed, the same turn time as every other spinner
-          rot=pz.animate([{transform:"rotate(1417.5deg)"},{transform:"rotate(1777.5deg)"}],{duration:rev,iterations:Infinity,easing:"linear"})}
+          rot=pz.animate([{transform:`rotate(${a0}deg)`},{transform:`rotate(${a0+360}deg)`}],{duration:rev,iterations:Infinity,easing:"linear"})}
         hint.classList.add("tick");hint.style.animation="none";
         const peek=()=>{landed=true;clearInterval(cyc);cyc=null; // the wheel keeps swapping at random to the end, then lands on the art that matches the pick (slices = Pizza night)
           if(overlays.length&&!rm){let i;if(k.art==="wedge")i=0;else{do i=Math.floor(Math.random()*nA());while(i===0&&nA()>1)}showArt(i)} // pizza pick lands on the pizza; Cook lands on any other spinner
@@ -2347,7 +2373,7 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
       }};
     Object.defineProperty(H,"from",{configurable:true,enumerable:true,get:()=>_from,set:v=>{_from=!!v;document.documentElement.classList.toggle("homeres",_from)}}); // desktop: a recipe from the wheel shows alone, as a centred card
     const makeReady=()=>{
-      if(ready||!sp.isConnected)return;ready=true;cycStop();
+      if(ready||!sp.isConnected)return;ready=true;
       const txt="Tap anywhere for a random recipe";
       hintHtml=mkHint();hint.innerHTML=hintHtml;
       sp.removeAttribute("role");sp.setAttribute("aria-label","Meal Roulette. "+txt);
@@ -2376,8 +2402,8 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
     {const L=["Rummage through the kitchen","Raid the pantry","Peek in the fridge","Pull up a stool","Come hungry, stay curious","Stir things up yourself","Sneak into the kitchen","Snoop around the cookbook","Taste the full menu","Open the recipe vault"],gl=document.getElementById("spgl");
       if(gl){let n=Math.floor(Math.random()*L.length);gl.textContent=L[n];gl.style.transition="opacity .25s ease";
         setInterval(()=>{if(!H.up()||sp.classList.contains("spinning")||document.hidden)return;gl.style.opacity="0";setTimeout(()=>{n=(n+1+Math.floor(Math.random()*(L.length-1)))%L.length;gl.textContent=L[n];gl.style.opacity="1"},260)},3800)}}
-    const a=!rm&&pz.getAnimations?pz.getAnimations()[0]:null;
-    (a?a.finished.catch(()=>{}):Promise.resolve()).then(()=>setTimeout(makeReady,rm?200:120));
+    hint.innerHTML=mkHint(true);countUp();
+    setTimeout(makeReady,rm?200:2500);
     setTimeout(makeReady,3800); // safety net
   }}
   const grid=document.querySelector("#kz-setup .kgrid");
@@ -3057,10 +3083,15 @@ function fail(){var sp=document.getElementById("splash");if(sp)sp.remove();boot.
   var go=function(){location.reload()};
   if(window.caches&&caches.keys)caches.keys().then(function(k){return Promise.all(k.map(function(x){return caches.delete(x)}))}).then(go,go);else go()}}
 function load(src,retry){return new Promise(function(ok,no){var s=document.createElement("script");s.async=false;s.src=src+(retry?"?r="+Date.now():"");s.onload=ok;s.onerror=function(){s.remove();retry?no(src):load(src,1).then(ok,no)};document.head.appendChild(s)})}
+/* the start screen is painted (and its pizza is already turning) before any app script runs: running the cookbook blocks the main thread, which used to hold the first paint back until the work was done */
+var started=false;
+function start(){if(started)return;started=true;
 Promise.all(FILES.map(function(f){return load(f)})).then(function(){
   if(!window.KITCHEN||!window.GEN)throw new Error("catalog missing");
   var s=document.createElement("script");s.textContent=document.getElementById("main").textContent;document.body.appendChild(s);
-}).catch(function(e){console.error(e);fail()});
+}).catch(function(e){console.error(e);fail()})}
+requestAnimationFrame(function(){requestAnimationFrame(function(){setTimeout(start,0)})});
+setTimeout(start,400); // safety net: a hidden tab does not run animation frames
 })();
 
 </script>
