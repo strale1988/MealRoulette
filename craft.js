@@ -310,8 +310,8 @@ const SPINNING={},RK="mr-craftrecent",recentBuilds=()=>{try{return JSON.parse(lo
 function spinTool(id,instant){
  const T=TOOLS[id],root=document.getElementById("tab-"+id);if(!T||!T.spin||!root||SPINNING[id])return;
  let built=false;
- const build=()=>{if(built)return;built=true;const wheel=resOn===id,s=cfg(id),rec=recentBuilds();let r,k=0; // a fresh build every time: not one of the last 40 shown, and no stocks or broths from the start wheel
-  do{T.spin(s);try{r=T.calc(s)}catch(e){r=null;break}k++}while(k<16&&r&&(rec.includes(r.title)||(wheel&&/\b(stocks?|broths?|bouillon)\b/i.test(r.title))));
+ const build=()=>{if(built)return;built=true;const wheel=resOn===id,s=cfg(id),rec=recentBuilds();let r,k=0; // a fresh build every time: not one of the last 40 shown, and from the start wheel nothing that is only part of a meal (stocks, broths, doughs, pickles, brines)
+  do{T.spin(s);try{r=T.calc(s)}catch(e){r=null;break}k++}while(k<16&&r&&(rec.includes(r.title)||(wheel&&/\b(stocks?|broths?|bouillon|pickles?|pickled|brine|dough|marinade)\b/i.test(r.title))));
   if(r&&r.title)noteBuild(r.title);save();draw(id)};
  const done=()=>{build();const o=root.querySelector("[data-out]");if(o)o.style.visibility="";const c=root.querySelector(".card");if(c)c.scrollIntoView({behavior:"smooth",block:"start"})};
  if(instant||matchMedia("(prefers-reduced-motion:reduce)").matches||(window.mrNoSpin&&mrNoSpin())||!window.mrSpinNames||!T.art)return done();

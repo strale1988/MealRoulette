@@ -1609,8 +1609,12 @@ function pickRecipe(L,msg){
 function genFridge(){const it=items(),m=S.meal,main=isMain(m);if(S.bake&&main)return null;return main?fridgeTry(it):bestOf(()=>GEN.makeSmall(m,it,S.n,dietP()),80)}
 /* Plain random: no fridge items, no filters (and always for the start wheel) means any real recipe of the meal type from the whole cookbook; diet is still respected, staples and fridge are ignored */
 const hasExtras=()=>!!(S.pantry.length||(S.useLeftovers&&S.leftovers.length)||S.urgent.length||S.quick||S.cuisine||S.bake);
+/* things that are part of a meal, not a meal: the start wheel never lands on them (sauces, spice mixes, jams, ferments, dairy basics, doughs, pickles, stocks, plain loaves/buns/flatbreads, croutons) */
+const PART_CRAFT=new Set(["sauce","ferm","dairy","jam","spice","cure","rub","starter","cheese"]),PART_ID=new Set(["bake-white-loaf","easy-white-loaf","soft-flatbreads","soft-burger-buns-homemade","left-stale-bread-croutons","apple-cinnamon-compote"]),PART_RX=/^(?!.*\b(with|and|in)\b)(?:[a-z ]*\b(?:stock|bouillon|brine|dough)|(?:quick |easy |simple |homemade )?(?:pickles?|pickled [a-z ]+))$|^(?:quick |easy )pickled\b/i;
+const isPart=r=>r.meals.includes("Extra")||PART_CRAFT.has(r.craft)||PART_ID.has(r.id)||PART_RX.test(r.title.replace(/\s*\(.*\)\s*$/,""));
+window.__isPart=isPart;
 function plainPick(uniform){
-  const m=S.meal,pool=RECIPES.filter(r=>r.meals.includes(m)&&K.allowed(r,S.diet)&&!r.ids.some(isLeft));if(!pool.length)return false;
+  const m=S.meal,pool=RECIPES.filter(r=>r.meals.includes(m)&&K.allowed(r,S.diet)&&!r.ids.some(isLeft)&&!(uniform&&isPart(r)));if(!pool.length)return false;
   const sn=seenOf();let c=pool.filter(r=>!sn.includes(r.id));
   if(!c.length){const last=sn[sn.length-1];clearSeen();c=pool.filter(r=>r.id!==last);if(!c.length)c=pool}
   const r=uniform?c[Math.floor(Math.random()*c.length)]:pickWeighted(c.map(x=>({r:x}))).r,x=K.resolve(r,S.n,{fridge:fridgeIds(),basic:S.basic,urgent:new Set([...S.urgent.flatMap(w=>K.match(w)),...[...fridgeIds()].filter(isLeft)])}); // same resolve as every other pick, so staples and leftovers still show what is already at home and what is "to buy"
@@ -2294,12 +2298,17 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
     const names=()=>{const z=((window.PZ&&PZ.recipes)||[]).map(x=>x.title||x.name).filter(Boolean);
       return RECIPES.map(r=>r.title).concat(Object.keys(GEN.cuisines).map(c=>c+" "+rnd(["chicken bowl","stir-fry","curry","traybake","stew"])),z)};
     /* the start wheel mixes the app's spinners: add a kind here (e.g. burger) and it joins the roulette */
-    const KINDS=[...["Main","Breakfast","Snack","Dessert"].map(m=>({key:"cook-"+m,w:1,go:i=>{window.__plainRoll(m);setTab("cook");run("spin",true,i)}})),{key:"pizza",w:1,art:"wedge",go:i=>{setTab("pizza");pzRun("spin",i)}}];
+    const KINDS=[...["Main","Breakfast","Snack","Dessert"].map(m=>({key:"cook-"+m,cook:m==="Main"?2:1,go:i=>{window.__plainRoll(m);setTab("cook");run("spin",true,i)}})),{key:"pizza",w:1,art:"wedge",go:i=>{setTab("pizza");pzRun("spin",i)}}];
     /* the Craft meals and treats are on the wheel too (burgers, pasta, noodles, soups...): each opens its own tool and spins a random build */
     const CRAFTK=["burger","pasta","noodle","soup","salad","sandwich","dumpling","eggs","grain","bake","frozen"];
     const kinds=()=>KINDS.concat(window.__spinCraft?CRAFTK.filter(id=>window.__craftHas(id)).map(id=>({key:id,w:1,go:i=>{setTab(id);window.__spinCraft(id,i)}})):[]);
     let lastKind=null; // equal chance for every kind, but never the same kind twice in a row
-    const pick=()=>{let KS=kinds().filter(k=>k.key!==lastKind);const r0=KS.reduce((t,k)=>t+k.w,0);let r=Math.random()*r0;const k=KS.find(k=>(r-=k.w)<0)||KS[0];lastKind=k.key;return k};
+    /* the cookbook (all its recipes, split Main 2 : Breakfast 1 : Snack 1 : Dessert 1) gets COOKSHARE of the wheel, the Craft builds and Pizza night share the rest: before, every Craft tool had a slot as big as the whole cookbook's, so builds came up three times in four */
+    const COOKSHARE=.5;
+    const pick=()=>{let KS=kinds().filter(k=>k.key!==lastKind);
+      const ck=KS.filter(k=>k.cook),ot=KS.filter(k=>!k.cook),cs=ck.reduce((t,k)=>t+k.cook,0),os=ot.reduce((t,k)=>t+k.w,0),sh=!ck.length?0:!ot.length?1:COOKSHARE;
+      const wt=k=>k.cook?sh*k.cook/cs:(1-sh)*k.w/os;
+      const r0=KS.reduce((t,k)=>t+wt(k),0);let r=Math.random()*r0;const k=KS.find(k=>(r-=wt(k))<0)||KS[0];lastKind=k.key;return k};
     let _from=false;
     const H=window.__home={
       up:()=>sp.isConnected&&ready&&!sp.classList.contains("out"),
