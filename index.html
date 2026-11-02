@@ -73,6 +73,10 @@ main{max-width:2400px;margin:0 auto;padding:18px 16px 60px}
 .tabs{display:flex;gap:4px;width:100%;order:3;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:3px}
 .tabs button{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;border:0;background:none;color:var(--mute);border-radius:11px;padding:9px 6px;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
 .tabs button:hover{color:var(--ink)}
+/* the pizza logo button (it brings back the start wheel) now sits in the tab bar, right before Cook, with a label so it reads as a button */
+.tabs .logo{flex:none;display:flex;border:var(--bw,2px) solid var(--ink);background:var(--card);box-shadow:var(--sh,2px 2px 0 var(--ink));align-items:center;gap:6px;width:auto;height:auto;padding:3px 12px 3px 4px!important;border-radius:999px;font:800 14px/1 "DM Sans",system-ui,sans-serif;color:var(--ink);white-space:nowrap}.tabs .logo svg{width:30px;height:30px;flex:none}.tabs .logo:hover{background:var(--soft)}.tabs .logo:active{transform:none}
+/* phones and narrow windows: the menu bar is icons only and fills the width; the header text is not needed then */
+@media (max-width:759px){.brand{display:none}.tabs .tl{display:none}.tabs button{padding:10px 4px!important;gap:0}.tabs button .i{width:26px;height:26px}.tabs .logo{flex:1;justify-content:center;padding:3px!important}.tabs .logo svg{width:32px;height:32px}}
 .tabs button[aria-selected=true]{background:var(--acc);color:#fff}
 
 /* ---- layout ---- */
@@ -1028,11 +1032,12 @@ ul.ing li .q{white-space:normal;text-align:right;flex:0 1 auto;max-width:52%;min
 </div>
 
 <header class="bar"><div class="bar-in">
- <div class="brand"><button type="button" class="logo" id="logo" aria-label="Spin a random recipe" title="Spin a random recipe"><svg viewBox="0 0 128 128" aria-hidden="true"><use href="#logo-pizza"/></svg></button><div><b>Meal Roulette</b><small>Spin a recipe, cook from your fridge, plan your week</small></div></div>
+ <div class="brand"><div><b>Meal Roulette</b><small>Spin a recipe, cook from your fridge, plan your week</small></div></div>
  <nav class="tabs" id="tabs" role="tablist" aria-label="Sections">
-  <button role="tab" data-t="cook" aria-selected="true"><svg class="i"><use href="#i-chef"/></svg>Cook</button>
-  <button role="tab" data-t="craft" aria-selected="false"><svg class="i"><use href="#i-craft"/></svg>Craft</button>
-  <button role="tab" data-t="kit" aria-selected="false"><svg class="i"><use href="#i-jar"/></svg>My kitchen</button>
+  <button type="button" class="logo" id="logo" aria-label="Back to the start wheel" title="Back to the start wheel (1)"><svg viewBox="0 0 128 128" aria-hidden="true"><use href="#logo-pizza"/></svg><span class="tl">Wheel</span></button>
+  <button role="tab" data-t="cook" aria-label="Cook" title="Cook" aria-selected="true"><svg class="i"><use href="#i-chef"/></svg><span class="tl">Cook</span></button>
+  <button role="tab" data-t="craft" aria-label="Craft" title="Craft" aria-selected="false"><svg class="i"><use href="#i-craft"/></svg><span class="tl">Craft</span></button>
+  <button role="tab" data-t="kit" aria-label="My kitchen" title="My kitchen" aria-selected="false"><svg class="i"><use href="#i-jar"/></svg><span class="tl">My kitchen</span></button>
  </nav>
 </div></header>
 
@@ -1074,7 +1079,7 @@ ul.ing li .q{white-space:normal;text-align:right;flex:0 1 auto;max-width:52%;min
    </div>
   </section>
   <div class="btns act"><button id="spin">Spin</button><button id="remix">Whisk</button></div>
-  <p class="hint2" id="ah"></p><p class="kbd">Press <kbd>S</kbd> to spin, <kbd>W</kbd> to whisk, <kbd>1</kbd>–<kbd>4</kbd> to switch pages</p>
+  <p class="hint2" id="ah"></p><p class="kbd">Press <kbd>S</kbd> to spin, <kbd>W</kbd> to whisk, <kbd>1</kbd>–<kbd>4</kbd> to switch pages (1 is the wheel)</p>
   <p class="recipe-caution"><strong>Note:</strong> whisked and generated meals may need tweaking. Check quantities and cook food safely.</p>
  </aside>
  <section class="res">
@@ -1395,10 +1400,10 @@ function stubSync(t,all){const el=$("tab-"+t.id);if(!el)return;
 function hubSync(){TOOLS.forEach(t=>{const e=document.querySelector(`#tab-craft .cc[data-tool="${t.id}"] .cn`);if(!e)return;const n=t.ready&&!t.rec?0:craftRecipes(t).length;e.hidden=!n;e.textContent=n?`${n} ${n===1?"recipe":"recipes"}`:""})}
 function setTab(t){if(!PANELS.includes(t))t="cook";tab=t;
   PANELS.forEach(k=>{const el=$("tab-"+k);if(el)el.hidden=k!==t});
-  document.querySelectorAll("#tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.t===navOf(t)));
+  document.querySelectorAll("#tabs button[data-t]").forEach(b=>b.setAttribute("aria-selected",b.dataset.t===navOf(t)));
   const T=TOOLS.find(x=>x.id===t);$("crumb").hidden=!T;$("crumbn").textContent=T?T.name:"";if(window.XLINK&&XLINK.sync)XLINK.sync(t);if(T&&(!T.ready||T.rec))stubSync(T);if(t==="craft")hubSync();
   if(t==="pizza"&&typeof pzUI==="function")pzSection(S.pz.sec||"dough");scrollTo({top:0})}
-document.querySelectorAll("#tabs button").forEach(b=>b.onclick=()=>setTab(b.dataset.t));
+document.querySelectorAll("#tabs button[data-t]").forEach(b=>b.onclick=()=>setTab(b.dataset.t));
 /* ---------- Cook search: one box for every recipe, plus a shortcut into a matching Craft tool ---------- */
 let gSearch,gPaint;
 (function(){
@@ -1978,9 +1983,8 @@ $("remix").onclick=()=>run("remix");
   const pz=lg.firstElementChild,
   T=[ // [target, keyframes, options]: spins and wiggles turn only the pizza, so the shadow stays in place
     [pz,[{transform:"rotate(0)"},{transform:"rotate(-18deg)"},{transform:"rotate(16deg)"},{transform:"rotate(-10deg)"},{transform:"rotate(6deg)"},{transform:"rotate(0)"}],{duration:700}],
-    [lg,[{transform:"translateY(0)"},{transform:"translateY(-9px) scale(1.06)"},{transform:"translateY(0)"},{transform:"translateY(-4px)"},{transform:"translateY(0)"}],{duration:650,easing:"ease-out"}],
     [pz,[{transform:"rotate(0)"},{transform:"rotate(360deg)"}],{duration:900,easing:"cubic-bezier(.3,1.3,.5,1)"}],
-    [lg,[{transform:"scale(1)"},{transform:"scale(1.2)"},{transform:"scale(.94)"},{transform:"scale(1)"}],{duration:600}]
+    [pz,[{transform:"scale(1)"},{transform:"scale(1.2)"},{transform:"scale(.94)"},{transform:"scale(1)"}],{duration:600}]
   ];
   let last=-1;
   const go=()=>{
@@ -2244,9 +2248,12 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
   document.addEventListener("keydown",e=>{
     if(e.metaKey||e.ctrlKey||e.altKey||e.defaultPrevented)return;
     const el=e.target;if(el&&el.closest&&el.closest("input,textarea,select,button,a,[contenteditable],[role=listbox]"))return;
-    if(document.querySelector(".cookov")||(window.__home&&window.__home.up())||document.documentElement.classList.contains("homeres"))return;
-    const k=e.key.toLowerCase(),tabs=["cook","craft","kit"];
-    if(k>="1"&&k<="3"){setTab(tabs[+k-1]);return}
+    const k=e.key.toLowerCase(),tabs=["cook","craft","kit"],H=window.__home;
+    if(document.querySelector(".cookov"))return;
+    if(H&&H.up()){if(k>="2"&&k<="4"){e.preventDefault();H.from=false;H.hide();setTab(tabs[+k-2])}return} // on the wheel itself: 2-4 open the app on that page
+    if(k==="1"){if(H&&H.open&&H.open())e.preventDefault();return} // 1 = the start wheel, from any page (also from a recipe the wheel gave you)
+    if(document.documentElement.classList.contains("homeres"))return;
+    if(k>="2"&&k<="4"){setTab(tabs[+k-2]);return}
     if(tab==="cook"){if(k==="s"){const b=$("spin");if(b&&!b.disabled)b.click()}else if(k==="w"){const b=$("remix");if(b&&!b.disabled)b.click()}}
   });
 })();
