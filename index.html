@@ -2301,7 +2301,10 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
     const KINDS=[...["Main","Breakfast","Snack","Dessert"].map(m=>({key:"cook-"+m,cook:m==="Main"?2:1,go:i=>{window.__plainRoll(m);setTab("cook");run("spin",true,i)}})),{key:"pizza",w:1,art:"wedge",go:i=>{setTab("pizza");pzRun("spin",i)}}];
     /* the Craft meals and treats are on the wheel too (burgers, pasta, noodles, soups...): each opens its own tool and spins a random build */
     const CRAFTK=["burger","pasta","noodle","soup","salad","sandwich","dumpling","eggs","grain","bake","frozen"];
-    const kinds=()=>KINDS.concat(window.__spinCraft?CRAFTK.filter(id=>window.__craftHas(id)).map(id=>({key:id,w:1,go:i=>{setTab(id);window.__spinCraft(id,i)}})):[]);
+    const allKinds=()=>KINDS.concat(window.__spinCraft?CRAFTK.filter(id=>window.__craftHas(id)).map(id=>({key:id,w:1,go:i=>{setTab(id);window.__spinCraft(id,i)}})):[]);
+    /* My kitchen > "On the start wheel": the kinds switched off there (stored as a list of keys) never come up; if everything were off, everything counts */
+    const WOFF="mr-wheeloff",wOff=()=>new Set(Array.isArray(store(WOFF))?store(WOFF):[]);
+    const kinds=()=>{const a=allKinds(),off=wOff(),on=a.filter(k=>!off.has(k.key));return on.length?on:a};
     let lastKind=null; // equal chance for every kind, but never the same kind twice in a row
     /* the cookbook (all its recipes, split Main 2 : Breakfast 1 : Snack 1 : Dessert 1) gets COOKSHARE of the wheel, the Craft builds and Pizza night share the rest: before, every Craft tool had a slot as big as the whole cookbook's, so builds came up three times in four */
     const COOKSHARE=.5;
@@ -2311,7 +2314,7 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
       const r0=KS.reduce((t,k)=>t+wt(k),0);let r=Math.random()*r0;const k=KS.find(k=>(r-=wt(k))<0)||KS[0];lastKind=k.key;return k};
     let _from=false;
     const H=window.__home={
-      up:()=>sp.isConnected&&ready&&!sp.classList.contains("out"),
+      up:()=>sp.isConnected&&ready&&!sp.classList.contains("out"),kinds:allKinds,
       hide(){sp.classList.add("out");sp.inert=true;go.tabIndex=-1},
       show(now){busy=false;H.roll=false;sp.classList.remove("spinning");cycStop();sp.inert=false;if(now)sp.classList.add("nofade");sp.classList.remove("out","ready");hint.classList.remove("tick");hint.style.animation="";hintHtml=mkHint();hint.innerHTML=hintHtml;void sp.offsetWidth;sp.classList.add("ready");go.tabIndex=0;scrollTo({top:0});if(now)requestAnimationFrame(()=>requestAnimationFrame(()=>sp.classList.remove("nofade")))},
       open(){ // the logo in the top left brings you back to this screen
@@ -2369,6 +2372,13 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
   }}
   const grid=document.querySelector("#kz-setup .kgrid");
   if(grid){
+    {const NAMES={"cook-Main":"Big plates","cook-Breakfast":"Breakfasts","cook-Snack":"Snacks","cook-Dessert":"Desserts",pizza:"Pizza night"},CR=(window.KITCHEN&&KITCHEN.CRAFTS)||[],H0=window.__home,WOFF="mr-wheeloff",wOff=()=>new Set(Array.isArray(store(WOFF))?store(WOFF):[]);
+      const lab=k=>NAMES[k]||((CR.find(c=>c.id===k)||{}).name)||k;
+      const wp=document.createElement("section");wp.className="panel";wp.id="kitwheel";
+      const draw=()=>{const a=H0&&H0.kinds?H0.kinds():[],off=wOff();
+        wp.innerHTML=`<div class="lab"><svg class="i"><use href="#i-dice"/></svg>On the start wheel</div><p class="hint">Pick what the wheel may land on. Cookbook recipes cover big plates, breakfasts, snacks and desserts; the rest are Craft builds.</p><div class="tg" role="group" aria-label="On the start wheel">${a.map(k=>`<button type="button" data-wk="${esc(k.key)}" aria-pressed="${!off.has(k.key)}">${esc(lab(k.key))}</button>`).join("")}</div>`;
+        wp.querySelectorAll("[data-wk]").forEach(b=>b.onclick=()=>{const o=wOff(),k=b.dataset.wk;if(o.has(k))o.delete(k);else{if(a.filter(x=>!o.has(x.key)).length<=1){b.title="Keep at least one on";return}o.add(k)}store(WOFF,[...o]);draw();const f=wp.querySelector(`[data-wk="${k}"]`);if(f)f.focus()})};
+      draw();grid.appendChild(wp);}
     const sec=document.createElement("section");sec.className="panel";sec.id="kitextras";
     sec.innerHTML=`<div class="lab"><svg class="i"><use href="#i-wand"/></svg>Extras</div><div class="xtra-row"><p><b>Spin animation</b>Turn off to get your result straight away.</p><div class="tg"><button type="button" id="spintg" aria-pressed="${!mrNoSpin()}">${mrNoSpin()?"Off":"On"}</button></div></div>${canShake?`<div class="xtra-row"><p><b>Shake to spin</b>Shake your phone to spin on every page that has a Spin button.</p><div class="tg"><button type="button" id="shaketg" aria-pressed="${store("mr-shake")===1}">${store("mr-shake")===1?"On":"Off"}</button></div></div>`:""}`;
     grid.appendChild(sec);
