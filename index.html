@@ -2283,8 +2283,8 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
     let ready=false,busy=false;
     let hintHtml="";
     const mkHint=()=>{const t=canShake&&store("mr-shake")===1?"Tap anywhere or shake your phone to spin a new recipe":"Tap anywhere to spin a new recipe";return (rm?t:t.split(" ").map((w,i)=>`<span class="w" style="--w:${i}">${w}</span>`).join(" "))+funFact()};
-    const funFact=()=>{try{const nf=new Intl.NumberFormat("en"),r=K.recipes.length,c=window.GEN&&GEN.combos?(v=>v<1e3?v:Math.floor(v/10**(String(Math.floor(v)).length-2))*10**(String(Math.floor(v)).length-2))(GEN.combos()):0; // counted live, so it grows with the cookbook
-      return r?`<span class="fact">${nf.format(r)} recipes${c?` · ${nf.format(c)}+ Whisk combinations`:""}</span>`:""}catch(e){return""}};
+    const funFact=()=>{try{const nf=new Intl.NumberFormat("en"),tot=K.recipes.length,r=wheelCount(),c=window.GEN&&GEN.combos?(v=>v<1e3?v:Math.floor(v/10**(String(Math.floor(v)).length-2))*10**(String(Math.floor(v)).length-2))(GEN.combos()):0; // counted live, so it grows with the cookbook
+      return r?`<span class="fact">${r<tot?`${nf.format(r)} of ${nf.format(tot)} recipes on your wheel`:`${nf.format(r)} recipes`}${c?` · ${nf.format(c)}+ Whisk combinations`:""}</span>`:""}catch(e){return""}};
     const wheel=sp.querySelector(".sp-wheel"),AR=window.__art;let overlays=[];
     const OV=AR?["pot"].concat(Object.keys(window.__craftArts||{})).filter(k=>AR[k]&&!(window.__noMix||[]).includes(k)):[]; // the pizza logo itself is the 4th art
     if(AR&&OV.length){wheel.insertAdjacentHTML("beforeend",OV.map(k=>`<div class="art">${AR[k]}</div>`).join(""));overlays=[...wheel.querySelectorAll(":scope>.art")]}
@@ -2305,6 +2305,9 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
     /* My kitchen > "On the start wheel": the kinds switched off there (stored as a list of keys) never come up; if everything were off, everything counts */
     const WOFF="mr-wheeloff",wOff=()=>new Set(Array.isArray(store(WOFF))?store(WOFF):[]);
     const kinds=()=>{const a=allKinds(),off=wOff(),on=a.filter(k=>!off.has(k.key));return on.length?on:a};
+    /* how many cookbook recipes the wheel can land on right now: the meal kinds and Craft tools switched on, minus anything the diet filters rule out and anything that is only part of a meal */
+    const wheelCount=()=>{const ks=kinds(),meals=new Set(ks.filter(k=>k.cook).map(k=>k.key.slice(5))),cr=new Set(ks.filter(k=>!k.cook).map(k=>k.key));
+      return RECIPES.filter(r=>K.allowed(r,S.diet)&&!isPart(r)&&!r.ids.some(isLeft)&&(r.meals.some(m=>meals.has(m))||(r.craft&&cr.has(r.craft)))).length};
     let lastKind=null; // equal chance for every kind, but never the same kind twice in a row
     /* the cookbook (all its recipes, split Main 2 : Breakfast 1 : Snack 1 : Dessert 1) gets COOKSHARE of the wheel, the Craft builds and Pizza night share the rest: before, every Craft tool had a slot as big as the whole cookbook's, so builds came up three times in four */
     const COOKSHARE=.5;
@@ -2314,7 +2317,7 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
       const r0=KS.reduce((t,k)=>t+wt(k),0);let r=Math.random()*r0;const k=KS.find(k=>(r-=wt(k))<0)||KS[0];lastKind=k.key;return k};
     let _from=false;
     const H=window.__home={
-      up:()=>sp.isConnected&&ready&&!sp.classList.contains("out"),kinds:allKinds,
+      up:()=>sp.isConnected&&ready&&!sp.classList.contains("out"),kinds:allKinds,count:()=>{try{return wheelCount()}catch(e){return 0}},
       hide(){sp.classList.add("out");sp.inert=true;go.tabIndex=-1},
       show(now){busy=false;H.roll=false;sp.classList.remove("spinning");cycStop();sp.inert=false;if(now)sp.classList.add("nofade");sp.classList.remove("out","ready");hint.classList.remove("tick");hint.style.animation="";hintHtml=mkHint();hint.innerHTML=hintHtml;void sp.offsetWidth;sp.classList.add("ready");go.tabIndex=0;scrollTo({top:0});if(now)requestAnimationFrame(()=>requestAnimationFrame(()=>sp.classList.remove("nofade")))},
       open(){ // the logo in the top left brings you back to this screen
@@ -2376,7 +2379,7 @@ const _r2=run;run=function(){try{fill()}catch(e){}return _r2.apply(this,argument
       const lab=k=>NAMES[k]||((CR.find(c=>c.id===k)||{}).name)||k;
       const wp=document.createElement("section");wp.className="panel";wp.id="kitwheel";
       const draw=()=>{const a=H0&&H0.kinds?H0.kinds():[],off=wOff();
-        wp.innerHTML=`<div class="lab"><svg class="i"><use href="#i-dice"/></svg>On the start wheel</div><p class="hint">Pick what the wheel may land on. Cookbook recipes cover big plates, breakfasts, snacks and desserts; the rest are Craft builds.</p><div class="tg" role="group" aria-label="On the start wheel">${a.map(k=>`<button type="button" data-wk="${esc(k.key)}" aria-pressed="${!off.has(k.key)}">${esc(lab(k.key))}</button>`).join("")}</div>`;
+        wp.innerHTML=`<div class="lab"><svg class="i"><use href="#i-dice"/></svg>On the start wheel</div><p class="hint">Pick what the wheel may land on. Cookbook recipes cover big plates, breakfasts, snacks and desserts; the rest are Craft builds.</p><p class="hint"><b>${(H0&&H0.count?H0.count():0).toLocaleString("en")}</b> recipes can come up with your diet filters and these choices.</p><div class="tg" role="group" aria-label="On the start wheel">${a.map(k=>`<button type="button" data-wk="${esc(k.key)}" aria-pressed="${!off.has(k.key)}">${esc(lab(k.key))}</button>`).join("")}</div>`;
         wp.querySelectorAll("[data-wk]").forEach(b=>b.onclick=()=>{const o=wOff(),k=b.dataset.wk;if(o.has(k))o.delete(k);else{if(a.filter(x=>!o.has(x.key)).length<=1){b.title="Keep at least one on";return}o.add(k)}store(WOFF,[...o]);draw();const f=wp.querySelector(`[data-wk="${k}"]`);if(f)f.focus()})};
       draw();grid.appendChild(wp);}
     const sec=document.createElement("section");sec.className="panel";sec.id="kitextras";
