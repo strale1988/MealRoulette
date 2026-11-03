@@ -11,6 +11,7 @@ const I=n=>`<svg class="i"><use href="#i-${n}"/></svg>`;
 const {rg,G,ML,P1,eggs,hm,people}=window.CRAFTLIB;
 const KEY="mr-craft";let ST={};try{ST=JSON.parse(localStorage.getItem(KEY)||"{}")||{}}catch(e){}
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(ST))}catch(e){}};
+const SEEDED={}; // tools already opened in this visit (see seedDefault)
 /* copy to the clipboard; falls back to a hidden textarea + execCommand where the Clipboard API is missing or refused (older browsers, non-secure pages). Resolves true/false. */
 const copyText=async t=>{
  try{if(navigator.clipboard&&navigator.clipboard.writeText){await navigator.clipboard.writeText(t);return true}}catch(e){}
@@ -68,9 +69,55 @@ const ICO={
 "🍌":`<path d="M-12 -6Q-10 8 4 11Q12 12 14 6Q6 8 0 2Q-4 -4 -4 -12L-9 -12Q-12 -9 -12 -6Z" fill="#ffd54f" ${IS}/>`,
 "🍎":`<path d="M0 -6Q-6 -9 -11 -4Q-14 4 -8 11Q-4 14 0 12Q4 14 8 11Q14 4 11 -4Q6 -9 0 -6Z" fill="#e53b2c" ${IS}/><path d="M0 -6Q0 -11 3 -13" fill="none" stroke="#5d4037" stroke-width="1.8" stroke-linecap="round"/><path d="M2 -9Q6 -13 10 -10Q6 -6 2 -9Z" fill="#43a047" ${IS1}/>`,
 "🫘":`<path d="M-12 -2Q-12 -10 -4 -9Q4 -8 2 0Q0 8 -7 8Q-12 7 -12 -2Z" fill="#a1432a" ${IS}/><path d="M2 3Q2 -4 8 -4Q14 -3 13 4Q12 12 6 12Q2 11 2 3Z" fill="#c25a35" ${IS}/>`,
-"🍆":`<path d="M5 -9Q13 -2 9 6Q4 14 -5 12Q-12 10 -9 3Q-5 -3 1 -8Z" fill="#6a3a8c" ${IS}/><path d="M1 -8L5 -9L7 -13Q2 -14 -1 -11Z" fill="#43a047" ${IS1}/>`
+"🍆":`<path d="M5 -9Q13 -2 9 6Q4 14 -5 12Q-12 10 -9 3Q-5 -3 1 -8Z" fill="#6a3a8c" ${IS}/><path d="M1 -8L5 -9L7 -13Q2 -14 -1 -11Z" fill="#43a047" ${IS1}/>`,
+"⚫":`<g ${IS1} fill="#2b2b2f"><circle cx="-6" cy="4" r="6"/><circle cx="6" cy="5" r="6"/><circle cx="0" cy="-6" r="6"/></g><g fill="#fff" fill-opacity=".5"><circle cx="-8" cy="2" r="1.5"/><circle cx="4" cy="3" r="1.5"/><circle cx="-2" cy="-8" r="1.5"/></g>`,
+"🟤":`<g ${IS1} fill="#b5763e"><circle cx="-6" cy="4" r="6"/><circle cx="6" cy="5" r="6"/><circle cx="0" cy="-6" r="6"/></g><path d="M-9 2Q-6 6 -3 4M3 3Q6 7 9 5M-3 -8Q0 -4 3 -6" fill="none" stroke="#7a4a20" stroke-width="1.2" stroke-linecap="round"/>`,
+"🟡":`<g ${IS1} fill="#f2c230"><circle cx="-6" cy="4" r="6"/><circle cx="6" cy="5" r="6"/><circle cx="0" cy="-6" r="6"/></g><g fill="#fff" fill-opacity=".6"><circle cx="-8" cy="2" r="1.5"/><circle cx="4" cy="3" r="1.5"/><circle cx="-2" cy="-8" r="1.5"/></g>`,
+"🟢":`<g ${IS1} fill="#9bc86a"><ellipse cx="-5" cy="4" rx="3.6" ry="7" transform="rotate(-25 -5 4)"/><ellipse cx="5" cy="3" rx="3.6" ry="7" transform="rotate(25 5 3)"/><ellipse cx="0" cy="-3" rx="3.6" ry="7"/></g><path d="M0 -8V1M-5 0V8M5 -1V7" stroke="#5f9a3a" stroke-width="1" stroke-linecap="round"/>`,
+"🍈":`<circle r="12" fill="#8bc34a" ${IS}/><path d="M-6 -3Q-4 -7 1 -7" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="2" stroke-linecap="round"/><path d="M0 -12Q6 -16 10 -11Q5 -8 0 -12Z" fill="#43a047" ${IS1}/>`,
+"⚪":`<path d="M-11 -2Q-11 -9 0 -9Q11 -9 11 -2Q11 8 3 11L0 15L-3 11Q-11 8 -11 -2Z" fill="#f6f0f5" ${IS}/><path d="M-11 -2Q-11 -9 0 -9Q11 -9 11 -2Q8 -5 0 -5Q-8 -5 -11 -2Z" fill="#c98ad0"/><path d="M-11 -2Q-11 -9 0 -9Q11 -9 11 -2Q11 8 3 11L0 15L-3 11Q-11 8 -11 -2Z" fill="none" ${IS}/><path d="M0 -9Q-4 -13 -6 -15M0 -9V-15M0 -9Q4 -13 6 -15" fill="none" stroke="#43a047" stroke-width="2" stroke-linecap="round"/>`,
+"🔴":`<circle cx="0" cy="3" r="10" fill="#e0405a" ${IS}/><ellipse cx="0" cy="11.5" rx="3" ry="1.6" fill="#fff"/><path d="M-6 0Q-5 -4 -1 -4" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="2" stroke-linecap="round"/><path d="M0 -6Q-6 -8 -7 -14Q-1 -13 0 -6ZM0 -6Q6 -8 7 -14Q1 -13 0 -6Z" fill="#43a047" ${IS1}/>`,
+"🟣":`<circle cx="0" cy="3" r="10" fill="#8e2a5e" ${IS}/><path d="M0 13Q1 15 3 16" fill="none" stroke="#8e2a5e" stroke-width="2" stroke-linecap="round"/><path d="M-6 0Q-5 -4 -1 -4" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="2" stroke-linecap="round"/><path d="M-2 -6Q-6 -10 -5 -14M2 -6Q6 -10 5 -14" fill="none" stroke="#c2185b" stroke-width="2" stroke-linecap="round"/><path d="M-5 -14Q-10 -14 -9 -10Q-5 -10 -5 -14ZM5 -14Q10 -14 9 -10Q5 -10 5 -14Z" fill="#43a047" ${IS1}/>`,
+"🟪":`<circle r="12" fill="#7b3f9e" ${IS}/><path d="M0 -11Q-7 0 0 12M0 -11Q7 0 0 12M-11 0Q0 -6 11 0" fill="none" stroke="#c9a0dc" stroke-width="1.5" stroke-linecap="round"/>`,
+"🟠":`<path d="M-13 11Q-12 2 -5 0Q0 -9 5 0Q12 2 13 11Z" fill="#f0a21c" ${IS}/><path d="M-6 6Q0 3 6 6" fill="none" stroke="#c77a0a" stroke-width="1.5" stroke-linecap="round"/><path d="M-14 11H14Q13 15 0 15Q-13 15 -14 11Z" fill="#f6efe0" ${IS}/>`,
+"🟫":`${[-35,0,35].map(a=>`<g transform="rotate(${a})"><path d="M0 -4V13" stroke="var(--ink)" stroke-width="5" stroke-linecap="round"/><path d="M0 -4V13" stroke="#7a4a24" stroke-width="2.6" stroke-linecap="round"/><circle cy="-8" r="4.2" fill="#9a6633" ${IS1}/></g>`).join("")}`,
+"🍃":`<path d="M-12 12Q-14 -6 2 -12Q14 -14 12 0Q10 12 -12 12Z" fill="#6fa545" ${IS}/><path d="M-11 11Q-2 3 8 -7M-4 6L-3 0M0 3L2 -3M4 -1L6 -5" fill="none" stroke="#3f7a2a" stroke-width="1.6" stroke-linecap="round"/>`,
+"🍂":`<path d="M0 -13Q4 -10 5 -6Q10 -7 9 -2Q13 0 9 4Q10 8 5 8Q4 11 0 11Q-4 11 -5 8Q-10 8 -9 4Q-13 0 -9 -2Q-10 -7 -5 -6Q-4 -10 0 -13Z" fill="#d98a2b" ${IS}/><path d="M0 14V-8M0 0L-5 -3M0 0L5 -3M0 5L-5 3M0 5L5 3" fill="none" stroke="#a85a14" stroke-width="1.5" stroke-linecap="round"/>`,
+"🫚":`<path d="M-13 4Q-14 -2 -8 -3Q-6 -9 0 -8Q4 -12 8 -8Q14 -8 13 -2Q15 3 10 5Q8 11 2 9Q-3 12 -7 8Q-12 9 -13 4Z" fill="#d9b070" ${IS}/><path d="M-4 -3V3M3 -4V4M-9 1Q-8 3 -7 4" fill="none" stroke="#a67c3a" stroke-width="1.4" stroke-linecap="round"/>`,
+"🫑":`<path d="M-10 -4Q-12 -9 -5 -8Q0 -11 5 -8Q12 -9 10 -4Q13 3 9 9Q5 14 0 12Q-5 14 -9 9Q-13 3 -10 -4Z" fill="#43a047" ${IS}/><path d="M-5 -6Q-7 2 -5 9M5 -6Q7 2 5 9" fill="none" stroke="#2e7d32" stroke-width="1.4" stroke-linecap="round"/><path d="M0 -8V-12Q2 -14 5 -13" fill="none" stroke="#2e7d32" stroke-width="3" stroke-linecap="round"/><path d="M-7 -4Q-8 0 -7 3" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="2" stroke-linecap="round"/>`,
+"🫐":`<g ${IS1} fill="#4b5fa8"><circle cx="-6" cy="4" r="6"/><circle cx="6" cy="5" r="6"/><circle cx="0" cy="-6" r="6"/></g><g stroke="#1d2a63" stroke-width="1.2" stroke-linecap="round"><path d="M-6 2.5v3M-7.5 4h3"/><path d="M6 3.5v3M4.5 5h3"/><path d="M0 -7.5v3M-1.5 -6h3"/></g><g fill="#fff" fill-opacity=".45"><circle cx="-8.5" cy="2" r="1.4"/><circle cx="3.5" cy="3" r="1.4"/><circle cx="-2.5" cy="-8" r="1.4"/></g>`,
+"🫙":`<path d="M-11 0H11V9Q11 12 8 12H-8Q-11 12 -11 9Z" fill="#4a2616"/><rect x="-9" y="-13" width="18" height="4" rx="1.5" fill="#bfc5cc" ${IS1}/><path d="M-8 -9Q-12 -6 -12 -2V9Q-12 13 -8 13H8Q12 13 12 9V-2Q12 -6 8 -9Z" fill="#dff0fa" fill-opacity=".35" ${IS}/><path d="M-8 -5Q-9 -2 -9 2" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="2" stroke-linecap="round"/>`,
+"🍬":`<g ${IS1}><path d="M-12 3L-6 0L0 3L-6 6Z" fill="#fff"/><path d="M-12 3V10L-6 13V6Z" fill="#e6e9ee"/><path d="M0 3V10L-6 13V6Z" fill="#d3d8df"/><path d="M-1 -4L5 -7L11 -4L5 -1Z" fill="#fff"/><path d="M-1 -4V3L5 6V-1Z" fill="#e6e9ee"/><path d="M11 -4V3L5 6V-1Z" fill="#d3d8df"/></g>`,
+"🌱":`<path d="M-5 -14Q-7 0 -4 7M5 -14Q7 0 4 7" fill="none" stroke="var(--ink)" stroke-width="6.5" stroke-linecap="round"/><path d="M-5 -14Q-7 0 -4 7M5 -14Q7 0 4 7" fill="none" stroke="#58b34a" stroke-width="3.5" stroke-linecap="round"/><ellipse cx="-3.5" cy="9" rx="4" ry="5" fill="#f6efe0" ${IS1}/><ellipse cx="3.5" cy="9" rx="4" ry="5" fill="#f6efe0" ${IS1}/>`,
+"🥭":`<path d="M-10 0Q-12 -9 -3 -12Q8 -14 12 -4Q14 6 5 12Q-6 15 -10 0Z" fill="#ffa726" ${IS}/><path d="M3 -10Q11 -6 11 2Q8 -2 3 -10Z" fill="#e53b2c" fill-opacity=".5"/><path d="M-6 -4Q-4 -8 1 -8" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="2" stroke-linecap="round"/><path d="M-3 -12Q-1 -16 4 -15Q2 -11 -3 -12Z" fill="#43a047" ${IS1}/>`,
+"🍍":`<ellipse cx="0" cy="5" rx="9" ry="11" fill="#f5b82e" ${IS}/><path d="M-6 -2L6 12M6 -2L-6 12M-8 5L1 14M8 5L-1 14" fill="none" stroke="#c98a10" stroke-width="1.2" stroke-linecap="round"/><path d="M0 -6L-5 -14L-1 -11L0 -16L1 -11L5 -14Z" fill="#43a047" ${IS1}/>`,
+"🪵":`<g transform="rotate(-30)"><rect x="-14" y="-9" width="26" height="8" rx="4" fill="#b9733a" ${IS}/><rect x="-14" y="1" width="26" height="8" rx="4" fill="#c98446" ${IS}/><ellipse cx="12" cy="-5" rx="2.6" ry="4" fill="#e0a468" ${IS1}/><ellipse cx="12" cy="5" rx="2.6" ry="4" fill="#e0a468" ${IS1}/></g>`,
+"🧁":`<path d="M-10 2H10L7 13H-7Z" fill="#e58fa6" ${IS}/><path d="M-4 3L-3 12M0 3V12M4 3L3 12" fill="none" stroke="#c4607a" stroke-width="1.3" stroke-linecap="round"/><path d="M-11 2Q-13 -4 -6 -5Q-6 -11 0 -11Q6 -11 6 -5Q13 -4 11 2Z" fill="#fff0f5" ${IS}/><circle cx="0" cy="-12" r="2.6" fill="#d6203a" ${IS1}/>`,
+"🍹":`<path d="M5 -15L1 0" stroke="var(--ink)" stroke-width="4.5" stroke-linecap="round"/><path d="M5 -15L1 0" stroke="#e53b2c" stroke-width="2" stroke-linecap="round"/><path d="M-10 -8H10L6 13Q6 14 4 14H-4Q-6 14 -6 13Z" fill="#f5a623" ${IS}/><path d="M-8.4 -3H8.4" stroke="#fff" stroke-opacity=".6" stroke-width="1.6"/><circle cx="9" cy="-8" r="5" fill="#ffe14d" ${IS1}/><path d="M9 -13V-3M4 -8H14" stroke="#e0b800" stroke-width="1"/>`,
+"🍲":`<path d="M-12 -2H12V8Q12 13 7 13H-7Q-12 13 -12 8Z" fill="#d95f3b" ${IS}/><rect x="-14" y="-5" width="28" height="4" rx="2" fill="#bfc5cc" ${IS1}/><path d="M-5 -8Q-8 -11 -5 -14M3 -8Q0 -11 3 -14" fill="none" stroke="#aab4be" stroke-width="1.8" stroke-linecap="round"/><path d="M-6 4Q0 7 6 4" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1.6" stroke-linecap="round"/>`,
+"🥫":`<path d="M-9 -9V9Q-9 13 0 13Q9 13 9 9V-9Z" fill="#d63a22" ${IS}/><path d="M-9 -4H9V6H-9Z" fill="#f6efe0"/><path d="M-9 -4H9M-9 6H9" stroke="var(--ink)" stroke-width="1.5"/><circle cx="0" cy="1" r="2.6" fill="#d63a22"/><ellipse cx="0" cy="-9" rx="9" ry="3.5" fill="#cfd5db" ${IS}/>`,
+"🍳":`<circle cx="-3" cy="0" r="11" fill="#3b3b44" ${IS}/><rect x="7" y="-2.5" width="8" height="5" rx="2.5" fill="#6b4a2b" ${IS1}/><path d="M-9 -3Q-10 -8 -4 -7Q-1 -10 3 -6Q7 -4 4 1Q3 6 -3 5Q-8 7 -9 2Z" fill="#fffdf5" ${IS1}/><circle cx="-2" cy="-1" r="3.2" fill="#ffb81c" ${IS1}/>`,
+"🥣":`<path d="M-11 -1Q-10 -8 0 -8Q10 -8 11 -1Z" fill="#f6efe0" ${IS1}/><path d="M-14 -1H14Q14 11 0 13Q-14 11 -14 -1Z" fill="#6fb3d9" ${IS}/><path d="M-9 4Q-6 8 -1 9" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="1.8" stroke-linecap="round"/>`,
+"🥪":`<path d="M-13 -3Q-13 -11 0 -11Q13 -11 13 -3Z" fill="#e8c98b" ${IS}/><path d="M-14 -3q3.5 4 7 0t7 0t7 0t7 0v3H-14z" fill="#5fbf6a" ${IS1}/><rect x="-13" y="1" width="26" height="3.5" fill="#ffc63d" ${IS1}/><path d="M-13 5H13V9Q13 12 10 12H-10Q-13 12 -13 9Z" fill="#e8c98b" ${IS}/>`,
+"🥗":`<path d="M-11 0Q-12 -8 -4 -8Q-2 -13 4 -9Q11 -9 11 0Z" fill="#6fcf6a" ${IS1}/><circle cx="-3" cy="-3" r="3" fill="#e53b2c" ${IS1}/><circle cx="5" cy="-4" r="2.5" fill="#ffd23f" ${IS1}/><path d="M-14 0H14Q13 12 0 13Q-13 12 -14 0Z" fill="#f6efe0" ${IS}/>`,
+"🍜":`<path d="M3 -6L12 -15M7 -5L15 -13" fill="none" stroke="var(--ink)" stroke-width="3.6" stroke-linecap="round"/><path d="M3 -6L12 -15M7 -5L15 -13" fill="none" stroke="#c98a3a" stroke-width="1.8" stroke-linecap="round"/><path d="M-9 0Q-9 -6 -5 -6Q-1 -6 -1 0M-1 0Q-1 -7 3 -7Q8 -7 8 0" fill="none" stroke="var(--ink)" stroke-width="4.6" stroke-linecap="round"/><path d="M-9 0Q-9 -6 -5 -6Q-1 -6 -1 0M-1 0Q-1 -7 3 -7Q8 -7 8 0" fill="none" stroke="#f2c94c" stroke-width="2.4" stroke-linecap="round"/><path d="M-14 0H14Q13 12 0 13Q-13 12 -14 0Z" fill="#c0392b" ${IS}/>`,
+"🍨":`<path d="M-9 3H9L5 13H-5Z" fill="#e9f5fb" ${IS}/><circle cx="-5" cy="-1" r="6" fill="#f4a6c0" ${IS}/><circle cx="5" cy="-1" r="6" fill="#fff0c9" ${IS}/><circle cx="0" cy="-7" r="5" fill="#8a5a2b" ${IS}/><circle cx="0" cy="-13" r="2.4" fill="#d6203a" ${IS1}/>`,
+"🍦":`<path d="M-8 -1H8L0 15Z" fill="#e0a95a" ${IS}/><path d="M-5 3L3 -1M-2 8L5 3M-5 -1L3 11" fill="none" stroke="#b9772c" stroke-width="1.2" stroke-linecap="round"/><path d="M-9 -1Q-10 -5 -5 -6Q-5 -11 0 -11Q-1 -15 3 -14Q4 -9 4 -6Q10 -5 9 -1Z" fill="#fff0c9" ${IS}/>`,
+"💡":`<path d="M0 -13Q-9 -13 -9 -4Q-9 1 -5 4V8H5V4Q9 1 9 -4Q9 -13 0 -13Z" fill="#ffd23f" ${IS}/><path d="M-4 11H4M-3 14H3" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/><path d="M-4 -8Q-6 -5 -5 -2" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="2" stroke-linecap="round"/>`
 };
-window.__ico=e=>icoHTML(e);const icoHTML=e=>ICO[e]?`<svg viewBox="-16 -16 32 32" width="30" height="30" aria-hidden="true">${ICO[e]}</svg>`:e;
+/* every drawn icon by its emoji without the variation selector, so "🌶" and "🌶️" both find it */
+const NORM={};Object.keys(ICO).forEach(k=>{NORM[k.replace(/\uFE0F/g,"")]=ICO[k]});
+const icoHTML=(e,sz)=>{const g=NORM[String(e==null?"":e).replace(/\uFE0F/g,"")];return g?`<svg viewBox="-16 -16 32 32" width="${sz||30}" height="${sz||30}" aria-hidden="true">${g}</svg>`:e};
+window.__ico=e=>icoHTML(e);
+/* safety net: any emoji that has a drawn icon and shows up as text anywhere in the page (chips, headings, hints, recipe files) is swapped for the drawing, now and whenever the page changes */
+{const EMRE=new RegExp("("+Object.keys(NORM).sort((a,b)=>b.length-a.length).join("|")+")\\uFE0F?","g"),NOSW="SCRIPT,STYLE,TEXTAREA,INPUT,SELECT,OPTION,TITLE,svg,[contenteditable],.noemo,.ing i";
+ const swapText=t=>{const p=t.parentElement;if(!p||p.closest(NOSW))return;const s=t.nodeValue;EMRE.lastIndex=0;if(!EMRE.test(s))return;EMRE.lastIndex=0;
+  const f=document.createDocumentFragment();let last=0,m;
+  while((m=EMRE.exec(s))){if(m.index>last)f.appendChild(document.createTextNode(s.slice(last,m.index)));const sp=document.createElement("span");sp.className="emo";sp.innerHTML=`<svg viewBox="-16 -16 32 32" aria-hidden="true">${NORM[m[1]]}</svg>`;f.appendChild(sp);last=m.index+m[0].length}
+  if(last<s.length)f.appendChild(document.createTextNode(s.slice(last)));t.replaceWith(f)};
+ const swapTree=n=>{if(n.nodeType===3){swapText(n);return}if(n.nodeType!==1||n.closest(NOSW))return;const w=document.createTreeWalker(n,NodeFilter.SHOW_TEXT),L=[];let x;while((x=w.nextNode()))L.push(x);L.forEach(swapText)};
+ const go=()=>{swapTree(document.body);new MutationObserver(ms=>{for(const m of ms){if(m.type==="characterData")swapText(m.target);else m.addedNodes.forEach(swapTree)}}).observe(document.body,{childList:true,subtree:true,characterData:true})};
+ document.body?go():document.addEventListener("DOMContentLoaded",go)}
 /* burger spinner art: the layers lift off one after another and drop back into a stack (animated in index.html) */
 const BURGER_ART=`<div class="bgr"><svg viewBox="0 0 240 190" aria-hidden="true"><circle cx="120" cy="95" r="84" fill="#f6efe0" style="stroke:var(--ink)" stroke-width="3"/><circle class="rim" cx="120" cy="95" r="76" fill="none" stroke="#d63a22" stroke-opacity=".55" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 24"/><g transform="translate(120 100) scale(.66) translate(-120 -108)">
 <g class="bl" style="--k:0"><path d="M44 150h152v6q0 16-16 16H60q-16 0-16-16z" fill="#e8a84d" style="stroke:var(--ink)" stroke-width="3" stroke-linejoin="round"/></g>
@@ -102,7 +149,7 @@ const emojiArt=(base,col,c,o)=>{
   jar:`<circle cx="120" cy="95" r="84" fill="#e9f5d0" fill-opacity=".9" ${ik}/><circle cx="120" cy="95" r="72" fill="${col}" fill-opacity=".85"/><circle cx="120" cy="95" r="78" ${dash}/>`,
   glass:`<circle cx="120" cy="95" r="84" fill="#e9f5fb" fill-opacity=".9" ${ik}/><circle cx="120" cy="95" r="72" fill="${col}" fill-opacity=".85"/><circle cx="120" cy="95" r="78" ${dash}/><path d="M130 86L164 28" ${ik} stroke-width="11" stroke-linecap="round"/><path d="M130 86L164 28" stroke="#fff" stroke-width="5" stroke-linecap="round"/>`}[base];
  const R=base==="board"?60:base==="pan"?48:base==="bowl"?54:56;
- return `<div class="pgr"><svg class="base" viewBox="0 0 240 190" aria-hidden="true">${B}</svg><div class="cem"><i>${c}</i></div><div class="ring">${o.map((e,k)=>`<div class="ing" style="--k:${k};--r:${Math.round(k*360/o.length)}deg;--R:${R}px"><u><i>${e}</i></u></div>`).join("")}</div></div>`};
+ return `<div class="pgr"><svg class="base" viewBox="0 0 240 190" aria-hidden="true">${B}</svg><div class="cem"><i>${icoHTML(c,52)}</i></div><div class="ring">${o.map((e,k)=>`<div class="ing" style="--k:${k};--r:${Math.round(k*360/o.length)}deg;--R:${R}px"><u><i>${icoHTML(e)}</i></u></div>`).join("")}</div></div>`};
 /* ---- themed section spinners: each one is a little scene seen from above that turns at the shared speed (emoji sit on the turning base, like food on a turntable);
    sandwich is a side-view stack like the burger. SCENES[id](colour) returns the art. ---- */
 const IK='style="stroke:var(--ink)" stroke-width="3"',DASH='fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 24"';
@@ -171,23 +218,70 @@ const SPIN={
 const CRAFT_ARTS={burger:BURGER_ART,pasta:PASTA_ART};
 Object.keys(SPIN).forEach(id=>{if(TOOLS[id])CRAFT_ARTS[id]=SCENES[id]?SCENES[id](SPIN[id][3]):emojiArt(SPIN[id][2],SPIN[id][3],SPIN[id][4],SPIN[id][5])});
 window.__craftArts=CRAFT_ARTS;
-const autoSpin=T=>s=>{T.ctl.forEach(c=>{if(c.tg)s[c.k]=c.tg[Math.floor(Math.random()*c.tg.length)][0]})}; // a random option for every choice; amounts and people stay as set
+window.__craftHas=id=>!!(TOOLS[id]&&TOOLS[id].spin);
+/* a build that came from the start wheel opens as a result screen, like a cookbook recipe: only the card, with a close button in its header (the card on desktop, the full screen on a phone) */
+let resOn=null;
+const smallScr=()=>matchMedia("(max-width:959px)").matches,XB='<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+const resLeave=()=>{if(!resOn)return;const r=document.getElementById("tab-"+resOn);resOn=null;if(r)r.classList.remove("resmode");const H=window.__home;if(H&&H.from){if(!H.open())H.from=false}scrollTo({top:0})};
+const resBack=()=>{if(history.state&&history.state.mrres)history.back();else resLeave()};
+addEventListener("popstate",()=>{if(resOn)resLeave()});
+window.__spinCraft=(id,instant)=>{const root=document.getElementById("tab-"+id);if(!root)return;root.classList.add("crafttab","resmode");resOn=id;if(smallScr()){try{history.pushState({mrres:1},"")}catch(e){}}scrollTo({top:0});spinTool(id,instant)};
+window.__leaveCraft=()=>{if(!resOn)return;const r=document.getElementById("tab-"+resOn);resOn=null;if(r)r.classList.remove("resmode");window.__nav&&__nav.drop()};
+const autoSpin=T=>s=>{T.ctl.forEach(c=>{if(c.tg&&!c.x)s[c.k]=c.tg[Math.floor(Math.random()*c.tg.length)][0]})}; // a random option for every choice; amounts and people stay as set
 Object.keys(TOOLS).forEach(id=>{const T=TOOLS[id],sp=SPIN[id];
  if(!T.name){const kc=((window.KITCHEN&&window.KITCHEN.CRAFTS)||[]).find(c=>c.id===id);T.name=kc?kc.name:T.title} // the card name from kitchen.js, used in "Search ... recipes"
  T.art=CRAFT_ARTS[id];if(sp){T.spinLabel=T.spinLabel||sp[0];T.spinNote=T.spinNote||sp[1]}
  if(!T.spin)T.spin=autoSpin(T);
- if(!T.names)T.names=[...new Set(T.ctl.filter(c=>c.tg&&!c.only).flatMap(c=>c.tg.map(o=>o[1])))]});
+ if(!T.names)T.names=[...new Set(T.ctl.filter(c=>c.tg&&!c.only&&!c.x).flatMap(c=>c.tg.filter(o=>o[1]!=="Custom").map(o=>o[1])))]});
 TOOLS.grill.main="m"; // Doneness and Thickness depend on the meat (key m), not on key t
 
 const LEARN=window.CRAFTLIB.LEARN; // the "Good to know" notes, filled in by the craft-*.js files
 const cfg=id=>{const o=ST[id]=ST[id]||{};TOOLS[id].ctl.forEach(c=>{if(o[c.k]===undefined)o[c.k]=c.def});return o};
+/* ingredient lines written as "Bun: flour" become a section headed "Bun" with plain lines under it (a label needs 2+ lines, or its own link, to be a section).
+   A section can carry one link ("Make buns"); a single ingredient such as pickles keeps its pill on its own line. The raw names stay as they are for Copy, Share and Start cooking. */
+const PFX=/^([A-Z][A-Za-z ]{1,22}): (.+)$/,cap1=t=>t.charAt(0).toUpperCase()+t.slice(1);
+function ingHTML(r,id,s){
+ const ctx={tool:id,s},X=window.XLINK,rows=r.ing.map(i=>{const m=PFX.exec(i[0]);return{l:m?m[1]:"",n:m?m[2]:i[0],raw:i[0],q:i[1]}}),cnt={};
+ rows.forEach(x=>{if(x.l)cnt[x.l]=(cnt[x.l]||0)+1});
+ const sec=l=>X&&X.sec?X.sec(l,ctx):"",real=x=>x.l&&(cnt[x.l]>1||sec(x.l)),G=[];
+ rows.forEach(x=>{const l=real(x)?x.l:"",g=G[G.length-1];if(g&&g.l===l)g.r.push(x);else G.push({l,r:[x]})});
+ const labelled=G.some(g=>g.l);
+ return G.map((g,k)=>{const head=g.l||(labelled&&k>0?"Also":""),hl=g.l?sec(g.l):"";
+  return(head?`<div class="ingh"><span>${esc(head)}</span>${hl}</div>`:"")+`<ul class="ing">${g.r.map(x=>{const n=g.l?cap1(x.n):x.raw;return`<li><span>${esc(n)}${X&&!hl?X.btn(n,null,ctx):""}</span><span class="q">${esc(x.q)}</span></li>`}).join("")}</ul>`}).join("")}
+/* ---- totals, "fit my jar or pot" and "I have this much": generic, they work through each tool's own calc so the steps stay right ---- */
+const visOf=(T,s)=>T.ctl.filter(c=>(!c.only||[].concat(c.only).includes(s[T.main||"t"]))&&(!c.when||[].concat(c.when.v).includes(s[c.when.k])));
+const FIT={},FITJAR=["sauce","spice","jam","dairy","drinks","soup","frozen","starter","cheese"],JARS=[[250,"250 ml"],[500,"500 ml"],[750,"750 ml"],[1000,"1 L"],[2000,"2 L"],[3000,"3 L"]];
+const gramsOf=q=>{const m=/^(?:about\s)?(\d+(?:\.\d+)?)\s?(g|ml)$/i.exec(String(q).trim());return m?+m[1]:null};
+const sumG=r=>r.ing.reduce((t,i)=>t+(gramsOf(i[1])||0),0);
+const volOf=r=>r.vol||sumG(r);
+const withV=(s,c,v)=>Object.assign({},s,{[c.k]:v});
+const cname=c=>c.label.replace(/\s*\(.*$/,"").toLowerCase();
+const stepCtl=(T,s,vis)=>{for(const c of vis){if(!c.step||/tin|pan size|thick|loaves|doneness/i.test(c.label))continue;
+  try{if(JSON.stringify(T.calc(withV(s,c,c.step[0])).ing)!==JSON.stringify(T.calc(withV(s,c,c.step[1])).ing))return c}catch(e){}}return null};
+/* the whole number v inside the control's range that brings fn(v) closest to target (fn only ever grows with v) */
+const solve=(c,fn,target)=>{let a=c.step[0],b=c.step[1];const f=v=>{try{const x=fn(v);return Number.isFinite(x)?x:NaN}catch(e){return NaN}},fa=f(a),fb=f(b);
+ if(!(fb>fa))return null;
+ while(b-a>1){const m=(a+b)>>1;if(f(m)<target)a=m;else b=m}
+ let v=Math.abs(f(a)-target)<=Math.abs(f(b)-target)?a:b;
+ const by=c.step[2]>=100?10:1,sn=Math.min(c.step[1],Math.max(c.step[0],Math.round(v/by)*by));if(Math.abs(f(sn)-target)<=target*.03)v=sn;
+ return{v,got:f(v),lo:fa,hi:fb,under:target<fa,over:target>fb}};
+function totHTML(r){const n=r.ing.filter(i=>gramsOf(i[1])).length;if(n<3&&!r.makes)return"";
+ return`<ul class="ing crtot">${n>=3?`<li><span>${esc(r.totalLabel||"Total of the weighed ingredients")}</span><span class="q">${G(sumG(r))}</span></li>`:""}${r.makes?`<li class="big"><span>${esc(r.makesLabel||"Makes about")}</span><span class="q">${esc(r.makes)}</span></li>`:""}</ul>`}
+function fitPanel(id,T,r,s,vis){
+ const c=stepCtl(T,s,vis);if(!c)return"";
+ const rows=r.ing.filter(i=>gramsOf(i[1])),st=FIT[id]||{},jar=FITJAR.includes(id);
+ return`<details class="crfit"${st.msg?" open":""}><summary>${I("jar")}${jar?"Fit it to my jar or pot, or to what I have":"Scale it to what I have"}</summary>
+  ${jar?`<div class="lab" style="margin-top:12px">${I("ruler")}My jar or pot holds</div><div class="tg">${JARS.map(j=>`<button type="button" data-fit="${j[0]}">${j[1]}</button>`).join("")}</div><p class="sum" style="margin:6px 0 0">The amounts are scaled to fill it with room left at the top.</p>`:""}
+  ${rows.length?`<div class="lab" style="margin-top:14px">${I("ruler")}I have this much of one ingredient</div><div class="crhave"><select aria-label="Ingredient">${rows.map((x,k)=>`<option value="${k}">${esc(x[0])}</option>`).join("")}</select><input type="text" inputmode="decimal" autocomplete="off" placeholder="grams" aria-label="Grams you have"><button type="button" data-have>Scale it</button></div>`:""}
+  <p class="sum crmsg" role="status" style="margin:8px 0 0">${esc(st.msg||"")}</p></details>`}
 function draw(id){
+ seedDefault(id);
  const T=TOOLS[id],s=cfg(id),root=document.getElementById("tab-"+id);if(!root)return;
  const nm=c=>esc(c.label.replace(/\s*\(.*$/,"").toLowerCase().replace(/^how many\s*/,"").replace(/^how much to make$/,"")||"amount"); // "Flour" -> "flour", "How many cookies" -> "cookies"
- const vis=T.ctl.filter(c=>!c.only||[].concat(c.only).includes(s[T.main||"t"]));
+ const vis=visOf(T,s);
  const ctl=vis.map(c=>`<div class="lab"${c===vis[0]?"":' style="margin-top:16px"'}>${I(c.icon)}${esc(c.label)}</div>`+(c.tg?`<div class="tg">${c.tg.map(o=>`<button data-k="${c.k}" data-v="${esc(o[0])}" aria-pressed="${String(s[c.k])===String(o[0])}">${esc(o[1])}</button>`).join("")}</div>`
    :c.ms?`<div class="tg">${c.ms.map(o=>`<button data-k="${c.k}" data-m="${esc(o[0])}" aria-pressed="${(s[c.k]||[]).includes(o[0])}">${esc(o[1])}</button>`).join("")}</div>`
-   :`<div class="step"><button data-k="${c.k}" data-d="-1" aria-label="Less ${nm(c)}">${I("minus")}</button><b>${s[c.k]||people}${c.step[3]?" "+c.step[3]:""}</b><button data-k="${c.k}" data-d="1" aria-label="More ${nm(c)}">${I("plus")}</button></div>`)).join("");
+   :`<div class="step"><button data-k="${c.k}" data-d="-1" aria-label="Less ${nm(c)}">${I("minus")}</button><b><input class="sv" data-k="${c.k}" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" value="${s[c.k]||people}" size="${String(s[c.k]||people).length}" aria-label="${esc(c.label.replace(/\s*\(.*$/,""))}: type a number"${c.step[3]?` title="Tap to type a number"`:""}>${c.step[3]?`<span class="su">${esc(c.step[3])}</span>`:""}</b><button data-k="${c.k}" data-d="1" aria-label="More ${nm(c)}">${I("plus")}</button></div>`)).join("");
  const r=T.calc(s);if(!r.learn){const L=LEARN[id];r.learn=L&&L[s[T.main||"t"]]}
  root.querySelector("[data-ctl]").innerHTML=ctl;
  root.querySelector("[data-out]").innerHTML=`<article class="card"><div class="hero"><div class="ic">${I(T.icon)}</div><h2>${esc(r.title)}</h2></div><div class="body">
@@ -195,46 +289,64 @@ function draw(id){
   ${(r.note||[]).map(n=>`<div class="call" style="background:var(--soft)">${I("flame")}<span>${esc(n)}</span></div>`).join("")}
   ${r.learn?`<details class="learn" style="margin:12px 0;padding:10px 14px;border-radius:14px;background:var(--soft)"><summary style="cursor:pointer;font-weight:700">Good to know</summary>${r.learn.map(n=>`<p style="margin:8px 0 0">${esc(n)}</p>`).join("")}</details>`:""}
   ${r.more?`<p style="margin:0 0 12px;font-size:.92em">More: ${r.more.map(m=>`<a href="${esc(m[1])}" target="_blank" rel="noopener noreferrer">${esc(m[0])}</a>`).join(" · ")}</p>`:""}
-  <div class="split"><div><h3>${I("list")}Ingredients <small style="text-transform:none;letter-spacing:0;color:var(--mute)">(tap to tick off)</small></h3><ul class="ing">${r.ing.map(i=>`<li><span>${esc(i[0])}</span><span class="q">${esc(i[1])}</span></li>`).join("")}</ul></div>
+  <div class="split"><div><h3>${I("list")}Ingredients <small style="text-transform:none;letter-spacing:0;color:var(--mute)">(tap to tick off)</small></h3>${ingHTML(r,id,s)}${totHTML(r)}</div>
   <div><h3>${I("chef")}Method</h3><ol>${r.steps.map(x=>`<li><span>${esc(x)}</span></li>`).join("")}</ol></div></div>
+  ${fitPanel(id,T,r,s,vis)}
   <div class="row"><button class="go" data-a="start">${I("flame")}Start cooking</button><button class="pzsave">${I("heart")}Save</button><button data-a="copy" data-copy>${I("cart")}Copy list</button><button data-a="share">${I("share")}Share</button><button type="button" data-a="rand" data-spin>Spin again</button></div></div></article>`;
- root.querySelectorAll(".ing li").forEach(li=>li.onclick=()=>li.classList.toggle("done"));
+ root.querySelectorAll(".ing:not(.crtot) li").forEach(li=>li.onclick=()=>li.classList.toggle("done"));
  decorate(id,T,r,root,s);
  root.querySelector("[data-copy]").onclick=e=>{const b=e.currentTarget,txt=r.title+"\n"+r.ing.map(i=>"• "+i[0]+" – "+i[1]).join("\n");
   copyText(txt).then(ok=>flash(b,ok?"check":"cart",ok?"Copied":"Couldn't copy"))};
 }
 /* ---- card buttons: the same set and order as the Cook card: Start cooking · Spin again, then Save · Copy list · Share · Like · Not for me ---- */
 const FK="mr-craftfav",favs=()=>{try{return JSON.parse(localStorage.getItem(FK)||"[]")||[]}catch(e){return[]}},setFavs=f=>{try{localStorage.setItem(FK,JSON.stringify(f.slice(0,60)))}catch(e){}};
+/* Saved builds: tap one to load it. Each can be renamed ("Friday burgers"), marked "Start here" (the tool opens with that build ready, once per visit; one per tool),
+   or removed. A build is found again by its tool and settings (sig), so renaming and defaults survive the list being re-sorted. */
+function seedDefault(id){if(SEEDED[id])return;try{const d=favs().find(x=>x.id===id&&x.def&&x.s);SEEDED[id]=1;if(d)Object.assign(cfg(id),d.s)}catch(e){}} // once per tool per visit, never over a shared link or a link pill
 function drawFavs(id){
  const root=document.getElementById("tab-"+id),el=root&&root.querySelector("[data-fav]");if(!el)return;
- const f=favs().filter(x=>x.id===id);
- el.innerHTML=f.length?`<h3>${I("heart")}Saved</h3>`+f.map((x,i)=>`<button data-fi="${i}">${I("heart")}${esc(x.title)}</button>`).join(""):"";
- el.onclick=e=>{const b=e.target.closest("button[data-fi]");if(!b)return;const x=f[+b.dataset.fi];if(!x)return;Object.assign(cfg(id),x.s);save();draw(id);const c=root.querySelector(".card");if(c)c.scrollIntoView({behavior:"smooth",block:"start"})};
+ const f=favs().filter(x=>x.id===id),nm=x=>x.name||x.title;
+ el.innerHTML=f.length?`<h3>${I("heart")}Saved</h3>`+f.map((x,i)=>`<div class="frow"><button type="button" class="fm" data-fi="${i}">${I("heart")}<span>${esc(nm(x))}</span></button><button type="button" class="fa" data-fd="${i}" aria-pressed="${!!x.def}" title="Open this tool with this build ready each time you visit">Start here</button><button type="button" class="fa" data-fr="${i}" aria-label="Rename ${esc(nm(x))}">Rename</button><button type="button" class="fa" data-fx="${i}" aria-label="Remove ${esc(nm(x))}">${I("x")}</button></div>`).join(""):"";
+ const edit=(x,fn)=>{const all=favs(),t=all.find(y=>y.id===x.id&&y.sig===x.sig);if(!t)return;fn(t,all);setFavs(all.filter(Boolean));drawFavs(id);const o=root.querySelector("[data-out] .pzsave");if(o)draw(id)};
+ el.onclick=e=>{const b=e.target.closest("button");if(!b)return;const g=k=>b.dataset[k]!==undefined?f[+b.dataset[k]]:null;
+  const x=g("fi");
+  if(x){Object.assign(cfg(id),x.s);save();draw(id);const c=root.querySelector(".card");if(c)c.scrollIntoView({behavior:"smooth",block:"start"});return}
+  const d=g("fd");if(d){edit(d,(t,all)=>{const on=!t.def;all.forEach(y=>{if(y.id===id)y.def=false});t.def=on});return}
+  const r=g("fr");if(r){const n=prompt("Name this build",nm(r));if(n===null)return;edit(r,t=>{const v=n.trim().slice(0,40);if(v&&v!==t.title)t.name=v;else delete t.name});return}
+  const rm=g("fx");if(rm){if(confirm("Remove \u201c"+nm(rm)+"\u201d from your saved builds?"))edit(rm,(t,all)=>{all.splice(all.indexOf(t),1)})}};
 }
 function decorate(id,T,r,root,s){
+ root.classList.add("crafttab");
+ try{const h=root.querySelector("[data-out] .hero");if(h&&!h.querySelector(".heroback")){const b=document.createElement("button");b.type="button";b.className="heroback";b.setAttribute("aria-label","Close");b.title="Close";b.innerHTML=XB;b.onclick=resBack;h.append(b)}}catch(e){console.error(e)}
  const row=root.querySelector("[data-out] .row");if(!row)return;
  const go=row.querySelector("[data-a=start]"),sv=row.querySelector(".pzsave"),sh=row.querySelector("[data-a=share]"),sig=JSON.stringify(s);
  go.onclick=()=>{if(window.__cook)window.__cook({title:r.title,steps:r.steps,list:r.ing})};
+ if(window.__dinner&&!row.querySelector("[data-a=plan]")){const pl=document.createElement("button");pl.type="button";pl.dataset.a="plan";pl.innerHTML=I("clock")+"Plan dinner";pl.onclick=()=>window.__dinner({title:r.title,steps:r.steps});go.after(pl)}
  const has=()=>favs().some(x=>x.id===id&&x.sig===sig),paint=()=>{sv.setAttribute("aria-pressed",String(has()));sv.innerHTML=I("heart")+(has()?"Saved":"Save")};
  sv.onclick=()=>{let f=favs();if(has())f=f.filter(x=>!(x.id===id&&x.sig===sig));else f.unshift({id,title:r.title,sig,s:JSON.parse(sig)});setFavs(f);paint();drawFavs(id);navigator.vibrate&&navigator.vibrate(15)};paint();
  sh.onclick=async()=>{const text=r.title+"\n\nIngredients\n"+r.ing.map(i=>"• "+i[0]+" – "+i[1]).join("\n")+"\n\nMethod\n"+r.steps.map((x,k)=>(k+1)+". "+x).join("\n")+"\n\nMade with Meal Roulette";
+  if(window.__shareOut){window.__shareOut("k",{id,s:JSON.parse(sig)},r.title,r.title+(r.meta[0]?" · "+r.meta[0][1]:""),sh,()=>text);return} // a link that reopens this exact build
   try{if(navigator.share)await navigator.share({title:r.title,text});else{flash(sh,"share",await copyText(text)?"Copied":"Couldn't copy")}}catch(e){}};
  try{const m=root.querySelector("[data-out] .meta");if(m&&window.__noteBlock)m.after(window.__noteBlock(r.title))}catch(e){}
- if(window.__thumbs)window.__thumbs(row,r.title,{craft:id},()=>spinTool(id));
+ if(window.__thumbs)window.__thumbs(row,r.title,{craft:id},()=>{const a=row.querySelector("[data-a=rand]");if(a&&a.isConnected)a.click();else spinTool(id)});
  if(window.__tidyRow)window.__tidyRow(row,T.icon);
 }
 
 /* spin a random build: full-screen spinner with the tool's own art and a name ticker, then the card (same rhythm as Cook, Pizza and Ferment) */
-const SPINNING={};
+const SPINNING={},RK="mr-craftrecent",recentBuilds=()=>{try{return JSON.parse(localStorage.getItem(RK)||"[]")||[]}catch(e){return[]}},noteBuild=t=>{try{localStorage.setItem(RK,JSON.stringify(recentBuilds().filter(x=>x!==t).concat(t).slice(-40)))}catch(e){}};
 function spinTool(id,instant){
  const T=TOOLS[id],root=document.getElementById("tab-"+id);if(!T||!T.spin||!root||SPINNING[id])return;
- const done=()=>{T.spin(cfg(id));save();draw(id);const c=root.querySelector(".card");if(c)c.scrollIntoView({behavior:"smooth",block:"start"})};
+ let built=false;
+ const build=()=>{if(built)return;built=true;const wheel=resOn===id,s=cfg(id),rec=recentBuilds();let r,k=0; // a fresh build every time: not one of the last 40 shown, and from the start wheel nothing that is only part of a meal (stocks, broths, doughs, pickles, brines)
+  do{T.spin(s);try{r=T.calc(s)}catch(e){r=null;break}k++}while(k<16&&r&&(rec.includes(r.title)||(wheel&&/\b(stocks?|broths?|bouillon|pickles?|pickled|brine|dough|marinade)\b/i.test(r.title))));
+  if(r&&r.title)noteBuild(r.title);save();draw(id)};
+ const done=()=>{build();const o=root.querySelector("[data-out]");if(o)o.style.visibility="";const c=root.querySelector(".card");if(c)c.scrollIntoView({behavior:"smooth",block:"start"})};
  if(instant||matchMedia("(prefers-reduced-motion:reduce)").matches||(window.mrNoSpin&&mrNoSpin())||!window.mrSpinNames||!T.art)return done();
  SPINNING[id]=1;const bs=[...root.querySelectorAll("[data-spin]")];bs.forEach(b=>b.disabled=true);
  const rl=document.createElement("div");rl.className="reel on";rl.setAttribute("aria-hidden","true");
  rl.innerHTML=`<div class="stage"><div class="art on">${T.art}</div></div><div class="rtx"><span class="rt"></span><small>${esc(T.spinNote||"Picking something tasty…")}</small></div>`;
  document.body.appendChild(rl);
- mrSpinNames(rl.querySelector(".rt"),T.names||[T.title],()=>{rl.remove();bs.forEach(b=>b.disabled=false);SPINNING[id]=0;done()});
+ mrSpinNames(rl.querySelector(".rt"),T.names||[T.title],()=>{rl.remove();bs.forEach(b=>b.disabled=false);SPINNING[id]=0;done();if(window.__resultReady)__resultReady(root.querySelector("[data-out] .card h2"))},()=>{const o=root.querySelector("[data-out]");if(o)o.style.visibility="hidden";build();const h=root.querySelector("[data-out] .card h2");return h&&h.textContent.trim()}); // the last name shown is the build that opens
 }
 Object.keys(TOOLS).forEach(id=>{
  const T=TOOLS[id],root=document.getElementById("tab-"+id);if(!root)return;
@@ -242,14 +354,55 @@ Object.keys(TOOLS).forEach(id=>{
  root.innerHTML=`<h1 class="hl">${esc(T.title)}</h1><p>${esc(T.sub)}</p><div class="cols"><aside class="side"><section class="panel" data-ctl></section>${T.spin?`<button type="button" class="fmspin" data-spin>${I(T.icon)}${esc(T.spinLabel||"Spin!")}</button>`:""}<div class="fav" data-fav></div></aside><section class="res"><div data-out></div></section></div>
   <section class="panel"><div class="lab">${I(T.icon)}Recipes</div><input class="bksearch rsearch" type="search" placeholder="Search ${esc(T.name)} recipes…" aria-label="Search ${esc(T.name)} recipes" autocomplete="off"><p class="hint" data-n></p><ul class="bklist" data-l></ul><button type="button" class="stubmore" hidden></button></section>`;
  root.querySelector("[data-ctl]").addEventListener("click",e=>{
-  const b=e.target.closest("button[data-k]");if(!b)return;const box=e.currentTarget,at=[...box.querySelectorAll("button")].indexOf(b),s=cfg(id),c=T.ctl.find(x=>x.k===b.dataset.k);
+  const b=e.target.closest("button[data-k]");if(!b)return;if(b.dataset.d&&Date.now()<holdBlock)return;const box=e.currentTarget,at=[...box.querySelectorAll("button")].indexOf(b),s=cfg(id),c=T.ctl.find(x=>x.k===b.dataset.k);
   if(b.dataset.m!==undefined){const a=Array.isArray(s[c.k])?s[c.k]:[];s[c.k]=a.includes(b.dataset.m)?a.filter(x=>x!==b.dataset.m):[...a,b.dataset.m]}
   else if(b.dataset.d){const[lo,hi,by]=c.step,v=(s[c.k]||people)+(+b.dataset.d)*by;s[c.k]=Math.min(hi,Math.max(lo,v))}
   else{const o=c.tg.find(x=>String(x[0])===b.dataset.v);s[c.k]=o?o[0]:b.dataset.v}
-  save();draw(id);const nb=box.querySelectorAll("button")[at];if(nb)nb.focus()});
+  FIT[id]=null;save();draw(id);const nb=box.querySelectorAll("button")[at];if(nb)nb.focus()});
+ root.addEventListener("click",e=>{
+  const fb=e.target.closest("button[data-fit]"),hb=e.target.closest("button[data-have]");if(!fb&&!hb)return;
+  const s=cfg(id),c=stepCtl(T,s,visOf(T,s));if(!c)return;let res=null,msg="";
+  const nm=cname(c),unit=c.step[3]?" "+c.step[3]:"";
+  if(fb){const ml=+fb.dataset.fit,lab=(JARS.find(j=>j[0]===ml)||[0,ml+" ml"])[1];
+   res=solve(c,v=>{const r=T.calc(withV(s,c,v));return volOf(r)/(r.fill||.85)},ml);
+   if(!res)msg="This recipe does not scale to a jar size.";
+   else{s[c.k]=res.v;const r=T.calc(s);msg=res.over?`Your ${lab} is bigger than the biggest batch this tool makes, so I used the biggest: ${nm} ${res.v}${unit}.`:res.under?`Your ${lab} is smaller than the smallest batch, so I used the smallest: ${nm} ${res.v}${unit}.`:`Set ${nm} to ${res.v}${unit}: that makes about ${rg(volOf(r))} g or ml, which fills a ${lab} with room at the top.`}}
+  else{const rows=T.calc(s).ing.filter(i=>gramsOf(i[1])),sel=root.querySelector(".crhave select"),inp=root.querySelector(".crhave input"),row=rows[sel?+sel.value:0],val=parseFloat(String(inp?inp.value:"").replace(",","."));
+   if(!row)return;
+   if(!(val>0))msg="Type how many grams you have first.";
+   else{res=solve(c,v=>{const x=T.calc(withV(s,c,v)).ing.find(i=>i[0]===row[0]);return x?gramsOf(x[1]):NaN},val);
+    if(!res)msg="This ingredient does not change when the recipe is scaled.";
+    else{s[c.k]=res.v;msg=res.over||res.under?`The recipe only goes from about ${rg(res.lo)} g to ${rg(res.hi)} g of ${row[0].toLowerCase()}. I used the closest: ${nm} ${res.v}${unit}.`:`Set ${nm} to ${res.v}${unit}, so it uses about ${rg(res.got)} g of ${row[0].toLowerCase()}.`}}}
+  FIT[id]={msg};save();draw(id)});
+ let holdBlock=0;
+ const ctlBox=root.querySelector("[data-ctl]"),setStep=(c,v)=>{const s=cfg(id);s[c.k]=Math.min(c.step[1],Math.max(c.step[0],Math.round(v)))};
+ /* press and hold a + or − to keep going (faster after about 1.5 s); the card is redrawn once, when the finger lifts */
+ ctlBox.addEventListener("pointerdown",e=>{const b=e.target.closest("button[data-d]");if(!b||e.button>0)return;
+  const c=T.ctl.find(x=>x.k===b.dataset.k),dir=+b.dataset.d,s=cfg(id);if(!c||!c.step)return;let n=0,fired=0,t;
+  const tick=()=>{fired=1;n++;const by=c.step[2]*(n>10?5:1);setStep(c,(s[c.k]||people)+dir*by);const v=ctlBox.querySelector('input.sv[data-k="'+c.k+'"]');if(v){v.value=s[c.k];v.size=String(s[c.k]).length}t=setTimeout(tick,n>10?70:120)};
+  t=setTimeout(tick,450);
+  const end=()=>{clearTimeout(t);removeEventListener("pointerup",end);removeEventListener("pointercancel",end);
+   if(fired){holdBlock=Date.now()+400;save();setTimeout(()=>draw(id),0)}};
+  addEventListener("pointerup",end);addEventListener("pointercancel",end)});
+ /* tap the number to type one (any whole number inside the tool's range); ↑ ↓ step it from a keyboard */
+ ctlBox.addEventListener("focusin",e=>{if(e.target.matches&&e.target.matches("input.sv"))e.target.select()});
+ ctlBox.addEventListener("input",e=>{const v=e.target;if(v.matches&&v.matches("input.sv")){v.value=v.value.replace(/\D/g,"").slice(0,5);v.size=Math.max(1,v.value.length)}});
+ ctlBox.addEventListener("keydown",e=>{const v=e.target;if(!v.matches||!v.matches("input.sv"))return;
+  if(e.key==="Enter"){v.blur();return}
+  if(e.key==="ArrowUp"||e.key==="ArrowDown"){e.preventDefault();const c=T.ctl.find(x=>x.k===v.dataset.k);setStep(c,(+v.value||cfg(id)[c.k]||people)+(e.key==="ArrowUp"?1:-1)*c.step[2]);save();draw(id);const nv=ctlBox.querySelector('input.sv[data-k="'+c.k+'"]');if(nv)nv.focus()}});
+ ctlBox.addEventListener("change",e=>{const v=e.target;if(!v.matches||!v.matches("input.sv"))return;const c=T.ctl.find(x=>x.k===v.dataset.k);if(!c)return;
+  const x=parseInt(v.value,10);if(Number.isFinite(x))setStep(c,x);FIT[id]=null;save();draw(id)});
  root.addEventListener("click",e=>{const b=e.target.closest("[data-spin]");if(b&&!b.disabled)spinTool(id)});
  draw(id);drawFavs(id);
 });
 
-window.CRAFT={tools:TOOLS,cfg,spin:spinTool,redraw:()=>Object.keys(TOOLS).forEach(id=>{if(document.getElementById("tab-"+id)){draw(id);drawFavs(id)}})};
+/* a shared link carries just the tool id and its settings; every value is checked against the tool's own controls before it is used */
+const applyShare=d=>{const id=d&&typeof d.id==="string"?d.id:"",T=Object.prototype.hasOwnProperty.call(TOOLS,id)?TOOLS[id]:null;if(!T||!d.s||typeof d.s!=="object")return null;
+ const n={};T.ctl.forEach(c=>{const v=d.s[c.k];if(v===undefined||v===null)return;
+  if(c.tg){const m=c.tg.find(x=>String(x[0])===String(v));if(m)n[c.k]=m[0]}
+  else if(c.ms){if(Array.isArray(v))n[c.k]=c.ms.map(x=>x[0]).filter(x=>v.includes(x))}
+  else if(c.step){const x=Number(v);if(Number.isFinite(x))n[c.k]=Math.min(c.step[1],Math.max(c.step[0],x))}});
+ SEEDED[id]=1;Object.assign(cfg(id),n);save();draw(id);return id};
+{const c=document.createElement("style");c.textContent=".crtot{margin-top:10px}.crtot li.big,.crtot li:first-child{font-weight:800}.crfit{margin:14px 0 4px;padding:12px 14px;border-radius:14px;background:var(--soft)}.crfit summary{cursor:pointer;font-weight:800;display:flex;align-items:center;gap:8px}.crfit summary .i{width:20px;height:20px}.crhave{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.crhave select,.crhave input{font:inherit;padding:8px 10px;border:2px solid var(--line,#ddd);border-radius:12px;background:var(--card,#fff);color:inherit;min-width:0}.crhave select{flex:1 1 150px}.crhave input{flex:0 1 96px}.crhave button{font:inherit;font-weight:800;padding:8px 16px;border-radius:999px;border:2px solid var(--ink);background:var(--card,#fff);color:inherit;cursor:pointer}.crmsg:empty{display:none}";document.head.appendChild(c)}
+window.CRAFT={tools:TOOLS,cfg,spin:spinTool,applyShare,redraw:()=>Object.keys(TOOLS).forEach(id=>{if(document.getElementById("tab-"+id)){draw(id);drawFavs(id)}})};
 })();

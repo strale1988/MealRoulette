@@ -70,7 +70,7 @@ const M=[
   {id:"red",n:"Red cabbage",e:"🟣",p:"Remove the outer leaves, quarter, core and shred thinly."}],
  arom:[
   {id:"caraway",n:"Caraway seeds",e:"🟤",r:5,on:1},{id:"carrot",n:"Carrot, grated",e:"🥕",r:150,veg:1,on:1},
-  {id:"apple",n:"Apple, grated",e:"🍎",r:150,veg:1},{id:"beet",n:"Beetroot, grated",e:"🟣",r:100,veg:1},
+  {id:"apple",n:"Apple, grated",e:"🍎",r:150,veg:1},{id:"pear",n:"Pear, grated",e:"🍐",r:150,veg:1},{id:"beet",n:"Beetroot, grated",e:"🟣",r:100,veg:1},
   {id:"onion",n:"Onion, sliced",e:"🧅",r:60,veg:1},{id:"garlic",n:"Garlic, sliced",e:"🧄",r:10,veg:1},
   {id:"juniper",n:"Juniper berries",e:"🫐",r:3},{id:"dill",n:"Fresh dill",e:"🌿",r:10},{id:"fennel",n:"Fennel seeds",e:"🟢",r:3}],
  ready:{cool:[14,35],mild:[7,21],warm:[5,12]},taste:5,
@@ -86,8 +86,8 @@ const M=[
   {id:"gochugaru",n:"Gochugaru (Korean chilli flakes)",e:"🌶️",r:40,on:1},{id:"garlic",n:"Garlic, minced",e:"🧄",r:40,on:1},
   {id:"ginger",n:"Ginger, grated",e:"🫚",r:15,on:1},{id:"fish",n:"Fish sauce",e:"🐟",r:40,on:1,note:"leave out for vegan"},
   {id:"soy",n:"Soy sauce",e:"🫙",r:40,note:"the vegan swap for fish sauce"},{id:"sugar",n:"Sugar",e:"🍬",r:15,on:1},
-  {id:"scallion",n:"Spring onions, chopped",e:"🌱",r:80,on:1},{id:"julienne",n:"Daikon, in matchsticks",e:"⚪",r:150,on:1,only:"napa"},
-  {id:"carrot",n:"Carrot, in matchsticks",e:"🥕",r:60},{id:"porridge",n:"Glutinous rice flour",e:"🍚",r:10,note:"cooked into a porridge with 100 g water"}],
+  {id:"scallion",n:"Spring onions, chopped",e:"🌱",r:80,on:1,veg:1},{id:"julienne",n:"Daikon, in matchsticks",e:"⚪",r:150,on:1,only:"napa",veg:1},
+  {id:"carrot",n:"Carrot, in matchsticks",e:"🥕",r:60,veg:1},{id:"porridge",n:"Glutinous rice flour",e:"🍚",r:10,note:"cooked into a porridge with 100 g water"}],
  ready:{cool:[2,4],mild:[1,3],warm:[1,2]},taste:1,
  fridge:"keeps for months in the fridge and keeps souring slowly"},
 {id:"hot",n:"Hot sauce",e:"🔥",sub:"Fermented chilli mash, blended",
@@ -99,11 +99,21 @@ const M=[
   {id:"serrano",n:"Serranos",e:"🌶️",p:"Remove the stems."},
   {id:"habanero",n:"Habaneros or scotch bonnets",e:"🔥",p:"Remove the stems. Very hot, so gloves and open a window."},
   {id:"bird",n:"Thai bird's eye chillies",e:"🌶️",p:"Remove the stems."},
-  {id:"bell",n:"Red bell pepper (body, mild)",e:"🫑",p:"Remove stem and seeds."}],
+  {id:"bell",n:"Red bell pepper (body, mild)",e:"🫑",p:"Remove stem and seeds."},
+  {id:"green",n:"Green jalapeños",e:"🌶️",p:"Remove the stems. Keep or discard seeds for more or less heat."},
+  {id:"cayenne",n:"Cayenne or long red chillies",e:"🌶️",p:"Remove the stems."},
+  {id:"poblano",n:"Poblanos (very mild)",e:"🫑",p:"Remove stems and seeds."},
+  {id:"ghost",n:"Ghost peppers or Carolina reapers (extreme)",e:"🔥",p:"Remove the stems. Extremely hot: gloves, a mask, an open window, and use a small amount."}],
  arom:[
   {id:"garlic",n:"Garlic cloves",e:"🧄",r:100,veg:1,on:1},{id:"carrot",n:"Carrot",e:"🥕",r:150,veg:1,on:1},
-  {id:"onion",n:"Onion",e:"🧅",r:100,veg:1},{id:"mango",n:"Mango",e:"🥭",r:200,veg:1},
-  {id:"pineapple",n:"Pineapple",e:"🍍",r:200,veg:1},{id:"ginger",n:"Ginger",e:"🫚",r:30,veg:1}],
+  {id:"onion",n:"Onion",e:"🧅",r:100,veg:1},{id:"mango",n:"Mango",e:"🥭",r:200,veg:1,sweet:1},
+  {id:"pineapple",n:"Pineapple",e:"🍍",r:200,veg:1,sweet:1},{id:"ginger",n:"Ginger",e:"🫚",r:30,veg:1},
+  {id:"apple",n:"Apple",e:"🍎",r:150,veg:1,sweet:1},{id:"pear",n:"Pear",e:"🍐",r:150,veg:1,sweet:1},
+  {id:"berries",n:"Berries (strawberries, raspberries, blueberries)",e:"🍓",r:150,veg:1,sweet:1},
+  {id:"banana",n:"Banana (ripe)",e:"🍌",r:100,veg:1,sweet:1},{id:"peach",n:"Peach or apricot",e:"🍑",r:150,veg:1,sweet:1},
+  {id:"pumpkin",n:"Pumpkin or butternut squash",e:"🎃",r:150,veg:1},{id:"tomato",n:"Ripe tomato",e:"🍅",r:200,veg:1},
+  {id:"sweetpot",n:"Sweet potato, steamed soft",e:"🍠",r:150,veg:1},{id:"turmeric",n:"Fresh turmeric",e:"🟠",r:15,veg:1},
+  {id:"cumin",n:"Cumin seeds",e:"🟤",r:3},{id:"cori",n:"Coriander seeds",e:"🟤",r:3}],
  ready:{cool:[10,21],mild:[7,14],warm:[4,8]},taste:4,
  fridge:"keeps 6 months or more in the fridge"},
 {id:"lemons",n:"Preserved lemons",e:"🍋",sub:"Salt-cured citrus",
@@ -152,32 +162,74 @@ const M=[
  ready:{cool:[1,28],mild:[1,28],warm:[1,28]},taste:1,
  fridge:"keeps about 4 weeks in the fridge"}
 ];
+
+/* ---------- tips and ways to use each one ---------- */
+const TIPS={
+hot:[
+ ["Blend only the vegetables, or everything?","Everything: blend the mash and its liquid together for a thick sauce with the full flavour. Vegetables only: strain the mash out of the liquid, blend the solids with just enough of the brine to reach the texture you like, and keep the rest of the brine to use separately. That gives a thicker, less salty sauce."],
+ ["Use the leftover brine","The liquid from the jar is salty, sour and a little spicy. Use it in salad dressings, marinades, soups, bloody marys, over eggs or rice, or instead of water to loosen the blender. Taste before adding more salt. It keeps for months in the fridge."],
+ ["Raw or cooked?","Raw keeps the live cultures and the brightest flavour. Simmering the blended sauce for 5 to 10 minutes gives a mellower, thicker sauce and stops the ferment, which is useful for fruit-heavy mixes. Heat kills the live bacteria."],
+ ["Strain or not?","For a smooth, bottle-ready sauce, press it through a fine sieve. Keep the pulp for a chilli paste, a marinade or a chilli crisp. Leave it unstrained for a rustic, thicker sauce."],
+ ["Making it keep longer: vinegar and pasteurising","For the fridge, a splash of vinegar is enough. To store bottles at room temperature, the sauce must be pH 4.0 or lower (check with pH strips and add vinegar if not), simmered gently for 10 minutes and poured hot into sterilised bottles. Pasteurised sauce has no live cultures. When in doubt, keep it in the fridge."],
+ ["Thick or thin","Thin with vinegar, brine or water. Thicken by simmering, or by adding more carrot, pumpkin or sweet potato. A tiny pinch of xanthan gum (about 0.1 to 0.2% of the weight) stops it separating in the bottle."],
+ ["Fruit and sweet vegetables","Apple, pear, berries, banana, mango, pumpkin and the like add sweetness and body, and they ferment faster and fizzier. Use a jar one size bigger, release the gas daily, start tasting from day 3, and balance the finished sauce with vinegar or lime juice."],
+ ["Controlling the heat","The seeds and white ribs hold most of the heat. Remove them for a milder sauce, or add bell pepper, carrot or fruit to dilute it. Always wear gloves, and wash your hands and the blender well afterwards."]],
+brine:[
+ ["Use the brine","Pickle brine is great in salad dressings and potato salad, as a marinade for chicken or pork, in a bloody mary, or splashed into soups. Do not pour away a jar you have finished."],
+ ["Crunch","Cold storage keeps pickles crunchy. Add a tannin leaf or a black tea bag, trim the blossom ends of cucumbers, and move the jar to the fridge as soon as it tastes right."],
+ ["Starting the next batch","A few spoonfuls of brine from a finished jar can kick-start the next one, but always top up with fresh brine of the same strength."]],
+kraut:[
+ ["Use the juice","Sauerkraut juice is a tangy seasoning for dressings, soups and marinades."],
+ ["Cooked or raw?","Cooking kills the live cultures. Add sauerkraut to hot dishes at the end, or serve it cold on the side. Rinse it for a milder, less salty taste."],
+ ["Keeping it under","If liquid is short, top up with a 2% brine (20 g salt per litre of water). A ziplock bag filled with brine makes a good weight."]],
+kimchi:[
+ ["Let it age","Fresh kimchi is crisp. After a few weeks in the fridge it turns sour and deep, which is perfect for cooking: stews (jjigae), fried rice, pancakes and grilled cheese."],
+ ["Leave room","Fill the jar only about two thirds full: kimchi bubbles up and the juice can overflow. Stand the jar on a plate."],
+ ["Use the juice","The red juice is good in soups, fried rice and dressings."]],
+lemons:[
+ ["How to use them","Rinse a quarter, scrape out and discard the pulp (or save it for stews), and chop the rind. It goes into tagines, dressings, grain salads, roast chicken and fish."],
+ ["Use the brine","The salty, lemony liquid works in dressings and marinades. Keep everything under the liquid and use a clean spoon."]],
+honey:[
+ ["How to use it","The honey turns thin and savoury. Use it on pizza, in dressings and marinades, stirred into hot tea for colds, or drizzled over cheese. Chop the garlic into sauces."],
+ ["Good to know","Never give honey to babies under one year old. Bubbles and a runnier honey are normal. Release the gas daily at first."]],
+quick:[
+ ["Reuse the brine","Once, within a week, you can pickle a second batch of vegetables in the same brine. It will be a bit weaker."],
+ ["Use them","Burgers, tacos, sandwiches, rice bowls, curries and cheese boards. Quick pickles are not fermented, so keep them in the fridge."],
+ ["Adjust the taste","Less sugar for sharper, more sugar for milder. Add chilli flakes, a slice of ginger or a few coriander seeds."]]
+};
+M.forEach(m=>{m.tips=TIPS[m.id]||[]});
 const MB=Object.fromEntries(M.map(m=>[m.id,m]));
+const JARS_UI=[.25,.5,.75,1,1.5,2,3,5],MULTS=[.25,.5,.75,1,1.5,2,3];
 
 /* ---------- state ---------- */
 const load=()=>{try{return JSON.parse(localStorage.getItem(KEY)||"null")||{}}catch(e){return {}}};
-const ST=Object.assign({m:"brine",items:{},arom:{},g:{},sal:1,temp:"mild",batches:[]},load());
+const ST=Object.assign({m:"brine",items:{},arom:{},g:{},sal:1,temp:"mild",batches:[],jar:{},w:{}},load());
+if(!ST.jar||typeof ST.jar!=="object")ST.jar={};if(!ST.w||typeof ST.w!=="object")ST.w={};
 if(!MB[ST.m])ST.m="brine";
 if(!Array.isArray(ST.batches))ST.batches=[];
-const save=()=>{try{localStorage.setItem(KEY,JSON.stringify({m:ST.m,items:ST.items,arom:ST.arom,g:ST.g,sal:ST.sal,temp:ST.temp,batches:ST.batches}))}catch(e){}};
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify({m:ST.m,items:ST.items,arom:ST.arom,g:ST.g,jar:ST.jar,w:ST.w,sal:ST.sal,temp:ST.temp,batches:ST.batches}))}catch(e){}};
 const cur=()=>MB[ST.m];
 const selItems=m=>{const a=(ST.items[m.id]||m.def).filter(id=>m.items.some(i=>i.id===id));return a};
 const selArom=m=>{const base=ST.arom[m.id]||m.arom.filter(a=>a.on).map(a=>a.id);const main=selItems(m);return base.filter(id=>{const a=m.arom.find(x=>x.id===id);return a&&(!a.only||main.includes(a.only))})};
 const amount=m=>ST.g[m.id]||m.g[3];
+const effG=m=>ST.jar[m.id]?fitG(m):amount(m); // the grams in use: from the amount, or worked out to fill the chosen jar
+const wOf=(m,key)=>{const v=(ST.w[m.id]||{})[key];return MULTS.includes(v)?v:1};
+function fitG(m){const L=ST.jar[m.id];let g=L*1000/1.3;for(let i=0;i<6;i++){const r=calc(m,g);if(!r)return amount(m);g*=L*1000/(r.mass*r.jarF)}return Math.max(50,Math.floor(g/10)*10)}
 
 /* ---------- the calculation ---------- */
-function calc(m){
+function calc(m,gx){
  const ids=selItems(m),items=ids.map(id=>m.items.find(i=>i.id===id));
  if(!items.length)return null;
- const g=amount(m),kg=g/1000,lv=Math.min(2,Math.max(0,ST.sal|0)),pct=m.sal?m.sal[lv]:0;
+ const g=gx||effG(m),kg=g/1000,lv=Math.min(2,Math.max(0,ST.sal|0)),pct=m.sal?m.sal[lv]:0;
  const tp=m.noTemp?"mild":ST.temp,[rmin,rmax]=m.ready[tp];
  const aroms=selArom(m).map(id=>m.arom.find(a=>a.id===id));
  const A=a=>({a,amt:a.r*kg}); // amounts per kg of main veg
- const aAmt=a=>a.u==="pcs"?Math.max(1,Math.round(a.r*kg)):a.r*kg;
+ const aAmt=a=>a.u==="pcs"?Math.max(1,Math.round(a.r*kg*wOf(m,"a:"+a.id))):a.r*kg*wOf(m,"a:"+a.id);
  const aTxt=a=>a.u==="pcs"?aAmt(a)+" pcs":G(aAmt(a));
- const each=g/items.length;
- const ing=items.map(i=>({n:i.n,q:G(each),v:1}));
- let salt=0,water=0,extra=[],mass=g,steps=[],jarF=1.25,saltLine="",flav=aroms.length?list(aroms.map(a=>a.n.toLowerCase())):"";
+ const sumW=items.reduce((t,i)=>t+wOf(m,"i:"+i.id),0),iAmt=i=>g*wOf(m,"i:"+i.id)/sumW;
+ const ing=items.map(i=>({n:i.n,q:G(iAmt(i)),v:1}));
+ const mix=[...items.map(i=>({key:"i:"+i.id,n:i.n,e:i.e,q:G(iAmt(i))})),...aroms.map(a=>({key:"a:"+a.id,n:a.n,e:a.e,q:aTxt(a)}))];
+ let salt=0,water=0,liqG=0,liqN="Water",saltIn=true,extra=[],mass=g,steps=[],jarF=1.25,saltLine="",flav=aroms.length?list(aroms.map(a=>a.n.toLowerCase())):"";
  const vegAr=aroms.filter(a=>a.veg),spiceAr=aroms.filter(a=>!a.veg);
  const prep=items.map(i=>i.p);
  const preps=[...new Set(prep)].join(" ");
@@ -187,7 +239,7 @@ function calc(m){
  const jarT=()=>jarTxt(mass/1000*jarF);
 
  if(m.id==="brine"){
-  water=g*.5;salt=water*pct/100;mass=g+water;
+  water=g*.5;salt=water*pct/100;mass=g+water;liqG=water;liqN="Water for the brine";
   ing.push({n:"Water",q:G(water)},{n:"Salt (non-iodised)",q:SALT(salt)});
   aroms.forEach(a=>ing.push({n:a.n,q:aTxt(a)}));
   title="Brine pickles: "+head;
@@ -219,7 +271,7 @@ function calc(m){
   salt=g*pct/100*k;
   const paste=aroms.filter(a=>a.id!=="porridge"),rice=aroms.find(a=>a.id==="porridge");
   const pasteG=paste.reduce((s,a)=>s+aAmt(a),0)+(rice?100:0);
-  mass=g+pasteG;jarF=1.4;
+  mass=g+pasteG;jarF=1.4;saltIn=false;liqG=rice?100:0;liqN="Water for the rice porridge";
   ing.length=0;ing.push({n:it.n.replace(/ \(.*\)/,""),q:G(g),v:1},{n:"Coarse salt (for salting)",q:SALT(salt)});
   aroms.forEach(a=>ing.push({n:a.n,q:a.id==="porridge"?G(aAmt(a))+" + 100 g water":aTxt(a)}));
   title="Kimchi: "+it.n.replace(/ \(.*\)/,"").toLowerCase();
@@ -247,7 +299,7 @@ function calc(m){
    `Strain if you like, bottle it and keep it in the fridge.`];
  }
  else if(m.id==="lemons"){
-  const juice=g*.25;salt=g*pct/100;mass=g+salt+juice;jarF=1.1;
+  const juice=g*.25;salt=g*pct/100;mass=g+salt+juice;jarF=1.1;liqG=juice;liqN="Lemon juice";
   ing.push({n:"Coarse salt",q:SALT(salt)},{n:"Fresh lemon juice, to top up",q:G(juice)});
   aroms.forEach(a=>ing.push({n:a.n,q:aTxt(a)}));
   title="Preserved "+items[0].n.toLowerCase();
@@ -260,7 +312,7 @@ function calc(m){
    `After ${rmin} to ${rmax} days the rind is soft and translucent. To use, rinse, then chop the rind and discard the pulp (or keep it for stews).`];
  }
  else if(m.id==="honey"){
-  const honey=g*.75;mass=g+honey;jarF=1;
+  const honey=g*.75;mass=g+honey;jarF=1;liqG=honey;liqN="Raw honey";
   ing.push({n:"Raw honey",q:G(honey)});
   aroms.forEach(a=>ing.push({n:a.n,q:aTxt(a)}));
   title="Honey ferment: "+items[0].n.toLowerCase();
@@ -272,7 +324,7 @@ function calc(m){
    `Bubbles and a thinner, runnier honey mean it is working. Ready from day ${rmin} (taste at day ${m.taste}), best after ${rmax}. Then keep it in the fridge.`];
  }
  else if(m.id==="quick"){
-  const liq=g*.6,half=liq/2;salt=liq*pct/100;const sugar=liq*.03;mass=g+liq;jarF=1.2;
+  const liq=g*.6,half=liq/2;salt=liq*pct/100;const sugar=liq*.03;mass=g+liq;jarF=1.2;liqG=liq;liqN="Water and vinegar";
   ing.push({n:"Water",q:G(half)},{n:"Vinegar (5%)",q:G(half)},{n:"Salt",q:SALT(salt)},{n:"Sugar",q:G(sugar)});
   aroms.forEach(a=>ing.push({n:a.n,q:aTxt(a)}));
   title="Quick pickles: "+head;
@@ -283,6 +335,19 @@ function calc(m){
    `Cool, uncovered, for 30 minutes, then close the lid and refrigerate.`,
    `Eat after 2 hours; they are best after a day and ${m.fridge.replace("keeps ","keep ")}. Not a ferment, so there are no live cultures.`];
  }
+
+ /* totals */
+ const vegG=g+aroms.filter(a=>a.veg&&a.u!=="pcs").reduce((t,a)=>t+aAmt(a),0);
+ const spG=aroms.filter(a=>!a.veg&&a.u!=="pcs").reduce((t,a)=>t+aAmt(a),0);
+ const totG=vegG+liqG+spG+(saltIn?salt:0)+(m.id==="quick"?g*.6*.03:0);
+ const tot=[];
+ const vegLab=m.id==="honey"?"Garlic, ginger or chillies":m.id==="lemons"?"Fruit":"Vegetables";
+ tot.push({n:vegLab+" in total"+(vegG>g+.5?" (with the extras)":""),q:G(vegG)});
+ if(liqG)tot.push({n:liqN,q:G(liqG)});
+ if(salt)tot.push({n:saltIn?"Salt":"Salt for salting (mostly rinsed off)",q:SALT(salt)});
+ if(spG>=1)tot.push({n:m.id==="kimchi"?"Paste and flavourings":"Spices and flavourings",q:G(spG)});
+ tot.push({n:"Everything in the jar, about",q:G(totG),big:1});
+ tot.push({n:"Jar to use",q:jarT(),big:1});
 
  /* expected timeline */
  if(m.quick){
@@ -298,10 +363,11 @@ function calc(m){
  }
 
  const note=[];
+ if(m.id==="hot"){const fr=aroms.filter(a=>a.sweet).reduce((t,a)=>t+aAmt(a),0);if(fr>vegG*.3)note.push("Lots of sweet fruit ferments quickly and fizzes hard. Use a jar one size bigger, release the gas daily, start tasting on day 3, and balance with vinegar or lime at the end.")}
  if(!m.quick&&m.sal&&ST.temp==="warm"&&lv===0)note.push("A warm room and light salt ferment very fast and can go soft. Choose Classic or Extra salty, or ferment in a cooler spot.");
  if(!m.quick&&ST.temp==="warm"&&lv>0)note.push("In a warm room, check daily and move it to the fridge as soon as it tastes right.");
  if(!m.quick&&ST.temp==="cool")note.push("In a cool room fermentation is slower. Be patient and keep tasting.");
- return {m,title,ing,steps,tl,note,ready:[rmin,rmax],taste:m.taste,jar:jarT(),salt:salt?SALT(salt):"",pct,mass,g,saltBase:m.saltOf};
+ return {m,title,ing,mix,tot,jarF,steps,tl,note,ready:[rmin,rmax],taste:m.taste,jar:jarT(),salt:salt?SALT(salt):"",pct,mass,g,saltBase:m.saltOf};
 }
 
 /* ---------- rendering ---------- */
@@ -337,10 +403,18 @@ function build(){
  const its=m.items.map(i=>`<button data-a="i" data-id="${i.id}" aria-pressed="${sel.includes(i.id)}"><span>${i.e}</span>${esc(i.n)}</button>`).join("");
  const sa=selArom(m);
  const ar=m.arom.filter(a=>!a.only||sel.includes(a.only)).map(a=>`<button data-a="a" data-id="${a.id}" aria-pressed="${sa.includes(a.id)}" ${a.note?`title="${esc(a.note)}"`:""}><span>${a.e}</span>${esc(a.n)}</button>`).join("");
- const g=amount(m);
+ const jm=!!ST.jar[m.id],g=r?r.g:amount(m);
  const sal=m.sal?`<div class="lab" style="margin-top:16px">${I("flame")}Saltiness</div><div class="tg">${LEVELS.map((l,i)=>`<button data-a="s" data-id="${i}" aria-pressed="${ST.sal===i}">${l}</button>`).join("")}</div><p class="sum" style="margin:10px 0 0">${m.sal[ST.sal]}% ${m.saltOf==="water"?"brine, by weight of water":m.saltOf==="liquid"?"of the pickling liquid":m.id==="kimchi"?"of the veg weight, for the salting step":m.id==="lemons"?"of the fruit weight":"of the total weight"}. ${LEVELTIP[ST.sal]}</p>`:"";
  const tmp=m.noTemp?"":`<div class="lab" style="margin-top:16px">${I("clock")}Room temperature</div><div class="tg">${TEMPS.map(t=>`<button data-a="t" data-id="${t.id}" aria-pressed="${ST.temp===t.id}">${t.n}</button>`).join("")}</div><p class="sum" style="margin:10px 0 0">${TEMPS.find(t=>t.id===ST.temp).r}. Warmer means faster.</p>`;
  const pcs=m.id==="lemons"?` · about ${Math.max(1,Math.round(g/110))} fruit`:"";
+ const noun=m.id==="honey"?"honey":m.id==="lemons"?"fruit":"vegetables";
+ const jbtn=JARS_UI.map(L=>`<button data-a="jar" data-id="${L}" aria-pressed="${ST.jar[m.id]===L}">${L<1?Math.round(L*1000)+" ml":L+" L"}</button>`).join("");
+ const amt=`<div class="lab" style="margin-top:16px">${I("ruler")}How much do you want to make?</div>
+  <div class="tg"><button data-a="jm" data-id="w" aria-pressed="${!jm}">By amount</button><button data-a="jm" data-id="j" aria-pressed="${jm}">I have a jar this big</button></div>
+  ${jm?`<p class="sum" style="margin:10px 0 8px">How big is your jar? Every ingredient is scaled to fill it, leaving room at the top.</p><div class="tg">${jbtn}</div>`
+  :`<div class="step" style="margin-top:10px"><button data-a="gm" aria-label="Less ${noun}">${I("minus")}</button><b id="fmg">${g} g</b><button data-a="gp" aria-label="More ${noun}">${I("plus")}</button></div>`}
+  <p class="sum" style="margin:8px 0 0">${jm?"Fits about "+g+" g of "+noun+" · ":""}${(g/1000).toFixed(g%100?2:1)} kg${pcs}${r?` · fills about ${r.jar}`:""}</p>`;
+ const mixH=r&&r.mix.length?`<div class="lab" style="margin-top:16px">${I("ruler")}Fine-tune amounts</div><ul class="fmmix">${r.mix.map(x=>`<li><span>${x.e} ${esc(x.n.replace(/ \(.*\)/,""))}</span><button type="button" data-a="wm" data-id="${x.key}" aria-label="Less ${esc(x.n)}">${I("minus")}</button><b>${esc(x.q)}</b><button type="button" data-a="wp" data-id="${x.key}" aria-label="More ${esc(x.n)}">${I("plus")}</button></li>`).join("")}</ul><p class="sum" style="margin:8px 0 0">Tap − or + to use less or more of one thing. Salt and the jar size follow along. <button type="button" class="fmreset" data-a="wr">Back to the standard recipe</button></p>`:"";
  const side=`
  <p class="hint2" style="margin:0 0 8px">Every amount, including the salt, is worked out for you in grams.</p>
  <section class="panel">
@@ -349,29 +423,31 @@ function build(){
   <p class="sum" style="margin:10px 0 0">${esc(m.desc)}</p>
   <div class="lab" style="margin-top:16px">${I("leaf")}${m.multi?"What is going in? <small style='font-weight:400'>(pick one or more)</small>":"What is going in?"}</div>
   <div class="tg fm">${its}</div>
-  <div class="lab" style="margin-top:16px">${I("ruler")}How much ${m.id==="honey"?"to ferment":m.id==="lemons"?"fruit":"vegetables"}</div>
-  <div class="step"><button data-a="gm" aria-label="Less ${m.id==="honey"?"honey":m.id==="lemons"?"fruit":"vegetables"}">${I("minus")}</button><b id="fmg">${g} g</b><button data-a="gp" aria-label="More ${m.id==="honey"?"honey":m.id==="lemons"?"fruit":"vegetables"}">${I("plus")}</button></div>
-  <p class="sum" style="margin:8px 0 0">${(g/1000).toFixed(g%100?2:1)} kg${pcs}${r?` · makes about ${r.jar}`:""}</p>
+  ${amt}
   ${sal}${tmp}
   <div class="lab" style="margin-top:16px">${I("wand")}Flavour</div>
   <div class="tg fm">${ar}</div>
+  ${mixH}
  </section>
  <button class="fmspin" data-a="rand">Spin a ferment!</button>`;
 
  let out;
  if(!r)out=`<div class="ph"><b>Your ferment shows up here</b>Tick at least one ingredient, or spin a ferment.</div>`;
  else{
+  const totH=`<h3 style="margin-top:18px">${I("ruler")}Total</h3><ul class="ing fmtot">${r.tot.map(t=>`<li${t.big?' class="big"':""}><span>${esc(t.n)}</span><span class="q">${esc(t.q)}</span></li>`).join("")}</ul>`;
+  const tipsH=m.tips&&m.tips.length?`<h3 style="margin-top:22px">${I("wand")}Tips and ways to use it</h3>${m.tips.map(s=>`<details><summary>${esc(s[0])}</summary><p class="desc" style="margin:0 0 12px">${esc(s[1])}</p></details>`).join("")}`:"";
   const dRange=m.quick?"2 hours to 1 day":r.ready[0]===r.ready[1]?r.ready[0]+" days":r.ready[0]+" to "+r.ready[1]+" days";
   out=`<article class="card"><div class="hero"><div class="ic" style="font-size:28px;line-height:1">${m.e}</div><h2>${esc(r.title)}</h2></div><div class="body">
   <div class="meta"><span>${I("clock")}Ready in ${dRange}</span><span>${I("jar")}${r.jar}</span>${r.salt?`<span>${I("flame")}${r.salt} salt${r.pct&&m.saltOf==="water"?` · ${r.pct}% brine`:""}</span>`:""}${m.quick?`<span>${I("fridge")}Fridge only</span>`:""}</div>
   <p class="desc">${esc(m.desc)}</p>
   ${r.note.map(n=>`<div class="call" style="background:var(--soft)">${I("flame")}<span>${esc(n)}</span></div>`).join("")}
   <div class="split"><div><h3>${I("list")}Ingredients <small style="text-transform:none;letter-spacing:0;color:var(--mute)">(tap to tick off)</small></h3>
-  <ul class="ing">${r.ing.map(i=>`<li><span>${esc(i.n)}${window.XLINK?XLINK.btn(i.n,null,{ferm:m.id}):""}</span><span class="q">${esc(i.q)}</span></li>`).join("")}</ul></div>
+  <ul class="ing">${r.ing.map(i=>`<li><span>${esc(i.n)}${window.XLINK?XLINK.btn(i.n,null,{ferm:m.id}):""}</span><span class="q">${esc(i.q)}</span></li>`).join("")}</ul>${totH}</div>
   <div><h3>${I("chef")}Method</h3><ol>${r.steps.map(s=>`<li><span>${esc(s)}</span></li>`).join("")}</ol></div></div>
   <h3 style="margin-top:22px">${I("clock")}What to expect</h3>
   <ol class="fmtl">${r.tl.map(t=>`<li><b>${esc(t[0])}</b><span>${esc(t[1])}</span></li>`).join("")}</ol>
   ${m.quick?"":`<h3 style="margin-top:22px">${I("check")}Keep it safe</h3>${SAFETY.map(s=>`<details><summary>${esc(s[0])}</summary><p class="desc" style="margin:0 0 12px">${esc(s[1])}</p></details>`).join("")}`}
+  ${tipsH}
   <div class="row"><button data-a="start">${I("cal")}Start this batch today</button><button data-a="copy">${I("cart")}Copy list</button><button data-a="share">${I("share")}Share</button><button data-a="rand">Spin again</button></div></div></article>`;
  }
  const bt=ST.batches.length?ST.batches.map((b,i)=>`<li class="${isReady(b)?"rdy":""}"><div><b>${esc(b.title)}</b>${isReady(b)?' <span class="rdytag">Ready</span>':""}<small>Started ${fmtDate(b.start+"T00:00:00")} · ${esc(status(b))}</small></div><button data-a="rm" data-id="${i}" aria-label="Remove ${esc(b.title)}">${I("x")}</button></li>`).join(""):`<li class="none">Nothing on the go. Start a batch and its tasting days show up here.</li>`;
@@ -380,7 +456,7 @@ function build(){
   fmbox.addEventListener("click",e=>{const b=e.target.closest('button[data-a="rm"]');if(!b)return;ST.batches.splice(+b.dataset.id,1);save();build()})}}
  if(fmbox)fmbox.innerHTML=`<div class="lab">${I("jar")}My ferments</div><ul>${bt}</ul>`;
  root.innerHTML=`<h1 class="hl">What are we fermenting?</h1><p>Pick something to make, or spin for an idea.</p><div class="cols"><aside class="side">${side}</aside><section class="res"><div id="fmout">${out}</div></section></div>`;
- root.querySelectorAll(".ing li").forEach(li=>li.onclick=()=>li.classList.toggle("done"));
+ root.querySelectorAll(".ing:not(.fmtot) li").forEach(li=>li.onclick=()=>li.classList.toggle("done"));
  root._r=r;
  {const row=root.querySelector("#fmout .card .row");if(row&&r&&window.__tidyRow){window.__thumbs(row,r.title,{m:m.id},()=>{const a=row.querySelector("[data-a=rand]");if(a)a.click()});window.__tidyRow(row,"ferm")}}
  {const h=root.querySelector("#fmout .hero");if(h){const b=document.createElement("button");b.type="button";b.className="heroback";b.setAttribute("aria-label","Back");b.title="Back";b.innerHTML=XB;b.onclick=back;h.append(b)}}
@@ -401,7 +477,7 @@ ST.m=mm.id;
  const base=mm.arom.filter(x=>!x.only||ST.items[mm.id].includes(x.only));
  ST.arom[mm.id]=shuf(base.map(x=>x.id)).slice(0,2+Math.floor(Math.random()*3));
  if(mm.id==="kimchi"&&ST.items[mm.id][0]==="napa")ST.arom[mm.id]=[...new Set([...ST.arom[mm.id],"gochugaru","garlic"])];
- ST.sal=1;ST.temp=rnd(["cool","mild","mild","warm"]);
+ ST.w[mm.id]={};ST.sal=1;ST.temp=rnd(["cool","mild","mild","warm"]);
 }
 function jarHTML(em){
  const f=em.map((e,k)=>`<div class="ing" style="--k:${k};--r:${Math.round(k*360/em.length)}deg;--R:30px"><u><i>${(window.__ico&&window.__ico(e))||e}</i></u></div>`).join("");
@@ -436,6 +512,16 @@ root.addEventListener("click",e=>{
   if(ST.arom[m.id])ST.arom[m.id]=selArom(m);
  }
  else if(a==="a"){const c=selArom(m);ST.arom[m.id]=c.includes(id)?c.filter(x=>x!==id):[...c,id]}
+ else if(a==="jm"){
+  if(id==="j")ST.jar[m.id]=ST.jar[m.id]||1;
+  else if(ST.jar[m.id]){const [lo,hi,st]=m.g,cg=effG(m);ST.jar[m.id]=0;ST.g[m.id]=Math.min(hi,Math.max(lo,Math.round(cg/st)*st))}
+ }
+ else if(a==="jar"){const L=+id;if(JARS_UI.includes(L))ST.jar[m.id]=L}
+ else if(a==="wm"||a==="wp"){
+  const w=ST.w[m.id]=ST.w[m.id]||{},cur0=wOf(m,id);let k=MULTS.indexOf(cur0)+(a==="wp"?1:-1);k=Math.min(MULTS.length-1,Math.max(0,k));
+  if(MULTS[k]===1)delete w[id];else w[id]=MULTS[k];
+ }
+ else if(a==="wr")ST.w[m.id]={};
  else if(a==="s")ST.sal=+id;
  else if(a==="t")ST.temp=id;
  else if(a==="gm"||a==="gp"){const [lo,hi,st]=m.g;ST.g[m.id]=Math.min(hi,Math.max(lo,amount(m)+(a==="gp"?st:-st)))}
@@ -447,7 +533,7 @@ root.addEventListener("click",e=>{
  }
  else if(a==="share"){
   const r=root._r,m=cur();if(!r||!window.__shareOut)return;
-  window.__shareOut("f",{m:m.id,items:selItems(m),arom:selArom(m),g:amount(m),sal:ST.sal,temp:ST.temp},r.title,r.title+" · ready in about "+(r.ready[0]===r.ready[1]?r.ready[0]:r.ready[0]+" to "+r.ready[1])+" days",b,()=>r.title+"\n"+r.ing.map(i=>"• "+i.n+" – "+i.q).join("\n"));
+  window.__shareOut("f",{m:m.id,items:selItems(m),arom:selArom(m),g:amount(m),jar:ST.jar[m.id]||0,w:ST.w[m.id]||{},sal:ST.sal,temp:ST.temp},r.title,r.title+" · ready in about "+(r.ready[0]===r.ready[1]?r.ready[0]:r.ready[0]+" to "+r.ready[1])+" days",b,()=>r.title+"\n"+r.ing.map(i=>"• "+i.n+" – "+i.q).join("\n"));
   return;
  }
  else if(a==="rm"){ST.batches.splice(+id,1)}
@@ -472,10 +558,13 @@ function applyShare(d){ // a shared setup: validate every id against the real me
  if(!its.length)return false;
  ST.m=m.id;ST.items[m.id]=m.multi?its:its.slice(0,1);ST.arom[m.id]=ar;
  const g=Number(d.g);if(Number.isFinite(g)&&g>0)ST.g[m.id]=Math.min(Math.max(g,m.g[0]),m.g[1]);
+ ST.jar[m.id]=JARS_UI.includes(Number(d.jar))?Number(d.jar):0;
+ {const w={};if(d.w&&typeof d.w==="object")Object.keys(d.w).forEach(k=>{const ok=/^[ia]:/.test(k)&&(k[0]==="i"?m.items:m.arom).some(x=>x.id===k.slice(2));if(ok&&MULTS.includes(d.w[k])&&d.w[k]!==1)w[k]=d.w[k]});ST.w[m.id]=w}
  ST.sal=Math.min(2,Math.max(0,Number(d.sal)|0));ST.temp=["cool","mild","warm"].includes(d.temp)?d.temp:"mild";
  enter();save();build();return true;
 }
-const snap=()=>{const m=cur();return{m:m.id,items:selItems(m),arom:selArom(m),g:amount(m),sal:ST.sal,temp:ST.temp}}; // the setup as it is now, for "Back to ..." links
+const snap=()=>{const m=cur();return{m:m.id,items:selItems(m),arom:selArom(m),g:amount(m),jar:ST.jar[m.id]||0,w:ST.w[m.id]||{},sal:ST.sal,temp:ST.temp}}; // the setup as it is now, for "Back to ..." links
 const have=(ids,w)=>ST.batches.some(b=>[].concat(ids).includes(b.m)&&isReady(b)&&(!w||new RegExp(w,"i").test(b.title))); // is a batch of this method ready in My kitchen? (w: a word the batch title must contain, e.g. "onion")
+{const c=document.createElement("style");c.textContent=".fmmix{list-style:none;margin:8px 0 0;padding:0}.fmmix li{display:flex;align-items:center;gap:8px;padding:6px 0;border-top:1px solid var(--line)}.fmmix li span{flex:1;min-width:0;font-weight:600}.fmmix button{flex:none;width:36px;height:36px;border-radius:50%;border:2px solid var(--ink);background:var(--card);color:var(--ink);display:grid;place-items:center;padding:0;cursor:pointer}.fmmix button svg{width:16px;height:16px}.fmmix b{min-width:64px;text-align:center}.fmreset{font:inherit;font-weight:800;background:none;border:0;padding:0;text-decoration:underline;color:var(--acct,var(--acc2));cursor:pointer}.fmtot li.big{font-weight:800}";document.head.appendChild(c)}
 window.FERMENT={rebuild:build,methods:M,applyShare,snap,have};
 })();

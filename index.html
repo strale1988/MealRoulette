@@ -3080,7 +3080,7 @@ document.addEventListener("visibilitychange",()=>{if(!document.hidden&&slotOf(ne
 /* Loader: downloads every file in parallel (fast on phones), runs them in order, retries a failed file once,
    and shows a Reload button instead of a blank page if something still fails. */
 (function(){
-var FILES=["kitchen.js","ingredients.js","cookbook.bundle.js","craft/craft-pizza.js","craft/craft-ferment.js","craft/craft-lib.js","craft/craft-doughs.js","craft/craft-mains.js","craft/craft-light.js","craft/craft-pantry.js","craft/craft-sweet.js","craft/craft-meat.js","craft.js","xlink.js","dinner.js","engine.js"];
+var FILES=["kitchen.js","ingredients.js","cookbook.bundle.js","craft/craft-pizza.js","craft/craft-ferment.js","craft/craft-lib.js","craft/craft-doughs.js","craft/craft-mains.js","craft/craft-light.js","craft/craft-pantry.js","craft/craft-sweet.js","craft/craft-meat.js","craft/craft-extras.js","craft.js","xlink.js","dinner.js","engine.js"];
 var boot=document.getElementById("boot");
 function fail(){var sp=document.getElementById("splash");if(sp)sp.remove();boot.hidden=false;document.getElementById("bootbtn").onclick=function(){
   var go=function(){location.reload()};
