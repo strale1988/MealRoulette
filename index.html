@@ -988,6 +988,9 @@ ul.ing li .q{white-space:normal;text-align:right;flex:0 1 auto;max-width:52%;min
  button.xl::after{inset:-12px -4px}
  .heroback::after{content:"";position:absolute;inset:-4px}
 }
+/* spinners own the whole screen: hide the menu bar (and the toast-free bottom bar) while any spinner or the start wheel is up.
+   The reels sit inside a tab (its fade animation makes a stacking context), so z-index alone cannot put them above the bar. */
+html:has(.reel.on,.fmreel,.pzreel.on,.splash:not(.out)) .tabs{display:none!important}
 </style>
 </head>
 <body>
