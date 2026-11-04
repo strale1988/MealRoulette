@@ -252,6 +252,7 @@ function ingHTML(r,id,s){
  return G.map((g,k)=>{const head=g.l||(labelled&&k>0?"Also":""),hl=g.l?sec(g.l):"";
   return(head?`<div class="ingh"><span>${esc(head)}</span>${hl}</div>`:"")+`<ul class="ing">${g.r.map(x=>{const n=g.l?cap1(x.n):x.raw;return`<li><span>${esc(n)}${X&&!hl?X.btn(n,null,ctx):""}</span><span class="q">${esc(x.q)}</span></li>`}).join("")}</ul>`}).join("")}
 /* ---- totals, "fit my jar or pot" and "I have this much": generic, they work through each tool's own calc so the steps stay right ---- */
+const extrasSet=(T,s)=>T.ctl.some(c=>(c.g||c.x)&&s[c.k]!==undefined&&JSON.stringify(s[c.k])!==JSON.stringify(c.def===undefined?null:c.def)&&!(Array.isArray(s[c.k])&&!s[c.k].length))||T.ctl.some(c=>c.tg&&!(c.g||c.x)&&(c.tg.find(o=>String(o[0])===String(s[c.k]))||[])[2]);
 const visOf=(T,s)=>T.ctl.filter(c=>(geek()||!(c.g||c.x))&&(!c.only||[].concat(c.only).includes(s[T.main||"t"]))&&(!c.when||[].concat(c.when.v).includes(s[c.when.k])));
 const FIT={},FITJAR=["sauce","spice","jam","dairy","drinks","soup","frozen","starter","cheese"],JARS=[[250,"250 ml"],[500,"500 ml"],[750,"750 ml"],[1000,"1 L"],[2000,"2 L"],[3000,"3 L"]];
 const gramsOf=q=>{const m=/^(?:about\s)?(\d+(?:\.\d+)?)\s?(g|ml)$/i.exec(String(q).trim());return m?+m[1]:null};
@@ -282,11 +283,11 @@ function draw(id){
  const T=TOOLS[id],s=cfg(id),root=document.getElementById("tab-"+id);if(!root)return;
  const nm=c=>esc(c.label.replace(/\s*\(.*$/,"").toLowerCase().replace(/^how many\s*/,"").replace(/^how much to make$/,"")||"amount"); // "Flour" -> "flour", "How many cookies" -> "cookies"
  const vis=visOf(T,s);
- const ctl=vis.map(c=>`<div class="lab"${c===vis[0]?"":' style="margin-top:16px"'}>${I(c.icon)}${esc(c.label)}</div>`+(c.tg?`<div class="tg">${c.tg.filter(o=>geek()||!o[2]).map(o=>`<button data-k="${c.k}" data-v="${esc(o[0])}" aria-pressed="${String(s[c.k])===String(o[0])}">${esc(o[1])}</button>`).join("")}</div>`
+ const ctl=vis.map(c=>`<div class="lab${c.g||c.x?" gk":""}"${c===vis[0]?"":' style="margin-top:16px"'}>${I(c.icon)}${esc(c.label)}</div>`+(c.tg?`<div class="tg">${c.tg.filter(o=>geek()||!o[2]).map(o=>`<button data-k="${c.k}" data-v="${esc(o[0])}" aria-pressed="${String(s[c.k])===String(o[0])}">${esc(o[1])}</button>`).join("")}</div>`
    :c.ms?`<div class="tg">${c.ms.map(o=>`<button data-k="${c.k}" data-m="${esc(o[0])}" aria-pressed="${(s[c.k]||[]).includes(o[0])}">${esc(o[1])}</button>`).join("")}</div>`
    :`<div class="step"><button data-k="${c.k}" data-d="-1" aria-label="Less ${nm(c)}">${I("minus")}</button><b><input class="sv" data-k="${c.k}" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" value="${s[c.k]||people}" size="${String(s[c.k]||people).length}" aria-label="${esc(c.label.replace(/\s*\(.*$/,""))}: type a number"${c.step[3]?` title="Tap to type a number"`:""}>${c.step[3]?`<span class="su">${esc(c.step[3])}</span>`:""}</b><button data-k="${c.k}" data-d="1" aria-label="More ${nm(c)}">${I("plus")}</button></div>`)).join("");
  const r=T.calc(s);if(!r.learn){const L=LEARN[id];r.learn=L&&L[s[T.main||"t"]]}
- root.querySelector("[data-ctl]").innerHTML=`<div class="geekrow"><button type="button" class="geekbtn" data-geek aria-pressed="${geek()}">${I("wand")}Geek foody</button><span>${geek()?"Extra options are on":"Show more options"}</span></div>`+ctl;
+ root.querySelector("[data-ctl]").innerHTML=(geek()&&extrasSet(T,s)?`<div class="geekrow"><span>Extra options are on</span><button type="button" class="geekreset" data-geekreset>Reset extras</button></div>`:"")+ctl;
  root.querySelector("[data-out]").innerHTML=`<article class="card"><div class="hero"><div class="ic">${I(T.icon)}</div><h2>${esc(r.title)}</h2></div><div class="body">
   <div class="meta">${r.meta.map(m=>`<span>${I(m[0])}${esc(m[1])}</span>`).join("")}</div>
   ${(r.note||[]).map(n=>`<div class="call" style="background:var(--soft)">${I("flame")}<span>${esc(n)}</span></div>`).join("")}
@@ -362,7 +363,8 @@ Object.keys(TOOLS).forEach(id=>{
   else if(b.dataset.d){const[lo,hi,by]=c.step,v=(s[c.k]||people)+(+b.dataset.d)*by;s[c.k]=Math.min(hi,Math.max(lo,v))}
   else{const o=c.tg.find(x=>String(x[0])===b.dataset.v);s[c.k]=o?o[0]:b.dataset.v}
   FIT[id]=null;save();draw(id);const nb=box.querySelectorAll("button")[at];if(nb)nb.focus()});
- root.addEventListener("click",e=>{if(e.target.closest("[data-geek]")){window.GEEK.set(!geek());return}});
+ root.addEventListener("click",e=>{if(e.target.closest("[data-geek]")){window.GEEK.set(!geek());return}
+  if(e.target.closest("[data-geekreset]")){const s=cfg(id);T.ctl.forEach(c=>{if(c.g||c.x)s[c.k]=Array.isArray(c.def)?[]:c.def;else if(c.tg){const o=c.tg.find(x=>String(x[0])===String(s[c.k]));if(o&&o[2])s[c.k]=c.def}});FIT[id]=null;save();draw(id)}});
  root.addEventListener("click",e=>{
   const fb=e.target.closest("button[data-fit]"),hb=e.target.closest("button[data-have]");if(!fb&&!hb)return;
   const s=cfg(id),c=stepCtl(T,s,visOf(T,s));if(!c)return;let res=null,msg="";
@@ -409,7 +411,12 @@ const applyShare=d=>{const id=d&&typeof d.id==="string"?d.id:"",T=Object.prototy
  let need=false;T.ctl.forEach(c=>{if(n[c.k]===undefined)return;if(c.g||c.x){if(JSON.stringify(n[c.k])!==JSON.stringify(c.def===undefined?null:c.def)&&!(Array.isArray(n[c.k])&&!n[c.k].length))need=true}else if(c.tg){const o=c.tg.find(x=>String(x[0])===String(n[c.k]));if(o&&o[2])need=true}});
  if(need&&!geek())window.GEEK.set(true);
  SEEDED[id]=1;Object.assign(cfg(id),n);save();draw(id);return id};
-{const c=document.createElement("style");c.textContent=".crtot{margin-top:10px}.crtot li.big,.crtot li:first-child{font-weight:800}.crfit{margin:14px 0 4px;padding:12px 14px;border-radius:14px;background:var(--soft)}.crfit summary{cursor:pointer;font-weight:800;display:flex;align-items:center;gap:8px}.crfit summary .i{width:20px;height:20px}.crhave{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.crhave select,.crhave input{font:inherit;padding:8px 10px;border:2px solid var(--line,#ddd);border-radius:12px;background:var(--card,#fff);color:inherit;min-width:0}.crhave select{flex:1 1 150px}.crhave input{flex:0 1 96px}.crhave button{font:inherit;font-weight:800;padding:8px 16px;border-radius:999px;border:2px solid var(--ink);background:var(--card,#fff);color:inherit;cursor:pointer}.crmsg:empty{display:none}";document.head.appendChild(c)}
-if(window.GEEK)window.GEEK.sub(()=>window.CRAFT.redraw());
-window.CRAFT={tools:TOOLS,cfg,spin:spinTool,applyShare,redraw:()=>Object.keys(TOOLS).forEach(id=>{if(document.getElementById("tab-"+id)){draw(id);drawFavs(id)}})};
+{const c=document.createElement("style");c.textContent=".lab.gk{border-left:3px dotted var(--acct,var(--acc2));padding-left:8px}.geekreset{font:inherit;font-size:12px;font-weight:800;background:none;border:0;padding:0;text-decoration:underline;color:var(--acct,var(--acc2));cursor:pointer}.crtot{margin-top:10px}.crtot li.big,.crtot li:first-child{font-weight:800}.crfit{margin:14px 0 4px;padding:12px 14px;border-radius:14px;background:var(--soft)}.crfit summary{cursor:pointer;font-weight:800;display:flex;align-items:center;gap:8px}.crfit summary .i{width:20px;height:20px}.crhave{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.crhave select,.crhave input{font:inherit;padding:8px 10px;border:2px solid var(--line,#ddd);border-radius:12px;background:var(--card,#fff);color:inherit;min-width:0}.crhave select{flex:1 1 150px}.crhave input{flex:0 1 96px}.crhave button{font:inherit;font-weight:800;padding:8px 16px;border-radius:999px;border:2px solid var(--ink);background:var(--card,#fff);color:inherit;cursor:pointer}.crmsg:empty{display:none}";document.head.appendChild(c)}
+/* redraw one tool, or all of them: the tab on screen first, the rest a moment later so switching "Geek foody" feels instant */
+const redraw=only=>{const ids=Object.keys(TOOLS).filter(id=>document.getElementById("tab-"+id)&&(!only||id===only)),one=id=>{draw(id);drawFavs(id)};
+ if(only||ids.length<2){ids.forEach(one);return}
+ const first=typeof tab==="string"&&ids.includes(tab)?tab:null;if(first)one(first);
+ const rest=ids.filter(id=>id!==first);let i=0;const step=()=>{if(i<rest.length){one(rest[i++]);setTimeout(step,0)}};setTimeout(step,0)};
+if(window.GEEK)window.GEEK.sub(()=>redraw());
+window.CRAFT={tools:TOOLS,cfg,spin:spinTool,applyShare,redraw};
 })();

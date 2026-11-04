@@ -102,7 +102,8 @@ if(T.jam){const t=T.jam;
   {k:"sx",label:"Sweetness",icon:"flame",def:1,x:1,tg:[[0,"Less sweet"],[1,"As written"],[2,"Sweeter"]],only:["choc","chai","mulled","smoothie"]},
   {k:"sf",label:"Fruit",icon:"leaf",def:"bb",x:1,tg:[["bb","Berry + banana"],["mg","Mango + banana"],["pb","Peach + berry"],["gs","Apple + spinach"]],only:"smoothie"},
   {k:"si",label:"Infuse the syrup",icon:"wand",def:[],x:1,ms:[["ginger","Ginger"],["mint","Mint"],["vanilla","Vanilla"],["berries","Berries"],["rosemary","Rosemary"],["peel","Lemon peel"],["cinnamon","Cinnamon stick"],["star","Star anise"],["cardamom","Cardamom"],["cloves","Cloves"],["thyme","Thyme"],["basil","Basil"],["orange","Orange peel"]],only:"syrup"},
-  {k:"xb",label:"Flavour it with",icon:"wand",def:[],x:1,ms:[["rosemary","Rosemary"],["cinnamon","Cinnamon stick"],["star","Star anise"],["cardamom","Cardamom"],["cloves","Cloves"],["vanilla","Vanilla"],["ginger","Ginger"],["mint","Mint"],["thyme","Thyme"],["basil","Basil"],["orange","Orange peel"],["lemon","Lemon peel"]],only:["tea","lemonade","choc","chai","mulled","smoothie"]}],
+  {k:"xb",label:"Flavour it with",icon:"wand",def:[],x:1,ms:[["rosemary","Rosemary"],["cinnamon","Cinnamon stick"],["star","Star anise"],["cardamom","Cardamom"],["cloves","Cloves"],["vanilla","Vanilla"],["ginger","Ginger"],["mint","Mint"],["thyme","Thyme"],["basil","Basil"],["orange","Orange peel"],["lemon","Lemon peel"]],only:["tea","lemonade","choc","chai","mulled"]},
+  {k:"xc",label:"Blend in",icon:"wand",def:[],x:1,ms:[["ginger","Ginger"],["mint","Mint"],["basil","Basil"],["vanilla","Vanilla"],["orange","Orange peel"],["lemon","Lemon peel"]],only:"smoothie"}],
  (r,s)=>{const a=s.a||1000,k=a/1000;
   if(["choc","chai","mulled","smoothie"].includes(s.t))scaleRows(r,/^(sugar|honey)/i,[.5,1,1.5][s.sx===undefined?1:s.sx]);
   if(s.t==="smoothie"&&FR[s.sf]){const f=FR[s.sf];
@@ -112,7 +113,7 @@ if(T.jam){const t=T.jam;
    r.title=r.title.replace(/^Berry banana/,f[1]);r.learn=undefined}
   if(["tea","lemonade","choc","chai","mulled","smoothie"].includes(s.t)){const kk=a/250,pc=n=>num(Math.max(1,Math.round(n)),"piece","pieces"),
     B={rosemary:["Rosemary sprigs",num(Math.max(1,Math.round(kk/2)),"sprig","sprigs")],cinnamon:["Cinnamon sticks",num(Math.max(1,Math.round(kk/2)),"stick","sticks")],star:["Star anise",num(Math.max(1,Math.round(kk/2)),"star","stars")],cardamom:["Cardamom pods, crushed",num(Math.max(2,Math.round(2*kk)),"pod","pods")],cloves:["Cloves",num(Math.max(2,Math.round(2*kk)),"clove","cloves")],vanilla:["Vanilla pod, split",num(Math.max(1,Math.round(kk/4)),"pod","pods")],ginger:["Fresh ginger, sliced",G(4*kk)],mint:["Fresh mint",G(3*kk)],thyme:["Thyme sprigs",num(Math.max(1,Math.round(kk/2)),"sprig","sprigs")],basil:["Basil leaves",G(3*kk)],orange:["Orange peel, in strips",num(Math.max(1,Math.round(kk/2)),"strip","strips")],lemon:["Lemon peel, in strips",num(Math.max(1,Math.round(kk/2)),"strip","strips")]};
-   const xb=(s.xb||[]).filter(x=>B[x]);if(xb.length){xb.forEach(x=>r.ing.push(B[x]));const nm=list(xb.map(x=>B[x][0].toLowerCase().replace(/,.*$/,"")));
+   const xb=((s.t==="smoothie"?s.xc:s.xb)||[]).filter(x=>B[x]);if(xb.length){xb.forEach(x=>r.ing.push(B[x]));const nm=list(xb.map(x=>B[x][0].toLowerCase().replace(/,.*$/,"")));
     r.steps.splice(Math.max(0,r.steps.length-1),0,["choc","chai","mulled"].includes(s.t)?"Add the "+nm+" with the other spices and warm them together, then strain.":s.t==="smoothie"?"Blend in the "+nm+" with everything else.":"Add the "+nm+" and leave to steep in the fridge 2 hours, then strain out the woody pieces.")}}
   if(s.t==="syrup"){const picks=(s.si||[]).filter(x=>IN[x]);if(picks.length){picks.forEach(x=>r.ing.push([IN[x][0],IN[x][1](k)]));
    r.steps.splice(Math.max(0,r.steps.length-1),0,"While the syrup is still warm, add the "+list(picks.map(x=>IN[x][0].toLowerCase().replace(/,.*$/,"")))+" and leave it to steep 20–30 minutes, then strain.");
@@ -142,13 +143,14 @@ if(T.jam){const t=T.jam;
  kr:{adj:"Korean-inspired",sauce:[["Mayonnaise",18],["Gochujang",6],["Honey",2]],tops:[["Kimchi, chopped",25],["Spring onion, sliced",5],["Sesame seeds",2]],bun:"soft",tip:"Squeeze the kimchi dry so the bread does not go soggy.",note:"Gochujang mayo and tangy kimchi."},
  in:{adj:"Indian-inspired",sauce:[["Plain yogurt",25],["Fresh mint, chopped",4],["Lime juice",3],["Green chilli, finely chopped",1]],cheese:["Paneer, sliced and pan-fried",30],tops:[["Red onion rings",10],["Tomato, sliced",20],["Mango chutney",10],["Fresh coriander",3]],patty:["Garam masala",1.5],bun:"soft or naan-style",tip:"Fry the paneer slices 1–2 minutes per side until golden.",note:"Mint yogurt, paneer and mango chutney."},
  me:{adj:"Middle Eastern",sauce:[["Plain yogurt",20],["Tahini",8],["Lemon juice",4],["Garlic, crushed",1]],cheese:["Halloumi, sliced",30],tops:[["Pickled turnips or cucumbers",15],["Tomato, sliced",20],["Flat-leaf parsley",3],["Za'atar",1]],bun:"pitta",tip:"Grill the halloumi 1 minute per side until golden.",note:"Tahini yogurt, halloumi and za'atar."},
- vn:{adj:"Vietnamese-inspired",sauce:[["Mayonnaise",15],["Sriracha",3]],tops:[["Pickled carrots",20],["Cucumber, sliced",15],["Fresh coriander",4],["Fresh chilli, sliced",3]],patty:["Fish sauce",3],bun:"baguette-style",tip:"A crusty baguette-style roll is what makes it a bánh mì.",note:"Sriracha mayo, pickled carrots and coriander."},
- es:{adj:"Spanish-inspired",sauce:[["Mayonnaise",20],["Garlic, crushed",2],["Smoked paprika",2]],cheese:["Manchego, sliced",20],tops:[["Roasted red peppers",20],["Rocket",8],["Chorizo, thinly sliced and fried",20]],bun:"rustic",tip:"Fry the chorizo slices 1 minute per side to release their red oil.",note:"Smoked paprika aioli, manchego and chorizo."},
+ vn:{adj:"Vietnamese-inspired",sauce:[["Mayonnaise",15],["Sriracha",3]],tops:[["Pickled carrots",20],["Cucumber, sliced",15],["Fresh coriander",4],["Fresh chilli, sliced",3]],patty:["Fish sauce",3,"Soy sauce"],bun:"baguette-style",tip:"A crusty baguette-style roll is what makes it a bánh mì.",note:"Sriracha mayo, pickled carrots and coriander."},
+ es:{adj:"Spanish-inspired",sauce:[["Mayonnaise",20],["Garlic, crushed",2],["Smoked paprika",2]],cheese:["Manchego, sliced",20],tops:[["Roasted red peppers",20],["Rocket",8],["Chorizo, thinly sliced and fried",20,1]],bun:"rustic",tip:"Fry the chorizo slices 1 minute per side to release their red oil.",note:"Smoked paprika aioli, manchego and chorizo."},
  tx:{adj:"Texas BBQ-style",sauce:[["BBQ sauce",25],["Mayonnaise",8]],cheese:["Cheddar, sliced",20],tops:[["Coleslaw",30],["Crispy fried onions",8],["Pickles",12]],bun:"soft",tip:"Toast the bread on the grill with a little butter.",note:"Smoky sauce, cheddar and coleslaw."}};
  const OPTS=[["none","Classic"],["fr","French"],["it","Italian"],["gr","Greek"],["mx","Mexican"],["jp","Japanese"],["kr","Korean"],["in","Indian"],["me","Middle Eastern"],["vn","Vietnamese"],["es","Spanish"],["tx","Texas BBQ"]];
  const CTL=[{k:"xi",label:"Inspired by (swaps the sauce, cheese and toppings)",icon:"wand",def:"none",tg:OPTS}];
  const lo=a=>a.map(x=>{const n=x[0].replace(/,.*$/,"");return /^(Dijon|Greek|BBQ|Kalamata|Monterey)/.test(n)?n:n.charAt(0).toLowerCase()+n.slice(1)});
- extend("burger",CTL,(r,s)=>{const st=STY[s.xi];if(!st)return;const n=s.p||people;
+ const veg=(st,v)=>Object.assign({},st,{tops:st.tops.filter(x=>!(v&&x[2])),patty:st.patty&&v&&st.patty[2]?[st.patty[2],st.patty[1]]:st.patty,tip:v?st.tip.replace(/^Fry the chorizo.*$/,"Fry the peppers 2 minutes to sweeten them."):st.tip,note:v?st.note.replace(" and chorizo",""):st.note});
+ extend("burger",CTL,(r,s)=>{let st=STY[s.xi];if(!st)return;st=veg(st,["bean","mushroom"].includes(s.t));const n=s.p||people;
   r.ing=r.ing.filter(i=>!/^Sauce: /.test(i[0]));st.sauce.forEach(x=>r.ing.push(["Sauce: "+x[0],G(x[1]*n)]));
   if(st.cheese){r.ing=r.ing.filter(i=>!/^Toppings: (Cheddar|Swiss|Blue cheese|American|Pepper jack)/.test(i[0]));r.ing.push(["Toppings: "+st.cheese[0],G(st.cheese[1]*n)]);r.title=r.title.replace(/^(\d+) (cheddar|Swiss|blue cheese|American cheese|pepper jack) /,"$1 ")}
   st.tops.forEach(x=>r.ing.push(["Toppings: "+x[0],G(x[1]*n)]));
@@ -159,12 +161,64 @@ if(T.jam){const t=T.jam;
   r.title=r.title.replace(/^(\d+) /,"$1 "+st.adj+" ");r.note=[st.note+" "+(r.note&&r.note[0]||"")].concat((r.note||[]).slice(1));
   const bun=r.ing.find(i=>i[0]==="Bun: burger buns");if(bun)bun[0]="Bun: "+st.bun+" burger buns";else r.note.push("Tip: "+st.bun+" buns suit this style. Try the Soft rolls tool.")},"t");
  const sw=T.burger.spin;if(sw)T.burger.spin=function(s){sw.call(this,s);s.xi=!(window.GEEK&&window.GEEK.on())||Math.random()<.5?"none":OPTS[1+Math.floor(Math.random()*(OPTS.length-1))][0]};
- extend("sandwich",CTL,(r,s)=>{const st=STY[s.xi];if(!st)return;const n=s.p||people;
+ extend("sandwich",CTL,(r,s)=>{let st=STY[s.xi];if(!st)return;st=veg(st,["veg","caprese","egg"].includes(s.f));const n=s.p||people;
   r.ing=r.ing.filter(i=>!/^(Mayonnaise|Mustard)$/.test(i[0]));
   st.sauce.forEach(x=>r.ing.push([x[0],G(x[1]*n)]));if(st.cheese)r.ing.push([st.cheese[0],G(st.cheese[1]*n)]);st.tops.forEach(x=>r.ing.push([x[0],G(x[1]*n)]));
   r.steps.unshift("Stir together the "+list(lo(st.sauce))+" for your spread. "+st.tip);
   r.steps.splice(Math.max(1,r.steps.length-1),0,"Add the "+list(lo(st.tops).concat(st.cheese?lo([st.cheese]):[]))+" along with the filling.");
   r.title=st.adj+" "+r.title.charAt(0).toLowerCase()+r.title.slice(1);r.note=[st.note].concat(r.note||[])},"f")}
+
+/* ---------------- "Inspired by" for grain bowls, noodles and eggs ----------------
+   Rows are [name, grams per person] (or per egg for eggs); a third value "egg" or "lime" gives a count instead of grams. */
+{const q=(x,n)=>x[2]==="egg"?num(Math.max(1,Math.round(n)),"egg","eggs"):x[2]==="lime"?num(Math.max(1,Math.round(2*n)),"wedge","wedges"):x[1]<1?"a pinch":G(x[1]*n);
+ const low=t=>t.charAt(0).toLowerCase()+t.slice(1);
+ const names=a=>list(a.map(x=>{const t=x[0].replace(/,.*$/,"");return /^(Greek|Kalamata|Gruy|Parmesan)/.test(t)?t:low(t)}));
+ const opt=a=>[["none","Classic"]].concat(a);
+ /* grain bowls */
+ {const GS={
+  gr:{adj:"Greek-style",dress:[["Olive oil",8],["Lemon juice",5],["Dried oregano",.3]],tops:[["Cucumber, diced",40],["Tomato, diced",50],["Feta, crumbled",25],["Kalamata olives",15],["Red onion, thinly sliced",10]]},
+  it:{adj:"Italian-style",dress:[["Olive oil",8],["Balsamic vinegar",4]],tops:[["Cherry tomatoes, halved",60],["Fresh mozzarella, torn",30],["Basil leaves",4],["Roasted red peppers",30]]},
+  mx:{adj:"Mexican-style",dress:[["Lime juice",8],["Olive oil",5],["Ground cumin",.5]],tops:[["Black beans, drained",50],["Sweetcorn",30],["Avocado, diced",40],["Tomato salsa",30],["Fresh coriander",3]]},
+  jp:{adj:"Japanese-style",dress:[["Soy sauce",8],["Rice vinegar",5],["Sesame oil",3]],tops:[["Edamame, shelled",40],["Cucumber, sliced",30],["Pickled ginger",8],["Nori, in strips",1],["Sesame seeds",3]]},
+  kr:{adj:"Korean-style",dress:[["Gochujang",8],["Sesame oil",3],["Rice vinegar",3]],tops:[["Kimchi, chopped",40],["Carrot, shredded",25],["Spinach, wilted",30],["Eggs, fried",1,"egg"]]},
+  in:{adj:"Indian-style",dress:[["Plain yogurt",30],["Lemon juice",4],["Ground cumin",.5]],tops:[["Chickpeas, cooked",50],["Cucumber, diced",30],["Tomato, diced",40],["Red onion, thinly sliced",10],["Fresh coriander",3],["Mango chutney",10]]},
+  me:{adj:"Middle Eastern",dress:[["Tahini",10],["Lemon juice",6],["Garlic, crushed",1],["Water",10]],tops:[["Chickpeas, cooked",50],["Cucumber, diced",30],["Tomato, diced",40],["Flat-leaf parsley",4],["Pickled turnips",15]]},
+  vn:{adj:"Vietnamese-style",dress:[["Lime juice",8],["Fish sauce",5],["Sugar",3],["Water",8]],tops:[["Carrot, shredded",25],["Cucumber, sliced",30],["Fresh mint and coriander",5],["Roasted peanuts",8],["Fresh chilli, sliced",2]]}};
+  extend("grain",[{k:"xi",label:"Make it a bowl: inspired by",icon:"wand",def:"none",tg:opt([["gr","Greek"],["it","Italian"],["mx","Mexican"],["jp","Japanese"],["kr","Korean"],["in","Indian"],["me","Middle Eastern"],["vn","Vietnamese"]]),only:["white","basmati","brown","quinoa","couscous","bulgur","barley"]}],
+   (r,s)=>{const st=GS[s.xi];if(!st)return;const n=s.p||people;
+    st.dress.forEach(x=>r.ing.push(["Dressing: "+x[0],q(x,n)]));st.tops.forEach(x=>r.ing.push(["Toppings: "+x[0],q(x,n)]));
+    r.steps.push("Whisk the "+names(st.dress)+" with a pinch of salt.","Spoon the grain into bowls, add the "+names(st.tops)+" and drizzle with the dressing.");
+    r.title=st.adj+" bowls with "+low(r.title)},"t")}
+ /* noodles */
+ {const NS={
+  jp:{adj:"Japanese-inspired",tops:[["Spring onion, sliced",5],["Nori, in strips",1],["Eggs, soft-boiled",1,"egg"],["Sweetcorn",20],["Sesame seeds",2]],tip:"Finish with a drizzle of sesame oil."},
+  kr:{adj:"Korean-inspired",extra:[["Gochujang",6]],tops:[["Kimchi, chopped",30],["Spring onion, sliced",5],["Sesame seeds",2],["Eggs, fried",1,"egg"]],tip:"Squeeze the kimchi dry before adding it."},
+  vn:{adj:"Vietnamese-inspired",tops:[["Bean sprouts",30],["Fresh mint and coriander",6],["Roasted peanuts",8],["Lime wedges",1,"lime"],["Pickled carrots",20]],tip:"Add the fresh herbs at the very end so they stay bright."},
+  th:{adj:"Thai-inspired",tops:[["Bean sprouts",30],["Roasted peanuts",10],["Fresh coriander",4],["Lime wedges",1,"lime"],["Chilli flakes",.5]],tip:"Squeeze the lime over each bowl just before eating."},
+  cn:{adj:"Chinese-inspired",tops:[["Bok choy, quartered",50],["Spring onion, sliced",5],["Toasted sesame seeds",2],["Chilli oil",3]],tip:"Blanch the bok choy in the noodle water for the last minute."}};
+  extend("noodle",[{k:"xi",label:"Inspired by",icon:"wand",def:"none",tg:opt([["jp","Japanese"],["kr","Korean"],["vn","Vietnamese"],["th","Thai"],["cn","Chinese"]])}],
+   (r,s)=>{const st=NS[s.xi];if(!st)return;const n=s.p||people;
+    (st.extra||[]).forEach(x=>r.ing.push(["Sauce: "+x[0],q(x,n)]));st.tops.forEach(x=>r.ing.push(["Toppings: "+x[0],q(x,n)]));
+    r.steps.push(st.tip,"Serve in bowls topped with the "+names(st.tops)+".");
+    r.title=st.adj+" "+low(r.title)},"n")}
+ /* omelettes and scrambled eggs */
+ {const ES={
+  fr:{adj:"French-style",rows:[["Fines herbes (chives, parsley, tarragon), chopped",1.5],["Gruyère, grated",10]]},
+  it:{adj:"Italian-style",rows:[["Parmesan, grated",8],["Basil leaves",1],["Cherry tomatoes, halved",20]]},
+  gr:{adj:"Greek-style",rows:[["Feta, crumbled",12],["Spinach",15],["Dried oregano",.2]]},
+  mx:{adj:"Mexican-style",rows:[["Pickled jalapeños",4],["Cheese, grated",10],["Tomato salsa",20],["Fresh coriander",1],["Avocado, sliced",20]]},
+  in:{adj:"Indian-style",rows:[["Red onion, finely chopped",10],["Tomato, diced",15],["Green chilli, chopped",1],["Fresh coriander",1],["Ground turmeric",.2]]},
+  es:{adj:"Spanish-style",rows:[["Potato, thinly sliced and fried",40],["Onion, softened in oil",15]]},
+  jp:{adj:"Japanese-style",rows:[["Spring onion, sliced",3],["Soy sauce",1.5],["Mirin",1.5],["Sesame seeds",.5]]},
+  me:{adj:"Middle Eastern",rows:[["Flat-leaf parsley, chopped",2],["Za'atar",.3],["Labneh",10]]}};
+  extend("eggs",[{k:"xi",label:"Inspired by",icon:"wand",def:"none",tg:opt([["fr","French"],["it","Italian"],["gr","Greek"],["mx","Mexican"],["in","Indian"],["es","Spanish"],["jp","Japanese"],["me","Middle Eastern"]]),only:["omelette","scramble"]}],
+   (r,s)=>{const st=ES[s.xi];if(!st)return;const er=r.ing.find(i=>/^Eggs?$/.test(i[0])),e=er?parseFloat(er[1])||2:2;
+    r.ing=r.ing.filter(i=>!/^Filling/.test(i[0]));st.rows.forEach(x=>r.ing.push([x[0],x[1]*e<1?"a pinch":P1(x[1]*e)+" g"]));
+    const fi=r.steps.findIndex(x=>/^Add the filling/.test(x)),nm=names(st.rows);
+    if(fi>=0)r.steps[fi]="Add the "+nm+" on one half, fold over and slide onto a plate while the middle is still a little soft.";
+    else r.steps.splice(Math.max(1,r.steps.length-1),0,"Fold in the "+nm+" in the last minute, while the eggs are still a little soft.");
+    r.title=st.adj+" "+low(r.title)})}
+}
 
 /* ---------------- Use the leftovers ---------------- */
 learn("dairy",["yogurt","cottage","cream"],["Spare whey? Use it instead of water in bread dough, smoothies, soups, or to cook rice and oats for a gentle tang. It keeps about a week in the fridge."]);
@@ -177,4 +231,21 @@ learn("cheese",["ricotta"],["The last whey is mild: use it in bread dough or to 
 learn("starter",["sour"],["Starter discard is food: stir it into pancake or waffle batter, crackers, flatbreads or muffins instead of throwing it away. It keeps a week in the fridge.","A starter kept in the fridge needs feeding only about once a week. Feed it once or twice at room temperature before you bake."]);
 learn("starter",["komb"],["Extra SCOBYs can live in a \"hotel\" jar covered with kombucha. Add a little of the finished brew to every new batch."]);
 learn("soup",["stock"],["Freeze stock in 250 ml tubs or ice-cube trays. Keep onion skins, carrot ends, herb stems and bones in a bag in the freezer until you have enough for a pot."]);
+/* ---------------- the one universal switch, in My kitchen > Make it yours ---------------- */
+{const mount=()=>{const grid=document.querySelector("#kz-setup .kgrid");if(!grid||document.getElementById("geekpanel")||!window.GEEK)return;
+  const p=document.createElement("section");p.className="panel";p.id="geekpanel";
+  p.innerHTML='<div class="lab"><svg class="i"><use href="#i-wand"/></svg>Geek foody</div><p class="hint">Simple is the default: recipes and presets. Geek foody adds the extras everywhere: inspired-by cuisines, add-ins like rosemary and cinnamon, fine-tuned amounts, fitting a recipe to your jar or pot, ferment totals by jar size, and taste reminders.</p><div class="tg" id="geekset"><button type="button" data-geekset="0">Simple</button><button type="button" data-geekset="1">Geek foody</button></div>';
+  grid.insertBefore(p,grid.firstChild);
+  const sync=()=>p.querySelectorAll("[data-geekset]").forEach(b=>b.setAttribute("aria-pressed",String((b.dataset.geekset==="1")===window.GEEK.on())));
+  p.addEventListener("click",e=>{const b=e.target.closest("[data-geekset]");if(b)window.GEEK.set(b.dataset.geekset==="1")});
+  window.GEEK.sub(sync);sync()};
+ if(typeof document!=="undefined"){mount();document.addEventListener("DOMContentLoaded",mount);setTimeout(mount,400);setTimeout(mount,1500)}}
+
+/* ---------------- one-time hint about Geek foody ---------------- */
+{const KEY="mr-seen-geek";let seen=false;try{seen=localStorage.getItem(KEY)==="1"||(window.GEEK&&window.GEEK.on())}catch(e){}
+ if(!seen&&typeof document!=="undefined"&&document.body){
+  const c=document.createElement("style");c.textContent=".whatsnew{position:fixed;left:12px;right:12px;bottom:calc(96px + env(safe-area-inset-bottom));z-index:35;max-width:520px;margin:0 auto;display:flex;gap:10px;align-items:center;padding:12px 14px;border-radius:16px;background:var(--card,#fff);color:var(--ink,#111);border:2px solid var(--ink,#111);box-shadow:3px 3px 0 var(--ink,#111);font-size:14px}.whatsnew b{font-weight:800}.whatsnew button{flex:none;font:inherit;font-weight:800;padding:6px 14px;border-radius:999px;border:2px solid var(--ink,#111);background:var(--sun,#ffc63d);color:inherit;cursor:pointer}html:has(.reel.on,.fmreel,.pzreel.on,.splash:not(.out)) .whatsnew{display:none}";document.head.appendChild(c);
+  const el=document.createElement("div");el.className="whatsnew";el.setAttribute("role","status");el.innerHTML="<span><b>New:</b> turn on <b>Geek foody</b> in My kitchen for inspired-by styles, add-ins, jar sizing and more.</span><button type=\"button\" data-show>Show me</button><button type=\"button\" data-ok>Got it</button>";
+  const done=()=>{try{localStorage.setItem(KEY,"1")}catch(e){}el.remove()};el.querySelector("[data-ok]").onclick=done;el.querySelector("[data-show]").onclick=()=>{done();if(typeof window.setTab==="function")window.setTab("kit");setTimeout(()=>{const g=document.getElementById("geekpanel");if(g)g.scrollIntoView({block:"center"})},120)};
+  setTimeout(()=>{if(document.body)document.body.appendChild(el)},1500)}}
 })();

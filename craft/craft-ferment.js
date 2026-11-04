@@ -436,7 +436,6 @@ function build(){
   <p class="sum" style="margin:8px 0 0">${jm?"Fits about "+g+" g of "+noun+" · ":""}${(g/1000).toFixed(g%100?2:1)} kg${pcs}${r?` · fills about ${r.jar}`:""}</p>`;
  const mixH=geek()&&r&&r.mix.length?`<div class="lab" style="margin-top:16px">${I("ruler")}Fine-tune amounts</div><ul class="fmmix">${r.mix.map(x=>`<li><span>${x.e} ${esc(x.n.replace(/ \(.*\)/,""))}</span><button type="button" data-a="wm" data-id="${x.key}" aria-label="Less ${esc(x.n)}">${I("minus")}</button><b>${esc(x.q)}</b><button type="button" data-a="wp" data-id="${x.key}" aria-label="More ${esc(x.n)}">${I("plus")}</button></li>`).join("")}</ul><p class="sum" style="margin:8px 0 0">Tap − or + to use less or more of one thing. Salt and the jar size follow along. <button type="button" class="fmreset" data-a="wr">Back to the standard recipe</button></p>`:"";
  const side=`
- <div class="geekrow"><button type="button" class="geekbtn" data-a="geek" aria-pressed="${geek()}">${I("wand")}Geek foody</button><span>${geek()?"Extra options are on":"Show more options"}</span></div>
  <p class="hint2" style="margin:0 0 8px">Every amount, including the salt, is worked out for you in grams.</p>
  <section class="panel">
   <div class="lab">${I("jar")}What are you making?</div>
@@ -469,7 +468,7 @@ function build(){
   <ol class="fmtl">${r.tl.map(t=>`<li><b>${esc(t[0])}</b><span>${esc(t[1])}</span></li>`).join("")}</ol>
   ${m.quick?"":`<h3 style="margin-top:22px">${I("check")}Keep it safe</h3>${SAFETY.map(s=>`<details><summary>${esc(s[0])}</summary><p class="desc" style="margin:0 0 12px">${esc(s[1])}</p></details>`).join("")}`}
   ${tipsH}
-  <div class="row"><button data-a="start">${I("cal")}Start this batch today</button><button data-a="copy">${I("cart")}Copy list</button><button data-a="share">${I("share")}Share</button><button data-a="rand">Spin again</button></div></div></article>`;
+  <div class="row"><button data-a="start">${I("cal")}Start this batch today</button><button data-a="copy">${I("cart")}Copy list</button>${geek()?`<button data-a="remind">${I("cal")}Remind me to taste</button>`:""}<button data-a="share">${I("share")}Share</button><button data-a="rand">Spin again</button></div></div></article>`;
  }
  const bt=ST.batches.length?ST.batches.map((b,i)=>`<li class="${isReady(b)?"rdy":""}"><div><b>${esc(b.title)}</b>${isReady(b)?' <span class="rdytag">Ready</span>':""}<small>Started ${fmtDate(b.start+"T00:00:00")} · ${esc(status(b))}</small></div><button data-a="rm" data-id="${i}" aria-label="Remove ${esc(b.title)}">${I("x")}</button></li>`).join(""):`<li class="none">Nothing on the go. Start a batch and its tasting days show up here.</li>`;
  let fmbox=document.getElementById("fmbatches");
@@ -533,7 +532,6 @@ root.addEventListener("click",e=>{
   if(ST.arom[m.id])ST.arom[m.id]=selArom(m);
  }
  else if(a==="a"){const c=selArom(m);ST.arom[m.id]=c.includes(id)?c.filter(x=>x!==id):[...c,id]}
- else if(a==="geek"){window.GEEK.set(!window.GEEK.on());return}
  else if(a==="jm"){
   if(id==="j")ST.jar[m.id]=ST.jar[m.id]||1;
   else if(ST.jar[m.id]){const [lo,hi,st]=m.g,cg=effG(m);ST.jar[m.id]=0;ST.g[m.id]=Math.min(hi,Math.max(lo,Math.round(cg/st)*st))}
@@ -556,6 +554,19 @@ root.addEventListener("click",e=>{
  else if(a==="share"){
   const r=root._r,m=cur();if(!r||!window.__shareOut)return;
   window.__shareOut("f",{m:m.id,items:selItems(m),arom:selArom(m),g:amount(m),jar:geek()?ST.jar[m.id]||0:0,w:geek()?ST.w[m.id]||{}:{},sal:ST.sal,temp:ST.temp},r.title,r.title+" · ready in about "+(r.ready[0]===r.ready[1]?r.ready[0]:r.ready[0]+" to "+r.ready[1])+" days",b,()=>r.title+"\n"+r.ing.map(i=>"• "+i.n+" – "+i.q).join("\n"));
+  return;
+ }
+
+ else if(a==="remind"){
+  const r=root._r;if(!r)return;
+  const days=[[r.taste,"Taste it: it should be starting to turn sour and bubbly. Press everything under the brine."],[r.ready[0],"Probably ready by now. Taste it, and if you like it move it to the fridge."],[r.ready[1],"Latest day: move it to the fridge, whatever it tastes like."]]
+   .filter((d,i,a)=>d[0]>=1&&a.findIndex(x=>x[0]===d[0])===i),f=d=>d.toISOString().replace(/[-:]/g,"").replace(/\.\d+Z$/,"Z");
+  const ev=days.map((d,i)=>{const st=new Date();st.setDate(st.getDate()+d[0]);st.setHours(18,0,0,0);const en=new Date(st.getTime()+9e5);
+   return["BEGIN:VEVENT","UID:"+Date.now()+"-"+i+"@mealroulette","DTSTAMP:"+f(new Date()),"DTSTART:"+f(st),"DTEND:"+f(en),"SUMMARY:"+String(r.title).replace(/[,;\\]/g,m=>"\\"+m)+": day "+d[0],"DESCRIPTION:"+d[1],"BEGIN:VALARM","TRIGGER:-PT10M","ACTION:DISPLAY","DESCRIPTION:"+r.title,"END:VALARM","END:VEVENT"].join("\r\n")});
+  const txt=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Meal Roulette//EN"].concat(ev,["END:VCALENDAR"]).join("\r\n");
+  try{const file=new File([txt],"ferment-reminders.ics",{type:"text/calendar"});
+   if(matchMedia("(pointer:coarse)").matches&&navigator.canShare&&navigator.canShare({files:[file]})){navigator.share({files:[file],title:r.title+": reminders"}).catch(()=>{});return}}catch(e){}
+  const bl=new Blob([txt],{type:"text/calendar"}),an=document.createElement("a");an.href=URL.createObjectURL(bl);an.download="ferment-reminders.ics";document.body.appendChild(an);an.click();setTimeout(()=>{an.remove();URL.revokeObjectURL(an.href)},1500);
   return;
  }
  else if(a==="rm"){ST.batches.splice(+id,1)}

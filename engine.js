@@ -96,7 +96,6 @@ function carbCook(c,n){
  if(k==="bread")return"Warm or toast the bread until golden.";
  return`Cut into 3 cm chunks and boil in salted water for ${c[5]} minutes until a knife slides in easily.`;
 }
-const pcook=(p,pn)=>p[0]==="egg"?"Beat the eggs with a pinch of salt and scramble over medium heat for 2–3 minutes.":`Pat the ${pn} dry and add it in bite-size pieces to the hot pan in a single layer (in batches if needed). Cook ${p[4]} minutes, turning, ${p[5]}.`;
 
 // ---- breakfast / snack / dessert templates ----
 const FRUIT="banana|apple|pear|berr|peach|plum|mango|orange",FR=["banana","apple","pear","berries","peach","plum","mango","orange"];
