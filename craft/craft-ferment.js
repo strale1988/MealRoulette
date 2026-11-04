@@ -198,6 +198,17 @@ quick:[
  ["Adjust the taste","Less sugar for sharper, more sugar for milder. Add chilli flakes, a slice of ginger or a few coriander seeds."]]
 };
 M.forEach(m=>{m.tips=TIPS[m.id]||[]});
+
+/* more herbs and spices to add to each ferment (only where the method does not have them already) */
+{const X=(id,n,e,r,pcs)=>Object.assign({id,n,e,r},pcs?{u:"pcs"}:{});
+ const MORE={
+  brine:[X("rosemary","Rosemary sprigs","🌿",1,1),X("thyme","Thyme sprigs","🌿",2,1),X("allspice","Allspice berries","🟤",2),X("star","Star anise","⭐",1,1),X("cinnamon","Cinnamon stick","🪵",1,1),X("cloves","Cloves","🟫",1),X("cardamom","Cardamom pods","🟢",2,1)],
+  quick:[X("rosemary","Rosemary sprigs","🌿",1,1),X("thyme","Thyme sprigs","🌿",2,1),X("star","Star anise","⭐",1,1),X("cinnamon","Cinnamon stick","🪵",1,1),X("cloves","Cloves","🟫",1),X("allspice","Allspice berries","🟤",2),X("cardamom","Cardamom pods","🟢",2,1),X("orange","Orange peel","🍊",4)],
+  kraut:[X("rosemary","Rosemary sprigs","🌿",1,1),X("thyme","Thyme sprigs","🌿",2,1),X("dillseed","Dill seeds","🟤",2),X("star","Star anise","⭐",1,1),X("bay","Bay leaves","🍃",2,1)],
+  hot:[X("cinnamon","Cinnamon stick","🪵",1,1),X("cloves","Cloves","🟫",1),X("allspice","Allspice berries","🟤",1),X("thyme","Thyme sprigs","🌿",2,1),X("orange","Orange peel","🍊",5),X("star","Star anise","⭐",1,1)],
+  lemons:[X("rosemary","Rosemary sprigs","🌿",2,1),X("thyme","Thyme sprigs","🌿",2,1),X("star","Star anise","⭐",1,1),X("cardamom","Cardamom pods","🟢",3,1)],
+  honey:[X("cinnamon","Cinnamon stick","🪵",1,1),X("star","Star anise","⭐",1,1),X("thyme","Thyme sprigs","🌿",2,1),X("chilid","Dried chilli","🌶️",1,1),X("cardamom","Cardamom pods","🟢",2,1)]};
+ M.forEach(m=>{if(m.arom)(MORE[m.id]||[]).forEach(a=>{if(!m.arom.some(x=>x.id===a.id))m.arom.push(a)})})}
 const MB=Object.fromEntries(M.map(m=>[m.id,m]));
 const JARS_UI=[.25,.5,.75,1,1.5,2,3,5],MULTS=[.25,.5,.75,1,1.5,2,3];
 
