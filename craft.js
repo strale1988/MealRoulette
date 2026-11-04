@@ -136,7 +136,8 @@ const PASTA_ART=`<div class="pgr"><svg class="base" viewBox="0 0 240 190" aria-h
 window.__pastaArt=PASTA_ART;
 
 /* controls: {k,label,icon,tg:[[value,label]]} or {k,label,icon,step:[min,max,by,unit]}; def = default value */
-const TOOLS=window.CRAFTLIB.TOOLS; // filled in by the craft-*.js recipe files
+const TOOLS=window.CRAFTLIB.TOOLS;
+const geek=()=>!!(window.GEEK&&window.GEEK.on()); // "Geek foody" (set up in craft-ferment.js): off by default, shows the extra options when on // filled in by the craft-*.js recipe files
 
 /* ---- one spinner per section: burger and pasta have hand-drawn art; every other section gets a base (bowl, pan, board, jar, glass) with its own colour,
    a big emoji in the middle and three more orbiting it. Same size and speed as every other spinner. ---- */
@@ -227,12 +228,14 @@ const resBack=()=>{if(history.state&&history.state.mrres)history.back();else res
 addEventListener("popstate",()=>{if(resOn)resLeave()});
 window.__spinCraft=(id,instant)=>{const root=document.getElementById("tab-"+id);if(!root)return;root.classList.add("crafttab","resmode");resOn=id;if(smallScr()){try{history.pushState({mrres:1},"")}catch(e){}}scrollTo({top:0});spinTool(id,instant)};
 window.__leaveCraft=()=>{if(!resOn)return;const r=document.getElementById("tab-"+resOn);resOn=null;if(r)r.classList.remove("resmode");window.__nav&&__nav.drop()};
-const autoSpin=T=>s=>{T.ctl.forEach(c=>{if(c.tg)s[c.k]=c.tg[Math.floor(Math.random()*c.tg.length)][0]})}; // a random option for every choice; amounts and people stay as set
+const autoSpin=T=>s=>{T.ctl.forEach(c=>{if(c.tg&&!c.x&&!c.g){const o=c.tg.filter(x=>geek()||!x[2]);s[c.k]=o[Math.floor(Math.random()*o.length)][0]}})}; // a random option for every choice; amounts and people stay as set
 Object.keys(TOOLS).forEach(id=>{const T=TOOLS[id],sp=SPIN[id];
  if(!T.name){const kc=((window.KITCHEN&&window.KITCHEN.CRAFTS)||[]).find(c=>c.id===id);T.name=kc?kc.name:T.title} // the card name from kitchen.js, used in "Search ... recipes"
  T.art=CRAFT_ARTS[id];if(sp){T.spinLabel=T.spinLabel||sp[0];T.spinNote=T.spinNote||sp[1]}
  if(!T.spin)T.spin=autoSpin(T);
- if(!T.names)T.names=[...new Set(T.ctl.filter(c=>c.tg&&!c.only).flatMap(c=>c.tg.map(o=>o[1])))]});
+ if(!T._geekWrap){T._geekWrap=1;const oc=T.calc;T.calc=function(s){if(geek())return oc.call(this,s);
+   const p=Object.assign({},s);T.ctl.forEach(c=>{if(c.g||c.x)p[c.k]=Array.isArray(c.def)?[]:c.def;else if(c.tg){const o=c.tg.find(x=>String(x[0])===String(p[c.k]));if(o&&o[2])p[c.k]=c.def}});return oc.call(this,p)}}
+ if(!T.names)T.names=[...new Set(T.ctl.filter(c=>c.tg&&!c.only&&!c.x&&!c.g).flatMap(c=>c.tg.filter(o=>o[1]!=="Custom"&&!o[2]).map(o=>o[1])))]});
 TOOLS.grill.main="m"; // Doneness and Thickness depend on the meat (key m), not on key t
 
 const LEARN=window.CRAFTLIB.LEARN; // the "Good to know" notes, filled in by the craft-*.js files
@@ -248,25 +251,52 @@ function ingHTML(r,id,s){
  const labelled=G.some(g=>g.l);
  return G.map((g,k)=>{const head=g.l||(labelled&&k>0?"Also":""),hl=g.l?sec(g.l):"";
   return(head?`<div class="ingh"><span>${esc(head)}</span>${hl}</div>`:"")+`<ul class="ing">${g.r.map(x=>{const n=g.l?cap1(x.n):x.raw;return`<li><span>${esc(n)}${X&&!hl?X.btn(n,null,ctx):""}</span><span class="q">${esc(x.q)}</span></li>`}).join("")}</ul>`}).join("")}
+/* ---- totals, "fit my jar or pot" and "I have this much": generic, they work through each tool's own calc so the steps stay right ---- */
+const visOf=(T,s)=>T.ctl.filter(c=>(geek()||!(c.g||c.x))&&(!c.only||[].concat(c.only).includes(s[T.main||"t"]))&&(!c.when||[].concat(c.when.v).includes(s[c.when.k])));
+const FIT={},FITJAR=["sauce","spice","jam","dairy","drinks","soup","frozen","starter","cheese"],JARS=[[250,"250 ml"],[500,"500 ml"],[750,"750 ml"],[1000,"1 L"],[2000,"2 L"],[3000,"3 L"]];
+const gramsOf=q=>{const m=/^(?:about\s)?(\d+(?:\.\d+)?)\s?(g|ml)$/i.exec(String(q).trim());return m?+m[1]:null};
+const sumG=r=>r.ing.reduce((t,i)=>t+(gramsOf(i[1])||0),0);
+const volOf=r=>r.vol||sumG(r);
+const withV=(s,c,v)=>Object.assign({},s,{[c.k]:v});
+const cname=c=>c.label.replace(/\s*\(.*$/,"").toLowerCase();
+const stepCtl=(T,s,vis)=>{for(const c of vis){if(!c.step||/tin|pan size|thick|loaves|doneness/i.test(c.label))continue;
+  try{if(JSON.stringify(T.calc(withV(s,c,c.step[0])).ing)!==JSON.stringify(T.calc(withV(s,c,c.step[1])).ing))return c}catch(e){}}return null};
+/* the whole number v inside the control's range that brings fn(v) closest to target (fn only ever grows with v) */
+const solve=(c,fn,target)=>{let a=c.step[0],b=c.step[1];const f=v=>{try{const x=fn(v);return Number.isFinite(x)?x:NaN}catch(e){return NaN}},fa=f(a),fb=f(b);
+ if(!(fb>fa))return null;
+ while(b-a>1){const m=(a+b)>>1;if(f(m)<target)a=m;else b=m}
+ let v=Math.abs(f(a)-target)<=Math.abs(f(b)-target)?a:b;
+ const by=c.step[2]>=100?10:1,sn=Math.min(c.step[1],Math.max(c.step[0],Math.round(v/by)*by));if(Math.abs(f(sn)-target)<=target*.03)v=sn;
+ return{v,got:f(v),lo:fa,hi:fb,under:target<fa,over:target>fb}};
+function totHTML(r){if(!geek())return"";const n=r.ing.filter(i=>gramsOf(i[1])).length;if(n<3&&!r.makes)return"";
+ return`<ul class="ing crtot">${n>=3?`<li><span>${esc(r.totalLabel||"Total of the weighed ingredients")}</span><span class="q">${G(sumG(r))}</span></li>`:""}${r.makes?`<li class="big"><span>${esc(r.makesLabel||"Makes about")}</span><span class="q">${esc(r.makes)}</span></li>`:""}</ul>`}
+function fitPanel(id,T,r,s,vis){
+ if(!geek())return"";const c=stepCtl(T,s,vis);if(!c)return"";
+ const rows=r.ing.filter(i=>gramsOf(i[1])),st=FIT[id]||{},jar=FITJAR.includes(id);
+ return`<details class="crfit"${st.msg?" open":""}><summary>${I("jar")}${jar?"Fit it to my jar or pot, or to what I have":"Scale it to what I have"}</summary>
+  ${jar?`<div class="lab" style="margin-top:12px">${I("ruler")}My jar or pot holds</div><div class="tg">${JARS.map(j=>`<button type="button" data-fit="${j[0]}">${j[1]}</button>`).join("")}</div><p class="sum" style="margin:6px 0 0">The amounts are scaled to fill it with room left at the top.</p>`:""}
+  ${rows.length?`<div class="lab" style="margin-top:14px">${I("ruler")}I have this much of one ingredient</div><div class="crhave"><select aria-label="Ingredient">${rows.map((x,k)=>`<option value="${k}">${esc(x[0])}</option>`).join("")}</select><input type="text" inputmode="decimal" autocomplete="off" placeholder="grams" aria-label="Grams you have"><button type="button" data-have>Scale it</button></div>`:""}
+  <p class="sum crmsg" role="status" style="margin:8px 0 0">${esc(st.msg||"")}</p></details>`}
 function draw(id){
  seedDefault(id);
  const T=TOOLS[id],s=cfg(id),root=document.getElementById("tab-"+id);if(!root)return;
  const nm=c=>esc(c.label.replace(/\s*\(.*$/,"").toLowerCase().replace(/^how many\s*/,"").replace(/^how much to make$/,"")||"amount"); // "Flour" -> "flour", "How many cookies" -> "cookies"
- const vis=T.ctl.filter(c=>!c.only||[].concat(c.only).includes(s[T.main||"t"]));
- const ctl=vis.map(c=>`<div class="lab"${c===vis[0]?"":' style="margin-top:16px"'}>${I(c.icon)}${esc(c.label)}</div>`+(c.tg?`<div class="tg">${c.tg.map(o=>`<button data-k="${c.k}" data-v="${esc(o[0])}" aria-pressed="${String(s[c.k])===String(o[0])}">${esc(o[1])}</button>`).join("")}</div>`
+ const vis=visOf(T,s);
+ const ctl=vis.map(c=>`<div class="lab"${c===vis[0]?"":' style="margin-top:16px"'}>${I(c.icon)}${esc(c.label)}</div>`+(c.tg?`<div class="tg">${c.tg.filter(o=>geek()||!o[2]).map(o=>`<button data-k="${c.k}" data-v="${esc(o[0])}" aria-pressed="${String(s[c.k])===String(o[0])}">${esc(o[1])}</button>`).join("")}</div>`
    :c.ms?`<div class="tg">${c.ms.map(o=>`<button data-k="${c.k}" data-m="${esc(o[0])}" aria-pressed="${(s[c.k]||[]).includes(o[0])}">${esc(o[1])}</button>`).join("")}</div>`
    :`<div class="step"><button data-k="${c.k}" data-d="-1" aria-label="Less ${nm(c)}">${I("minus")}</button><b><input class="sv" data-k="${c.k}" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" value="${s[c.k]||people}" size="${String(s[c.k]||people).length}" aria-label="${esc(c.label.replace(/\s*\(.*$/,""))}: type a number"${c.step[3]?` title="Tap to type a number"`:""}>${c.step[3]?`<span class="su">${esc(c.step[3])}</span>`:""}</b><button data-k="${c.k}" data-d="1" aria-label="More ${nm(c)}">${I("plus")}</button></div>`)).join("");
  const r=T.calc(s);if(!r.learn){const L=LEARN[id];r.learn=L&&L[s[T.main||"t"]]}
- root.querySelector("[data-ctl]").innerHTML=ctl;
+ root.querySelector("[data-ctl]").innerHTML=`<div class="geekrow"><button type="button" class="geekbtn" data-geek aria-pressed="${geek()}">${I("wand")}Geek foody</button><span>${geek()?"Extra options are on":"Show more options"}</span></div>`+ctl;
  root.querySelector("[data-out]").innerHTML=`<article class="card"><div class="hero"><div class="ic">${I(T.icon)}</div><h2>${esc(r.title)}</h2></div><div class="body">
   <div class="meta">${r.meta.map(m=>`<span>${I(m[0])}${esc(m[1])}</span>`).join("")}</div>
   ${(r.note||[]).map(n=>`<div class="call" style="background:var(--soft)">${I("flame")}<span>${esc(n)}</span></div>`).join("")}
   ${r.learn?`<details class="learn" style="margin:12px 0;padding:10px 14px;border-radius:14px;background:var(--soft)"><summary style="cursor:pointer;font-weight:700">Good to know</summary>${r.learn.map(n=>`<p style="margin:8px 0 0">${esc(n)}</p>`).join("")}</details>`:""}
   ${r.more?`<p style="margin:0 0 12px;font-size:.92em">More: ${r.more.map(m=>`<a href="${esc(m[1])}" target="_blank" rel="noopener noreferrer">${esc(m[0])}</a>`).join(" · ")}</p>`:""}
-  <div class="split"><div><h3>${I("list")}Ingredients <small style="text-transform:none;letter-spacing:0;color:var(--mute)">(tap to tick off)</small></h3>${ingHTML(r,id,s)}</div>
+  <div class="split"><div><h3>${I("list")}Ingredients <small style="text-transform:none;letter-spacing:0;color:var(--mute)">(tap to tick off)</small></h3>${ingHTML(r,id,s)}${totHTML(r)}</div>
   <div><h3>${I("chef")}Method</h3><ol>${r.steps.map(x=>`<li><span>${esc(x)}</span></li>`).join("")}</ol></div></div>
+  ${fitPanel(id,T,r,s,vis)}
   <div class="row"><button class="go" data-a="start">${I("flame")}Start cooking</button><button class="pzsave">${I("heart")}Save</button><button data-a="copy" data-copy>${I("cart")}Copy list</button><button data-a="share">${I("share")}Share</button><button type="button" data-a="rand" data-spin>Spin again</button></div></div></article>`;
- root.querySelectorAll(".ing li").forEach(li=>li.onclick=()=>li.classList.toggle("done"));
+ root.querySelectorAll(".ing:not(.crtot) li").forEach(li=>li.onclick=()=>li.classList.toggle("done"));
  decorate(id,T,r,root,s);
  root.querySelector("[data-copy]").onclick=e=>{const b=e.currentTarget,txt=r.title+"\n"+r.ing.map(i=>"• "+i[0]+" – "+i[1]).join("\n");
   copyText(txt).then(ok=>flash(b,ok?"check":"cart",ok?"Copied":"Couldn't copy"))};
@@ -331,7 +361,23 @@ Object.keys(TOOLS).forEach(id=>{
   if(b.dataset.m!==undefined){const a=Array.isArray(s[c.k])?s[c.k]:[];s[c.k]=a.includes(b.dataset.m)?a.filter(x=>x!==b.dataset.m):[...a,b.dataset.m]}
   else if(b.dataset.d){const[lo,hi,by]=c.step,v=(s[c.k]||people)+(+b.dataset.d)*by;s[c.k]=Math.min(hi,Math.max(lo,v))}
   else{const o=c.tg.find(x=>String(x[0])===b.dataset.v);s[c.k]=o?o[0]:b.dataset.v}
-  save();draw(id);const nb=box.querySelectorAll("button")[at];if(nb)nb.focus()});
+  FIT[id]=null;save();draw(id);const nb=box.querySelectorAll("button")[at];if(nb)nb.focus()});
+ root.addEventListener("click",e=>{if(e.target.closest("[data-geek]")){window.GEEK.set(!geek());return}});
+ root.addEventListener("click",e=>{
+  const fb=e.target.closest("button[data-fit]"),hb=e.target.closest("button[data-have]");if(!fb&&!hb)return;
+  const s=cfg(id),c=stepCtl(T,s,visOf(T,s));if(!c)return;let res=null,msg="";
+  const nm=cname(c),unit=c.step[3]?" "+c.step[3]:"";
+  if(fb){const ml=+fb.dataset.fit,lab=(JARS.find(j=>j[0]===ml)||[0,ml+" ml"])[1];
+   res=solve(c,v=>{const r=T.calc(withV(s,c,v));return volOf(r)/(r.fill||.85)},ml);
+   if(!res)msg="This recipe does not scale to a jar size.";
+   else{s[c.k]=res.v;const r=T.calc(s);msg=res.over?`Your ${lab} is bigger than the biggest batch this tool makes, so I used the biggest: ${nm} ${res.v}${unit}.`:res.under?`Your ${lab} is smaller than the smallest batch, so I used the smallest: ${nm} ${res.v}${unit}.`:`Set ${nm} to ${res.v}${unit}: that makes about ${rg(volOf(r))} g or ml, which fills a ${lab} with room at the top.`}}
+  else{const rows=T.calc(s).ing.filter(i=>gramsOf(i[1])),sel=root.querySelector(".crhave select"),inp=root.querySelector(".crhave input"),row=rows[sel?+sel.value:0],val=parseFloat(String(inp?inp.value:"").replace(",","."));
+   if(!row)return;
+   if(!(val>0))msg="Type how many grams you have first.";
+   else{res=solve(c,v=>{const x=T.calc(withV(s,c,v)).ing.find(i=>i[0]===row[0]);return x?gramsOf(x[1]):NaN},val);
+    if(!res)msg="This ingredient does not change when the recipe is scaled.";
+    else{s[c.k]=res.v;msg=res.over||res.under?`The recipe only goes from about ${rg(res.lo)} g to ${rg(res.hi)} g of ${row[0].toLowerCase()}. I used the closest: ${nm} ${res.v}${unit}.`:`Set ${nm} to ${res.v}${unit}, so it uses about ${rg(res.got)} g of ${row[0].toLowerCase()}.`}}}
+  FIT[id]={msg};save();draw(id)});
  let holdBlock=0;
  const ctlBox=root.querySelector("[data-ctl]"),setStep=(c,v)=>{const s=cfg(id);s[c.k]=Math.min(c.step[1],Math.max(c.step[0],Math.round(v)))};
  /* press and hold a + or − to keep going (faster after about 1.5 s); the card is redrawn once, when the finger lifts */
@@ -349,7 +395,7 @@ Object.keys(TOOLS).forEach(id=>{
   if(e.key==="Enter"){v.blur();return}
   if(e.key==="ArrowUp"||e.key==="ArrowDown"){e.preventDefault();const c=T.ctl.find(x=>x.k===v.dataset.k);setStep(c,(+v.value||cfg(id)[c.k]||people)+(e.key==="ArrowUp"?1:-1)*c.step[2]);save();draw(id);const nv=ctlBox.querySelector('input.sv[data-k="'+c.k+'"]');if(nv)nv.focus()}});
  ctlBox.addEventListener("change",e=>{const v=e.target;if(!v.matches||!v.matches("input.sv"))return;const c=T.ctl.find(x=>x.k===v.dataset.k);if(!c)return;
-  const x=parseInt(v.value,10);if(Number.isFinite(x))setStep(c,x);save();draw(id)});
+  const x=parseInt(v.value,10);if(Number.isFinite(x))setStep(c,x);FIT[id]=null;save();draw(id)});
  root.addEventListener("click",e=>{const b=e.target.closest("[data-spin]");if(b&&!b.disabled)spinTool(id)});
  draw(id);drawFavs(id);
 });
@@ -360,6 +406,10 @@ const applyShare=d=>{const id=d&&typeof d.id==="string"?d.id:"",T=Object.prototy
   if(c.tg){const m=c.tg.find(x=>String(x[0])===String(v));if(m)n[c.k]=m[0]}
   else if(c.ms){if(Array.isArray(v))n[c.k]=c.ms.map(x=>x[0]).filter(x=>v.includes(x))}
   else if(c.step){const x=Number(v);if(Number.isFinite(x))n[c.k]=Math.min(c.step[1],Math.max(c.step[0],x))}});
+ let need=false;T.ctl.forEach(c=>{if(n[c.k]===undefined)return;if(c.g||c.x){if(JSON.stringify(n[c.k])!==JSON.stringify(c.def===undefined?null:c.def)&&!(Array.isArray(n[c.k])&&!n[c.k].length))need=true}else if(c.tg){const o=c.tg.find(x=>String(x[0])===String(n[c.k]));if(o&&o[2])need=true}});
+ if(need&&!geek())window.GEEK.set(true);
  SEEDED[id]=1;Object.assign(cfg(id),n);save();draw(id);return id};
+{const c=document.createElement("style");c.textContent=".crtot{margin-top:10px}.crtot li.big,.crtot li:first-child{font-weight:800}.crfit{margin:14px 0 4px;padding:12px 14px;border-radius:14px;background:var(--soft)}.crfit summary{cursor:pointer;font-weight:800;display:flex;align-items:center;gap:8px}.crfit summary .i{width:20px;height:20px}.crhave{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.crhave select,.crhave input{font:inherit;padding:8px 10px;border:2px solid var(--line,#ddd);border-radius:12px;background:var(--card,#fff);color:inherit;min-width:0}.crhave select{flex:1 1 150px}.crhave input{flex:0 1 96px}.crhave button{font:inherit;font-weight:800;padding:8px 16px;border-radius:999px;border:2px solid var(--ink);background:var(--card,#fff);color:inherit;cursor:pointer}.crmsg:empty{display:none}";document.head.appendChild(c)}
+if(window.GEEK)window.GEEK.sub(()=>window.CRAFT.redraw());
 window.CRAFT={tools:TOOLS,cfg,spin:spinTool,applyShare,redraw:()=>Object.keys(TOOLS).forEach(id=>{if(document.getElementById("tab-"+id)){draw(id);drawFavs(id)}})};
 })();

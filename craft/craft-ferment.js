@@ -4,6 +4,12 @@
    batch size scales. To add a method, add an entry to METHODS (items, aromatics, salt levels, ready times, steps). */
 (function(){
 "use strict";
+/* "Geek foody": one switch, shared by Craft and the Fermentation station. Off (the default) shows the simple recipes and presets;
+   on reveals the extras (more ingredients, fine-tune amounts, jar sizing, inspired-by styles, add-ins...). */
+if(!window.GEEK){const L=[];let on=false;try{on=localStorage.getItem("mr-geek")==="1"}catch(e){}
+ window.GEEK={on:()=>on,set(v,quiet){v=!!v;if(v===on)return;on=v;try{localStorage.setItem("mr-geek",v?"1":"0")}catch(e){}if(!quiet)L.slice().forEach(f=>{try{f(v)}catch(e){console.error(e)}})},sub:f=>{L.push(f)}}}
+const geek=()=>window.GEEK.on();
+{const c=document.createElement("style");c.textContent=".geekrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 12px}.geekrow span{font-size:12px;color:var(--mute)}.geekbtn{display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:13px;font-weight:800;padding:6px 14px;border-radius:999px;border:2px solid var(--ink);background:transparent;color:inherit;cursor:pointer}.geekbtn[aria-pressed=true]{background:var(--sun,#ffc63d)}.geekbtn svg{width:16px;height:16px}";document.head.appendChild(c)}
 const root=document.getElementById("tab-ferm");
 if(!root)return;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -208,7 +214,9 @@ M.forEach(m=>{m.tips=TIPS[m.id]||[]});
   hot:[X("cinnamon","Cinnamon stick","🪵",1,1),X("cloves","Cloves","🟫",1),X("allspice","Allspice berries","🟤",1),X("thyme","Thyme sprigs","🌿",2,1),X("orange","Orange peel","🍊",5),X("star","Star anise","⭐",1,1)],
   lemons:[X("rosemary","Rosemary sprigs","🌿",2,1),X("thyme","Thyme sprigs","🌿",2,1),X("star","Star anise","⭐",1,1),X("cardamom","Cardamom pods","🟢",3,1)],
   honey:[X("cinnamon","Cinnamon stick","🪵",1,1),X("star","Star anise","⭐",1,1),X("thyme","Thyme sprigs","🌿",2,1),X("chilid","Dried chilli","🌶️",1,1),X("cardamom","Cardamom pods","🟢",2,1)]};
- M.forEach(m=>{if(m.arom)(MORE[m.id]||[]).forEach(a=>{if(!m.arom.some(x=>x.id===a.id))m.arom.push(a)})})}
+ M.forEach(m=>{if(m.arom)(MORE[m.id]||[]).forEach(a=>{if(!m.arom.some(x=>x.id===a.id))m.arom.push(Object.assign({g:1},a))})});
+ const G1=(id,kind,ids)=>{const m=M.find(x=>x.id===id);if(m)m[kind].forEach(a=>{if(ids.includes(a.id))a.g=1})};
+ G1("hot","arom",["apple","pear","berries","banana","peach","pumpkin","tomato","sweetpot","turmeric","cumin","cori"]);G1("hot","items",["green","cayenne","poblano","ghost"]);G1("kraut","arom",["pear"])}
 const MB=Object.fromEntries(M.map(m=>[m.id,m]));
 const JARS_UI=[.25,.5,.75,1,1.5,2,3,5],MULTS=[.25,.5,.75,1,1.5,2,3];
 
@@ -220,11 +228,12 @@ if(!MB[ST.m])ST.m="brine";
 if(!Array.isArray(ST.batches))ST.batches=[];
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify({m:ST.m,items:ST.items,arom:ST.arom,g:ST.g,jar:ST.jar,w:ST.w,sal:ST.sal,temp:ST.temp,batches:ST.batches}))}catch(e){}};
 const cur=()=>MB[ST.m];
-const selItems=m=>{const a=(ST.items[m.id]||m.def).filter(id=>m.items.some(i=>i.id===id));return a};
-const selArom=m=>{const base=ST.arom[m.id]||m.arom.filter(a=>a.on).map(a=>a.id);const main=selItems(m);return base.filter(id=>{const a=m.arom.find(x=>x.id===id);return a&&(!a.only||main.includes(a.only))})};
+const vItems=m=>m.items.filter(i=>geek()||!i.g),vArom=m=>m.arom.filter(a=>geek()||!a.g);
+const selItems=m=>{const raw=ST.items[m.id]||m.def,a=raw.filter(id=>vItems(m).some(i=>i.id===id));return raw.length&&!a.length?m.def.slice(0,1):a}; // a pick that is hidden (geek mode off) falls back to the default
+const selArom=m=>{const base=ST.arom[m.id]||m.arom.filter(a=>a.on).map(a=>a.id);const main=selItems(m);return base.filter(id=>{const a=vArom(m).find(x=>x.id===id);return a&&(!a.only||main.includes(a.only))})};
 const amount=m=>ST.g[m.id]||m.g[3];
-const effG=m=>ST.jar[m.id]?fitG(m):amount(m); // the grams in use: from the amount, or worked out to fill the chosen jar
-const wOf=(m,key)=>{const v=(ST.w[m.id]||{})[key];return MULTS.includes(v)?v:1};
+const effG=m=>ST.jar[m.id]&&geek()?fitG(m):amount(m); // the grams in use: from the amount, or worked out to fill the chosen jar
+const wOf=(m,key)=>{if(!geek())return 1;const v=(ST.w[m.id]||{})[key];return MULTS.includes(v)?v:1};
 function fitG(m){const L=ST.jar[m.id];let g=L*1000/1.3;for(let i=0;i<6;i++){const r=calc(m,g);if(!r)return amount(m);g*=L*1000/(r.mass*r.jarF)}return Math.max(50,Math.floor(g/10)*10)}
 
 /* ---------- the calculation ---------- */
@@ -411,22 +420,23 @@ function build(){
  const m=cur(),r=calc(m);
  const mm=M.map(x=>`<button data-a="m" data-id="${x.id}" aria-pressed="${x.id===m.id}"><span>${x.e}</span>${esc(x.n)}</button>`).join("");
  const sel=selItems(m);
- const its=m.items.map(i=>`<button data-a="i" data-id="${i.id}" aria-pressed="${sel.includes(i.id)}"><span>${i.e}</span>${esc(i.n)}</button>`).join("");
+ const its=vItems(m).map(i=>`<button data-a="i" data-id="${i.id}" aria-pressed="${sel.includes(i.id)}"><span>${i.e}</span>${esc(i.n)}</button>`).join("");
  const sa=selArom(m);
- const ar=m.arom.filter(a=>!a.only||sel.includes(a.only)).map(a=>`<button data-a="a" data-id="${a.id}" aria-pressed="${sa.includes(a.id)}" ${a.note?`title="${esc(a.note)}"`:""}><span>${a.e}</span>${esc(a.n)}</button>`).join("");
- const jm=!!ST.jar[m.id],g=r?r.g:amount(m);
+ const ar=vArom(m).filter(a=>!a.only||sel.includes(a.only)).map(a=>`<button data-a="a" data-id="${a.id}" aria-pressed="${sa.includes(a.id)}" ${a.note?`title="${esc(a.note)}"`:""}><span>${a.e}</span>${esc(a.n)}</button>`).join("");
+ const jm=!!ST.jar[m.id]&&geek(),g=r?r.g:amount(m);
  const sal=m.sal?`<div class="lab" style="margin-top:16px">${I("flame")}Saltiness</div><div class="tg">${LEVELS.map((l,i)=>`<button data-a="s" data-id="${i}" aria-pressed="${ST.sal===i}">${l}</button>`).join("")}</div><p class="sum" style="margin:10px 0 0">${m.sal[ST.sal]}% ${m.saltOf==="water"?"brine, by weight of water":m.saltOf==="liquid"?"of the pickling liquid":m.id==="kimchi"?"of the veg weight, for the salting step":m.id==="lemons"?"of the fruit weight":"of the total weight"}. ${LEVELTIP[ST.sal]}</p>`:"";
  const tmp=m.noTemp?"":`<div class="lab" style="margin-top:16px">${I("clock")}Room temperature</div><div class="tg">${TEMPS.map(t=>`<button data-a="t" data-id="${t.id}" aria-pressed="${ST.temp===t.id}">${t.n}</button>`).join("")}</div><p class="sum" style="margin:10px 0 0">${TEMPS.find(t=>t.id===ST.temp).r}. Warmer means faster.</p>`;
  const pcs=m.id==="lemons"?` · about ${Math.max(1,Math.round(g/110))} fruit`:"";
  const noun=m.id==="honey"?"honey":m.id==="lemons"?"fruit":"vegetables";
  const jbtn=JARS_UI.map(L=>`<button data-a="jar" data-id="${L}" aria-pressed="${ST.jar[m.id]===L}">${L<1?Math.round(L*1000)+" ml":L+" L"}</button>`).join("");
  const amt=`<div class="lab" style="margin-top:16px">${I("ruler")}How much do you want to make?</div>
-  <div class="tg"><button data-a="jm" data-id="w" aria-pressed="${!jm}">By amount</button><button data-a="jm" data-id="j" aria-pressed="${jm}">I have a jar this big</button></div>
+  ${geek()?`<div class="tg"><button data-a="jm" data-id="w" aria-pressed="${!jm}">By amount</button><button data-a="jm" data-id="j" aria-pressed="${jm}">I have a jar this big</button></div>`:""}
   ${jm?`<p class="sum" style="margin:10px 0 8px">How big is your jar? Every ingredient is scaled to fill it, leaving room at the top.</p><div class="tg">${jbtn}</div>`
   :`<div class="step" style="margin-top:10px"><button data-a="gm" aria-label="Less ${noun}">${I("minus")}</button><b id="fmg">${g} g</b><button data-a="gp" aria-label="More ${noun}">${I("plus")}</button></div>`}
   <p class="sum" style="margin:8px 0 0">${jm?"Fits about "+g+" g of "+noun+" · ":""}${(g/1000).toFixed(g%100?2:1)} kg${pcs}${r?` · fills about ${r.jar}`:""}</p>`;
- const mixH=r&&r.mix.length?`<div class="lab" style="margin-top:16px">${I("ruler")}Fine-tune amounts</div><ul class="fmmix">${r.mix.map(x=>`<li><span>${x.e} ${esc(x.n.replace(/ \(.*\)/,""))}</span><button type="button" data-a="wm" data-id="${x.key}" aria-label="Less ${esc(x.n)}">${I("minus")}</button><b>${esc(x.q)}</b><button type="button" data-a="wp" data-id="${x.key}" aria-label="More ${esc(x.n)}">${I("plus")}</button></li>`).join("")}</ul><p class="sum" style="margin:8px 0 0">Tap − or + to use less or more of one thing. Salt and the jar size follow along. <button type="button" class="fmreset" data-a="wr">Back to the standard recipe</button></p>`:"";
+ const mixH=geek()&&r&&r.mix.length?`<div class="lab" style="margin-top:16px">${I("ruler")}Fine-tune amounts</div><ul class="fmmix">${r.mix.map(x=>`<li><span>${x.e} ${esc(x.n.replace(/ \(.*\)/,""))}</span><button type="button" data-a="wm" data-id="${x.key}" aria-label="Less ${esc(x.n)}">${I("minus")}</button><b>${esc(x.q)}</b><button type="button" data-a="wp" data-id="${x.key}" aria-label="More ${esc(x.n)}">${I("plus")}</button></li>`).join("")}</ul><p class="sum" style="margin:8px 0 0">Tap − or + to use less or more of one thing. Salt and the jar size follow along. <button type="button" class="fmreset" data-a="wr">Back to the standard recipe</button></p>`:"";
  const side=`
+ <div class="geekrow"><button type="button" class="geekbtn" data-a="geek" aria-pressed="${geek()}">${I("wand")}Geek foody</button><span>${geek()?"Extra options are on":"Show more options"}</span></div>
  <p class="hint2" style="margin:0 0 8px">Every amount, including the salt, is worked out for you in grams.</p>
  <section class="panel">
   <div class="lab">${I("jar")}What are you making?</div>
@@ -484,8 +494,8 @@ function pickRandom(){
  const wt=x=>{let k=1;for(const t in rt){const e=rt[t];if(e&&e.m===x.id)k*=e.v>0?1.6:.5}return k}; // thumbs steer which kind of ferment comes up
  let tot=0;const ws=M.map(x=>{const w=wt(x);tot+=w;return w});let pick=Math.random()*tot,mm=M[M.length-1];for(let i=0;i<M.length;i++){pick-=ws[i];if(pick<=0){mm=M[i];break}}
 ST.m=mm.id;
- ST.items[mm.id]=mm.multi?shuf(mm.items.map(i=>i.id)).slice(0,1+Math.floor(Math.random()*2)):[rnd(mm.items).id];
- const base=mm.arom.filter(x=>!x.only||ST.items[mm.id].includes(x.only));
+ ST.items[mm.id]=mm.multi?shuf(vItems(mm).map(i=>i.id)).slice(0,1+Math.floor(Math.random()*2)):[rnd(vItems(mm)).id];
+ const base=vArom(mm).filter(x=>!x.only||ST.items[mm.id].includes(x.only));
  ST.arom[mm.id]=shuf(base.map(x=>x.id)).slice(0,2+Math.floor(Math.random()*3));
  if(mm.id==="kimchi"&&ST.items[mm.id][0]==="napa")ST.arom[mm.id]=[...new Set([...ST.arom[mm.id],"gochugaru","garlic"])];
  ST.w[mm.id]={};ST.sal=1;ST.temp=rnd(["cool","mild","mild","warm"]);
@@ -523,6 +533,7 @@ root.addEventListener("click",e=>{
   if(ST.arom[m.id])ST.arom[m.id]=selArom(m);
  }
  else if(a==="a"){const c=selArom(m);ST.arom[m.id]=c.includes(id)?c.filter(x=>x!==id):[...c,id]}
+ else if(a==="geek"){window.GEEK.set(!window.GEEK.on());return}
  else if(a==="jm"){
   if(id==="j")ST.jar[m.id]=ST.jar[m.id]||1;
   else if(ST.jar[m.id]){const [lo,hi,st]=m.g,cg=effG(m);ST.jar[m.id]=0;ST.g[m.id]=Math.min(hi,Math.max(lo,Math.round(cg/st)*st))}
@@ -544,7 +555,7 @@ root.addEventListener("click",e=>{
  }
  else if(a==="share"){
   const r=root._r,m=cur();if(!r||!window.__shareOut)return;
-  window.__shareOut("f",{m:m.id,items:selItems(m),arom:selArom(m),g:amount(m),jar:ST.jar[m.id]||0,w:ST.w[m.id]||{},sal:ST.sal,temp:ST.temp},r.title,r.title+" · ready in about "+(r.ready[0]===r.ready[1]?r.ready[0]:r.ready[0]+" to "+r.ready[1])+" days",b,()=>r.title+"\n"+r.ing.map(i=>"• "+i.n+" – "+i.q).join("\n"));
+  window.__shareOut("f",{m:m.id,items:selItems(m),arom:selArom(m),g:amount(m),jar:geek()?ST.jar[m.id]||0:0,w:geek()?ST.w[m.id]||{}:{},sal:ST.sal,temp:ST.temp},r.title,r.title+" · ready in about "+(r.ready[0]===r.ready[1]?r.ready[0]:r.ready[0]+" to "+r.ready[1])+" days",b,()=>r.title+"\n"+r.ing.map(i=>"• "+i.n+" – "+i.q).join("\n"));
   return;
  }
  else if(a==="rm"){ST.batches.splice(+id,1)}
@@ -567,6 +578,7 @@ function applyShare(d){ // a shared setup: validate every id against the real me
  const m=d&&MB[d.m];if(!m)return false;
  const its=Array.isArray(d.items)?d.items.filter(id=>m.items.some(i=>i.id===id)):[],ar=Array.isArray(d.arom)?d.arom.filter(id=>m.arom.some(a=>a.id===id)):[];
  if(!its.length)return false;
+ if(Number(d.jar)>0||(d.w&&Object.keys(d.w).length)||its.some(id=>(m.items.find(i=>i.id===id)||{}).g)||ar.some(id=>(m.arom.find(a=>a.id===id)||{}).g))window.GEEK.set(true,true);
  ST.m=m.id;ST.items[m.id]=m.multi?its:its.slice(0,1);ST.arom[m.id]=ar;
  const g=Number(d.g);if(Number.isFinite(g)&&g>0)ST.g[m.id]=Math.min(Math.max(g,m.g[0]),m.g[1]);
  ST.jar[m.id]=JARS_UI.includes(Number(d.jar))?Number(d.jar):0;
@@ -577,5 +589,6 @@ function applyShare(d){ // a shared setup: validate every id against the real me
 const snap=()=>{const m=cur();return{m:m.id,items:selItems(m),arom:selArom(m),g:amount(m),jar:ST.jar[m.id]||0,w:ST.w[m.id]||{},sal:ST.sal,temp:ST.temp}}; // the setup as it is now, for "Back to ..." links
 const have=(ids,w)=>ST.batches.some(b=>[].concat(ids).includes(b.m)&&isReady(b)&&(!w||new RegExp(w,"i").test(b.title))); // is a batch of this method ready in My kitchen? (w: a word the batch title must contain, e.g. "onion")
 {const c=document.createElement("style");c.textContent=".fmmix{list-style:none;margin:8px 0 0;padding:0}.fmmix li{display:flex;align-items:center;gap:8px;padding:6px 0;border-top:1px solid var(--line)}.fmmix li span{flex:1;min-width:0;font-weight:600}.fmmix button{flex:none;width:36px;height:36px;border-radius:50%;border:2px solid var(--ink);background:var(--card);color:var(--ink);display:grid;place-items:center;padding:0;cursor:pointer}.fmmix button svg{width:16px;height:16px}.fmmix b{min-width:64px;text-align:center}.fmreset{font:inherit;font-weight:800;background:none;border:0;padding:0;text-decoration:underline;color:var(--acct,var(--acc2));cursor:pointer}.fmtot li.big{font-weight:800}";document.head.appendChild(c)}
+window.GEEK.sub(()=>build());
 window.FERMENT={rebuild:build,methods:M,applyShare,snap,have};
 })();

@@ -11,7 +11,7 @@ const num=(n,one,many)=>n+" "+(n===1?one:many);
 const list=a=>a.length<2?(a[0]||""):a.slice(0,-1).join(", ")+" and "+a[a.length-1];
 const learn=(id,keys,arr)=>{const o=LEARN[id]=LEARN[id]||{};keys.forEach(k=>{o[k]=(o[k]||[]).concat(arr)})};
 /* add controls to an existing tool and run fn(result, settings) on every calc */
-function extend(id,ctls,fn,after){const t=T[id];if(!t)return;const at=after?t.ctl.findIndex(c=>c.k===after):-1;if(at>=0)t.ctl.splice(at+1,0,...ctls);else t.ctl.push(...ctls);const o=t.calc;
+function extend(id,ctls,fn,after){const t=T[id];if(!t)return;ctls.forEach(c=>{c.g=1});const at=after?t.ctl.findIndex(c=>c.k===after):-1;if(at>=0)t.ctl.splice(at+1,0,...ctls);else t.ctl.push(...ctls);const o=t.calc;
  t.calc=function(s){const r=o.call(this,s);try{return fn(r,s)||r}catch(e){console.error(e);return r}}}
 /* "Add to it" lines: each option has a name, an amount for n people and a pattern that spots the same thing already in the recipe ("Extra garlic") */
 function addOns(r,picked,defs,n){const names=[];
@@ -58,10 +58,10 @@ function addOns(r,picked,defs,n){const names=[];
 /* ---------------- Jam: more fruit, a sugar slider, add-ins, a finished weight ---------------- */
 if(T.jam){const t=T.jam;
  t.main="u";
- t.ctl[0].tg.push(["rhubarb","Rhubarb"],["pear","Pears"],["peach","Peaches"],["fig","Figs"],["gooseberry","Gooseberries"],["quince","Quince"],["mixedberry","Mixed berries"]);
- t.ctl[2].tg.push([3,"Custom"]);
- t.ctl.push({k:"sp",label:"Sugar (% of the fruit weight)",icon:"flame",def:75,step:[30,110,5,"%"],when:{k:"l",v:3}},
-  {k:"xa",label:"Add-ins",icon:"wand",def:[],x:1,ms:[["vanilla","Vanilla"],["chilli","Chilli"],["ginger","Ginger"],["rosemary","Rosemary"],["cinnamon","Cinnamon"],["orange","Orange zest"],["star","Star anise"],["cardamom","Cardamom"],["thyme","Thyme"],["basil","Basil"],["pepper","Black pepper"]]});
+ t.ctl[0].tg.push(["rhubarb","Rhubarb",1],["pear","Pears",1],["peach","Peaches",1],["fig","Figs",1],["gooseberry","Gooseberries",1],["quince","Quince",1],["mixedberry","Mixed berries",1]);
+ t.ctl[2].tg.push([3,"Custom",1]);
+ t.ctl.push({k:"sp",label:"Sugar (% of the fruit weight)",icon:"flame",def:75,step:[30,110,5,"%"],when:{k:"l",v:3},g:1},
+  {k:"xa",label:"Add-ins",icon:"wand",def:[],x:1,g:1,ms:[["vanilla","Vanilla"],["chilli","Chilli"],["ginger","Ginger"],["rosemary","Rosemary"],["cinnamon","Cinnamon"],["orange","Orange zest"],["star","Star anise"],["cardamom","Cardamom"],["thyme","Thyme"],["basil","Basil"],["pepper","Black pepper"]]});
  const P={strawberry:[60,"Low in pectin"],raspberry:[30,"Medium pectin"],apricot:[30,"Medium pectin"],plum:[30,"Medium pectin"],blueberry:[60,"Low in pectin"],cherry:[60,"Low in pectin"],apple:[15,"High in pectin"],blackcurrant:[15,"High in pectin"],
   rhubarb:[45,"Low in pectin"],pear:[60,"Low in pectin"],peach:[60,"Low in pectin"],fig:[60,"Low in pectin"],gooseberry:[15,"High in pectin"],quince:[15,"High in pectin"],mixedberry:[45,"Low to medium pectin"]};
  const SOFT=["rhubarb","pear","quince","apple"]; // firm fruit gets a short simmer in a little water first
@@ -158,7 +158,7 @@ if(T.jam){const t=T.jam;
   r.steps[r.steps.length-1]=r.steps[r.steps.length-1].replace(/ patty with (cheddar|Swiss|blue cheese|American cheese|pepper jack)/,st.cheese?" patty with "+lo([st.cheese])[0]:" patty").replace("Add the top bun","Add the "+fin+", then the top bun");
   r.title=r.title.replace(/^(\d+) /,"$1 "+st.adj+" ");r.note=[st.note+" "+(r.note&&r.note[0]||"")].concat((r.note||[]).slice(1));
   const bun=r.ing.find(i=>i[0]==="Bun: burger buns");if(bun)bun[0]="Bun: "+st.bun+" burger buns";else r.note.push("Tip: "+st.bun+" buns suit this style. Try the Soft rolls tool.")},"t");
- const sw=T.burger.spin;if(sw)T.burger.spin=function(s){sw.call(this,s);s.xi=Math.random()<.5?"none":OPTS[1+Math.floor(Math.random()*(OPTS.length-1))][0]};
+ const sw=T.burger.spin;if(sw)T.burger.spin=function(s){sw.call(this,s);s.xi=!(window.GEEK&&window.GEEK.on())||Math.random()<.5?"none":OPTS[1+Math.floor(Math.random()*(OPTS.length-1))][0]};
  extend("sandwich",CTL,(r,s)=>{const st=STY[s.xi];if(!st)return;const n=s.p||people;
   r.ing=r.ing.filter(i=>!/^(Mayonnaise|Mustard)$/.test(i[0]));
   st.sauce.forEach(x=>r.ing.push([x[0],G(x[1]*n)]));if(st.cheese)r.ing.push([st.cheese[0],G(st.cheese[1]*n)]);st.tops.forEach(x=>r.ing.push([x[0],G(x[1]*n)]));
