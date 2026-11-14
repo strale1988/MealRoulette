@@ -62,6 +62,7 @@ K.CRAFTS=[
  {id:"eggs",name:"Breakfast club",words:/\b(omelettes?|omelets?|pancakes?|crepes?|waffles?|frittata|scrambled|shakshuka|french toast)\b/i},
  {id:"sauce",name:"Saucy business",words:null},
  {id:"ferm",name:"Fermentation station",words:null},
+ {id:"brine",name:"Brine and salt lab",words:null},
  {id:"dairy",name:"Cultured club",words:null},
  {id:"jam",name:"Jam session",words:null},
  {id:"spice",name:"Spice rack",words:null},

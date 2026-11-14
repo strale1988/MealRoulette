@@ -29,5 +29,16 @@ for(const id of Object.keys(TOOLS)){
    if(extras)T.ctl.forEach(c=>{if(c.k===main.k)return;if(c.ms)s[c.k]=c.ms.map(x=>x[0]);else if(c.tg&&(c.g||c.x))s[c.k]=c.tg[c.tg.length-1][0]});
    check(id,s,main.k+"="+opt[0]+(extras?" +extras":""));
   }}}
+// Brine and salt lab: the pure maths in window.BRINE
+load("js/craft/craft-brine.js");
+{const B=window.BRINE,near=(a,b)=>Math.abs(a-b)<.01,t=(n,ok)=>{runs++;if(!ok)fail("brine",n,"wrong result")};
+ t("3.5% of 1 kg water is 35 g",near(B.wet(1000,3.5).salt,35));
+ t("2% of 1 kg veg is 20 g",near(B.dry(1000,2).salt,20));
+ const up=B.fix(1000,3,5);t("fix up adds salt",up.add==="salt"&&near((up.salt+up.g)/up.water,.05));
+ const dn=B.fix(1000,5,3);t("fix down adds water",dn.add==="water"&&near(dn.salt/(dn.water+dn.g),.03));
+ t("same strength adds nothing",B.fix(1000,4,4).add==="none");
+ t("35 g table salt is about 6 tsp",near(B.spoons(35,"table").tsp,35/6));
+ t("every salt has a spoon weight",B.SALTS.every(x=>x.tsp>0));
+ t("meat presets are usable",B.MEATS.every(m=>m.n&&(m.wet>0||m.dry>0)));}
 console.log(runs+" recipes calculated, "+fails+" problem"+(fails===1?"":"s"));
 process.exit(fails?1:0);

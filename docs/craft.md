@@ -26,3 +26,6 @@ A recipe belongs to one tool. `K.report().crafts` shows how many recipes each to
 1. Create `js/craft/craft-ID.js`, then run `python3 build.py sync --add`: it adds the file to `FILES` in `index.html` and to `sw.js` and bumps the cache version.
 2. Put `<div id="tab-ID" class="tab" role="tabpanel" hidden></div>` in `index.html` and let `craft-ID.js` fill it.
 3. Set `ready:1` in `UI`. The placeholder page is no longer generated; the calculator page replaces it.
+
+## Brine and salt lab (`js/craft/craft-brine.js`)
+A self-contained calculator (tab `brine`, group "Pantry and preserving"). Five modes: brine from water, salt for dry-salted veg, meat and fish (wet or dry brine presets in `MEATS`), a brine fixer (add salt or water to reach a target strength) and a salt-to-spoons converter (`SALTS`, grams per level teaspoon). Strength is salt as a percentage of the **water** weight, the way ferment recipes write it. The maths is in `window.BRINE` (`wet`, `dry`, `fix`, `spoons`) and is covered by `tools/smoke.js`. State is in localStorage `mr-brine`.

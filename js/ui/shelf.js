@@ -12,10 +12,10 @@ const SHELVES=[
  ["ev","Everyday cooking",["Everyday"]],
  ["na","North America",["American","Canadian","Cajun","Mexican","Belizean","Caribbean","Costa Rican","Cuban","Dominican","Guatemalan","Haitian","Honduran","Jamaican","Nicaraguan","Panamanian","Puerto Rican","Salvadoran","Trinidadian"]],
  ["sa","South America",["Argentine","Bolivian","Brazilian","Chilean","Colombian","Ecuadorian","Guyanese","Paraguayan","Peruvian","Surinamese","Uruguayan","Venezuelan"]],
- ["eu","Europe",["Balkan","British","Danish","French","German","Greek","Hungarian","Irish","Italian","Norwegian","Polish","Portuguese","Russian","Scottish","Spanish","Swedish","Swiss","Ukrainian"]],
- ["as","Asia",["Lebanese","Middle Eastern","Persian","Turkish","Armenian","Azerbaijani","Georgian","Kazakh","Kyrgyz","Tajik","Turkmen","Uzbek","Indian","Nepali","Pakistani","Sri Lankan","Chinese","Filipino","Indonesian","Japanese","Korean","Malaysian","Singaporean","Taiwanese","Thai","Vietnamese"]],
- ["af","Africa",["Cameroonian","Congolese","Eritrean","Ethiopian","Ghanaian","Ivorian","Kenyan","Malian","Moroccan","Nigerian","Senegalese","Somali","South African","Sudanese","Tanzanian","Ugandan"]],
- ["oc","Oceania",["Australian","Fijian","Māori","Papua New Guinean","Samoan","Tongan"]],
+ ["eu","Europe",["Balkan","British","Czech","Danish","French","German","Greek","Hungarian","Irish","Israeli","Italian","Norwegian","Polish","Portuguese","Russian","Scottish","Spanish","Swedish","Swiss","Ukrainian","Austrian","Baltic","Belgian","Bulgarian","Dutch","Finnish","Icelandic","Romanian"]],
+ ["as","Asia",["Lebanese","Middle Eastern","Persian","Turkish","Armenian","Azerbaijani","Georgian","Kazakh","Kyrgyz","Tajik","Turkmen","Uzbek","Indian","Nepali","Pakistani","Sri Lankan","Chinese","Filipino","Indonesian","Japanese","Korean","Malaysian","Singaporean","Taiwanese","Thai","Vietnamese","Afghan","Bangladeshi","Burmese","Cambodian","Lao","Mongolian"]],
+ ["af","Africa",["Cameroonian","Congolese","Egyptian","Eritrean","Ethiopian","Ghanaian","Ivorian","Kenyan","Malian","Moroccan","Nigerian","Senegalese","Somali","South African","Sudanese","Tanzanian","Tunisian","Ugandan","Algerian"]],
+ ["oc","Oceania",["Australian","Fijian","Hawaiian","Māori","Papua New Guinean","Samoan","Tongan"]],
  ];
 function shelves(list){
   const used=new Set(),out=[];
@@ -127,9 +127,32 @@ function paintShelf(){
     const BS={},SI={},named=new Set();shs.forEach(s=>{SI[s.id]=s;s.books.forEach(b=>BS[b.name]=s.id)});
     const scOf=x=>x.sc||BS[(x.b||x.bs[0]).name];
     const secs=r=>{const g=[];r.forEach(x=>{const id=scOf(x),l=g[g.length-1];if(l&&l.id===id)l.u.push(x);else g.push({id,u:[x]})});return g.map(s=>{const c=SI[s.id];const first=!named.has(s.id);named.add(s.id);return `<div class="sec" role="group" aria-label="${esc(c.name)}, ${c.books.length} cookbooks"${first?` style="min-width:${c.name.length*10+34}px"`:""}><i class="wt${first?"":" cont"}" title="${esc(c.name)}">${esc(first?c.name:c.name+" · cont.")}</i><i class="wd l"></i><i class="wd r"></i>${s.u.map(unitHTML).join("")}</div>`}).join("")};
-    box.innerHTML=`<div class="shelf">${rowsOf(null,false,0,units,scOf).map(r=>`<div class="shrow cs">${secs(r)}</div><div class="plank"></div>`).join("")}</div>`
+    let rows=rowsOf(null,false,0,units,scOf);
+    const draw=()=>{named.clear();box.innerHTML=`<div class="shelf">${rows.map(r=>`<div class="shrow cs">${secs(r)}</div><div class="plank"></div>`).join("")}</div>`
      +`<p class="shelfhint">${list.length} cookbooks, grouped by continent. Tap a spine to open the book.${note}</p>`;
-    fit();
+     fit()};
+    draw();
+    // The row fitting above works from estimated widths and always errs on the wide side, which left a gap at the right end of most rows.
+    // So measure the rendered rows and pull standing books up from the next row while they really fit; repeat until nothing moves.
+    const keyOf=x=>(x.b||x.bs[0]).name,realW=x=>{const e=x.k==="stack"?box.querySelector(`.stack:has(.bk[data-b="${CSS.escape(keyOf(x))}"])`):box.querySelector(`.bk[data-b="${CSS.escape(keyOf(x))}"]`);
+      return x.k==="lean"?x.w+x.ex+4:e?e.getBoundingClientRect().width+2+(x.ov||0):uw(x)};
+    // a row starts with a standing book: when the first one was taken, the next one stands up (never reorder, or books land in the wrong continent)
+    const standFirst=r=>{if(!r.length||r[0].k==="up")return r;const f=r[0],ns=f.k==="stack"?f.bs.map(b=>({k:"up",b,w:b.w})):[{k:"up",b:f.b,w:f.w,ov:f.ov}];if(ns[0]&&f.ov)ns[0].ov=f.ov;return arrange([...ns,...r.slice(1)],0,0)};
+    for(let pass=0;pass<8;pass++){
+      const els=[...box.querySelectorAll(".shrow")];let moved=0;
+      for(let i=0;i<rows.length-1;i++){
+        const cur=rows[i],sc=els[i]&&els[i].querySelectorAll(":scope>.sec");if(!sc||!sc.length||!cur.length)continue;
+        const ls=sc[sc.length-1],kids=[...ls.children].filter(c=>!c.matches(".wt,.wd,i")),lk=kids.length&&kids[kids.length-1];if(!lk)continue;
+        let free=ls.getBoundingClientRect().right-20-lk.getBoundingClientRect().right-(parseFloat(getComputedStyle(lk).marginRight)||0);
+        while(rows[i+1]&&rows[i+1].length>1){
+          const f=rows[i+1][0];if(f.k!=="up")break;
+          const same=scOf(f)===scOf(cur[cur.length-1]),w=same?realW(f):realW(f)+6;
+          if(free<w)break;
+          free-=w;cur.push(rows[i+1].shift());moved++;
+          rows[i+1]=standFirst(rows[i+1])}
+        if(moved)rows[i]=arrange(cur,0,0)}
+      if(!moved)break;
+      rows=rows.filter(r=>r.length);draw()}
     box.querySelectorAll(".bk").forEach(b=>b.onclick=()=>{cur=b.dataset.b;q="";mf="";paintShelf();goTop()});
     return;
   }
