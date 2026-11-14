@@ -1,0 +1,933 @@
+/* css/app.css: the whole stylesheet of Meal Roulette.
+   It is layered on purpose: later sections refine or override earlier ones (base look, then the chunky theme, then compact sizing,
+   desktop layout, spinners, the shelf, and last the small fixes). Keep the order; to change something, search for its selector
+   and edit the LAST rule that sets it. Colours and sizes come from the variables on :root and [data-theme=dark] at the top. */
+:root{--bg:#faf6ef;--card:#fff;--ink:#2b2622;--mute:#7a6f65;--acc:#e4572e;--acc2:#2f7d5b;--line:#eadfce;--soft:#fff1e8;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#171411;--card:#231f1b;--ink:#f3ece3;--mute:#a79b8d;--acc:#ff7a52;--acc2:#5fc79a;--line:#383129;--soft:#33241d;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#171411;--card:#231f1b;--ink:#f3ece3;--mute:#a79b8d;--acc:#ff7a52;--acc2:#5fc79a;--line:#383129;--soft:#33241d;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:2400px;margin:0 auto;padding:18px 16px 60px}
+.i{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.22em;flex:none}
+
+/* ---- top bar ---- */
+.bar{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:1px solid var(--line);box-shadow:0 2px 12px rgba(0,0,0,.05)}
+@supports (backdrop-filter:blur(8px)){.bar{background:color-mix(in srgb,var(--card) 86%,transparent);backdrop-filter:blur(12px)}}
+.bar-in{max-width:2400px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:11px;margin-right:auto;color:inherit}
+.logo{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--acc),#f2994a);color:#fff;display:grid;place-items:center;font-size:24px;box-shadow:0 3px 10px rgba(228,87,46,.35)}
+.brand b{display:block;font-size:20px;letter-spacing:-.02em;line-height:1.1}
+.brand small{display:block;color:var(--mute);font-size:12.5px;line-height:1.3}
+.tabs{display:flex;gap:4px;width:100%;order:3;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:3px}
+.tabs button{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;border:0;background:none;color:var(--mute);border-radius:11px;padding:9px 6px;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.tabs button:hover{color:var(--ink)}
+/* the pizza logo button (it brings back the start wheel) now sits in the tab bar, right before Cook, with a label so it reads as a button */
+.tabs .logo{flex:none;display:flex;border:var(--bw,2px) solid var(--ink);background:var(--card);box-shadow:var(--sh,2px 2px 0 var(--ink));align-items:center;gap:6px;width:auto;height:auto;padding:3px 12px 3px 4px!important;border-radius:999px;font:800 14px/1 "DM Sans",system-ui,sans-serif;color:var(--ink);white-space:nowrap}.tabs .logo svg{width:30px;height:30px;flex:none}.tabs .logo:hover{background:var(--soft)}.tabs .logo:active{transform:none}
+/* phones and narrow windows: the menu bar is icons only and fills the width; the header text is not needed then */
+@media (max-width:759px){.brand{display:none}.tabs .tl{display:none}.tabs button{padding:10px 4px!important;gap:0}.tabs button .i{width:26px;height:26px}.tabs .logo{flex:1;justify-content:center;padding:3px!important}.tabs .logo svg{width:32px;height:32px}}
+.tabs button[aria-selected=true]{background:var(--acc);color:#fff}
+
+/* ---- layout ---- */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.tile{display:flex;flex-direction:column;align-items:center;gap:4px;padding:12px 4px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:14px;font-size:13px;cursor:pointer}
+.tile .i{font-size:24px}
+.tile:hover{border-color:var(--acc)}
+.tile[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:#fff}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin-top:14px}
+.tiles+.panel{margin-top:14px}
+.lab{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--mute);margin:0 0 8px}
+.lab:not(:first-child){margin-top:16px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;border:1.5px solid var(--line);border-radius:12px;padding:6px;background:var(--bg)}
+.tags input{flex:1;min-width:140px;border:0;outline:0;background:transparent;color:var(--ink);font:inherit;padding:4px 6px}
+.ac-wrap{position:relative;min-width:0}
+.suggest{position:absolute;z-index:30;top:calc(100% + 4px);left:0;right:0;max-height:240px;overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.16);padding:4px}
+.suggest[hidden],.cols[hidden],.tab[hidden]{display:none!important}
+.suggest button{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;border:0;border-radius:8px;background:transparent;color:var(--ink);padding:9px 10px;text-align:left;cursor:pointer}
+.suggest button:hover,.suggest button[aria-selected=true]{background:var(--acc);color:#fff}
+.suggest button small{font-size:11px;opacity:.8;white-space:nowrap}
+.ac-help{font-size:11px;color:var(--mute);margin:4px 2px 0}
+.tag{display:inline-flex;align-items:center;gap:4px;background:var(--acc2);color:#fff;border-radius:999px;padding:3px 6px 3px 11px;font-size:14px}
+.tag button,.q button{border:0;background:none;color:inherit;cursor:pointer;display:grid;place-items:center;padding:0}
+.quick{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.quick button{border:1px solid var(--line);background:none;color:var(--mute);border-radius:999px;padding:3px 10px;font-size:13px;cursor:pointer}
+.quick button:hover{color:var(--ink);border-color:var(--mute)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.step,select{width:100%;height:44px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit}
+select{padding:0 10px}
+.step{display:flex;align-items:center;justify-content:space-between;padding:0 6px}
+.step button{width:34px;height:34px;border-radius:9px;border:0;background:var(--card);color:var(--ink);cursor:pointer;display:grid;place-items:center}
+.step b{font-size:17px}.step b.sv,.step b:has(.sv){display:flex;align-items:baseline;justify-content:center;gap:4px}.step .sv{font:inherit;color:inherit;background:transparent;border:0;border-bottom:2px dashed transparent;border-radius:0;padding:0;margin:0;text-align:right;min-width:2ch;max-width:6ch;width:auto;letter-spacing:inherit;font-variant-numeric:tabular-nums;-webkit-appearance:none;appearance:none}.step .sv:hover{border-bottom-color:var(--line)}.step .sv:focus{outline:0;border-bottom-color:var(--acc)}.step .su{font-weight:700;font-size:.8em;color:var(--mute)}
+.tg{display:flex;flex-wrap:wrap;gap:8px}
+.tg button{display:flex;align-items:center;gap:6px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:7px 13px;font-size:14px;cursor:pointer}
+.tg button[aria-pressed=true]{background:var(--acc2);border-color:var(--acc2);color:#fff}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.btns button{display:flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:14px;font-size:16px;font-weight:700;padding:15px 8px;color:#fff;cursor:pointer}
+.btns button:hover:not(:disabled){filter:brightness(1.06)}
+#spin{background:var(--acc)}#build,#remix{background:var(--acc2)}
+button:disabled{opacity:.6}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+/* no blue tap flash or stray selection box when tapping buttons; keyboard focus rings stay */
+button,summary,label,[role=button],[role=tab],[role=option],.tile,.logo,.sp-pizza,.ing li,ol li{-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none}
+button,summary,[role=tab],.tile,.sp-pizza,.ing li{-webkit-user-select:none;user-select:none;touch-action:manipulation}
+button:focus:not(:focus-visible),summary:focus:not(:focus-visible),[role=tab]:focus:not(:focus-visible),.tile:focus:not(:focus-visible),.ing li:focus:not(:focus-visible),ol li:focus:not(:focus-visible),.logo:focus:not(:focus-visible){outline:none;box-shadow:none}
+button::selection,button *::selection{background:transparent}
+.note{color:var(--mute);font-size:14px;margin-top:12px}
+.recipe-caution{color:var(--mute);font-size:13px;line-height:1.45;margin:10px 0 0;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--soft)}.recipe-caution strong{color:var(--ink)}
+.reel{display:none;text-align:center;margin:48px 0;min-height:120px;font-size:22px;font-weight:700;color:var(--acc)}.reel small{display:block;color:var(--mute);font-weight:400;font-size:14px;margin-top:6px}#rt,#prt{display:block;min-height:1.4em}.card{scroll-margin-top:130px}
+.reel.on{display:block}.reel .i{font-size:44px;display:block;margin:0 auto 6px;animation:sp var(--rev) linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+@keyframes pop{from{opacity:0;transform:translateY(12px) scale(.98)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;margin-top:20px;overflow:hidden;animation:pop .35s ease-out}
+.hero{background:var(--soft);padding:18px 20px;display:flex;gap:14px;align-items:center}
+.hero .ic{width:52px;height:52px;border-radius:16px;background:var(--acc);color:#fff;display:grid;place-items:center;font-size:28px;flex:none}
+.hero h2{margin:0;font-size:21px;line-height:1.2;letter-spacing:-.01em}
+.hero .ht{min-width:0}.hero .orig{margin:5px 0 0;display:flex;align-items:center;gap:6px;font-size:14px;font-weight:700;opacity:.88}.hero .orig .i{width:15px;height:15px}
+.body{padding:4px 20px 20px}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 0}
+.meta span{display:flex;align-items:center;gap:5px;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:3px 11px;font-size:13px}
+.desc{color:var(--mute);font-size:14px;margin:10px 0 0}
+h3{display:flex;align-items:center;gap:6px;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--acc2);margin:20px 0 8px}
+ul.ing{list-style:none;margin:0;padding:0}
+ul.ing li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);cursor:pointer}
+ul.ing li.done{opacity:.45;text-decoration:line-through}
+.q{font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+.buy{font-size:11px;color:var(--acc);border:1px solid var(--acc);border-radius:6px;padding:0 5px;margin-left:6px;text-decoration:none;display:inline-block}
+ol{list-style:none;counter-reset:s;margin:0;padding:0}
+ol li{counter-increment:s;display:flex;gap:12px;margin-bottom:12px}
+ol li:before{content:counter(s);flex:none;width:26px;height:26px;border-radius:50%;background:var(--soft);color:var(--acc);font-weight:700;display:grid;place-items:center;font-size:14px}
+.row{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+.row button{flex:1;min-width:110px;display:flex;align-items:center;justify-content:center;gap:6px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:11px 8px;font-size:14px;cursor:pointer}
+.row button:hover{border-color:var(--acc)}
+.call{display:flex;gap:8px;align-items:flex-start;border-radius:12px;padding:10px 12px;margin-top:14px;font-size:14px}.call .i{margin-top:3px}.buy2{background:var(--soft);color:var(--acc)}.ok2{background:var(--bg);color:var(--acc2);border:1px solid var(--line)}
+details{border:1px solid var(--line);border-radius:14px;background:var(--bg);margin-top:10px;padding:0 14px}summary{cursor:pointer;padding:12px 0;font-weight:600}details[open] summary{border-bottom:1px solid var(--line);margin-bottom:6px}
+.tag.urg{background:var(--acc)}.tag button.u{opacity:.6}.tag button.u[aria-pressed=true]{opacity:1}
+.fav .prow{display:flex;gap:8px}.fav .prow button{width:auto;margin-bottom:8px}.fav .prow [data-o]{flex:1}.fav .prow .d{justify-content:center;width:46px}
+.fav{margin-top:26px}.fav .frow{display:flex;gap:6px;align-items:stretch;margin-bottom:8px;grid-column:1/-1}.fav .frow button{width:auto;margin:0}.fav .frow .fm{flex:1;min-width:0}.fav .frow .fm span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.fav .frow .fa{justify-content:center;font-size:12px;font-weight:700;padding:0 10px;white-space:nowrap;color:var(--mute)}.fav .frow .fa[aria-pressed=true]{color:var(--acct,var(--acc2));border-color:currentColor}
+.fav button{display:flex;align-items:center;gap:8px;width:100%;text-align:left;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:11px 13px;margin-bottom:8px;font-size:15px;cursor:pointer}
+.fav button:hover{border-color:var(--acc)}
+.sum{margin:12px 0 0;font-size:13px;color:var(--mute)}.hint{margin:0 0 10px;font-size:14px;color:var(--mute)}
+.lnk{border:0;background:none;color:var(--acc);font:inherit;text-decoration:underline;cursor:pointer;padding:0}
+.pt{margin:4px 0 4px;font-size:24px;letter-spacing:-.02em}
+.kgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px;align-items:start;margin-top:12px}
+.kgrid .panel{margin-top:0}
+.ph{display:none;text-align:center;color:var(--mute);border:2px solid var(--line);border-radius:22px;padding:72px 24px}
+.ph .i{font-size:46px;display:block;margin:0 auto 10px;color:var(--acc)}
+.ph b{display:block;color:var(--ink);font-size:18px;margin-bottom:4px}
+.reel.on~.ph{display:none!important}
+footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);text-align:center;font-size:13px;color:var(--mute)}
+.split>div>h3:first-child{margin-top:20px}
+@media (min-width:760px){
+ .bar-in{padding:12px clamp(24px,3vw,56px)}
+ .tabs{width:auto;order:0;background:none;border:0;padding:0;gap:6px}
+ .tabs button{flex:none;padding:10px 18px;font-size:15px}
+ .tabs button:hover:not([aria-selected=true]){background:var(--soft)}
+}
+@media (min-width:960px){
+ main{padding:30px clamp(24px,3vw,56px) 60px}
+ .cols{display:grid;grid-template-columns:clamp(440px,30vw,640px) minmax(0,1fr);gap:clamp(28px,3vw,52px);align-items:start}
+ .side{position:sticky;top:90px;max-height:calc(100vh - 106px);overflow-y:auto;padding:2px}
+ .res>.note:first-child{margin-top:0}
+ .res .card:first-of-type{margin-top:0}
+ #out:empty+.ph{display:block}
+ .hero{padding:24px 28px}.hero h2{font-size:27px}.hero .ic{width:60px;height:60px;font-size:32px}
+ .body{padding:6px 28px 28px}
+ .card{scroll-margin-top:100px}
+}
+@media (min-width:1100px){
+ .split{display:grid;grid-template-columns:minmax(300px,5fr) minmax(0,7fr);gap:clamp(36px,4vw,64px)}
+ .split ol{max-width:85ch}
+ .plan .body{display:grid;grid-template-columns:repeat(auto-fill,minmax(440px,1fr));gap:0 18px;align-items:start}
+ .plan .body>:not(details.day){grid-column:1/-1}
+ .shopg{columns:260px;column-gap:32px}.sg{break-inside:avoid}
+ .fav{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));column-gap:10px}.fav h3{grid-column:1/-1}
+}
+@media (max-width:420px){.tile{font-size:11px}.grid{grid-template-columns:1fr}.tabs button{font-size:13px;gap:5px}.brand small{display:none}}
+/* ---- leftover inventory ---- */
+.leftover-box{margin-top:12px;padding:10px;border:1px solid var(--line);border-radius:13px;background:var(--bg)}
+.left-toggle{display:flex;align-items:flex-start;gap:10px;cursor:pointer}
+.left-toggle input{width:18px;height:18px;accent-color:var(--acc2);margin:3px 0 0;flex:none}
+.left-toggle span{display:block;flex:1}.left-toggle strong{display:block;font-size:14px}.left-toggle small{display:block;font-size:12px;line-height:1.4;color:var(--mute);margin-top:2px}
+#lefttags{min-height:38px}.left-tag{background:var(--acc);padding-left:10px}
+/* ---- tidy-up ---- */
+.hint2{margin:-2px 0 8px;font-size:13px;color:var(--mute)}
+.quick button{padding:6px 12px;min-height:30px}.tag button{padding:4px}
+.btns button:active:not(:disabled){transform:scale(.98)}
+.split ul.ing li{align-items:center}.split ul.ing li>span:first-child{flex:1}
+.split ul.ing li:before{content:"";flex:none;width:18px;height:18px;border:1.5px solid var(--line);border-radius:50%}
+.split ul.ing li.done:before{background:var(--acc2);border-color:var(--acc2)}
+.btns+.hint2{margin:10px 4px 0;text-align:center}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+h4.cat{margin:16px 0 2px;font-size:13px;font-weight:600;color:var(--mute)}
+ul.ing.tick li{align-items:center}ul.ing.tick li>span:first-child{flex:1}
+ul.ing.tick li:before{content:"";flex:none;width:18px;height:18px;border:1.5px solid var(--line);border-radius:50%}
+ul.ing.tick li.done:before{background:var(--acc2);border-color:var(--acc2)}
+details .row button{flex:none}
+.pzbtns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.pzbtns button{display:flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:14px;font-size:16px;font-weight:700;padding:15px 8px;color:#fff;background:var(--acc);cursor:pointer}.pzbtns button+button{background:var(--acc2)}.pzbtns button.alt{grid-column:1/-1;background:var(--card);color:var(--ink);border:1.5px solid var(--line)}.pzbtns button:disabled{opacity:.6}
+.pzmeta{display:flex;flex-wrap:wrap;gap:8px}.pzgrp{margin:12px 0 2px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute)}.pzsec{margin:14px 0 4px;font-size:14px;font-weight:700}.pzideas{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}.pzideas span{border:1px solid var(--line);border-radius:999px;padding:4px 11px;font-size:13px}
+.pzseg{display:flex;gap:6px;margin:0 0 16px;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:3px;max-width:520px}.pzseg button{flex:1;border:0;background:none;color:var(--mute);border-radius:11px;padding:10px 8px;font:inherit;font-size:14px;font-weight:700;cursor:pointer}.pzseg button[aria-pressed=true]{background:var(--acc);color:#fff}
+.pzg{margin:10px 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute)}.pzg:first-child{margin-top:0}.pztab{width:100%;border-collapse:collapse;font-size:14px;margin:6px 0 2px}.pztab td{padding:7px 0;border-bottom:1px solid var(--line)}.pztab td+td{text-align:right;white-space:nowrap}.pztab td+td+td{color:var(--mute);width:64px}.pztips{margin:10px 0 0;padding:10px 12px;border-radius:12px;background:var(--soft);font-size:13px;color:var(--mute)}.pztips p{margin:0 0 6px}.pztips p:last-child{margin:0}
+/* ===== Makeover: neo-brutalist theme (overrides only; markup hooks and IDs unchanged) ===== */
+@font-face{font-family:"Bricolage";src:url(fonts/bricolage-grotesque-latin-wght-normal.woff2) format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"DM Sans";src:url(fonts/dm-sans-latin-wght-normal.woff2) format("woff2");font-weight:100 1000;font-display:swap}
+:root{--bg:#fff3da;--card:#fffaee;--ink:#2a1a13;--mute:#6b5a4d;--acc:#d63a22;--acc2:#1f7d50;--line:#2a1a13;--soft:#ffe3a1;--sun:#ffc63d;--mint:#d3ebdc;--sand:#f3dcb4;--bw:2.5px;--sh:3px 3px 0 var(--ink)}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1d140f;--card:#2a1d16;--ink:#fff3da;--mute:#c4b29c;--acc:#f0553b;--acc2:#3fb27c;--line:#fff3da;--soft:#4a3513;--sun:#ffc63d;--mint:#1f3a2c;--sand:#3d2d1f;--sh:3px 3px 0 #000}}
+:root[data-theme=dark]{--bg:#1d140f;--card:#2a1d16;--ink:#fff3da;--mute:#c4b29c;--acc:#f0553b;--acc2:#3fb27c;--line:#fff3da;--soft:#4a3513;--sun:#ffc63d;--mint:#1f3a2c;--sand:#3d2d1f;--sh:3px 3px 0 #000}
+body{font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg)}
+h1,h2,h3,.brand b,.pt,.hero h2,.btns button,.pzbtns button{font-family:Bricolage,"DM Sans",system-ui,sans-serif}
+main{padding-bottom:130px}
+.bar{background:var(--bg);border:0;box-shadow:none}@supports (backdrop-filter:blur(8px)){.bar{background:var(--bg);backdrop-filter:none}}
+.logo{background:var(--acc);border:var(--bw) solid var(--ink);box-shadow:var(--sh);border-radius:12px}
+.brand b{font-size:24px;font-weight:800;letter-spacing:-.03em}.brand small{display:none}
+.hl{font:800 clamp(38px,9vw,64px)/.98 Bricolage,sans-serif;letter-spacing:-.04em;margin:6px 0 6px}.hl+p{margin:0 0 16px;color:var(--mute);font-size:18px}
+/* nav: floating bottom bar on phones, pill tabs on desktop */
+.tabs{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:40;width:auto;background:var(--card);border:var(--bw) solid var(--ink);border-radius:26px;padding:6px;box-shadow:var(--sh)}
+.tabs button{flex-direction:column;gap:3px;color:var(--ink);font-weight:700;font-size:13px;border-radius:20px;padding:10px 6px}
+.tabs button[aria-selected=true]{background:var(--acc);color:#fff}.tabs .i{font-size:22px}
+@media (min-width:760px){.tabs{position:static;width:auto;background:none;border:0;box-shadow:none;padding:0}.tabs button{flex-direction:row;gap:8px;font-size:15px;border:var(--bw) solid transparent;padding:8px 18px;border-radius:999px}.tabs button[aria-selected=true]{border-color:var(--ink);box-shadow:var(--sh)}.tabs button:hover:not([aria-selected=true]){background:var(--soft)}main{padding-bottom:60px}}
+/* chips, panels, cards */
+.tiles{display:flex;flex-wrap:wrap;gap:10px}
+.tile{flex-direction:row;gap:6px;padding:9px 16px;font:700 16px "DM Sans",sans-serif;border:var(--bw) solid var(--ink);border-radius:999px;background:var(--card)}
+.tile .i{font-size:18px}.tile:hover{border-color:var(--ink);background:var(--soft)}
+.tile[aria-pressed=true]{background:var(--acc);border-color:var(--ink);color:#fff;box-shadow:var(--sh)}
+.panel,.card,details,.leftover-box,.recipe-caution{border:var(--bw) solid var(--ink);box-shadow:var(--sh);background:var(--card)}
+.panel{border-radius:22px}.card{border-radius:26px;box-shadow:5px 5px 0 var(--ink)}
+.leftover-box{background:var(--mint);border-style:solid;box-shadow:none;border-color:var(--acc2)}
+.recipe-caution{box-shadow:none;border-style:dashed;background:transparent}
+.lab,h3,.pzgrp,.pzg{font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:12.5px;color:var(--mute)}
+.tags,.step,select{border:var(--bw) solid var(--ink);background:var(--card);border-radius:16px}
+.step button{border:var(--bw) solid var(--ink);background:var(--sun);color:#2a1a13;border-radius:11px}
+.tag{background:var(--sun);color:#2a1a13;border:2px solid var(--ink);font-weight:700}.tag.urg{background:var(--acc);color:#fff}
+.left-tag{background:var(--acc2)!important;color:#fff!important}
+.quick button{border:2px solid var(--ink);color:var(--ink);font-weight:700;border-radius:999px}.quick button:hover{background:var(--soft)}
+.tg button,.row button,.fav button,.pzseg{border:var(--bw) solid var(--ink);background:var(--card);font-weight:700}
+.tg button[aria-pressed=true],.pzseg button[aria-pressed=true]{background:var(--sun);color:#2a1a13;border-color:var(--ink);box-shadow:2px 2px 0 var(--ink)}
+.pzseg{border-radius:999px}.pzseg button{border-radius:999px;color:var(--ink)}
+.row button:hover,.fav button:hover{border-color:var(--ink);background:var(--soft)}
+.suggest{border:var(--bw) solid var(--ink);box-shadow:var(--sh)}.suggest button:hover,.suggest button[aria-selected=true]{background:var(--sun);color:#2a1a13}
+.left-toggle input{accent-color:var(--acc2)}
+/* buttons */
+.btns button,.pzbtns button{border:var(--bw) solid var(--ink);border-radius:20px;box-shadow:var(--sh);font-weight:800;font-size:20px;letter-spacing:-.01em;transition:transform .08s,box-shadow .08s}
+.btns button:active:not(:disabled),.pzbtns button:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--ink)}
+#spin{background:var(--acc);grid-column:1/-1;margin-top:14px;padding:18px 8px;font-size:26px}
+#remix,#build{background:var(--card);color:var(--ink);font-size:16px;padding:13px 8px}
+.pzbtns button+button{background:var(--card);color:var(--ink)}.pzbtns button.alt{border:var(--bw) solid var(--ink)}
+@media (max-width:959px){.act{position:static;padding:0;background:transparent;border:0;box-shadow:none}}
+/* recipe card */
+.hero{background:var(--acc2);color:#fff;border-bottom:var(--bw) solid var(--ink);padding:22px}
+.hero h2{font-weight:800;letter-spacing:-.03em;font-size:clamp(26px,5vw,38px);line-height:1.02;color:#fff}
+.hero .ic{background:var(--sun);color:#2a1a13;border:var(--bw) solid var(--ink);box-shadow:var(--sh)}
+.meta span{border:2px solid var(--ink);background:var(--card);font-weight:700;color:var(--ink)}
+.call{border:var(--bw) solid var(--ink)}.buy2{background:#ffd2c7;color:var(--ink)}.ok2{background:var(--mint);color:var(--ink)}
+.buy{border:2px solid var(--acc);font-weight:800;border-radius:8px}
+ul.ing li,.split ul.ing li{border:2px solid var(--ink);border-radius:16px;padding:11px 14px;margin-bottom:8px;background:var(--card)}
+.split ul.ing li:before,ul.ing.tick li:before{border:2.5px solid var(--ink);border-radius:7px;width:22px;height:22px}
+.split ul.ing li.done:before,ul.ing.tick li.done:before{background:var(--acc2);border-color:var(--ink)}
+ol li:before{background:var(--sun);color:#2a1a13;border:2px solid var(--ink);font-family:Bricolage,sans-serif;font-weight:800}
+.reel{color:var(--ink);font-family:Bricolage,sans-serif;font-weight:800}
+.ph{border:var(--bw) solid var(--ink);border-radius:26px}
+footer{border-top:var(--bw) solid var(--ink)}
+.pt{font-size:clamp(34px,8vw,52px);font-weight:800;letter-spacing:-.04em}
+.pantry[hidden]{display:none}.pantry{border:var(--bw) solid var(--ink);box-shadow:var(--sh);border-radius:20px;padding:14px 16px;margin-top:14px;background:var(--card)}
+.pantry div{display:flex;justify-content:space-between;gap:10px;font:800 18px Bricolage,sans-serif}.pantry span{font:800 14px "DM Sans",sans-serif;color:var(--acc2)}
+.pantry i{display:block;height:14px;margin-top:10px;border:var(--bw) solid var(--ink);border-radius:99px;background:var(--sand);overflow:hidden}.pantry u{display:block;height:100%;background:var(--acc2);text-decoration:none}
+.row .go{flex-basis:100%;background:var(--acc);color:#fff;border:var(--bw) solid var(--ink);box-shadow:var(--sh);font:800 20px Bricolage,sans-serif;padding:15px 8px;border-radius:18px}.row .go:hover{background:var(--acc);border-color:var(--ink)}
+ol li,ul.ing li{-webkit-tap-highlight-color:transparent}ol li{cursor:pointer}ol li.done{opacity:.45;text-decoration:line-through}
+.cookov{position:fixed;inset:0;z-index:100;background:var(--bg);display:flex;flex-direction:column;padding:max(16px,env(safe-area-inset-top)) 18px max(18px,env(safe-area-inset-bottom));overflow:auto}
+.ck-top{display:flex;align-items:center;justify-content:space-between;gap:12px;font:800 18px Bricolage,sans-serif}.ck-x{margin-left:auto;width:44px;height:44px;border:var(--bw) solid var(--ink);background:var(--card);color:var(--ink);border-radius:14px;cursor:pointer;display:grid;place-items:center;flex:none}
+
+/* ---- cooking mode: ingredients drawer, "use now" list and temperature chips ---- */
+.ck-ib{border:var(--bw) solid var(--ink);background:var(--card);color:var(--ink);border-radius:99px;padding:8px 16px;font:800 15px "DM Sans",sans-serif;cursor:pointer;flex:none}.ck-ib[aria-expanded=true]{background:var(--sun);color:#2a1a13}
+.ck-top .ck-ib{margin-left:auto}.ck-top .ck-ib+.ck-x{margin-left:0}
+.ck-chips{display:flex;flex-wrap:wrap;gap:8px}.ck-chip{border:var(--bw) solid var(--ink);border-radius:99px;padding:6px 14px;background:var(--mint);color:var(--ink);font:800 17px "DM Sans",sans-serif}.ck-chip b{font-weight:800}
+.ck-use{border:2px solid var(--line,var(--ink));border-radius:16px;padding:10px 14px;background:var(--soft)}.ck-use small{display:block;margin-bottom:4px}.ck-use ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2px 18px}.ck-use li{display:flex;justify-content:space-between;gap:10px;font:600 17px "DM Sans",sans-serif}.ck-use li b{font-weight:800;white-space:nowrap}
+.ck-panel{max-width:760px;width:100%;margin:14px auto 0;max-height:38vh;overflow:auto;border:var(--bw) solid var(--ink);border-radius:18px;background:var(--card);padding:6px 14px}.ck-panel[hidden]{display:none}.ck-panel li.ck-h{display:block;padding:12px 0 2px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);border:0;cursor:default}.ck-panel ul{list-style:none;margin:0;padding:0}.ck-panel li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line,#ddd);font:600 17px "DM Sans",sans-serif;cursor:pointer}.ck-panel li:last-child{border:0}.ck-panel li.got{opacity:.45;text-decoration:line-through}.ck-panel li b{font-weight:800;white-space:nowrap}
+.ck-bar{display:block;height:12px;margin:14px 0;border:var(--bw) solid var(--ink);border-radius:99px;background:var(--sand);overflow:hidden}.ck-bar u{display:block;height:100%;background:var(--acc);transition:width .25s}
+.ck-step{flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px;max-width:760px;width:100%;margin:0 auto}.ck-step small{font:800 13px "DM Sans";letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.ck-step p{margin:0;font:700 clamp(26px,6vw,44px)/1.15 Bricolage,sans-serif;letter-spacing:-.02em}
+.ck-t{align-self:flex-start;display:flex;gap:8px;align-items:center;border:var(--bw) solid var(--ink);background:var(--sun);color:#2a1a13;border-radius:16px;padding:13px 18px;font:800 18px "DM Sans";box-shadow:var(--sh);cursor:pointer}.ck-t.ring{background:var(--acc);color:#fff}
+.ck-nav{display:grid;grid-template-columns:1fr 2fr;gap:12px;max-width:760px;width:100%;margin:18px auto 0}.ck-nav button{border:var(--bw) solid var(--ink);border-radius:20px;padding:18px;font:800 22px Bricolage,sans-serif;box-shadow:var(--sh);cursor:pointer;background:var(--card);color:var(--ink)}.ck-n{background:var(--acc)!important;color:#fff!important}.ck-nav button:disabled{opacity:.4;box-shadow:none}
+.btns{grid-template-columns:2fr 1fr;gap:12px}#spin{grid-column:auto;margin-top:14px;line-height:1.1}
+#remix{font-size:15px;margin-top:14px;padding:10px 6px;flex-direction:column;gap:4px;line-height:1.1}
+.pzbtns:has(#pzspin){grid-template-columns:2fr 1fr}.pzbtns:has(#pzspin) #pzremix{font-size:15px;padding:10px 6px;flex-direction:column;gap:4px;line-height:1.1}
+#pzferm{display:none}
+.step:has(#pzhyd){display:none}
+.tags{border-radius:28px;padding:6px 10px}.tags input:focus,.tags input:focus-visible{outline:0;box-shadow:none}.tags:focus-within{outline:3px solid var(--acc);outline-offset:2px}
+.sl{margin:10px 0 4px}.sl[hidden]{display:none}
+.sl input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:34px;background:transparent;margin:0;cursor:pointer;--p:50%}
+.sl input[type=range]::-webkit-slider-runnable-track{height:14px;border:var(--bw) solid var(--ink);border-radius:99px;background:linear-gradient(90deg,var(--acc) var(--p),var(--sand) var(--p))}
+.sl input[type=range]::-moz-range-track{height:10px;border:var(--bw) solid var(--ink);border-radius:99px;background:linear-gradient(90deg,var(--acc) var(--p),var(--sand) var(--p))}
+.sl input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;margin-top:-10px;border-radius:50%;background:var(--sun);border:3px solid var(--ink);box-shadow:2px 2px 0 var(--ink)}
+.sl input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:var(--sun);border:3px solid var(--ink);box-shadow:2px 2px 0 var(--ink)}
+.sl input[type=range]:disabled{opacity:.4}
+.ticks{display:flex;justify-content:space-between;gap:4px;font:700 12px "DM Sans",sans-serif;color:var(--mute);margin-top:2px}.ticks .on{color:var(--acc);font-weight:800}.ticks .off{opacity:.35}
+.hbig{display:flex;align-items:center;justify-content:space-between;gap:10px}.hbig b{font:800 52px/1 Bricolage,sans-serif;letter-spacing:-.04em}
+.badge{background:var(--mint);color:#2a1a13;border:2px solid var(--ink);border-radius:99px;padding:6px 14px;font:800 14px "DM Sans",sans-serif}
+/* ---- readability + adaptability pass ---- */
+:root{--pink:#ffd2c7;--acct:#c0301b;--hero:#1f7d50}
+/* one speed rule for every spinner (pot, pizza, jar, home wheel): one turn takes --rev, one bounce --bob */
+:root{--rev:7s;--bob:3s} /* idle: slow and calm */
+.splash.spinning,.reel.on,.pzreel.on,.fmreel{--rev:1.6s;--bob:.8s} /* while a spin is running: fast */
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--acc:#e0432a;--acct:#ff8f74;--pink:#5a2a22;--mint:#1f3a2c}}
+:root[data-theme=dark]{--acc:#e0432a;--acct:#ff8f74;--pink:#5a2a22;--mint:#1f3a2c}
+.buy2{background:var(--pink);color:var(--ink)}.ok2{background:var(--mint);color:var(--ink)}
+.badge{background:var(--mint);color:var(--ink)}
+.buy,.lnk,.ticks .on{color:var(--acct)}.buy{border-color:var(--acct)}
+.left-tag,.hero{background:#1f7d50!important;color:#fff!important}.hero h2{color:#fff}
+.tabs button[aria-selected=true],#spin,.row .go,.ck-n,.tile[aria-pressed=true],.tag.urg{background:#d63a22!important;color:#fff!important}
+.step button{width:42px;height:42px}.tag button,.suggest button{min-height:34px}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+main,.bar-in{max-width:1280px}
+@media (min-width:1280px){.cols{grid-template-columns:minmax(420px,520px) minmax(0,1fr)}}
+@media (max-width:380px){.hl{font-size:34px}.btns,.pzbtns:has(#pzspin){gap:8px}#spin{font-size:21px}.tile{padding:8px 12px;font-size:15px}}
+@media (prefers-contrast:more){:root{--mute:var(--ink)}}
+a,button,input,select,summary,li[tabindex]{touch-action:manipulation}
+/* ---- fun spinners: one shared whirl (rotating ring, pieces pop out and in) ---- */
+.reel .spinwrap{position:relative;width:170px;height:170px;margin:0 auto 12px}
+.spinwrap .rot{position:absolute;inset:0;animation:sp var(--rev) linear infinite}
+.spinwrap .sc{position:absolute;inset:0;transform:rotate(var(--r))}
+.spinwrap .pop{position:absolute;inset:0;animation:sout calc(var(--bob)*1.4) ease-in-out infinite;animation-delay:calc(var(--k)*.2s)}
+.spinwrap .wg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.spinwrap .em{position:absolute;left:50%;top:50%;width:0;height:0}
+.spinwrap .em b{position:absolute;left:-19px;top:-72px;display:block;transform:rotate(calc(var(--r)*-1))}
+.spinwrap .em i{display:block;font-style:normal;font-size:34px;line-height:38px;width:38px;text-align:center;animation:sp var(--rev) linear infinite reverse}
+@keyframes sout{0%,60%,100%{transform:translateY(0) scale(1)}30%{transform:translateY(-24px) scale(1.12)}}
+#remix,.pzbtns:has(#pzspin) #pzremix{flex-direction:row;gap:7px;font-size:17px;padding:10px 6px}#remix .i,#pzremix .i{width:1.6em;height:1.6em}
+#save[aria-pressed=true] .i{fill:var(--acc)}
+.thumb[aria-pressed=true] .i{fill:var(--acc)}
+.ck-done{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center}.ck-done h2{margin:0;font:800 clamp(40px,10vw,72px)/1 Bricolage,sans-serif;letter-spacing:-.04em}.ck-done p{margin:0;color:var(--mute);font-size:20px}.ck-done .ck-n{margin-top:12px;min-width:200px;border:var(--bw) solid var(--ink);border-radius:20px;padding:16px;font:800 22px Bricolage,sans-serif;box-shadow:var(--sh);cursor:pointer}
+.agehint{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px;padding:10px 12px;border:2px solid var(--ink);border-radius:14px;background:var(--soft);font-size:14px}.agehint[hidden]{display:none}.agehint button{flex:none;border:var(--bw) solid var(--ink);background:var(--sun);color:#2a1a13;border-radius:99px;padding:6px 14px;font:800 14px "DM Sans",sans-serif;cursor:pointer;box-shadow:2px 2px 0 var(--ink)}
+.toss{position:relative;width:240px;height:190px;margin:0 auto 6px}
+.toss .potsvg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.toss .swirl{position:absolute;left:55px;top:30px;width:130px;height:130px;animation:sp var(--rev) linear infinite}
+.toss .swirl svg{width:100%;height:100%;display:block}
+.toss .ring{position:absolute;left:120px;top:95px;width:0;height:0;animation:sp calc(var(--rev)*1.8) linear infinite}
+.toss .ing{position:absolute;left:0;top:0;width:0;height:0;transform:rotate(var(--r))}
+.toss .ing u{position:absolute;left:-18px;top:-18px;width:36px;height:36px;text-decoration:none;transform:translateY(calc(var(--R)*-1)) rotate(calc(var(--r)*-1));animation:bobr var(--bob) ease-in-out infinite;animation-delay:calc(var(--k)*-.25s)}
+.toss .ing i{display:block;font-style:normal;font-size:30px;line-height:36px;text-align:center;animation:sp calc(var(--rev)*1.8) linear infinite reverse}
+.toss .bub{position:absolute;width:8px;height:8px;border-radius:50%;border:2px solid var(--ink);background:rgba(255,255,255,.5);opacity:0;animation:bub calc(var(--rev)*.75) ease-out infinite;animation-delay:calc(var(--k)*-.6s)}
+.toss .steam{position:absolute;left:120px;top:95px;width:0;height:0}
+.toss .steam s{position:absolute;left:-16px;top:-16px;width:32px;height:32px;border-radius:50%;background:var(--mute);opacity:0;animation:puff var(--rev) ease-out infinite;animation-delay:calc(var(--k)*.8s)}
+@keyframes bobr{0%,100%{transform:translateY(calc(var(--R)*-1)) rotate(calc(var(--r)*-1)) scale(.95)}50%{transform:translateY(calc(var(--R)*-1)) rotate(calc(var(--r)*-1)) scale(1.15)}}
+@keyframes bub{0%{opacity:0;transform:scale(.3)}30%{opacity:.9}70%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(1.5)}}
+@keyframes puff{0%{opacity:0;transform:translate(0,0) scale(.4)}30%{opacity:.22}100%{opacity:0;transform:translate(var(--sx),-8px) scale(2.6)}}
+
+/* ---- Fermentation station + tab bar with four tabs ---- */
+.tabs .sm{display:inline}.tabs .lg{display:none}
+@media (min-width:1100px){.tabs .lg{display:inline}.tabs .sm{display:none}}
+@media (max-width:480px){.tabs button{font-size:12px!important;white-space:nowrap;padding-left:2px!important;padding-right:2px!important}}
+.tg.fm button{min-height:34px;overflow:visible}.tg.fm button span{font-size:16px;line-height:1.3;display:inline-block;padding:1px 0 2px;overflow:visible}
+.fmtl{list-style:none;margin:8px 0 0;padding:0}.fmtl li{display:flex;gap:14px;padding:9px 0;border-bottom:1px solid var(--line)}.fmtl li:last-child{border:0}.fmtl b{flex:none;min-width:92px}.fmtl span{color:var(--mute)}
+.fmb ul{list-style:none;margin:0;padding:0}.fmb li{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}.fmb li:last-child{border:0}.fmb li.none{color:var(--mute);font-size:14px}
+.fmb li small{display:block;color:var(--mute);font-size:13px;margin-top:2px}
+.fmb li button{flex:none;width:34px;height:34px;display:grid;place-items:center;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:10px;cursor:pointer}
+#tab-ferm .res>.panel{margin-top:16px}
+#tab-ferm .step b{flex:1;text-align:center}
+.tabs button.dot{position:relative}.tabs button.dot::after{content:"";position:absolute;top:6px;right:8px;width:10px;height:10px;border-radius:50%;background:#1f9d5f;border:2px solid var(--ink)}
+.fmb li.rdy{background:var(--soft);border-radius:12px;padding-left:10px;padding-right:10px}.rdytag{display:inline-block;margin-left:6px;padding:1px 9px;border-radius:99px;background:#1f9d5f;color:#fff;font-size:12px;font-weight:700;vertical-align:1px}
+.fmspin{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:14px;padding:16px 8px;background:var(--acc);color:#fff;border:var(--bw,2px) solid var(--ink);border-radius:22px;box-shadow:var(--sh,3px 3px 0 var(--ink));font:800 24px Bricolage,sans-serif;cursor:pointer}.fmspin .i{font-size:1.1em}.fmspin:active{transform:translate(2px,2px);box-shadow:none}
+.fmreel{text-align:center;margin:40px 0;font:800 22px Bricolage,sans-serif;color:var(--ink)}.fmreel small{display:block;color:var(--mute);font:400 14px "DM Sans",sans-serif;margin-top:6px}.fmrt{display:block;min-height:1.4em}
+.fmjar{position:relative;width:240px;height:190px;margin:0 auto 6px}.fmjar svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.fmjar .fb{position:absolute;bottom:34px;width:9px;height:9px;border-radius:50%;border:2px solid var(--ink);background:rgba(255,255,255,.6);opacity:0;animation:fmrise var(--rev) ease-in infinite;animation-delay:calc(var(--k)*-.33s)}
+@keyframes fmrise{0%{opacity:0;transform:translateY(0) scale(.5)}15%{opacity:.9}85%{opacity:.9}100%{opacity:0;transform:translateY(-100px) scale(1.2)}}
+
+
+/* ending */
+.ck-badge{width:112px;height:112px;overflow:visible;animation:ckpop .5s cubic-bezier(.2,1.3,.4,1) both}
+.ck-badge .bg{fill:var(--acc2);stroke:var(--ink);stroke-width:3}
+.ck-badge .tick{fill:none;stroke:#fff;stroke-width:9;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:80;stroke-dashoffset:80;animation:cktick .45s .35s ease-out forwards}
+.ck-done h2{animation:ckup .5s .45s ease-out both}.ck-done p,.ck-done .ck-n{animation:ckup .5s .6s ease-out both}
+@keyframes ckpop{from{transform:scale(.5);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes cktick{to{stroke-dashoffset:0}}
+@keyframes ckup{from{transform:translateY(10px);opacity:0}to{transform:none;opacity:1}}
+/* hover + press feedback (chunky buttons lift on hover, sink on press) */
+.tile,.tg button,.quick button,.row button,.fav button,.btns button,.tabs button,.ck-nav button,.ck-n,.suggest button,.pzseg button,.ck-t{transition:transform .14s ease,box-shadow .14s ease,background-color .14s ease,border-color .14s ease,filter .14s ease}
+@media (hover:hover){
+ .btns button:hover:not(:disabled),.row .go:hover,.ck-nav button:hover,.ck-n:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink);filter:none}
+ .tile:hover,.tg button:hover,.row button:hover,.fav button:hover{transform:translate(-1px,-1px);box-shadow:3px 3px 0 var(--ink)}
+ .quick button:hover{transform:translateY(-1px)}
+ .tabs button:hover:not([aria-selected=true]){transform:translateY(-1px)}
+ .tag button:hover{transform:scale(1.15)}
+ .fav button:hover,.row button:not(.go):hover{background:var(--soft)}
+}
+.btns button:active:not(:disabled),.row .go:active,.ck-nav button:active,.ck-n:active,.tile:active,.tg button:active,.row button:active,.fav button:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.tile:focus-visible,.tg button:focus-visible,.quick button:focus-visible,.row button:focus-visible,.fav button:focus-visible,.btns button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+
+/* cooking log, shortcuts, print */
+.ck-done .ck-meta{font-size:15px;font-weight:700;color:var(--acc2);animation:ckup .5s .65s ease-out both;margin-top:-6px}
+
+/* cook mode: screen-lock indicator, notes */
+.ck-wl{display:inline-flex;align-items:center;gap:6px;margin-left:auto;margin-right:4px;font:700 12px "DM Sans",sans-serif;color:var(--mute);white-space:nowrap}.ck-wl i{width:8px;height:8px;border-radius:50%;background:var(--mute)}.ck-wl[data-on="1"] i{background:var(--acc2)}.ck-wl em{font-style:normal}
+.ck-last{border:var(--bw) solid var(--ink);border-radius:16px;padding:12px 14px;background:var(--card);font:600 16px/1.35 "DM Sans",sans-serif;white-space:pre-wrap}.ck-last b{display:block;margin-bottom:4px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.ck-nl{display:block;font:800 14px "DM Sans",sans-serif;color:var(--mute);letter-spacing:.04em;text-transform:uppercase}
+.ck-ta{display:block;width:min(100%,520px);box-sizing:border-box;min-height:84px;padding:12px 14px;border:var(--bw) solid var(--ink);border-radius:16px;background:var(--card);color:var(--ink);font:600 17px/1.35 "DM Sans",sans-serif;resize:vertical}
+.cknote{margin:12px 0}.cknote .nt{margin:0 0 6px;color:var(--ink);font-size:14.5px;white-space:pre-wrap}.cknote .nt b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin-bottom:2px}.cknote .cnr{display:flex;gap:16px;margin-top:8px;font-size:14px;font-weight:700}.cknote .ck-ta{width:100%;font-size:16px}
+.cl-stats{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 12px}.cl-stats div{flex:1;min-width:84px;text-align:center;border:var(--bw) solid var(--ink);border-radius:16px;padding:10px 6px;background:var(--soft)}.cl-stats b{display:block;font:800 28px/1 Bricolage,sans-serif}.cl-stats span{font-size:12px;color:var(--mute)}
+.cl-days{display:flex;gap:6px;margin:0 0 12px}.cl-days i{flex:1;height:26px;border-radius:8px;border:2px solid var(--ink);background:var(--card);display:flex;align-items:center;justify-content:center;font:700 11px "DM Sans",sans-serif;font-style:normal;color:var(--mute)}.cl-days i.on{background:var(--acc2);color:#fff}
+.cl-list{list-style:none;margin:0;padding:0;display:grid;gap:6px}.cl-list li{display:flex;justify-content:space-between;gap:10px;font-size:14px}.cl-list li span{color:var(--mute);white-space:nowrap}
+.kbd{display:none;text-align:center;font-size:12px;color:var(--mute);margin:6px 0 0}.kbd kbd,.shakehint kbd{font:700 11px "DM Sans",sans-serif;border:1.5px solid var(--ink);border-radius:6px;padding:1px 6px;background:var(--card)}
+@media (hover:hover) and (min-width:760px){.kbd{display:block}}
+@media print{
+ body{background:#fff!important;color:#000!important}
+ .tabs,.side,.gs,.inst,.act,footer,.fav,header,.brand,.hl,.hl+p,.recipe-caution,#note,.reel,.ph,.pzseg,#boot,.row,.btns,.cookov,.pantry,.pzbtns,#plans{display:none!important}
+ .cols{display:block!important}.card,.panel{box-shadow:none!important;border:1px solid #bbb!important;break-inside:avoid;background:#fff!important}
+ *{animation:none!important;transition:none!important}
+}
+
+/* extras */
+.hrow{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:8px 0;font-weight:700}
+.hstep{display:inline-flex;width:auto;min-width:130px;gap:6px}
+.hstep button{border-radius:50%}
+.hages{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}.hages label{display:flex;align-items:center;gap:6px;font-size:14px;color:var(--mute)}
+.hages select{width:auto;height:38px;padding:0 10px;border-radius:999px}
+.xtra-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:8px 0}.xtra-row p{margin:0;font-size:14px;color:var(--mute)}.xtra-row b{display:block;color:var(--ink);font-size:15px}
+
+/* ---- pizza logo, capsule shapes, round +/- steppers ---- */
+.logo{width:48px;height:48px;padding:3px;border-radius:50%;background:var(--card);border:var(--bw,2.5px) solid var(--ink);box-shadow:var(--sh,3px 3px 0 var(--ink));transition:transform .6s cubic-bezier(.3,1.5,.5,1)}
+.logo svg{display:block;width:100%;height:100%;fill:none;stroke:none}
+.logo{cursor:pointer;color:inherit;font:inherit;-webkit-tap-highlight-color:transparent}.logo svg{transition:transform .6s cubic-bezier(.3,1.5,.5,1)}.logo:hover svg{transform:rotate(45deg)}.logo:active{transform:scale(.92)}.logo:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.logo,.step button{transition:none}.logo:hover{transform:none}}
+/* steppers: a capsule track with two round buttons and the value in the middle */
+.step{height:54px;padding:0 6px;gap:6px;border-radius:999px;box-shadow:var(--sh,3px 3px 0 var(--ink))}
+.step button{width:40px;height:40px;flex:none;border-radius:50%;font-size:20px;transition:transform .14s ease,box-shadow .14s ease,background-color .14s ease}
+.step button .i{width:1em;height:1em;stroke-width:3}
+.step button:hover{transform:translateY(-1px);box-shadow:2px 2px 0 var(--ink)}
+.step button:active{transform:translateY(1px) scale(.92);box-shadow:none}
+.step button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.step b{flex:1;min-width:3ch;text-align:center;font:800 18px Bricolage,"DM Sans",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+/* capsule everything we can */
+select{border-radius:999px;padding:0 18px}
+.suggest{border-radius:26px;padding:6px}.suggest button{border-radius:999px;padding:9px 14px}
+.row button,.fav button,.btns button,.pzbtns button,.row .go,.ck-t,.ck-nav button,.fmspin,.buy{border-radius:999px}
+.fav button{padding:11px 18px}
+.tabs{border-radius:999px}.tabs button{border-radius:999px}
+.ck-x,.fmb li button{border-radius:50%}
+
+/* ---- start screen: the pizza spins like it is loading, stops, then tap or shake for a random recipe ---- */
+/* the footer sits at the bottom of the screen on short pages, so it does not jump up and down as the content changes */
+body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
+main{flex:1 0 auto;width:100%;box-sizing:border-box;display:flex;flex-direction:column}
+main>footer{margin-top:auto!important;padding-top:12px;width:100%}
+main>footer{padding-bottom:10px}
+@media (min-width:760px){main{padding-bottom:6px!important}}
+main>.tab:not([hidden]){width:100%;box-sizing:border-box;padding-bottom:56px} /* room between long content and the footer */
+html{scrollbar-gutter:stable}html:has(.splash:not(.out)){overflow:hidden}
+.splash{pointer-events:none;touch-action:none;overscroll-behavior:contain;position:fixed;inset:0;z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;padding-bottom:calc(24px + env(safe-area-inset-bottom,0px));background:var(--bg);color:var(--ink);text-align:center;transition:opacity .3s ease,transform .3s ease}
+.splash{transition:opacity .3s ease,transform .3s cubic-bezier(.3,.7,.2,1),filter .3s ease}
+.splash.out{opacity:0;transform:scale(1.06);filter:blur(6px);pointer-events:none;visibility:hidden;transition:opacity .3s ease,transform .3s ease,filter .3s ease,visibility 0s .3s}
+.splash.ready{pointer-events:auto;touch-action:manipulation}.splash.nofade,.splash.nofade.out{transition:none!important}
+.sp-go{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom,0px));display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border:var(--bw) solid var(--ink);border-radius:999px;background:var(--card);color:var(--ink);font:700 15px "DM Sans",sans-serif;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .35s ease .15s,transform .35s ease .15s,box-shadow .15s}
+.splash.ready .sp-go{opacity:1;pointer-events:auto;transform:none}.splash.ready .sp-go:hover{transform:translateY(-2px)}.splash.ready .sp-go:active{transform:translateY(1px)}
+.sp-go:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.sp-wheel{position:relative;width:var(--D);aspect-ratio:1;margin-top:18px;transition:transform .25s cubic-bezier(.3,.7,.2,1);animation:spPop .4s cubic-bezier(.2,.9,.3,1.15) backwards}
+.sp-pizza{will-change:transform;display:block;width:100%;height:100%;padding:0;border:0;border-radius:50%;background:none;cursor:default;animation:sp var(--rev) linear infinite;--rev:7s;-webkit-tap-highlight-color:transparent}
+.sp-pizza svg{display:block;width:102%;height:102%;margin:-1%}
+.sp-pizza:focus-visible{outline:4px solid var(--acc);outline-offset:6px}
+.splash.ready .sp-pizza:not(:disabled){cursor:pointer}
+.splash.ready .sp-wheel:hover{transform:scale(1.03)}.splash.ready .sp-wheel:active{transform:scale(.97)}
+.sp-t{margin:8px 0 0;font:800 clamp(34px,8vw,56px)/1 Bricolage,"DM Sans",sans-serif;letter-spacing:-.04em;white-space:nowrap}
+.sp-t span{display:inline-block;animation:spLetter .45s cubic-bezier(.2,.9,.3,1.25) backwards;animation-delay:calc(.1s + var(--i)*25ms)}
+.sp-h{margin:0;min-height:2.7em;max-width:30ch;color:var(--mute);font-size:17px;line-height:1.35;transition:opacity .22s ease,transform .22s ease;animation:spIn .4s ease .3s backwards}
+.sp-h.fade{opacity:0;transform:translateY(-6px)}.sp-h.tick{color:var(--ink);font:800 clamp(18px,4.6vw,24px)/1.2 Bricolage,"DM Sans",sans-serif;letter-spacing:-.02em}
+.splash .sp-h{height:60px;min-height:60px;overflow:hidden;flex:none}
+.sp-h .cn{position:relative;display:inline-block}.sp-h .cn i{visibility:hidden;font-style:normal}.sp-h .cn b{position:absolute;right:0;top:0;font-weight:inherit}
+.sp-h .fact{font-variant-numeric:tabular-nums;display:block;margin-top:8px;font:600 13px/1.3 "DM Sans",system-ui,sans-serif;color:var(--mute);opacity:.9}
+.sp-h .w{display:inline-block;animation:spWord .55s cubic-bezier(.2,.9,.3,1) backwards;animation-delay:calc(var(--w)*60ms)}
+.dots i{display:inline-block;width:.32em;height:.32em;margin-left:.28em;border-radius:50%;background:currentColor;animation:spDot 1.1s ease-in-out infinite}.dots i:nth-child(2){animation-delay:.15s}.dots i:nth-child(3){animation-delay:.3s}
+.sp-wheel{isolation:isolate}
+@keyframes spIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes spPop{from{opacity:0}to{opacity:1}}
+@keyframes spLetter{from{opacity:0;transform:translateY(.6em) rotate(8deg)}to{opacity:1;transform:none}}
+@keyframes spWord{from{opacity:0;transform:translateY(.55em)}to{opacity:1;transform:none}}
+@keyframes spDot{0%,70%,100%{transform:translateY(0);opacity:.4}35%{transform:translateY(-.35em);opacity:1}}
+@keyframes spTick{0%{transform:translateX(-50%) rotate(0)}30%{transform:translateX(-50%) rotate(-22deg)}60%{transform:translateX(-50%) rotate(12deg)}100%{transform:translateX(-50%) rotate(0)}}
+@keyframes spRing{0%{opacity:.55;transform:scale(.96)}100%{opacity:0;transform:scale(1.18)}}
+@media (prefers-reduced-motion:reduce){.sp-pizza{animation:none;transform:rotate(1417.5deg)}.splash,.sp-wheel,.sp-h{transition:none}.sp-wheel,.sp-t span,.sp-h,.sp-h .w,.dots i,.splash.ready .sp-bar i{animation:none}.splash.out{filter:none}}
+
+
+/* ---- start screen = the Cook spinner: same grid, wheel dead centre (--D), text in the row below, same type ---- */
+.splash{display:grid;grid-template-rows:minmax(0,1fr) auto minmax(0,1fr);grid-template-columns:minmax(0,1fr);justify-items:center;align-items:center;gap:0!important;padding:max(16px,env(safe-area-inset-top)) 16px max(16px,env(safe-area-inset-bottom));box-sizing:border-box}
+.splash .sp-wheel{grid-row:2;margin:0}
+.splash .sp-t{grid-row:1;align-self:end;margin:0 0 18px;transition:opacity .25s ease}
+.splash .sp-h{grid-row:3;align-self:start;justify-self:center;width:100%;max-width:520px;box-sizing:border-box;padding-top:14px;height:auto;min-height:calc(1.4em + 14px);overflow:visible}
+.splash .sp-h.tick{font:800 22px/normal Bricolage,"DM Sans",sans-serif;letter-spacing:0;color:var(--ink)}
+
+/* ---- start screen v2: tap anywhere; a friendlier way into the app ---- */
+.splash.ready{cursor:pointer}
+.sp-go{left:0;right:0;margin:0 auto;width:max-content;max-width:calc(100% - 32px);background:var(--sun,#ffc63d);color:#2a1a13;gap:10px;box-shadow:var(--sh);animation:spWig 6s ease-in-out 2.5s infinite}
+.sp-go .i{width:20px;height:20px;flex:none}
+@keyframes spWig{92%{transform:rotate(-3deg) translateY(-3px)}96%{transform:rotate(3deg)}}
+@media (prefers-reduced-motion:reduce){.sp-go{animation:none}}
+
+/* loading spin, pure CSS so it starts on the first paint: one turn that begins at 5x the idle speed and slows to exactly the idle speed (7 s a turn) as it ends,
+   then the idle spin takes over from the same angle (360deg = 0deg) with no jump. 3.5 s is what makes the turn add up to a whole 360deg. */
+.splash .sp-pizza{animation:spDown 423.5s linear forwards} /* ONE animation: two stacked ones cannot run on the compositor, so the pizza froze while the app was loading */
+@keyframes spDown{0.0%{transform:rotate(0.0deg)}0.0148%{transform:rotate(15.731deg)}0.0295%{transform:rotate(30.798deg)}0.0443%{transform:rotate(45.224deg)}0.059%{transform:rotate(59.033deg)}0.0738%{transform:rotate(72.248deg)}0.0885%{transform:rotate(84.892deg)}0.1033%{transform:rotate(96.987deg)}0.1181%{transform:rotate(108.555deg)}0.1328%{transform:rotate(119.616deg)}0.1476%{transform:rotate(130.192deg)}0.1623%{transform:rotate(140.304deg)}0.1771%{transform:rotate(149.97deg)}0.1919%{transform:rotate(159.212deg)}0.2066%{transform:rotate(168.047deg)}0.2214%{transform:rotate(176.495deg)}0.2361%{transform:rotate(184.573deg)}0.2509%{transform:rotate(192.3deg)}0.2656%{transform:rotate(199.693deg)}0.2804%{transform:rotate(206.769deg)}0.2952%{transform:rotate(213.544deg)}0.3099%{transform:rotate(220.034deg)}0.3247%{transform:rotate(226.255deg)}0.3394%{transform:rotate(232.223deg)}0.3542%{transform:rotate(237.951deg)}0.3689%{transform:rotate(243.454deg)}0.3837%{transform:rotate(248.746deg)}0.3985%{transform:rotate(253.84deg)}0.4132%{transform:rotate(258.75deg)}0.428%{transform:rotate(263.487deg)}0.4427%{transform:rotate(268.065deg)}0.4575%{transform:rotate(272.493deg)}0.4723%{transform:rotate(276.785deg)}0.487%{transform:rotate(280.95deg)}0.5018%{transform:rotate(284.998deg)}0.5165%{transform:rotate(288.94deg)}0.5313%{transform:rotate(292.786deg)}0.546%{transform:rotate(296.543deg)}0.5608%{transform:rotate(300.221deg)}0.5756%{transform:rotate(303.828deg)}0.5903%{transform:rotate(307.372deg)}0.6051%{transform:rotate(310.859deg)}0.6198%{transform:rotate(314.297deg)}0.6346%{transform:rotate(317.692deg)}0.6494%{transform:rotate(321.049deg)}0.6641%{transform:rotate(324.375deg)}0.6789%{transform:rotate(327.674deg)}0.6936%{transform:rotate(330.951deg)}0.7084%{transform:rotate(334.211deg)}0.7231%{transform:rotate(337.456deg)}0.7379%{transform:rotate(340.691deg)}0.7527%{transform:rotate(343.917deg)}0.7674%{transform:rotate(347.138deg)}0.7822%{transform:rotate(350.356deg)}0.7969%{transform:rotate(353.571deg)}0.8117%{transform:rotate(356.786deg)}0.8264%{transform:rotate(360.0deg)}100%{transform:rotate(21960deg)}}
+@media (prefers-reduced-motion:reduce){.splash .sp-pizza{animation:none}}
+
+/* ---- smoothness: nothing on the start screen resizes, and the rest of the page eases instead of snapping ---- */
+/* the start screen's text block keeps its final size from the first frame (hint line + counter line), so the counter appearing moves nothing */
+.splash .sp-h{height:0;min-height:0;overflow:visible} /* zero height: the text hangs below the wheel and never changes the rows, so the wheel and title stay put when it appears */
+.splash .sp-wheel,.splash .sp-t{will-change:transform}
+.sp-h .fact{min-height:1.3em}
+/* zero-specificity defaults: any transition a component already sets still wins */
+:where(button,a,summary,label,select,input,textarea,.tile,.card,.panel,[role=tab]){transition:background-color .22s ease,border-color .22s ease,color .22s ease,box-shadow .22s ease,opacity .22s ease,transform .22s cubic-bezier(.3,.7,.2,1)}
+:where(.tab:not([hidden])){animation:tabFade .32s ease both}
+@keyframes tabFade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+@media (prefers-reduced-motion:reduce){:where(.tab:not([hidden])){animation:none}:where(button,a,summary,label,select,input,textarea,.tile,.card,.panel,[role=tab]){transition:none}}
+
+/* ---- every spinner turns: the pot itself (handles) and the burger/sandwich plate rim now rotate, and the orbiting ingredients turn slower than the base (their upright counter-turn uses the same time) ---- */
+.toss .potsvg{animation:sp var(--rev) linear infinite}
+.bgr .rim{transform-box:fill-box;transform-origin:50% 50%;animation:sp var(--rev) linear infinite}
+
+#tab-cook.resmode .gsb{display:none} /* no search bar while a recipe is open */
+.art{transition:none!important} /* the old art leaves exactly as the new one arrives */
+
+/* ---- compact: tighter spacing and slightly smaller type everywhere, same look ---- */
+main{padding-top:10px;padding-bottom:104px}
+.bar-in{padding-top:6px;padding-bottom:6px}
+.logo{width:42px;height:42px;padding:2px}
+.brand b{font-size:21px}
+.hl{font-size:clamp(30px,7vw,46px);margin:2px 0 4px}.hl+p{font-size:15px;margin:0 0 10px}
+.pt{font-size:21px;margin:2px 0}
+.panel{padding:12px 14px;margin-top:10px}.tiles+.panel{margin-top:10px}
+.lab{font-size:12px;margin-bottom:5px}.lab:not(:first-child){margin-top:10px}
+h3{margin:12px 0 6px}
+.tiles{gap:6px}.tile{padding:6px 13px;font-size:14px}.tile .i{font-size:20px}
+.tags{padding:3px 10px}.tags input{padding:3px 6px}
+.quick{margin-top:6px}.ac-help{margin-top:3px}
+.grid{gap:10px}
+.step{height:46px}.step button{width:34px;height:34px;font-size:18px}.step b{font-size:16px}
+select{height:44px}
+.tg{gap:6px}.tg button{padding:5px 12px;font-size:13px}
+.btns,.pzbtns{gap:8px;margin-top:10px}
+.btns button,.pzbtns button{padding:10px 8px;font-size:18px}
+.row{margin-top:12px;gap:6px}.row button{min-height:0;padding:8px;font-size:13.5px}.row .go{padding:11px 8px;font-size:18px}
+.card{margin-top:14px}
+.hero{padding:12px 16px;gap:12px}.hero .ic{width:42px;height:42px;font-size:22px}.hero h2{font-size:19px}
+.body{padding:2px 16px 14px}
+.meta{margin-top:10px}.desc{margin-top:8px}
+ul.ing li,.split ul.ing li{padding:6px 12px;margin-bottom:5px}
+ol li{margin-bottom:8px}
+.call{padding:8px 12px;margin-top:10px}
+details{margin-top:8px}summary{padding:9px 0}
+.ph{padding:36px 20px}
+.fav{margin-top:18px}.fav button{padding:8px 16px;margin-bottom:5px;font-size:14px}
+.kgrid{gap:10px;margin-top:8px}
+.hint{margin:0 0 6px;font-size:13px}.sum{margin-top:8px}.note{margin-top:8px}
+.reel{margin:28px 0}
+footer{margin-top:28px;padding-top:12px}
+.tabs{padding:4px}.tabs button{padding:7px 4px;gap:2px;font-size:12.5px}.tabs .i{font-size:20px}
+@media (min-width:760px){.tabs{padding:0}.tabs button{padding:6px 16px;gap:8px;font-size:14.5px}}
+.splash{gap:10px}.sp-wheel{width:var(--D);margin-top:14px}.sp-t{font-size:clamp(30px,7vw,46px)}.sp-h{font-size:16px}
+
+/* ---- phone/tablet: filters and results are separate screens; desktop keeps filters left, recipe right ---- */
+@media (max-width:959px){
+ #tab-cook:not(.resmode) .res{display:none}
+ #tab-cook.resmode .side,#tab-cook.resmode>.hl,#tab-cook.resmode>.hl+p{display:none}
+}
+.hero{position:relative}
+.heroback{position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;padding:0;cursor:pointer;background:var(--card);color:var(--ink);border:var(--bw,2px) solid var(--ink);box-shadow:2px 2px 0 var(--ink);transition:transform .14s ease,box-shadow .14s ease}
+.heroback .i{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round}
+.heroback:hover{transform:translate(-1px,-1px);box-shadow:3px 3px 0 var(--ink)}.heroback:active{transform:translate(2px,2px);box-shadow:none}
+.hero:has(.heroback) .ht,.hero:has(.heroback)>h2{padding-right:44px}
+@media (min-width:960px){.heroback{display:none!important}}
+/* ---- one look for the big action buttons everywhere: Spin, Spin a classic, Build a pizza, Spin a ferment, Start cooking (primary), Whisk (secondary) ---- */
+#spin,#pzspin,#pzuse,.fmspin,#remix,#pzremix{box-sizing:border-box;display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:64px;margin:0;padding:0 16px;border:var(--bw,2px) solid var(--ink);border-radius:999px;box-shadow:var(--sh,3px 3px 0 var(--ink));font-family:Bricolage,"DM Sans",system-ui,sans-serif;font-weight:800;line-height:1.1;text-align:center;flex-direction:row;cursor:pointer}
+#spin,#pzspin,#pzuse,.fmspin{background:var(--acc);color:#fff;font-size:24px}
+#remix,#pzremix,.pzbtns:has(#pzspin) #pzremix{background:var(--card);color:var(--ink);font-size:20px;padding:0 16px;flex-direction:row;gap:8px}
+.btns,.pzbtns:has(#pzspin){display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-top:14px}
+.pzbtns:has(#pzuse){grid-template-columns:1fr;margin-top:14px}
+.fmspin{margin-top:14px}
+.row .go{min-height:60px;font-size:22px;padding:0 16px}
+@media (max-width:380px){#spin,#pzspin,#pzuse,.fmspin{font-size:21px}#remix,#pzremix,.pzbtns:has(#pzspin) #pzremix{font-size:17px}}
+/* ---- My kitchen zones, summary tiles, household faces; Pizza night follows the household ---- */
+.kbar{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0 4px}
+.ktile{--za:var(--sun);display:flex;flex-direction:column;align-items:flex-start;gap:1px;text-align:left;padding:11px 13px 12px;border:var(--bw) solid var(--ink);border-radius:20px;background:var(--card);color:var(--ink);box-shadow:var(--sh);cursor:pointer;font:inherit;transition:transform .14s ease,box-shadow .14s ease}
+.ktile:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}.ktile:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.ktile:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.ktile .kti{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--za);color:#2a1a13;border:2px solid var(--ink);margin-bottom:5px;font-size:17px}
+.ktile b{font-size:24px;line-height:1.05;letter-spacing:-.02em}.ktile>span:last-child{font-size:12.5px;line-height:1.3;color:var(--mute);font-weight:700}
+.kzones{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:30px 22px;align-items:start;margin-top:22px}
+.kzone,#kz-diet{scroll-margin-top:88px}
+.kzone{--za:var(--sun);min-width:0}
+.kzone[data-c="1"]{--za:#ff9b82}.kzone[data-c="2"]{--za:#7fd1a6}.kzone[data-c="3"]{--za:#b9a2f0}
+.kzh{display:flex;align-items:center;gap:13px;padding:0 2px 12px;border-bottom:var(--bw) solid var(--ink)}
+.kzb{display:grid;place-items:center;flex:none;width:46px;height:46px;border-radius:50%;background:var(--za);color:#2a1a13;border:var(--bw) solid var(--ink);box-shadow:var(--sh);font-size:22px;transform:rotate(-6deg)}
+.kzone:nth-child(even) .kzb{transform:rotate(6deg)}
+.kzh h2{margin:0;font-size:23px;line-height:1.1;letter-spacing:-.02em}.kzh p{margin:3px 0 0;font-size:13.5px;line-height:1.35;color:var(--mute)}
+.kzone .kgrid{display:flex;flex-direction:column;gap:16px;margin-top:16px}
+.kzone .kgrid{align-items:stretch}.kzone .kgrid>*{min-width:0;max-width:100%}
+.kzone .panel>.lab:first-child{gap:9px;font-size:14.5px;color:var(--ink);margin-bottom:10px}
+.kzone .panel>.lab:first-child>.i{width:28px;height:28px;padding:5.5px;border-radius:50%;background:var(--za);color:#2a1a13;border:2px solid var(--ink);stroke-width:2}
+.hfaces{display:flex;align-items:flex-end;flex-wrap:wrap;gap:5px 3px;min-height:56px;padding:9px 12px;margin:2px 0 6px;border:2px solid var(--ink);border-radius:20px;background:var(--bg)}
+.hface{color:var(--ink);flex:none;transition:transform .18s ease}.hface:hover{transform:rotate(-9deg) scale(1.12)}
+@media (prefers-reduced-motion:no-preference){.hfaces .hface:last-child{animation:hpop .35s cubic-bezier(.3,1.6,.5,1)}}
+@keyframes hpop{from{transform:scale(.3)}to{transform:scale(1)}}
+.pzhh{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 14px;margin-top:16px;padding:10px 12px;border:2px solid var(--ink);border-radius:16px;background:var(--bg);font-size:14px}
+.pzhht{flex:1 1 220px}.pzhht .i{margin-right:5px}.pzhhb{display:flex;gap:14px;flex-wrap:wrap}.pzhhb .lnk{font-size:13px;font-weight:700}
+@media (max-width:560px){.kbar{grid-template-columns:repeat(2,1fr);gap:10px}.kzh h2{font-size:21px}}
+@media print{.kbar{display:none!important}}
+.row .spinagain{flex:0 0 auto;margin-left:auto}
+/* result screens on phones/tablets: Pizza night and Fermentation work like Cook */
+@media (max-width:959px){
+ #tab-pizza.resmode>.hl,#tab-pizza.resmode>.hl+p,#tab-pizza.resmode>.pzseg,#tab-pizza.resmode #pz-build .side{display:none}
+ #tab-pizza:not(.resmode) #pzout{display:none}
+ .crafttab.resmode>.hl,.crafttab.resmode>.hl+p,.crafttab.resmode .side{display:none}
+ .crafttab:not(.resmode) .heroback{display:none}
+ .crafttab:not(.resmode) .hero:has(.heroback)>h2{padding-right:0}
+ #tab-ferm.resmode>.hl,#tab-ferm.resmode>.hl+p,#tab-ferm.resmode .side{display:none}
+ #tab-ferm:not(.resmode) .heroback{display:none}
+ #tab-ferm:not(.resmode) .hero:has(.heroback)>h2{padding-right:0}
+}
+/* ---- roomier desktop (wider page, filters 2/5 + recipe 3/5), smaller controls on desktop, © only in My kitchen ---- */
+main>footer{display:none}
+main:has(#tab-kit:not([hidden]))>footer{display:block}
+@media (min-width:760px){main>.tab:not(#tab-kit):not([hidden]){padding-bottom:20px}}
+/* ingredients | method go side by side only when the recipe card itself is wide enough */
+.card{container-type:inline-size}
+@media (min-width:1100px){.split{display:block}}
+@container (min-width:640px){
+ .split{display:grid;grid-template-columns:minmax(230px,5fr) minmax(0,7fr);gap:0 32px;align-items:start}
+ .split ol{max-width:none}
+}
+@media (min-width:960px){
+ body{font-size:15px}
+ main,.bar-in{max-width:1760px}
+ .cols{grid-template-columns:minmax(360px,2fr) minmax(0,3fr);gap:clamp(20px,2.2vw,36px)}
+ .side{top:66px;max-height:calc(100vh - 78px)}
+ .card{scroll-margin-top:72px}
+ .hl{font-size:30px;margin:0 0 2px}.hl+p{font-size:14px;margin:0 0 8px}
+ .hero{padding:10px 18px}.hero .ic{width:38px;height:38px;font-size:20px}.hero h2{font-size:20px}
+ .body{padding:2px 18px 14px}
+ .meta span{font-size:12.5px;padding:2px 10px}
+ .desc{font-size:13.5px}
+ h3{font-size:11.5px;margin:12px 0 6px}
+ .call{font-size:13px;padding:6px 10px}
+ .ktile{padding:8px 11px 9px}.ktile b{font-size:20px}.ktile .kti{width:28px;height:28px;font-size:14px;margin-bottom:3px}.ktile>span:last-child{font-size:12px}
+ .kbar{gap:10px;margin:10px 0 0}.kzones{gap:22px 18px;margin-top:16px}
+ .kzh h2{font-size:20px}.kzb{width:38px;height:38px;font-size:18px}.kzh p{font-size:13px}
+}
+@media (min-width:960px) and (pointer:fine){
+ .panel{padding:10px 12px;margin-top:8px;border-radius:18px}
+ .tiles{gap:6px}.tile{padding:4px 12px;font-size:13px}.tile .i{font-size:17px}
+ .lab{font-size:11.5px;margin-bottom:4px}.lab:not(:first-child){margin-top:8px}
+ .tags{padding:2px 10px}.tags input{padding:2px 6px;font-size:14px}
+ .tag{font-size:13px;padding:2px 5px 2px 10px}
+ .quick button{font-size:12px;padding:2px 10px;min-height:26px}
+ .step{height:36px;padding:0 4px;box-shadow:2px 2px 0 var(--ink)}
+ .step button{width:26px;height:26px;font-size:14px;border-width:2px}
+ .step b{font-size:14px}
+ .hstep{min-width:104px}
+ select{height:36px;font-size:14px;padding:0 14px}
+ .hages select{height:32px}
+ .tg{gap:5px}.tg button{padding:3px 10px;font-size:12.5px}
+ .grid{gap:8px}
+ .btns,.pzbtns:has(#pzspin){gap:10px;margin-top:10px}
+ #spin,#pzspin,#pzuse,.fmspin,#remix,#pzremix{min-height:46px;font-size:18px;box-shadow:3px 3px 0 var(--ink)}
+ #remix,#pzremix,.pzbtns:has(#pzspin) #pzremix{font-size:15px}
+ #remix .i,#pzremix .i{width:1.3em;height:1.3em}
+ .row .go{min-height:46px;font-size:17px}
+ .row button{padding:5px 8px;font-size:13px}
+ ul.ing li,.split ul.ing li{padding:4px 10px;margin-bottom:4px;font-size:14px;border-radius:14px}
+ .split ul.ing li:before,ul.ing.tick li:before{width:18px;height:18px;border-width:2px}
+ ol li{font-size:14.5px;margin-bottom:6px;gap:10px}
+ ol li:before{width:24px;height:24px;font-size:13px}
+ .pzseg button{padding:6px 8px}
+ .fmspin{margin-top:10px}
+}
+/* ---- slimmer ingredient capsules (match the suggestion chips), numbers dead-center in the round badges ---- */
+.tag{min-height:0;height:28px;padding:0 4px 0 11px;gap:3px;font-size:13px;line-height:1}
+.tag button,.tag button.u{min-height:0;width:22px;height:22px;padding:0;border-radius:50%}
+.tag .i{width:1.05em;height:1.05em}
+ol li:before{display:flex;align-items:center;justify-content:center;padding:0;line-height:1;text-align:center;text-box:trim-both cap alphabetic}
+.cl-days i,.pantry span{line-height:1}
+/* ---- portions chip is the servings control (click it to change), no separate Servings row ---- */
+.meta .pchip{cursor:pointer;-webkit-user-select:none;user-select:none;transition:background-color .14s ease,padding .14s ease}
+.meta .pchip:hover{background:var(--soft)}
+.meta .pchip em{font-style:normal;display:flex;align-items:center;gap:5px}
+.meta .pchip:not(.open)::after{content:"";width:5px;height:5px;border:solid currentColor;border-width:0 2px 2px 0;transform:rotate(45deg) translateY(-2px);margin-left:2px;opacity:.7}
+.meta .pchip.open{padding-left:3px;padding-right:3px;gap:6px;background:var(--soft)}
+.meta .pchip .pm{display:none;place-items:center;width:22px;height:22px;padding:0;border:2px solid var(--ink);border-radius:50%;background:var(--sun);color:#2a1a13;cursor:pointer;transition:transform .14s ease}
+.meta .pchip.open .pm{display:grid}
+.meta .pchip .pm:hover{transform:scale(1.1)}.meta .pchip .pm:active{transform:scale(.92)}
+.meta .pchip .pm .i{width:12px;height:12px;stroke-width:3}
+.meta .pchip:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+/* ---- empty-state boxes have no icon ---- */
+.ph .i{display:none!important}
+
+/* ---- spinners fill the screen, centred, above the header and menu bar ---- */
+body .reel.on,body .fmreel{position:fixed;inset:0;z-index:90;margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;box-sizing:border-box;background:var(--bg);padding:max(16px,env(safe-area-inset-top)) 16px max(16px,env(safe-area-inset-bottom))}
+/* ---- the spinning wheel is dead centre; the text sits below it in its own row, so a second line never moves the wheel ---- */
+body .reel.on,body .fmreel{display:grid;grid-template-rows:minmax(0,1fr) auto minmax(0,1fr);grid-template-columns:minmax(0,1fr);justify-items:center;align-items:center}
+body .reel.on .toss,body .reel.on .spinwrap,body .reel.on .stage,body .fmreel .fmjar{grid-row:2;margin:0}
+/* one spinner stage for Cook, Pizza night and the start wheel: same size (--D), and the art swaps while it spins */
+:root{--D:220px;--kp:1.2;--kw:1.2}
+.stage{position:relative;width:var(--D);height:var(--D);flex:none}
+ /* the one shadow every spinner shares */
+.fmreel .fmjar{transform:scale(var(--kp))}.fmjar .fmin{position:absolute;inset:0;transform:scale(.8)}
+.art{position:absolute;inset:0;display:grid;place-items:center;opacity:0;transition:opacity .15s ease;pointer-events:none}
+.art.on{opacity:1}
+.art .lg{width:102%;height:102%;flex:none;animation:sp var(--rev) linear infinite}
+.art .toss{flex:none;margin:0;transform:scale(var(--kp))}.art .spinwrap{position:relative;width:170px;height:170px;flex:none;margin:0;transform:scale(var(--kw))} /* sized here too: its size used to come from .reel only, so in the start wheel it collapsed to an empty gray disc */
+/* burger spinner: the layers fan out and lift off one after another, then drop back into a stack */
+.bgr{position:relative;width:240px;height:190px;flex:none}.art .bgr{margin:0;transform:scale(var(--kp))}
+.bgr svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.bgr .bl{transform-box:fill-box;transform-origin:50% 50%;animation:bgl calc(var(--bob)*2) ease-in-out infinite;animation-delay:calc(var(--k)*.09s)}
+/* pasta spinner: the noodle spiral twirls at the shared speed, tomato, basil and cheese orbit it */
+.pgr{position:relative;width:240px;height:190px;flex:none}.art .pgr{margin:0;transform:scale(var(--kp))}
+.pgr>svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.pgr .pspin{position:absolute;left:55px;top:30px;width:130px;height:130px;animation:sp var(--rev) linear infinite}.pgr .pspin svg{width:100%;height:100%;display:block}
+.pgr .ring{position:absolute;left:120px;top:95px;width:0;height:0;animation:sp calc(var(--rev)*1.8) linear infinite}
+.pgr .ing{position:absolute;left:0;top:0;width:0;height:0;transform:rotate(var(--r))}
+.pgr .ing u{position:absolute;left:-18px;top:-18px;width:36px;height:36px;text-decoration:none;transform:translateY(calc(var(--R)*-1)) rotate(calc(var(--r)*-1));animation:bobr var(--bob) ease-in-out infinite;animation-delay:calc(var(--k)*-.25s)}
+.pgr .ing i{display:block;font-style:normal;font-size:30px;line-height:36px;text-align:center;animation:sp calc(var(--rev)*1.8) linear infinite reverse}
+/* section spinners (bowl, pan, board, jar, glass): big emoji in the middle, three more orbiting it */
+.pgr .cem{position:absolute;left:120px;top:95px;width:0;height:0}.pgr .cem i{position:absolute;left:-32px;top:-36px;width:64px;font-style:normal;font-size:52px;line-height:72px;text-align:center;animation:cbob var(--bob) ease-in-out infinite}
+@keyframes cbob{0%,100%{transform:scale(.92) rotate(-6deg)}50%{transform:scale(1.1) rotate(6deg)}}
+.art:not(.on) *{animation-play-state:paused!important} /* hidden spinner art costs nothing while another one shows */
+@keyframes bgl{0%,65%,100%{transform:none}30%{transform:translateY(calc(var(--k)*-7px - 3px)) rotate(calc((var(--k) - 2.5)*3deg))}}
+/* ---- every spinner turns, at the same speed (--rev): bases, rings and the ferment jar's swirl ---- */
+.pgr>svg.base{animation:sp var(--rev) linear infinite}
+.ing i svg{display:block;margin:3px auto}
+.pgr .base text{font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif}
+.art.on{animation:artin calc(var(--rev)/6) cubic-bezier(.2,1.3,.4,1)} /* each new spinner pops in as the mix swaps */
+@keyframes artin{from{transform:scale(.82)}to{transform:none}}
+.fmjar .fring{position:absolute;left:120px;top:126px;width:0;height:0;animation:sp calc(var(--rev)*1.8) linear infinite}
+.fmjar .ing{position:absolute;left:0;top:0;width:0;height:0;transform:rotate(var(--r))}
+.fmjar .ing u{position:absolute;left:-16px;top:-16px;width:32px;height:32px;text-decoration:none;transform:translateY(calc(var(--R)*-1)) rotate(calc(var(--r)*-1));animation:bobr var(--bob) ease-in-out infinite;animation-delay:calc(var(--k)*-.25s)}
+.fmjar .ing i svg{width:24px;height:24px;margin:4px auto}.fmjar .ing i{display:block;font-style:normal;font-size:24px;line-height:32px;text-align:center;animation:sp calc(var(--rev)*1.8) linear infinite reverse}
+
+/* ---- pizza spinner: centred exactly, with ingredients orbiting it like the pot ---- */
+.sp-pizza{position:absolute;inset:0;width:auto;height:auto}
+.sp-pizza svg{position:absolute;left:50%;top:50%;width:102%;height:102%;margin:0;transform:translate(-50%,-50%)}
+.art .lgw{position:relative;width:102%;height:102%;flex:none}
+.art .lgw>.lg{position:absolute;left:0;top:0;width:100%;height:100%}
+.sp-orb{position:absolute;inset:0;z-index:2;pointer-events:none}
+.pzo{position:absolute;left:50%;top:50%;width:0;height:0;animation:sp calc(var(--rev)*var(--m,1.8)) linear infinite}
+.pzo .ing{position:absolute;left:0;top:0;width:0;height:0;transform:rotate(var(--r))}
+.pzo .ing u{position:absolute;width:calc(var(--D)*.15);height:calc(var(--D)*.15);left:calc(var(--D)*-.075);top:calc(var(--D)*-.075);text-decoration:none;transform:translateY(calc(var(--R)*-1)) rotate(calc(var(--r)*-1));animation:bobr var(--bob) ease-in-out infinite;animation-delay:calc(var(--k)*-.25s)}
+.pzo .ing i{display:block;width:100%;height:100%;font-style:normal;font-size:calc(var(--D)*.115);line-height:calc(var(--D)*.15);text-align:center;animation:sp calc(var(--rev)*var(--m,1.8)) linear infinite reverse}
+.pzo .ing i svg{display:block;width:82%;height:82%;margin:9% auto}
+.sp-orb.off{visibility:hidden}
+.sp-wheel>.art{z-index:1}
+body .reel.on .rtx,body .fmreel .rtx{grid-row:3;align-self:start;justify-self:center;width:100%;max-width:520px;padding-top:14px;box-sizing:border-box;text-align:center}
+/* ---- phones/tablets: while a recipe, pizza, plan or ferment is open, header and menu bar are hidden (the X on the green bar and the browser Back button return) ---- */
+@media (max-width:959px){
+ body:has(.tab.resmode:not([hidden]) .heroback) .bar{display:none}
+ body:has(.tab.resmode:not([hidden]) .heroback) main{padding-bottom:max(24px,env(safe-area-inset-bottom))!important}
+}
+
+/* ---- Spin again: its own (yellow) look, compact, right next to Start cooking ---- */
+.row button.spinagain{flex:0 0 auto;margin:0 0 0 auto;order:99;min-width:0;gap:7px;padding:0 16px;background:var(--sun,#ffc63d);color:#2a1a13;font:800 15px Bricolage,"DM Sans",sans-serif;letter-spacing:-.01em;box-shadow:var(--sh,3px 3px 0 var(--ink))}
+.row button.spinagain:hover{border-color:var(--ink);filter:brightness(1.05)}
+.row button.spinagain .i{width:22px;height:22px;transition:transform .5s cubic-bezier(.3,1.3,.5,1)}
+.row:has(.go) .spinagain{order:-1;margin:0;align-self:stretch}
+.row:has(.go):has(.spinagain) .go{order:-2;flex:1 1 0;min-width:0;white-space:nowrap;font-size:clamp(17px,5.4vw,22px)}
+@media (prefers-reduced-motion:no-preference){.row button.spinagain:hover .i,.row button.spinagain:active .i{transform:rotate(360deg)}}
+/* Start cooking and Spin again: exactly half of the row each */
+.row:has(.go):has(.spinagain) .go,.row:has(.go) .spinagain{flex:0 0 calc(50% - 4px);box-sizing:border-box;min-width:0;white-space:nowrap;padding:0 10px;gap:8px;font-size:clamp(16px,4.6vw,20px);overflow:hidden}
+/* phones: Start cooking, then Spin again, one below the other, full width */
+@media (max-width:700px){.row:has(.go):has(.spinagain) .go,.row:has(.go) .spinagain{flex:0 0 100%;min-height:56px;font-size:20px}.row:has(.go):has(.spinagain) .go{order:-2}.row:has(.go) .spinagain{order:-1}}
+/* colours swapped: Start cooking is yellow, Spin again is red (everywhere) */
+.row .go,.row .go:hover{background:var(--sun,#ffc63d)!important;color:#2a1a13!important}
+.row button.spinagain,.row button.spinagain:hover{background:#d63a22!important;color:#fff!important}
+
+/* ---- My kitchen: the bookshelf ---- */
+.kbar{grid-template-columns:repeat(5,1fr)}
+@media (max-width:899px){.kbar{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.kbar{grid-template-columns:repeat(2,1fr)}.kbar .ktile:last-child{grid-column:1/-1}}
+#kz-shelf{grid-column:1/-1}
+.shelfbox{margin-top:16px}
+.shelf{border:var(--bw) solid var(--ink);border-radius:20px;box-shadow:var(--sh);overflow:hidden;background:repeating-linear-gradient(0deg,var(--sand) 0 22px,color-mix(in srgb,var(--sand) 86%,var(--ink)) 22px 23px)}
+.shrow{display:flex;align-items:flex-end;gap:0;padding:22px 18px 0;min-height:120px}
+.plank{height:16px;border-top:var(--bw) solid var(--ink);border-bottom:var(--bw) solid var(--ink);background:repeating-linear-gradient(90deg,#c98a4b 0 46px,#b87a3d 46px 49px,#c98a4b 49px 92px,#d39a5a 92px 94px)}
+.shrow:last-child .plank{border-bottom:0}
+/* every book has a full outline; its bottom border sits exactly on the plank's top border */
+.bk{--c:#ffc63d;--h:180px;--w:54px;--t:0deg;position:relative;z-index:1;flex:none;width:var(--w);height:var(--h);box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:6px;padding:0 0 8px;margin-bottom:calc(var(--bw)*-1);border:var(--bw) solid var(--ink);border-radius:7px 7px 0 0;background:var(--c);color:#2a1a13;font:inherit;cursor:pointer;transition:transform .14s ease,box-shadow .14s ease}
+.shrow .bk.up+.bk.up{margin-left:calc(var(--bw)*-1)}
+.bk.lean{transform:rotate(var(--t))}
+.bk.lean.r{transform-origin:100% 100%}.bk.lean.l{transform-origin:0 100%}
+/* hover: like the buttons, the book is pulled slightly out of the shelf; press pushes it back in */
+.bk:hover,.bk:focus-visible{z-index:3;box-shadow:4px 4px 0 var(--ink);transform:translate(-2px,-3px) scale(1.03)}
+.bk.lean:hover,.bk.lean:focus-visible{transform:translate(-2px,-3px) rotate(var(--t)) scale(1.03)}
+.bk.flat:hover,.bk.flat:focus-visible{transform:translateX(var(--o,0px)) translate(-2px,-2px) scale(1.03)}
+.bk:active{z-index:3;box-shadow:1px 1px 0 var(--ink);transform:translate(1px,1px)}
+.bk.lean:active{transform:translate(1px,1px) rotate(var(--t))}
+.bk.flat:active{transform:translateX(var(--o,0px)) translate(1px,1px)}
+.bk .bd{display:block;width:100%;height:14px;flex:none;border-bottom:2px solid var(--ink);background:var(--ink)}
+.bk.p0 .bd{background:repeating-linear-gradient(90deg,var(--ink) 0 3px,transparent 3px 7px)}
+.bk.p1 .bd{background:radial-gradient(circle,var(--ink) 1.6px,transparent 2px) 0 0/8px 8px}
+.bk.p2 .bd{background:var(--ink);height:10px}
+.bk.p3 .bd{background:repeating-linear-gradient(135deg,var(--ink) 0 3px,transparent 3px 8px)}
+.bk b{flex:1;min-height:0;max-height:100%;display:block;writing-mode:vertical-rl;text-align:center;font:800 17px/1.05 Bricolage,"DM Sans",sans-serif;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-top:2px}
+.bk.sm b{font-size:14px}
+.bk .bn{flex:none;display:grid;place-items:center;min-width:26px;height:26px;padding:0 4px;box-sizing:border-box;border:2px solid var(--ink);border-radius:99px;background:var(--card);color:var(--ink);font:800 12px/1 "DM Sans",sans-serif}
+/* books lying flat, piled on top of each other */
+.stack{display:flex;flex-direction:column-reverse;align-items:center;flex:none;padding:0 12px}
+.bk.flat{width:var(--L);height:var(--T);flex-direction:row;gap:6px;padding:0 6px 0 0;border-radius:7px;transform:translateX(var(--o,0px))}
+.bk.flat .bd{width:14px;height:100%;border-bottom:0;border-right:2px solid var(--ink)}
+.bk.flat.p0 .bd{background:repeating-linear-gradient(0deg,var(--ink) 0 3px,transparent 3px 7px)}
+.bk.flat.p1 .bd{background:radial-gradient(circle,var(--ink) 1.6px,transparent 2px) 0 0/8px 8px}
+.bk.flat.p2 .bd{width:10px;background:var(--ink)}
+.bk.flat.p3 .bd{background:repeating-linear-gradient(45deg,var(--ink) 0 3px,transparent 3px 8px)}
+.bk.flat b{writing-mode:horizontal-tb;padding:0;font-size:14px;text-align:center}
+.bk.flat .bn{min-width:20px;height:20px;font-size:11px;padding:0 3px}
+.shview{margin:0 0 12px}
+.shview{margin:0 0 12px}
+/* one long shelf: medium upright spines, grouped into labelled sections */
+/* continent sign: a divider card standing on the shelf just before that continent's books */
+.dv{--h:140px;--c:var(--card);position:relative;z-index:1;flex:none;width:46px;height:var(--h);box-sizing:border-box;margin:0 6px 0 8px;margin-bottom:calc(var(--bw)*-1);display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:8px;padding:10px 0 8px;border:var(--bw) solid var(--ink);border-radius:10px 10px 0 0;background:var(--c);color:#2a1a13;box-shadow:3px 0 0 var(--ink)}
+.dv::before{content:"";position:absolute;inset:4px;border:2px solid var(--ink);border-radius:6px 6px 0 0;border-bottom:0;opacity:.3;pointer-events:none}
+.dv span{flex:1;min-height:0;writing-mode:vertical-rl;white-space:nowrap;font:800 16px/1 Bricolage,"DM Sans",sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.dv em{flex:none;display:grid;place-items:center;min-width:26px;height:26px;padding:0 4px;box-sizing:border-box;border:2px solid var(--ink);border-radius:99px;background:var(--card);color:var(--ink);font:800 12px/1 "DM Sans",sans-serif;font-style:normal}
+/* a bookend closes each continent: slim block in the same colour */
+.dv.en{width:18px;margin:0 8px 0 4px;padding:0;justify-content:flex-end;border-radius:6px 6px 0 0;box-shadow:-3px 0 0 var(--ink)}
+.dv.en::before{display:none}
+.dv.en::after{content:"";width:100%;height:14px;border-top:var(--bw) solid var(--ink);background:var(--ink);opacity:.18}
+/* continents: each one is a wooden compartment (two upright boards, a top board and the plank below), its books share one top pattern and colour family */
+.shrow.cs{padding:0;align-items:stretch}
+.sec{flex:none;position:relative;display:flex;align-items:flex-end;padding:38px 20px 0}
+.sec+.sec{margin-left:-14px}
+.shrow.cs>.sec:last-child{flex:1 1 auto}
+.sec .wt{position:absolute;left:0;right:0;top:0;height:24px;z-index:3;display:block;padding:0 20px;box-sizing:border-box;border:var(--bw) solid var(--ink);border-top:0;background:repeating-linear-gradient(90deg,#c98a4b 0 46px,#b87a3d 46px 49px,#c98a4b 49px 92px,#d39a5a 92px 94px);font:800 12px/21px Bricolage,"DM Sans",sans-serif;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:left;color:#3a2412;text-shadow:0 1px 0 rgba(255,235,200,.45);font-style:normal}
+.sec .wd{position:absolute;top:0;bottom:calc(var(--bw)*-1);width:14px;z-index:2;box-sizing:border-box;border:var(--bw) solid var(--ink);border-top:0;border-bottom:0;background:repeating-linear-gradient(0deg,#c98a4b 0 46px,#b87a3d 46px 49px,#c98a4b 49px 92px,#d39a5a 92px 94px)}
+.sec .wt.cont{opacity:.7}
+.sec .wd.l{left:0}.sec .wd.r{right:0}
+/* more top patterns, so every continent gets its own */
+.bk.p4 .bd,.bkcover.p4 .bd{background:repeating-conic-gradient(var(--ink) 0 25%,transparent 0 50%) 0 0/8px 8px}
+.bk.p5 .bd,.bkcover.p5 .bd{background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 5px,var(--ink) 5px 7px,transparent 7px 14px)}
+.bk.p6 .bd,.bkcover.p6 .bd{background:repeating-linear-gradient(45deg,var(--ink) 0 2px,transparent 2px 6px),repeating-linear-gradient(-45deg,var(--ink) 0 2px,transparent 2px 6px)}
+.bk.p8 .bd,.bkcover.p8 .bd{background:repeating-linear-gradient(0deg,var(--ink) 0 2px,transparent 2px 5px)}
+.bk.flat.p5 .bd{background:repeating-linear-gradient(0deg,var(--ink) 0 2px,transparent 2px 5px,var(--ink) 5px 7px,transparent 7px 14px)}
+.bk.flat.p8 .bd{background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 5px)}
+.shelfhint{margin:10px 2px 0;font-size:13px;color:var(--mute)}
+.bkhead{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-bottom:12px}
+.bkback{display:inline-flex;align-items:center;gap:4px;border:var(--bw) solid var(--ink);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 14px 6px 8px;font:800 14px "DM Sans",sans-serif;cursor:pointer;box-shadow:2px 2px 0 var(--ink)}
+.bkback .i{stroke-width:3}
+.bkback:hover{background:var(--soft)}.bkback:active{transform:translate(2px,2px);box-shadow:none}
+.bkt{display:flex;align-items:center;gap:12px;min-width:0}
+.bkmini{flex:none;width:30px;height:46px;border:var(--bw) solid var(--ink);border-radius:5px 5px 0 0;background:var(--c,#ffc63d);box-shadow:var(--sh)}
+.bkt h3{margin:0;font:800 clamp(22px,4vw,30px)/1.05 Bricolage,"DM Sans",sans-serif;letter-spacing:-.03em;text-transform:none;color:var(--ink)}
+.bkt p{margin:2px 0 0;font-size:13px;color:var(--mute)}
+.bksearch{display:block;width:100%;max-width:460px;height:44px;box-sizing:border-box;padding:0 18px;border:var(--bw) solid var(--ink);border-radius:999px;background:var(--card);color:var(--ink);font:inherit}
+.bksearch:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+#bkmeals{margin:10px 0 12px}
+#bkmeals button small{opacity:.7;font-weight:700;margin-left:2px}
+.bklist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:8px}
+.bkrec{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;text-align:left;border:var(--bw) solid var(--ink);background:var(--card);color:var(--ink);border-radius:16px;padding:9px 14px;font:inherit;cursor:pointer;transition:transform .14s ease,box-shadow .14s ease,background-color .14s ease}
+.bkrec span{min-width:0}.bkrec b{display:block;font-size:15px;line-height:1.25}.bkrec small{display:block;margin-top:1px;font-size:12.5px;color:var(--mute)}
+.bkrec .i{flex:none;color:var(--acc);fill:var(--acc)}
+@media (hover:hover){.bkrec:hover{transform:translate(-1px,-1px);box-shadow:3px 3px 0 var(--ink);background:var(--soft)}}
+.bkrec:active{transform:translate(2px,2px);box-shadow:none}
+.bkrec:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.bkv{animation:pop .3s ease-out}
+/* level 1: one small bookcase per region */
+.shgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:16px}
+.shcase{display:block;width:100%;padding:0;text-align:left;font:inherit;color:var(--ink);cursor:pointer;border:var(--bw) solid var(--ink);border-radius:20px;box-shadow:var(--sh);overflow:hidden;background:repeating-linear-gradient(0deg,var(--sand) 0 22px,color-mix(in srgb,var(--sand) 86%,var(--ink)) 22px 23px);transition:transform .14s ease,box-shadow .14s ease}
+@media (hover:hover){.shcase:hover{transform:translate(-2px,-3px);box-shadow:5px 5px 0 var(--ink)}}
+.shcase:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.shcase:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.shcap{display:block;padding:12px 16px 0}
+.shcap b{display:block;font:800 19px/1.1 Bricolage,"DM Sans",sans-serif;letter-spacing:-.02em}
+.shcap small{display:block;margin-top:3px;font-size:12.5px;color:var(--mute)}
+.shmini{display:flex;align-items:flex-end;gap:3px;height:84px;padding:0 16px;overflow:hidden}
+.shmini i{flex:none;display:block;width:13px;height:var(--h);margin-bottom:calc(var(--bw)*-1);box-sizing:border-box;border:var(--bw) solid var(--ink);border-radius:4px 4px 0 0;background:var(--c)}
+.shmini i:nth-child(3n){width:17px}.shmini i:nth-child(4n+1){width:10px}
+.shmini em{flex:none;align-self:center;margin-left:4px;font:800 12px "DM Sans",sans-serif;font-style:normal;color:var(--mute)}
+.shcase .plank{margin-top:0}
+.shcase .plank{border-bottom:0}
+/* level 3: the open book looks like the spine on the shelf: same colour, same band, same count badge */
+.bkcover{--c:#ffc63d;display:flex;margin:4px 8px 16px 0;border:var(--bw) solid var(--ink);border-radius:10px 22px 22px 10px;background:var(--c);color:#2a1a13;box-shadow:7px 7px 0 var(--ink);overflow:hidden}
+.bkcover .hinge{flex:none;width:26px;border-right:2px solid var(--ink);background:linear-gradient(90deg,rgba(0,0,0,.18),rgba(0,0,0,.04) 70%,rgba(0,0,0,.12))}
+.bkcover .face{flex:1;min-width:0}
+.bkcover .bd{display:block;width:100%;height:14px;border-bottom:2px solid var(--ink);background:var(--ink)}
+.bkcover.p0 .bd{background:repeating-linear-gradient(90deg,var(--ink) 0 3px,transparent 3px 7px)}
+.bkcover.p1 .bd{background:radial-gradient(circle,var(--ink) 1.6px,transparent 2px) 0 0/8px 8px}
+.bkcover.p2 .bd{background:var(--ink);height:10px}
+.bkcover.p3 .bd{background:repeating-linear-gradient(135deg,var(--ink) 0 3px,transparent 3px 8px)}
+.bkcover .ttl{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:18px 20px 20px}
+.bkcover small.kind{display:block;font:800 11px "DM Sans",sans-serif;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+.bkcover h3{margin:2px 0 0;font:800 clamp(28px,7vw,44px)/1 Bricolage,"DM Sans",sans-serif;letter-spacing:-.03em;text-transform:none;color:#2a1a13;overflow-wrap:anywhere}
+.bkcover p{margin:6px 0 0;font-size:13px;color:#2a1a13;opacity:.8}
+.bkcover .bn{flex:none;display:grid;place-items:center;min-width:42px;height:42px;padding:0 8px;box-sizing:border-box;border:2px solid var(--ink);border-radius:99px;background:var(--card);color:var(--ink);font:800 17px/1 "DM Sans",sans-serif}
+@media (max-width:420px){.shrow{padding:20px 12px 0}.shrow.cs{padding:0}.sec{padding:36px 18px 0}.sec .wt{font-size:11px;padding:0 18px}}
+@media print{#kz-shelf{display:none!important}}
+/* ---- Craft hub, breadcrumb, Cook search ---- */
+.crumb{margin:0 0 4px}.crumb[hidden]{display:none}
+.crumb button{display:inline-flex;align-items:center;gap:4px;border:0;background:none;color:var(--mute);font:inherit;font-weight:700;font-size:15px;padding:6px 10px 6px 0;cursor:pointer}.crumb button:hover{color:var(--ink)}.crumb{display:flex;align-items:center;flex-wrap:wrap}.crumb .cn{font-weight:800;font-size:15px;color:var(--ink);padding:6px 0}.crumb .cn:before{content:"/";color:var(--mute);font-weight:700;margin-right:8px}
+main:has(.tab.resmode:not([hidden])) .crumb{display:none}
+.cgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:8px}
+@media (min-width:760px){.cgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.cc{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:4px;text-align:left;padding:16px;background:var(--card);color:var(--ink);border:var(--bw,1.5px) solid var(--ink);border-radius:20px;box-shadow:var(--sh,none);font:inherit;cursor:pointer;transition:transform .14s ease}
+.cc:hover{transform:translateY(-2px)}.cc:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.cc .ci{font-size:32px;color:var(--acc);margin-bottom:4px}.cc b{font:800 18px Bricolage,sans-serif}.cc small{color:var(--mute);font-size:13px;line-height:1.3}
+.cc .soon{position:absolute;top:12px;right:12px;font-size:11px;font-weight:800;border:1.5px solid var(--ink);border-radius:999px;padding:2px 8px}
+.stubl{margin:0;padding-left:20px;line-height:1.7}.gs{margin:0 0 14px}.gs .bksearch{max-width:none}.gs .quick{margin-top:8px}.gs .quick button .i{margin-right:4px}
+.gs .bklist{margin-top:8px}.gs .bklist[hidden]{display:none}.gtool b .i{margin-right:6px;color:var(--acc)}
+.cgroup{margin-top:18px}.cgroup h2{margin:0 0 2px;font:800 15px "DM Sans",sans-serif;letter-spacing:.04em;text-transform:uppercase;color:var(--mute)}
+.cc .cn{font-style:normal;font-size:12px;font-weight:700;color:var(--acc);margin-top:2px}
+.stubmore{margin-top:10px;padding:8px 16px;border:var(--bw,1.5px) solid var(--ink);border-radius:999px;background:var(--card);color:var(--ink);font:700 14px "DM Sans",sans-serif;cursor:pointer}.stubmore[hidden]{display:none}
+.gtool .i,.gtool b .i{fill:none;stroke:currentColor}
+/* visual hierarchy. Solid outlines everywhere; dashed is kept only for the safety note.
+   categories = solid pills, ingredient suggestions = thin solid pills, moods/modes/settings keep their look, the spin button stays the red star */
+.quick button{border:1px solid var(--ink);color:var(--ink);font-weight:600;background:none}
+.quick#gchips button{border:var(--bw) solid var(--ink);font-weight:700;background:var(--card)}
+.quick#gchips button:hover{background:var(--soft)}
+/* search rows: one width and one look on Cook, Craft, each craft and the shelf. On desktop it sits above both columns, not inside the narrow one */
+.gs{margin:0 0 16px;max-width:760px}.gs .bksearch,.rsearch{max-width:none}.rsearch{margin:6px 0 10px}
+.gs .bklist{margin-top:10px}.shelfq{margin:14px 0 0}
+.gs.gsb{max-width:none;margin:28px 0 0}.gsb .lab{margin-bottom:10px}.gsb .quick{margin-top:8px}.gsb .hint{margin:10px 2px 0}
+.cc[hidden],.cgroup[hidden]{display:none!important}
+/* install prompt */
+.inst{position:fixed;z-index:60;left:12px;right:12px;bottom:calc(88px + env(safe-area-inset-bottom,0px));max-width:460px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:12px 14px;border:var(--bw) solid var(--ink);border-radius:20px;background:var(--card);color:var(--ink);box-shadow:var(--sh)}
+.instt{flex:1 1 220px;min-width:0}.instt b{display:block;font:800 16px/1.25 Bricolage,sans-serif}.instt span{display:block;margin-top:2px;font-size:13.5px;line-height:1.4;color:var(--mute)}.instt .i{vertical-align:-.25em}
+.insta{display:flex;gap:8px;flex:none}.insta button{border:var(--bw) solid var(--ink);background:var(--card);color:var(--ink);border-radius:999px;padding:7px 14px;font:700 14px "DM Sans",sans-serif;cursor:pointer}.insta .go{background:var(--acc);color:#fff}
+.insta button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+@media (min-width:760px){.inst{left:auto;right:20px;bottom:20px;margin:0}}
+@media print{.inst{display:none!important}}
+/* no tap flash anywhere; the page colour sits behind the system bars; long ingredient amounts wrap instead of leaking; shake hint */
+*,*::before,*::after{-webkit-tap-highlight-color:transparent}
+html{background:var(--bg);touch-action:manipulation}
+ul.ing li>span:first-child{min-width:0;overflow-wrap:anywhere}
+ul.ing li .q{white-space:normal;text-align:right;flex:0 1 auto;max-width:52%;min-width:0;overflow-wrap:anywhere}
+.shakehint{flex:0 0 100%;order:-1;margin:-2px 0 2px;text-align:center;font:600 12px "DM Sans",system-ui,sans-serif;color:var(--mute)}
+/* desktop, recipe that came from the start wheel: only the recipe, as a centred card with a close button (like the phone) */
+@media (min-width:960px){
+ html.homeres{overflow:hidden} /* desktop only: the recipe card is its own scrolling layer; on a phone the page itself must scroll */
+ html.homeres .tab.resmode:not([hidden]){position:fixed;inset:0;z-index:90;display:flex;padding:28px;overflow:auto;background:rgba(20,12,8,.52);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);animation:hrIn .22s ease}
+ html.homeres .tab.resmode>.hl,html.homeres .tab.resmode>.hl+p,html.homeres .tab.resmode>.pzseg,html.homeres .tab.resmode .side{display:none!important}
+ html.homeres .tab.resmode>.cols:not([hidden]){display:block;width:min(720px,100%);margin:auto}
+ html.homeres .tab.resmode .hero .heroback{display:grid!important}
+ html.homeres .tab.resmode .hero:has(.heroback) .ht,html.homeres .tab.resmode .hero:has(.heroback)>h2{padding-right:44px}
+ html.homeres .tab.resmode .card{box-shadow:0 18px 50px rgba(0,0,0,.35),var(--sh,3px 3px 0 var(--ink))}
+ html.homeres .tab.resmode .ph,html.homeres .tab.resmode .fav{display:none}
+ @keyframes hrIn{from{opacity:0}to{opacity:1}}
+ @keyframes hrCard{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+ html.homeres .tab.resmode .card{animation:hrCard .3s cubic-bezier(.2,.9,.3,1.1)}
+ .shakehint.kb{display:block}
+}
+.shakehint.kb{display:none}
+.alm{display:grid;gap:8px;margin:6px 0 14px}.alm button{display:block;width:100%;text-align:left;padding:10px 14px;border:var(--bw,2px) solid var(--ink);border-radius:16px;background:var(--card,#fff);color:var(--ink);font:inherit;cursor:pointer}.alm button b{display:block;font-size:15px}.alm button small{display:block;margin-top:2px;color:var(--mute);font-size:13px}
+/* drawn icons that replace emoji in text (chips, headings, hints), sized to the text around them */
+.emo{display:inline-flex;align-items:center;vertical-align:-.22em;line-height:1;flex:none}.emo svg{width:1.25em;height:1.25em;display:block;overflow:visible}
+.pgr .cem i svg{display:block;margin:10px auto 0}
+.tab.resmode>.panel,.tab.resmode>.gs,.crafttab.resmode>.hl,.crafttab.resmode>.hl+p{display:none!important} /* a result screen (cook, pizza, ferment, craft) is only the card: no recipe search or list under it */
+
+/* craft tool panels: the option chips and their labels sit centred, like the spin button under them */
+[data-ctl] .tg{justify-content:center}[data-ctl] .lab{justify-content:center}
+/* phones stay upright: where the browser allows it the screen is locked to portrait, otherwise a sideways phone just asks to be turned back */
+@media (orientation:landscape) and (max-height:500px) and (pointer:coarse){
+ body::after{content:"Turn your phone upright";position:fixed;inset:0;z-index:99999;display:grid;place-items:center;background:var(--bg);color:var(--ink);font:800 clamp(20px,5vw,30px) Bricolage,"DM Sans",system-ui,sans-serif;text-align:center;padding:24px}
+}
+/* touch devices: small round and pill controls keep their look but get a larger invisible hit area (about 44px) */
+@media (pointer:coarse){
+ .tag button,.tag button.u,.meta .pchip .pm,button.xl{position:relative}
+ .tag button::after,.meta .pchip .pm::after,button.xl::after{content:"";position:absolute;inset:-9px -3px}
+ .meta .pchip .pm::after{inset:-11px}
+ button.xl::after{inset:-12px -4px}
+ .heroback::after{content:"";position:absolute;inset:-4px}
+}
+/* spinners own the whole screen: hide the menu bar (and the toast-free bottom bar) while any spinner or the start wheel is up.
+   The reels sit inside a tab (its fade animation makes a stacking context), so z-index alone cannot put them above the bar. */
+html:has(.reel.on,.fmreel,.pzreel.on,.splash:not(.out)) .tabs{display:none!important}

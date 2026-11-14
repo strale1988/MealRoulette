@@ -34,15 +34,16 @@ const fake=()=>{const w={KITCHEN:{CRAFTS:[]},addEventListener(){},localStorage:{
 const run=(ctx,f)=>vm.runInContext(rd(f),ctx,{filename:f});
 let X=null,TOOLS=null;
 try{
- const ctx=fake();ctx.window.window=ctx.window;run(ctx,"xlink.js");X=ctx.window.XLINK;
+ const ctx=fake();ctx.window.window=ctx.window;run(ctx,"js/core/xlink.js");X=ctx.window.XLINK;
  const c2=fake();c2.window.window=c2.window;
- run(c2,"craft/craft-lib.js");
- for(const f of fs.readdirSync(path.join(root,"craft")).filter(n=>/^craft-.*\.js$/.test(n)&&!/craft-(lib|ferment|pizza)\.js$/.test(n)).sort()){try{run(c2,"craft/"+f)}catch(e){E("craft/"+f+": does not load ("+e.message+")")}}
+ run(c2,"js/craft/craft-lib.js");
+ /* load the craft files in the order the app loads them (craft-extras extends tools that craft-mains defines) */
+ for(const f of (FILES||[]).filter(n=>/(^|\/)craft-[\w-]+\.js$/.test(n)&&!/craft-(lib|ferment|pizza|ui)\.js$/.test(n))){try{run(c2,f)}catch(e){E(f+": does not load ("+e.message+")")}}
  TOOLS=c2.window.CRAFTLIB.TOOLS;
 }catch(e){E("cannot load xlink.js or the Craft tools: "+e.message)}
 
 if(X&&TOOLS){
- const fer=has("craft/craft-ferment.js")?rd("craft/craft-ferment.js"):"";
+ const fer=has("js/craft/craft-ferment.js")?rd("js/craft/craft-ferment.js"):"";
  const methods={};fer.split(/^(?=\{id:"\w+",n:")/m).forEach(b=>{const m=/^\{id:"(\w+)",n:"/.exec(b);if(m)methods[m[1]]=new Set([...b.matchAll(/\bid:"(\w+)"/g)].map(x=>x[1]))});
  for(const [key,t] of Object.entries(X.targets)){
   const at="xlink.js link '"+key+"'";
@@ -55,19 +56,19 @@ if(X&&TOOLS){
     else if(c.step){if(!(+v>=c.step[0]&&+v<=c.step[1]))E(at+": value "+v+" is outside the range of '"+k+"'")}
     else E(at+": control '"+k+"' of '"+t.id+"' is neither a choice nor a number")}
   }else if(t.k==="ferm"){
-   if(!fer){E(at+": craft/craft-ferment.js not found");continue}
+   if(!fer){E(at+": js/craft/craft-ferment.js not found");continue}
    const ids=methods[t.m];if(!ids){E(at+": no Fermentation method '"+t.m+"'");continue}
    for(const it of t.items||[])if(!ids.has(it))E(at+": method '"+t.m+"' has no item '"+it+"'")
   }else E(at+": unknown kind '"+t.k+"'")}
  /* the patterns and ids in xlink.js must name links that exist: read them back out of the source */
- const src=rd("xlink.js"),used=new Set();
+ const src=rd("js/core/xlink.js"),used=new Set();
  const byid=/const BYID=\{([\s\S]*?)\};/.exec(src);if(byid)for(const m of byid[1].matchAll(/"[^"]+":"(\w+)"/g))used.add(m[1]);
  const rules=/const RULES=\[([\s\S]*?)\n\];/.exec(src);if(rules)for(const m of rules[1].matchAll(/,"(\w+)"(?:,\/|\])/g))used.add(m[1]);
  const sec=/const SEC=\[(.*?)\];/.exec(src);if(sec)for(const m of sec[1].matchAll(/,"(\w+)"\]/g))used.add(m[1]);
  for(const k of used)if(!X.targets[k])E("xlink.js: a pattern or id points at the link '"+k+"', which is not defined in T");
  for(const k of Object.keys(X.targets))if(!used.has(k))W("xlink.js: link '"+k+"' is defined but no pattern or id uses it");
  /* catalog ids named in BYID should exist in ingredients.js (loose check: the id appears as a quoted word) */
- if(has("ingredients.js")&&byid){const ing=rd("ingredients.js");for(const m of byid[1].matchAll(/"([a-z0-9-]+)":"/g))if(!ing.includes('"'+m[1]+'"'))W("xlink.js BYID: '"+m[1]+"' was not found in ingredients.js")}
+ if(has("data/ingredients.js")&&byid){const ing=rd("data/ingredients.js");for(const m of byid[1].matchAll(/"([a-z0-9-]+)":"/g))if(!ing.includes('"'+m[1]+'"'))W("xlink.js BYID: '"+m[1]+"' was not found in ingredients.js")}
 }
 
 /* ---- report ---- */
