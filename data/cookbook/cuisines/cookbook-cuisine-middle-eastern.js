@@ -1165,69 +1165,7 @@ KITCHEN.add(
       "Fill {flatbread}, roll tightly and bake seam-side down at 200 °C for 10–12 minutes until crisp. Scatter remaining pine nuts over the top."
     ]
   },
-  {
-    "id": "middle-eastern-maqluba",
-    "name": "Maqluba (upside-down rice, aubergine and chicken pot)",
-    "meal": "big",
-    "cuisine": "Middle Eastern",
-    "time": 75,
-    "serves": 3,
-    "ing": [
-      [
-        "rice",
-        300
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "aubergine",
-        "1pc"
-      ],
-      [
-        "cauliflower",
-        250
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "cumin",
-        2
-      ],
-      [
-        "cinnamon",
-        1
-      ],
-      [
-        "allspice",
-        2
-      ],
-      [
-        "chicken-stock",
-        600
-      ],
-      [
-        "oil",
-        35
-      ],
-      [
-        "salt",
-        4
-      ],
-      [
-        "yogurt",
-        100
-      ]
-    ],
-    "steps": [
-      "Season {chicken-thigh} with {cumin}, {cinnamon}, {allspice} and {salt}; brown in a pot and set aside. Fry or roast slices of {aubergine} and florets of {cauliflower} until golden.",
-      "Layer chicken, vegetables, sliced {onion} and rinsed {rice} in a deep pot. Pour in hot {chicken-stock} just to cover.",
-      "Cover and simmer gently until rice is tender and liquid absorbed, 30–35 minutes. Rest 10 minutes, invert onto a platter and serve with {yogurt}."
-    ]
-  },
+  {"id": "middle-eastern-maqluba", "name": "Maqluba (upside-down rice, aubergine and chicken pot)", "meal": "big", "cuisine": "Middle Eastern", "time": 80, "serves": 3, "ing": [["rice", 300], ["chicken-thigh", 500], ["aubergine", "1pc"], ["cauliflower", 250], ["onion", "1pc"], ["cumin", 2], ["cinnamon", 1], ["allspice", 2], ["chicken-stock", 600], ["oil", 35], ["salt", 4], ["yogurt", 100]], "steps": ["Season {chicken-thigh} with {cumin}, {cinnamon}, {allspice} and {salt}; brown in half the {oil} and set aside. Fry slices of {aubergine} and florets of {cauliflower} in the rest of the {oil} until golden.", "Layer chicken, vegetables, sliced {onion} and rinsed {rice} in a deep pot. Pour in hot {chicken-stock} just to cover.", "Cover and simmer gently 30–35 minutes. Rest 10 minutes, invert onto a platter and serve with {yogurt}."]},
   {
     "id": "middle-eastern-kibbeh-baked",
     "name": "Kibbeh bil sanieh (baked bulgur and spiced beef pie)",

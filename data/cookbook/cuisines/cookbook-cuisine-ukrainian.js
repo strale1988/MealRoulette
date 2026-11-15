@@ -870,6 +870,7 @@ KITCHEN.add(
       "Roast for 40–45 minutes, turning once, until golden and tender.",
       "Squeeze the soft garlic from its skins, mash into the vegetables, scatter chopped {dill} and serve."
     ]
-  }
+  },
+{"id": "ua-syrniki", "name": "Syrniki (farmer cheese pancakes)", "meal": "morning,treat", "cuisine": "Ukrainian", "time": 30, "serves": 4, "ing": [["farmer-cheese", 400], ["eggs", "1pc"], ["flour", 60], ["sugar", 30], ["vanilla", 3], ["oil", 30], ["sour-cream", 100]], "steps": ["Mash {farmer-cheese} with {eggs}, {sugar} and {vanilla}; mix in {flour} to a thick dough.", "Shape into small discs and fry in {oil} 3 minutes per side until golden.", "Serve with {sour-cream}."]}
 ]
 );

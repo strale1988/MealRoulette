@@ -569,9 +569,9 @@ KITCHEN.add(
       ]
     ],
     "steps": [
-      "Simmer the {green-lentils} in the {water} for 15 minutes.",
+      "Simmer the {green-lentils} in the {water} for 25 minutes.",
       "Meanwhile fry sliced {onion} in the {olive-oil} over medium-high heat for 20 minutes until dark golden and crisp. Remove half for the topping.",
-      "Add the {rice}, {cumin} and {salt} to the lentils with the remaining onions. Cover and cook on low for 18 minutes until the rice is tender.",
+      "Add the {rice}, {cumin} and {salt} to the lentils with the remaining onions. Cover and cook on low for 15 minutes until the rice is tender.",
       "Serve topped with the crisp onions and {yogurt}."
     ]
   },

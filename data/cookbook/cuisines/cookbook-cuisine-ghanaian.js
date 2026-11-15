@@ -148,44 +148,7 @@ KITCHEN.add(
       "Shallow-fry in hot {oil}, turning until deeply golden and tender. Drain and serve hot."
     ]
   },
-  {
-    "id": "ghanaian-jollof-rice",
-    "name": "Ghanaian Jollof Rice",
-    "meal": "big",
-    "cuisine": "Ghanaian",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
+  {"id": "ghanaian-jollof-rice", "name": "Ghanaian jollof rice with chicken", "meal": "big", "cuisine": "Ghanaian", "time": 50, "serves": 4, "ing": [["rice", 300], ["chicken-thigh", 500], ["tomato", 300], ["tomato-paste", 40], ["onion", "1pc"], ["red-pepper", "1pc"], ["red-chilli", "1pc"], ["garlic", "3pc"], ["ginger", 10], ["oil", 40], ["chicken-stock", 500], ["curry-powder", 5], ["thyme", 2], ["salt", 3]], "steps": ["Blend {tomato}, {red-pepper}, {red-chilli}, {garlic}, {ginger} and half the {onion}.", "Brown {chicken-thigh} in half the {oil}, then set aside.", "Fry the rest of sliced {onion} in the remaining {oil}, add {tomato-paste}, {curry-powder} and {thyme}, then the blended sauce; cook 15 minutes until thick and oily.", "Stir in {rice}, {chicken-stock} and {salt}; nestle in the chicken.", "Cover tightly and cook on low 25 minutes. Rest 5 minutes and fluff."]},
   {
     "id": "kontomire-style-spinach-stew",
     "name": "Kontomire-Style Spinach Stew",
@@ -286,45 +249,7 @@ KITCHEN.add(
       "Taste for salt and serve in deep bowls."
     ]
   },
-  {
-    "id": "garden-egg-style-aubergine-stew",
-    "name": "Garden Egg-Style Aubergine Stew",
-    "meal": "big",
-    "cuisine": "Ghanaian",
-    "time": 51,
-    "serves": 4,
-    "ing": [
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "ginger",
-        10
-      ]
-    ],
-    "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {onion} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
+  {"id": "garden-egg-style-aubergine-stew", "name": "Garden egg-style aubergine stew", "meal": "big", "cuisine": "Ghanaian", "time": 50, "serves": 4, "ing": [["aubergine", 500], ["tomato", 300], ["onion", "1pc"], ["ginger", 10], ["garlic", "2pc"], ["oil", 40], ["red-chilli", "1pc"], ["eggs", "4pc"], ["salt", 3]], "steps": ["Hard-boil {eggs} for 9 minutes, cool and peel.", "Fry {onion}, {garlic} and {ginger} in {oil} 5 minutes.", "Add chopped {tomato}, {red-chilli} and {salt}; cook 10 minutes.", "Add cubed {aubergine} and a splash of water. Cover and simmer 20 minutes until soft.", "Halve the eggs and fold in; serve with rice or yam."]},
   {
     "id": "ghanaian-beans-and-fried-plantain",
     "name": "Ghanaian Beans and Fried Plantain",
@@ -538,44 +463,7 @@ KITCHEN.add(
       "Scatter {peas} on top, cover for 5 minutes, remove the bay leaf and fluff."
     ]
   },
-  {
-    "id": "ghanaian-spiced-rice-with-vegetables",
-    "name": "Ghanaian Spiced Rice with Vegetables",
-    "meal": "big",
-    "cuisine": "Ghanaian",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
+  {"id": "ghanaian-spiced-rice-with-vegetables", "name": "Ghanaian fried rice with vegetables", "meal": "big", "cuisine": "Ghanaian", "time": 35, "serves": 4, "ing": [["rice", 250], ["carrot", "1pc"], ["peas", 100], ["sweetcorn", 100], ["onion", "1pc"], ["oil", 30], ["curry-powder", 5], ["thyme", 2], ["ginger", 10], ["salt", 3]], "steps": ["Cook {rice} in salted water {salt}, drain and spread out to cool.", "Fry {onion} and {ginger} in {oil} 4 minutes. Add diced {carrot} for 4 minutes.", "Add {curry-powder} and {thyme}, then {peas} and {sweetcorn} for 3 minutes.", "Toss in the rice and stir-fry 5 minutes."]},
   {
     "id": "ghanaian-tomato-and-bean-stew",
     "name": "Ghanaian Tomato and Bean Stew",
@@ -627,91 +515,8 @@ KITCHEN.add(
       "Add {kidney-beans}, 100 ml water and {salt} and simmer for 10 minutes. Remove the bay leaf and serve."
     ]
   },
-  {
-    "id": "ghanaian-grilled-fish-with-lime",
-    "name": "Ghanaian Grilled Fish with Lime",
-    "meal": "big",
-    "cuisine": "Ghanaian",
-    "time": 39,
-    "serves": 4,
-    "ing": [
-      [
-        "ginger",
-        10
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ]
-    ],
-    "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "ghanaian-chicken-and-greens-pot",
-    "name": "Ghanaian Chicken and Greens Pot",
-    "meal": "big",
-    "cuisine": "Ghanaian",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
+  {"id": "ghanaian-grilled-fish-with-lime", "name": "Ghanaian grilled tilapia with lime and pepper", "meal": "big", "cuisine": "Ghanaian", "time": 40, "serves": 4, "ing": [["tilapia", 600], ["lime", "2pc"], ["ginger", 15], ["garlic", "3pc"], ["onion", "1pc"], ["red-chilli", "1pc"], ["oil", 30], ["salt", 3]], "steps": ["Blend {ginger}, {garlic}, {red-chilli}, half the {onion}, {salt} and juice of {lime}.", "Coat {tilapia} and marinate 20 minutes.", "Brush with {oil} and grill 5 minutes per side.", "Serve with sliced raw onion and lime wedges."]},
+  {"id": "ghanaian-chicken-and-greens-pot", "name": "Ghanaian chicken and greens stew", "meal": "big", "cuisine": "Ghanaian", "time": 55, "serves": 4, "ing": [["chicken-thigh", 600], ["spinach", 300], ["onion", "1pc"], ["tomato-paste", 30], ["red-chilli", "1pc"], ["garlic", "3pc"], ["oil", 30], ["salt", 4]], "steps": ["Fry {onion}, {garlic} and {red-chilli} in {oil} 5 minutes. Stir in {tomato-paste} for 2 minutes.", "Add {chicken-thigh}, {salt} and a cup of water. Simmer covered 30 minutes.", "Add {spinach} and cook 8 minutes until the sauce is thick."]},
   {
     "id": "ghanaian-peanut-and-sweet-potato-soup",
     "name": "Ghanaian Peanut and Sweet Potato Soup",
@@ -759,91 +564,8 @@ KITCHEN.add(
       "Whisk {peanut-butter} with a ladle of hot broth, stir in with {salt} and simmer 8 minutes. Remove the chilli, blend half and serve."
     ]
   },
-  {
-    "id": "ghanaian-herbed-flatbread",
-    "name": "Ghanaian Herbed Flatbread",
-    "meal": "big",
-    "cuisine": "Ghanaian",
-    "time": 60,
-    "serves": 4,
-    "ing": [
-      [
-        "ginger",
-        10
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ]
-    ],
-    "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "ghanaian-coconut-rice-bowl",
-    "name": "Ghanaian Coconut Rice Bowl",
-    "meal": "big",
-    "cuisine": "Ghanaian",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
+  {"id": "ghanaian-herbed-flatbread", "name": "Tatale (ripe plantain pancakes)", "meal": "morning,bite", "cuisine": "Ghanaian", "time": 25, "serves": 4, "ing": [["plantain", "3pc"], ["flour", 60], ["onion", "0.5pc"], ["ginger", 5], ["chilli-flakes", 1], ["salt", 2], ["oil", 40]], "steps": ["Mash {plantain} (very ripe) with {flour}, grated {onion}, {ginger}, {chilli-flakes} and {salt} into a thick batter.", "Heat {oil} in a pan and fry spoonfuls 2–3 minutes per side until golden."]},
+  {"id": "ghanaian-coconut-rice-bowl", "name": "Ghanaian coconut rice with black-eyed peas", "meal": "big", "cuisine": "Ghanaian", "time": 35, "serves": 4, "ing": [["rice", 250], ["coconut-milk", 200], ["water", 300], ["black-eyed-peas", 240], ["tomato", 300], ["onion", "1pc"], ["oil", 30], ["salt", 3]], "steps": ["Cook {rice} with {coconut-milk}, {water} and half the {salt} for 15 minutes, covered.", "Fry {onion} in {oil}, add chopped {tomato} and the rest of the {salt} and cook 12 minutes.", "Add {black-eyed-peas} and simmer 5 minutes.", "Serve the sauce over the rice."]},
   {
     "id": "ghanaian-ginger-lentil-curry",
     "name": "Ghanaian Ginger Lentil Curry",

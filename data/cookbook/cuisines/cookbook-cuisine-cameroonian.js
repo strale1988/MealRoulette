@@ -153,44 +153,7 @@ KITCHEN.add(
       "Stir in {beans} and corn with a little cooking liquid; simmer 10 minutes."
     ]
   },
-  {
-    "id": "ndole-inspired-peanut-greens",
-    "name": "Ndolé-Inspired Peanut Greens",
-    "meal": "big",
-    "cuisine": "Cameroonian",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
+  {"id": "ndole-inspired-peanut-greens", "name": "Ndolé-inspired peanut greens with prawns", "meal": "big", "cuisine": "Cameroonian", "time": 40, "serves": 4, "ing": [["spinach", 400], ["peanut-butter", 80], ["prawns", 250], ["onion", "1pc"], ["garlic", "3pc"], ["oil", 30], ["rice", 250], ["salt", 3]], "steps": ["Cook {rice} in salted water until tender; keep warm.", "Fry chopped {onion} and {garlic} in {oil} for 5 minutes.", "Add {spinach} and cook 5 minutes until wilted, then chop it roughly in the pan.", "Stir in {peanut-butter} with a splash of water and simmer 10 minutes.", "Add {prawns} and {salt}; cook 4 minutes until pink. Serve over the rice."]},
   {
     "id": "cameroonian-chicken-pepper-stew",
     "name": "Cameroonian Chicken Pepper Stew",
@@ -308,45 +271,7 @@ KITCHEN.add(
       "Shape into balls with wet hands and serve with the soup."
     ]
   },
-  {
-    "id": "koki-style-steamed-bean-cakes",
-    "name": "Koki-Style Steamed Bean Cakes",
-    "meal": "big",
-    "cuisine": "Cameroonian",
-    "time": 51,
-    "serves": 4,
-    "ing": [
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ],
-      [
-        "ginger",
-        10
-      ]
-    ],
-    "steps": [
-      "Stir in the {ginger} and cook briefly to release its aroma.",
-      "Add the {onion} and {rice}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
+  {"id": "koki-style-steamed-bean-cakes", "name": "Koki-style steamed bean cakes", "meal": "big", "cuisine": "Cameroonian", "time": 50, "serves": 4, "ing": [["black-eyed-peas", 400], ["oil", 40], ["onion", "0.5pc"], ["red-chilli", "1pc"], ["spinach", 100], ["salt", 3]], "steps": ["Blend {black-eyed-peas}, chopped {onion}, {red-chilli} and {salt} to a thick paste.", "Beat in {oil}. Fold in chopped {spinach}.", "Divide into 4 parcels wrapped in foil or baking paper.", "Steam 35 minutes until firm. Unwrap and serve warm."]},
   {
     "id": "cameroonian-jollof-rice",
     "name": "Cameroonian Jollof Rice",
@@ -580,44 +505,7 @@ KITCHEN.add(
       "Fold the spinach through the hot rice, cover for 5 minutes until wilted, then fluff and serve."
     ]
   },
-  {
-    "id": "cameroonian-spiced-rice-with-vegetables",
-    "name": "Cameroonian Spiced Rice with Vegetables",
-    "meal": "big",
-    "cuisine": "Cameroonian",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
+  {"id": "cameroonian-spiced-rice-with-vegetables", "name": "Cameroonian tomato rice with vegetables", "meal": "big", "cuisine": "Cameroonian", "time": 35, "serves": 4, "ing": [["rice", 250], ["tomato", 300], ["onion", "1pc"], ["red-pepper", "1pc"], ["carrot", "1pc"], ["peas", 100], ["oil", 30], ["garlic", "2pc"], ["ginger", 10], ["thyme", 2], ["chicken-stock", 500], ["salt", 2]], "steps": ["Blend {tomato}, {red-pepper} and {garlic}. Fry sliced {onion} and {ginger} in {oil} 5 minutes.", "Add the blended sauce and cook 10 minutes until thick.", "Stir in {rice}, diced {carrot}, {thyme} and {salt}, then pour in {chicken-stock}.", "Cover and cook on low 18 minutes. Add {peas} for the last 5 minutes.", "Rest 5 minutes and fluff."]},
   {
     "id": "cameroonian-tomato-and-bean-stew",
     "name": "Cameroonian Tomato and Bean Stew",
@@ -669,91 +557,8 @@ KITCHEN.add(
       "Add {black-eyed-peas}, 100 ml water and {salt} and simmer for 12 minutes, mashing a few to thicken. Serve hot."
     ]
   },
-  {
-    "id": "cameroonian-grilled-fish-with-lime",
-    "name": "Cameroonian Grilled Fish with Lime",
-    "meal": "big",
-    "cuisine": "Cameroonian",
-    "time": 39,
-    "serves": 4,
-    "ing": [
-      [
-        "ginger",
-        10
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ]
-    ],
-    "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "cameroonian-chicken-and-greens-pot",
-    "name": "Cameroonian Chicken and Greens Pot",
-    "meal": "big",
-    "cuisine": "Cameroonian",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
+  {"id": "cameroonian-grilled-fish-with-lime", "name": "Cameroonian grilled fish with lime and ginger", "meal": "big", "cuisine": "Cameroonian", "time": 40, "serves": 4, "ing": [["white-fish", 600], ["lime", "2pc"], ["garlic", "3pc"], ["ginger", 15], ["onion", "1pc"], ["red-chilli", "1pc"], ["oil", 30], ["tomato", "2pc"], ["salt", 3]], "steps": ["Blend {garlic}, {ginger}, {red-chilli}, half the {onion}, juice of {lime} and {salt}. Rub over {white-fish}; marinate 20 minutes.", "Heat a grill or griddle and brush with a little {oil}. Cook the fish 4–5 minutes per side.", "Fry the rest of the {onion} and chopped {tomato} in remaining {oil} 8 minutes for a relish.", "Serve the fish with the relish and lime wedges."]},
+  {"id": "cameroonian-chicken-and-greens-pot", "name": "Cameroonian chicken and greens pot", "meal": "big", "cuisine": "Cameroonian", "time": 50, "serves": 4, "ing": [["chicken-thigh", 600], ["spinach", 300], ["onion", "1pc"], ["tomato", "3pc"], ["garlic", "3pc"], ["ginger", 10], ["oil", 30], ["salt", 4]], "steps": ["Brown {chicken-thigh} in {oil} 6 minutes per side and set aside.", "Fry {onion}, {garlic} and {ginger} 5 minutes. Add chopped {tomato} and cook 10 minutes.", "Return the chicken with {salt} and a cup of water. Cover and simmer 20 minutes.", "Stir in {spinach} and cook 5 minutes."]},
   {
     "id": "cameroonian-peanut-and-sweet-potato-soup",
     "name": "Cameroonian Peanut and Sweet Potato Soup",
@@ -810,91 +615,8 @@ KITCHEN.add(
       "Whisk {peanut-butter} with a ladle of hot broth, stir it in with {salt} and simmer 8 minutes. Blend half for a thick, rustic soup."
     ]
   },
-  {
-    "id": "cameroonian-herbed-flatbread",
-    "name": "Cameroonian Herbed Flatbread",
-    "meal": "big",
-    "cuisine": "Cameroonian",
-    "time": 60,
-    "serves": 4,
-    "ing": [
-      [
-        "ginger",
-        10
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ]
-    ],
-    "steps": [
-      "Add the {ginger} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
-  {
-    "id": "cameroonian-coconut-rice-bowl",
-    "name": "Cameroonian Coconut Rice Bowl",
-    "meal": "big",
-    "cuisine": "Cameroonian",
-    "time": 31,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        500
-      ],
-      [
-        "onion",
-        1
-      ],
-      [
-        "tomato",
-        300
-      ],
-      [
-        "peanut-butter",
-        50
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "spinach",
-        150
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {rice}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
+  {"id": "cameroonian-herbed-flatbread", "name": "Cameroonian herbed pan flatbread", "meal": "bite", "cuisine": "Cameroonian", "time": 30, "serves": 4, "ing": [["flour", 300], ["baking-powder", 6], ["salt", 4], ["water", 160], ["oil", 20], ["parsley", 10], ["thyme", 2]], "steps": ["Mix {flour}, {baking-powder}, {salt}, {parsley} and {thyme}.", "Stir in {water} and half the {oil} to make a soft dough; rest 10 minutes.", "Divide into 6, roll thin, and cook in a hot dry pan 2 minutes per side.", "Brush with the remaining {oil}."]},
+  {"id": "cameroonian-coconut-rice-bowl", "name": "Cameroonian coconut rice bowl with fried plantain", "meal": "big", "cuisine": "Cameroonian", "time": 35, "serves": 4, "ing": [["rice", 250], ["coconut-milk", 200], ["water", 300], ["ginger", 10], ["salt", 3], ["plantain", "2pc"], ["oil", 30], ["spinach", 150]], "steps": ["Cook {rice} with {coconut-milk}, {water}, grated {ginger} and half the {salt} 15 minutes, covered.", "Slice {plantain} and fry in half the {oil} 3 minutes per side until golden.", "Wilt {spinach} in the remaining {oil} with the rest of the {salt}.", "Serve the rice with plantain and greens."]},
   {
     "id": "cameroonian-ginger-lentil-curry",
     "name": "Cameroonian Ginger Lentil Curry",

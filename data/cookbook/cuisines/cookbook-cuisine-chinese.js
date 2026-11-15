@@ -2938,65 +2938,7 @@ KITCHEN.add(
       "Fry in hot {oil} until crisp and golden, turning once. Drain well and serve hot."
     ]
   },
-  {
-    "id": "chinese-shengjian-bao",
-    "name": "Shengjian bao-inspired pan-fried pork buns",
-    "meal": "big",
-    "cuisine": "Chinese",
-    "time": 70,
-    "serves": 3,
-    "ing": [
-      [
-        "flour",
-        300
-      ],
-      [
-        "yeast",
-        5
-      ],
-      [
-        "water",
-        170
-      ],
-      [
-        "pork-mince",
-        300
-      ],
-      [
-        "spring-onion",
-        40
-      ],
-      [
-        "ginger",
-        10
-      ],
-      [
-        "soy-sauce",
-        25
-      ],
-      [
-        "sesame-oil",
-        10
-      ],
-      [
-        "sugar",
-        8
-      ],
-      [
-        "oil",
-        20
-      ],
-      [
-        "sesame-seeds",
-        10
-      ]
-    ],
-    "steps": [
-      "Mix {flour}, {yeast}, {water} and {sugar}; knead until smooth and rise 35 minutes.",
-      "Mix {pork-mince} with chopped {spring-onion}, grated {ginger}, {soy-sauce} and {sesame-oil}. Divide dough, fill with pork mixture and seal into buns.",
-      "Place buns seam-side down in a lightly oiled covered skillet. Fry until bottoms are golden, add 100 ml water, cover and steam 8–10 minutes. Uncover to evaporate liquid and sprinkle with {sesame-seeds}."
-    ]
-  },
+  {"id": "chinese-shengjian-bao", "name": "Shengjian bao-inspired pan-fried pork buns", "meal": "big", "cuisine": "Chinese", "time": 75, "serves": 3, "ing": [["flour", 300], ["yeast", 5], ["water", 170], ["pork-mince", 300], ["spring-onion", "3pc"], ["ginger", 10], ["soy-sauce", 25], ["sesame-oil", 10], ["sugar", 8], ["oil", 20], ["sesame-seeds", 10]], "steps": ["Mix {flour}, {yeast}, {water} and {sugar}; knead until smooth and rise 35 minutes.", "Mix {pork-mince} with chopped {spring-onion}, grated {ginger}, {soy-sauce} and {sesame-oil}. Divide the dough, fill and seal into buns.", "Place buns seam-side down in a covered skillet with {oil}. Fry until golden underneath, add 100 g water, cover and steam 8–10 minutes.", "Uncover to evaporate the liquid and sprinkle with {sesame-seeds}."]},
   {
     "id": "chinese-lionhead-meatballs",
     "name": "Lion’s head meatballs with napa cabbage",
@@ -3232,67 +3174,7 @@ KITCHEN.add(
       "Finish with sliced {spring-onion} and {sesame-oil}."
     ]
   },
-  {
-    "id": "cn-zhajiangmian",
-    "name": "Zha jiang mian (noodles with savoury soybean mince sauce)",
-    "meal": "big",
-    "cuisine": "Chinese",
-    "time": 30,
-    "serves": 2,
-    "ing": [
-      [
-        "noodles",
-        180
-      ],
-      [
-        "pork-mince",
-        350
-      ],
-      [
-        "soy-sauce",
-        25
-      ],
-      [
-        "dark-soy-sauce",
-        15
-      ],
-      [
-        "garlic",
-        3
-      ],
-      [
-        "ginger",
-        12
-      ],
-      [
-        "spring-onion",
-        "2pc"
-      ],
-      [
-        "cucumber",
-        1
-      ],
-      [
-        "oil",
-        15
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Cook {noodles} according to its packet, drain and reserve a little cooking water.",
-      "Heat {oil} in a wok or large skillet; stir-fry {garlic} and {ginger} with the main ingredients.",
-      "Toss the noodles through the sauce over high heat so they absorb the seasoning without turning soft.",
-      "Fry pork mince until browned, add soy sauces and aromatics and reduce to a concentrated paste; toss with hot noodles and fresh cucumber matchsticks.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
-    ]
-  },
+  {"id": "cn-zhajiangmian", "name": "Zha jiang mian (noodles with savoury soybean mince sauce)", "meal": "big", "cuisine": "Chinese", "time": 30, "serves": 2, "ing": [["noodles", 180], ["pork-mince", 350], ["soy-sauce", 25], ["dark-soy-sauce", 15], ["garlic", "3pc"], ["ginger", 12], ["spring-onion", "2pc"], ["cucumber", "1pc"], ["oil", 15], ["salt", 2], ["black-pepper", 1]], "steps": ["Cook {noodles}, drain and keep a little cooking water.", "Fry {garlic}, {ginger} and white {spring-onion} in {oil} 1 minute, then {pork-mince} 8 minutes until browned.", "Add {soy-sauce}, {dark-soy-sauce}, {salt}, {black-pepper} and a splash of water; reduce to a thick sauce.", "Top the noodles with sauce, {cucumber} matchsticks and sliced green onion."]},
   {
     "id": "cn-claypot-rice",
     "name": "Cantonese claypot rice with Chinese sausage and mushrooms",

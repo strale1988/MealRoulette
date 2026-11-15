@@ -123,3 +123,4 @@ data/cookbook/cuisines/cookbook-cuisine-icelandic.js
 data/cookbook/cuisines/cookbook-cuisine-lao.js
 data/cookbook/cuisines/cookbook-cuisine-mongolian.js
 data/cookbook/cuisines/cookbook-cuisine-romanian.js
+data/cookbook/general/cookbook-craft-world.js

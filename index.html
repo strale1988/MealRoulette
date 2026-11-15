@@ -252,6 +252,12 @@ window.__nav={
 
 <div id="tab-ferm" class="tab" role="tabpanel" hidden></div>
 <div id="tab-brine" class="tab" role="tabpanel" hidden></div>
+<div id="tab-taco" class="tab" role="tabpanel" hidden></div>
+<div id="tab-tofu" class="tab" role="tabpanel" hidden></div>
+<div id="tab-pastry" class="tab" role="tabpanel" hidden></div>
+<div id="tab-plantmilk" class="tab" role="tabpanel" hidden></div>
+<div id="tab-candy" class="tab" role="tabpanel" hidden></div>
+<div id="tab-sushi" class="tab" role="tabpanel" hidden></div>
 <div id="tab-bread" class="tab" role="tabpanel" hidden></div>
 <div id="tab-grain" class="tab" role="tabpanel" hidden></div>
 <div id="tab-bake" class="tab" role="tabpanel" hidden></div>
@@ -342,7 +348,7 @@ window.__nav={
 /* Loader: downloads every file in parallel (fast on phones), runs them in order, retries a failed file once,
    and shows a Reload button instead of a blank page if something still fails. */
 (function(){
-var FILES=["js/core/kitchen.js","data/ingredients.js","data/cookbook.bundle.js","js/craft/craft-pizza.js","js/craft/craft-ferment.js","js/craft/craft-lib.js","js/craft/craft-doughs.js","js/craft/craft-mains.js","js/craft/craft-light.js","js/craft/craft-pantry.js","js/craft/craft-sweet.js","js/craft/craft-meat.js","js/craft/craft-extras.js","js/craft/craft-ui.js","js/craft/craft-brine.js","js/core/xlink.js","js/core/dinner.js","js/core/engine.js","js/ui/core.js","js/ui/tabs-and-search.js","js/ui/controls.js","js/ui/roulette.js","js/ui/display.js","js/ui/plan.js","js/ui/pizza-night.js","js/ui/cooking-mode.js","js/ui/spinner.js","js/ui/pizza-dough.js","js/ui/nudges-and-log.js","js/ui/shake.js","js/ui/results.js","js/ui/share-and-install.js","js/ui/shelf.js","js/ui/app-extras.js"];
+var FILES=["js/core/kitchen.js","data/ingredients.js","data/cookbook.bundle.js","js/craft/craft-pizza.js","js/craft/craft-ferment.js","js/craft/craft-lib.js","js/craft/craft-doughs.js","js/craft/craft-mains.js","js/craft/craft-light.js","js/craft/craft-pantry.js","js/craft/craft-sweet.js","js/craft/craft-meat.js","js/craft/craft-extras.js","js/craft/craft-world.js","js/craft/craft-ui.js","js/craft/craft-brine.js","js/core/xlink.js","js/core/dinner.js","js/core/engine.js","js/ui/core.js","js/ui/tabs-and-search.js","js/ui/controls.js","js/ui/roulette.js","js/ui/display.js","js/ui/plan.js","js/ui/pizza-night.js","js/ui/cooking-mode.js","js/ui/spinner.js","js/ui/pizza-dough.js","js/ui/nudges-and-log.js","js/ui/shake.js","js/ui/results.js","js/ui/share-and-install.js","js/ui/shelf.js","js/ui/app-extras.js"];
 var boot=document.getElementById("boot");
 function fail(){var sp=document.getElementById("splash");if(sp)sp.remove();boot.hidden=false;document.getElementById("bootbtn").onclick=function(){
   var go=function(){location.reload()};

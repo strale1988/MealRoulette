@@ -166,6 +166,7 @@ KITCHEN.add(
       "Boil {potatoes} for 20 minutes.",
       "Serve with {herring}, thin {onion}, {sour-cream}, {dill} and slices of {rye-bread}."
     ]
-  }
+  },
+{"id": "lv-rupjmaize", "name": "Rupjmaizes kārtojums (Latvian rye bread dessert)", "meal": "treat", "cuisine": "Baltic", "time": 30, "serves": 4, "ing": [["rye-bread", 200], ["lingonberry-jam", 150], ["cream", 250], ["sugar", 30]], "steps": ["Crumble {rye-bread} and toast with {sugar} in a dry pan 6 minutes until crisp.", "Whip {cream} to soft peaks.", "Layer crumbs, {lingonberry-jam} and cream in glasses. Chill 30 minutes."]}
 ]
 );

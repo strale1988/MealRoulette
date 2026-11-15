@@ -63,6 +63,12 @@ K.CRAFTS=[
  {id:"sauce",name:"Saucy business",words:null},
  {id:"ferm",name:"Fermentation station",words:null},
  {id:"brine",name:"Brine and salt lab",words:null},
+ {id:"taco",name:"Taco table",words:null},
+ {id:"tofu",name:"Tofu and tempeh",words:null},
+ {id:"pastry",name:"Pie and pastry",words:null},
+ {id:"plantmilk",name:"Plant milks",words:null},
+ {id:"candy",name:"Candy shop",words:null},
+ {id:"sushi",name:"Sushi and rice rolls",words:null},
  {id:"dairy",name:"Cultured club",words:null},
  {id:"jam",name:"Jam session",words:null},
  {id:"spice",name:"Spice rack",words:null},
@@ -76,6 +82,8 @@ K.CRAFTS=[
  {id:"cheese",name:"Say cheese",words:null},
  {id:"starter",name:"Bubbling jars",words:null}
 ];
+/* optional "Inspired by" credit: {name,url}; only http(s) links are kept */
+K.cleanSource=s=>s&&typeof s.name==="string"&&/^https?:\/\//.test(s.url||"")?{name:s.name.slice(0,60),url:s.url}:null;
 K.craftOf=name=>{const n=String(name||""),c=K.CRAFTS.find(c=>c.words&&c.words.test(n)&&!(c.not&&c.not.test(n)));return c?c.id:""};
 
 /* ---------- ingredient catalog ---------- */
@@ -221,7 +229,7 @@ K.add=list=>list.forEach(r=>{
   if(!r.name)P("missing name");else if(/'S\b/.test(r.name))Wn("odd capital after apostrophe in name");
   const meals=[...new Set(String(r.meal||"").split(/[ ,]+/).filter(Boolean).map(m=>{if(!K.MEAL[m])P("unknown meal '"+m+"'");return K.MEAL[m]}).filter(Boolean))];
   if(!meals.length)P("no meal given");
-  if(!(r.time>=5&&r.time<=240))Wn("time looks wrong: "+r.time);
+  if(!(r.time>=5&&(r.time<=240||(r.time<=2880&&/overnight|ferment|cure|\bhours?\b|\bdays?\b/i.test((r.steps||[]).join(" "))))))Wn("time looks wrong: "+r.time);
   if(!(r.serves>=1))P("serves must be 1 or more");
   if(r.cuisine&&!K.CUISINES.includes(r.cuisine))Wn("cuisine '"+r.cuisine+"' has no generator flavours");
   if(r.craft&&!K.CRAFTS.some(c=>c.id===r.craft))P("unknown craft '"+r.craft+"' (add the tool to K.CRAFTS in kitchen.js)");
@@ -264,7 +272,7 @@ K.add=list=>list.forEach(r=>{
   const leftoverSwaps=[...new Set(Array.isArray(r.leftoverSwaps)?r.leftoverSwaps:[])];
   leftoverSwaps.forEach(raw=>{if(!K.LEFTOVER_SWAPS[raw])P("unknown leftover substitution for '"+raw+"'");else if(!seen.has(raw))P("leftover substitution '"+raw+"' is not a recipe ingredient");});
   if(K.problems.slice(bad0).some(p=>p.lvl==="error"))return;
-  K.recipes.push({id:r.id,title:r.name,meals,min:r.time,serv:r.serves,cuisine:r.cuisine||"",craft:r.craft||K.craftOf(r.name),note:r.note||"",leftoverSwaps,ing,steps,flags,slots,ids:ing.map(i=>i.id)});
+  K.recipes.push({id:r.id,title:r.name,meals,min:r.time,serv:r.serves,cuisine:r.cuisine||"",craft:r.craft||K.craftOf(r.name),note:r.note||"",source:K.cleanSource(r.source),leftoverSwaps,ing,steps,flags,slots,ids:ing.map(i=>i.id)});
 });
 
 K.report=()=>{const e=K.problems.filter(p=>p.lvl==="error"),w=K.problems.filter(p=>p.lvl==="warn");

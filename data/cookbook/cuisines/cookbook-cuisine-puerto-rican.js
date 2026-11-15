@@ -48,69 +48,7 @@ KITCHEN.add(
       "Fold in some crisp pork and chopped {cilantro}; shape into mounds and serve with remaining pork and {lime-juice}."
     ]
   },
-  {
-    "id": "pr-arroz-con-gandules",
-    "name": "Arroz con gandules-inspired Puerto Rican pigeon-pea rice",
-    "meal": "big",
-    "cuisine": "Puerto Rican",
-    "time": 45,
-    "serves": 2,
-    "ing": [
-      [
-        "rice",
-        220
-      ],
-      [
-        "beans",
-        220
-      ],
-      [
-        "pork-belly",
-        100
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "red-pepper",
-        80
-      ],
-      [
-        "garlic",
-        "3pc"
-      ],
-      [
-        "canned-tomatoes",
-        100
-      ],
-      [
-        "olives",
-        35
-      ],
-      [
-        "vegetable-stock",
-        500
-      ],
-      [
-        "oregano",
-        2
-      ],
-      [
-        "oil",
-        10
-      ],
-      [
-        "salt",
-        4
-      ]
-    ],
-    "steps": [
-      "Dice {pork-belly} and render in a pot until browned. Add {onion}, {red-pepper} and {garlic}; cook until softened.",
-      "Stir in {canned-tomatoes}, {oregano}, drained {beans}, {rice}, {olives} and {vegetable-stock}. Bring to a simmer.",
-      "Cover and cook on low for 20–25 minutes until the rice is tender. Rest 5 minutes and fluff gently."
-    ]
-  },
+  {"id": "pr-arroz-con-gandules", "name": "Arroz con gandules-inspired Puerto Rican pigeon-pea rice", "meal": "big", "cuisine": "Puerto Rican", "time": 45, "serves": 2, "ing": [["rice", 220], ["beans", 220], ["pork-belly", 100], ["onion", "1pc"], ["red-pepper", "0.5pc"], ["garlic", "3pc"], ["canned-tomatoes", 100], ["olives", 35], ["vegetable-stock", 500], ["oregano", 2], ["oil", 10], ["salt", 4]], "steps": ["Dice {pork-belly} and render in {oil} until browned. Add {onion}, {red-pepper} and {garlic}; cook until soft.", "Stir in {canned-tomatoes}, {oregano}, {salt}, {beans}, {rice}, {olives} and {vegetable-stock}. Bring to a simmer.", "Cover and cook on low 20–25 minutes. Rest 5 minutes and fluff."]},
   {
     "id": "pr-pernil-style-roast-pork",
     "name": "Pernil-inspired Puerto Rican garlic and citrus roast pork",

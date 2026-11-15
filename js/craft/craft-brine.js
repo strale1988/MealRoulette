@@ -1,12 +1,12 @@
-/* js/craft/craft-brine.js — Brine and salt lab: exact salt for wet brines, dry-salted ferments, meat and fish brines, a brine fixer and a
-   salt converter (grams to spoons for each kind of salt). Self-contained: it fills <div id="tab-brine"> and keeps its own state in
+/* js/craft/craft-brine.js — Brine and salt lab: exact salt for plain wet brines, meat and fish brines (wet or dry), a brine fixer and a
+   salt converter. Vegetable work (pickles, kraut, kimchi, hot sauce, preserved lemons) lives only in the Fermentation station, so it is not repeated here (grams to spoons for each kind of salt). Self-contained: it fills <div id="tab-brine"> and keeps its own state in
    localStorage ("mr-brine"). All the maths is in window.BRINE (pure functions, also used by tools/smoke.js).
    Load order: after craft/craft-ferment.js, before engine.js. To add a meat or fish preset, add an entry to MEATS. */
 (function(){
 "use strict";
 
 /* ---------- the maths (pure) ----------
-   Brine strength is written the way ferment recipes write it: salt as a percentage of the WATER weight (3.5% = 35 g salt in 1 kg water).
+   Brine strength is written the way most brine recipes write it: salt as a percentage of the WATER weight (3.5% = 35 g salt in 1 kg water).
    `ofTotal` is the same brine as a share of the finished liquid, because some recipes quote it that way. */
 const r1=x=>Math.round(x*10)/10;
 const wet=(waterG,pct)=>{const salt=waterG*pct/100;return{salt,total:waterG+salt,ofTotal:salt/(waterG+salt)*100}};
@@ -48,9 +48,10 @@ if(!root)return;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const I=n=>`<svg class="i"><use href="#i-${n}"/></svg>`;
 const KEY="mr-brine";
-const D={mode:"wet",water:1000,pct:3.5,food:1000,fpct:2,meat:"chicken",how:"wet",mg:1500,cur:5,curG:1000,tgt:3,salt:"table",sg:20};
+const D={mode:"wet",water:1000,pct:3.5,meat:"chicken",how:"wet",mg:1500,cur:5,curG:1000,tgt:3,salt:"table",sg:20};
 let ST=Object.assign({},D);
 try{const s=JSON.parse(localStorage.getItem(KEY)||"null");if(s&&typeof s==="object")Object.keys(D).forEach(k=>{if(typeof s[k]===typeof D[k])ST[k]=s[k]})}catch(e){}
+if(!["wet","meat","fix","conv"].includes(ST.mode))ST.mode="wet"; // an older saved "Salt for veg" mode moved to the Fermentation station
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(ST))}catch(e){}};
 const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
 const step=v=>v<500?50:v<2000?250:v<10000?500:1000;
@@ -59,9 +60,8 @@ const S=g=>g<10?r1(g)+" g":Math.round(g)+" g"; // salt: one decimal for small am
 const spoonLine=g=>{const sp=spoons(g,ST.salt),tsp=sp.tsp;
   if(tsp<.2)return"a pinch";
   return tsp>=3?frac(sp.tbsp)+" tbsp":frac(tsp)+" tsp"};
-const MODES=[["wet","Brine from water"],["dry","Salt for veg"],["meat","Meat and fish"],["fix","Fix a brine"],["conv","Salt to spoons"]];
-const WPRE=[[2,"Light"],[3.5,"Pickles"],[5,"Meat brine"],[10,"Strong cure"]];
-const FPRE=[[1.5,"Light"],[2,"Kraut"],[2.5,"Kimchi"],[3,"Long keeping"]];
+const MODES=[["wet","Brine from water"],["meat","Meat and fish"],["fix","Fix a brine"],["conv","Salt to spoons"]];
+const WPRE=[[2,"Light"],[3.5,"Everyday"],[5,"Meat brine"],[10,"Strong keeping"]];
 
 const stepper=(id,val,label,txt)=>`<div class="step" style="margin-top:10px"><button data-a="m${id}" aria-label="Less ${label}">${I("minus")}</button><b>${txt}</b><button data-a="p${id}" aria-label="More ${label}">${I("plus")}</button></div>`;
 const slider=(id,val,min,max,stp,txt)=>`<div class="sl"><input type="range" data-s="${id}" min="${min}" max="${max}" step="${stp}" value="${val}" aria-label="Salt percentage" style="--p:${(val-min)/(max-min)*100}%"><p class="sum" style="margin:2px 0 0"><b data-sv="${id}">${txt}</b></p></div>`;
@@ -74,9 +74,6 @@ function controls(){
   if(ST.mode==="wet"){
     c=`<div class="lab" style="margin-top:16px">${I("ruler")}How much water?</div>${stepper("w",ST.water,"water",G(ST.water))}
     <div class="lab" style="margin-top:16px">${I("flame")}How salty?</div>${presets(WPRE,ST.pct,"wp")}${slider("pct",ST.pct,1,12,.5,ST.pct+"% of the water weight")}${saltTg()}`;
-  }else if(ST.mode==="dry"){
-    c=`<div class="lab" style="margin-top:16px">${I("ruler")}How much vegetable (trimmed weight)?</div>${stepper("f",ST.food,"vegetables",G(ST.food))}
-    <div class="lab" style="margin-top:16px">${I("flame")}How salty?</div>${presets(FPRE,ST.fpct,"fp")}${slider("fpct",ST.fpct,1,4,.1,ST.fpct+"% of the vegetable weight")}${saltTg()}`;
   }else if(ST.mode==="meat"){
     const m=MEATS.find(x=>x.id===ST.meat)||MEATS[0],canW=m.wet>0,canD=m.dry>0,how=ST.how==="dry"&&canD?"dry":canW?"wet":"dry";
     c=`<div class="lab" style="margin-top:16px">${I("chef")}What are you brining?</div><div class="tg">${MEATS.map(x=>`<button data-a="meat" data-id="${x.id}" aria-pressed="${ST.meat===x.id}">${esc(x.n)}</button>`).join("")}</div>
@@ -97,8 +94,8 @@ const card=(title,body)=>`<article class="card"><div class="hero"><div class="ic
 const SAFE=[
  ["Weigh the salt","Spoons are only a guide: a teaspoon of flaky salt can hold less than half the salt of a teaspoon of table salt. A kitchen scale makes every brine repeatable."],
  ["Keep meat brines cold","Brine meat and fish in the fridge, in a covered container, and never reuse the liquid. Pat the food dry afterwards; brined meat needs less salt in the pan."],
- ["Ferments stay under the brine","Vegetables that stick out of the liquid can spoil. Keep them pushed under with a weight. This lab sets the salt, not the safety of canned or shelf-stable food: those need tested recipes."],
- ["Iodine and anti-caking agents","Ordinary iodised table salt is fine for most cooking, but can cloud a ferment brine. Plain salt with no additives gives the clearest result."]
+ ["Vegetables live in the Fermentation station","Pickles, kraut, kimchi, hot sauce and preserved lemons have their salt and timing worked out for each vegetable there, so they are not repeated here. This lab sets the salt, not the safety of canned or shelf-stable food: those need tested recipes."],
+ ["Iodine and anti-caking agents","Ordinary iodised table salt is fine for most cooking, but can cloud a brine. Plain salt with no additives gives the clearest result."]
 ];
 function results(){
   let t="",b="";
@@ -107,13 +104,7 @@ function results(){
     b=`<div class="meta"><span>${I("flame")}${S(r.salt)} salt</span><span>${I("jar")}About ${G(r.total)} of brine</span></div>
     <ul class="ing">${row("Water",G(ST.water))}${row("Salt",S(r.salt)+" ("+spoonLine(r.salt)+")",true)}</ul>
     <p class="desc">That is ${r1(r.ofTotal)}% salt in the finished liquid. Stir until the salt dissolves, warming a little water first if it is slow.</p>`+
-    (ST.pct>=8?call("This is a strong brine. It suits curing and keeping olives or lemons, not eating from the jar."):ST.pct<=2?call("A light brine suits fridge pickles that you will eat within a few weeks."):"");
-  }else if(ST.mode==="dry"){
-    const r=dry(ST.food,ST.fpct);t=ST.fpct+"% dry-salted ferment";
-    b=`<div class="meta"><span>${I("flame")}${S(r.salt)} salt</span><span>${I("jar")}${G(ST.food)} vegetables</span></div>
-    <ul class="ing">${row("Vegetables",G(ST.food))}${row("Salt",S(r.salt)+" ("+spoonLine(r.salt)+")",true)}</ul>
-    <p class="desc">Mix the salt into the shredded vegetables and squeeze for a few minutes until they release liquid, then pack tightly and keep them under the brine they make. Weigh the vegetables after trimming and cutting, not before.</p>`+
-    (ST.fpct<1.8?call("Under 2% is mild and best for cooler rooms. Taste it early and keep it in the fridge once it is sour enough."):"");
+    (ST.pct>=8?call("This is a strong brine. It suits curing and keeping things like olives, not eating straight from the jar."):ST.pct<=2?call("A light brine is for a short soak in the fridge, not for keeping food."):"");
   }else if(ST.mode==="meat"){
     const m=MEATS.find(x=>x.id===ST.meat)||MEATS[0],how=ST.how==="dry"&&m.dry>0?"dry":m.wet>0?"wet":"dry";
     if(how==="wet"){
@@ -134,7 +125,7 @@ function results(){
     if(r.add==="none")b=`<p class="desc">The brine is already at ${ST.tgt}%. Nothing to add.</p>`;
     else if(r.add==="salt")b=`<div class="meta"><span>${I("flame")}Add ${S(r.g)} salt</span><span>${I("jar")}Makes about ${G(r.total)}</span></div><ul class="ing">${row("Brine you have",G(ST.curG)+" at "+ST.cur+"%")}${row("Add salt",S(r.g)+" ("+spoonLine(r.g)+")",true)}${row("Result",G(r.total)+" at "+ST.tgt+"%")}</ul><p class="desc">Dissolve the extra salt into a little warm water first if it will not stir in.</p>`;
     else b=`<div class="meta"><span>${I("jar")}Add ${G(r.g)} water</span><span>${I("jar")}Makes about ${G(r.total)}</span></div><ul class="ing">${row("Brine you have",G(ST.curG)+" at "+ST.cur+"%")}${row("Add water",G(r.g),true)}${row("Result",G(r.total)+" at "+ST.tgt+"%")}</ul><p class="desc">Use water that is not hot, and keep it clean: tap water is fine.</p>`;
-    b+=`<p class="sum">Strength here means salt as a share of the water weight, the way most ferment recipes write it.</p>`;
+    b+=`<p class="sum">Strength here means salt as a share of the water weight, the way most brine recipes write it.</p>`;
   }else{
     t=S(ST.sg)+" of salt in spoons";
     b=`<ul class="ing">${SALTS.map(s=>{const sp=spoons(ST.sg,s.id),tsp=sp.tsp;return row(s.n,(tsp<.2?"a pinch":tsp>=3?frac(sp.tbsp)+" tbsp ("+frac(tsp)+" tsp)":frac(tsp)+" tsp"),false)}).join("")}</ul>
@@ -145,21 +136,20 @@ function results(){
 }
 
 function paint(){
-  root.innerHTML=`<h1 class="hl">Brine and salt lab</h1><p>Exact salt for brines, ferments and meat.</p><div class="cols"><aside class="side" id="brside">${controls()}</aside><section class="res"><div id="brout">${results()}</div></section></div>`;
+  root.innerHTML=`<h1 class="hl">Brine and salt lab</h1><p>Exact salt for plain brines and for meat and fish. Vegetable pickles and ferments are in the Fermentation station.</p><div class="cols"><aside class="side" id="brside">${controls()}</aside><section class="res"><div id="brout">${results()}</div></section></div>`;
 }
 const out=()=>{const o=root.querySelector("#brout");if(!o)return;o.innerHTML=results();const c=o.firstElementChild;if(c)c.style.animation="none"}; // no fade-in while a slider is being dragged
 const upd=(k,v)=>{ST[k]=v;save()};
-const SPEC={w:["water",100,20000],f:["food",100,20000],g:["mg",100,20000],cg:["curG",100,20000],s:["sg",1,500]};
+const SPEC={w:["water",100,20000],g:["mg",100,20000],cg:["curG",100,20000],s:["sg",1,500]};
 root.addEventListener("click",e=>{
   const b=e.target.closest("[data-a]");if(!b||!root.contains(b))return;
   const a=b.dataset.a,id=b.dataset.id;
   if(a==="mode"){upd("mode",id)}
   else if(a==="wp"){upd("pct",+id)}
-  else if(a==="fp"){upd("fpct",+id)}
   else if(a==="salt"){upd("salt",id)}
   else if(a==="meat"){upd("meat",id);const m=MEATS.find(x=>x.id===id);if(m){if(ST.how==="wet"&&!m.wet)upd("how","dry");else if(ST.how==="dry"&&!m.dry)upd("how","wet")}}
   else if(a==="how"){upd("how",id)}
-  else if(/^[mp](w|f|g|cg|s)$/.test(a)){
+  else if(/^[mp](w|g|cg|s)$/.test(a)){
     const sp=SPEC[a.slice(1)],sg=a[0]==="p"?1:-1,v=ST[sp[0]],st=a.slice(1)==="s"?(v<20?1:v<100?5:25):step(v);
     upd(sp[0],clamp(Math.round((v+sg*st)/st)*st,sp[1],sp[2]));
   }else return;
@@ -170,7 +160,7 @@ root.addEventListener("input",e=>{
   const k=el.dataset.s,v=+el.value,min=+el.min,max=+el.max;
   upd(k,v);el.style.setProperty("--p",(v-min)/(max-min)*100+"%");
   const lab=root.querySelector(`[data-sv="${k}"]`);
-  if(lab)lab.textContent=k==="pct"?v+"% of the water weight":k==="fpct"?v+"% of the vegetable weight":k==="cur"?v+"% (salt as a share of the water weight)":v+"%";
+  if(lab)lab.textContent=k==="pct"?v+"% of the water weight":k==="cur"?v+"% (salt as a share of the water weight)":v+"%";
   out();
 });
 paint();

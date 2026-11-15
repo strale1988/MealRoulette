@@ -218,6 +218,8 @@ KITCHEN.add(
       "Shape into small patties and press one side into {sesame-seeds}.",
       "Shallow-fry in hot {oil} for 3 minutes per side until crisp. Serve in warm {pita-bread}."
     ]
-  }
+  },
+{"id": "eg-ful-medames", "name": "Ful medames", "meal": "morning,big", "cuisine": "Egyptian", "time": 25, "serves": 2, "ing": [["broad-beans", 300], ["garlic", "3pc"], ["lemon", "1pc"], ["cumin", 4], ["olive-oil", 30], ["tomato", "1pc"], ["parsley", 10], ["salt", 3], ["bread", 120]], "steps": ["Simmer {broad-beans} with a little water 10–15 minutes until soft and heated through.", "Mash about half the beans with crushed {garlic}, {cumin}, {salt} and the juice of {lemon}.", "Spoon into bowls, top with chopped {tomato} and {parsley} and drizzle with {olive-oil}.", "Serve with warm {bread} for scooping."]},
+{"id": "eg-molokhia", "name": "Molokhia (Egyptian jute leaf soup with chicken)", "meal": "big", "cuisine": "Egyptian", "time": 60, "serves": 4, "ing": [["chicken-thigh", 500], ["molokhia", 300], ["garlic", "6pc"], ["ground-coriander", 3], ["oil", 30], ["chicken-stock", 800], ["rice", 250], ["salt", 3], ["lemon", "1pc"]], "steps": ["Simmer {chicken-thigh} in {chicken-stock} 25 minutes. Lift out and keep warm; cook {rice} in salted water {salt}.", "Add {molokhia} to the broth and heat gently 5 minutes; do not boil hard.", "Fry crushed {garlic} and {ground-coriander} in {oil} until just golden and stir into the soup.", "Serve over rice with the chicken and a squeeze of {lemon}."]}
 ]
 );

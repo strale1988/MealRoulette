@@ -196,6 +196,7 @@ KITCHEN.add(
       "Add {carrot}, {zucchini}, {chickpeas} and {salt} and cook 15 minutes.",
       "Steam {couscous} with a splash of hot water for 5 minutes, fluff with a fork and serve under the stew."
     ]
-  }
+  },
+{"id": "tn-salata-mechouia", "name": "Salata mechouia (grilled pepper and tomato salad)", "meal": "bite", "cuisine": "Tunisian", "time": 40, "serves": 4, "ing": [["red-pepper", "3pc"], ["tomato", "3pc"], ["garlic", "2pc"], ["red-chilli", "1pc"], ["olive-oil", 30], ["lemon", "0.5pc"], ["cumin", 3], ["salt", 3]], "steps": ["Heat the oven to 240 °C. Roast {red-pepper}, {tomato}, {red-chilli} and unpeeled {garlic} 25–30 minutes, turning once, until charred.", "Cover the hot vegetables 10 minutes, then peel and remove the seeds.", "Chop everything finely and mix with {olive-oil}, juice of {lemon}, {cumin} and {salt}. Serve at room temperature."]}
 ]
 );

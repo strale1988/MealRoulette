@@ -189,6 +189,8 @@ KITCHEN.add(
       "Layer {phyllo-pastry} brushed with melted butter, scatter crumbs, add apples and roll up.",
       "Bake 40 minutes until golden."
     ]
-  }
+  },
+
+{"id": "at-wiener-saftgulasch", "name": "Wiener Saftgulasch (Viennese beef goulash)", "meal": "big", "cuisine": "Austrian", "time": 165, "serves": 4, "ing": [["beef-chuck", 600], ["onion", "4pc"], ["oil", 30], ["paprika", 15], ["tomato-paste", 20], ["caraway", 2], ["vinegar", 15], ["garlic", "2pc"], ["bay-leaf", 1], ["water", 400], ["salt", 5], ["black-pepper", 1]], "steps": ["Slice {onion} and cook in {oil} over low heat 20 minutes until soft and golden brown.", "Take the pan off the heat and stir in {paprika}, then add {tomato-paste}, {vinegar}, crushed {garlic} and {caraway}.", "Add {beef-chuck} cut in 3 cm cubes, {bay-leaf}, {salt}, {black-pepper} and {water}.", "Cover and simmer gently 2 hours, adding a splash of water if it dries out, until the beef is tender and the sauce is thick."]}
 ]
 );

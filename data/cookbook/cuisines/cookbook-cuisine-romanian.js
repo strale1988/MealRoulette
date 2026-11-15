@@ -175,6 +175,46 @@ KITCHEN.add(
       "Cook {onion} in {oil} 8 minutes, add vegetables, {tomato-paste} and {salt} and simmer 25 minutes until thick.",
       "Serve on toasted {bread}."
     ]
-  }
+  },
+  {
+    "id": "ro-ciorba-de-perisoare",
+    "name": "Ciorbă de perișoare (Romanian meatball soup)",
+    "meal": "big",
+    "cuisine": "Romanian",
+    "craft": "soup",
+    "time": 55,
+    "serves": 4,
+    "source": {"name": "Chef's Pencil", "url": "https://www.chefspencil.com/ciorba-de-perisoare-recipe/", "label": "Inspired by Chef's Pencil"},
+    "ing": [
+      ["pork-mince", 125],
+      ["beef-mince", 125],
+      ["semolina", 25],
+      ["eggs", "1pc"],
+      ["onion", "1pc"],
+      ["oil", 15],
+      ["carrot", "1.5pc"],
+      ["celeriac", 80],
+      ["parsley-root", 40],
+      ["red-pepper", "0.5pc"],
+      ["tomato", "1pc"],
+      ["water", 1500],
+      ["salt", 6],
+      ["egg-yolks", "1pc"],
+      ["sour-cream", 30],
+      ["tarragon", 2],
+      ["vinegar", 15],
+      ["parsley", 10],
+      ["bread", 80]
+    ],
+    "steps": [
+      "Mix {pork-mince}, {beef-mince}, {semolina}, {eggs}, half the {onion} (finely chopped) and 2 g of the {salt}. Roll into small balls and chill.",
+      "Dice the rest of the {onion}, {carrot}, {celeriac}, {parsley-root}, {red-pepper} and {tomato}.",
+      "Soften the onion in {oil} over medium heat. Add the other vegetables for 3 minutes, then pour in {water} and the remaining {salt}. Simmer, covered, 20 minutes.",
+      "Drop in the meatballs and cook at a gentle simmer for 15 minutes.",
+      "Whisk {egg-yolks}, {sour-cream}, {tarragon} and {vinegar}. Stir in a few ladles of hot broth, then pour it all back into the pot off the heat.",
+      "Scatter {parsley} on top, taste for salt and serve with {bread}."
+    ]
+  },
+{"id": "ro-tochitura", "name": "Tochitură moldovenească (pork and sausage stew)", "meal": "big", "cuisine": "Romanian", "time": 50, "serves": 3, "ing": [["pork", 500], ["smoked-sausage", 150], ["onion", "1pc"], ["garlic", "3pc"], ["white-wine", 50], ["paprika", 3], ["oil", 20], ["salt", 3], ["eggs", "2pc"]], "steps": ["Brown cubed {pork} in {oil} 10 minutes. Add sliced {smoked-sausage} and {onion}; cook 8 minutes.", "Add {garlic}, {paprika}, {salt} and {white-wine}; simmer covered 20 minutes.", "Fry {eggs} and set on top."]}
 ]
 );

@@ -193,6 +193,7 @@ KITCHEN.add(
       "Shape into thin flat patties.",
       "Shallow-fry in {oil} for 4 minutes per side until crisp at the edges."
     ]
-  }
+  },
+{"id": "af-sabzi-lamb", "name": "Sabzi (Afghan spinach with lamb)", "meal": "big", "cuisine": "Afghan", "time": 75, "serves": 3, "ing": [["spinach", 500], ["lamb-shoulder", 400], ["onion", "1pc"], ["garlic", "3pc"], ["oil", 30], ["turmeric", 3], ["coriander", 20], ["salt", 4], ["black-pepper", 1], ["water", 200]], "steps": ["Brown diced {lamb-shoulder} in {oil} with chopped {onion} 10 minutes.", "Add {garlic}, {turmeric}, {salt}, {black-pepper} and {water}. Cover and simmer 40 minutes until the lamb is tender.", "Stir in {spinach} and {coriander} and cook 10 minutes more until dark and soft.", "Serve hot with rice or bread."]}
 ]
 );

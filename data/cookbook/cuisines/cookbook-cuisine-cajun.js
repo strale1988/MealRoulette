@@ -1627,66 +1627,7 @@ KITCHEN.add(
       "Add {prawns} and cook 2–3 minutes until pink. Drain, toss with melted {butter} and a little extra seasoning, and serve family-style."
     ]
   },
-  {
-    "id": "ca-cajun-cornbread-dressing",
-    "name": "Cajun cornbread dressing with celery, herbs and smoked sausage",
-    "meal": "big",
-    "cuisine": "Cajun",
-    "time": 45,
-    "serves": 2,
-    "ing": [
-      [
-        "cornmeal",
-        120
-      ],
-      [
-        "smoked-sausage",
-        250
-      ],
-      [
-        "celery",
-        80
-      ],
-      [
-        "onion",
-        "1pc"
-      ],
-      [
-        "vegetable-stock",
-        450
-      ],
-      [
-        "eggs",
-        "2pc"
-      ],
-      [
-        "parsley",
-        10
-      ],
-      [
-        "cajun-seasoning",
-        5
-      ],
-      [
-        "butter",
-        35
-      ],
-      [
-        "salt",
-        3
-      ],
-      [
-        "black-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Heat the oven to 190 °C and lightly grease a baking dish or line a tray.",
-      "Prepare {cornmeal} with the other listed ingredients, layer or shape the mixture evenly and season it well.",
-      "Crumble baked cornbread, fold with browned sausage, celery, onion, herbs and enough stock to moisten, then bake until the top is crisp and the middle stays soft.",
-      "Taste and adjust the seasoning, then serve while hot or chill fully if it is intended to be served cold."
-    ]
-  },
+  {"id": "ca-cajun-cornbread-dressing", "name": "Cajun cornbread dressing with celery, herbs and smoked sausage", "meal": "big", "cuisine": "Cajun", "time": 50, "serves": 2, "ing": [["cornmeal", 120], ["smoked-sausage", 250], ["celery", 80], ["onion", "1pc"], ["vegetable-stock", 450], ["eggs", "2pc"], ["parsley", 10], ["cajun-seasoning", 5], ["butter", 35], ["salt", 3], ["black-pepper", 1]], "steps": ["Heat the oven to 190 °C and grease a baking dish with some of the {butter}.", "Stir {cornmeal} with {cajun-seasoning}, {salt}, {black-pepper} and {eggs}, then {vegetable-stock} to make a loose batter.", "Slice {smoked-sausage} and brown it in the rest of the {butter}; add chopped {onion} and {celery} and cook 8 minutes.", "Fold the sausage mixture and chopped {parsley} into the batter, pour into the dish and bake 30 minutes until crisp on top and soft inside."]},
   {
     "id": "cajx-boudin-style-rice-sausage-balls",
     "name": "Boudin-inspired Cajun rice and sausage balls",

@@ -204,6 +204,7 @@ KITCHEN.add(
       "Wrap each in {ham} and place in a dish.",
       "Cover with {bechamel-sauce} and {gouda} and bake 25 minutes."
     ]
-  }
+  },
+{"id": "be-stoemp-sausage", "name": "Stoemp with sausages", "meal": "big", "cuisine": "Belgian", "time": 45, "serves": 4, "ing": [["potatoes", 700], ["carrot", 200], ["leek", "1pc"], ["butter", 40], ["milk", 80], ["sausage", 400], ["oil", 10], ["salt", 4], ["black-pepper", 1]], "steps": ["Peel and cube {potatoes} and {carrot}. Boil in salted water {salt} 20 minutes until soft.", "Slice {leek} and soften it in half the {butter} 8 minutes.", "Brown {sausage} in {oil} for 12 minutes, turning often, until cooked through.", "Drain the vegetables and mash them roughly with {milk}, the rest of the {butter} and {black-pepper}. Fold in the leeks.", "Serve the stoemp topped with the sausages."]}
 ]
 );

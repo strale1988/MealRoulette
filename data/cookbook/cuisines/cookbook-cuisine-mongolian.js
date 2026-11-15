@@ -151,6 +151,6 @@ KITCHEN.add(
       "Mix {beef-mince} with chopped {onion} and {garlic}.",
       "Roll rounds, fill, fold over and seal. Fry in {oil} 3 minutes per side."
     ]
-  }
+  },
 ]
 );

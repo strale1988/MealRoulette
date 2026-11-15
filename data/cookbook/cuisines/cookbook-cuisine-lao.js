@@ -196,6 +196,7 @@ KITCHEN.add(
       "Pound or chop with {garlic}, {shallot}, {green-chilli} and {fish-sauce}.",
       "Mix in chopped {coriander} and juice of the {lime}."
     ]
-  }
+  },
+{"id": "la-tam-mak-hoong", "name": "Tam mak hoong (Lao green papaya salad)", "meal": "bite", "cuisine": "Lao", "time": 20, "serves": 2, "ing": [["green-papaya", 300], ["cherry-tomatoes", 100], ["garlic", "2pc"], ["red-chilli", "1pc"], ["fish-sauce", 20], ["lime-juice", 20], ["sugar", 5], ["peanuts", 30], ["green-beans", 50]], "steps": ["Shred {green-papaya}. Cut {green-beans} in short lengths.", "Pound {garlic} and {red-chilli} in a mortar; add {sugar}, {fish-sauce} and {lime-juice}.", "Add the papaya, beans and halved {cherry-tomatoes}; bruise lightly.", "Top with crushed {peanuts}."]}
 ]
 );

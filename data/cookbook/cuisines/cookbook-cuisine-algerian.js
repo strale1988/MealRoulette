@@ -205,6 +205,7 @@ KITCHEN.add(
       "Spoon onto strips of {phyllo-pastry}, fold into small triangles.",
       "Fry in hot {oil} for 2 minutes per side until crisp."
     ]
-  }
+  },
+{"id": "dz-rechta", "name": "Rechta (Algerian noodles with chicken and turnip sauce)", "meal": "big", "cuisine": "Algerian", "time": 75, "serves": 4, "ing": [["noodles", 250], ["chicken-thigh", 500], ["chickpeas", 200], ["turnip", 200], ["carrot", "1pc"], ["onion", "1pc"], ["cinnamon", 2], ["turmeric", 2], ["oil", 30], ["salt", 4], ["black-pepper", 1], ["water", 800], ["butter", 20]], "steps": ["Fry {onion} in {oil} 5 minutes; add {chicken-thigh}, {cinnamon}, {turmeric}, {salt} and {black-pepper}.", "Add {water}, {turnip} and {carrot}; simmer 35 minutes. Add {chickpeas} for the last 10.", "Cook {noodles}, toss with {butter}, and serve topped with chicken and sauce."]}
 ]
 );

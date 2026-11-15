@@ -443,44 +443,7 @@ KITCHEN.add(
       "Brush with beaten {eggs}, sprinkle with {sugar} and bake 15–18 minutes until puffed and golden."
     ]
   },
-  {
-    "id": "caribbean-jerk-chicken",
-    "name": "Caribbean Jerk Chicken",
-    "meal": "big",
-    "cuisine": "Caribbean",
-    "time": 30,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir well so the ingredients are evenly coated.",
-      "Add the {tomato} with a little water if needed, then simmer gently until the ingredients are tender and the flavours come together."
-    ]
-  },
+  {"id": "caribbean-jerk-chicken", "name": "Caribbean jerk chicken", "meal": "big", "cuisine": "Caribbean", "time": 70, "serves": 4, "ing": [["chicken-thigh", 700], ["allspice", 3], ["thyme", 2], ["ginger", 10], ["garlic", "3pc"], ["spring-onion", "4pc"], ["red-chilli", "1pc"], ["soy-sauce", 20], ["lime", "1pc"], ["brown-sugar", 10], ["oil", 15], ["salt", 3]], "steps": ["Blend {allspice}, {thyme}, {ginger}, {garlic}, {spring-onion}, {red-chilli}, {soy-sauce}, juice of {lime}, {brown-sugar}, {oil} and {salt}.", "Coat {chicken-thigh} and marinate at least 1 hour.", "Roast at 210 °C 35 minutes, or grill, until charred and cooked through."]},
   {
     "id": "caribbean-coconut-fish-curry",
     "name": "Caribbean Coconut Fish Curry",
@@ -606,44 +569,7 @@ KITCHEN.add(
       "Rest 5 minutes, remove the chilli and fluff with a fork before serving."
     ]
   },
-  {
-    "id": "caribbean-callaloo-style-greens",
-    "name": "Caribbean Callaloo-Style Greens",
-    "meal": "big",
-    "cuisine": "Caribbean",
-    "time": 25,
-    "serves": 4,
-    "ing": [
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ]
-    ],
-    "steps": [
-      "Add the {chicken-thigh} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  },
+  {"id": "caribbean-callaloo-style-greens", "name": "Caribbean callaloo-style greens", "meal": "bite", "cuisine": "Caribbean", "time": 30, "serves": 4, "ing": [["spinach", 500], ["coconut-milk", 200], ["okra", 150], ["onion", "1pc"], ["garlic", "2pc"], ["thyme", 2], ["oil", 15], ["salt", 3]], "steps": ["Soften {onion} and {garlic} in {oil} 5 minutes.", "Add sliced {okra}, {thyme}, {coconut-milk} and {salt}; simmer 10 minutes.", "Add {spinach} and cook until soft, about 8 minutes."]},
   {
     "id": "caribbean-brown-stew-chicken",
     "name": "Caribbean Brown Stew Chicken",
@@ -768,45 +694,7 @@ KITCHEN.add(
       "Add the pineapple and glaze and cook for 5–6 minutes, turning, until the sauce is syrupy and coats the pork. Serve hot."
     ]
   },
-  {
-    "id": "caribbean-black-bean-and-rice-bowl",
-    "name": "Caribbean Black Bean and Rice Bowl",
-    "meal": "big",
-    "cuisine": "Caribbean",
-    "time": 46,
-    "serves": 4,
-    "ing": [
-      [
-        "salt",
-        3
-      ],
-      [
-        "chicken-thigh",
-        450
-      ],
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ]
-    ],
-    "steps": [
-      "Add the {salt} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together.",
-      "Season with {salt} to taste and serve."
-    ]
-  },
+  {"id": "caribbean-black-bean-and-rice-bowl", "name": "Caribbean black bean and rice bowl", "meal": "big", "cuisine": "Caribbean", "time": 40, "serves": 4, "ing": [["black-beans", 480], ["rice", 250], ["onion", "1pc"], ["red-pepper", "1pc"], ["garlic", "3pc"], ["thyme", 2], ["oil", 20], ["salt", 3], ["lime", "1pc"], ["cilantro", 10]], "steps": ["Cook {rice} in salted water {salt}.", "Soften {onion}, {red-pepper} and {garlic} in {oil} 8 minutes. Add {black-beans} and {thyme}; simmer 10 minutes.", "Serve over the rice with juice of {lime} and {cilantro}."]},
   {
     "id": "caribbean-chicken-with-tomato-and-peppers",
     "name": "Caribbean Chicken with Tomato and Peppers",
@@ -949,48 +837,6 @@ KITCHEN.add(
       "Fold in the carrot, mango and chopped {cilantro}, rest 10 minutes and serve cold."
     ]
   },
-  {
-    "id": "caribbean-corn-and-cheese-bake",
-    "name": "Caribbean Corn and Cheese Bake",
-    "meal": "big",
-    "cuisine": "Caribbean",
-    "time": 38,
-    "serves": 4,
-    "ing": [
-      [
-        "black-beans",
-        250
-      ],
-      [
-        "rice",
-        250
-      ],
-      [
-        "tomato",
-        250
-      ],
-      [
-        "plantain",
-        2
-      ],
-      [
-        "red-pepper",
-        1
-      ],
-      [
-        "cilantro",
-        10
-      ],
-      [
-        "lime",
-        1
-      ]
-    ],
-    "steps": [
-      "Stir in the {cilantro} and cook briefly to release its aroma.",
-      "Add the {black-beans} and {black-beans}; stir to combine.",
-      "Add the {tomato} with a little water if needed, then cook gently until tender and the flavours come together."
-    ]
-  }
+  {"id": "caribbean-corn-and-cheese-bake", "name": "Caribbean corn and cheese bake", "meal": "bite", "cuisine": "Caribbean", "time": 50, "serves": 6, "ing": [["sweetcorn", 400], ["cheddar", 120], ["eggs", "3pc"], ["milk", 200], ["flour", 40], ["butter", 20], ["spring-onion", "3pc"], ["salt", 2], ["black-pepper", 1]], "steps": ["Heat the oven to 180 °C and butter a dish with {butter}.", "Whisk {eggs}, {milk}, {flour}, {salt} and {black-pepper}. Stir in {sweetcorn}, sliced {spring-onion} and most of the {cheddar}.", "Pour into the dish, top with the remaining cheese and bake 35 minutes."]}
 ]
 );

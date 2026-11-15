@@ -167,6 +167,7 @@ KITCHEN.add(
       "Sear {lamb-chops} in the rest of the {butter} with {thyme} for 4 minutes per side.",
       "Rest 5 minutes and serve."
     ]
-  }
+  },
+{"id": "is-ponnukokur", "name": "Pönnukökur (Icelandic thin pancakes)", "meal": "morning,treat", "cuisine": "Icelandic", "time": 30, "serves": 4, "ing": [["flour", 150], ["eggs", "2pc"], ["milk", 400], ["sugar", 30], ["vanilla", 5], ["butter", 30], ["salt", 1]], "steps": ["Whisk {flour}, {sugar} and {salt}, then add {eggs}, {milk} and {vanilla} to make a thin batter.", "Melt a little {butter} in a wide non-stick pan over medium heat.", "Pour in a thin layer of batter, tilt to spread, and cook 1–2 minutes per side. Repeat, buttering the pan between pancakes.", "Roll or fold the pancakes and serve warm."]}
 ]
 );

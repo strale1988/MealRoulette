@@ -13,7 +13,7 @@ function show(r,msg){
   const ic=(MEALS.find(m=>m[0]===S.meal)||[])[1]||"dice";
   $("out").innerHTML=`<article class="card"><div class="hero"><div class="ic">${I(ic)}</div><div class="ht"><h2>${esc(r.title)}</h2><p class="orig">${I("globe")}${esc(originOf(r))}</p></div></div><div class="body">
   <div class="meta"><span>${I("clock")}${r.min} min</span><span>${I("users")}${r.n} ${hasKids()?(r.n>1?"portions":"portion"):(r.n>1?"people":"person")}</span><span>${I(ic)}${ML(S.meal)}</span>${r.remix?`<span>${I("wand")}Whisked</span>`:""}${(()=>{const x=r.ing.length&&r.ing.every(i=>i.id)?K.nutri(r.ing,r.n):GEN.nutri(r.ing,r.n);return x.kcal?`<span title="Rough estimate">${I("flame")}≈${x.kcal} kcal · ${x.p} g protein each</span>`:""})()}</div>
-  ${r.desc?`<p class="desc">${esc(cv(r.desc))}</p>`:""}${callout(r)}
+  ${r.desc?`<p class="desc">${esc(cv(r.desc))}</p>`:""}${callout(r)}${(()=>{const k=r.rid&&K.recipes.find(x=>x.id===r.rid),sc=k&&k.source;return sc?`<p class="src">Inspired by <a href="${esc(sc.url)}" target="_blank" rel="noopener noreferrer">${esc(sc.name)}</a></p>`:""})()}
   <div class="split"><div><h3>${I("list")}Ingredients <small style="text-transform:none;letter-spacing:0;color:var(--mute)">(tap to tick off)</small></h3>
   ${ingBlock(r.ing)}</div>
   <div><h3>${I("chef")}Method</h3><ol>${r.steps.map(s=>`<li><span>${esc(cv(s))}</span></li>`).join("")}</ol></div></div>

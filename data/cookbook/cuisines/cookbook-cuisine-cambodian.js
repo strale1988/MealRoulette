@@ -221,6 +221,6 @@ KITCHEN.add(
       "Add {pineapple}, {tomato}, {fish-sauce} and {sugar} and cook 8 minutes.",
       "Add {white-fish} and poach gently 6 minutes."
     ]
-  }
+  },
 ]
 );

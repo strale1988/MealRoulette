@@ -230,6 +230,6 @@ KITCHEN.add(
       "Whisk {chickpea-flour} with water, stir in and simmer 10 minutes to thicken.",
       "Cook {rice-vermicelli} and boil {eggs} for 8 minutes. Serve the broth over noodles with halved egg."
     ]
-  }
+  },
 ]
 );

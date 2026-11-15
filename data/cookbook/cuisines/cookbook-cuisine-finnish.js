@@ -184,6 +184,9 @@ KITCHEN.add(
       "Roll out, spread with soft butter, {cinnamon} and remaining sugar, roll up and cut wedges.",
       "Rise 30 minutes and bake at 225 °C for 12 minutes."
     ]
-  }
+  },
+{"id": "fi-hernekeitto", "name": "Hernekeitto (Finnish pea soup)", "meal": "big", "cuisine": "Finnish", "time": 100, "serves": 4, "ing": [["split-peas", 200], ["ham", 200], ["onion", "1pc"], ["carrot", "1pc"], ["water", 1500], ["bay-leaf", 1], ["salt", 4], ["mustard", 20]], "steps": ["Put {split-peas}, diced {ham}, chopped {onion}, sliced {carrot}, {bay-leaf} and {water} in a pot.", "Bring to a boil, skim off any foam, then simmer partly covered 60–75 minutes until the peas fall apart.", "Season with {salt}. Serve with a spoonful of {mustard} on the side."]},
+{"id": "fi-pannukakku", "name": "Pannukakku (Finnish oven pancake)", "meal": "morning,treat", "cuisine": "Finnish", "time": 40, "serves": 4, "ing": [["eggs", "3pc"], ["milk", 500], ["flour", 120], ["sugar", 30], ["salt", 2], ["butter", 30]], "steps": ["Heat the oven to 225 °C. Put {butter} in a baking dish and melt it in the oven for 3 minutes.", "Whisk {eggs}, {sugar} and {salt}, then {flour} and {milk} until smooth.", "Pour into the hot dish and bake 25–30 minutes until puffed and golden."]},
+{"id": "fi-nokkoskeitto", "name": "Nokkoskeitto (Finnish nettle soup)", "meal": "big", "cuisine": "Finnish", "time": 35, "serves": 4, "ing": [["nettles", 200], ["potatoes", 300], ["onion", "1pc"], ["butter", 20], ["vegetable-stock", 800], ["eggs", "2pc"], ["salt", 3], ["black-pepper", 1]], "steps": ["Wash {nettles} wearing gloves, then blanch 1 minute.", "Soften chopped {onion} in {butter} 5 minutes. Add diced {potatoes} and {vegetable-stock}; simmer 15 minutes.", "Add the nettles, season with {salt} and {black-pepper}, and blend.", "Hard-boil {eggs} for 9 minutes, halve, and add to the bowls."]}
 ]
 );

@@ -170,6 +170,8 @@ KITCHEN.add(
       "Add {onion}, {red-pepper}, {paprika} and {salt} and cook 10 minutes.",
       "Add {tomato}, cover and simmer 50 minutes until tender."
     ]
-  }
+  },
+{"id": "bg-kyufte", "name": "Kyufte (Bulgarian grilled meatballs)", "meal": "big", "cuisine": "Bulgarian", "time": 30, "serves": 3, "ing": [["beef-mince", 250], ["pork-mince", 250], ["onion", "1pc"], ["bread", 40], ["eggs", "1pc"], ["cumin", 3], ["parsley", 10], ["salt", 4], ["black-pepper", 1], ["oil", 10]], "steps": ["Soak {bread} in water and squeeze. Mix with {beef-mince}, {pork-mince}, grated {onion}, {eggs}, {cumin}, {parsley}, {salt} and {black-pepper}.", "Shape into flat patties.", "Cook in {oil} or grill 5 minutes per side."]},
+{"id": "bg-bob-chorba", "name": "Bob chorba (Bulgarian white bean soup)", "meal": "big", "cuisine": "Bulgarian", "time": 45, "serves": 4, "ing": [["white-beans", 480], ["onion", "1pc"], ["carrot", "1pc"], ["tomato", "2pc"], ["paprika", 5], ["oil", 30], ["mint", 10], ["water", 800], ["salt", 3]], "steps": ["Soften {onion} and {carrot} in {oil} 6 minutes; stir in {paprika}.", "Add chopped {tomato}, {white-beans}, {water} and {salt}; simmer 25 minutes.", "Top with {mint}."]}
 ]
 );

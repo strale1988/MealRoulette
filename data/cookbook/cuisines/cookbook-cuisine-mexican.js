@@ -3541,6 +3541,7 @@ KITCHEN.add(
       "Cook the remaining diced onion and {garlic} in {oil}; add {canned-tomatoes}, {chilli-powder}, {cumin} and {vinegar}. Simmer 12 minutes, then blend smooth.",
       "Split the {bread-rolls}, spread with {beans} and fill with shredded pork. Spoon the hot tomato-chilli sauce over the sandwich just before serving."
     ]
-  }
+  },
+{"id": "mx-cochinita-pibil", "name": "Cochinita pibil-style pork", "meal": "big", "cuisine": "Mexican", "time": 190, "serves": 4, "ing": [["pork-shoulder", 800], ["annatto", 10], ["lime", "2pc"], ["vinegar", 30], ["garlic", "5pc"], ["cumin", 3], ["oregano", 2], ["salt", 5], ["red-onion", "1pc"], ["flour-tortillas", "8pc"]], "steps": ["Blend {annatto}, juice of {lime}, {vinegar}, {garlic}, {cumin}, {oregano} and {salt} to a paste.", "Coat cubed {pork-shoulder}, wrap tightly in foil or a covered dish, and marinate 1 hour.", "Bake at 160 °C 2½ hours until it shreds easily.", "Pickle sliced {red-onion} with a squeeze of lime. Serve the pork with the onions in warm {flour-tortillas}."]}
 ]
 );

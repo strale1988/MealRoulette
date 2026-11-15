@@ -1395,6 +1395,7 @@ KITCHEN.add(
       "Return to the pan over low heat and stir constantly for 4–5 minutes until the sauce coats a spoon; do not let it boil.",
       "Strain and serve warm or chilled with fruit puddings."
     ]
-  }
+  },
+{"id": "se-pannkakor-lingon", "name": "Swedish pancakes with lingonberry jam", "meal": "morning,treat", "cuisine": "Swedish", "time": 30, "serves": 4, "ing": [["eggs", "3pc"], ["milk", 500], ["flour", 150], ["butter", 30], ["salt", 1], ["lingonberry-jam", 100]], "steps": ["Whisk {flour}, {salt}, {eggs} and {milk} into a thin batter; rest 10 minutes.", "Melt a little {butter} in a pan and cook thin pancakes 1–2 minutes per side, buttering the pan between batches.", "Serve with {lingonberry-jam}."]}
 ]
 );

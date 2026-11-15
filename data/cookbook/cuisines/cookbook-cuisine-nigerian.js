@@ -709,6 +709,7 @@ KITCHEN.add(
       "Simmer the sweet potato, onion, tomato, chilli, {thyme} and {chicken-stock} for 20 minutes until soft.",
       "Whisk {peanut-butter} with a ladle of broth, stir in with {salt} and simmer 8 minutes. Blend half for a rustic, creamy soup."
     ]
-  }
+  },
+{"id": "ng-beef-suya", "name": "Beef suya", "meal": "big", "cuisine": "Nigerian", "time": 40, "serves": 4, "ing": [["beef-strips", 500], ["suya-spice", 20], ["oil", 20], ["onion", "1pc"], ["tomato", "1pc"], ["salt", 2]], "steps": ["Toss {beef-strips} with {suya-spice}, {oil} and {salt}; marinate 30 minutes.", "Thread onto skewers and grill over high heat 3–4 minutes per side.", "Serve with sliced {onion} and {tomato} and a dusting of extra spice."]}
 ]
 );
